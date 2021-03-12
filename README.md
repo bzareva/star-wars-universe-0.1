@@ -39,27 +39,27 @@ Displays information about the strongest Jedi of the submitted planet (with the 
 
 - **_get_youngest_jedi [planet_name] [jedi_rank]:_**<br/>
 Brings out the youngest Jedi inhabiting the given planet and has the corresponding rank
-(if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message).<br/> 
+(_if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message_).<br/> 
 
 - **_get_most_used_saber_color [planet_name] [jedi_rank]:_**<br/>
 Returns the most common color to light sword in the given rank of the respective planet.<br/> 
 
 - **_get_most_used_saber_color [planet_name]:_**<br/>
-Returns the most common color to light sword planet that enjoys at least one GRAND_MASTER.<br/>
+Returns the most common color to light sword planet that enjoys at least one _GRAND_MASTER_.<br/>
 
 - **_print [planet_name]:_**<br/>
-Displays the name of the planet appropriately and the Jedi inhabiting it, sorted first in
-ascending order by rank, then by second key - lexicographically by name.<br/> 
+Displays the name of the planet appropriately and the Jedi inhabiting it, _sorted first in
+ascending order by rank, then by second key - lexicographically by name_.<br/> 
 
 - **_print [jedi_name]:_**<br/>
 Displays the information for the Jedi, as well as which planet it currently inhabits.<br/>
 
 - **_[planet_name] + [planet_name]:_**<br/>
-Displays the screen in assorted form (lexicographically) information about the inhabitants the two Jedi planets.<br/> 
+Displays the screen in assorted form (_lexicographically_) information about the inhabitants the two Jedi planets.<br/> 
 
 Vankata also wanted to be able to keep the information he had entered in
 your program for later and be able to reload it. That is, the program must
-store information the planets and the Jedi inhabiting them in a file and to
-support the commands for working with files described in the Working with the command line section.
-All commands are in lowercase Latin letters, and the arguments are separated by one interval.<br/> 
+store information the planets and the Jedi inhabiting them _in a file_ and to
+support the commands for working with files described in the Working with the _command line section.
+All commands are in lowercase Latin letters, and the arguments are separated by one interval_.<br/> 
 
