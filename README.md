@@ -56,3 +56,10 @@ Displays the information for the Jedi, as well as which planet it currently inha
 
 - **_[planet_name] + [planet_name]:_**<br/>
 Displays the screen in assorted form (lexicographically) information about the inhabitants the two Jedi planets.<br/> 
+
+Vankata also wanted to be able to keep the information he had entered in
+your program for later and be able to reload it. That is, the program must
+store information the planets and the Jedi inhabiting them in a file and to
+support the commands for working with files described in the Working with the command line section.
+All commands are in lowercase Latin letters, and the arguments are separated by one interval.<br/> 
+
