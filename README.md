@@ -15,3 +15,5 @@ He then decided to create the planets and moons, each with a name and a Jedi, wh
 Create an application that supports the following commands:<br/> 
 
  - **_add_planet <planet_name>:_**<br/>
+Adds a new planet.<br/>
+- **_create_jedi <planet_name> <jedi_name> <jedi_rank> <jedi_age> <saber_color> <jedi_strength>:_**
