@@ -63,3 +63,63 @@ store information the planets and the Jedi inhabiting them **in a file** and to
 support the commands for working with files described in the Working with the **command line section.
 All commands are in lowercase Latin letters, and the arguments are separated by one interval**.<br/> 
 
+The program allows you to perform various transformations on the files in given session.
+When session transformations are applied, they apply for all loaded images for the current session.
+Transformations are applied over images only after the "save" or "saveas" command is executed.
+The "save" command saves all loaded in the current user session images after applying 
+all transformations, and the "saveas" command saves under the new name only the image that was loaded first.<br/>
+
+Once the application opens a file, it can perform the following operations:
+- **_open:_**<br/> 
+Loads the contents of a file. If one does not exist, a new one is created with empty content. 
+All other commands can be executed only if there is a successfully loaded file. Once the file is 
+opened and read, it closes and your application no longer needs to work with it, unless the user does 
+not want to save the changes made again (see the save command below), in which case the file must be reopened. 
+To do this, you must select an appropriate presentation of the information in the file. If your application 
+detects an error while loading the data, it should display an appropriate error message and terminate its execution.<br/><br/>
+Example:<br/>
+**cmd:** open C:\Temp\file.xml<br/>
+*Successfully opened file.xml*
+<br><br/>
+
+- **_close:_**<br/>
+Closes the currently open document. Closing clears the currently loaded
+information and then the program cannot execute commands other than opening a file (Open).<br/><br/>
+Example:<br/>
+**cmd:** close<br/>
+*Successfully closed file.xml*
+<br><br/>
+
+- **_save:_**<br/> 
+Saves done changes back to the same file from which the data was read.<br/><br/>
+Example:<br/>
+**cmd:** save<br/>
+*Successfully saved file.xml*
+<br><br/>
+
+- **_saveas:_**<br/>
+Saves done changes to a file, also allowing the user to specify its path.<br/><br/>
+Example:<br/>
+**cmd:** saveas "C:\Temp\another file.xml"<br/>
+*Successfully saved another file.xml*
+<br><br/>
+Example:<br/>
+
+- **_help:_**<br/>
+Outputs brief information about the commands supported by the program.<br/>
+**cmd:** help
+*The following commands are supported:<br/>
+open [file] opens [file]<br/>
+close closes currently opened file<br/>
+save saves the currently open file<br/>
+saveas [file] saves the currently open file in [file]<br/>
+help prints this information<br/>
+exit exists the program*
+<br><br/>
+
+- **_exit:_**<br/> 
+Exit the program.<br/><br/>
+Example:<br/>
+**cmd:** exit<br/>
+*Exiting the program...*
+<br><br/>
