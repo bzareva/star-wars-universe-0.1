@@ -24,5 +24,6 @@ The function to display a message whether the addition was successful or not
 - **_removeJedi <jedi_name> <planet_name>:_**<br/>
 The function to display a message whether the removal was successful or not (the Jedi did not inhabits this planet).<br/> 
 
-- **_ romote_jedi <jedi_name> <multiplier>:_**<br/>
+- **_promote_jedi jedi_name [multiplier]:_**<br/>
+- 
 
