@@ -2,7 +2,7 @@
 ## *Brief information*
 
 Vankata is a big fan of Star Wars, so he decided to make a small project on OOP on this topic.
-To this end, he wants to recreate the universe of the series.<br/>
+For the purpose, he wants to recreate the universe of the series.<br/>
 He first started with the Jedi, deciding that everyone should have: 
 - jedi name
 - ank, the following are arranged in ascending order - YOUNGLING,
@@ -18,11 +18,11 @@ Create an application that supports the following commands:<br/>
 Adds a new planet.<br/>
 
 - **_create_jedi [planet_name] [jedi_name] [jedi_rank] [jedi_age] [saber_color] [jedi_strength]:_**<br/>
-The function to display a message whether the addition was successful or not
+The function brings out a message whether the addition was successful or not
 (there is a Jedi with such a name on this or that planet, or not there is a planet with such a name).<br/>
 
 - **_removeJedi [jedi_name] [planet_name]:_**<br/>
-The function to display a message whether the removal was successful or not (the Jedi did not inhabits this planet).<br/> 
+The function brings out a message whether the removal was successful or not (the Jedi did not inhabits this planet).<br/> 
 
 - **_promote_jedi [jedi_name] [multiplier]:_**<br/>
 Raises the given Jedi by one rank up in ladder and increases its strength by the formula
@@ -30,12 +30,12 @@ jedi_strength + = (multiplier * jedi_strength) (cannot be increased any more)
 of rank GRAND_MASTER and must be multiplier positive number of type double).<br/> 
 
 - **_demote_jedi [jedi_name] [multiplier]:_**<br/>
-Reduced the rank of the submitted Jedi by one rank down the ladder and lowers its strength by
-formula jedi_strength -= (multiplier * jedi_strength) (cannot be lowered further)
+Decreases the rank of the given Jedi by one rank down the ladder and lowers its strength by
+formula jedi_strength -= (multiplier * jedi_strength) (cannot be lowered further
 of rank YOUNGLING and multiplier must be positive number of type double).<br/>
 
 - **_get_strongest_jedi [planet_name]:_**<br/>
-Displays information about the strongest Jedi of the submitted planet (with the greatest force).<br/> 
+Outputs information about the strongest Jedi of the submitted planet (with the greatest force).<br/> 
 
 - **_get_youngest_jedi [planet_name] [jedi_rank]:_**<br/>
 Brings out the youngest Jedi inhabiting the given planet and has the corresponding rank
@@ -45,31 +45,32 @@ Brings out the youngest Jedi inhabiting the given planet and has the correspondi
 Returns the most common color to light sword in the given rank of the respective planet.<br/> 
 
 - **_get_most_used_saber_color [planet_name]:_**<br/>
-Returns the most common color to light sword planet that enjoys at least one **GRAND_MASTER**.<br/>
+Returns the most common color to light sword planet which is used by at least one **GRAND_MASTER**.<br/>
 
 - **_print [planet_name]:_**<br/>
-Displays the name of the planet appropriately and the Jedi inhabiting it, **sorted first in
-ascending order by rank, then by second key - lexicographically by name**.<br/> 
+Bring out of the name of the planet appropriately and the Jedi inhabiting it, **sorted first in 
+growing order by rank, then by second key - lexicographically by name**.<br/>
 
 - **_print [jedi_name]:_**<br/>
-Displays the information for the Jedi, as well as which planet it currently inhabits.<br/>
+Brings out of the information about the Jedi appropriately, as well as which planet it currently inhabits.<br/>
 
 - **_[planet_name] + [planet_name]:_**<br/>
-Displays the screen in assorted form (**lexicographically**) information about the inhabitants the two Jedi planets.<br/> 
+Outputs on the screen in sorted type(**lexicographically**) information about the inhabitants the two Jedi planets.<br/> 
 
-Vankata also wanted to be able to keep the information he had entered in
-your program for later and be able to reload it. That is, the program must
-store information the planets and the Jedi inhabiting them **in a file** and to
-support the commands for working with files described in the Working with the **command line section.
-All commands are in lowercase Latin letters, and the arguments are separated by one interval**.<br/> 
+Vankata also wanted to be able to keep the information which he input 
+in the program for later and be able to load it again.
+That is, the program must store information on the planet and the Jedi inhabiting 
+them **in a file** and to supports commands for working with files described in the
+working with the **command line section. All commands are lowercase latin letters,
+and the arguments are separated by one interval.**<br/><br/> 
 
 The program allows you to perform various transformations on the files in given session.
 When session transformations are applied, they apply for all loaded images for the current session.
 Transformations are applied over images only after the "save" or "saveas" command is executed.
 The "save" command saves all loaded in the current user session images after applying 
 all transformations, and the "saveas" command saves under the new name only the image that was loaded first.<br/>
-
 Once the application opens a file, it can perform the following operations:
+
 - **_open:_**<br/> 
 Loads the contents of a file. If one does not exist, a new one is created with empty content. 
 All other commands can be executed only if there is a successfully loaded file. Once the file is 
@@ -79,31 +80,26 @@ To do this, you must select an appropriate presentation of the information in th
 detects an error while loading the data, it should display an appropriate error message and terminate its execution.<br/><br/>
 Example:<br/>
 **cmd:** open C:\Temp\file.xml<br/>
-*Successfully opened file.xml*
-<br><br/>
+*Successfully opened file.xml*<br/><br/>
 
 - **_close:_**<br/>
 Closes the currently open document. Closing clears the currently loaded
 information and then the program cannot execute commands other than opening a file (Open).<br/><br/>
 Example:<br/>
 **cmd:** close<br/>
-*Successfully closed file.xml*
-<br><br/>
+*Successfully closed file.xml*<br/><br/>
 
 - **_save:_**<br/> 
 Saves done changes back to the same file from which the data was read.<br/><br/>
 Example:<br/>
 **cmd:** save<br/>
-*Successfully saved file.xml*
-<br><br/>
+*Successfully saved file.xml*<br/><br/>
 
 - **_saveas:_**<br/>
 Saves done changes to a file, also allowing the user to specify its path.<br/><br/>
 Example:<br/>
 **cmd:** saveas "C:\Temp\another file.xml"<br/>
-*Successfully saved another file.xml*
-<br><br/>
-Example:<br/>
+*Successfully saved another file.xml*<br/><br/>
 
 - **_help:_**<br/>
 Outputs brief information about the commands supported by the program.<br/>
@@ -114,12 +110,10 @@ close closes currently opened file<br/>
 save saves the currently open file<br/>
 saveas [file] saves the currently open file in [file]<br/>
 help prints this information<br/>
-exit exists the program*
-<br><br/>
+exit exists the program*<br/><br/>
 
 - **_exit:_**<br/> 
 Exit the program.<br/><br/>
 Example:<br/>
 **cmd:** exit<br/>
-*Exiting the program...*
-<br><br/>
+*Exiting the program...*<br/><br/>
