@@ -19,20 +19,23 @@ public:
 	/// Makes a copy of the Base object. Access to the object of this class is realize with clone method
 	virtual Base* clone()const = 0;
 
-	/// It allows each of Base heirs(Jedi, Moon, Planet) to be displayed in its own way(prints to console)
+	/// It allows each of Base heirs(Jedi, Planet) to be displayed in its own way(prints to console)
 	virtual void print(std::ostream&)const = 0;
 
-	/// It allows each of Base heirs(Jedi, Moon, Planet) to be displayed in its own way(prints to file)
+	/// It allows each of Base heirs(Jedi, Planet) to be displayed in its own way(prints to file)
 	virtual void print_to_file(std::ofstream&)const = 0;
+
+	/// Read from console
+	virtual void read_from_console(std::istream&) = 0;
 
 	/// Read from file
 	virtual void read_from_file(std::ifstream&) = 0;
 
 	/// Checks if the entered string is valid type
-	virtual bool isValidType(const char*)const = 0;
+	virtual bool is_valid_type(const char*)const = 0;
 
 	/// Returns type of data
-	virtual const char* typeName()const = 0;
+	virtual const char* type_name()const = 0;
 
 };
 

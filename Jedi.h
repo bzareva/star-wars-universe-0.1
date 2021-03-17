@@ -18,28 +18,28 @@ public:
 		GRAND_MASTER
 	};
 
-public:
 	Jedi();
 	Jedi(std::ifstream&);
-	Jedi(int, double, const char*, const char*, const Rank&);
-	Jedi(const Jedi& oth);
-	Jedi& operator=(const Jedi& rhs);
+	Jedi(int, double, const Rank&, const char*, const char*);
+	Jedi(const Jedi&);
+	Jedi& operator=(const Jedi&);
 	virtual ~Jedi();
 
 	static const char* getClassName();
-	bool operator==(const Jedi& other)const;	
+	bool operator==(const Jedi&)const;	
+	bool operator<(const Jedi&)const;
 
-	bool promote_jedi(int);
-	bool demote_jedi(int);
-	void init_jedi(int, double, const char*, const char*, const Rank&);
+	bool promote_jedi(double);
+	bool demote_jedi(double);
 
 	/// override methods form Base class 
 	virtual Base* clone()const override;
 	virtual void print(std::ostream&)const override;
 	virtual void print_to_file(std::ofstream&)const override;
+	virtual void read_from_console(std::istream&)override;
 	virtual void read_from_file(std::ifstream&)override;
-	virtual bool isValidType(const char*)const override;
-	virtual const char* typeName()const override;
+	virtual bool is_valid_type(const char*)const override;
+	virtual const char* type_name()const override;
 
 private:
 	void cpy(const Jedi& rhs);
@@ -50,25 +50,26 @@ public:
 	void set_age(int);
 	void set_force(double);
 	void set_name_jedi(const char*);
+	void set_color_of_lightsaber(const char*);
 	void set_rank(const Rank&);
 
 	/// getters
 	int get_age()const;
 	double get_force()const;
 	const char* get_name_jedi()const;
-	const char* color_of_lightsaber()const;
+	const char* get_color_of_lightsaber()const;
 	Rank get_rank()const;
 
 private:	
 	int    m_age;
 	double m_force;
+	Rank   m_rank;
 	char*  m_name_jedi;
 	char*  m_color_of_lightsaber;
-	Rank   m_rank;
 
 };
 
-std::ostream& operator>>(std::istream& in, Jedi& other);
-std::ostream& operator<<(std::ostream& out, const Jedi& other);
+std::istream& operator>>(std::istream&, Jedi&);
+std::ostream& operator<<(std::ostream&, const Jedi&);
 
 #endif ///__JEDI_H__
