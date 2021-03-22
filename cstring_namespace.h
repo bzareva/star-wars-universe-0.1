@@ -1,15 +1,14 @@
 #ifndef __CSTRING_NAMESPACE_H__
 #define __CSTRING_NAMESPACE_H__
 
-/**
-  * @ Functions from cstring library.
-  * @ The only functions which i use in this program
-  * @ are - strlen, strcat, strcpy and strcmp.
-  * @ These functions work in the same way as
-  * @ the functions in the cstring library.
-  * @ I learned the solutions of these functions during 
-  * @ Introduction to Programming course.
-*/
+/// Functions from cstring library.
+/// 
+/// The only functions which i use in this program
+/// are - strlen, strcat, strcpy and strcmp.
+/// These functions work in the same way as
+/// the functions in the cstring library.
+/// I learned the solutions of these functions during 
+/// Introduction to Programming course.
 
 namespace cstring_namespace {
 
@@ -23,4 +22,4 @@ namespace cstring_namespace {
 
 };
 
-#endif ///__CSTRING_NAMESPACE_H__
+#endif //__CSTRING_NAMESPACE_H__

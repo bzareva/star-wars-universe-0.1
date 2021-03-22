@@ -7,7 +7,7 @@
 class Jedi: public Base {
 
 public:
-	enum Rank {
+	enum class Rank {
 		YOUNGLING = 1,
 		INITIATE,
 		PADAWAN,
@@ -25,18 +25,21 @@ public:
 	Jedi& operator=(const Jedi&);
 	virtual ~Jedi();
 
-	static const char* getClassName();
+	static const char* get_class_name();
 	bool operator==(const Jedi&)const;	
 	bool operator<(const Jedi&)const;
 
-	bool promote_jedi(double);
-	bool demote_jedi(double);
+	friend std::istream& operator>>(std::istream&, Jedi&);
+	friend std::ostream& operator<<(std::ostream&, const Jedi&);
+
+	void promote_jedi(double);
+	void demote_jedi(double);
 
 	/// override methods form Base class 
 	virtual Base* clone()const override;
 	virtual void print(std::ostream&)const override;
 	virtual void print_to_file(std::ofstream&)const override;
-	virtual void read_from_console(std::istream&)override;
+	virtual bool create_jedi(const char*, const char*, const char*, int, const char*, double)override;
 	virtual void read_from_file(std::ifstream&)override;
 	virtual bool is_valid_type(const char*)const override;
 	virtual const char* type_name()const override;
@@ -68,8 +71,5 @@ private:
 	char*  m_color_of_lightsaber;
 
 };
-
-std::istream& operator>>(std::istream&, Jedi&);
-std::ostream& operator<<(std::ostream&, const Jedi&);
 
 #endif ///__JEDI_H__
