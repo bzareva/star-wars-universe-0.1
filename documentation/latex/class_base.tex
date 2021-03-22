@@ -1,0 +1,172 @@
+\hypertarget{class_base}{}\doxysection{Base Class Reference}
+\label{class_base}\index{Base@{Base}}
+
+
+ 
+
+
+
+
+{\ttfamily \#include $<$Base.\+h$>$}
+
+Inheritance diagram for Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_base}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_a58887755525abd3f340963e2bbdcc972}{Base}} ()=default
+\item 
+\mbox{\hyperlink{class_base}{Base}} \& \mbox{\hyperlink{class_base_ab58a0590f1de68b3495e4f500b186435}{operator=}} (const \mbox{\hyperlink{class_base}{Base}} \&other)=default
+\item 
+virtual \mbox{\hyperlink{class_base_a306fb25541331080645a716286357ef9}{$\sim$\+Base}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_base}{Base}} $\ast$ \mbox{\hyperlink{class_base_ab99040cf7517193fb67b86ce0c29df6a}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. Access to the object of this class is realize with clone method. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_ae320623dd446e3d9cc1b0b340e9ac74b}{print}} (std\+::ostream \&) const =0
+\begin{DoxyCompactList}\small\item\em It allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way(prints to console) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_ab4d42dba47f15d35817b6c98cc2e6238}{print\+\_\+to\+\_\+file}} (std\+::ofstream \&) const =0
+\begin{DoxyCompactList}\small\item\em It allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way(prints to file) \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_base_a5a0fff487e0ed59408d5fc23b707b473}{create\+\_\+jedi}} (const char $\ast$, const char $\ast$, const char $\ast$, int, const char $\ast$, double)=0
+\begin{DoxyCompactList}\small\item\em Greate \mbox{\hyperlink{class_jedi}{Jedi}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_a6f0d22576b82fbfaac9b5a935440aeb0}{read\+\_\+from\+\_\+file}} (std\+::ifstream \&)=0
+\begin{DoxyCompactList}\small\item\em Read from file. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_base_a61e2bf38d1b0694bde08c61a92f05eb9}{is\+\_\+valid\+\_\+type}} (const char $\ast$) const =0
+\begin{DoxyCompactList}\small\item\em Checks if the entered string is valid type. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_base_adfb30421704aaa9fcafc107bce3da2fb}{type\+\_\+name}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns type of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_base_a58887755525abd3f340963e2bbdcc972}\label{class_base_a58887755525abd3f340963e2bbdcc972}} 
+\index{Base@{Base}!Base@{Base}}
+\index{Base@{Base}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{Base()}{Base()}}
+{\footnotesize\ttfamily Base\+::\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_base_a306fb25541331080645a716286357ef9}\label{class_base_a306fb25541331080645a716286357ef9}} 
+\index{Base@{Base}!````~Base@{$\sim$Base}}
+\index{````~Base@{$\sim$Base}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{$\sim$Base()}{~Base()}}
+{\footnotesize\ttfamily virtual Base\+::$\sim$\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_ab99040cf7517193fb67b86ce0c29df6a}\label{class_base_ab99040cf7517193fb67b86ce0c29df6a}} 
+\index{Base@{Base}!clone@{clone}}
+\index{clone@{clone}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_base}{Base}}$\ast$ Base\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. Access to the object of this class is realize with clone method. 
+
+
+
+Implemented in \mbox{\hyperlink{class_jedi_a1e220ec41521525e3e6b5c628ba97db5}{Jedi}}.
+
+\mbox{\Hypertarget{class_base_a5a0fff487e0ed59408d5fc23b707b473}\label{class_base_a5a0fff487e0ed59408d5fc23b707b473}} 
+\index{Base@{Base}!create\_jedi@{create\_jedi}}
+\index{create\_jedi@{create\_jedi}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{create\_jedi()}{create\_jedi()}}
+{\footnotesize\ttfamily virtual bool Base\+::create\+\_\+jedi (\begin{DoxyParamCaption}\item[{const char $\ast$}]{,  }\item[{const char $\ast$}]{,  }\item[{const char $\ast$}]{,  }\item[{int}]{,  }\item[{const char $\ast$}]{,  }\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Greate \mbox{\hyperlink{class_jedi}{Jedi}}. 
+
+
+
+Implemented in \mbox{\hyperlink{class_jedi_a547eb08735501e8aa70563c9d650d410}{Jedi}}.
+
+\mbox{\Hypertarget{class_base_a61e2bf38d1b0694bde08c61a92f05eb9}\label{class_base_a61e2bf38d1b0694bde08c61a92f05eb9}} 
+\index{Base@{Base}!is\_valid\_type@{is\_valid\_type}}
+\index{is\_valid\_type@{is\_valid\_type}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_type()}{is\_valid\_type()}}
+{\footnotesize\ttfamily virtual bool Base\+::is\+\_\+valid\+\_\+type (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if the entered string is valid type. 
+
+
+
+Implemented in \mbox{\hyperlink{class_jedi_a1c3f34f2a67771bdecf0807519e01dbb}{Jedi}}.
+
+\mbox{\Hypertarget{class_base_ab58a0590f1de68b3495e4f500b186435}\label{class_base_ab58a0590f1de68b3495e4f500b186435}} 
+\index{Base@{Base}!operator=@{operator=}}
+\index{operator=@{operator=}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_base}{Base}}\& Base\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_base}{Base}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_base_ae320623dd446e3d9cc1b0b340e9ac74b}\label{class_base_ae320623dd446e3d9cc1b0b340e9ac74b}} 
+\index{Base@{Base}!print@{print}}
+\index{print@{print}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Base\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+It allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way(prints to console) 
+
+
+
+Implemented in \mbox{\hyperlink{class_jedi_a2ff8682670c0941d3a4008b94933df72}{Jedi}}.
+
+\mbox{\Hypertarget{class_base_ab4d42dba47f15d35817b6c98cc2e6238}\label{class_base_ab4d42dba47f15d35817b6c98cc2e6238}} 
+\index{Base@{Base}!print\_to\_file@{print\_to\_file}}
+\index{print\_to\_file@{print\_to\_file}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{print\_to\_file()}{print\_to\_file()}}
+{\footnotesize\ttfamily virtual void Base\+::print\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+It allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way(prints to file) 
+
+
+
+Implemented in \mbox{\hyperlink{class_jedi_a3a4eb7912ca9a7c4582bbc44429b36bd}{Jedi}}.
+
+\mbox{\Hypertarget{class_base_a6f0d22576b82fbfaac9b5a935440aeb0}\label{class_base_a6f0d22576b82fbfaac9b5a935440aeb0}} 
+\index{Base@{Base}!read\_from\_file@{read\_from\_file}}
+\index{read\_from\_file@{read\_from\_file}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{read\_from\_file()}{read\_from\_file()}}
+{\footnotesize\ttfamily virtual void Base\+::read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Read from file. 
+
+
+
+Implemented in \mbox{\hyperlink{class_jedi_a632d5824ac2de1ce8d3c11dd2b4c19c6}{Jedi}}.
+
+\mbox{\Hypertarget{class_base_adfb30421704aaa9fcafc107bce3da2fb}\label{class_base_adfb30421704aaa9fcafc107bce3da2fb}} 
+\index{Base@{Base}!type\_name@{type\_name}}
+\index{type\_name@{type\_name}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{type\_name()}{type\_name()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Base\+::type\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns type of data. 
+
+
+
+Implemented in \mbox{\hyperlink{class_jedi_ac1f97d3e7512eca940a7969c2b29e987}{Jedi}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_base_8h}{Base.\+h}}\end{DoxyCompactItemize}
