@@ -21,9 +21,9 @@ Jedi::Jedi(std::ifstream& in) {
 	unsigned len1 = 0;
 	in.read((char*)&len1, sizeof(int));
 
-	if (m_name_jedi != nullptr) {
-		delete[]m_name_jedi;
-	}
+//	if (m_name_jedi != nullptr) {
+//		delete[]m_name_jedi;
+//	}
 	++len1; // +1 because 0 
 	m_name_jedi = new char[len1];
 	--len1;
@@ -33,9 +33,9 @@ Jedi::Jedi(std::ifstream& in) {
 	unsigned len2 = 0;
 	in.read((char*)&len2, sizeof(int));
 
-	if (m_color_of_lightsaber != nullptr) {
-		delete[]m_color_of_lightsaber;
-	}
+//	if (m_color_of_lightsaber != nullptr) {
+//		delete[]m_color_of_lightsaber;
+//	}
 	++len2;
 	m_color_of_lightsaber = new char[len2];
 	--len2;
@@ -110,17 +110,17 @@ const char* Jedi::get_class_name() {
 	return "jedi";
 }
 
-bool Jedi::operator==(const Jedi& oth)const {
+bool Jedi::operator==(const Jedi& rhs)const {
 
-	if (m_age != oth.m_age) {
+	if (m_age != rhs.m_age) {
 		return false;
 	}
 	return true;
 }
 
-bool Jedi::operator<(const Jedi& oth)const {
+bool Jedi::operator<(const Jedi& rhs)const {
 
-	if (m_age < oth.m_age) {
+	if (m_age < rhs.m_age) {
 		return true;
 	}
 	return false;
@@ -277,7 +277,7 @@ void Jedi::print_to_file(std::ofstream& ofs)const {
 	//TODO::
 }
 
-bool Jedi::create_jedi(const char* planet_name, const char* jedi_name, const char* rank, int age, const char* color_of_lightsaber, double force) {
+void Jedi::create_jedi(const char* planet_name, const char* jedi_name, const char* rank, int age, const char* color_of_lightsaber, double force) {
 
 	set_age(age);
 	set_force(force);
@@ -303,7 +303,12 @@ bool Jedi::create_jedi(const char* planet_name, const char* jedi_name, const cha
 		m_rank = Jedi::Rank::GRAND_MASTER;
 	}
 
-	return true;
+//	return true;
+}
+
+void Jedi::read(std::istream&) {
+
+	// TODO::
 }
 
 void Jedi::read_from_file(std::ifstream& ifs) {
@@ -311,9 +316,9 @@ void Jedi::read_from_file(std::ifstream& ifs) {
 	//TODO::
 }
 
-bool Jedi::is_valid_type(const char* str)const {
+bool Jedi::is_valid_type(const char* type)const {
 
-	if (!cstring_namespace::strCmp(str, "jedi") || !cstring_namespace::strCmp(str, "JEDI")) {
+	if (!cstring_namespace::strCmp(type, "jedi") || !cstring_namespace::strCmp(type, "JEDI")) {
 		return true;
 	}
 	return false;

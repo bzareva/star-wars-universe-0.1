@@ -25,8 +25,8 @@
 var NAVTREE =
 [
   [ "Star Wars Universe 0.1", "index.html", [
-    [ "Star Wars Universe 0.1", "md__r_e_a_d_m_e.html", [
-      [ "<em>Brief information</em>", "md__r_e_a_d_m_e.html#autotoc_md1", null ]
+    [ "Star Wars Universe 0.1", "md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1__r_e_a_d_m_e.html", [
+      [ "<em>Brief information</em>", "md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1__r_e_a_d_m_e.html#autotoc_md1", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],

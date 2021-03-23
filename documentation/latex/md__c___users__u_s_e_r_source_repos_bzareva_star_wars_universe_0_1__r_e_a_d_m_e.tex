@@ -1,0 +1,121 @@
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1__r_e_a_d_m_e_autotoc_md1}{}\doxysection{$<$em$>$\+Brief information$<$/em$>$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1__r_e_a_d_m_e_autotoc_md1}
+Vankata is a big fan of Star Wars, so he decided to make a small project on OOP on this topic. For the purpose, he wants to recreate the universe of the series.~\newline
+ He first started with the \mbox{\hyperlink{class_jedi}{Jedi}}, deciding that everyone should have\+:
+\begin{DoxyItemize}
+\item jedi name
+\item ank, the following are arranged in ascending order -\/ YOUNGLING, INITIATE, PADAWAN, KNIGHT-\/\+ASPIRANT, KNIGHT, MASTER, BATTLE\+\_\+\+MASTER и GRAND\+\_\+\+MASTER
+\item age
+\item the color of the lightsaber (a string entered by keyboard)
+\item force (set by some number of type double)~\newline
+
+\end{DoxyItemize}
+
+He then decided to create the planets and moons, each with a name and a \mbox{\hyperlink{class_jedi}{Jedi}}, who inhabit it. Create an application that supports the following commands\+:~\newline
+
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast$\+\_\+add\+\_\+planet \mbox{[}planet\+\_\+name\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Adds a new planet.~\newline
+
+\end{DoxyItemize}
+
+$\ast$$\ast$\+\_\+create\+\_\+jedi \mbox{[}planet\+\_\+name\mbox{]} \mbox{[}jedi\+\_\+name\mbox{]} \mbox{[}jedi\+\_\+rank\mbox{]} \mbox{[}jedi\+\_\+age\mbox{]} \mbox{[}saber\+\_\+color\mbox{]} \mbox{[}jedi\+\_\+strength\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ The function brings out a message whether the addition was successful or not (there is a \mbox{\hyperlink{class_jedi}{Jedi}} with such a name on this or that planet, or not there is a planet with such a name).~\newline
+
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast$\+\_\+remove\+Jedi \mbox{[}jedi\+\_\+name\mbox{]} \mbox{[}planet\+\_\+name\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ The function brings out a message whether the removal was successful or not (the \mbox{\hyperlink{class_jedi}{Jedi}} did not inhabits this planet).~\newline
+
+\item $\ast$$\ast$\+\_\+promote\+\_\+jedi \mbox{[}jedi\+\_\+name\mbox{]} \mbox{[}multiplier\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Raises the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank up in ladder and increases its strength by the formula jedi\+\_\+strength + = (multiplier $\ast$ jedi\+\_\+strength) (cannot be increased any more) of rank GRAND\+\_\+\+MASTER and must be multiplier positive number of type double).~\newline
+
+\item $\ast$$\ast$\+\_\+demote\+\_\+jedi \mbox{[}jedi\+\_\+name\mbox{]} \mbox{[}multiplier\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Decreases the rank of the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank down the ladder and lowers its strength by formula jedi\+\_\+strength -\/= (multiplier $\ast$ jedi\+\_\+strength) (cannot be lowered further of rank YOUNGLING and multiplier must be positive number of type double).~\newline
+
+\item $\ast$$\ast$\+\_\+get\+\_\+strongest\+\_\+jedi \mbox{[}planet\+\_\+name\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Outputs information about the strongest \mbox{\hyperlink{class_jedi}{Jedi}} of the submitted planet (with the greatest force).~\newline
+
+\item $\ast$$\ast$\+\_\+get\+\_\+youngest\+\_\+jedi \mbox{[}planet\+\_\+name\mbox{]} \mbox{[}jedi\+\_\+rank\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Brings out the youngest \mbox{\hyperlink{class_jedi}{Jedi}} inhabiting the given planet and has the corresponding rank ({\bfseries{if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message}}).~\newline
+
+\item $\ast$$\ast$\+\_\+get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color \mbox{[}planet\+\_\+name\mbox{]} \mbox{[}jedi\+\_\+rank\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Returns the most common color to light sword in the given rank of the respective planet.~\newline
+
+\item $\ast$$\ast$\+\_\+get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color \mbox{[}planet\+\_\+name\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Returns the most common color to light sword planet which is used by at least one {\bfseries{GRAND\+\_\+\+MASTER}}.~\newline
+
+\item $\ast$$\ast$\+\_\+print \mbox{[}planet\+\_\+name\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Bring out of the name of the planet appropriately and the \mbox{\hyperlink{class_jedi}{Jedi}} inhabiting it, {\bfseries{sorted first in growing order by rank, then by second key -\/ lexicographically by name}}.~\newline
+
+\item $\ast$$\ast$\+\_\+print \mbox{[}jedi\+\_\+name\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Brings out of the information about the \mbox{\hyperlink{class_jedi}{Jedi}} appropriately, as well as which planet it currently inhabits.~\newline
+
+\item $\ast$$\ast$\+\_\+\mbox{[}planet\+\_\+name\mbox{]} + \mbox{[}planet\+\_\+name\mbox{]}\+:\+\_\+$\ast$$\ast$~\newline
+ Outputs on the screen in sorted type({\bfseries{lexicographically}}) information about the inhabitants the two \mbox{\hyperlink{class_jedi}{Jedi}} planets.~\newline
+
+\end{DoxyItemize}
+
+Vankata also wanted to be able to keep the information which he input in the program for later and be able to load it again. That is, the program must store information on the planet and the \mbox{\hyperlink{class_jedi}{Jedi}} inhabiting them {\bfseries{in a file}} and to supports commands for working with files described in the working with the {\bfseries{command line section. All commands are lowercase latin letters, and the arguments are separated by one interval.}}~\newline
+~\newline
+
+
+The program allows you to perform various transformations on the files in given session. When session transformations are applied, they apply for all loaded images for the current session. Transformations are applied over images only after the \char`\"{}save\char`\"{} or \char`\"{}saveas\char`\"{} command is executed. The \char`\"{}save\char`\"{} command saves all loaded in the current user session images after applying all transformations, and the \char`\"{}saveas\char`\"{} command saves under the new name only the image that was loaded first.~\newline
+ Once the application opens a file, it can perform the following operations\+:
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast$\+\_\+open\+:\+\_\+$\ast$$\ast$~\newline
+ Loads the contents of a file. If one does not exist, a new one is created with empty content. All other commands can be executed only if there is a successfully loaded file. Once the file is opened and read, it closes and your application no longer needs to work with it, unless the user does not want to save the changes made again (see the save command below), in which case the file must be reopened. To do this, you must select an appropriate presentation of the information in the file. If your application detects an error while loading the data, it should display an appropriate error message and terminate its execution.~\newline
+~\newline
+ Example\+:~\newline
+ {\bfseries{cmd\+:}} open C\+:\textbackslash{}\+Temp\textbackslash{}file.xml~\newline
+ {\itshape Successfully opened file.\+xml}~\newline
+~\newline
+
+\item $\ast$$\ast$\+\_\+close\+:\+\_\+$\ast$$\ast$~\newline
+ Closes the currently open document. Closing clears the currently loaded information and then the program cannot execute commands other than opening a file (Open).~\newline
+~\newline
+ Example\+:~\newline
+ {\bfseries{cmd\+:}} close~\newline
+ {\itshape Successfully closed file.\+xml}~\newline
+~\newline
+
+\item $\ast$$\ast$\+\_\+save\+:\+\_\+$\ast$$\ast$~\newline
+ Saves done changes back to the same file from which the data was read.~\newline
+~\newline
+ Example\+:~\newline
+ {\bfseries{cmd\+:}} save~\newline
+ {\itshape Successfully saved file.\+xml}~\newline
+~\newline
+
+\item $\ast$$\ast$\+\_\+saveas\+:\+\_\+$\ast$$\ast$~\newline
+ Saves done changes to a file, also allowing the user to specify its path.~\newline
+~\newline
+ Example\+:~\newline
+ {\bfseries{cmd\+:}} saveas \char`\"{}\+C\+:\textbackslash{}\+Temp\textbackslash{}another file.\+xml\char`\"{}~\newline
+ {\itshape Successfully saved another file.\+xml}~\newline
+~\newline
+
+\item $\ast$$\ast$\+\_\+help\+:\+\_\+$\ast$$\ast$~\newline
+ Outputs brief information about the commands supported by the program.~\newline
+ {\bfseries{cmd\+:}} help {\itshape The following commands are supported\+:~\newline
+ open \mbox{[}file\mbox{]} opens \mbox{[}file\mbox{]}~\newline
+ close closes currently opened file~\newline
+ save saves the currently open file~\newline
+ saveas \mbox{[}file\mbox{]} saves the currently open file in \mbox{[}file\mbox{]}~\newline
+ help prints this information~\newline
+ exit exists the program}~\newline
+~\newline
+
+\item $\ast$$\ast$\+\_\+exit\+:\+\_\+$\ast$$\ast$~\newline
+ Exit the program.~\newline
+~\newline
+ Example\+:~\newline
+ {\bfseries{cmd\+:}} exit~\newline
+ {\itshape Exiting the program...}~\newline
+~\newline
+ 
+\end{DoxyItemize}

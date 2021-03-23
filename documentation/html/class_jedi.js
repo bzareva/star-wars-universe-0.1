@@ -16,7 +16,7 @@ var class_jedi =
     [ "Jedi", "class_jedi.html#a6b18bbaaecb37101a0bc2d008033ee17", null ],
     [ "~Jedi", "class_jedi.html#affc19262c1cf572fad77e1abf5bda9f7", null ],
     [ "clone", "class_jedi.html#a1e220ec41521525e3e6b5c628ba97db5", null ],
-    [ "create_jedi", "class_jedi.html#a547eb08735501e8aa70563c9d650d410", null ],
+    [ "create_jedi", "class_jedi.html#a2b25b3689b3d7f6763e85f2efaef5a7d", null ],
     [ "demote_jedi", "class_jedi.html#a6e31fcf0624ad5c5f2ad16bb803f9c0f", null ],
     [ "get_age", "class_jedi.html#adfe7693ab88a6962caa9f3a0174d97e7", null ],
     [ "get_color_of_lightsaber", "class_jedi.html#a14bb949e1da9e7060c7119c8856a3223", null ],

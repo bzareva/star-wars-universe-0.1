@@ -51,17 +51,17 @@ void \mbox{\hyperlink{class_jedi_a6e31fcf0624ad5c5f2ad16bb803f9c0f}{demote\+\_\+
 virtual \mbox{\hyperlink{class_base}{Base}} $\ast$ \mbox{\hyperlink{class_jedi_a1e220ec41521525e3e6b5c628ba97db5}{clone}} () const override
 \begin{DoxyCompactList}\small\item\em override methods form \mbox{\hyperlink{class_base}{Base}} class \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_jedi_a2ff8682670c0941d3a4008b94933df72}{print}} (std\+::ostream \&) const override
-\begin{DoxyCompactList}\small\item\em It allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way(prints to console) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way on {\itshape console} \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_jedi_a3a4eb7912ca9a7c4582bbc44429b36bd}{print\+\_\+to\+\_\+file}} (std\+::ofstream \&) const override
-\begin{DoxyCompactList}\small\item\em It allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way(prints to file) \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_jedi_a547eb08735501e8aa70563c9d650d410}{create\+\_\+jedi}} (const char $\ast$, const char $\ast$, const char $\ast$, int, const char $\ast$, double) override
-\begin{DoxyCompactList}\small\item\em Greate \mbox{\hyperlink{class_jedi}{Jedi}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way on {\itshape file} \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_jedi_a2b25b3689b3d7f6763e85f2efaef5a7d}{create\+\_\+jedi}} (const char $\ast$, const char $\ast$, const char $\ast$, int, const char $\ast$, double) override
+\begin{DoxyCompactList}\small\item\em Pure virtual create method. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_jedi_a632d5824ac2de1ce8d3c11dd2b4c19c6}{read\+\_\+from\+\_\+file}} (std\+::ifstream \&) override
-\begin{DoxyCompactList}\small\item\em Read from file. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pure virtual method for reading information from {\itshape file} \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_jedi_a1c3f34f2a67771bdecf0807519e01dbb}{is\+\_\+valid\+\_\+type}} (const char $\ast$) const override
-\begin{DoxyCompactList}\small\item\em Checks if the entered string is valid type. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pure virtual method which check is it valid type the submission parameter. \end{DoxyCompactList}\item 
 virtual const char $\ast$ \mbox{\hyperlink{class_jedi_ac1f97d3e7512eca940a7969c2b29e987}{type\+\_\+name}} () const override
-\begin{DoxyCompactList}\small\item\em Returns type of data. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pure virtual method which return name of type object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jedi_a27fb0b0535d8c812c1cbb53d64fb7faa}{set\+\_\+age}} (int)
 \begin{DoxyCompactList}\small\item\em setters \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jedi_a613e03a4828de5a88cea24daea7232b1}{set\+\_\+force}} (double)
@@ -187,19 +187,34 @@ override methods form \mbox{\hyperlink{class_base}{Base}} class
 
 Implements \mbox{\hyperlink{class_base_ab99040cf7517193fb67b86ce0c29df6a}{Base}}.
 
-\mbox{\Hypertarget{class_jedi_a547eb08735501e8aa70563c9d650d410}\label{class_jedi_a547eb08735501e8aa70563c9d650d410}} 
+\mbox{\Hypertarget{class_jedi_a2b25b3689b3d7f6763e85f2efaef5a7d}\label{class_jedi_a2b25b3689b3d7f6763e85f2efaef5a7d}} 
 \index{Jedi@{Jedi}!create\_jedi@{create\_jedi}}
 \index{create\_jedi@{create\_jedi}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{create\_jedi()}{create\_jedi()}}
-{\footnotesize\ttfamily bool Jedi\+::create\+\_\+jedi (\begin{DoxyParamCaption}\item[{const char $\ast$}]{,  }\item[{const char $\ast$}]{,  }\item[{const char $\ast$}]{,  }\item[{int}]{,  }\item[{const char $\ast$}]{,  }\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Jedi\+::create\+\_\+jedi (\begin{DoxyParamCaption}\item[{const char $\ast$}]{planet\+\_\+name,  }\item[{const char $\ast$}]{jedi\+\_\+name,  }\item[{const char $\ast$}]{jedi\+\_\+rank,  }\item[{int}]{jedi\+\_\+age,  }\item[{const char $\ast$}]{saber\+\_\+color,  }\item[{double}]{jedi\+\_\+strength }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Greate \mbox{\hyperlink{class_jedi}{Jedi}}. 
+Pure virtual create method. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em planet\+\_\+name} & Planet name \\
+\hline
+{\em jedi\+\_\+name} & \mbox{\hyperlink{class_jedi}{Jedi}} name \\
+\hline
+{\em jedi\+\_\+rank} & \mbox{\hyperlink{class_jedi}{Jedi}} rank \\
+\hline
+{\em jedi\+\_\+age} & \mbox{\hyperlink{class_jedi}{Jedi}} age \\
+\hline
+{\em saber\+\_\+color} & \mbox{\hyperlink{class_jedi}{Jedi}} saber color \\
+\hline
+{\em jedi\+\_\+strength} & \mbox{\hyperlink{class_jedi}{Jedi}} color \\
+\hline
+\end{DoxyParams}
 
-Implements \mbox{\hyperlink{class_base_a5a0fff487e0ed59408d5fc23b707b473}{Base}}.
+
+Implements \mbox{\hyperlink{class_base_afafe9868f6c60e49ebbf00b42a6488be}{Base}}.
 
 \mbox{\Hypertarget{class_jedi_a6e31fcf0624ad5c5f2ad16bb803f9c0f}\label{class_jedi_a6e31fcf0624ad5c5f2ad16bb803f9c0f}} 
 \index{Jedi@{Jedi}!demote\_jedi@{demote\_jedi}}
@@ -251,15 +266,15 @@ getters
 \index{Jedi@{Jedi}!is\_valid\_type@{is\_valid\_type}}
 \index{is\_valid\_type@{is\_valid\_type}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{is\_valid\_type()}{is\_valid\_type()}}
-{\footnotesize\ttfamily bool Jedi\+::is\+\_\+valid\+\_\+type (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Jedi\+::is\+\_\+valid\+\_\+type (\begin{DoxyParamCaption}\item[{const char $\ast$}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Checks if the entered string is valid type. 
+Pure virtual method which check is it valid type the submission parameter. 
 
 
 
-Implements \mbox{\hyperlink{class_base_a61e2bf38d1b0694bde08c61a92f05eb9}{Base}}.
+Implements \mbox{\hyperlink{class_base_af59f5245ef5273ecac6303502ab4cfcf}{Base}}.
 
 \mbox{\Hypertarget{class_jedi_ad0012882b8166525dc03a5ac58a041e7}\label{class_jedi_ad0012882b8166525dc03a5ac58a041e7}} 
 \index{Jedi@{Jedi}!operator$<$@{operator$<$}}
@@ -283,29 +298,29 @@ Implements \mbox{\hyperlink{class_base_a61e2bf38d1b0694bde08c61a92f05eb9}{Base}}
 \index{Jedi@{Jedi}!print@{print}}
 \index{print@{print}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily void Jedi\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Jedi\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-It allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way(prints to console) 
+Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way on {\itshape console} 
 
 
 
-Implements \mbox{\hyperlink{class_base_ae320623dd446e3d9cc1b0b340e9ac74b}{Base}}.
+Implements \mbox{\hyperlink{class_base_aace499ec12f9634b9beac2d76869969e}{Base}}.
 
 \mbox{\Hypertarget{class_jedi_a3a4eb7912ca9a7c4582bbc44429b36bd}\label{class_jedi_a3a4eb7912ca9a7c4582bbc44429b36bd}} 
 \index{Jedi@{Jedi}!print\_to\_file@{print\_to\_file}}
 \index{print\_to\_file@{print\_to\_file}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{print\_to\_file()}{print\_to\_file()}}
-{\footnotesize\ttfamily void Jedi\+::print\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Jedi\+::print\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ofs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-It allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way(prints to file) 
+Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way on {\itshape file} 
 
 
 
-Implements \mbox{\hyperlink{class_base_ab4d42dba47f15d35817b6c98cc2e6238}{Base}}.
+Implements \mbox{\hyperlink{class_base_a6d719063f70a5d2dc3930c0c860e3b46}{Base}}.
 
 \mbox{\Hypertarget{class_jedi_a0da53b3fd08c82c6b3c9dca6a69bcdfe}\label{class_jedi_a0da53b3fd08c82c6b3c9dca6a69bcdfe}} 
 \index{Jedi@{Jedi}!promote\_jedi@{promote\_jedi}}
@@ -317,15 +332,15 @@ Implements \mbox{\hyperlink{class_base_ab4d42dba47f15d35817b6c98cc2e6238}{Base}}
 \index{Jedi@{Jedi}!read\_from\_file@{read\_from\_file}}
 \index{read\_from\_file@{read\_from\_file}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{read\_from\_file()}{read\_from\_file()}}
-{\footnotesize\ttfamily void Jedi\+::read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Jedi\+::read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{ifs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Read from file. 
+Pure virtual method for reading information from {\itshape file} 
 
 
 
-Implements \mbox{\hyperlink{class_base_a6f0d22576b82fbfaac9b5a935440aeb0}{Base}}.
+Implements \mbox{\hyperlink{class_base_aa38ee4e3c3ed280723b3494505daf89b}{Base}}.
 
 \mbox{\Hypertarget{class_jedi_a27fb0b0535d8c812c1cbb53d64fb7faa}\label{class_jedi_a27fb0b0535d8c812c1cbb53d64fb7faa}} 
 \index{Jedi@{Jedi}!set\_age@{set\_age}}
@@ -369,7 +384,7 @@ setters
 
 
 
-Returns type of data. 
+Pure virtual method which return name of type object. 
 
 
 
@@ -394,5 +409,5 @@ Implements \mbox{\hyperlink{class_base_adfb30421704aaa9fcafc107bce3da2fb}{Base}}
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_jedi_8h}{Jedi.\+h}}\item 
-\mbox{\hyperlink{_jedi_8cpp}{Jedi.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_jedi_8h}{Jedi.\+h}}\item 
+C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_jedi_8cpp}{Jedi.\+cpp}}\end{DoxyCompactItemize}
