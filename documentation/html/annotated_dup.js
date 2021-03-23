@@ -4,5 +4,5 @@ var annotated_dup =
     [ "Galaxy", "class_galaxy.html", null ],
     [ "IFactory", "class_i_factory.html", null ],
     [ "Jedi", "class_jedi.html", "class_jedi" ],
-    [ "Planet", "class_planet.html", null ]
+    [ "Planet", "class_planet.html", "class_planet" ]
 ];

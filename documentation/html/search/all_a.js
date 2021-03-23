@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_39',['main',['../_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'Main.cpp']]],
-  ['main_2ecpp_40',['Main.cpp',['../_main_8cpp.html',1,'']]],
-  ['master_41',['MASTER',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbeda89a1533c37ec9254f22b5e0f29c9c0ff',1,'Jedi.h']]]
+  ['knight_47',['KNIGHT',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbedaf7f210da15dbb4283299b2affd9bb238',1,'Jedi.h']]],
+  ['knight_5faspirant_48',['KNIGHT_ASPIRANT',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbeda41288f9a3d8bdc0438bf32918cb692ed',1,'Jedi.h']]]
 ];

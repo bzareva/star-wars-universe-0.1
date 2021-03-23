@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['jedi_34',['Jedi',['../class_jedi.html',1,'Jedi'],['../class_jedi.html#afb8a05988898aeb434678099416fc4e6',1,'Jedi::Jedi()'],['../class_jedi.html#a3da57811f8332a961022a13640497098',1,'Jedi::Jedi(std::ifstream &amp;fin)'],['../class_jedi.html#a7770aa153664b0b3f9acf177464dabe5',1,'Jedi::Jedi(int age, double force, const Rank &amp;rank, const char *name, const char *color_of_lightsaber)'],['../class_jedi.html#a4034eeede584f1033b235258a2fa8406',1,'Jedi::Jedi(const Jedi &amp;oth)']]],
-  ['jedi_2ecpp_35',['Jedi.cpp',['../_jedi_8cpp.html',1,'']]],
-  ['jedi_2eh_36',['Jedi.h',['../_jedi_8h.html',1,'']]]
+  ['ifactory_40',['IFactory',['../class_i_factory.html',1,'']]],
+  ['ifactory_2eh_41',['IFactory.h',['../_i_factory_8h.html',1,'']]],
+  ['initiate_42',['INITIATE',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbedaf7410c020277271d1db4a78f32313126',1,'Jedi.h']]],
+  ['is_5fvalid_5ftype_43',['is_valid_type',['../class_base.html#af59f5245ef5273ecac6303502ab4cfcf',1,'Base::is_valid_type()'],['../class_jedi.html#af0845c12e8b3ff266b23b7b8776083a3',1,'Jedi::is_valid_type()'],['../class_planet.html#a359f24be0ccb86ac15f8a01d7ec66514',1,'Planet::is_valid_type()']]]
 ];

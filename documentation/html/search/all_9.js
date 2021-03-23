@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['knight_37',['KNIGHT',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbedaf7f210da15dbb4283299b2affd9bb238',1,'Jedi.h']]],
-  ['knight_5faspirant_38',['KNIGHT_ASPIRANT',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbeda41288f9a3d8bdc0438bf32918cb692ed',1,'Jedi.h']]]
+  ['jedi_44',['Jedi',['../class_jedi.html',1,'Jedi'],['../class_jedi.html#afb8a05988898aeb434678099416fc4e6',1,'Jedi::Jedi()'],['../class_jedi.html#a3da57811f8332a961022a13640497098',1,'Jedi::Jedi(std::ifstream &amp;fin)'],['../class_jedi.html#a7770aa153664b0b3f9acf177464dabe5',1,'Jedi::Jedi(int age, double force, const Rank &amp;rank, const char *name, const char *color_of_lightsaber)'],['../class_jedi.html#a4034eeede584f1033b235258a2fa8406',1,'Jedi::Jedi(const Jedi &amp;oth)']]],
+  ['jedi_2ecpp_45',['Jedi.cpp',['../_jedi_8cpp.html',1,'']]],
+  ['jedi_2eh_46',['Jedi.h',['../_jedi_8h.html',1,'']]]
 ];

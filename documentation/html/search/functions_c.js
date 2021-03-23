@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7ebase_146',['~Base',['../class_base.html#a306fb25541331080645a716286357ef9',1,'Base']]],
-  ['_7ejedi_147',['~Jedi',['../class_jedi.html#affc19262c1cf572fad77e1abf5bda9f7',1,'Jedi']]]
+  ['type_5fname_180',['type_name',['../class_base.html#adfb30421704aaa9fcafc107bce3da2fb',1,'Base::type_name()'],['../class_jedi.html#ac1f97d3e7512eca940a7969c2b29e987',1,'Jedi::type_name()'],['../class_planet.html#a14c765ce6c3e72ee5e4fb3dc1a3e8be2',1,'Planet::type_name()']]]
 ];

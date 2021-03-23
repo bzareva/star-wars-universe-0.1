@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['base_0',['Base',['../class_base.html',1,'Base'],['../class_base.html#a58887755525abd3f340963e2bbdcc972',1,'Base::Base()']]],
-  ['base_2eh_1',['Base.h',['../_base_8h.html',1,'']]],
-  ['battle_5fmaster_2',['BATTLE_MASTER',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbeda8697e3d3185d2b5bb47d30058652ed54',1,'Jedi.h']]]
+  ['at_0',['at',['../class_planet.html#adff9d985a3f3d7df1957a8c4c3e318b0',1,'Planet::at(int ind)'],['../class_planet.html#a4a5ef607fa40e3be3ef95d2cafa19c18',1,'Planet::at(int ind) const']]]
 ];
