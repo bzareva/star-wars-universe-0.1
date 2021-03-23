@@ -2,7 +2,7 @@
 \label{class_base}\index{Base@{Base}}
 
 
-Abstract base class for \mbox{\hyperlink{class_galaxy}{Galaxy}}.  
+Abstract base class for \mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_jedi}{Jedi}} and Planet herited this class.  
 
 
 
@@ -25,16 +25,16 @@ Inheritance diagram for Base\+:\begin{figure}[H]
 virtual \mbox{\hyperlink{class_base_a306fb25541331080645a716286357ef9}{$\sim$\+Base}} ()=default
 \item 
 virtual \mbox{\hyperlink{class_base}{Base}} $\ast$ \mbox{\hyperlink{class_base_ab99040cf7517193fb67b86ce0c29df6a}{clone}} () const =0
-\begin{DoxyCompactList}\small\item\em Pure virtual clone method. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_base_aace499ec12f9634b9beac2d76869969e}{print}} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual clone method Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_ad435a08229b26c0ee63d08e136b70c96}{print}} (std\+::ostream \&out) const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way on {\itshape console} \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_base_a6d719063f70a5d2dc3930c0c860e3b46}{print\+\_\+to\+\_\+file}} (std\+::ofstream \&ofs) const =0
+virtual void \mbox{\hyperlink{class_base_a224e768fa3ec98d85f834d8932277d85}{print\+\_\+to\+\_\+file}} (std\+::ofstream \&fout) const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way on {\itshape file} \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_base_afafe9868f6c60e49ebbf00b42a6488be}{create\+\_\+jedi}} (const char $\ast$planet\+\_\+name, const char $\ast$jedi\+\_\+name, const char $\ast$jedi\+\_\+rank, int jedi\+\_\+age, const char $\ast$saber\+\_\+color, double jedi\+\_\+strength)=0
 \begin{DoxyCompactList}\small\item\em Pure virtual create method. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_base_ab82beb07575e45af8a9a2e740905eea4}{read}} (std\+::istream \&is)=0
+virtual void \mbox{\hyperlink{class_base_a17776c36f0ef8ac98f80f39bd16ee81a}{read}} (std\+::istream \&in)=0
 \begin{DoxyCompactList}\small\item\em Pure virtual method for reading information from {\itshape console} \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_base_aa38ee4e3c3ed280723b3494505daf89b}{read\+\_\+from\+\_\+file}} (std\+::ifstream \&ifs)=0
+virtual void \mbox{\hyperlink{class_base_aa464997c0ff7060d1dd2568e1590b4b6}{read\+\_\+from\+\_\+file}} (std\+::ifstream \&fin)=0
 \begin{DoxyCompactList}\small\item\em Pure virtual method for reading information from {\itshape file} \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_base_af59f5245ef5273ecac6303502ab4cfcf}{is\+\_\+valid\+\_\+type}} (const char $\ast$type) const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual method which check is it valid type the submission parameter. \end{DoxyCompactList}\item 
@@ -43,9 +43,9 @@ virtual const char $\ast$ \mbox{\hyperlink{class_base_adfb30421704aaa9fcafc107bc
 
 
 \doxysubsection{Detailed Description}
-Abstract base class for \mbox{\hyperlink{class_galaxy}{Galaxy}}. 
+Abstract base class for \mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_jedi}{Jedi}} and Planet herited this class. 
 
-\mbox{\hyperlink{class_jedi}{Jedi}} and Planet herited this class. The heirs(\+Jedi and Planet) of \mbox{\hyperlink{class_base}{Base}} class implement all of the functions in own way. 
+The heirs(\+Jedi and Planet) of \mbox{\hyperlink{class_base}{Base}} class implement all of the functions in own way. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_base_a58887755525abd3f340963e2bbdcc972}\label{class_base_a58887755525abd3f340963e2bbdcc972}} 
@@ -71,9 +71,9 @@ Abstract base class for \mbox{\hyperlink{class_galaxy}{Galaxy}}.
 
 
 
-Pure virtual clone method. 
+Pure virtual clone method Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. 
 
-Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. Access to the object of this class is realize with clone method. 
+Access to the object of this class is realize with clone method. 
 
 Implemented in \mbox{\hyperlink{class_jedi_a1e220ec41521525e3e6b5c628ba97db5}{Jedi}}.
 
@@ -88,23 +88,8 @@ Implemented in \mbox{\hyperlink{class_jedi_a1e220ec41521525e3e6b5c628ba97db5}{Je
 Pure virtual create method. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em planet\+\_\+name} & Planet name \\
-\hline
-{\em jedi\+\_\+name} & \mbox{\hyperlink{class_jedi}{Jedi}} name \\
-\hline
-{\em jedi\+\_\+rank} & \mbox{\hyperlink{class_jedi}{Jedi}} rank \\
-\hline
-{\em jedi\+\_\+age} & \mbox{\hyperlink{class_jedi}{Jedi}} age \\
-\hline
-{\em saber\+\_\+color} & \mbox{\hyperlink{class_jedi}{Jedi}} saber color \\
-\hline
-{\em jedi\+\_\+strength} & \mbox{\hyperlink{class_jedi}{Jedi}} color \\
-\hline
-\end{DoxyParams}
 
-
-Implemented in \mbox{\hyperlink{class_jedi_a2b25b3689b3d7f6763e85f2efaef5a7d}{Jedi}}.
+Implemented in \mbox{\hyperlink{class_jedi_afd3172d30a841327d159803f8687e24c}{Jedi}}.
 
 \mbox{\Hypertarget{class_base_af59f5245ef5273ecac6303502ab4cfcf}\label{class_base_af59f5245ef5273ecac6303502ab4cfcf}} 
 \index{Base@{Base}!is\_valid\_type@{is\_valid\_type}}
@@ -118,7 +103,7 @@ Pure virtual method which check is it valid type the submission parameter.
 
 
 
-Implemented in \mbox{\hyperlink{class_jedi_a1c3f34f2a67771bdecf0807519e01dbb}{Jedi}}.
+Implemented in \mbox{\hyperlink{class_jedi_af0845c12e8b3ff266b23b7b8776083a3}{Jedi}}.
 
 \mbox{\Hypertarget{class_base_aa50a4c24dd83ec9ec9f9dfbdedc83592}\label{class_base_aa50a4c24dd83ec9ec9f9dfbdedc83592}} 
 \index{Base@{Base}!operator=@{operator=}}
@@ -126,11 +111,11 @@ Implemented in \mbox{\hyperlink{class_jedi_a1c3f34f2a67771bdecf0807519e01dbb}{Je
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_base}{Base}}\& Base\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_base}{Base}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-\mbox{\Hypertarget{class_base_aace499ec12f9634b9beac2d76869969e}\label{class_base_aace499ec12f9634b9beac2d76869969e}} 
+\mbox{\Hypertarget{class_base_ad435a08229b26c0ee63d08e136b70c96}\label{class_base_ad435a08229b26c0ee63d08e136b70c96}} 
 \index{Base@{Base}!print@{print}}
 \index{print@{print}!Base@{Base}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily virtual void Base\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Base\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -138,13 +123,13 @@ Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base
 
 
 
-Implemented in \mbox{\hyperlink{class_jedi_a2ff8682670c0941d3a4008b94933df72}{Jedi}}.
+Implemented in \mbox{\hyperlink{class_jedi_a66ef98828b5f0a8020cae6b2f9775b56}{Jedi}}.
 
-\mbox{\Hypertarget{class_base_a6d719063f70a5d2dc3930c0c860e3b46}\label{class_base_a6d719063f70a5d2dc3930c0c860e3b46}} 
+\mbox{\Hypertarget{class_base_a224e768fa3ec98d85f834d8932277d85}\label{class_base_a224e768fa3ec98d85f834d8932277d85}} 
 \index{Base@{Base}!print\_to\_file@{print\_to\_file}}
 \index{print\_to\_file@{print\_to\_file}!Base@{Base}}
 \doxysubsubsection{\texorpdfstring{print\_to\_file()}{print\_to\_file()}}
-{\footnotesize\ttfamily virtual void Base\+::print\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{ofs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Base\+::print\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{fout }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -152,23 +137,27 @@ Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base
 
 
 
-Implemented in \mbox{\hyperlink{class_jedi_a3a4eb7912ca9a7c4582bbc44429b36bd}{Jedi}}.
+Implemented in \mbox{\hyperlink{class_jedi_a24e11bf79745cdc3007bff9b29d4b756}{Jedi}}.
 
-\mbox{\Hypertarget{class_base_ab82beb07575e45af8a9a2e740905eea4}\label{class_base_ab82beb07575e45af8a9a2e740905eea4}} 
+\mbox{\Hypertarget{class_base_a17776c36f0ef8ac98f80f39bd16ee81a}\label{class_base_a17776c36f0ef8ac98f80f39bd16ee81a}} 
 \index{Base@{Base}!read@{read}}
 \index{read@{read}!Base@{Base}}
 \doxysubsubsection{\texorpdfstring{read()}{read()}}
-{\footnotesize\ttfamily virtual void Base\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Base\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
 Pure virtual method for reading information from {\itshape console} 
 
-\mbox{\Hypertarget{class_base_aa38ee4e3c3ed280723b3494505daf89b}\label{class_base_aa38ee4e3c3ed280723b3494505daf89b}} 
+
+
+Implemented in \mbox{\hyperlink{class_jedi_a93a769b8dba039149814727b9fdf4257}{Jedi}}.
+
+\mbox{\Hypertarget{class_base_aa464997c0ff7060d1dd2568e1590b4b6}\label{class_base_aa464997c0ff7060d1dd2568e1590b4b6}} 
 \index{Base@{Base}!read\_from\_file@{read\_from\_file}}
 \index{read\_from\_file@{read\_from\_file}!Base@{Base}}
 \doxysubsubsection{\texorpdfstring{read\_from\_file()}{read\_from\_file()}}
-{\footnotesize\ttfamily virtual void Base\+::read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{ifs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Base\+::read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{fin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -176,7 +165,7 @@ Pure virtual method for reading information from {\itshape file}
 
 
 
-Implemented in \mbox{\hyperlink{class_jedi_a632d5824ac2de1ce8d3c11dd2b4c19c6}{Jedi}}.
+Implemented in \mbox{\hyperlink{class_jedi_a1ced6357fcf6aeccbb49dd50de61dc6b}{Jedi}}.
 
 \mbox{\Hypertarget{class_base_adfb30421704aaa9fcafc107bce3da2fb}\label{class_base_adfb30421704aaa9fcafc107bce3da2fb}} 
 \index{Base@{Base}!type\_name@{type\_name}}

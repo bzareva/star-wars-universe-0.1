@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('class_base.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 
-<p>Abstract base class for <a class="el" href="class_galaxy.html">Galaxy</a>.  
+<p>Abstract base class for <a class="el" href="class_galaxy.html">Galaxy</a> <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> and Planet herited this class.  
  <a href="class_base.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_base_8h_source.html">Base.h</a>&gt;</code></p>
@@ -109,7 +109,7 @@ Inheritance diagram for Base:</div>
  <div class="center">
   <img src="class_base.png" usemap="#Base_map" alt=""/>
   <map id="Base_map" name="Base_map">
-<area href="class_jedi.html" alt="Jedi" shape="rect" coords="0,56,40,80"/>
+<area href="class_jedi.html" title="Inherits of Base class." alt="Jedi" shape="rect" coords="0,56,40,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -122,23 +122,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a306fb25541331080645a716286357ef9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a306fb25541331080645a716286357ef9">~Base</a> ()=default</td></tr>
 <tr class="separator:a306fb25541331080645a716286357ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab99040cf7517193fb67b86ce0c29df6a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_base.html">Base</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#ab99040cf7517193fb67b86ce0c29df6a">clone</a> () const =0</td></tr>
-<tr class="memdesc:ab99040cf7517193fb67b86ce0c29df6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual clone method.  <a href="class_base.html#ab99040cf7517193fb67b86ce0c29df6a">More...</a><br /></td></tr>
+<tr class="memdesc:ab99040cf7517193fb67b86ce0c29df6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual clone method Makes a copy of the <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> object.  <a href="class_base.html#ab99040cf7517193fb67b86ce0c29df6a">More...</a><br /></td></tr>
 <tr class="separator:ab99040cf7517193fb67b86ce0c29df6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aace499ec12f9634b9beac2d76869969e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#aace499ec12f9634b9beac2d76869969e">print</a> (std::ostream &amp;os) const =0</td></tr>
-<tr class="memdesc:aace499ec12f9634b9beac2d76869969e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>console</em>  <a href="class_base.html#aace499ec12f9634b9beac2d76869969e">More...</a><br /></td></tr>
-<tr class="separator:aace499ec12f9634b9beac2d76869969e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d719063f70a5d2dc3930c0c860e3b46"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a6d719063f70a5d2dc3930c0c860e3b46">print_to_file</a> (std::ofstream &amp;ofs) const =0</td></tr>
-<tr class="memdesc:a6d719063f70a5d2dc3930c0c860e3b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>  <a href="class_base.html#a6d719063f70a5d2dc3930c0c860e3b46">More...</a><br /></td></tr>
-<tr class="separator:a6d719063f70a5d2dc3930c0c860e3b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad435a08229b26c0ee63d08e136b70c96"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#ad435a08229b26c0ee63d08e136b70c96">print</a> (std::ostream &amp;out) const =0</td></tr>
+<tr class="memdesc:ad435a08229b26c0ee63d08e136b70c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>console</em>  <a href="class_base.html#ad435a08229b26c0ee63d08e136b70c96">More...</a><br /></td></tr>
+<tr class="separator:ad435a08229b26c0ee63d08e136b70c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a224e768fa3ec98d85f834d8932277d85"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a224e768fa3ec98d85f834d8932277d85">print_to_file</a> (std::ofstream &amp;fout) const =0</td></tr>
+<tr class="memdesc:a224e768fa3ec98d85f834d8932277d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>  <a href="class_base.html#a224e768fa3ec98d85f834d8932277d85">More...</a><br /></td></tr>
+<tr class="separator:a224e768fa3ec98d85f834d8932277d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afafe9868f6c60e49ebbf00b42a6488be"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#afafe9868f6c60e49ebbf00b42a6488be">create_jedi</a> (const char *planet_name, const char *jedi_name, const char *jedi_rank, int jedi_age, const char *saber_color, double jedi_strength)=0</td></tr>
 <tr class="memdesc:afafe9868f6c60e49ebbf00b42a6488be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual create method.  <a href="class_base.html#afafe9868f6c60e49ebbf00b42a6488be">More...</a><br /></td></tr>
 <tr class="separator:afafe9868f6c60e49ebbf00b42a6488be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab82beb07575e45af8a9a2e740905eea4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#ab82beb07575e45af8a9a2e740905eea4">read</a> (std::istream &amp;is)=0</td></tr>
-<tr class="memdesc:ab82beb07575e45af8a9a2e740905eea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>console</em>  <a href="class_base.html#ab82beb07575e45af8a9a2e740905eea4">More...</a><br /></td></tr>
-<tr class="separator:ab82beb07575e45af8a9a2e740905eea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa38ee4e3c3ed280723b3494505daf89b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#aa38ee4e3c3ed280723b3494505daf89b">read_from_file</a> (std::ifstream &amp;ifs)=0</td></tr>
-<tr class="memdesc:aa38ee4e3c3ed280723b3494505daf89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>file</em>  <a href="class_base.html#aa38ee4e3c3ed280723b3494505daf89b">More...</a><br /></td></tr>
-<tr class="separator:aa38ee4e3c3ed280723b3494505daf89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17776c36f0ef8ac98f80f39bd16ee81a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a17776c36f0ef8ac98f80f39bd16ee81a">read</a> (std::istream &amp;in)=0</td></tr>
+<tr class="memdesc:a17776c36f0ef8ac98f80f39bd16ee81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>console</em>  <a href="class_base.html#a17776c36f0ef8ac98f80f39bd16ee81a">More...</a><br /></td></tr>
+<tr class="separator:a17776c36f0ef8ac98f80f39bd16ee81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa464997c0ff7060d1dd2568e1590b4b6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#aa464997c0ff7060d1dd2568e1590b4b6">read_from_file</a> (std::ifstream &amp;fin)=0</td></tr>
+<tr class="memdesc:aa464997c0ff7060d1dd2568e1590b4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>file</em>  <a href="class_base.html#aa464997c0ff7060d1dd2568e1590b4b6">More...</a><br /></td></tr>
+<tr class="separator:aa464997c0ff7060d1dd2568e1590b4b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af59f5245ef5273ecac6303502ab4cfcf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#af59f5245ef5273ecac6303502ab4cfcf">is_valid_type</a> (const char *type) const =0</td></tr>
 <tr class="memdesc:af59f5245ef5273ecac6303502ab4cfcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method which check is it valid type the submission parameter.  <a href="class_base.html#af59f5245ef5273ecac6303502ab4cfcf">More...</a><br /></td></tr>
 <tr class="separator:af59f5245ef5273ecac6303502ab4cfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,8 +147,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adfb30421704aaa9fcafc107bce3da2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract base class for <a class="el" href="class_galaxy.html">Galaxy</a>. </p>
-<p><a class="el" href="class_jedi.html">Jedi</a> and Planet herited this class. The heirs(Jedi and Planet) of <a class="el" href="class_base.html" title="Abstract base class for Galaxy.">Base</a> class implement all of the functions in own way. </p>
+<div class="textblock"><p>Abstract base class for <a class="el" href="class_galaxy.html">Galaxy</a> <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> and Planet herited this class. </p>
+<p>The heirs(Jedi and Planet) of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> class implement all of the functions in own way. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a58887755525abd3f340963e2bbdcc972"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58887755525abd3f340963e2bbdcc972">&#9670;&nbsp;</a></span>Base()</h2>
@@ -224,8 +224,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual clone method. </p>
-<p>Makes a copy of the <a class="el" href="class_base.html" title="Abstract base class for Galaxy.">Base</a> object. Access to the object of this class is realize with clone method. </p>
+<p>Pure virtual clone method Makes a copy of the <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> object. </p>
+<p>Access to the object of this class is realize with clone method. </p>
 
 <p>Implemented in <a class="el" href="class_jedi.html#a1e220ec41521525e3e6b5c628ba97db5">Jedi</a>.</p>
 
@@ -290,19 +290,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pure virtual create method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">planet_name</td><td>Planet name </td></tr>
-    <tr><td class="paramname">jedi_name</td><td><a class="el" href="class_jedi.html">Jedi</a> name </td></tr>
-    <tr><td class="paramname">jedi_rank</td><td><a class="el" href="class_jedi.html">Jedi</a> rank </td></tr>
-    <tr><td class="paramname">jedi_age</td><td><a class="el" href="class_jedi.html">Jedi</a> age </td></tr>
-    <tr><td class="paramname">saber_color</td><td><a class="el" href="class_jedi.html">Jedi</a> saber color </td></tr>
-    <tr><td class="paramname">jedi_strength</td><td><a class="el" href="class_jedi.html">Jedi</a> color </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p>Implemented in <a class="el" href="class_jedi.html#a2b25b3689b3d7f6763e85f2efaef5a7d">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_jedi.html#afd3172d30a841327d159803f8687e24c">Jedi</a>.</p>
 
 </div>
 </div>
@@ -332,7 +321,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Pure virtual method which check is it valid type the submission parameter. </p>
 
-<p>Implemented in <a class="el" href="class_jedi.html#a1c3f34f2a67771bdecf0807519e01dbb">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_jedi.html#af0845c12e8b3ff266b23b7b8776083a3">Jedi</a>.</p>
 
 </div>
 </div>
@@ -362,8 +351,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aace499ec12f9634b9beac2d76869969e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aace499ec12f9634b9beac2d76869969e">&#9670;&nbsp;</a></span>print()</h2>
+<a id="ad435a08229b26c0ee63d08e136b70c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad435a08229b26c0ee63d08e136b70c96">&#9670;&nbsp;</a></span>print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,7 +364,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual void Base::print </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em></td><td>)</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -386,14 +375,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>console</em> </p>
+<p>Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>console</em> </p>
 
-<p>Implemented in <a class="el" href="class_jedi.html#a2ff8682670c0941d3a4008b94933df72">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_jedi.html#a66ef98828b5f0a8020cae6b2f9775b56">Jedi</a>.</p>
 
 </div>
 </div>
-<a id="a6d719063f70a5d2dc3930c0c860e3b46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d719063f70a5d2dc3930c0c860e3b46">&#9670;&nbsp;</a></span>print_to_file()</h2>
+<a id="a224e768fa3ec98d85f834d8932277d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a224e768fa3ec98d85f834d8932277d85">&#9670;&nbsp;</a></span>print_to_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,7 +394,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual void Base::print_to_file </td>
           <td>(</td>
           <td class="paramtype">std::ofstream &amp;&#160;</td>
-          <td class="paramname"><em>ofs</em></td><td>)</td>
+          <td class="paramname"><em>fout</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -416,14 +405,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em> </p>
+<p>Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em> </p>
 
-<p>Implemented in <a class="el" href="class_jedi.html#a3a4eb7912ca9a7c4582bbc44429b36bd">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_jedi.html#a24e11bf79745cdc3007bff9b29d4b756">Jedi</a>.</p>
 
 </div>
 </div>
-<a id="ab82beb07575e45af8a9a2e740905eea4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab82beb07575e45af8a9a2e740905eea4">&#9670;&nbsp;</a></span>read()</h2>
+<a id="a17776c36f0ef8ac98f80f39bd16ee81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17776c36f0ef8ac98f80f39bd16ee81a">&#9670;&nbsp;</a></span>read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,7 +424,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual void Base::read </td>
           <td>(</td>
           <td class="paramtype">std::istream &amp;&#160;</td>
-          <td class="paramname"><em>is</em></td><td>)</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -448,10 +437,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Pure virtual method for reading information from <em>console</em> </p>
 
+<p>Implemented in <a class="el" href="class_jedi.html#a93a769b8dba039149814727b9fdf4257">Jedi</a>.</p>
+
 </div>
 </div>
-<a id="aa38ee4e3c3ed280723b3494505daf89b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa38ee4e3c3ed280723b3494505daf89b">&#9670;&nbsp;</a></span>read_from_file()</h2>
+<a id="aa464997c0ff7060d1dd2568e1590b4b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa464997c0ff7060d1dd2568e1590b4b6">&#9670;&nbsp;</a></span>read_from_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -463,7 +454,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual void Base::read_from_file </td>
           <td>(</td>
           <td class="paramtype">std::ifstream &amp;&#160;</td>
-          <td class="paramname"><em>ifs</em></td><td>)</td>
+          <td class="paramname"><em>fin</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -476,7 +467,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Pure virtual method for reading information from <em>file</em> </p>
 
-<p>Implemented in <a class="el" href="class_jedi.html#a632d5824ac2de1ce8d3c11dd2b4c19c6">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_jedi.html#a1ced6357fcf6aeccbb49dd50de61dc6b">Jedi</a>.</p>
 
 </div>
 </div>

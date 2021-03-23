@@ -6,9 +6,9 @@ var class_base =
     [ "create_jedi", "class_base.html#afafe9868f6c60e49ebbf00b42a6488be", null ],
     [ "is_valid_type", "class_base.html#af59f5245ef5273ecac6303502ab4cfcf", null ],
     [ "operator=", "class_base.html#aa50a4c24dd83ec9ec9f9dfbdedc83592", null ],
-    [ "print", "class_base.html#aace499ec12f9634b9beac2d76869969e", null ],
-    [ "print_to_file", "class_base.html#a6d719063f70a5d2dc3930c0c860e3b46", null ],
-    [ "read", "class_base.html#ab82beb07575e45af8a9a2e740905eea4", null ],
-    [ "read_from_file", "class_base.html#aa38ee4e3c3ed280723b3494505daf89b", null ],
+    [ "print", "class_base.html#ad435a08229b26c0ee63d08e136b70c96", null ],
+    [ "print_to_file", "class_base.html#a224e768fa3ec98d85f834d8932277d85", null ],
+    [ "read", "class_base.html#a17776c36f0ef8ac98f80f39bd16ee81a", null ],
+    [ "read_from_file", "class_base.html#aa464997c0ff7060d1dd2568e1590b4b6", null ],
     [ "type_name", "class_base.html#adfb30421704aaa9fcafc107bce3da2fb", null ]
 ];
