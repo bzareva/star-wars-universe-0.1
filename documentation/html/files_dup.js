@@ -24,9 +24,7 @@ var files_dup =
       [ "IFactory", "class_i_factory.html", null ]
     ] ],
     [ "Jedi.cpp", "_jedi_8cpp.html", "_jedi_8cpp" ],
-    [ "Jedi.h", "_jedi_8h.html", [
-      [ "Jedi", "class_jedi.html", "class_jedi" ]
-    ] ],
+    [ "Jedi.h", "_jedi_8h.html", "_jedi_8h" ],
     [ "Main.cpp", "_main_8cpp.html", "_main_8cpp" ],
     [ "OpenCommand.cpp", "_open_command_8cpp.html", null ],
     [ "OpenCommand.h", "_open_command_8h.html", null ],

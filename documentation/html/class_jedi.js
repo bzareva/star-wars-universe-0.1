@@ -1,15 +1,5 @@
 var class_jedi =
 [
-    [ "Rank", "class_jedi.html#a9ac238628b5e4dcbb95b174d5eebb875", [
-      [ "YOUNGLING", "class_jedi.html#a9ac238628b5e4dcbb95b174d5eebb875a0ba6b3e081e425348f232dac757a86a9", null ],
-      [ "INITIATE", "class_jedi.html#a9ac238628b5e4dcbb95b174d5eebb875af7410c020277271d1db4a78f32313126", null ],
-      [ "PADAWAN", "class_jedi.html#a9ac238628b5e4dcbb95b174d5eebb875ab2f75d9b6413afa6584bcc4241ff8f7c", null ],
-      [ "KNIGHT_ASPIRANT", "class_jedi.html#a9ac238628b5e4dcbb95b174d5eebb875a41288f9a3d8bdc0438bf32918cb692ed", null ],
-      [ "KNIGHT", "class_jedi.html#a9ac238628b5e4dcbb95b174d5eebb875af7f210da15dbb4283299b2affd9bb238", null ],
-      [ "MASTER", "class_jedi.html#a9ac238628b5e4dcbb95b174d5eebb875a89a1533c37ec9254f22b5e0f29c9c0ff", null ],
-      [ "BATTLE_MASTER", "class_jedi.html#a9ac238628b5e4dcbb95b174d5eebb875a8697e3d3185d2b5bb47d30058652ed54", null ],
-      [ "GRAND_MASTER", "class_jedi.html#a9ac238628b5e4dcbb95b174d5eebb875a37d9f7831e2208e232411505e1071515", null ]
-    ] ],
     [ "Jedi", "class_jedi.html#afb8a05988898aeb434678099416fc4e6", null ],
     [ "Jedi", "class_jedi.html#ad180d2c589316691a7f66d991bc6db8e", null ],
     [ "Jedi", "class_jedi.html#a7770aa153664b0b3f9acf177464dabe5", null ],
@@ -22,7 +12,7 @@ var class_jedi =
     [ "get_color_of_lightsaber", "class_jedi.html#a14bb949e1da9e7060c7119c8856a3223", null ],
     [ "get_force", "class_jedi.html#a10aec06d310dea5884c33783332edbf9", null ],
     [ "get_name_jedi", "class_jedi.html#a24c757cdb5ac539f71be8094e91b1894", null ],
-    [ "get_rank", "class_jedi.html#a842f1663535428fa9f7186c6e8233753", null ],
+    [ "get_rank", "class_jedi.html#a82a10fc519263612d2558e98577d3483", null ],
     [ "is_valid_type", "class_jedi.html#af0845c12e8b3ff266b23b7b8776083a3", null ],
     [ "operator<", "class_jedi.html#a8f274e7c5b392732384dd46d5ff58949", null ],
     [ "operator=", "class_jedi.html#ae1ba1604a8aad070bf745793ac2baf54", null ],
@@ -38,6 +28,6 @@ var class_jedi =
     [ "set_name_jedi", "class_jedi.html#a19255d5c0c21c6392db574cdec245322", null ],
     [ "set_rank", "class_jedi.html#a17ff0dd411c7ca94ff1bc7bb6bede64e", null ],
     [ "type_name", "class_jedi.html#ac1f97d3e7512eca940a7969c2b29e987", null ],
-    [ "operator<<", "class_jedi.html#a51f7f4fbc007f15deecff0a76a549584", null ],
-    [ "operator>>", "class_jedi.html#a26b1551b9343ab8d951d5d38c8aa42e5", null ]
+    [ "operator<<", "class_jedi.html#a404582e070fe1e18095b681aee3f21e4", null ],
+    [ "operator>>", "class_jedi.html#aa0531f1879157b772dd3e89b94fcd114", null ]
 ];

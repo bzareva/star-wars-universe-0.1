@@ -15,29 +15,14 @@ Inheritance diagram for Jedi\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_jedi}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Types}
-\begin{DoxyCompactItemize}
-\item 
-enum class \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}{Rank}} \{ \newline
-\mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a0ba6b3e081e425348f232dac757a86a9}{YOUNGLING}} = 1
-, \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875af7410c020277271d1db4a78f32313126}{INITIATE}}
-, \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875ab2f75d9b6413afa6584bcc4241ff8f7c}{PADAWAN}}
-, \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a41288f9a3d8bdc0438bf32918cb692ed}{KNIGHT\+\_\+\+ASPIRANT}}
-, \newline
-\mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875af7f210da15dbb4283299b2affd9bb238}{KNIGHT}}
-, \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a89a1533c37ec9254f22b5e0f29c9c0ff}{MASTER}}
-, \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a8697e3d3185d2b5bb47d30058652ed54}{BATTLE\+\_\+\+MASTER}}
-, \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a37d9f7831e2208e232411505e1071515}{GRAND\+\_\+\+MASTER}}
- \}
-\begin{DoxyCompactList}\small\item\em Rank of jedi is enum class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jedi_afb8a05988898aeb434678099416fc4e6}{Jedi}} ()
-\begin{DoxyCompactList}\small\item\em Implements big four and ctor with parameter from type ifstream. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Implements big four and constructor with parameter from type ifstream. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jedi_ad180d2c589316691a7f66d991bc6db8e}{Jedi}} (std\+::ifstream \&ifs)
 \item 
-\mbox{\hyperlink{class_jedi_a7770aa153664b0b3f9acf177464dabe5}{Jedi}} (int age, double force, const \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}{Rank}} \&rank, const char $\ast$name, const char $\ast$color\+\_\+of\+\_\+lightsaber)
+\mbox{\hyperlink{class_jedi_a7770aa153664b0b3f9acf177464dabe5}{Jedi}} (int age, double force, const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&rank, const char $\ast$name, const char $\ast$color\+\_\+of\+\_\+lightsaber)
 \item 
 \mbox{\hyperlink{class_jedi_a4034eeede584f1033b235258a2fa8406}{Jedi}} (const \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
 \item 
@@ -77,7 +62,7 @@ void \mbox{\hyperlink{class_jedi_a19255d5c0c21c6392db574cdec245322}{set\+\_\+nam
 \item 
 void \mbox{\hyperlink{class_jedi_a5eb87ddd66ffc131339f82927900355c}{set\+\_\+color\+\_\+of\+\_\+lightsaber}} (const char $\ast$color\+\_\+of\+\_\+lightsaber)
 \item 
-void \mbox{\hyperlink{class_jedi_a17ff0dd411c7ca94ff1bc7bb6bede64e}{set\+\_\+rank}} (const \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}{Rank}} \&rank)
+void \mbox{\hyperlink{class_jedi_a17ff0dd411c7ca94ff1bc7bb6bede64e}{set\+\_\+rank}} (const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&rank)
 \item 
 int \mbox{\hyperlink{class_jedi_adfe7693ab88a6962caa9f3a0174d97e7}{get\+\_\+age}} () const
 \item 
@@ -87,7 +72,7 @@ const char $\ast$ \mbox{\hyperlink{class_jedi_a24c757cdb5ac539f71be8094e91b1894}
 \item 
 const char $\ast$ \mbox{\hyperlink{class_jedi_a14bb949e1da9e7060c7119c8856a3223}{get\+\_\+color\+\_\+of\+\_\+lightsaber}} () const
 \item 
-\mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}{Rank}} \mbox{\hyperlink{class_jedi_a842f1663535428fa9f7186c6e8233753}{get\+\_\+rank}} () const
+\mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \mbox{\hyperlink{class_jedi_a82a10fc519263612d2558e98577d3483}{get\+\_\+rank}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -97,61 +82,14 @@ static const char $\ast$ \mbox{\hyperlink{class_jedi_a16dcf18f91fd74b4b1046ee6ff
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-std\+::istream \& \mbox{\hyperlink{class_jedi_a26b1551b9343ab8d951d5d38c8aa42e5}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
+std\+::istream \& \mbox{\hyperlink{class_jedi_aa0531f1879157b772dd3e89b94fcd114}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
 \item 
-std\+::ostream \& \mbox{\hyperlink{class_jedi_a51f7f4fbc007f15deecff0a76a549584}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
+std\+::ostream \& \mbox{\hyperlink{class_jedi_a404582e070fe1e18095b681aee3f21e4}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Inherits of \mbox{\hyperlink{class_base}{Base}} class. 
-
-\doxysubsection{Member Enumeration Documentation}
-\mbox{\Hypertarget{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}\label{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}} 
-\index{Jedi@{Jedi}!Rank@{Rank}}
-\index{Rank@{Rank}!Jedi@{Jedi}}
-\doxysubsubsection{\texorpdfstring{Rank}{Rank}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}{Jedi\+::\+Rank}}\hspace{0.3cm}{\ttfamily [strong]}}
-
-
-
-Rank of jedi is enum class. 
-
-Contains the possible rank, that a jedi can have. Ranks are arranged in ascending order-\/ 1, 2,.., 8 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{YOUNGLING@{YOUNGLING}!Jedi@{Jedi}}\index{Jedi@{Jedi}!YOUNGLING@{YOUNGLING}}}\mbox{\Hypertarget{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a0ba6b3e081e425348f232dac757a86a9}\label{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a0ba6b3e081e425348f232dac757a86a9}} 
-YOUNGLING&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{INITIATE@{INITIATE}!Jedi@{Jedi}}\index{Jedi@{Jedi}!INITIATE@{INITIATE}}}\mbox{\Hypertarget{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875af7410c020277271d1db4a78f32313126}\label{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875af7410c020277271d1db4a78f32313126}} 
-INITIATE&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{PADAWAN@{PADAWAN}!Jedi@{Jedi}}\index{Jedi@{Jedi}!PADAWAN@{PADAWAN}}}\mbox{\Hypertarget{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875ab2f75d9b6413afa6584bcc4241ff8f7c}\label{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875ab2f75d9b6413afa6584bcc4241ff8f7c}} 
-PADAWAN&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{KNIGHT\_ASPIRANT@{KNIGHT\_ASPIRANT}!Jedi@{Jedi}}\index{Jedi@{Jedi}!KNIGHT\_ASPIRANT@{KNIGHT\_ASPIRANT}}}\mbox{\Hypertarget{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a41288f9a3d8bdc0438bf32918cb692ed}\label{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a41288f9a3d8bdc0438bf32918cb692ed}} 
-KNIGHT\+\_\+\+ASPIRANT&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{KNIGHT@{KNIGHT}!Jedi@{Jedi}}\index{Jedi@{Jedi}!KNIGHT@{KNIGHT}}}\mbox{\Hypertarget{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875af7f210da15dbb4283299b2affd9bb238}\label{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875af7f210da15dbb4283299b2affd9bb238}} 
-KNIGHT&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{MASTER@{MASTER}!Jedi@{Jedi}}\index{Jedi@{Jedi}!MASTER@{MASTER}}}\mbox{\Hypertarget{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a89a1533c37ec9254f22b5e0f29c9c0ff}\label{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a89a1533c37ec9254f22b5e0f29c9c0ff}} 
-MASTER&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{BATTLE\_MASTER@{BATTLE\_MASTER}!Jedi@{Jedi}}\index{Jedi@{Jedi}!BATTLE\_MASTER@{BATTLE\_MASTER}}}\mbox{\Hypertarget{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a8697e3d3185d2b5bb47d30058652ed54}\label{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a8697e3d3185d2b5bb47d30058652ed54}} 
-BATTLE\+\_\+\+MASTER&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{GRAND\_MASTER@{GRAND\_MASTER}!Jedi@{Jedi}}\index{Jedi@{Jedi}!GRAND\_MASTER@{GRAND\_MASTER}}}\mbox{\Hypertarget{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a37d9f7831e2208e232411505e1071515}\label{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875a37d9f7831e2208e232411505e1071515}} 
-GRAND\+\_\+\+MASTER&\\
-\hline
-
-\end{DoxyEnumFields}
-
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_jedi_afb8a05988898aeb434678099416fc4e6}\label{class_jedi_afb8a05988898aeb434678099416fc4e6}} 
@@ -162,7 +100,7 @@ GRAND\+\_\+\+MASTER&\\
 
 
 
-Implements big four and ctor with parameter from type ifstream. 
+Implements big four and constructor with parameter from type ifstream. 
 
 \mbox{\Hypertarget{class_jedi_ad180d2c589316691a7f66d991bc6db8e}\label{class_jedi_ad180d2c589316691a7f66d991bc6db8e}} 
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
@@ -174,7 +112,7 @@ Implements big four and ctor with parameter from type ifstream.
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{Jedi()}{Jedi()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily Jedi\+::\+Jedi (\begin{DoxyParamCaption}\item[{int}]{age,  }\item[{double}]{force,  }\item[{const \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}{Rank}} \&}]{rank,  }\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{color\+\_\+of\+\_\+lightsaber }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Jedi\+::\+Jedi (\begin{DoxyParamCaption}\item[{int}]{age,  }\item[{double}]{force,  }\item[{const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{rank,  }\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{color\+\_\+of\+\_\+lightsaber }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_jedi_a4034eeede584f1033b235258a2fa8406}\label{class_jedi_a4034eeede584f1033b235258a2fa8406}} 
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
@@ -255,11 +193,11 @@ Implements \mbox{\hyperlink{class_base_afafe9868f6c60e49ebbf00b42a6488be}{Base}}
 \doxysubsubsection{\texorpdfstring{get\_name\_jedi()}{get\_name\_jedi()}}
 {\footnotesize\ttfamily const char $\ast$ Jedi\+::get\+\_\+name\+\_\+jedi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_jedi_a842f1663535428fa9f7186c6e8233753}\label{class_jedi_a842f1663535428fa9f7186c6e8233753}} 
+\mbox{\Hypertarget{class_jedi_a82a10fc519263612d2558e98577d3483}\label{class_jedi_a82a10fc519263612d2558e98577d3483}} 
 \index{Jedi@{Jedi}!get\_rank@{get\_rank}}
 \index{get\_rank@{get\_rank}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{get\_rank()}{get\_rank()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}{Jedi\+::\+Rank}} Jedi\+::get\+\_\+rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} Jedi\+::get\+\_\+rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{class_jedi_af0845c12e8b3ff266b23b7b8776083a3}\label{class_jedi_af0845c12e8b3ff266b23b7b8776083a3}} 
 \index{Jedi@{Jedi}!is\_valid\_type@{is\_valid\_type}}
@@ -383,7 +321,7 @@ Implements \mbox{\hyperlink{class_base_aa464997c0ff7060d1dd2568e1590b4b6}{Base}}
 \index{Jedi@{Jedi}!set\_rank@{set\_rank}}
 \index{set\_rank@{set\_rank}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{set\_rank()}{set\_rank()}}
-{\footnotesize\ttfamily void Jedi\+::set\+\_\+rank (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jedi_a9ac238628b5e4dcbb95b174d5eebb875}{Rank}} \&}]{rank }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Jedi\+::set\+\_\+rank (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{rank }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_jedi_ac1f97d3e7512eca940a7969c2b29e987}\label{class_jedi_ac1f97d3e7512eca940a7969c2b29e987}} 
 \index{Jedi@{Jedi}!type\_name@{type\_name}}
@@ -405,17 +343,17 @@ Implements \mbox{\hyperlink{class_base_adfb30421704aaa9fcafc107bce3da2fb}{Base}}
 
 
 \doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{class_jedi_a51f7f4fbc007f15deecff0a76a549584}\label{class_jedi_a51f7f4fbc007f15deecff0a76a549584}} 
+\mbox{\Hypertarget{class_jedi_a404582e070fe1e18095b681aee3f21e4}\label{class_jedi_a404582e070fe1e18095b681aee3f21e4}} 
 \index{Jedi@{Jedi}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_jedi}{Jedi}} \&}]{oth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_jedi}{Jedi}} \&}]{oth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-\mbox{\Hypertarget{class_jedi_a26b1551b9343ab8d951d5d38c8aa42e5}\label{class_jedi_a26b1551b9343ab8d951d5d38c8aa42e5}} 
+\mbox{\Hypertarget{class_jedi_aa0531f1879157b772dd3e89b94fcd114}\label{class_jedi_aa0531f1879157b772dd3e89b94fcd114}} 
 \index{Jedi@{Jedi}!operator$>$$>$@{operator$>$$>$}}
 \index{operator$>$$>$@{operator$>$$>$}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
-{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_jedi}{Jedi}} \&}]{oth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{class_jedi}{Jedi}} \&}]{oth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 

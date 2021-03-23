@@ -106,10 +106,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a3b2dd41050229aafa80199b664471633"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecstring__namespace.html#a3b2dd41050229aafa80199b664471633">strLen</a> (const char *str)</td></tr>
 <tr class="separator:a3b2dd41050229aafa80199b664471633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc8a971ee63359562a3af32acf9e828c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecstring__namespace.html#afc8a971ee63359562a3af32acf9e828c">strCat</a> (char *dest, const char *src)</td></tr>
+<tr class="memdesc:afc8a971ee63359562a3af32acf9e828c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the string pointed to by src to the end of the string pointed to by dest.  <a href="namespacecstring__namespace.html#afc8a971ee63359562a3af32acf9e828c">More...</a><br /></td></tr>
 <tr class="separator:afc8a971ee63359562a3af32acf9e828c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e67a485940ac4562d50ff7871f4fdbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecstring__namespace.html#a1e67a485940ac4562d50ff7871f4fdbd">strCpy</a> (char *dest, const char *src)</td></tr>
+<tr class="memdesc:a1e67a485940ac4562d50ff7871f4fdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the string pointed by source into the array pointed by destination, including the terminating null character (and stopping at that point).  <a href="namespacecstring__namespace.html#a1e67a485940ac4562d50ff7871f4fdbd">More...</a><br /></td></tr>
 <tr class="separator:a1e67a485940ac4562d50ff7871f4fdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5f77846f5d64505d6e18bd40e1dad08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecstring__namespace.html#ab5f77846f5d64505d6e18bd40e1dad08">strCmp</a> (const char *str1, const char *str2)</td></tr>
+<tr class="memdesc:ab5f77846f5d64505d6e18bd40e1dad08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the string str1 to the string str2.  <a href="namespacecstring__namespace.html#ab5f77846f5d64505d6e18bd40e1dad08">More...</a><br /></td></tr>
 <tr class="separator:ab5f77846f5d64505d6e18bd40e1dad08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -142,6 +145,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Appends the string pointed to by src to the end of the string pointed to by dest. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>This is pointer to the destination array, which should contain a string, and should be large enough to contain the concatenated resulting string. </td></tr>
+    <tr><td class="paramname">src</td><td>This is the string to be appended. This should not overlap the destination. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ab5f77846f5d64505d6e18bd40e1dad08"></a>
@@ -169,6 +181,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compares the string str1 to the string str2. </p>
+<p>Return value &lt;0 if the first character that does not match has a lower value in ptr1 than in ptr2. Return value 0 if the contents of both strings are equal. Return value &gt;0 if the first character that does not match has a greater value in ptr1 than in ptr2. </p>
 
 </div>
 </div>
@@ -198,6 +213,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Copies the string pointed by source into the array pointed by destination, including the terminating null character (and stopping at that point). </p>
+
 </div>
 </div>
 <a id="a3b2dd41050229aafa80199b664471633"></a>
@@ -215,6 +232,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The length of string </dd></dl>
 
 </div>
 </div>

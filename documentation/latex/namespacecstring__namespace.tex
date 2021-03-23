@@ -11,11 +11,11 @@ Functions from cstring library.
 unsigned \mbox{\hyperlink{namespacecstring__namespace_a3b2dd41050229aafa80199b664471633}{str\+Len}} (const char $\ast$str)
 \item 
 void \mbox{\hyperlink{namespacecstring__namespace_afc8a971ee63359562a3af32acf9e828c}{str\+Cat}} (char $\ast$dest, const char $\ast$src)
-\item 
+\begin{DoxyCompactList}\small\item\em Appends the string pointed to by src to the end of the string pointed to by dest. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacecstring__namespace_a1e67a485940ac4562d50ff7871f4fdbd}{str\+Cpy}} (char $\ast$dest, const char $\ast$src)
-\item 
+\begin{DoxyCompactList}\small\item\em Copies the string pointed by source into the array pointed by destination, including the terminating null character (and stopping at that point). \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacecstring__namespace_ab5f77846f5d64505d6e18bd40e1dad08}{str\+Cmp}} (const char $\ast$str1, const char $\ast$str2)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compares the string str1 to the string str2. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -30,17 +30,36 @@ The only functions which i use in this program are -\/ strlen, strcat, strcpy an
 \doxysubsubsection{\texorpdfstring{strCat()}{strCat()}}
 {\footnotesize\ttfamily void cstring\+\_\+namespace\+::str\+Cat (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
 
+
+
+Appends the string pointed to by src to the end of the string pointed to by dest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & This is pointer to the destination array, which should contain a string, and should be large enough to contain the concatenated resulting string. \\
+\hline
+{\em src} & This is the string to be appended. This should not overlap the destination. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{namespacecstring__namespace_ab5f77846f5d64505d6e18bd40e1dad08}\label{namespacecstring__namespace_ab5f77846f5d64505d6e18bd40e1dad08}} 
 \index{cstring\_namespace@{cstring\_namespace}!strCmp@{strCmp}}
 \index{strCmp@{strCmp}!cstring\_namespace@{cstring\_namespace}}
 \doxysubsubsection{\texorpdfstring{strCmp()}{strCmp()}}
 {\footnotesize\ttfamily int cstring\+\_\+namespace\+::str\+Cmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2 }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacecstring__namespace_a1e67a485940ac4562d50ff7871f4fdbd}\label{namespacecstring__namespace_a1e67a485940ac4562d50ff7871f4fdbd}} 
+
+
+Compares the string str1 to the string str2. 
+
+Return value $<$0 if the first character that does not match has a lower value in ptr1 than in ptr2. Return value 0 if the contents of both strings are equal. Return value $>$0 if the first character that does not match has a greater value in ptr1 than in ptr2. \mbox{\Hypertarget{namespacecstring__namespace_a1e67a485940ac4562d50ff7871f4fdbd}\label{namespacecstring__namespace_a1e67a485940ac4562d50ff7871f4fdbd}} 
 \index{cstring\_namespace@{cstring\_namespace}!strCpy@{strCpy}}
 \index{strCpy@{strCpy}!cstring\_namespace@{cstring\_namespace}}
 \doxysubsubsection{\texorpdfstring{strCpy()}{strCpy()}}
 {\footnotesize\ttfamily void cstring\+\_\+namespace\+::str\+Cpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+Copies the string pointed by source into the array pointed by destination, including the terminating null character (and stopping at that point). 
 
 \mbox{\Hypertarget{namespacecstring__namespace_a3b2dd41050229aafa80199b664471633}\label{namespacecstring__namespace_a3b2dd41050229aafa80199b664471633}} 
 \index{cstring\_namespace@{cstring\_namespace}!strLen@{strLen}}
@@ -48,3 +67,6 @@ The only functions which i use in this program are -\/ strlen, strcat, strcpy an
 \doxysubsubsection{\texorpdfstring{strLen()}{strLen()}}
 {\footnotesize\ttfamily unsigned cstring\+\_\+namespace\+::str\+Len (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+The length of string 
+\end{DoxyReturn}
