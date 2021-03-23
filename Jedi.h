@@ -27,7 +27,7 @@ class Jedi: public Base {
 public:
 /// Implements big four and constructor with parameter from type ifstream 
 	Jedi();
-	Jedi(std::ifstream& ifs);
+	Jedi(std::ifstream& fin);
 	Jedi(int age, double force, const Rank& rank, const char* name, const char* color_of_lightsaber);
 	Jedi(const Jedi& oth);
 	Jedi& operator=(const Jedi& rhs);

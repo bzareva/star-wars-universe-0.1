@@ -13,36 +13,36 @@ Jedi::Jedi()
 	m_rank = Rank::MASTER;
 }
 
-Jedi::Jedi(std::ifstream& in) {
+Jedi::Jedi(std::ifstream& fin) {
 
 	unsigned len1 = 0;
-	in.read((char*)&len1, sizeof(len1));
+	fin.read((char*)&len1, sizeof(len1));
 	++len1; // +1 because '\0'
 
 	m_name_jedi = new char[len1];
 	--len1; 
-	in.read(m_name_jedi, len1); // len1 * sizeof(char) -> len1
+	fin.read(m_name_jedi, len1); // len1 * sizeof(char) -> len1
 	m_name_jedi[len1] = '\0';
 
-	in.read((char*)&m_age, sizeof(m_age));
-	in.read((char*)&m_force, sizeof(m_force));
+	fin.read((char*)&m_age, sizeof(m_age));
+	fin.read((char*)&m_force, sizeof(m_force));
 
 	unsigned len2 = 0;
-	in.read((char*)&len2, sizeof(len2));
+	fin.read((char*)&len2, sizeof(len2));
 	++len2; // +1 because '\0'
 
 	m_color_of_lightsaber = new char[len2];
 	--len2;
-	in.read((char*)&m_color_of_lightsaber, len2);
+	fin.read((char*)&m_color_of_lightsaber, len2);
 	m_color_of_lightsaber[len2] = '\0';
 
 	unsigned len3 = 0;
-	in.read((char*)&len3, sizeof(len3));
+	fin.read((char*)&len3, sizeof(len3));
 	++len3;// +1 because '\0'
 
 	char* buff = new char[len3];
 	--len3;
-	in.read((char*)&buff, len3);
+	fin.read((char*)&buff, len3);
 
 	if (!cstring_namespace::strCmp(buff, "youngling") || !cstring_namespace::strCmp(buff, "YOUNGLING")) {
 		m_rank = Rank::YOUNGLING;

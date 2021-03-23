@@ -3,11 +3,11 @@
 
 int main() {
 
-//	Jedi j1(43, 34.3, Jedi::Rank::INITIATE, "PESHO", "light");
-//	std::cout << j1;
+	Jedi j1(43, 34.3, Rank::INITIATE, "PESHO", "light");
+	std::cout << j1;
 
 //	std::cout << "hello";
 
-//	system("pause");
+	system("pause");
 	return 0;
 }
