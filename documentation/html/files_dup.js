@@ -29,7 +29,9 @@ var files_dup =
     [ "OpenCommand.cpp", "_open_command_8cpp.html", null ],
     [ "OpenCommand.h", "_open_command_8h.html", null ],
     [ "Planet.cpp", "_planet_8cpp.html", null ],
-    [ "Planet.h", "_planet_8h.html", null ],
+    [ "Planet.h", "_planet_8h.html", [
+      [ "Planet", "class_planet.html", null ]
+    ] ],
     [ "SaveAsCommand.cpp", "_save_as_command_8cpp.html", null ],
     [ "SaveAsCommand.h", "_save_as_command_8h.html", null ],
     [ "SaveCommand.cpp", "_save_command_8cpp.html", null ],
