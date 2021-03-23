@@ -3,29 +3,29 @@
 #include <iostream>
 #include <fstream>
 #include "Base.h"
-///
-/// Inherits of Base class.
 /// 
+/// Rank of jedi is enum class 
+/// Contains the possible rank, that a jedi can have.
+/// Ranks are arranged in ascending order- 1, 2,.., 8.
+/// 
+enum class Rank {
+	YOUNGLING = 1,
+	INITIATE,
+	PADAWAN,
+	KNIGHT_ASPIRANT,
+	KNIGHT,
+	MASTER, 
+	BATTLE_MASTER,
+	GRAND_MASTER
+	};
+
+/// 
+/// Inherits of Base class.
+///
 class Jedi: public Base {
 
 public:
-	/// Rank of jedi is enum class 
-	/// 
-	/// Contains the possible rank, that a jedi can have.
-	/// Ranks are arranged in ascending order- 1, 2,.., 8
-	/// 
-	enum class Rank {
-		YOUNGLING = 1,
-		INITIATE,
-		PADAWAN,
-		KNIGHT_ASPIRANT,
-		KNIGHT,
-		MASTER, 
-		BATTLE_MASTER,
-		GRAND_MASTER
-	};
-
-/// Implements big four and ctor with  parameter from type ifstream 
+/// Implements big four and constructor with parameter from type ifstream 
 	Jedi();
 	Jedi(std::ifstream& ifs);
 	Jedi(int age, double force, const Rank& rank, const char* name, const char* color_of_lightsaber);
@@ -36,17 +36,17 @@ public:
 	/* @returns name of class */
 	static const char* get_class_name();
 
-	/* compares by age */
+	/* compares two jedi by their ages */
 	bool operator==(const Jedi& rhs)const;	
 
 	/* compares two jedi and if left side jedi is younger return true, otherwise false */
 	bool operator<(const Jedi& rhs)const;
 
 	/* formatted output for jedi on console */
-	friend std::istream& operator>>(std::istream& is, Jedi& oth);
+	friend std::istream& operator>>(std::istream& in, Jedi& oth);
 
 	/* input from console for jedi */
-	friend std::ostream& operator<<(std::ostream& os, const Jedi& oth);
+	friend std::ostream& operator<<(std::ostream& out, const Jedi& oth);
 
 	/* increases the given Jedi by one rank up in ladder and increases its strength by a formula */
 	void promote_jedi(double multiplier);
@@ -55,7 +55,6 @@ public:
 	void demote_jedi(double multiplier);
 
 /// Override methods from class Base
-/// 	
 	/* @returns A pointer to a dynamically allocated polymorphic Jedi */
 	virtual Base* clone()const override;
 
@@ -65,7 +64,7 @@ public:
 	/* outputs formatted information for jedi on *file* */
 	virtual void print_to_file(std::ofstream& fout)const override;
 
-	/* create jedi */
+	/* @param planet_name In class Jedi is fictitious parameter	*/
 	virtual void create_jedi(const char* planet_name, const char* jedi_name, const char* jedi_rank, int jedi_age, const char* saber_color, double jedi_strength)override;
 	 
 	/* reading information for jedi from *console* */
@@ -92,7 +91,7 @@ public:
 	/* setter for age of jedi */
 	void set_age(int age);
 
-	/* setter for force of jedi*/
+	/* setter for force of jedi */
 	void set_force(double force);
 
 	/* setter for name of jedi */
@@ -104,27 +103,27 @@ public:
 	/* setter for rank of jedi */
 	void set_rank(const Rank& rank);
 
-	/* @returns A age of jedi */
+	/* @returns Age of jedi */
 	int get_age()const;
 
-	/* @returns A force of jedi */
+	/* @returns The force of jedi */
 	double get_force()const;
 
-	/* @returns A name of jedi */
+	/* @returns Name of jedi */
 	const char* get_name_jedi()const;
 
-	/* @returns A color of the lightsaber of jedi */
+	/* @returns Color of the lightsaber of jedi */
 	const char* get_color_of_lightsaber()const;
 
-	/* @returns A rank of jedi */
+	/* @returns Rank of jedi */
 	Rank get_rank()const;
 
 private:	
 	/* age of jedi */
 	int    m_age;
-	/* force of jedi*/
+	/* force of jedi */
 	double m_force;
-	/* rank of jedi*/
+	/* rank of jedi */
 	Rank   m_rank;
 	/* name of jedi */
 	char*  m_name_jedi;
