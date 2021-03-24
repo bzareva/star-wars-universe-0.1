@@ -9,7 +9,7 @@ var searchData=
   ['set_5fforce_85',['set_force',['../class_jedi.html#a2ef66d1d9968976dd7ee5adb274fa477',1,'Jedi']]],
   ['set_5fname_5fjedi_86',['set_name_jedi',['../class_jedi.html#a19255d5c0c21c6392db574cdec245322',1,'Jedi']]],
   ['set_5frank_87',['set_rank',['../class_jedi.html#a17ff0dd411c7ca94ff1bc7bb6bede64e',1,'Jedi']]],
-  ['sort_5fjedi_88',['sort_jedi',['../class_planet.html#ace20d96790eb569607a502f5fed90cf2',1,'Planet']]],
+  ['sort_5fby_5frank_88',['sort_by_rank',['../class_planet.html#a23129cee6c182a2f48068015d18e306d',1,'Planet']]],
   ['star_20wars_20universe_200_2e1_89',['Star Wars Universe 0.1',['../md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1__r_e_a_d_m_e.html',1,'']]],
   ['strcat_90',['strCat',['../namespacecstring__namespace.html#afc8a971ee63359562a3af32acf9e828c',1,'cstring_namespace']]],
   ['strcmp_91',['strCmp',['../namespacecstring__namespace.html#ab5f77846f5d64505d6e18bd40e1dad08',1,'cstring_namespace']]],

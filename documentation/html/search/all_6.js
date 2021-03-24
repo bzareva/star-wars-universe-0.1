@@ -11,7 +11,7 @@ var searchData=
   ['get_5fforce_29',['get_force',['../class_jedi.html#a10aec06d310dea5884c33783332edbf9',1,'Jedi']]],
   ['get_5fjedi_30',['get_jedi',['../class_planet.html#a1300d949e755679e26ee7f8730231bd1',1,'Planet']]],
   ['get_5fjedi_5fby_5findex_31',['get_jedi_by_index',['../class_planet.html#adcd61aa3de392039cd1b578c916cdbd9',1,'Planet']]],
-  ['get_5fmost_5fused_5fsaber_5fcolor_32',['get_most_used_saber_color',['../class_planet.html#a77acf0098872064f2ecdb835ee56da1a',1,'Planet']]],
+  ['get_5fmost_5fused_5fsaber_5fcolor_32',['get_most_used_saber_color',['../class_planet.html#a77acf0098872064f2ecdb835ee56da1a',1,'Planet::get_most_used_saber_color() const'],['../class_planet.html#ac911f6f2ddb15c00f4d1f93c7dba75c3',1,'Planet::get_most_used_saber_color(const Rank &amp;rank) const']]],
   ['get_5fname_5fjedi_33',['get_name_jedi',['../class_jedi.html#a24c757cdb5ac539f71be8094e91b1894',1,'Jedi']]],
   ['get_5fplanet_5fname_34',['get_planet_name',['../class_planet.html#a23c6a5a01fd0e776587421ae0c4ca593',1,'Planet']]],
   ['get_5frank_35',['get_rank',['../class_jedi.html#a82a10fc519263612d2558e98577d3483',1,'Jedi']]],

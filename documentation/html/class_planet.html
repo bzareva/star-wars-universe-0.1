@@ -143,14 +143,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6702592ebdae1034b29cf7098fda55fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabbd2197db2b92a9557b48197334b44b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#aabbd2197db2b92a9557b48197334b44b">get_youngest_jedi_to_console</a> (const <a class="el" href="_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank, std::ostream &amp;out) const</td></tr>
 <tr class="separator:aabbd2197db2b92a9557b48197334b44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1a3a7be2b2f3c955eea14e96851430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#adf1a3a7be2b2f3c955eea14e96851430">print_planet_info_to_file</a> (const char *jedi_name, std::ofstream &amp;fout) const</td></tr>
-<tr class="separator:adf1a3a7be2b2f3c955eea14e96851430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15c45d78947c1715cfeed0392a57ce23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a15c45d78947c1715cfeed0392a57ce23">print_planet_info_to_console</a> (const char *jedi_name, std::ostream &amp;out) const</td></tr>
-<tr class="separator:a15c45d78947c1715cfeed0392a57ce23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaabb819d8eebb2dfbf1363a1f3bb78d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#adaabb819d8eebb2dfbf1363a1f3bb78d">print_jedi_on_planet_info_to_file</a> (const char *jedi_name, std::ofstream &amp;fout) const</td></tr>
+<tr class="separator:adaabb819d8eebb2dfbf1363a1f3bb78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceddb2f55532a8767a5a00491adde781"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#aceddb2f55532a8767a5a00491adde781">print_jedi_on_planet_info_to_console</a> (const char *jedi_name, std::ostream &amp;out) const</td></tr>
+<tr class="separator:aceddb2f55532a8767a5a00491adde781"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77acf0098872064f2ecdb835ee56da1a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a77acf0098872064f2ecdb835ee56da1a">get_most_used_saber_color</a> () const</td></tr>
 <tr class="separator:a77acf0098872064f2ecdb835ee56da1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace20d96790eb569607a502f5fed90cf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#ace20d96790eb569607a502f5fed90cf2">sort_jedi</a> ()</td></tr>
-<tr class="separator:ace20d96790eb569607a502f5fed90cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac911f6f2ddb15c00f4d1f93c7dba75c3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#ac911f6f2ddb15c00f4d1f93c7dba75c3">get_most_used_saber_color</a> (const <a class="el" href="_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;rank) const</td></tr>
+<tr class="separator:ac911f6f2ddb15c00f4d1f93c7dba75c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23129cee6c182a2f48068015d18e306d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a23129cee6c182a2f48068015d18e306d">sort_by_rank</a> ()</td></tr>
+<tr class="separator:a23129cee6c182a2f48068015d18e306d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa14bf54e92c739df75c91f1c10aaf3ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jedi.html">Jedi</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#aa14bf54e92c739df75c91f1c10aaf3ae">operator[]</a> (int ind)</td></tr>
 <tr class="separator:aa14bf54e92c739df75c91f1c10aaf3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af318f50c60189e61e7c78ad933fa2d59"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_jedi.html">Jedi</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#af318f50c60189e61e7c78ad933fa2d59">operator[]</a> (int ind) const</td></tr>
@@ -610,7 +612,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="a77acf0098872064f2ecdb835ee56da1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77acf0098872064f2ecdb835ee56da1a">&#9670;&nbsp;</a></span>get_most_used_saber_color()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a77acf0098872064f2ecdb835ee56da1a">&#9670;&nbsp;</a></span>get_most_used_saber_color() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -619,6 +621,24 @@ Friends</h2></td></tr>
           <td class="memname">const char * Planet::get_most_used_saber_color </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac911f6f2ddb15c00f4d1f93c7dba75c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac911f6f2ddb15c00f4d1f93c7dba75c3">&#9670;&nbsp;</a></span>get_most_used_saber_color() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * Planet::get_most_used_saber_color </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;&#160;</td>
+          <td class="paramname"><em>rank</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -849,14 +869,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a15c45d78947c1715cfeed0392a57ce23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15c45d78947c1715cfeed0392a57ce23">&#9670;&nbsp;</a></span>print_planet_info_to_console()</h2>
+<a id="aceddb2f55532a8767a5a00491adde781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceddb2f55532a8767a5a00491adde781">&#9670;&nbsp;</a></span>print_jedi_on_planet_info_to_console()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Planet::print_planet_info_to_console </td>
+          <td class="memname">void Planet::print_jedi_on_planet_info_to_console </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>jedi_name</em>, </td>
@@ -877,14 +897,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="adf1a3a7be2b2f3c955eea14e96851430"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf1a3a7be2b2f3c955eea14e96851430">&#9670;&nbsp;</a></span>print_planet_info_to_file()</h2>
+<a id="adaabb819d8eebb2dfbf1363a1f3bb78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaabb819d8eebb2dfbf1363a1f3bb78d">&#9670;&nbsp;</a></span>print_jedi_on_planet_info_to_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Planet::print_planet_info_to_file </td>
+          <td class="memname">void Planet::print_jedi_on_planet_info_to_file </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>jedi_name</em>, </td>
@@ -1080,14 +1100,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ace20d96790eb569607a502f5fed90cf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace20d96790eb569607a502f5fed90cf2">&#9670;&nbsp;</a></span>sort_jedi()</h2>
+<a id="a23129cee6c182a2f48068015d18e306d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23129cee6c182a2f48068015d18e306d">&#9670;&nbsp;</a></span>sort_by_rank()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Planet::sort_jedi </td>
+          <td class="memname">void Planet::sort_by_rank </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

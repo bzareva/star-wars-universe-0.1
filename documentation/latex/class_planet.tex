@@ -39,13 +39,15 @@ void \mbox{\hyperlink{class_planet_a6702592ebdae1034b29cf7098fda55fc}{get\+\_\+y
 \item 
 void \mbox{\hyperlink{class_planet_aabbd2197db2b92a9557b48197334b44b}{get\+\_\+youngest\+\_\+jedi\+\_\+to\+\_\+console}} (const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank, std\+::ostream \&out) const
 \item 
-void \mbox{\hyperlink{class_planet_adf1a3a7be2b2f3c955eea14e96851430}{print\+\_\+planet\+\_\+info\+\_\+to\+\_\+file}} (const char $\ast$jedi\+\_\+name, std\+::ofstream \&fout) const
+void \mbox{\hyperlink{class_planet_adaabb819d8eebb2dfbf1363a1f3bb78d}{print\+\_\+jedi\+\_\+on\+\_\+planet\+\_\+info\+\_\+to\+\_\+file}} (const char $\ast$jedi\+\_\+name, std\+::ofstream \&fout) const
 \item 
-void \mbox{\hyperlink{class_planet_a15c45d78947c1715cfeed0392a57ce23}{print\+\_\+planet\+\_\+info\+\_\+to\+\_\+console}} (const char $\ast$jedi\+\_\+name, std\+::ostream \&out) const
+void \mbox{\hyperlink{class_planet_aceddb2f55532a8767a5a00491adde781}{print\+\_\+jedi\+\_\+on\+\_\+planet\+\_\+info\+\_\+to\+\_\+console}} (const char $\ast$jedi\+\_\+name, std\+::ostream \&out) const
 \item 
 const char $\ast$ \mbox{\hyperlink{class_planet_a77acf0098872064f2ecdb835ee56da1a}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} () const
 \item 
-void \mbox{\hyperlink{class_planet_ace20d96790eb569607a502f5fed90cf2}{sort\+\_\+jedi}} ()
+const char $\ast$ \mbox{\hyperlink{class_planet_ac911f6f2ddb15c00f4d1f93c7dba75c3}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&rank) const
+\item 
+void \mbox{\hyperlink{class_planet_a23129cee6c182a2f48068015d18e306d}{sort\+\_\+by\+\_\+rank}} ()
 \item 
 \mbox{\hyperlink{class_jedi}{Jedi}} \& \mbox{\hyperlink{class_planet_aa14bf54e92c739df75c91f1c10aaf3ae}{operator\mbox{[}$\,$\mbox{]}}} (int ind)
 \item 
@@ -224,8 +226,14 @@ Implements \mbox{\hyperlink{class_base_afafe9868f6c60e49ebbf00b42a6488be}{Base}}
 \mbox{\Hypertarget{class_planet_a77acf0098872064f2ecdb835ee56da1a}\label{class_planet_a77acf0098872064f2ecdb835ee56da1a}} 
 \index{Planet@{Planet}!get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}}
 \index{get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{get\_most\_used\_saber\_color()}{get\_most\_used\_saber\_color()}}
+\doxysubsubsection{\texorpdfstring{get\_most\_used\_saber\_color()}{get\_most\_used\_saber\_color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily const char $\ast$ Planet\+::get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_planet_ac911f6f2ddb15c00f4d1f93c7dba75c3}\label{class_planet_ac911f6f2ddb15c00f4d1f93c7dba75c3}} 
+\index{Planet@{Planet}!get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}}
+\index{get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{get\_most\_used\_saber\_color()}{get\_most\_used\_saber\_color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const char $\ast$ Planet\+::get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{rank }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{class_planet_a23c6a5a01fd0e776587421ae0c4ca593}\label{class_planet_a23c6a5a01fd0e776587421ae0c4ca593}} 
 \index{Planet@{Planet}!get\_planet\_name@{get\_planet\_name}}
@@ -303,17 +311,17 @@ Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base
 
 Implements \mbox{\hyperlink{class_base_ad435a08229b26c0ee63d08e136b70c96}{Base}}.
 
-\mbox{\Hypertarget{class_planet_a15c45d78947c1715cfeed0392a57ce23}\label{class_planet_a15c45d78947c1715cfeed0392a57ce23}} 
-\index{Planet@{Planet}!print\_planet\_info\_to\_console@{print\_planet\_info\_to\_console}}
-\index{print\_planet\_info\_to\_console@{print\_planet\_info\_to\_console}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{print\_planet\_info\_to\_console()}{print\_planet\_info\_to\_console()}}
-{\footnotesize\ttfamily void Planet\+::print\+\_\+planet\+\_\+info\+\_\+to\+\_\+console (\begin{DoxyParamCaption}\item[{const char $\ast$}]{jedi\+\_\+name,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_planet_aceddb2f55532a8767a5a00491adde781}\label{class_planet_aceddb2f55532a8767a5a00491adde781}} 
+\index{Planet@{Planet}!print\_jedi\_on\_planet\_info\_to\_console@{print\_jedi\_on\_planet\_info\_to\_console}}
+\index{print\_jedi\_on\_planet\_info\_to\_console@{print\_jedi\_on\_planet\_info\_to\_console}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{print\_jedi\_on\_planet\_info\_to\_console()}{print\_jedi\_on\_planet\_info\_to\_console()}}
+{\footnotesize\ttfamily void Planet\+::print\+\_\+jedi\+\_\+on\+\_\+planet\+\_\+info\+\_\+to\+\_\+console (\begin{DoxyParamCaption}\item[{const char $\ast$}]{jedi\+\_\+name,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_planet_adf1a3a7be2b2f3c955eea14e96851430}\label{class_planet_adf1a3a7be2b2f3c955eea14e96851430}} 
-\index{Planet@{Planet}!print\_planet\_info\_to\_file@{print\_planet\_info\_to\_file}}
-\index{print\_planet\_info\_to\_file@{print\_planet\_info\_to\_file}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{print\_planet\_info\_to\_file()}{print\_planet\_info\_to\_file()}}
-{\footnotesize\ttfamily void Planet\+::print\+\_\+planet\+\_\+info\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{jedi\+\_\+name,  }\item[{std\+::ofstream \&}]{fout }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_planet_adaabb819d8eebb2dfbf1363a1f3bb78d}\label{class_planet_adaabb819d8eebb2dfbf1363a1f3bb78d}} 
+\index{Planet@{Planet}!print\_jedi\_on\_planet\_info\_to\_file@{print\_jedi\_on\_planet\_info\_to\_file}}
+\index{print\_jedi\_on\_planet\_info\_to\_file@{print\_jedi\_on\_planet\_info\_to\_file}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{print\_jedi\_on\_planet\_info\_to\_file()}{print\_jedi\_on\_planet\_info\_to\_file()}}
+{\footnotesize\ttfamily void Planet\+::print\+\_\+jedi\+\_\+on\+\_\+planet\+\_\+info\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{jedi\+\_\+name,  }\item[{std\+::ofstream \&}]{fout }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{class_planet_ab6635a5946ba52f7d723417acb16833c}\label{class_planet_ab6635a5946ba52f7d723417acb16833c}} 
 \index{Planet@{Planet}!print\_to\_file@{print\_to\_file}}
@@ -388,11 +396,11 @@ True if is successful removed jedi, otherwise false
 \doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
 {\footnotesize\ttfamily void Planet\+::reserve (\begin{DoxyParamCaption}\item[{int}]{cap }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_planet_ace20d96790eb569607a502f5fed90cf2}\label{class_planet_ace20d96790eb569607a502f5fed90cf2}} 
-\index{Planet@{Planet}!sort\_jedi@{sort\_jedi}}
-\index{sort\_jedi@{sort\_jedi}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{sort\_jedi()}{sort\_jedi()}}
-{\footnotesize\ttfamily void Planet\+::sort\+\_\+jedi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_planet_a23129cee6c182a2f48068015d18e306d}\label{class_planet_a23129cee6c182a2f48068015d18e306d}} 
+\index{Planet@{Planet}!sort\_by\_rank@{sort\_by\_rank}}
+\index{sort\_by\_rank@{sort\_by\_rank}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{sort\_by\_rank()}{sort\_by\_rank()}}
+{\footnotesize\ttfamily void Planet\+::sort\+\_\+by\+\_\+rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_planet_a14c765ce6c3e72ee5e4fb3dc1a3e8be2}\label{class_planet_a14c765ce6c3e72ee5e4fb3dc1a3e8be2}} 
 \index{Planet@{Planet}!type\_name@{type\_name}}
