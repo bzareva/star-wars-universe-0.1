@@ -30,11 +30,17 @@ public:
 	/// @returns True if is successful removed jedi, otherwise false
 	bool remove_jedi(const char* jedi_name);
 
-	/* outputs information about strongest(mean by force) jedi on given planet */
-	void get_strongest_jedi()const;
+	/* outputs information on file about strongest(mean by force) jedi on given planet */
+	void get_strongest_jedi_to_file(std::ofstream& fout)const;
 
-	/* outputs the youngest Jedi inhabiting on this planet and has the appropriate rank */
-	void get_youngest_jedi(const Rank& jedi_rank)const;
+	/* outputs information on console about strongest(mean by force) jedi on given planet */
+	void get_strongest_jedi_to_console(std::ostream& out)const;
+
+	/* outputs on file the youngest Jedi inhabiting on this planet and has the appropriate rank */
+	void get_youngest_jedi_to_file(const Rank& jedi_rank, std::ofstream& fout)const;
+
+	/* outputs on console the youngest Jedi inhabiting on this planet and has the appropriate rank */
+	void get_youngest_jedi_to_console(const Rank& jedi_rank, std::ostream& out)const;
 
 	/* outputs the information on *file* for Planet */
 	void print_planet_info_to_file(const char* jedi_name, std::ofstream& fout)const;
@@ -74,6 +80,9 @@ public:
 
 	/* request a change in capacity */
 	void reserve(int cap);
+
+	/* erase jedi on given index */
+	void erase_jedi(int ind);
 
 /// Override methods from class Base
 	/* @returns A pointer to a dynamically allocated polymorphic Planet */
