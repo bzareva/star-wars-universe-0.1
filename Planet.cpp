@@ -226,15 +226,28 @@ const char* Planet::get_most_used_saber_color()const {
 
 const char* Planet::get_most_used_saber_color(const Rank& rank)const {
 
-	//TODO::
-	for (int i = 0; i < m_count_jedi; ++i) {
+	//TODO::helper func to return count of one saber color
 
-		if (m_jedi[i].get_rank() == rank) {
-
-
-		}
-
-	}
+	//Jedi* curr = new Jedi[m_count_jedi];
+	//for (int i = 0; i < m_count_jedi; ++i) {
+	//	curr[i] = m_jedi[i];
+	//}
+	//int* br  = new int[m_count_jedi];
+	//int* ind = new int[m_count_jedi];
+	//for (int i = 0, k = 0; i < m_count_jedi && k < m_count_jedi; ++i) {
+	//	if (curr[i].get_rank() == rank) {
+	//		int cnt = 1;
+	//		for (int j = i + 1; j < m_count_jedi; ++j) {
+	//			if (cstring_namespace::strCmp(curr[i].get_color_of_lightsaber(), curr[j].get_color_of_lightsaber()) == 0) {
+	//				++cnt;
+	//			}
+	//		}
+	//		if (cnt > 1) {
+	//			ind[k] = i;
+	//			++k;
+	//		}
+	//	}
+	//}
 
 }
 
