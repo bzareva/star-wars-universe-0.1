@@ -135,10 +135,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af60279c9b373b76ce299e21986537b2f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#af60279c9b373b76ce299e21986537b2f">remove_jedi</a> (const char *jedi_name)</td></tr>
 <tr class="memdesc:af60279c9b373b76ce299e21986537b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes jedi from this planet  <a href="class_planet.html#af60279c9b373b76ce299e21986537b2f">More...</a><br /></td></tr>
 <tr class="separator:af60279c9b373b76ce299e21986537b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d08bd7e40ce99f06eb0ef7099424715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a0d08bd7e40ce99f06eb0ef7099424715">get_strongest_jedi</a> () const</td></tr>
-<tr class="separator:a0d08bd7e40ce99f06eb0ef7099424715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a24bc8c1f11b5096488e254f18b3ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a92a24bc8c1f11b5096488e254f18b3ac">get_youngest_jedi</a> (const <a class="el" href="_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank) const</td></tr>
-<tr class="separator:a92a24bc8c1f11b5096488e254f18b3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5366107c24191a25fabe359f7ae4f225"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a5366107c24191a25fabe359f7ae4f225">get_strongest_jedi_to_file</a> (std::ofstream &amp;fout) const</td></tr>
+<tr class="separator:a5366107c24191a25fabe359f7ae4f225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e1e0b6d6ea645da15fa22f42542027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#ae2e1e0b6d6ea645da15fa22f42542027">get_strongest_jedi_to_console</a> (std::ostream &amp;out) const</td></tr>
+<tr class="separator:ae2e1e0b6d6ea645da15fa22f42542027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6702592ebdae1034b29cf7098fda55fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a6702592ebdae1034b29cf7098fda55fc">get_youngest_jedi_to_file</a> (const <a class="el" href="_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank, std::ofstream &amp;fout) const</td></tr>
+<tr class="separator:a6702592ebdae1034b29cf7098fda55fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbd2197db2b92a9557b48197334b44b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#aabbd2197db2b92a9557b48197334b44b">get_youngest_jedi_to_console</a> (const <a class="el" href="_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank, std::ostream &amp;out) const</td></tr>
+<tr class="separator:aabbd2197db2b92a9557b48197334b44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf1a3a7be2b2f3c955eea14e96851430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#adf1a3a7be2b2f3c955eea14e96851430">print_planet_info_to_file</a> (const char *jedi_name, std::ofstream &amp;fout) const</td></tr>
 <tr class="separator:adf1a3a7be2b2f3c955eea14e96851430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15c45d78947c1715cfeed0392a57ce23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a15c45d78947c1715cfeed0392a57ce23">print_planet_info_to_console</a> (const char *jedi_name, std::ostream &amp;out) const</td></tr>
@@ -159,6 +163,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af53cc93e9214f498a86c13e24fd00ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0e5ce9438cb5931d46d6f6004829373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#ad0e5ce9438cb5931d46d6f6004829373">reserve</a> (int cap)</td></tr>
 <tr class="separator:ad0e5ce9438cb5931d46d6f6004829373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf41295228cafdae3784102d4d5e4e50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#abf41295228cafdae3784102d4d5e4e50">erase_jedi</a> (int ind)</td></tr>
+<tr class="separator:abf41295228cafdae3784102d4d5e4e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ae719d72f211ef4ec5976c5f9862a8f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_base.html">Base</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a0ae719d72f211ef4ec5976c5f9862a8f">clone</a> () const override</td></tr>
 <tr class="memdesc:a0ae719d72f211ef4ec5976c5f9862a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override methods from class <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a>.  <a href="class_planet.html#a0ae719d72f211ef4ec5976c5f9862a8f">More...</a><br /></td></tr>
 <tr class="separator:a0ae719d72f211ef4ec5976c5f9862a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -491,6 +497,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="abf41295228cafdae3784102d4d5e4e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf41295228cafdae3784102d4d5e4e50">&#9670;&nbsp;</a></span>erase_jedi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Planet::erase_jedi </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ind</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a23fb0752c2af357611809f0b3ca43ac7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23fb0752c2af357611809f0b3ca43ac7">&#9670;&nbsp;</a></span>get_capacity()</h2>
 
@@ -619,16 +643,17 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a0d08bd7e40ce99f06eb0ef7099424715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d08bd7e40ce99f06eb0ef7099424715">&#9670;&nbsp;</a></span>get_strongest_jedi()</h2>
+<a id="ae2e1e0b6d6ea645da15fa22f42542027"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e1e0b6d6ea645da15fa22f42542027">&#9670;&nbsp;</a></span>get_strongest_jedi_to_console()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Planet::get_strongest_jedi </td>
+          <td class="memname">void Planet::get_strongest_jedi_to_console </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -636,18 +661,74 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a92a24bc8c1f11b5096488e254f18b3ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92a24bc8c1f11b5096488e254f18b3ac">&#9670;&nbsp;</a></span>get_youngest_jedi()</h2>
+<a id="a5366107c24191a25fabe359f7ae4f225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5366107c24191a25fabe359f7ae4f225">&#9670;&nbsp;</a></span>get_strongest_jedi_to_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Planet::get_youngest_jedi </td>
+          <td class="memname">void Planet::get_strongest_jedi_to_file </td>
+          <td>(</td>
+          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramname"><em>fout</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aabbd2197db2b92a9557b48197334b44b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbd2197db2b92a9557b48197334b44b">&#9670;&nbsp;</a></span>get_youngest_jedi_to_console()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Planet::get_youngest_jedi_to_console </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;&#160;</td>
-          <td class="paramname"><em>jedi_rank</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>jedi_rank</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6702592ebdae1034b29cf7098fda55fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6702592ebdae1034b29cf7098fda55fc">&#9670;&nbsp;</a></span>get_youngest_jedi_to_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Planet::get_youngest_jedi_to_file </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;&#160;</td>
+          <td class="paramname"><em>jedi_rank</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramname"><em>fout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

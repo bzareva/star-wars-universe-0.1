@@ -31,9 +31,13 @@ void \mbox{\hyperlink{class_planet_ac11b1432de46e7f5f8fe1493ba8054bd}{demote\+\_
 \item 
 bool \mbox{\hyperlink{class_planet_af60279c9b373b76ce299e21986537b2f}{remove\+\_\+jedi}} (const char $\ast$jedi\+\_\+name)
 \begin{DoxyCompactList}\small\item\em removes jedi from this planet \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_planet_a0d08bd7e40ce99f06eb0ef7099424715}{get\+\_\+strongest\+\_\+jedi}} () const
+void \mbox{\hyperlink{class_planet_a5366107c24191a25fabe359f7ae4f225}{get\+\_\+strongest\+\_\+jedi\+\_\+to\+\_\+file}} (std\+::ofstream \&fout) const
 \item 
-void \mbox{\hyperlink{class_planet_a92a24bc8c1f11b5096488e254f18b3ac}{get\+\_\+youngest\+\_\+jedi}} (const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank) const
+void \mbox{\hyperlink{class_planet_ae2e1e0b6d6ea645da15fa22f42542027}{get\+\_\+strongest\+\_\+jedi\+\_\+to\+\_\+console}} (std\+::ostream \&out) const
+\item 
+void \mbox{\hyperlink{class_planet_a6702592ebdae1034b29cf7098fda55fc}{get\+\_\+youngest\+\_\+jedi\+\_\+to\+\_\+file}} (const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank, std\+::ofstream \&fout) const
+\item 
+void \mbox{\hyperlink{class_planet_aabbd2197db2b92a9557b48197334b44b}{get\+\_\+youngest\+\_\+jedi\+\_\+to\+\_\+console}} (const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank, std\+::ostream \&out) const
 \item 
 void \mbox{\hyperlink{class_planet_adf1a3a7be2b2f3c955eea14e96851430}{print\+\_\+planet\+\_\+info\+\_\+to\+\_\+file}} (const char $\ast$jedi\+\_\+name, std\+::ofstream \&fout) const
 \item 
@@ -54,6 +58,8 @@ const \mbox{\hyperlink{class_jedi}{Jedi}} \& \mbox{\hyperlink{class_planet_a4a5e
 void \mbox{\hyperlink{class_planet_af53cc93e9214f498a86c13e24fd00ba7}{push\+\_\+back}} (const \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
 \item 
 void \mbox{\hyperlink{class_planet_ad0e5ce9438cb5931d46d6f6004829373}{reserve}} (int cap)
+\item 
+void \mbox{\hyperlink{class_planet_abf41295228cafdae3784102d4d5e4e50}{erase\+\_\+jedi}} (int ind)
 \item 
 virtual \mbox{\hyperlink{class_base}{Base}} $\ast$ \mbox{\hyperlink{class_planet_a0ae719d72f211ef4ec5976c5f9862a8f}{clone}} () const override
 \begin{DoxyCompactList}\small\item\em Override methods from class \mbox{\hyperlink{class_base}{Base}}. \end{DoxyCompactList}\item 
@@ -179,6 +185,12 @@ Implements \mbox{\hyperlink{class_base_afafe9868f6c60e49ebbf00b42a6488be}{Base}}
 \doxysubsubsection{\texorpdfstring{demote\_jedi()}{demote\_jedi()}}
 {\footnotesize\ttfamily void Planet\+::demote\+\_\+jedi (\begin{DoxyParamCaption}\item[{const char $\ast$}]{jedi\+\_\+name,  }\item[{double}]{multiplier }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_planet_abf41295228cafdae3784102d4d5e4e50}\label{class_planet_abf41295228cafdae3784102d4d5e4e50}} 
+\index{Planet@{Planet}!erase\_jedi@{erase\_jedi}}
+\index{erase\_jedi@{erase\_jedi}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{erase\_jedi()}{erase\_jedi()}}
+{\footnotesize\ttfamily void Planet\+::erase\+\_\+jedi (\begin{DoxyParamCaption}\item[{int}]{ind }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_planet_a23fb0752c2af357611809f0b3ca43ac7}\label{class_planet_a23fb0752c2af357611809f0b3ca43ac7}} 
 \index{Planet@{Planet}!get\_capacity@{get\_capacity}}
 \index{get\_capacity@{get\_capacity}!Planet@{Planet}}
@@ -221,17 +233,29 @@ Implements \mbox{\hyperlink{class_base_afafe9868f6c60e49ebbf00b42a6488be}{Base}}
 \doxysubsubsection{\texorpdfstring{get\_planet\_name()}{get\_planet\_name()}}
 {\footnotesize\ttfamily const char $\ast$ Planet\+::get\+\_\+planet\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_planet_a0d08bd7e40ce99f06eb0ef7099424715}\label{class_planet_a0d08bd7e40ce99f06eb0ef7099424715}} 
-\index{Planet@{Planet}!get\_strongest\_jedi@{get\_strongest\_jedi}}
-\index{get\_strongest\_jedi@{get\_strongest\_jedi}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{get\_strongest\_jedi()}{get\_strongest\_jedi()}}
-{\footnotesize\ttfamily void Planet\+::get\+\_\+strongest\+\_\+jedi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_planet_ae2e1e0b6d6ea645da15fa22f42542027}\label{class_planet_ae2e1e0b6d6ea645da15fa22f42542027}} 
+\index{Planet@{Planet}!get\_strongest\_jedi\_to\_console@{get\_strongest\_jedi\_to\_console}}
+\index{get\_strongest\_jedi\_to\_console@{get\_strongest\_jedi\_to\_console}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{get\_strongest\_jedi\_to\_console()}{get\_strongest\_jedi\_to\_console()}}
+{\footnotesize\ttfamily void Planet\+::get\+\_\+strongest\+\_\+jedi\+\_\+to\+\_\+console (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_planet_a92a24bc8c1f11b5096488e254f18b3ac}\label{class_planet_a92a24bc8c1f11b5096488e254f18b3ac}} 
-\index{Planet@{Planet}!get\_youngest\_jedi@{get\_youngest\_jedi}}
-\index{get\_youngest\_jedi@{get\_youngest\_jedi}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{get\_youngest\_jedi()}{get\_youngest\_jedi()}}
-{\footnotesize\ttfamily void Planet\+::get\+\_\+youngest\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_planet_a5366107c24191a25fabe359f7ae4f225}\label{class_planet_a5366107c24191a25fabe359f7ae4f225}} 
+\index{Planet@{Planet}!get\_strongest\_jedi\_to\_file@{get\_strongest\_jedi\_to\_file}}
+\index{get\_strongest\_jedi\_to\_file@{get\_strongest\_jedi\_to\_file}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{get\_strongest\_jedi\_to\_file()}{get\_strongest\_jedi\_to\_file()}}
+{\footnotesize\ttfamily void Planet\+::get\+\_\+strongest\+\_\+jedi\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{fout }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_planet_aabbd2197db2b92a9557b48197334b44b}\label{class_planet_aabbd2197db2b92a9557b48197334b44b}} 
+\index{Planet@{Planet}!get\_youngest\_jedi\_to\_console@{get\_youngest\_jedi\_to\_console}}
+\index{get\_youngest\_jedi\_to\_console@{get\_youngest\_jedi\_to\_console}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{get\_youngest\_jedi\_to\_console()}{get\_youngest\_jedi\_to\_console()}}
+{\footnotesize\ttfamily void Planet\+::get\+\_\+youngest\+\_\+jedi\+\_\+to\+\_\+console (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_planet_a6702592ebdae1034b29cf7098fda55fc}\label{class_planet_a6702592ebdae1034b29cf7098fda55fc}} 
+\index{Planet@{Planet}!get\_youngest\_jedi\_to\_file@{get\_youngest\_jedi\_to\_file}}
+\index{get\_youngest\_jedi\_to\_file@{get\_youngest\_jedi\_to\_file}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{get\_youngest\_jedi\_to\_file()}{get\_youngest\_jedi\_to\_file()}}
+{\footnotesize\ttfamily void Planet\+::get\+\_\+youngest\+\_\+jedi\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_jedi_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank,  }\item[{std\+::ofstream \&}]{fout }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{class_planet_a359f24be0ccb86ac15f8a01d7ec66514}\label{class_planet_a359f24be0ccb86ac15f8a01d7ec66514}} 
 \index{Planet@{Planet}!is\_valid\_type@{is\_valid\_type}}

@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['read_166',['read',['../class_base.html#a17776c36f0ef8ac98f80f39bd16ee81a',1,'Base::read()'],['../class_jedi.html#a93a769b8dba039149814727b9fdf4257',1,'Jedi::read()'],['../class_planet.html#a66d5ba4a802c0f2eb784b0924bf00b4b',1,'Planet::read()']]],
-  ['read_5ffrom_5ffile_167',['read_from_file',['../class_base.html#aa464997c0ff7060d1dd2568e1590b4b6',1,'Base::read_from_file()'],['../class_jedi.html#a1ced6357fcf6aeccbb49dd50de61dc6b',1,'Jedi::read_from_file()'],['../class_planet.html#af7f8e9faa82e3b5b7450ea9afb4f45b8',1,'Planet::read_from_file(std::ifstream &amp;fin) override']]],
-  ['remove_5fjedi_168',['remove_jedi',['../class_planet.html#af60279c9b373b76ce299e21986537b2f',1,'Planet']]],
-  ['reserve_169',['reserve',['../class_planet.html#ad0e5ce9438cb5931d46d6f6004829373',1,'Planet']]]
+  ['planet_165',['Planet',['../class_planet.html#ac88200b337a62e1377858e3116f9412b',1,'Planet::Planet()'],['../class_planet.html#ac00facbec0b9c5b7080ea253c8ab0637',1,'Planet::Planet(std::ifstream &amp;fin)'],['../class_planet.html#a1b35529a85f404b6420d7f321c73a333',1,'Planet::Planet(int cap, int count, Jedi *jedi, const char *planet_name)'],['../class_planet.html#a5d4ec97fe8ea704056fff7ee29f9e4db',1,'Planet::Planet(const Planet &amp;oth)']]],
+  ['print_166',['print',['../class_base.html#ad435a08229b26c0ee63d08e136b70c96',1,'Base::print()'],['../class_jedi.html#a66ef98828b5f0a8020cae6b2f9775b56',1,'Jedi::print()'],['../class_planet.html#a41897d2f8133516d184ce403f41970f4',1,'Planet::print(std::ostream &amp;out) const override']]],
+  ['print_5fplanet_5finfo_5fto_5fconsole_167',['print_planet_info_to_console',['../class_planet.html#a15c45d78947c1715cfeed0392a57ce23',1,'Planet']]],
+  ['print_5fplanet_5finfo_5fto_5ffile_168',['print_planet_info_to_file',['../class_planet.html#adf1a3a7be2b2f3c955eea14e96851430',1,'Planet']]],
+  ['print_5fto_5ffile_169',['print_to_file',['../class_base.html#a224e768fa3ec98d85f834d8932277d85',1,'Base::print_to_file()'],['../class_jedi.html#a24e11bf79745cdc3007bff9b29d4b756',1,'Jedi::print_to_file()'],['../class_planet.html#ab6635a5946ba52f7d723417acb16833c',1,'Planet::print_to_file()']]],
+  ['promote_5fjedi_170',['promote_jedi',['../class_jedi.html#ace604bcbbfc4055ded2527d9568b3407',1,'Jedi::promote_jedi()'],['../class_planet.html#ae602ddccaed3a109173d2ddc792ba709',1,'Planet::promote_jedi(const char *jedi_name, double multiplier)']]],
+  ['push_5fback_171',['push_back',['../class_planet.html#af53cc93e9214f498a86c13e24fd00ba7',1,'Planet']]]
 ];
