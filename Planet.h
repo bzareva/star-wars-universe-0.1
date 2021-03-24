@@ -42,17 +42,20 @@ public:
 	/* outputs on console the youngest Jedi inhabiting on this planet and has the appropriate rank */
 	void get_youngest_jedi_to_console(const Rank& jedi_rank, std::ostream& out)const;
 
-	/* outputs the information on *file* for Planet */
-	void print_planet_info_to_file(const char* jedi_name, std::ofstream& fout)const;
+	/* outputs the information on *file* for one Jedi */
+	void print_jedi_on_planet_info_to_file(const char* jedi_name, std::ofstream& fout)const;
 
-	/* outputs the information on *console* for the Planet */
-	void print_planet_info_to_console(const char* jedi_name, std::ostream& out)const;
+	/* outputs the information on *console* for one Jedi */
+	void print_jedi_on_planet_info_to_console(const char* jedi_name, std::ostream& out)const;
 
-	/* returns the most common color to light sword planet that enjoys at least one GRAND_MASTER  */
+	/* @returns the most common color to light sword planet that enjoys at least one GRAND_MASTER  */
 	const char* get_most_used_saber_color()const;
 
+	/* @returns the most common color to light sword in the given rank */
+	const char* get_most_used_saber_color(const Rank& rank)const;
+
 	/* sorts the jedi on this planet */
-	void sort_jedi();
+	void sort_by_rank();
 
 	/* @returns name of class */
 	static const char* get_class_name();
