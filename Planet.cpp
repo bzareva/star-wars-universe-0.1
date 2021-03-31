@@ -248,7 +248,7 @@ const char* Planet::get_most_used_saber_color(const Rank& rank)const {
 	//		}
 	//	}
 	//}
-
+	return "sth";
 }
 
 void Planet::sort_by_rank() {
