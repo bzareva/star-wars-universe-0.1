@@ -2,11 +2,6 @@
 \label{class_base}\index{Base@{Base}}
 
 
-Abstract base class for \mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_jedi}{Jedi}} and \mbox{\hyperlink{class_planet}{Planet}} herited this class.  
-
-
-
-
 {\ttfamily \#include $<$Base.\+h$>$}
 
 Inheritance diagram for Base\+:\begin{figure}[H]
@@ -25,7 +20,7 @@ Inheritance diagram for Base\+:\begin{figure}[H]
 virtual \mbox{\hyperlink{class_base_a306fb25541331080645a716286357ef9}{$\sim$\+Base}} ()=default
 \item 
 virtual \mbox{\hyperlink{class_base}{Base}} $\ast$ \mbox{\hyperlink{class_base_ab99040cf7517193fb67b86ce0c29df6a}{clone}} () const =0
-\begin{DoxyCompactList}\small\item\em Pure virtual clone method Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. \end{DoxyCompactList}\item 
+\item 
 virtual void \mbox{\hyperlink{class_base_ad435a08229b26c0ee63d08e136b70c96}{print}} (std\+::ostream \&out) const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way on {\itshape console} \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_base_a224e768fa3ec98d85f834d8932277d85}{print\+\_\+to\+\_\+file}} (std\+::ofstream \&fout) const =0
@@ -43,9 +38,7 @@ virtual const char $\ast$ \mbox{\hyperlink{class_base_adfb30421704aaa9fcafc107bc
 
 
 \doxysubsection{Detailed Description}
-Abstract base class for \mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_jedi}{Jedi}} and \mbox{\hyperlink{class_planet}{Planet}} herited this class. 
-
-The heirs(\+Jedi and Planet) of \mbox{\hyperlink{class_base}{Base}} class implement all of the functions in own way. 
+Abstract base class for \mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_jedi}{Jedi}} and \mbox{\hyperlink{class_planet}{Planet}} herited this class. The heirs(\+Jedi and Planet) of \mbox{\hyperlink{class_base}{Base}} class implement all of the functions in own way. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_base_a58887755525abd3f340963e2bbdcc972}\label{class_base_a58887755525abd3f340963e2bbdcc972}} 
@@ -69,11 +62,7 @@ The heirs(\+Jedi and Planet) of \mbox{\hyperlink{class_base}{Base}} class implem
 \doxysubsubsection{\texorpdfstring{clone()}{clone()}}
 {\footnotesize\ttfamily virtual \mbox{\hyperlink{class_base}{Base}}$\ast$ Base\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-
-
-Pure virtual clone method Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. 
-
-Access to the object of this class is realize with clone method. 
+Pure virtual clone method Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. Access to the object of this class is realize with clone method. 
 
 Implemented in \mbox{\hyperlink{class_planet_a0ae719d72f211ef4ec5976c5f9862a8f}{Planet}}, and \mbox{\hyperlink{class_jedi_a1e220ec41521525e3e6b5c628ba97db5}{Jedi}}.
 

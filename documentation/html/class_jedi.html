@@ -102,9 +102,6 @@ $(document).ready(function(){initNavTree('class_jedi.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 
-<p>Inherits of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> class.  
- <a href="class_jedi.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="_jedi_8h_source.html">Jedi.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Jedi:</div>
@@ -112,14 +109,13 @@ Inheritance diagram for Jedi:</div>
  <div class="center">
   <img src="class_jedi.png" usemap="#Jedi_map" alt=""/>
   <map id="Jedi_map" name="Jedi_map">
-<area href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class." alt="Base" shape="rect" coords="0,0,40,24"/>
+<area href="class_base.html" alt="Base" shape="rect" coords="0,0,40,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afb8a05988898aeb434678099416fc4e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#afb8a05988898aeb434678099416fc4e6">Jedi</a> ()</td></tr>
-<tr class="memdesc:afb8a05988898aeb434678099416fc4e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements big four and constructor with parameter from type ifstream.  <a href="class_jedi.html#afb8a05988898aeb434678099416fc4e6">More...</a><br /></td></tr>
 <tr class="separator:afb8a05988898aeb434678099416fc4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3da57811f8332a961022a13640497098"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a3da57811f8332a961022a13640497098">Jedi</a> (std::ifstream &amp;fin)</td></tr>
 <tr class="separator:a3da57811f8332a961022a13640497098"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,45 +128,54 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affc19262c1cf572fad77e1abf5bda9f7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#affc19262c1cf572fad77e1abf5bda9f7">~Jedi</a> ()</td></tr>
 <tr class="separator:affc19262c1cf572fad77e1abf5bda9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8669a01749ce58fb4062da32457c3524"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a8669a01749ce58fb4062da32457c3524">operator==</a> (const <a class="el" href="class_jedi.html">Jedi</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a8669a01749ce58fb4062da32457c3524"><td class="mdescLeft">&#160;</td><td class="mdescRight">compares two jedi by their ages  <a href="class_jedi.html#a8669a01749ce58fb4062da32457c3524">More...</a><br /></td></tr>
 <tr class="separator:a8669a01749ce58fb4062da32457c3524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f274e7c5b392732384dd46d5ff58949"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a8f274e7c5b392732384dd46d5ff58949">operator&lt;</a> (const <a class="el" href="class_jedi.html">Jedi</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a8f274e7c5b392732384dd46d5ff58949"><td class="mdescLeft">&#160;</td><td class="mdescRight">compares two jedi and if left side jedi is younger return true, otherwise false  <a href="class_jedi.html#a8f274e7c5b392732384dd46d5ff58949">More...</a><br /></td></tr>
 <tr class="separator:a8f274e7c5b392732384dd46d5ff58949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace604bcbbfc4055ded2527d9568b3407"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#ace604bcbbfc4055ded2527d9568b3407">promote_jedi</a> (double multiplier)</td></tr>
+<tr class="memdesc:ace604bcbbfc4055ded2527d9568b3407"><td class="mdescLeft">&#160;</td><td class="mdescRight">increases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank up in ladder and increases its strength by a formula  <a href="class_jedi.html#ace604bcbbfc4055ded2527d9568b3407">More...</a><br /></td></tr>
 <tr class="separator:ace604bcbbfc4055ded2527d9568b3407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3496ead6b8ca112ebc7505db8be7ae45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a3496ead6b8ca112ebc7505db8be7ae45">demote_jedi</a> (double multiplier)</td></tr>
+<tr class="memdesc:a3496ead6b8ca112ebc7505db8be7ae45"><td class="mdescLeft">&#160;</td><td class="mdescRight">decreases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank down in ladder and lowers its strength by a formula <br  />
+  <a href="class_jedi.html#a3496ead6b8ca112ebc7505db8be7ae45">More...</a><br /></td></tr>
 <tr class="separator:a3496ead6b8ca112ebc7505db8be7ae45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e220ec41521525e3e6b5c628ba97db5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_base.html">Base</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a1e220ec41521525e3e6b5c628ba97db5">clone</a> () const override</td></tr>
-<tr class="memdesc:a1e220ec41521525e3e6b5c628ba97db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override methods from class <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a>.  <a href="class_jedi.html#a1e220ec41521525e3e6b5c628ba97db5">More...</a><br /></td></tr>
+<tr class="memdesc:a1e220ec41521525e3e6b5c628ba97db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override methods from class <a class="el" href="class_base.html">Base</a>.  <a href="class_jedi.html#a1e220ec41521525e3e6b5c628ba97db5">More...</a><br /></td></tr>
 <tr class="separator:a1e220ec41521525e3e6b5c628ba97db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66ef98828b5f0a8020cae6b2f9775b56"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a66ef98828b5f0a8020cae6b2f9775b56">print</a> (std::ostream &amp;out) const override</td></tr>
-<tr class="memdesc:a66ef98828b5f0a8020cae6b2f9775b56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>console</em>  <a href="class_jedi.html#a66ef98828b5f0a8020cae6b2f9775b56">More...</a><br /></td></tr>
+<tr class="memdesc:a66ef98828b5f0a8020cae6b2f9775b56"><td class="mdescLeft">&#160;</td><td class="mdescRight">outputs formatted information for jedi on <em>console</em>  <a href="class_jedi.html#a66ef98828b5f0a8020cae6b2f9775b56">More...</a><br /></td></tr>
 <tr class="separator:a66ef98828b5f0a8020cae6b2f9775b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e11bf79745cdc3007bff9b29d4b756"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a24e11bf79745cdc3007bff9b29d4b756">print_to_file</a> (std::ofstream &amp;fout) const override</td></tr>
-<tr class="memdesc:a24e11bf79745cdc3007bff9b29d4b756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>  <a href="class_jedi.html#a24e11bf79745cdc3007bff9b29d4b756">More...</a><br /></td></tr>
+<tr class="memdesc:a24e11bf79745cdc3007bff9b29d4b756"><td class="mdescLeft">&#160;</td><td class="mdescRight">outputs formatted information for jedi on <em>file</em>  <a href="class_jedi.html#a24e11bf79745cdc3007bff9b29d4b756">More...</a><br /></td></tr>
 <tr class="separator:a24e11bf79745cdc3007bff9b29d4b756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd3172d30a841327d159803f8687e24c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#afd3172d30a841327d159803f8687e24c">create_jedi</a> (const char *planet_name, const char *jedi_name, const char *jedi_rank, int jedi_age, const char *saber_color, double jedi_strength) override</td></tr>
-<tr class="memdesc:afd3172d30a841327d159803f8687e24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual create method.  <a href="class_jedi.html#afd3172d30a841327d159803f8687e24c">More...</a><br /></td></tr>
 <tr class="separator:afd3172d30a841327d159803f8687e24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93a769b8dba039149814727b9fdf4257"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a93a769b8dba039149814727b9fdf4257">read</a> (std::istream &amp;in) override</td></tr>
-<tr class="memdesc:a93a769b8dba039149814727b9fdf4257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>console</em>  <a href="class_jedi.html#a93a769b8dba039149814727b9fdf4257">More...</a><br /></td></tr>
+<tr class="memdesc:a93a769b8dba039149814727b9fdf4257"><td class="mdescLeft">&#160;</td><td class="mdescRight">reading information for jedi from <em>console</em>  <a href="class_jedi.html#a93a769b8dba039149814727b9fdf4257">More...</a><br /></td></tr>
 <tr class="separator:a93a769b8dba039149814727b9fdf4257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ced6357fcf6aeccbb49dd50de61dc6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a1ced6357fcf6aeccbb49dd50de61dc6b">read_from_file</a> (std::ifstream &amp;fin) override</td></tr>
-<tr class="memdesc:a1ced6357fcf6aeccbb49dd50de61dc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>file</em>  <a href="class_jedi.html#a1ced6357fcf6aeccbb49dd50de61dc6b">More...</a><br /></td></tr>
+<tr class="memdesc:a1ced6357fcf6aeccbb49dd50de61dc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">reading information for jedi from <em>file</em>  <a href="class_jedi.html#a1ced6357fcf6aeccbb49dd50de61dc6b">More...</a><br /></td></tr>
 <tr class="separator:a1ced6357fcf6aeccbb49dd50de61dc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0845c12e8b3ff266b23b7b8776083a3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#af0845c12e8b3ff266b23b7b8776083a3">is_valid_type</a> (const char *type) const override</td></tr>
-<tr class="memdesc:af0845c12e8b3ff266b23b7b8776083a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method which check is it valid type the submission parameter.  <a href="class_jedi.html#af0845c12e8b3ff266b23b7b8776083a3">More...</a><br /></td></tr>
+<tr class="memdesc:af0845c12e8b3ff266b23b7b8776083a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks is it from jedi object  <a href="class_jedi.html#af0845c12e8b3ff266b23b7b8776083a3">More...</a><br /></td></tr>
 <tr class="separator:af0845c12e8b3ff266b23b7b8776083a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1f97d3e7512eca940a7969c2b29e987"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#ac1f97d3e7512eca940a7969c2b29e987">type_name</a> () const override</td></tr>
 <tr class="separator:ac1f97d3e7512eca940a7969c2b29e987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a718594204589938be2f6032876f9ba8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a718594204589938be2f6032876f9ba8c">set_age</a> (int age)</td></tr>
+<tr class="memdesc:a718594204589938be2f6032876f9ba8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter for age of jedi  <a href="class_jedi.html#a718594204589938be2f6032876f9ba8c">More...</a><br /></td></tr>
 <tr class="separator:a718594204589938be2f6032876f9ba8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ef66d1d9968976dd7ee5adb274fa477"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a2ef66d1d9968976dd7ee5adb274fa477">set_force</a> (double force)</td></tr>
+<tr class="memdesc:a2ef66d1d9968976dd7ee5adb274fa477"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter for force of jedi  <a href="class_jedi.html#a2ef66d1d9968976dd7ee5adb274fa477">More...</a><br /></td></tr>
 <tr class="separator:a2ef66d1d9968976dd7ee5adb274fa477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19255d5c0c21c6392db574cdec245322"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a19255d5c0c21c6392db574cdec245322">set_name_jedi</a> (const char *name)</td></tr>
+<tr class="memdesc:a19255d5c0c21c6392db574cdec245322"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter for name of jedi  <a href="class_jedi.html#a19255d5c0c21c6392db574cdec245322">More...</a><br /></td></tr>
 <tr class="separator:a19255d5c0c21c6392db574cdec245322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eb87ddd66ffc131339f82927900355c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a5eb87ddd66ffc131339f82927900355c">set_color_of_lightsaber</a> (const char *color_of_lightsaber)</td></tr>
+<tr class="memdesc:a5eb87ddd66ffc131339f82927900355c"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter for color of lightsaber of jedi  <a href="class_jedi.html#a5eb87ddd66ffc131339f82927900355c">More...</a><br /></td></tr>
 <tr class="separator:a5eb87ddd66ffc131339f82927900355c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17ff0dd411c7ca94ff1bc7bb6bede64e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a17ff0dd411c7ca94ff1bc7bb6bede64e">set_rank</a> (const <a class="el" href="_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;rank)</td></tr>
+<tr class="memdesc:a17ff0dd411c7ca94ff1bc7bb6bede64e"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter for rank of jedi  <a href="class_jedi.html#a17ff0dd411c7ca94ff1bc7bb6bede64e">More...</a><br /></td></tr>
 <tr class="separator:a17ff0dd411c7ca94ff1bc7bb6bede64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfe7693ab88a6962caa9f3a0174d97e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#adfe7693ab88a6962caa9f3a0174d97e7">get_age</a> () const</td></tr>
 <tr class="separator:adfe7693ab88a6962caa9f3a0174d97e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,12 +203,14 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:aa0531f1879157b772dd3e89b94fcd114"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#aa0531f1879157b772dd3e89b94fcd114">operator&gt;&gt;</a> (std::istream &amp;in, <a class="el" href="class_jedi.html">Jedi</a> &amp;oth)</td></tr>
+<tr class="memdesc:aa0531f1879157b772dd3e89b94fcd114"><td class="mdescLeft">&#160;</td><td class="mdescRight">formatted output for jedi on console  <a href="class_jedi.html#aa0531f1879157b772dd3e89b94fcd114">More...</a><br /></td></tr>
 <tr class="separator:aa0531f1879157b772dd3e89b94fcd114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a404582e070fe1e18095b681aee3f21e4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jedi.html#a404582e070fe1e18095b681aee3f21e4">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="class_jedi.html">Jedi</a> &amp;oth)</td></tr>
+<tr class="memdesc:a404582e070fe1e18095b681aee3f21e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">input from console for jedi  <a href="class_jedi.html#a404582e070fe1e18095b681aee3f21e4">More...</a><br /></td></tr>
 <tr class="separator:a404582e070fe1e18095b681aee3f21e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Inherits of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> class. </p>
+<div class="textblock"><p>Inherits of <a class="el" href="class_base.html">Base</a> class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afb8a05988898aeb434678099416fc4e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb8a05988898aeb434678099416fc4e6">&#9670;&nbsp;</a></span>Jedi() <span class="overload">[1/4]</span></h2>
@@ -219,8 +226,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Implements big four and constructor with parameter from type ifstream. </p>
+<p>Implements big four and constructor with parameter from type ifstream </p>
 
 </div>
 </div>
@@ -355,7 +361,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Override methods from class <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a>. </p>
+<p>Override methods from class <a class="el" href="class_base.html">Base</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a dynamically allocated polymorphic <a class="el" href="class_jedi.html">Jedi</a> </dd></dl>
 
 <p>Implements <a class="el" href="class_base.html#ab99040cf7517193fb67b86ce0c29df6a">Base</a>.</p>
 
@@ -418,8 +425,13 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Pure virtual create method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">planet_name</td><td>In class <a class="el" href="class_jedi.html">Jedi</a> is fictitious parameter <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_base.html#afafe9868f6c60e49ebbf00b42a6488be">Base</a>.</p>
 
@@ -441,6 +453,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>decreases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank down in ladder and lowers its strength by a formula <br  />
+ </p>
+
 </div>
 </div>
 <a id="adfe7693ab88a6962caa9f3a0174d97e7"></a>
@@ -457,6 +472,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Age of jedi </dd></dl>
 
 </div>
 </div>
@@ -482,6 +498,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>name of class </dd></dl>
 
 </div>
 </div>
@@ -499,6 +516,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Color of the lightsaber of jedi </dd></dl>
 
 </div>
 </div>
@@ -516,6 +534,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The force of jedi </dd></dl>
 
 </div>
 </div>
@@ -533,6 +552,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Name of jedi </dd></dl>
 
 </div>
 </div>
@@ -550,6 +570,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Rank of jedi </dd></dl>
 
 </div>
 </div>
@@ -577,7 +598,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual method which check is it valid type the submission parameter. </p>
+<p>checks is it from jedi object </p>
 
 <p>Implements <a class="el" href="class_base.html#af59f5245ef5273ecac6303502ab4cfcf">Base</a>.</p>
 
@@ -598,6 +619,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>compares two jedi and if left side jedi is younger return true, otherwise false </p>
 
 </div>
 </div>
@@ -635,6 +658,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>compares two jedi by their ages </p>
+
 </div>
 </div>
 <a id="a66ef98828b5f0a8020cae6b2f9775b56"></a>
@@ -661,7 +686,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>console</em> </p>
+<p>outputs formatted information for jedi on <em>console</em> </p>
 
 <p>Implements <a class="el" href="class_base.html#ad435a08229b26c0ee63d08e136b70c96">Base</a>.</p>
 
@@ -691,7 +716,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class for Galaxy Jedi and Planet herited this class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em> </p>
+<p>outputs formatted information for jedi on <em>file</em> </p>
 
 <p>Implements <a class="el" href="class_base.html#a224e768fa3ec98d85f834d8932277d85">Base</a>.</p>
 
@@ -712,6 +737,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>increases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank up in ladder and increases its strength by a formula </p>
 
 </div>
 </div>
@@ -739,7 +766,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual method for reading information from <em>console</em> </p>
+<p>reading information for jedi from <em>console</em> </p>
 
 <p>Implements <a class="el" href="class_base.html#a17776c36f0ef8ac98f80f39bd16ee81a">Base</a>.</p>
 
@@ -769,7 +796,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual method for reading information from <em>file</em> </p>
+<p>reading information for jedi from <em>file</em> </p>
 
 <p>Implements <a class="el" href="class_base.html#aa464997c0ff7060d1dd2568e1590b4b6">Base</a>.</p>
 
@@ -791,6 +818,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>setter for age of jedi </p>
+
 </div>
 </div>
 <a id="a5eb87ddd66ffc131339f82927900355c"></a>
@@ -808,6 +837,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>setter for color of lightsaber of jedi </p>
 
 </div>
 </div>
@@ -827,6 +858,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>setter for force of jedi </p>
+
 </div>
 </div>
 <a id="a19255d5c0c21c6392db574cdec245322"></a>
@@ -845,6 +878,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>setter for name of jedi </p>
+
 </div>
 </div>
 <a id="a17ff0dd411c7ca94ff1bc7bb6bede64e"></a>
@@ -862,6 +897,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>setter for rank of jedi </p>
 
 </div>
 </div>
@@ -888,8 +925,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>type of object from this class, which is "jedi" in this case </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>help further to create object from this class <br  />
- </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>help further to create object from this class </dd></dl>
 
 <p>Implements <a class="el" href="class_base.html#adfb30421704aaa9fcafc107bce3da2fb">Base</a>.</p>
 
@@ -930,6 +966,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>input from console for jedi </p>
+
 </div>
 </div>
 <a id="aa0531f1879157b772dd3e89b94fcd114"></a>
@@ -965,6 +1003,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>formatted output for jedi on console </p>
 
 </div>
 </div>

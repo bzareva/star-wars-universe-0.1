@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('md__c___users__u_s_e_r_source_repos_bz
 <div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
 &lt;em&gt;Brief information&lt;/em&gt;</h1>
 <p>Vankata is a big fan of Star Wars, so he decided to make a small project on OOP on this topic. For the purpose, he wants to recreate the universe of the series.<br  />
- He first started with the <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a>, deciding that everyone should have:</p><ul>
+ He first started with the <a class="el" href="class_jedi.html">Jedi</a>, deciding that everyone should have:</p><ul>
 <li>jedi name</li>
 <li>ank, the following are arranged in ascending order - YOUNGLING, INITIATE, PADAWAN, KNIGHT-ASPIRANT, KNIGHT, MASTER, BATTLE_MASTER и GRAND_MASTER</li>
 <li>age</li>
@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('md__c___users__u_s_e_r_source_repos_bz
 <li>force (set by some number of type double)<br  />
 </li>
 </ul>
-<p>He then decided to create the planets and moons, each with a name and a <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a>, who inhabit it. Create an application that supports the following commands:<br  />
+<p>He then decided to create the planets and moons, each with a name and a <a class="el" href="class_jedi.html">Jedi</a>, who inhabit it. Create an application that supports the following commands:<br  />
 </p>
 <ul>
 <li>**_add_planet [planet_name]:_**<br  />
@@ -115,23 +115,23 @@ $(document).ready(function(){initNavTree('md__c___users__u_s_e_r_source_repos_bz
 </li>
 </ul>
 <p>**_create_jedi [planet_name] [jedi_name] [jedi_rank] [jedi_age] [saber_color] [jedi_strength]:_**<br  />
- The function brings out a message whether the addition was successful or not (there is a <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> with such a name on this or that planet, or not there is a planet with such a name).<br  />
+ The function brings out a message whether the addition was successful or not (there is a <a class="el" href="class_jedi.html">Jedi</a> with such a name on this or that planet, or not there is a planet with such a name).<br  />
 </p>
 <ul>
 <li>**_removeJedi [jedi_name] [planet_name]:_**<br  />
- The function brings out a message whether the removal was successful or not (the <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> did not inhabits this planet).<br  />
+ The function brings out a message whether the removal was successful or not (the <a class="el" href="class_jedi.html">Jedi</a> did not inhabits this planet).<br  />
 </li>
 <li>**_promote_jedi [jedi_name] [multiplier]:_**<br  />
- Raises the given <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> by one rank up in ladder and increases its strength by the formula jedi_strength + = (multiplier * jedi_strength) (cannot be increased any more) of rank GRAND_MASTER and must be multiplier positive number of type double).<br  />
+ Raises the given <a class="el" href="class_jedi.html">Jedi</a> by one rank up in ladder and increases its strength by the formula jedi_strength + = (multiplier * jedi_strength) (cannot be increased any more) of rank GRAND_MASTER and must be multiplier positive number of type double).<br  />
 </li>
 <li>**_demote_jedi [jedi_name] [multiplier]:_**<br  />
- Decreases the rank of the given <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> by one rank down the ladder and lowers its strength by formula jedi_strength -= (multiplier * jedi_strength) (cannot be lowered further of rank YOUNGLING and multiplier must be positive number of type double).<br  />
+ Decreases the rank of the given <a class="el" href="class_jedi.html">Jedi</a> by one rank down the ladder and lowers its strength by formula jedi_strength -= (multiplier * jedi_strength) (cannot be lowered further of rank YOUNGLING and multiplier must be positive number of type double).<br  />
 </li>
 <li>**_get_strongest_jedi [planet_name]:_**<br  />
- Outputs information about the strongest <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> of the submitted planet (with the greatest force).<br  />
+ Outputs information about the strongest <a class="el" href="class_jedi.html">Jedi</a> of the submitted planet (with the greatest force).<br  />
 </li>
 <li>**_get_youngest_jedi [planet_name] [jedi_rank]:_**<br  />
- Brings out the youngest <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> inhabiting the given planet and has the corresponding rank (<b>if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message</b>).<br  />
+ Brings out the youngest <a class="el" href="class_jedi.html">Jedi</a> inhabiting the given planet and has the corresponding rank (<b>if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message</b>).<br  />
 </li>
 <li>**_get_most_used_saber_color [planet_name] [jedi_rank]:_**<br  />
  Returns the most common color to light sword in the given rank of the respective planet.<br  />
@@ -140,16 +140,16 @@ $(document).ready(function(){initNavTree('md__c___users__u_s_e_r_source_repos_bz
  Returns the most common color to light sword planet which is used by at least one <b>GRAND_MASTER</b>.<br  />
 </li>
 <li>**_print [planet_name]:_**<br  />
- Bring out of the name of the planet appropriately and the <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> inhabiting it, <b>sorted first in growing order by rank, then by second key - lexicographically by name</b>.<br  />
+ Bring out of the name of the planet appropriately and the <a class="el" href="class_jedi.html">Jedi</a> inhabiting it, <b>sorted first in growing order by rank, then by second key - lexicographically by name</b>.<br  />
 </li>
 <li>**_print [jedi_name]:_**<br  />
- Brings out of the information about the <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> appropriately, as well as which planet it currently inhabits.<br  />
+ Brings out of the information about the <a class="el" href="class_jedi.html">Jedi</a> appropriately, as well as which planet it currently inhabits.<br  />
 </li>
 <li>**_[planet_name] + [planet_name]:_**<br  />
- Outputs on the screen in sorted type(<b>lexicographically</b>) information about the inhabitants the two <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> planets.<br  />
+ Outputs on the screen in sorted type(<b>lexicographically</b>) information about the inhabitants the two <a class="el" href="class_jedi.html">Jedi</a> planets.<br  />
 </li>
 </ul>
-<p>Vankata also wanted to be able to keep the information which he input in the program for later and be able to load it again. That is, the program must store information on the planet and the <a class="el" href="class_jedi.html" title="Inherits of Base class.">Jedi</a> inhabiting them <b>in a file</b> and to supports commands for working with files described in the working with the <b>command line section. All commands are lowercase latin letters, and the arguments are separated by one interval.</b><br  />
+<p>Vankata also wanted to be able to keep the information which he input in the program for later and be able to load it again. That is, the program must store information on the planet and the <a class="el" href="class_jedi.html">Jedi</a> inhabiting them <b>in a file</b> and to supports commands for working with files described in the working with the <b>command line section. All commands are lowercase latin letters, and the arguments are separated by one interval.</b><br  />
 <br  />
 </p>
 <p>The program allows you to perform various transformations on the files in given session. When session transformations are applied, they apply for all loaded images for the current session. Transformations are applied over images only after the "save" or "saveas" command is executed. The "save" command saves all loaded in the current user session images after applying all transformations, and the "saveas" command saves under the new name only the image that was loaded first.<br  />
