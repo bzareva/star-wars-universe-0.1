@@ -1,154 +1,142 @@
 #ifndef __PLANET_H__
 #define __PLANET_H__
 #include "Base.h"
-#include "Jedi.h"
 /*!
  * Inherits of Base class
  */
-
-//! default value for capacity of this class 
-const int DEFAULT_CAPACITY = 64;
-
-class Planet: public Base {
+class Planet : public Base {
 
 public:
-//! Implements big four and constructor with parameter from type ifstream 
+	//! default constructor
 	Planet();
+
+	//! constructor with parameter from type ifstream for load to text file
 	Planet(std::ifstream& fin);
-	Planet(int cap, int count, Jedi* jedi, const char* planet_name);
-	Planet(const Planet& oth);
+
+	//! constructor with parameters
+	Planet(const Vector<Jedi> jedi, const String& planet_name = String("def_planet"));
+
+	//! copy constructor
+	Planet(const Planet& obj);
+
+	//! assign content
 	Planet& operator=(const Planet& rhs);
-	virtual ~Planet();
 
-	//! increases the given Jedi by one rank up in ladder and increases its strength by a formula 
-	void promote_jedi(const char* jedi_name, double multiplier);
+	//! increases the given Jedi by one rank up in ladder and increases its strength by a formula
+	void promote_jedi(const String& jedi_name, const double& multiplier);
 
-	//! decreases the given Jedi by one rank down in ladder and lowers its strength by a formula 
-	void demote_jedi(const char* jedi_name, double multiplier);
+	//! decreases the given Jedi by one rank down in ladder and lowers its strength by a formula
+	void demote_jedi(const String& jedi_name, const double& multiplier);
+	
+	//! input from console for Planet
+	friend std::istream& operator>>(std::istream& in, Planet& obj);
 
-    /*! 
-	 * removes jedi from this planet 
-	 * @returns True if is successful removed jedi, otherwise false
-	 */
-	bool remove_jedi(const char* jedi_name);
+	//! formatted output for Planet on console
+	friend std::ostream& operator<<(std::ostream& out, const Planet& obj);
 
-	//! outputs information on file about strongest(mean by force) jedi on given planet 
-	void get_strongest_jedi_to_file(std::ofstream& fout)const;
+	//! gathers the inhabitants of two planets
+	friend Planet operator+(Planet lhs, const Planet& rhs);
 
-	//! outputs information on console about strongest(mean by force) jedi on given planet 
-	void get_strongest_jedi_to_console(std::ostream& out)const;
+	//! adds jedi on this planet
+	friend Planet operator+(Planet lhs, const Jedi& rhs);
 
-	//! outputs on file the youngest Jedi inhabiting on this planet and has the appropriate rank 
-	void get_youngest_jedi_to_file(const Rank& jedi_rank, std::ofstream& fout)const;
+	//! remove jedi from this planet
+	friend Planet operator-(Planet lhs, const Jedi& rhs);
 
-	//! outputs on console the youngest Jedi inhabiting on this planet and has the appropriate rank 
-	void get_youngest_jedi_to_console(const Rank& jedi_rank, std::ostream& out)const;
+	//! checks if two planets are equal 
+	bool operator==(const Planet& rhs)const;
 
-	//! outputs the information on *file* for one Jedi 
-	void print_jedi_on_planet_info_to_file(const char* jedi_name, std::ofstream& fout)const;
+	//! checks if two planets are not equal
+	bool operator!=(const Planet& rhs)const;
 
-	//! outputs the information on *console* for one Jedi 
-	void print_jedi_on_planet_info_to_console(const char* jedi_name, std::ostream& out)const;
+	//! adds jedi on this planet
+	Planet& operator+=(const Jedi& rhs);
 
-	//! @returns the most common color to light sword planet that enjoys at least one GRAND_MASTER  
-	const char* get_most_used_saber_color()const;
+	//! gathers the inhabitants of two planets
+	Planet& operator+=(const Planet& rhs);
 
-	//! @returns the most common color to light sword in the given rank 
-	const char* get_most_used_saber_color(const Rank& rank)const;
+	//! remove jedi from this planet
+	Planet& operator-=(const Jedi& rhs);
 
-	//! sorts the jedi on this planet 
-	void sort_by_rank();
+	//! access element(nonconstant)
+	Jedi& operator[](unsigned index);
 
-	//! @returns name of class 
-	static const char* get_class_name();
+	//! access element(constant) 
+	const Jedi& operator[](unsigned index)const;
 
-	//! input from console for Planet 
-	friend std::istream& operator>>(std::istream& in, Planet& oth);
+	//! help method for access element(nonconstant)
+	Jedi& at(unsigned index);
 
-	//! formatted output for Planet on console 
-	friend std::ostream& operator<<(std::ostream& out, const Planet& oth);
+	//! help method for access element(constant)
+	const Jedi& at(unsigned index)const;
 
-	//! operator[] 
-	Jedi& operator[](int ind);
-
-	//! operator[] for const object 
-	const Jedi& operator[](int ind)const;
-
-	//! help method for operator[] 
-	Jedi& at(int ind);
-
-	//! help method for const operator[] 
-	const Jedi& at(int ind)const;
-
-	//! push back new jedi at dynamic array 
-	void push_back(const Jedi& oth);
-
-	//! request a change in capacity 
-	void reserve(int cap);
-
-	//! erase jedi on given index 
-	void erase_jedi(int ind);
-
-//! Override methods from class Base
-	//! @returns A pointer to a dynamically allocated polymorphic Planet
+    //! @returns A pointer to a dynamically allocated polymorphic Planet
 	virtual Base* clone()const override;
 
-	//! outputs formatted information for given planet on *console* 
-	virtual void print(std::ostream& out)const override;
+    //! outputs formatted information for given planet on *file* 
+	virtual void write_to_file(std::ofstream& fout)const override;
 
-	//! outputs formatted information for given planet on *file* 
-	virtual void print_to_file(std::ofstream& fout)const override;
-
-	//! add jedi on this planet 
-	virtual void create_jedi(const char* planet_name, const char* jedi_name, const char* jedi_rank, int jedi_age, const char* saber_color, double jedi_strength)override;
-
-	//! reading information for planet from *console* 
-	virtual void read(std::istream& in)override;
-
-	//! reading information for planet from *file* 
+	//! reading information for planet from *file*
 	virtual void read_from_file(std::ifstream& fin)override;
-
-	//! checks string is it Planet object 
-	virtual bool is_valid_type(const char* type)const override;
 
 	/*!
 	 * @return type of object from this class, which is "planet" in this case 
 	 * @note help further to create object from this class 
 	 */
-	virtual const char* type_name()const override;
+	virtual String type_name()const override;
+
+    //! add jedi on this planet
+	virtual void create_jedi(const String& planet_name, const String& jedi_name, const Rank& jedi_rank, const unsigned& jedi_age, const String& saber_color, const double& jedi_strength)override;
+
+	//! remove jedi from this planet
+	virtual void remove_jedi(const String& jedi_name, const String& planet_name)override;
+
+	//! @returns Strongest jedi on this planet
+	virtual Jedi get_strongest_jedi(const String& planet_name)const override;
+
+	//! @returns Youngest jedi on this planet
+	virtual Vector<Jedi> get_youngest_jedi(const String& planet_name, const Rank& jedi_rank)const override;
+
+	//! @returns Most used saber color on this planet by given planet name and rank of jedi
+	virtual String get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const override;
+
+	//! @returns Most used saber color on this planet by given planet name
+	virtual String get_most_used_saber_color(const String& planet_name)const override;
+
+	//! print information about this planet
+	virtual void print(const String& name)const override;
+
+	//! print sorted information about planet
+	virtual void print()override;
+
+	//! sorts jedi on this planet
+	void sort();
+
+	//! sorts jedi rank's
+	void sort_rank();
+
+	//! sort jedi name's
+	void sort_names();
+
+	//! @returns Count of jedi on this planet
+	unsigned get_count_jedi()const;
+
+	//! @returns Name of planet
+	String get_planet_name()const;
+
+	//! @returns All jedi on this planet
+	Vector<Jedi> get_jedi()const;
+
+	//! @returns Jedi on given index
+	Jedi get_jedi(const unsigned& index)const;
 
 private:
-	//! help method for operator= and copy ctor 
-	void cpy(const Planet& oth);
-
-	//! deletes all dynamic allocated memory in Planet, more precisely dector call it 
-	void clean();
-
-public:
-	//! @returns Counts of jedi on this planet 
-	int get_count_jedi()const;
-
-	//! @returns Capacity of living jedi in this planet 
-	int get_capacity()const;
-
-	//! @returns Name of planet 
-	const char* get_planet_name()const;
-
-	//! @returns Return jedi at given index 
-	Jedi get_jedi_by_index(int ind)const;
-
-	//! @returns Array of jedi 
-	Jedi* get_jedi()const;
+	//! help method for operator= and copy ctor
+	void copy(const Planet& obj);
 
 private:
-	//! count of jedi in this planet 
-	int   m_count_jedi;
-	//! capacity of living jedi in this planet 
-	int   m_capacity;
-	//! dynamic array of Jedi 
-	Jedi* m_jedi;
-	//! name of planet
-	char* m_planet_name;
+	String       m_planet_name;
+	Vector<Jedi> m_jedi;
 
 };
 

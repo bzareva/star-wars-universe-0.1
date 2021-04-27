@@ -1,523 +1,529 @@
-#include "cstring_namespace.h"
 #include "Planet.h"
 
-Planet::Planet() 
-: m_capacity(DEFAULT_CAPACITY), m_count_jedi(1) {
+Planet::Planet()  
+ :m_planet_name(String("planet")) {
 
-
-	m_jedi = new Jedi[m_capacity];
-	m_jedi[0] = Jedi(45, 3.44, Rank::YOUNGLING, "John", "blue");
-
-	m_planet_name = new char[1];
-	m_planet_name[0] = '\0';
+	m_jedi.push_back(Jedi());
+//	m_jedi[0] = Jedi();
 }
 
 Planet::Planet(std::ifstream& fin) {
 
-	unsigned len = 0;
-	fin.read((char*)&len, sizeof(len));
-	++len; // +1 for '\0'
-
-	m_planet_name = new char[len];
-	--len;
-	fin.read(m_planet_name, len);
-	m_planet_name[len] = '\0';
-
-	fin.read((char*)&m_capacity, sizeof(m_capacity));
-	fin.read((char*)&m_count_jedi, sizeof(m_count_jedi));
-
-	if (m_capacity <= 0) {
-		m_capacity = DEFAULT_CAPACITY;
-	}
-	if (m_capacity < m_count_jedi) {
-		int temp     = m_count_jedi;
-		m_count_jedi = m_capacity;
-		m_capacity   = temp;
-	}
-
-	m_jedi = new Jedi[m_capacity];
-	for (int i = 0; i < m_count_jedi && i < m_capacity; ++i) {
-		m_jedi[i] = Jedi(fin);
-	}
+	read_from_file(fin);
 }
 
-Planet::Planet(int cap, int count, Jedi* jedi, const char* planet_name) {
+Planet::Planet(const Vector<Jedi> jedi, const String& planet_name)
+ :m_planet_name(planet_name) {
 
-	if (cap <= 0) {
-		m_capacity = DEFAULT_CAPACITY;
-	}
-
-	if (cap < count) {
-		m_capacity   = count;
-		m_count_jedi = cap;
-	} else {
-		m_capacity   = cap;
-		m_count_jedi = count;
-	}
-
-	m_jedi = new Jedi[m_capacity];
-	for (int i = 0; i < m_count_jedi && i < m_capacity; ++i) {
+	for (unsigned i = 0; i < jedi.size(); ++i) {
 		m_jedi[i] = jedi[i];
 	}
-
-	unsigned len  = cstring_namespace::strLen(planet_name) + 1;
-	m_planet_name = new char[len];
-	cstring_namespace::strCpy(m_planet_name, planet_name);
 }
 
-Planet::Planet(const Planet& oth) {
+Planet::Planet(const Planet& obj) {
 
-	cpy(oth);
+	copy(obj);
 }
 
 Planet& Planet::operator=(const Planet& rhs) {
 
 	if (this != &rhs) {
-		clean();
-		cpy(rhs);
+		copy(rhs);
 	}
 	return *this;
 }
 
-Planet:: ~Planet() {
-
-	clean();
-}
-
-void Planet::promote_jedi(const char* jedi_name, double multiplier) {
+void Planet::promote_jedi(const String& jedi_name, const double& multiplier) {
 
 	bool flag = false;
-	for (int i = 0; i < m_count_jedi; ++i) {
-		if (cstring_namespace::strCmp(jedi_name, m_jedi[i].get_name_jedi ()) == 0) {
-			m_jedi[i].promote_jedi(multiplier);
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+
+		if (jedi_name == m_jedi[i].get_name_jedi()) {
+			m_jedi[i].promote(multiplier);
 			flag = true;
 		}
 	}
+
 	if (flag) {
 		std::cout << "\nSuccessful promote " << jedi_name << " on planet " << m_planet_name << std::endl;
-	} else {
-		std::cout << "\nNot successful promote " << jedi_name << " on planet " << m_planet_name << std::endl;
-	}
+		return;
+	} 
+
+	std::cout << "\nNot successful promote " << jedi_name << " on planet " << m_planet_name << std::endl;
 }
 
-void Planet::demote_jedi(const char* jedi_name, double multiplier) {
+void Planet::demote_jedi(const String& jedi_name, const double& multiplier) {
 
 	bool flag = false;
-	for (int i = 0; i < m_count_jedi; ++i) {
-		if (cstring_namespace::strCmp(jedi_name, m_jedi[i].get_name_jedi()) == 0) {
-			m_jedi[i].demote_jedi(multiplier);
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+
+		if (jedi_name == m_jedi[i].get_name_jedi()) {
+			m_jedi[i].demote(multiplier);
 			flag = true;
-//			std::cout << "\nSuccessful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
-//      	return;
 		}
 	}
+
 	if (flag) {
 		std::cout << "\nSuccessful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
-	} else {
-		std::cout << "\nNot successful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
-	}
-//	std::cout << "\nSuccessful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
-}
+		return;
+	} 
 
-bool Planet::remove_jedi(const char* jedi_name) {
-
-	for (int i = 0; i < m_count_jedi; ++i) {
-		if (cstring_namespace::strCmp(jedi_name, m_jedi[i].get_name_jedi()) == 0) {
-			erase_jedi(i);
-			return true;
-		}
-	}
-	return false;
-}
-
-void Planet::get_strongest_jedi_to_file(std::ofstream& fout)const {
-
-	int ind = 0;
-	int max = m_jedi[ind].get_force();
-	for (int i = 1; i < m_count_jedi; ++i) {
-		if (m_jedi[i].get_force() > max) {
-			ind = i;
-			max = m_jedi[i].get_force();
-		}
-	}
-	m_jedi[ind].print_to_file(fout);
-}
-
-void Planet::get_strongest_jedi_to_console(std::ostream& out)const {
-
-	int ind = 0;
-	int max = m_jedi[ind].get_force();
-	for (int i = 1; i < m_count_jedi; ++i) {
-		if (m_jedi[i].get_force() > max) {
-			ind = i;
-			max = m_jedi[i].get_force();
-		}
-	}
-	m_jedi[ind].print(out);
-}
-
-void Planet::get_youngest_jedi_to_file(const Rank& jedi_rank, std::ofstream& fout)const {
-
-	bool flag = false;
-	int curr  = m_jedi[0].get_age();
-	for (int i = 1; i < m_count_jedi; ++i) {
-		if (m_jedi[i].get_rank() == jedi_rank && m_jedi[i].get_age() < curr) {
-			curr = m_jedi[i].get_age();
-			flag = true;
-			m_jedi[i].print_to_file(fout);
-		}
-	}
-
-	if (!flag) {
-		std::cout << "\nHave not founded jedi with this description!\n";
-	}
-}
-
-void Planet::get_youngest_jedi_to_console(const Rank& jedi_rank, std::ostream& out)const {
-
-	bool flag = false;
-	int curr = m_jedi[0].get_age();
-	for (int i = 1; i < m_count_jedi; ++i) {
-		if (m_jedi[i].get_rank() == jedi_rank && m_jedi[i].get_age() < curr) {
-			curr = m_jedi[i].get_age();
-			flag = true;
-			m_jedi[i].print(out);
-		}
-	}
-
-	if (!flag) {
-		std::cout << "\nHave not founded jedi with this description!\n";
-	}
-}
-
-void Planet::print_jedi_on_planet_info_to_file(const char* jedi_name, std::ofstream& fout)const {
-
-	fout << "\n>Iformation about jedi<\n";
-	for (int i = 0; i < m_count_jedi; ++i) {
-		if (cstring_namespace::strCmp(jedi_name, m_jedi[i].get_name_jedi()) == 0) {
-
-			m_jedi[i].print_to_file(fout);
-
-			fout << "\n>Name of planet: ";
-			unsigned len = cstring_namespace::strLen(m_planet_name);
-			fout.write((const char*)&m_planet_name, len);
-			return;
-		}
-	}
-}
-
-void Planet::print_jedi_on_planet_info_to_console(const char* jedi_name, std::ostream& out)const {
-
-	out << "\n>Iformation about jedi<\n";
-	for (int i = 0; i < m_count_jedi; ++i) {
-		if (cstring_namespace::strCmp(jedi_name, m_jedi[i].get_name_jedi()) == 0) {
-
-			m_jedi[i].print(out);
-			out << "\n>Name of planet: " << m_planet_name << std::endl;
-			return;
-		}
-	}
-}
-
-const char* Planet::get_most_used_saber_color()const {
-
-	return get_most_used_saber_color(Rank::GRAND_MASTER);
-}
-
-const char* Planet::get_most_used_saber_color(const Rank& rank)const {
-
-	//TODO::helper func to return count of one saber color
-
-	//Jedi* curr = new Jedi[m_count_jedi];
-	//for (int i = 0; i < m_count_jedi; ++i) {
-	//	curr[i] = m_jedi[i];
-	//}
-	//int* br  = new int[m_count_jedi];
-	//int* ind = new int[m_count_jedi];
-	//for (int i = 0, k = 0; i < m_count_jedi && k < m_count_jedi; ++i) {
-	//	if (curr[i].get_rank() == rank) {
-	//		int cnt = 1;
-	//		for (int j = i + 1; j < m_count_jedi; ++j) {
-	//			if (cstring_namespace::strCmp(curr[i].get_color_of_lightsaber(), curr[j].get_color_of_lightsaber()) == 0) {
-	//				++cnt;
-	//			}
-	//		}
-	//		if (cnt > 1) {
-	//			ind[k] = i;
-	//			++k;
-	//		}
-	//	}
-	//}
-	return "sth";
-}
-
-void Planet::sort_by_rank() {
-
-	for (int i = 0; i < m_count_jedi - 1; ++i) {
-
-		int ind   = i;
-		Rank curr = m_jedi[i].get_rank();
-		for (int j = i + 1; j < m_count_jedi; ++j) {
-
-			if (m_jedi[j].get_rank() < curr) {
-				ind  = j;
-				curr = m_jedi[j].get_rank();
-			}
-		}
-		if (ind != i) {
-			Jedi temp   = m_jedi[i];
-			m_jedi[i]   = m_jedi[ind];
-			m_jedi[ind] = temp;
-
-		}
-	}
-}
-
-const char* Planet::get_class_name() {
-
-	return "planet";
+	std::cout << "\nNot successful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
 }
 
 std::istream& operator>>(std::istream& in, Planet& oth) {
 
-	char buff[1024] = { '\0' };
-	in.getline(buff, 1024, '\n');
-
-	unsigned len = cstring_namespace::strLen(buff) + 1;
-	oth.m_planet_name = new char[len];
-	cstring_namespace::strCpy(oth.m_planet_name, buff);
-
-	in >> oth.m_capacity;
-	in >> oth.m_count_jedi;
-	if (oth.m_capacity <= 0 || (oth.m_capacity < oth.m_count_jedi && oth.m_count_jedi < DEFAULT_CAPACITY)) {
-		oth.m_capacity = DEFAULT_CAPACITY;
+	in >> oth.m_planet_name;
+	unsigned cnt;
+	in >> cnt;
+	while (cnt <= 0) {
+		std::cout << "\nWrong input! It has to be possitive number bigger than zero. Try again:";
+		in >> cnt;
 	}
 
-	oth.m_jedi = new Jedi[oth.m_capacity];
-	for (int i = 0; i < oth.m_count_jedi && i < oth.m_capacity; ++i) {
+	for (unsigned i = 0; i < cnt; ++i) {
 		in >> oth.m_jedi[i];
 	}
+
 	return in;
 }
 
 std::ostream& operator<<(std::ostream& out, const Planet& oth) {
 
 	out << "\nName of planet: " << oth.m_planet_name;
-	out << "\nCount of living jedi on this planet: " << oth.m_count_jedi;
+	out << "\nCount of living jedi on this planet: " << oth.m_jedi.size();
 
-	for (int i = 0; i < oth.m_count_jedi && i < oth.m_capacity; ++i) {
-		out << oth.m_jedi[i];
+	for (unsigned i = 0; i < oth.m_jedi.size(); ++i) {
+		out << oth.m_jedi[i] << std::endl;
 	}
+
 	return out;
 }
 
-Jedi& Planet::operator[](int ind) {
+Planet operator+(Planet lhs, const Planet& rhs) {
 
-	return at(ind);
+	lhs += rhs;
+	lhs.sort();
+	std::cout << lhs;
+	return lhs;
 }
 
-const Jedi& Planet::operator[](int ind)const {
+Planet operator+(Planet lhs, const Jedi& rhs) {
 
-	return at(ind);
+	lhs += rhs;
+	return lhs;
 }
 
-Jedi& Planet::at(int ind) {
+Planet operator-(Planet lhs, const Jedi& rhs) {
 
-	if (ind < 0 || ind > m_count_jedi) {
+	lhs -= rhs;
+	return lhs;
+}
+
+bool Planet::operator==(const Planet& rhs)const {
+
+	if ((m_jedi.size() != rhs.m_jedi.size()) || (m_planet_name != rhs.m_planet_name)) {
+		return false;
+	}
+
+	for (unsigned i = 0, j = 0; i < m_jedi.size() && j < rhs.m_jedi.size(); ++i, ++j) {
+		if (m_jedi[i] != rhs[j]) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+bool Planet::operator!=(const Planet& rhs)const {
+
+	return !(*this == rhs);
+}
+
+Planet& Planet::operator+=(const Jedi& rhs) {
+
+	m_jedi.push_back(rhs);
+	return *this;
+}
+
+Planet& Planet::operator+=(const Planet& rhs) {
+
+	for (unsigned i = 0; i < rhs.m_jedi.size(); ++i) {
+		m_jedi.push_back(rhs.m_jedi[i]);
+	}
+	return *this;
+}
+
+Planet& Planet::operator-=(const Jedi& rhs) {
+
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+
+		if (m_jedi[i] == rhs) {
+			m_jedi.erase(i);
+			return *this;
+		}
+	}
+	return *this;
+}
+
+Jedi& Planet::operator[](unsigned index) {
+
+	return at(index);
+}
+
+const Jedi& Planet::operator[](unsigned index)const {
+
+	return at(index);
+}
+
+Jedi& Planet::at(unsigned index) {
+
+	if (index < 0 || index > m_jedi.size()) {
 		throw std::out_of_range("This index is not correct!");
 	}
-	return m_jedi[ind];
+	return m_jedi[index];
 }
 
-const Jedi& Planet::at(int ind)const {
+const Jedi& Planet::at(unsigned index)const {
 
-	if (ind < 0 || ind > m_count_jedi) {
+	if (index < 0 || index > m_jedi.size()) {
 		throw std::out_of_range("This index is not correct!");
 	}
-	return m_jedi[ind];
-}
-
-void Planet::push_back(const Jedi& oth) {
-
-	if (m_count_jedi + 1 >= m_capacity) {
-		reserve(2 * m_count_jedi);
-	}
-
-	m_jedi[m_count_jedi] = oth;
-	++m_count_jedi;
-}
-
-void Planet::reserve(int cap) {
-
-	if (cap <= m_capacity || cap <= 0) {
-		return;
-	}
-
-	m_capacity = cap;
-    Jedi* curr = new Jedi[m_capacity];
-	for (int i = 0; i < m_count_jedi && i < m_capacity; ++i) {
-		curr[i] = m_jedi[i];
-	}
-
-	delete[]m_jedi;
-	m_jedi = curr;
-}
-
-void Planet::erase_jedi(int ind) {
-
-	if (ind < 0 || ind > m_count_jedi) {
-		throw std::out_of_range("This index is not correct!");
-	}
-
-	for (int i = ind; i < m_count_jedi - 1; ++i) {
-		m_jedi[i] = m_jedi[i + 1];
-	}
-
-	--m_count_jedi;
+	return m_jedi[index];
 }
 
 Base* Planet::clone()const {
 
 	return new Planet(*this);
- }
-
-void Planet::print(std::ostream& out)const {
-
-	out << (*this);
 }
 
-void Planet::print_to_file(std::ofstream& fout)const {
+void Planet::write_to_file(std::ofstream& fout)const {
 
-	fout << "\n>Name of planet: ";
-	unsigned len = cstring_namespace::strLen(m_planet_name);
-    fout.write((const char*)&m_planet_name, len);
-
-	fout << "\n>Iformation about jedi<\n";
-	for (int i = 0; i < m_count_jedi; ++i) {
-			m_jedi[i].print_to_file(fout);	
+	fout << "\nName of planet: " << m_planet_name;
+	fout << "\n**Iformation about jedi on this planet**\n";
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+		m_jedi[i].write_to_file(fout);
 	}
-}
-
-void Planet::create_jedi(const char* planet_name, const char* jedi_name, const char* jedi_rank, int jedi_age, const char* saber_color, double jedi_strength) {
-
-	for (int i = 0; i < m_count_jedi; ++i) {
-		if (cstring_namespace::strCmp(jedi_name, m_jedi[i].get_name_jedi()) == 0) {
-			std::cout << "\nAlready exists jedi with name like this!\n";
-			return;
-		}
-		if (cstring_namespace::strCmp(planet_name, m_planet_name) == 0) {
-			std::cout << "\nNot exist planet with this name!\n";
-			return;
-		}
-	}
-
-	if (m_count_jedi + 1 > m_capacity) {
-		reserve(2 * m_count_jedi);
-	}
-
-	Jedi curr;
-	curr.create_jedi(planet_name, jedi_name, jedi_rank, jedi_age, saber_color, jedi_strength);
-	push_back(curr);
-
-	std::cout << "\nSuccessful added jedi!\n";
-}
-
-void Planet::read(std::istream& in) {
-
-	in >> (*this);
 }
 
 void Planet::read_from_file(std::ifstream& fin) {
 
-	unsigned len = 0;
-	fin.read((char*)&len, sizeof(len));
-	++len; // +1 for '\0'
+	fin >> m_planet_name;
+	unsigned cnt;
+	fin >> cnt;
+//	while (cnt <= 0) {
+//		std::cout << "\nWrong input! Try again:";
+//		fin >> cnt;
+//	}
 
-	m_planet_name = new char[len];
-	--len;
-	fin.read(m_planet_name, len);
-	m_planet_name[len] = '\0';
-
-	fin.read((char*)&m_capacity, sizeof(m_capacity));
-	fin.read((char*)&m_count_jedi, sizeof(m_count_jedi));
-
-	if (m_capacity <= 0) {
-		m_capacity = DEFAULT_CAPACITY;
-	}
-	if (m_capacity < m_count_jedi) {
-		int temp = m_count_jedi;
-		m_count_jedi = m_capacity;
-		m_capacity = temp;
-	}
-
-	m_jedi = new Jedi[m_capacity];
-	for (int i = 0; i < m_count_jedi && i < m_capacity; ++i) {
-		m_jedi[i] = Jedi(fin);
+	for (unsigned i = 0; i < cnt; ++i) {
+		m_jedi[i].read_from_file(fin);
 	}
 }
 
-bool Planet::is_valid_type(const char* type)const {
-
-	if (cstring_namespace::strCmp(type, "planet") == 0 || cstring_namespace::strCmp(type, "PLANET") == 0) {
-		return true;
-	}
-	return false;
-}
- 
-const char* Planet::type_name()const {
+String Planet::type_name()const {
 
 	return "planet";
 }
 
-void Planet::cpy(const Planet& oth) {
 
-	m_capacity   = oth.m_capacity;
-	m_count_jedi = oth.m_count_jedi;
+void Planet::create_jedi(const String& planet_name, const String& jedi_name, const Rank& jedi_rank, const unsigned& jedi_age, const String& saber_color, const double& jedi_strength) {
 
-	m_jedi = new Jedi[m_capacity];
-	for (int i = 0; i < m_count_jedi && i < m_capacity; ++i) {
-		m_jedi[i] = oth.m_jedi[i];
+	//if (planet_name != m_planet_name) {
+	//	std::cout << "\nNot exist planet with this name!\n";
+	//	return;
+	//}
+	 
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+	
+		if (jedi_name == m_jedi[i].get_name_jedi()) {
+			std::cout << "\nAlready exists jedi with name like this!\n";
+			return;
+		}
 	}
 
-	unsigned len  = cstring_namespace::strLen(oth.m_planet_name) + 1;
-	m_planet_name = new char[len];
-	cstring_namespace::strCpy(m_planet_name, oth.m_planet_name);
+	Rank rank = Rank::YOUNGLING;
+    if (jedi_rank == Rank::INITIATE) {
+		rank = Rank::INITIATE;
+	} else if (jedi_rank == Rank::PADAWAN) {
+		rank = Rank::PADAWAN;
+	} else if (jedi_rank == Rank::KNIGHT_ASPIRANT) {
+		rank = Rank::KNIGHT_ASPIRANT;
+	} else if (jedi_rank == Rank::KNIGHT) {
+		rank = Rank::KNIGHT;
+	} else if (jedi_rank == Rank::MASTER) {
+		rank = Rank::MASTER;
+	} else if (jedi_rank == Rank::BATTLE_MASTER) {
+		rank = Rank::BATTLE_MASTER;
+	} else if (jedi_rank == Rank::GRAND_MASTER) {
+		rank = Rank::GRAND_MASTER;
+	}
+
+	Jedi curr(jedi_age, jedi_strength, rank, jedi_name, saber_color);
+//	curr.create_jedi(planet_name, jedi_name, jedi_rank, saber_color, jedi_strength);
+	m_jedi.push_back(curr);
+//	m_jedi += curr;
+
+	std::cout << "\nSuccessful added jedi!\n";
 }
 
-void Planet::clean() {
+void Planet::remove_jedi(const String& jedi_name, const String& planet_name) {
 
-	delete[]m_jedi;
-	m_jedi = nullptr;
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 
-	delete[]m_planet_name;
-	m_planet_name = nullptr;
+		if (jedi_name == m_jedi[i].get_name_jedi()) {
+			m_jedi.erase(i);
+			std::cout << "\nSuccessfully deleted jedi.\n";
+			return;
+		}
+	}
+
+	std::cout << "\nNot successfully deleted jedi.\n";
 }
 
-int Planet::get_count_jedi()const {
+Jedi Planet::get_strongest_jedi(const String& planet_name)const {
 
-	return m_count_jedi;
+	unsigned ind = 0;
+	unsigned max = m_jedi[ind].get_force();
+
+	for (unsigned i = 1; i < m_jedi.size(); ++i) {
+
+		if (m_jedi[i].get_force() > max) {
+			ind = i;
+			max = m_jedi[i].get_force();
+		}
+	}
+
+//	std::cout << "\nStrongest jedi is: " << m_jedi[ind] << std::endl;
+	return m_jedi[ind];
 }
 
-int Planet::get_capacity()const {
+Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& jedi_rank)const {
 
-	return m_capacity;
+	Rank rank = Rank::YOUNGLING;
+	if (jedi_rank == Rank::INITIATE) {
+		rank = Rank::INITIATE;
+	} else if (jedi_rank == Rank::PADAWAN) {
+		rank = Rank::PADAWAN;
+	} else if (jedi_rank == Rank::KNIGHT_ASPIRANT) {
+		rank = Rank::KNIGHT_ASPIRANT;
+	} else if (jedi_rank == Rank::KNIGHT) {
+		rank = Rank::KNIGHT;
+	} else if (jedi_rank == Rank::MASTER) {
+		rank = Rank::MASTER;
+	} else if (jedi_rank == Rank::BATTLE_MASTER) {
+		rank = Rank::BATTLE_MASTER;
+	} else if (jedi_rank == Rank::GRAND_MASTER) {
+		rank = Rank::GRAND_MASTER;
+	}
+
+	bool flag = false;
+	Vector<Jedi> temp;
+
+	for (unsigned i = 1; i < m_jedi.size(); ++i) {
+
+		if (m_jedi[i].get_rank() == rank) {
+			temp.push_back(m_jedi[i]);
+			flag = true;
+		}
+	}
+
+	if (!flag) {
+		throw "\nHave not founded jedi with this description!\n";
+	}
+
+	for (unsigned i = 0; i < temp.size() - 1; ++i) {
+
+		unsigned curr = temp[i].get_age();
+		unsigned ind  = i;
+		for (unsigned j = i + 1; j < temp.size(); ++j) {
+			if (curr > temp[j].get_age()) {
+				ind = j;
+				curr = temp[j].get_age();
+			}
+		}
+
+		if (ind != i) {
+			Jedi sw   = temp[i];
+			temp[i]   = temp[ind];
+			temp[ind] = sw;
+		}
+	}
+
+	unsigned first = m_jedi[0].get_age();
+	for (unsigned i = 1; i < temp.size(); ++i) {
+		if (temp[i].get_age() != first) {
+
+			temp.erase(i);
+			temp.erase(i + 1);
+		}
+	}
+
+	return temp;
+	//for (unsigned i = 0; i < temp.size() - 1; ++i) {
+	//	if (temp[i].get_age() <= temp[i + 1].get_age()) {
+	//		std::cout << temp[i] << std::endl;
+	//	}
+	//}
 }
 
-const char* Planet::get_planet_name()const {
+String Planet::get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const {
+
+	Rank rank = Rank::YOUNGLING;
+	if (jedi_rank == Rank::INITIATE) {
+		rank = Rank::INITIATE;
+	} else if (jedi_rank == Rank::PADAWAN) {
+		rank = Rank::PADAWAN;
+	} else if (jedi_rank == Rank::KNIGHT_ASPIRANT) {
+		rank = Rank::KNIGHT_ASPIRANT;
+	} else if (jedi_rank == Rank::KNIGHT) {
+		rank = Rank::KNIGHT;
+	} else if (jedi_rank == Rank::MASTER) {
+		rank = Rank::MASTER;
+	} else if (jedi_rank == Rank::BATTLE_MASTER) {
+		rank = Rank::BATTLE_MASTER;
+	} else if (jedi_rank == Rank::GRAND_MASTER) {
+		rank = Rank::GRAND_MASTER;
+	}
+
+	Vector<String> colors;
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+		if (m_jedi[i].get_rank() == rank) {
+			colors.push_back(m_jedi[i].get_color_of_lightsaber());
+		}
+	}
+
+	Vector<int> cnt_colors;
+	for (unsigned i = 0; i < colors.size() - 1; ++i) {
+
+		unsigned br = 1;
+		for (unsigned j = i + 1; j < colors.size(); ++j) {
+
+			if (colors[i] == colors[j]) {
+				colors.erase(j);
+				++br;
+			}
+		}
+
+		cnt_colors.push_back(br);
+	}
+
+	unsigned ind = 0;
+	for (unsigned i = 1; i < colors.size(); ++i) {
+		if (cnt_colors[i] > cnt_colors[ind]) {
+			ind = i;
+		}
+	}
+
+	return colors[ind];
+}
+
+String Planet::get_most_used_saber_color(const String& planet_name)const {
+
+	return get_most_used_saber_color(planet_name, Rank::GRAND_MASTER);
+}
+
+void Planet::print(const String& name)const {
+
+	std::cout << "\nPlanet name: " << m_planet_name << std::endl;
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+
+		if (m_jedi[i].get_name_jedi() == name) {
+			std::cout << m_jedi[i] << std::endl;
+		}
+	}
+}
+
+void Planet::print() {
+
+	sort();
+	std::cout << *this;
+}
+
+void Planet::sort() {
+
+	sort_rank();
+	sort_names();
+}
+
+void Planet::sort_rank() {
+
+	for (unsigned i = 0; i < m_jedi.size() - 1; ++i) {
+
+		unsigned ind = i;
+		for (unsigned j = i + 1; j < m_jedi.size(); ++j) {
+
+			if (m_jedi[i].rank_num() > m_jedi[j].rank_num()) {
+				ind = j;
+			}
+		}
+
+		if (ind != i) {
+			Jedi temp   = m_jedi[i];
+			m_jedi[i]   = m_jedi[ind];
+			m_jedi[ind] = temp;
+		}
+	}
+}
+
+void Planet::sort_names() {
+
+	unsigned cnt = 1;
+	unsigned beg = 0;
+	for (unsigned k = 0; k < m_jedi.size() - 1; ++k) {
+
+		if (m_jedi[k].get_rank() == m_jedi[k + 1].get_rank()) {
+			++cnt;
+
+		} else {	
+			for (unsigned i = beg; i < cnt; ++i) {
+
+				unsigned ind = i;
+				for (unsigned j = i + 1; j < cnt; ++j) {
+
+					if (m_jedi[i].get_name_jedi().str_cmp(m_jedi[i].get_name_jedi().get_string(), m_jedi[j].get_name_jedi().get_string()) > 0) {
+						ind = j;
+					}
+				}
+
+				if (ind != i) {
+					Jedi temp   = m_jedi[i];
+					m_jedi[i]   = m_jedi[ind];
+					m_jedi[ind] = temp;
+				}
+			}
+
+			beg += k;
+			cnt = 1;
+		}
+	}
+}
+
+unsigned Planet::get_count_jedi()const {
+
+	return m_jedi.size();
+}
+
+String Planet::get_planet_name()const {
 
 	return m_planet_name;
 }
 
-Jedi Planet::get_jedi_by_index(int ind)const {
-
-	if (ind <0 || ind > m_count_jedi) {
-		throw std::logic_error("This index is not correct!");
-	}
-
-	return m_jedi[ind];
-}
-
-Jedi* Planet::get_jedi()const {
+Vector<Jedi> Planet::get_jedi()const {
 
 	return m_jedi;
+}
+
+Jedi Planet::get_jedi(const unsigned& index)const {
+
+	return m_jedi[index];
+}
+
+void Planet::copy(const Planet& obj) {
+
+	m_planet_name = obj.m_planet_name;
+
+	for (unsigned i = 0; i < obj.m_jedi.size(); ++i) {
+		m_jedi[i] = obj.m_jedi[i];
+	}
 }
