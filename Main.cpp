@@ -1,10 +1,23 @@
 #include<iostream>
-#include "Jedi.h"
+#include "Galaxy.h"
+//#include "String.h"
+
+
 
 int main() {
 
-	Jedi j1(43, 34.3, Rank::INITIATE, "PESHO", "light");
-	std::cout << j1;
+//	String str1("test1");	
+//	String str2("test2");
+
+//	std::cout << (str1 += str2) << std::endl;
+
+	Galaxy g1;
+	std::cout << g1;
+	
+
+
+//	Jedi j1(43, 34.3, Rank::INITIATE, "PESHO", "light");
+//	std::cout << j1;
 
 //	std::cout << "hello";
 
