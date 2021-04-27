@@ -1,11 +1,11 @@
-#ifndef __SAVE_AS_COMMAND_H__
-#define __SAVE_AS_COMMAND_H__
+#ifndef __REMOVE_COMMAND_H__
+#define __REMOVE_COMMAND_H__
 #include "Command.h"
 
-class SaveAsCommand : public Command {
+class RemoveCommand : public Command {
 
 public:
-	SaveAsCommand() :Command(String("saveAs")) {};
+	RemoveCommand() :Command(String("remove_jedi")) {};
 
 	inline void execute(GalaxyManager& manager) override {
 
@@ -13,13 +13,13 @@ public:
 			return;
 		}
 
-		manager.save_as(m_parameters[0]);
+		manager.remove_jedi(m_parameters[0], m_parameters[1]);
 	}
 
 
 	inline bool is_valid()const override {
 
-		if (m_command_name != String("saveAs")) {
+		if (m_command_name != String("remove_jedi")) {
 			std::cerr << "\nCommand name is not valid!\n";
 			return false;
 		}
@@ -29,24 +29,23 @@ public:
 			return false;
 		}
 
-		if (m_parameters.size() < 1) {
+		if (m_parameters.size() < 2) {
 			std::cerr << "\nThere are some missing arguments for execution to this command!\n";
 			return false;
 		}
 
-		if (m_parameters.size() > 1) {
+		if (m_parameters.size() > 2) {
 			std::cerr << "\nToo much arguments for execution to this command!\n";
 			return false;
 		}
 
-		if (m_types[0] != TypeParameters::STRING) {
+		if (m_types[0] != TypeParameters::STRING || m_types[1] != TypeParameters::STRING) {
 			std::cerr << "\nTypes of the given argument is not valid!\n";
 			return false;
 		}
-		
+
 		return true;
 	}
 
 };
-
-#endif //__SAVE_AS_COMMAND_H__
+#endif //__REMOVE_COMMAND_H__

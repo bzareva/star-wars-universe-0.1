@@ -1,11 +1,11 @@
-#ifndef __SAVE_AS_COMMAND_H__
-#define __SAVE_AS_COMMAND_H__
+#ifndef __ADD_PLANET_COMMAND_H__
+#define __ADD_PLANET_COMMAND_H__
 #include "Command.h"
 
-class SaveAsCommand : public Command {
+class AddPlanetCommand : public Command {
 
 public:
-	SaveAsCommand() :Command(String("saveAs")) {};
+	AddPlanetCommand() :Command(String("add_planet")) {};
 
 	inline void execute(GalaxyManager& manager) override {
 
@@ -13,13 +13,13 @@ public:
 			return;
 		}
 
-		manager.save_as(m_parameters[0]);
+		manager.add_planet(m_parameters[0]);
 	}
 
 
 	inline bool is_valid()const override {
 
-		if (m_command_name != String("saveAs")) {
+		if (m_command_name != String("add_planet")) {
 			std::cerr << "\nCommand name is not valid!\n";
 			return false;
 		}
@@ -43,10 +43,10 @@ public:
 			std::cerr << "\nTypes of the given argument is not valid!\n";
 			return false;
 		}
-		
+
 		return true;
 	}
-
+	 
 };
 
-#endif //__SAVE_AS_COMMAND_H__
+#endif //__ADD_PLANET_COMMAND_H__
