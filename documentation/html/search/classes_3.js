@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jedi_102',['Jedi',['../class_jedi.html',1,'']]]
+  ['demotejedicommand_201',['DemoteJediCommand',['../class_demote_jedi_command.html',1,'']]]
 ];

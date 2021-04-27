@@ -28,20 +28,14 @@ var NAVTREE =
     [ "Star Wars Universe 0.1", "md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1__r_e_a_d_m_e.html", [
       [ "<em>Brief information</em>", "md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1__r_e_a_d_m_e.html#autotoc_md1", null ]
     ] ],
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
-      ] ]
-    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -50,7 +44,6 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
         [ "Enumerations", "globals_enum.html", null ]
       ] ]
     ] ]
@@ -59,7 +52,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_base_8h.html"
+"_add_planet_command_8h.html",
+"class_jedi.html#ad0535752d97306a10b38994e5a51db91"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['grand_5fmaster_193',['GRAND_MASTER',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbeda37d9f7831e2208e232411505e1071515',1,'Jedi.h']]]
+  ['double_403',['DOUBLE',['../_command_8h.html#a74bb5b865818f3fff8fb57d8e3185ecbafd3e4ece78a7d422280d5ed379482229',1,'Command.h']]]
 ];

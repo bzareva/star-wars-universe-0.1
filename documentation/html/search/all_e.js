@@ -1,9 +1,24 @@
 var searchData=
 [
-  ['rank_73',['Rank',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbed',1,'Jedi.h']]],
-  ['read_74',['read',['../class_base.html#a17776c36f0ef8ac98f80f39bd16ee81a',1,'Base::read()'],['../class_jedi.html#a93a769b8dba039149814727b9fdf4257',1,'Jedi::read()'],['../class_planet.html#a66d5ba4a802c0f2eb784b0924bf00b4b',1,'Planet::read()']]],
-  ['read_5ffrom_5ffile_75',['read_from_file',['../class_base.html#aa464997c0ff7060d1dd2568e1590b4b6',1,'Base::read_from_file()'],['../class_jedi.html#a1ced6357fcf6aeccbb49dd50de61dc6b',1,'Jedi::read_from_file()'],['../class_planet.html#af7f8e9faa82e3b5b7450ea9afb4f45b8',1,'Planet::read_from_file()']]],
-  ['readme_2emd_76',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['remove_5fjedi_77',['remove_jedi',['../class_planet.html#af60279c9b373b76ce299e21986537b2f',1,'Planet']]],
-  ['reserve_78',['reserve',['../class_planet.html#ad0e5ce9438cb5931d46d6f6004829373',1,'Planet']]]
+  ['padawan_112',['PADAWAN',['../_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbedab2f75d9b6413afa6584bcc4241ff8f7c',1,'Rank.h']]],
+  ['planet_113',['Planet',['../class_planet.html',1,'Planet'],['../class_planet.html#ac88200b337a62e1377858e3116f9412b',1,'Planet::Planet()'],['../class_planet.html#ac00facbec0b9c5b7080ea253c8ab0637',1,'Planet::Planet(std::ifstream &amp;fin)'],['../class_planet.html#af2afd1051449a011f12331c7f83e82f3',1,'Planet::Planet(const Vector&lt; Jedi &gt; jedi, const String &amp;planet_name=String(&quot;def_planet&quot;))'],['../class_planet.html#a02cff1d1b9c46249f924f903419a7542',1,'Planet::Planet(const Planet &amp;obj)']]],
+  ['planet_2ecpp_114',['Planet.cpp',['../_planet_8cpp.html',1,'']]],
+  ['planet_2eh_115',['Planet.h',['../_planet_8h.html',1,'']]],
+  ['pop_5fback_116',['pop_back',['../class_vector.html#adcba035109febbe55cba2a25f8483ba6',1,'Vector']]],
+  ['print_117',['print',['../class_base.html#a0999f8b90b9f88ee11b31f1eb620b56f',1,'Base::print(const String &amp;name) const =0'],['../class_base.html#a9df62e25bf69f172d7834beab6d6b727',1,'Base::print()=0'],['../class_galaxy.html#ac7662583deedd120b2a3589abbfc1865',1,'Galaxy::print(const String &amp;name) const override'],['../class_galaxy.html#a4f384da1284b24fe36e8126bc2910a17',1,'Galaxy::print() override'],['../class_galaxy_manager.html#a2b312167a5107551ad350b9bf1f4ba38',1,'GalaxyManager::print()'],['../class_planet.html#a09458cab124198dcdfa394a62ad4942e',1,'Planet::print(const String &amp;name) const override'],['../class_planet.html#a119d31be5c293013863bd9b3e84d8f07',1,'Planet::print() override'],['../class_jedi.html#af902218312192add530915e1ccdaaaff',1,'Jedi::print()']]],
+  ['print_5fgalaxy_118',['print_galaxy',['../class_galaxy_manager.html#a4f7e8db902a56ce374504ffec3138a72',1,'GalaxyManager']]],
+  ['print_5fjedi_119',['print_jedi',['../class_galaxy_manager.html#a3e02965337e0ae6f90af509fd924c414',1,'GalaxyManager']]],
+  ['print_5fplanet_120',['print_planet',['../class_galaxy_manager.html#aac5dd55224542b98b20f5b178b7e997b',1,'GalaxyManager']]],
+  ['printcommand_121',['PrintCommand',['../class_print_command.html',1,'PrintCommand'],['../class_print_command.html#a21699dcd0c3da09ba3989401fa053f1d',1,'PrintCommand::PrintCommand()']]],
+  ['printcommand_2eh_122',['PrintCommand.h',['../_print_command_8h.html',1,'']]],
+  ['promote_123',['promote',['../class_jedi.html#a1f80821fa1d237f18ab723219908b7a5',1,'Jedi']]],
+  ['promote_5fjedi_124',['promote_jedi',['../class_galaxy_manager.html#ad54259d779a437e533762ecf4ff2e84e',1,'GalaxyManager::promote_jedi()'],['../class_planet.html#a696adfcc492910f835a21d46ffb7f69e',1,'Planet::promote_jedi()']]],
+  ['promotejedicommand_125',['PromoteJediCommand',['../class_promote_jedi_command.html',1,'PromoteJediCommand'],['../class_promote_jedi_command.html#ada60a721e9092bd723a77e2303c83537',1,'PromoteJediCommand::PromoteJediCommand()']]],
+  ['promotejedicommand_2eh_126',['PromoteJediCommand.h',['../_promote_jedi_command_8h.html',1,'']]],
+  ['push_5fadd_5fopen_5fprint_5fsaveas_5fstrongestjedi_5fgrandmastersabercolor_127',['push_add_open_print_saveAs_strongestJedi_grandMasterSaberColor',['../class_command.html#a20ee3894e61bdac4e99f6d35fa4cf403',1,'Command']]],
+  ['push_5fback_128',['push_back',['../class_vector.html#ab7f03e6590767248b614a07d352766d3',1,'Vector']]],
+  ['push_5fcreate_129',['push_create',['../class_command.html#ac653c6f017c0786b5f746d41f736a87e',1,'Command']]],
+  ['push_5foperatorplus_5fremovejedi_130',['push_operatorPlus_removeJedi',['../class_command.html#af6ce0c881b4d9868373c60d915dcd74e',1,'Command']]],
+  ['push_5fremote_5fdemote_131',['push_remote_demote',['../class_command.html#a1b3ba65d2032d7b173dd899f16831021',1,'Command']]],
+  ['push_5fyoungestjedi_5fmostusedsabercolor_132',['push_youngestJedi_mostUsedSaberColor',['../class_command.html#a940d871f0ff1ead99ef7f3daa82224df',1,'Command']]]
 ];

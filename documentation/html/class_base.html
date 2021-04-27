@@ -107,45 +107,57 @@ Inheritance diagram for Base:</div>
  <div class="center">
   <img src="class_base.png" usemap="#Base_map" alt=""/>
   <map id="Base_map" name="Base_map">
-<area href="class_jedi.html" alt="Jedi" shape="rect" coords="0,56,47,80"/>
-<area href="class_planet.html" alt="Planet" shape="rect" coords="57,56,104,80"/>
+<area href="class_galaxy.html" alt="Galaxy" shape="rect" coords="0,56,51,80"/>
+<area href="class_planet.html" alt="Planet" shape="rect" coords="61,56,112,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a58887755525abd3f340963e2bbdcc972"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a58887755525abd3f340963e2bbdcc972">Base</a> ()=default</td></tr>
+<tr class="memdesc:a58887755525abd3f340963e2bbdcc972"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="class_base.html#a58887755525abd3f340963e2bbdcc972">More...</a><br /></td></tr>
 <tr class="separator:a58887755525abd3f340963e2bbdcc972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50a4c24dd83ec9ec9f9dfbdedc83592"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base.html">Base</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#aa50a4c24dd83ec9ec9f9dfbdedc83592">operator=</a> (const <a class="el" href="class_base.html">Base</a> &amp;rhs)=default</td></tr>
+<tr class="memdesc:aa50a4c24dd83ec9ec9f9dfbdedc83592"><td class="mdescLeft">&#160;</td><td class="mdescRight">default assign content  <a href="class_base.html#aa50a4c24dd83ec9ec9f9dfbdedc83592">More...</a><br /></td></tr>
 <tr class="separator:aa50a4c24dd83ec9ec9f9dfbdedc83592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a306fb25541331080645a716286357ef9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a306fb25541331080645a716286357ef9">~Base</a> ()=default</td></tr>
+<tr class="memdesc:a306fb25541331080645a716286357ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">default destructor  <a href="class_base.html#a306fb25541331080645a716286357ef9">More...</a><br /></td></tr>
 <tr class="separator:a306fb25541331080645a716286357ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab99040cf7517193fb67b86ce0c29df6a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_base.html">Base</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#ab99040cf7517193fb67b86ce0c29df6a">clone</a> () const =0</td></tr>
 <tr class="separator:ab99040cf7517193fb67b86ce0c29df6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad435a08229b26c0ee63d08e136b70c96"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#ad435a08229b26c0ee63d08e136b70c96">print</a> (std::ostream &amp;out) const =0</td></tr>
-<tr class="memdesc:ad435a08229b26c0ee63d08e136b70c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>console</em>  <a href="class_base.html#ad435a08229b26c0ee63d08e136b70c96">More...</a><br /></td></tr>
-<tr class="separator:ad435a08229b26c0ee63d08e136b70c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a224e768fa3ec98d85f834d8932277d85"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a224e768fa3ec98d85f834d8932277d85">print_to_file</a> (std::ofstream &amp;fout) const =0</td></tr>
-<tr class="memdesc:a224e768fa3ec98d85f834d8932277d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>  <a href="class_base.html#a224e768fa3ec98d85f834d8932277d85">More...</a><br /></td></tr>
-<tr class="separator:a224e768fa3ec98d85f834d8932277d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afafe9868f6c60e49ebbf00b42a6488be"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#afafe9868f6c60e49ebbf00b42a6488be">create_jedi</a> (const char *planet_name, const char *jedi_name, const char *jedi_rank, int jedi_age, const char *saber_color, double jedi_strength)=0</td></tr>
-<tr class="memdesc:afafe9868f6c60e49ebbf00b42a6488be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual create method.  <a href="class_base.html#afafe9868f6c60e49ebbf00b42a6488be">More...</a><br /></td></tr>
-<tr class="separator:afafe9868f6c60e49ebbf00b42a6488be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17776c36f0ef8ac98f80f39bd16ee81a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a17776c36f0ef8ac98f80f39bd16ee81a">read</a> (std::istream &amp;in)=0</td></tr>
-<tr class="memdesc:a17776c36f0ef8ac98f80f39bd16ee81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>console</em>  <a href="class_base.html#a17776c36f0ef8ac98f80f39bd16ee81a">More...</a><br /></td></tr>
-<tr class="separator:a17776c36f0ef8ac98f80f39bd16ee81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920a3bc2ded309777ce0ae2af91e6d21"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a920a3bc2ded309777ce0ae2af91e6d21">write_to_file</a> (std::ofstream &amp;fout) const =0</td></tr>
+<tr class="memdesc:a920a3bc2ded309777ce0ae2af91e6d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>.  <a href="class_base.html#a920a3bc2ded309777ce0ae2af91e6d21">More...</a><br /></td></tr>
+<tr class="separator:a920a3bc2ded309777ce0ae2af91e6d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa464997c0ff7060d1dd2568e1590b4b6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#aa464997c0ff7060d1dd2568e1590b4b6">read_from_file</a> (std::ifstream &amp;fin)=0</td></tr>
-<tr class="memdesc:aa464997c0ff7060d1dd2568e1590b4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>file</em>  <a href="class_base.html#aa464997c0ff7060d1dd2568e1590b4b6">More...</a><br /></td></tr>
+<tr class="memdesc:aa464997c0ff7060d1dd2568e1590b4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>file</em>.  <a href="class_base.html#aa464997c0ff7060d1dd2568e1590b4b6">More...</a><br /></td></tr>
 <tr class="separator:aa464997c0ff7060d1dd2568e1590b4b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af59f5245ef5273ecac6303502ab4cfcf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#af59f5245ef5273ecac6303502ab4cfcf">is_valid_type</a> (const char *type) const =0</td></tr>
-<tr class="memdesc:af59f5245ef5273ecac6303502ab4cfcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method which check is it valid type the submission parameter.  <a href="class_base.html#af59f5245ef5273ecac6303502ab4cfcf">More...</a><br /></td></tr>
-<tr class="separator:af59f5245ef5273ecac6303502ab4cfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfb30421704aaa9fcafc107bce3da2fb"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#adfb30421704aaa9fcafc107bce3da2fb">type_name</a> () const =0</td></tr>
-<tr class="memdesc:adfb30421704aaa9fcafc107bce3da2fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method which return name of type object.  <a href="class_base.html#adfb30421704aaa9fcafc107bce3da2fb">More...</a><br /></td></tr>
-<tr class="separator:adfb30421704aaa9fcafc107bce3da2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e41ad5ad36312ea1af527f8154a5a51"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a9e41ad5ad36312ea1af527f8154a5a51">type_name</a> () const =0</td></tr>
+<tr class="memdesc:a9e41ad5ad36312ea1af527f8154a5a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method which return name of type object.  <a href="class_base.html#a9e41ad5ad36312ea1af527f8154a5a51">More...</a><br /></td></tr>
+<tr class="separator:a9e41ad5ad36312ea1af527f8154a5a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac448cd0ae33113c3a0efbacd9d3f560"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#aac448cd0ae33113c3a0efbacd9d3f560">create_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name, const <a class="el" href="class_string.html">String</a> &amp;jedi_name, const <a class="el" href="_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank, const unsigned &amp;jedi_age, const <a class="el" href="class_string.html">String</a> &amp;saber_color, const double &amp;jedi_strength)=0</td></tr>
+<tr class="separator:aac448cd0ae33113c3a0efbacd9d3f560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde26e7c513aa9d2cbc5b3dd6eedfa82"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#afde26e7c513aa9d2cbc5b3dd6eedfa82">remove_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;jedi_name, const <a class="el" href="class_string.html">String</a> &amp;planet_name)=0</td></tr>
+<tr class="memdesc:afde26e7c513aa9d2cbc5b3dd6eedfa82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a message whether the removal was successful or not (the <a class="el" href="class_jedi.html">Jedi</a> did not inhabits this planet).  <a href="class_base.html#afde26e7c513aa9d2cbc5b3dd6eedfa82">More...</a><br /></td></tr>
+<tr class="separator:afde26e7c513aa9d2cbc5b3dd6eedfa82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ac8e644c353fbe9690d4cc89ce083a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_jedi.html">Jedi</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a27ac8e644c353fbe9690d4cc89ce083a">get_strongest_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name) const =0</td></tr>
+<tr class="memdesc:a27ac8e644c353fbe9690d4cc89ce083a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays information about the strongest <a class="el" href="class_jedi.html">Jedi</a> of the submitted planet(with the greatest force). <br  />
+  <a href="class_base.html#a27ac8e644c353fbe9690d4cc89ce083a">More...</a><br /></td></tr>
+<tr class="separator:a27ac8e644c353fbe9690d4cc89ce083a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a6218ef6804c920c7ef56903d989ff2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_vector.html">Vector</a>&lt; <a class="el" href="class_jedi.html">Jedi</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a7a6218ef6804c920c7ef56903d989ff2">get_youngest_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name, const <a class="el" href="_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank) const =0</td></tr>
+<tr class="separator:a7a6218ef6804c920c7ef56903d989ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10103d0c8414c13b1df927286071c1da"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a10103d0c8414c13b1df927286071c1da">get_most_used_saber_color</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name, const <a class="el" href="_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank) const =0</td></tr>
+<tr class="separator:a10103d0c8414c13b1df927286071c1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dcaec099589dfe62c7e623cb11e6145"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a0dcaec099589dfe62c7e623cb11e6145">get_most_used_saber_color</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name) const =0</td></tr>
+<tr class="separator:a0dcaec099589dfe62c7e623cb11e6145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0999f8b90b9f88ee11b31f1eb620b56f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a0999f8b90b9f88ee11b31f1eb620b56f">print</a> (const <a class="el" href="class_string.html">String</a> &amp;name) const =0</td></tr>
+<tr class="memdesc:a0999f8b90b9f88ee11b31f1eb620b56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the information about heirs in of <a class="el" href="class_base.html">Base</a> class an appropriate way.  <a href="class_base.html#a0999f8b90b9f88ee11b31f1eb620b56f">More...</a><br /></td></tr>
+<tr class="separator:a0999f8b90b9f88ee11b31f1eb620b56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df62e25bf69f172d7834beab6d6b727"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a9df62e25bf69f172d7834beab6d6b727">print</a> ()=0</td></tr>
+<tr class="memdesc:a9df62e25bf69f172d7834beab6d6b727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print sorted information about heirs in of <a class="el" href="class_base.html">Base</a> class an appropriate way.  <a href="class_base.html#a9df62e25bf69f172d7834beab6d6b727">More...</a><br /></td></tr>
+<tr class="separator:a9df62e25bf69f172d7834beab6d6b727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract base class for <a class="el" href="class_galaxy.html">Galaxy</a> <a class="el" href="class_jedi.html">Jedi</a> and <a class="el" href="class_planet.html">Planet</a> herited this class. The heirs(Jedi and Planet) of <a class="el" href="class_base.html">Base</a> class implement all of the functions in own way. </p>
+<div class="textblock"><p>Abstract base class. <a class="el" href="class_planet.html">Planet</a> and <a class="el" href="class_galaxy.html">Galaxy</a> herited this class and they implement all of the functions in own way. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a58887755525abd3f340963e2bbdcc972"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58887755525abd3f340963e2bbdcc972">&#9670;&nbsp;</a></span>Base()</h2>
@@ -169,6 +181,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>default constructor </p>
 
 </div>
 </div>
@@ -195,6 +209,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>default destructor </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -220,14 +236,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Pure virtual clone method Makes a copy of the <a class="el" href="class_base.html">Base</a> object. Access to the object of this class is realize with clone method. </p>
+<p>Pure virtual clone method. Makes a copy of the <a class="el" href="class_base.html">Base</a> object. Access to the object of this class is realize with clone method. </p>
 
-<p>Implemented in <a class="el" href="class_planet.html#a0ae719d72f211ef4ec5976c5f9862a8f">Planet</a>, and <a class="el" href="class_jedi.html#a1e220ec41521525e3e6b5c628ba97db5">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_planet.html#a0ae719d72f211ef4ec5976c5f9862a8f">Planet</a>, and <a class="el" href="class_galaxy.html#aa08a6b5ffebb121112cf75f400f66097">Galaxy</a>.</p>
 
 </div>
 </div>
-<a id="afafe9868f6c60e49ebbf00b42a6488be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afafe9868f6c60e49ebbf00b42a6488be">&#9670;&nbsp;</a></span>create_jedi()</h2>
+<a id="aac448cd0ae33113c3a0efbacd9d3f560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac448cd0ae33113c3a0efbacd9d3f560">&#9670;&nbsp;</a></span>create_jedi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,37 +254,37 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void Base::create_jedi </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
           <td class="paramname"><em>planet_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
           <td class="paramname"><em>jedi_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const <a class="el" href="_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;&#160;</td>
           <td class="paramname"><em>jedi_rank</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
           <td class="paramname"><em>jedi_age</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
           <td class="paramname"><em>saber_color</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">const double &amp;&#160;</td>
           <td class="paramname"><em>jedi_strength</em>&#160;</td>
         </tr>
         <tr>
@@ -283,15 +299,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Pure virtual create method. Display a message whether the addition was successful or not (there is a <a class="el" href="class_jedi.html">Jedi</a> with such a name on this or that planet, or not there is a planet with such a name). </p>
 
-<p>Pure virtual create method. </p>
-
-<p>Implemented in <a class="el" href="class_planet.html#a5641cbfd56b808f8e3376269c87c4e66">Planet</a>, and <a class="el" href="class_jedi.html#afd3172d30a841327d159803f8687e24c">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_planet.html#a2bf100341c1507fdcb06d46cfb9c5dd0">Planet</a>, and <a class="el" href="class_galaxy.html#aed4036d02bc8eb00266fb813f3800add">Galaxy</a>.</p>
 
 </div>
 </div>
-<a id="af59f5245ef5273ecac6303502ab4cfcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af59f5245ef5273ecac6303502ab4cfcf">&#9670;&nbsp;</a></span>is_valid_type()</h2>
+<a id="a0dcaec099589dfe62c7e623cb11e6145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dcaec099589dfe62c7e623cb11e6145">&#9670;&nbsp;</a></span>get_most_used_saber_color() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,10 +315,78 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Base::is_valid_type </td>
+          <td class="memname">virtual <a class="el" href="class_string.html">String</a> Base::get_most_used_saber_color </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>planet_name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The most common color to light sword planet that enjoys at least one GRAND_MASTER </dd></dl>
+
+<p>Implemented in <a class="el" href="class_planet.html#a355450fc3cb97240fc325904d6adfb49">Planet</a>, and <a class="el" href="class_galaxy.html#a28a35abe546c8e036d911e9dcf71ad79">Galaxy</a>.</p>
+
+</div>
+</div>
+<a id="a10103d0c8414c13b1df927286071c1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10103d0c8414c13b1df927286071c1da">&#9670;&nbsp;</a></span>get_most_used_saber_color() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_string.html">String</a> Base::get_most_used_saber_color </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>planet_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;&#160;</td>
+          <td class="paramname"><em>jedi_rank</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The most common color to light sword in the given rank of the respective planet </dd></dl>
+
+<p>Implemented in <a class="el" href="class_planet.html#ab51025e043fe69f2c44cf044bbdcbfe6">Planet</a>, and <a class="el" href="class_galaxy.html#abaa8db2510ccb9ac4c98359bcff7964e">Galaxy</a>.</p>
+
+</div>
+</div>
+<a id="a27ac8e644c353fbe9690d4cc89ce083a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ac8e644c353fbe9690d4cc89ce083a">&#9670;&nbsp;</a></span>get_strongest_jedi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_jedi.html">Jedi</a> Base::get_strongest_jedi </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>planet_name</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -314,9 +397,49 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual method which check is it valid type the submission parameter. </p>
+<p>Displays information about the strongest <a class="el" href="class_jedi.html">Jedi</a> of the submitted planet(with the greatest force). <br  />
+ </p>
 
-<p>Implemented in <a class="el" href="class_planet.html#a359f24be0ccb86ac15f8a01d7ec66514">Planet</a>, and <a class="el" href="class_jedi.html#af0845c12e8b3ff266b23b7b8776083a3">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_planet.html#a43cb166aaedab24ed834d560d701061c">Planet</a>, and <a class="el" href="class_galaxy.html#a13f694e8bdb1da810f506b44dc5f658b">Galaxy</a>.</p>
+
+</div>
+</div>
+<a id="a7a6218ef6804c920c7ef56903d989ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a6218ef6804c920c7ef56903d989ff2">&#9670;&nbsp;</a></span>get_youngest_jedi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_vector.html">Vector</a>&lt;<a class="el" href="class_jedi.html">Jedi</a>&gt; Base::get_youngest_jedi </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>planet_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;&#160;</td>
+          <td class="paramname"><em>jedi_rank</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Brings out the youngest <a class="el" href="class_jedi.html">Jedi</a> inhabiting the given planet and has the corresponding rank (if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message). </p>
+
+<p>Implemented in <a class="el" href="class_planet.html#a88bc2701cd0af73c1bb2fac49b85b571">Planet</a>, and <a class="el" href="class_galaxy.html#a90490b6ab0c39f3011bfaa0e9c26cd23">Galaxy</a>.</p>
 
 </div>
 </div>
@@ -344,10 +467,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>default assign content </p>
+
 </div>
 </div>
-<a id="ad435a08229b26c0ee63d08e136b70c96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad435a08229b26c0ee63d08e136b70c96">&#9670;&nbsp;</a></span>print()</h2>
+<a id="a9df62e25bf69f172d7834beab6d6b727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df62e25bf69f172d7834beab6d6b727">&#9670;&nbsp;</a></span>print() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,68 +483,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void Base::print </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pure virtual print method which allows each of <a class="el" href="class_base.html">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>console</em> </p>
-
-<p>Implemented in <a class="el" href="class_planet.html#a41897d2f8133516d184ce403f41970f4">Planet</a>, and <a class="el" href="class_jedi.html#a66ef98828b5f0a8020cae6b2f9775b56">Jedi</a>.</p>
-
-</div>
-</div>
-<a id="a224e768fa3ec98d85f834d8932277d85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a224e768fa3ec98d85f834d8932277d85">&#9670;&nbsp;</a></span>print_to_file()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Base::print_to_file </td>
-          <td>(</td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
-          <td class="paramname"><em>fout</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pure virtual print method which allows each of <a class="el" href="class_base.html">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em> </p>
-
-<p>Implemented in <a class="el" href="class_planet.html#ab6635a5946ba52f7d723417acb16833c">Planet</a>, and <a class="el" href="class_jedi.html#a24e11bf79745cdc3007bff9b29d4b756">Jedi</a>.</p>
-
-</div>
-</div>
-<a id="a17776c36f0ef8ac98f80f39bd16ee81a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17776c36f0ef8ac98f80f39bd16ee81a">&#9670;&nbsp;</a></span>read()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Base::read </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;&#160;</td>
-          <td class="paramname"><em>in</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -430,9 +494,39 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual method for reading information from <em>console</em> </p>
+<p>Print sorted information about heirs in of <a class="el" href="class_base.html">Base</a> class an appropriate way. </p>
 
-<p>Implemented in <a class="el" href="class_planet.html#a66d5ba4a802c0f2eb784b0924bf00b4b">Planet</a>, and <a class="el" href="class_jedi.html#a93a769b8dba039149814727b9fdf4257">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_planet.html#a119d31be5c293013863bd9b3e84d8f07">Planet</a>, and <a class="el" href="class_galaxy.html#a4f384da1284b24fe36e8126bc2910a17">Galaxy</a>.</p>
+
+</div>
+</div>
+<a id="a0999f8b90b9f88ee11b31f1eb620b56f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0999f8b90b9f88ee11b31f1eb620b56f">&#9670;&nbsp;</a></span>print() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Base::print </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Displays the information about heirs in of <a class="el" href="class_base.html">Base</a> class an appropriate way. </p>
+
+<p>Implemented in <a class="el" href="class_planet.html#a09458cab124198dcdfa394a62ad4942e">Planet</a>, and <a class="el" href="class_galaxy.html#ac7662583deedd120b2a3589abbfc1865">Galaxy</a>.</p>
 
 </div>
 </div>
@@ -460,14 +554,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual method for reading information from <em>file</em> </p>
+<p>Pure virtual method for reading information from <em>file</em>. </p>
 
-<p>Implemented in <a class="el" href="class_planet.html#af7f8e9faa82e3b5b7450ea9afb4f45b8">Planet</a>, and <a class="el" href="class_jedi.html#a1ced6357fcf6aeccbb49dd50de61dc6b">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_planet.html#af7f8e9faa82e3b5b7450ea9afb4f45b8">Planet</a>, and <a class="el" href="class_galaxy.html#a3968eb52511426f14e035edee197537c">Galaxy</a>.</p>
 
 </div>
 </div>
-<a id="adfb30421704aaa9fcafc107bce3da2fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfb30421704aaa9fcafc107bce3da2fb">&#9670;&nbsp;</a></span>type_name()</h2>
+<a id="afde26e7c513aa9d2cbc5b3dd6eedfa82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde26e7c513aa9d2cbc5b3dd6eedfa82">&#9670;&nbsp;</a></span>remove_jedi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,7 +570,47 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const char* Base::type_name </td>
+          <td class="memname">virtual void Base::remove_jedi </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>jedi_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>planet_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Displays a message whether the removal was successful or not (the <a class="el" href="class_jedi.html">Jedi</a> did not inhabits this planet). </p>
+
+<p>Implemented in <a class="el" href="class_planet.html#a09534a0c1ddff29b6d9e70333bc30f99">Planet</a>, and <a class="el" href="class_galaxy.html#ac818f46cb229372a1218fcd240ec5800">Galaxy</a>.</p>
+
+</div>
+</div>
+<a id="a9e41ad5ad36312ea1af527f8154a5a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e41ad5ad36312ea1af527f8154a5a51">&#9670;&nbsp;</a></span>type_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_string.html">String</a> Base::type_name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -491,7 +625,37 @@ Public Member Functions</h2></td></tr>
 
 <p>Pure virtual method which return name of type object. </p>
 
-<p>Implemented in <a class="el" href="class_planet.html#a14c765ce6c3e72ee5e4fb3dc1a3e8be2">Planet</a>, and <a class="el" href="class_jedi.html#ac1f97d3e7512eca940a7969c2b29e987">Jedi</a>.</p>
+<p>Implemented in <a class="el" href="class_planet.html#a5674454c4bae7ed8af6e0e926e786f20">Planet</a>, and <a class="el" href="class_galaxy.html#aa27d7e00a94170eec36ab039162cde4b">Galaxy</a>.</p>
+
+</div>
+</div>
+<a id="a920a3bc2ded309777ce0ae2af91e6d21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a920a3bc2ded309777ce0ae2af91e6d21">&#9670;&nbsp;</a></span>write_to_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Base::write_to_file </td>
+          <td>(</td>
+          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramname"><em>fout</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pure virtual print method which allows each of <a class="el" href="class_base.html">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>. </p>
+
+<p>Implemented in <a class="el" href="class_planet.html#a563c09b4640f2718358a50365c831785">Planet</a>, and <a class="el" href="class_galaxy.html#afbc8202c03f80f6b2ef399f3af87efca">Galaxy</a>.</p>
 
 </div>
 </div>

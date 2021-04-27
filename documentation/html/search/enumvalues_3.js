@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['knight_195',['KNIGHT',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbedaf7f210da15dbb4283299b2affd9bb238',1,'Jedi.h']]],
-  ['knight_5faspirant_196',['KNIGHT_ASPIRANT',['../_jedi_8h.html#adf74d53cd68bbef55ba510b266ecbbeda41288f9a3d8bdc0438bf32918cb692ed',1,'Jedi.h']]]
+  ['initiate_405',['INITIATE',['../_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbedaf7410c020277271d1db4a78f32313126',1,'Rank.h']]],
+  ['integer_406',['INTEGER',['../_command_8h.html#a74bb5b865818f3fff8fb57d8e3185ecba5d5cd46919fa987731fb2edefe0f2a0c',1,'Command.h']]]
 ];

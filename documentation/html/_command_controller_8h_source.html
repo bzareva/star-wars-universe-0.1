@@ -98,9 +98,37 @@ $(document).ready(function(){initNavTree('_command_controller_8h_source.html',''
 <div class="contents">
 <a href="_command_controller_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __COMMAND_CONTROLLER_H__</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __COMMAND_CONTROLLER_H__</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_command_8h.html">Command.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#endif </span><span class="comment">///__COMMAND_CONTROLLER_H__</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_command_controller.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_command_controller.html">CommandController</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_command_controller.html#a92c2a5f6f1e8aeaef945ac856cf97f47">    8</a></span>&#160;    <a class="code" href="class_command_controller.html#a92c2a5f6f1e8aeaef945ac856cf97f47">CommandController</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_command_controller.html#a7cac7064c8bf81cf9e1a026ea34ac2c2">   10</a></span>&#160;    <a class="code" href="class_command_controller.html#a7cac7064c8bf81cf9e1a026ea34ac2c2">~CommandController</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_command_controller.html#ac24f05de12b2a02d761696cfd1ad19ad">   13</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_command_controller.html#ac24f05de12b2a02d761696cfd1ad19ad">execute_command</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; command_name, std::ofstream&amp; fout, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; file_name);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_command_controller.html#a779cbe8973e05623eeeb8cf0e8088397">   16</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_command_controller.html#a779cbe8973e05623eeeb8cf0e8088397">register_command</a>(<a class="code" href="class_command.html">Command</a>* <a class="code" href="class_command_controller.html#a779cbe8973e05623eeeb8cf0e8088397">register_command</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_command_controller.html#a47c095fc0ad7ce5cf8cbdd6696404d78">   19</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_command_controller.html#a47c095fc0ad7ce5cf8cbdd6696404d78">init_command</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;Command*&gt;</a> m_commands;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//__COMMAND_CONTROLLER_H__</span></div>
+<div class="ttc" id="a_command_8h_html"><div class="ttname"><a href="_command_8h.html">Command.h</a></div></div>
+<div class="ttc" id="aclass_command_controller_html"><div class="ttname"><a href="class_command_controller.html">CommandController</a></div><div class="ttdef"><b>Definition:</b> CommandController.h:5</div></div>
+<div class="ttc" id="aclass_command_controller_html_a47c095fc0ad7ce5cf8cbdd6696404d78"><div class="ttname"><a href="class_command_controller.html#a47c095fc0ad7ce5cf8cbdd6696404d78">CommandController::init_command</a></div><div class="ttdeci">void init_command()</div><div class="ttdoc">the created commands are registered</div></div>
+<div class="ttc" id="aclass_command_controller_html_a779cbe8973e05623eeeb8cf0e8088397"><div class="ttname"><a href="class_command_controller.html#a779cbe8973e05623eeeb8cf0e8088397">CommandController::register_command</a></div><div class="ttdeci">void register_command(Command *register_command)</div><div class="ttdoc">registers commands</div></div>
+<div class="ttc" id="aclass_command_controller_html_a7cac7064c8bf81cf9e1a026ea34ac2c2"><div class="ttname"><a href="class_command_controller.html#a7cac7064c8bf81cf9e1a026ea34ac2c2">CommandController::~CommandController</a></div><div class="ttdeci">~CommandController()=default</div></div>
+<div class="ttc" id="aclass_command_controller_html_a92c2a5f6f1e8aeaef945ac856cf97f47"><div class="ttname"><a href="class_command_controller.html#a92c2a5f6f1e8aeaef945ac856cf97f47">CommandController::CommandController</a></div><div class="ttdeci">CommandController()=default</div></div>
+<div class="ttc" id="aclass_command_controller_html_ac24f05de12b2a02d761696cfd1ad19ad"><div class="ttname"><a href="class_command_controller.html#ac24f05de12b2a02d761696cfd1ad19ad">CommandController::execute_command</a></div><div class="ttdeci">void execute_command(const String &amp;command_name, std::ofstream &amp;fout, const String &amp;file_name)</div><div class="ttdoc">execute registered commands</div></div>
+<div class="ttc" id="aclass_command_html"><div class="ttname"><a href="class_command.html">Command</a></div><div class="ttdef"><b>Definition:</b> Command.h:17</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdef"><b>Definition:</b> String.h:9</div></div>
+<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector&lt; Command * &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

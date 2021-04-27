@@ -4,8 +4,460 @@
 
 {\ttfamily \#include $<$Galaxy.\+h$>$}
 
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Inheritance diagram for Galaxy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_galaxy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_galaxy_8h}{Galaxy.\+h}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_galaxy_aac431eec66d158f5f82cdbc3eec39586}{Galaxy}} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy_a6d5a863cd384e409155568401e82ced1}{Galaxy}} (std\+::ifstream \&fin)
+\begin{DoxyCompactList}\small\item\em constructor with parameter from type ifstream for load to text file \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy_a65cc4c3ebf65ec75da01c11cc7a6e3aa}{Galaxy}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_planet}{Planet}} $>$ planets)
+\begin{DoxyCompactList}\small\item\em constructor with parameters \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy_acc968b7671d47b6559c26d4e63b7bbb1}{Galaxy}} (const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&obj)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy}{Galaxy}} \& \mbox{\hyperlink{class_galaxy_a0b3b71ede3fb88bd8b02886a70a2cc3a}{operator=}} (const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&rhs)
+\begin{DoxyCompactList}\small\item\em assign content \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy}{Galaxy}} \& \mbox{\hyperlink{class_galaxy_a99ad9eb16b94df598e199f3590183bc8}{operator+=}} (const \mbox{\hyperlink{class_planet}{Planet}} \&rhs)
+\begin{DoxyCompactList}\small\item\em adds planet on this galaxy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy}{Galaxy}} \& \mbox{\hyperlink{class_galaxy_a8e478140e4add211e9a932ba2e2ec688}{operator+=}} (const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&rhs)
+\begin{DoxyCompactList}\small\item\em gathers two galaxy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy}{Galaxy}} \& \mbox{\hyperlink{class_galaxy_aaed57dc96fd556adb874038adb1acfd2}{operator-\/=}} (const \mbox{\hyperlink{class_planet}{Planet}} \&rhs)
+\begin{DoxyCompactList}\small\item\em remove planet from this galaxy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_planet}{Planet}} \& \mbox{\hyperlink{class_galaxy_a8afc17f9cce6ff961d35d1bc8f29f4a8}{operator\mbox{[}$\,$\mbox{]}}} (unsigned index)
+\begin{DoxyCompactList}\small\item\em access element(nonconstant) \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_planet}{Planet}} \& \mbox{\hyperlink{class_galaxy_ae577dd54a07ef64f43ba389ef8224cf6}{operator\mbox{[}$\,$\mbox{]}}} (unsigned index) const
+\begin{DoxyCompactList}\small\item\em access element(constant) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_planet}{Planet}} \& \mbox{\hyperlink{class_galaxy_aee3ef9b038084f88d6ef6edfde236f41}{at}} (unsigned index)
+\begin{DoxyCompactList}\small\item\em help method for access element(nonconstant) \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_planet}{Planet}} \& \mbox{\hyperlink{class_galaxy_a27ad23f724f8beeef8c0465815d351eb}{at}} (unsigned index) const
+\begin{DoxyCompactList}\small\item\em help method for access element(constant) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_base}{Base}} $\ast$ \mbox{\hyperlink{class_galaxy_aa08a6b5ffebb121112cf75f400f66097}{clone}} () const override
+\item 
+virtual void \mbox{\hyperlink{class_galaxy_afbc8202c03f80f6b2ef399f3af87efca}{write\+\_\+to\+\_\+file}} (std\+::ofstream \&fout) const override
+\begin{DoxyCompactList}\small\item\em outputs formatted information for given planet on {\itshape file} \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_galaxy_a3968eb52511426f14e035edee197537c}{read\+\_\+from\+\_\+file}} (std\+::ifstream \&fin) override
+\begin{DoxyCompactList}\small\item\em reading information for galaxy from {\itshape file} \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_galaxy_aa27d7e00a94170eec36ab039162cde4b}{type\+\_\+name}} () const override
+\item 
+virtual void \mbox{\hyperlink{class_galaxy_aed4036d02bc8eb00266fb813f3800add}{create\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name, const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank, const unsigned \&jedi\+\_\+age, const \mbox{\hyperlink{class_string}{String}} \&saber\+\_\+color, const double \&jedi\+\_\+strength) override
+\begin{DoxyCompactList}\small\item\em add jedi on this planet \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_galaxy_ac818f46cb229372a1218fcd240ec5800}{remove\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) override
+\begin{DoxyCompactList}\small\item\em remove jedi from this planet \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_jedi}{Jedi}} \mbox{\hyperlink{class_galaxy_a13f694e8bdb1da810f506b44dc5f658b}{get\+\_\+strongest\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) const override
+\item 
+virtual \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \mbox{\hyperlink{class_galaxy_a90490b6ab0c39f3011bfaa0e9c26cd23}{get\+\_\+youngest\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank) const override
+\item 
+virtual \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_galaxy_abaa8db2510ccb9ac4c98359bcff7964e}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank) const override
+\item 
+virtual \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_galaxy_a28a35abe546c8e036d911e9dcf71ad79}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) const override
+\item 
+virtual void \mbox{\hyperlink{class_galaxy_ac7662583deedd120b2a3589abbfc1865}{print}} (const \mbox{\hyperlink{class_string}{String}} \&name) const override
+\begin{DoxyCompactList}\small\item\em print information about this galaxy \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_galaxy_a4f384da1284b24fe36e8126bc2910a17}{print}} () override
+\begin{DoxyCompactList}\small\item\em print sorted information about galaxy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_galaxy_aecfac4c178e05ca19dff485bf02910d4}{add\+\_\+planet}} (const \mbox{\hyperlink{class_planet}{Planet}} \&planet\+\_\+name)
+\begin{DoxyCompactList}\small\item\em adds planet to galaxy \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_galaxy_a8b5af87436dc52f5e816a67330bae6db}{get\+\_\+count\+\_\+planet}} () const
+\item 
+\mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_galaxy_a171fb4b16eb0231231729f6a53b0e88a}{get\+\_\+planet\+\_\+name}} (unsigned index) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{class_galaxy_aa89b546629b0ec74519b497bf1503a32}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_galaxy}{Galaxy}} \&obj)
+\begin{DoxyCompactList}\small\item\em input from console for \mbox{\hyperlink{class_galaxy}{Galaxy}} \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{class_galaxy_ad777caa6f609be5d0cf87b2c1894ba29}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&obj)
+\begin{DoxyCompactList}\small\item\em formatted output for \mbox{\hyperlink{class_galaxy}{Galaxy}} on console \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_galaxy_a890dbcd1c994591cb3a2d2be9399c500}{operator+}} (\mbox{\hyperlink{class_galaxy}{Galaxy}} lhs, const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&rhs)
+\begin{DoxyCompactList}\small\item\em gathers the inhabitants of two galaxy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_galaxy_ab12306ddf3753279413d2a6d0cdf2ce4}{operator+}} (\mbox{\hyperlink{class_galaxy}{Galaxy}} lhs, const \mbox{\hyperlink{class_planet}{Planet}} \&rhs)
+\begin{DoxyCompactList}\small\item\em adds planet on galaxy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_galaxy_a0a120e22b41e69e3fa103ad9cc971573}{operator-\/}} (\mbox{\hyperlink{class_galaxy}{Galaxy}} lhs, const \mbox{\hyperlink{class_planet}{Planet}} \&rhs)
+\begin{DoxyCompactList}\small\item\em remove planet from this galaxy \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inherits of \mbox{\hyperlink{class_base}{Base}} class. Container of planets. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_galaxy_aac431eec66d158f5f82cdbc3eec39586}\label{class_galaxy_aac431eec66d158f5f82cdbc3eec39586}} 
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default constructor 
+
+\mbox{\Hypertarget{class_galaxy_a6d5a863cd384e409155568401e82ced1}\label{class_galaxy_a6d5a863cd384e409155568401e82ced1}} 
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{fin }\end{DoxyParamCaption})}
+
+
+
+constructor with parameter from type ifstream for load to text file 
+
+\mbox{\Hypertarget{class_galaxy_a65cc4c3ebf65ec75da01c11cc7a6e3aa}\label{class_galaxy_a65cc4c3ebf65ec75da01c11cc7a6e3aa}} 
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_planet}{Planet}} $>$}]{planets }\end{DoxyParamCaption})}
+
+
+
+constructor with parameters 
+
+\mbox{\Hypertarget{class_galaxy_acc968b7671d47b6559c26d4e63b7bbb1}\label{class_galaxy_acc968b7671d47b6559c26d4e63b7bbb1}} 
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+copy constructor 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_galaxy_aecfac4c178e05ca19dff485bf02910d4}\label{class_galaxy_aecfac4c178e05ca19dff485bf02910d4}} 
+\index{Galaxy@{Galaxy}!add\_planet@{add\_planet}}
+\index{add\_planet@{add\_planet}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{add\_planet()}{add\_planet()}}
+{\footnotesize\ttfamily void Galaxy\+::add\+\_\+planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+adds planet to galaxy 
+
+\mbox{\Hypertarget{class_galaxy_aee3ef9b038084f88d6ef6edfde236f41}\label{class_galaxy_aee3ef9b038084f88d6ef6edfde236f41}} 
+\index{Galaxy@{Galaxy}!at@{at}}
+\index{at@{at}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_planet}{Planet}} \& Galaxy\+::at (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
+
+
+
+help method for access element(nonconstant) 
+
+\mbox{\Hypertarget{class_galaxy_a27ad23f724f8beeef8c0465815d351eb}\label{class_galaxy_a27ad23f724f8beeef8c0465815d351eb}} 
+\index{Galaxy@{Galaxy}!at@{at}}
+\index{at@{at}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_planet}{Planet}} \& Galaxy\+::at (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption}) const}
+
+
+
+help method for access element(constant) 
+
+\mbox{\Hypertarget{class_galaxy_aa08a6b5ffebb121112cf75f400f66097}\label{class_galaxy_aa08a6b5ffebb121112cf75f400f66097}} 
+\index{Galaxy@{Galaxy}!clone@{clone}}
+\index{clone@{clone}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_base}{Base}} $\ast$ Galaxy\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+A pointer to a dynamically allocated polymorphic \mbox{\hyperlink{class_planet}{Planet}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_ab99040cf7517193fb67b86ce0c29df6a}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_aed4036d02bc8eb00266fb813f3800add}\label{class_galaxy_aed4036d02bc8eb00266fb813f3800add}} 
+\index{Galaxy@{Galaxy}!create\_jedi@{create\_jedi}}
+\index{create\_jedi@{create\_jedi}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{create\_jedi()}{create\_jedi()}}
+{\footnotesize\ttfamily void Galaxy\+::create\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name,  }\item[{const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank,  }\item[{const unsigned \&}]{jedi\+\_\+age,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{saber\+\_\+color,  }\item[{const double \&}]{jedi\+\_\+strength }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+add jedi on this planet 
+
+
+
+Implements \mbox{\hyperlink{class_base_aac448cd0ae33113c3a0efbacd9d3f560}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_a8b5af87436dc52f5e816a67330bae6db}\label{class_galaxy_a8b5af87436dc52f5e816a67330bae6db}} 
+\index{Galaxy@{Galaxy}!get\_count\_planet@{get\_count\_planet}}
+\index{get\_count\_planet@{get\_count\_planet}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{get\_count\_planet()}{get\_count\_planet()}}
+{\footnotesize\ttfamily unsigned Galaxy\+::get\+\_\+count\+\_\+planet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Count of jedi on this planet 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_galaxy_a28a35abe546c8e036d911e9dcf71ad79}\label{class_galaxy_a28a35abe546c8e036d911e9dcf71ad79}} 
+\index{Galaxy@{Galaxy}!get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}}
+\index{get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{get\_most\_used\_saber\_color()}{get\_most\_used\_saber\_color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} Galaxy\+::get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Most used saber color on this planet by given planet name 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_a0dcaec099589dfe62c7e623cb11e6145}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_abaa8db2510ccb9ac4c98359bcff7964e}\label{class_galaxy_abaa8db2510ccb9ac4c98359bcff7964e}} 
+\index{Galaxy@{Galaxy}!get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}}
+\index{get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{get\_most\_used\_saber\_color()}{get\_most\_used\_saber\_color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} Galaxy\+::get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name,  }\item[{const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Most used saber color on this planet by given planet name and rank of jedi 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_a10103d0c8414c13b1df927286071c1da}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_a171fb4b16eb0231231729f6a53b0e88a}\label{class_galaxy_a171fb4b16eb0231231729f6a53b0e88a}} 
+\index{Galaxy@{Galaxy}!get\_planet\_name@{get\_planet\_name}}
+\index{get\_planet\_name@{get\_planet\_name}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{get\_planet\_name()}{get\_planet\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} Galaxy\+::get\+\_\+planet\+\_\+name (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Name of planet 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_galaxy_a13f694e8bdb1da810f506b44dc5f658b}\label{class_galaxy_a13f694e8bdb1da810f506b44dc5f658b}} 
+\index{Galaxy@{Galaxy}!get\_strongest\_jedi@{get\_strongest\_jedi}}
+\index{get\_strongest\_jedi@{get\_strongest\_jedi}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{get\_strongest\_jedi()}{get\_strongest\_jedi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_jedi}{Jedi}} Galaxy\+::get\+\_\+strongest\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Strongest jedi on this planet 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_a27ac8e644c353fbe9690d4cc89ce083a}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_a90490b6ab0c39f3011bfaa0e9c26cd23}\label{class_galaxy_a90490b6ab0c39f3011bfaa0e9c26cd23}} 
+\index{Galaxy@{Galaxy}!get\_youngest\_jedi@{get\_youngest\_jedi}}
+\index{get\_youngest\_jedi@{get\_youngest\_jedi}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{get\_youngest\_jedi()}{get\_youngest\_jedi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ Galaxy\+::get\+\_\+youngest\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name,  }\item[{const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Youngest jedi on this planet 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_a7a6218ef6804c920c7ef56903d989ff2}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_a8e478140e4add211e9a932ba2e2ec688}\label{class_galaxy_a8e478140e4add211e9a932ba2e2ec688}} 
+\index{Galaxy@{Galaxy}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_galaxy}{Galaxy}} \& Galaxy\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+gathers two galaxy 
+
+\mbox{\Hypertarget{class_galaxy_a99ad9eb16b94df598e199f3590183bc8}\label{class_galaxy_a99ad9eb16b94df598e199f3590183bc8}} 
+\index{Galaxy@{Galaxy}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_galaxy}{Galaxy}} \& Galaxy\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+adds planet on this galaxy 
+
+\mbox{\Hypertarget{class_galaxy_aaed57dc96fd556adb874038adb1acfd2}\label{class_galaxy_aaed57dc96fd556adb874038adb1acfd2}} 
+\index{Galaxy@{Galaxy}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_galaxy}{Galaxy}} \& Galaxy\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+remove planet from this galaxy 
+
+\mbox{\Hypertarget{class_galaxy_a0b3b71ede3fb88bd8b02886a70a2cc3a}\label{class_galaxy_a0b3b71ede3fb88bd8b02886a70a2cc3a}} 
+\index{Galaxy@{Galaxy}!operator=@{operator=}}
+\index{operator=@{operator=}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_galaxy}{Galaxy}} \& Galaxy\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+assign content 
+
+\mbox{\Hypertarget{class_galaxy_a8afc17f9cce6ff961d35d1bc8f29f4a8}\label{class_galaxy_a8afc17f9cce6ff961d35d1bc8f29f4a8}} 
+\index{Galaxy@{Galaxy}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_planet}{Planet}} \& Galaxy\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
+
+
+
+access element(nonconstant) 
+
+\mbox{\Hypertarget{class_galaxy_ae577dd54a07ef64f43ba389ef8224cf6}\label{class_galaxy_ae577dd54a07ef64f43ba389ef8224cf6}} 
+\index{Galaxy@{Galaxy}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_planet}{Planet}} \& Galaxy\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption}) const}
+
+
+
+access element(constant) 
+
+\mbox{\Hypertarget{class_galaxy_a4f384da1284b24fe36e8126bc2910a17}\label{class_galaxy_a4f384da1284b24fe36e8126bc2910a17}} 
+\index{Galaxy@{Galaxy}!print@{print}}
+\index{print@{print}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Galaxy\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+print sorted information about galaxy 
+
+
+
+Implements \mbox{\hyperlink{class_base_a9df62e25bf69f172d7834beab6d6b727}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_ac7662583deedd120b2a3589abbfc1865}\label{class_galaxy_ac7662583deedd120b2a3589abbfc1865}} 
+\index{Galaxy@{Galaxy}!print@{print}}
+\index{print@{print}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Galaxy\+::print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+print information about this galaxy 
+
+
+
+Implements \mbox{\hyperlink{class_base_a0999f8b90b9f88ee11b31f1eb620b56f}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_a3968eb52511426f14e035edee197537c}\label{class_galaxy_a3968eb52511426f14e035edee197537c}} 
+\index{Galaxy@{Galaxy}!read\_from\_file@{read\_from\_file}}
+\index{read\_from\_file@{read\_from\_file}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{read\_from\_file()}{read\_from\_file()}}
+{\footnotesize\ttfamily void Galaxy\+::read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{fin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+reading information for galaxy from {\itshape file} 
+
+
+
+Implements \mbox{\hyperlink{class_base_aa464997c0ff7060d1dd2568e1590b4b6}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_ac818f46cb229372a1218fcd240ec5800}\label{class_galaxy_ac818f46cb229372a1218fcd240ec5800}} 
+\index{Galaxy@{Galaxy}!remove\_jedi@{remove\_jedi}}
+\index{remove\_jedi@{remove\_jedi}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{remove\_jedi()}{remove\_jedi()}}
+{\footnotesize\ttfamily void Galaxy\+::remove\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+remove jedi from this planet 
+
+
+
+Implements \mbox{\hyperlink{class_base_afde26e7c513aa9d2cbc5b3dd6eedfa82}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_aa27d7e00a94170eec36ab039162cde4b}\label{class_galaxy_aa27d7e00a94170eec36ab039162cde4b}} 
+\index{Galaxy@{Galaxy}!type\_name@{type\_name}}
+\index{type\_name@{type\_name}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{type\_name()}{type\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} Galaxy\+::type\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+type of object from this class, which is \char`\"{}galaxy\char`\"{} in this case 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+help further to create object from this class 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{class_base_a9e41ad5ad36312ea1af527f8154a5a51}{Base}}.
+
+\mbox{\Hypertarget{class_galaxy_afbc8202c03f80f6b2ef399f3af87efca}\label{class_galaxy_afbc8202c03f80f6b2ef399f3af87efca}} 
+\index{Galaxy@{Galaxy}!write\_to\_file@{write\_to\_file}}
+\index{write\_to\_file@{write\_to\_file}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{write\_to\_file()}{write\_to\_file()}}
+{\footnotesize\ttfamily void Galaxy\+::write\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{fout }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+outputs formatted information for given planet on {\itshape file} 
+
+
+
+Implements \mbox{\hyperlink{class_base_a920a3bc2ded309777ce0ae2af91e6d21}{Base}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_galaxy_a890dbcd1c994591cb3a2d2be9399c500}\label{class_galaxy_a890dbcd1c994591cb3a2d2be9399c500}} 
+\index{Galaxy@{Galaxy}!operator+@{operator+}}
+\index{operator+@{operator+}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_galaxy}{Galaxy}} operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy}{Galaxy}}}]{lhs,  }\item[{const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+gathers the inhabitants of two galaxy 
+
+\mbox{\Hypertarget{class_galaxy_ab12306ddf3753279413d2a6d0cdf2ce4}\label{class_galaxy_ab12306ddf3753279413d2a6d0cdf2ce4}} 
+\index{Galaxy@{Galaxy}!operator+@{operator+}}
+\index{operator+@{operator+}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_galaxy}{Galaxy}} operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy}{Galaxy}}}]{lhs,  }\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+adds planet on galaxy 
+
+\mbox{\Hypertarget{class_galaxy_a0a120e22b41e69e3fa103ad9cc971573}\label{class_galaxy_a0a120e22b41e69e3fa103ad9cc971573}} 
+\index{Galaxy@{Galaxy}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_galaxy}{Galaxy}} operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy}{Galaxy}}}]{lhs,  }\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+remove planet from this galaxy 
+
+\mbox{\Hypertarget{class_galaxy_ad777caa6f609be5d0cf87b2c1894ba29}\label{class_galaxy_ad777caa6f609be5d0cf87b2c1894ba29}} 
+\index{Galaxy@{Galaxy}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+formatted output for \mbox{\hyperlink{class_galaxy}{Galaxy}} on console 
+
+\mbox{\Hypertarget{class_galaxy_aa89b546629b0ec74519b497bf1503a32}\label{class_galaxy_aa89b546629b0ec74519b497bf1503a32}} 
+\index{Galaxy@{Galaxy}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{class_galaxy}{Galaxy}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+input from console for \mbox{\hyperlink{class_galaxy}{Galaxy}} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_galaxy_8h}{Galaxy.\+h}}\item 
+C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_galaxy_8cpp}{Galaxy.\+cpp}}\end{DoxyCompactItemize}

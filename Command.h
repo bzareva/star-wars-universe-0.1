@@ -22,11 +22,11 @@ public:
 
     Command(const String& command_name) : m_command_name(command_name) {};
 
-    //Command(const String& command_name, const Vector<String>& parameters, const Vector<TypeParameters>& types) : m_command_name(command_name) {
+    Command(const String& command_name, const Vector<String>& parameters, const Vector<TypeParameters>& types) : m_command_name(command_name) {
 
-    //    set_parameters(parameters);
-    //    set_types(types);
-    //};
+        set_parameters(parameters);
+        set_types(types);
+    };
 
     virtual ~Command() = default;
 
