@@ -8,9 +8,9 @@ public:
 
 //	virtual ~IFactory() = default;
 
-//	virtual Data* createData()const = 0;
+//	virtual Base* createData()const = 0;
 
 
 };
 
-#endif ///__IFACTORY_H__
+#endif //__IFACTORY_H__
