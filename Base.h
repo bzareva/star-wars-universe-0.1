@@ -1,48 +1,69 @@
 #ifndef __BASE_H__
 #define __BASE_H__
-#include <iostream>
-#include <fstream>
+#include "Jedi.h" 
+#include "Vector.h"
 /*!
- * Abstract base class for Galaxy
- * Jedi and Planet herited this class. 
- * The heirs(Jedi and Planet) of Base class implement all of the functions in own way.
+ * Abstract base class.
+ * Planet and Galaxy herited this class and they implement all of the functions in own way.
  */
 class Base {
 
 public:
-
+	//! default constructor
 	Base() = default;
 
+	//! default assign content
 	Base& operator=(const Base& rhs) = default;
 
+	//! default destructor
 	virtual ~Base() = default;
 
 	/*!
-	 * Pure virtual clone method 
-	 * Makes a copy of the Base object. Access to the object of this class is realize with clone method.
+	 * Pure virtual clone method. Makes a copy of the Base object.
+	 * Access to the object of this class is realize with clone method.
 	 */
 	virtual Base* clone()const = 0;
 
-	//! Pure virtual print method which allows each of Base heirs(Jedi, Planet) to be displayed in its own way on *console*
-	virtual void print(std::ostream& out)const = 0;
+	//! Pure virtual print method which allows each of Base heirs(Jedi, Planet) to be displayed in its own way on *file*.
+	virtual void write_to_file(std::ofstream& fout)const = 0;
 
-	//! Pure virtual print method which allows each of Base heirs(Jedi, Planet) to be displayed in its own way on *file*
-	virtual void print_to_file(std::ofstream& fout)const = 0;
-
-	//! Pure virtual create method 
-	virtual void create_jedi(const char* planet_name, const char* jedi_name, const char* jedi_rank, int jedi_age, const char* saber_color, double jedi_strength) = 0;
-
-	//! Pure virtual method for reading information from *console*
-	virtual void read(std::istream& in) = 0;
-
-	//! Pure virtual method for reading information from *file*
+	//! Pure virtual method for reading information from *file*.
 	virtual void read_from_file(std::ifstream& fin) = 0;
 
-	//! Pure virtual method which check is it valid type the submission parameter
-	virtual bool is_valid_type(const char* type)const = 0;
+	//! Pure virtual method which return name of type object.
+	virtual String type_name()const = 0;
 
-	//! Pure virtual method which return name of type object
-	virtual const char* type_name()const = 0;
+	/*! 
+	 * Pure virtual create method.
+	 * Display a message whether the addition was successful or not (there is a Jedi with
+     * such a name on this or that planet, or not there is a planet with such a name). 
+	 */ 
+	virtual void create_jedi(const String& planet_name, const String& jedi_name, const Rank& jedi_rank, const unsigned& jedi_age, const String& saber_color, const double& jedi_strength) = 0;
+
+	//! Displays a message whether the removal was successful or not (the Jedi did not inhabits this planet). 
+	virtual void remove_jedi(const String& jedi_name, const String& planet_name) = 0;
+
+	//! Displays information about the strongest Jedi of the submitted planet(with the greatest force).   
+	virtual Jedi get_strongest_jedi(const String& planet_name)const = 0;
+
+	/*!
+	* Brings out the youngest Jedi inhabiting the given planet and has
+	* the corresponding rank (if they are  more than one, to display the first on
+    * alphabetical order if none will be displayed appropriate message). 
+	*/
+	virtual Vector<Jedi> get_youngest_jedi(const String& planet_name, const Rank& jedi_rank)const = 0;
+
+	//! @returns The most common color to light sword in the given rank of the respective planet
+	virtual String get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const = 0;
+	 
+	//! @returns The most common color to light sword planet that enjoys at least one GRAND_MASTER
+	virtual String get_most_used_saber_color(const String& planet_name)const = 0;
+
+	//! Displays the information about heirs in of Base class an appropriate way.
+	virtual void print(const String& name)const = 0;
+
+	//! Print sorted information about heirs in of Base class an appropriate way.
+	virtual void print() = 0;
 
 };
 
