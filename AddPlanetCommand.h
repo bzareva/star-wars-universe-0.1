@@ -7,6 +7,8 @@ class AddPlanetCommand : public Command {
 public:
 	AddPlanetCommand() :Command(String("add_planet")) {};
 
+	AddPlanetCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
@@ -16,7 +18,7 @@ public:
 		manager.add_planet(m_parameters[0]);
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("add_planet")) {

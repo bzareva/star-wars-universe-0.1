@@ -7,6 +7,8 @@ class GetYoungestJediCommand : public Command {
 public:
 	GetYoungestJediCommand() :Command(String("get_youngest_jedi")) {};
 
+	GetYoungestJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
@@ -17,7 +19,7 @@ public:
 		manager.get_youngest_jedi(m_parameters[0], rank);
 	}
 
-	
+private:	
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("get_youngest_jedi")) {

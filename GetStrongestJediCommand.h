@@ -7,6 +7,8 @@ class GetStrongestJediCommand : public Command {
 public:
 	GetStrongestJediCommand() :Command(String("get_strongest_jedi")) {};
 
+	GetStrongestJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
@@ -16,7 +18,7 @@ public:
 		manager.get_strongest_jedi(m_parameters[0]);
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("get_strongest_jedi")) {

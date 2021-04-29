@@ -60,10 +60,16 @@ public:
 	virtual String get_most_used_saber_color(const String& planet_name)const = 0;
 
 	//! Displays the information about heirs in of Base class an appropriate way.
-	virtual void print(const String& name)const = 0;
+	virtual void print_planet(const String& planet_name) = 0;
 
-	//! Print sorted information about heirs in of Base class an appropriate way.
-	virtual void print() = 0;
+	//! Outputs the information for the Jedi, as well as which planet it currently inhabits.
+	virtual void print_jedi(const String& jedi_name)const = 0;
+
+	//! increases the given Jedi by one rank up in ladder and increases its strength by a formula
+	virtual void promote_jedi(const String& jedi_name, const double& multiplier) = 0;
+
+	//! decreases the given Jedi by one rank down in ladder and lowers its strength by a formula
+	virtual void demote_jedi(const String& jedi_name, const double& multiplier) = 0;
 
 };
 

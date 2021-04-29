@@ -7,6 +7,8 @@ class DemoteJediCommand : public Command {
 public:
 	DemoteJediCommand() :Command(String("demote_jedi")) {};
 
+	DemoteJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
@@ -17,7 +19,7 @@ public:
 		manager.demote_jedi(m_parameters[0], multiplier);
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("demote_jedi")) {

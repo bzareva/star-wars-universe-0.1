@@ -10,7 +10,7 @@ public:
 	~CommandController() = default;
 
 	//! execute registered commands
-	void execute_command(const String& command_name, std::ofstream& fout, const String& file_name);
+	void execute_command(const String& file_name);
 
 	//! registers commands
 	void register_command(Command* register_command);

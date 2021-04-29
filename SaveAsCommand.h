@@ -5,7 +5,9 @@
 class SaveAsCommand : public Command {
 
 public:
-	SaveAsCommand() :Command(String("saveAs")) {};
+	SaveAsCommand() :Command(String("saveas")) {};
+
+	SaveAsCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
 
 	inline void execute(GalaxyManager& manager) override {
 
@@ -16,10 +18,10 @@ public:
 		manager.save_as(m_parameters[0]);
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
-		if (m_command_name != String("saveAs")) {
+		if (m_command_name != String("saveas")) {
 			std::cerr << "\nCommand name is not valid!\n";
 			return false;
 		}

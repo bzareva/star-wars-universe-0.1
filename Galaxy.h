@@ -92,11 +92,17 @@ public:
 	//! @returns Most used saber color on this planet by given planet name
 	virtual String get_most_used_saber_color(const String& planet_name)const override;
 
-	//! print information about this galaxy
-	virtual void print(const String& name)const override;
+	//! print information about this planet
+	virtual void print_planet(const String& planet_name)override;
 
-	//! print sorted information about galaxy
-	virtual void print()override;
+	//! print information about jedi
+	virtual void print_jedi(const String& jedi_name)const override;
+
+	//! increases the given Jedi by one rank up in ladder and increases its strength by a formula
+	virtual void promote_jedi(const String& jedi_name, const double& multiplier)override;
+
+	//! decreases the given Jedi by one rank down in ladder and lowers its strength by a formula
+	virtual void demote_jedi(const String& jedi_name, const double& multiplier)override;
 
 	//! adds planet to galaxy
 	void add_planet(const Planet& planet_name);
@@ -106,6 +112,9 @@ public:
 
 	//! @returns Name of planet
 	String get_planet_name(unsigned index)const;
+
+	//! console outputs is sorted form (lexicographic) information about the inhabitants two Jedi planets
+	void operator_plus(const String& lhs_planet, const String& rhs_planet);
 
 private:
 	//! help method for operator= and copy ctor

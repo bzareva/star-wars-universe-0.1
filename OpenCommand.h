@@ -16,7 +16,7 @@ public:
 		manager.open_file(m_parameters[0]);
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("open")) {

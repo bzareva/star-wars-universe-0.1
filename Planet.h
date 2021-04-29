@@ -21,12 +21,6 @@ public:
 
 	//! assign content
 	Planet& operator=(const Planet& rhs);
-
-	//! increases the given Jedi by one rank up in ladder and increases its strength by a formula
-	void promote_jedi(const String& jedi_name, const double& multiplier);
-
-	//! decreases the given Jedi by one rank down in ladder and lowers its strength by a formula
-	void demote_jedi(const String& jedi_name, const double& multiplier);
 	
 	//! input from console for Planet
 	friend std::istream& operator>>(std::istream& in, Planet& obj);
@@ -104,10 +98,16 @@ public:
 	virtual String get_most_used_saber_color(const String& planet_name)const override;
 
 	//! print information about this planet
-	virtual void print(const String& name)const override;
+	virtual void print_planet(const String& planet_name)override;
 
-	//! print sorted information about planet
-	virtual void print()override;
+	//! print information about jedi
+	virtual void print_jedi(const String& jedi_name)const override;
+
+	//! increases the given Jedi by one rank up in ladder and increases its strength by a formula
+	virtual void promote_jedi(const String& jedi_name, const double& multiplier)override;
+
+	//! decreases the given Jedi by one rank down in ladder and lowers its strength by a formula
+	virtual void demote_jedi(const String& jedi_name, const double& multiplier)override;
 
 	//! sorts jedi on this planet
 	void sort();

@@ -7,6 +7,8 @@ class GetMostUsedSaberColorCommand : public Command {
 public:
 	GetMostUsedSaberColorCommand() :Command(String("get_most_used_saber_color")) {};
 
+	GetMostUsedSaberColorCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
@@ -23,7 +25,7 @@ public:
 		}
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("get_most_used_saber_color")) {

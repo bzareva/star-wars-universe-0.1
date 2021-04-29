@@ -45,7 +45,7 @@ void String::loadString(std::ifstream& fin) {
 	short int cnt   = 0;
 	char buff[1024] = { '\0' };
 
-	while (fin.get(ch) && !fin.eof() && ch != '\n' && cnt < 1024) {
+	while (fin.get(ch) && !fin.eof() && ch != '\n' && ch != ' ' && cnt < 1024) {
 		buff[cnt] = ch;
 		++cnt;
 	}

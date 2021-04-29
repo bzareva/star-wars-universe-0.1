@@ -1,6 +1,6 @@
 #ifndef __IFACTORY_H__
 #define __IFACTORY_H__
-//#include "base abstract class"
+//#include "Base.h"
 
 class IFactory {
 

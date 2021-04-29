@@ -16,7 +16,7 @@ public:
 		manager.exit_command();
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("exit")) {

@@ -7,31 +7,15 @@
 class GalaxyManager {
 
 public:
-    GalaxyManager() : m_is_open(false) {};
+    GalaxyManager();
 
-    //!
-    Jedi* read_jedi();
-
-    //!
-    Planet* read_planet();
-
-    //!
-    Galaxy read_galaxy();
-
-    //!
-
-
-    //!
-
-
-    //!
-
+    GalaxyManager(const String& file_name, Galaxy universe = Galaxy());
 
     //!
     void open_file(const String& file_name);
 
     //!
-    void print(const String& type_object, const String& name)const;
+    void print(const String& type_object, const String& name);
 
     //!
     void help()const;
@@ -79,16 +63,15 @@ public:
     void operator_plus(const String& lhs_planet_name, const String& rhs_planet_name);
 
     //!
-    void print_planet(const String& planet_name)const;
+    void print_planet(const String& planet_name);
 
     //!
     void print_jedi(const String& jedi_name)const;
 
 private:
-    bool           m_is_open;
-    String         m_file_name;
-    Galaxy         m_universe;
- //   Vector<String> m_arguments;
+    bool   m_is_open;
+    String m_file_name;
+    Galaxy m_universe;
      
 };
 

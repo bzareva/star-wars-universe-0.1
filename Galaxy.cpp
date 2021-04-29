@@ -255,22 +255,47 @@ String Galaxy::get_most_used_saber_color(const String& planet_name)const {
 	throw "Not founded information about this planet.";
 }
 
-void Galaxy::print(const String& name)const {
+void Galaxy::print_planet(const String& planet_name) {
 
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
 
-		if (m_planets[i].get_planet_name() == name.get_string()) {
-			m_planets[i].print(name);
+		if (m_planets[i].get_planet_name() == planet_name) {
+			m_planets[i].print_planet(planet_name);
 			break;
 		}
 	}
 }
 
-void Galaxy::print() {
+void Galaxy::print_jedi(const String& jedi_name)const {
 
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
-		m_planets[i].print();
-		std::cout << std::endl;
+		m_planets[i].print_jedi(jedi_name);
+	}
+}
+
+void Galaxy::promote_jedi(const String& jedi_name, const double& multiplier) {
+
+	for (unsigned i = 0; i < m_planets.size(); ++i) {
+
+		for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
+			if (at(i).get_jedi().at(j).get_name_jedi() == jedi_name) {
+
+				m_planets[i].promote_jedi(jedi_name, multiplier);
+			}
+		}	
+	}
+}
+
+void Galaxy::demote_jedi(const String& jedi_name, const double& multiplier) {
+
+	for (unsigned i = 0; i < m_planets.size(); ++i) {
+
+		for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
+			if (at(i).get_jedi().at(j).get_name_jedi() == jedi_name) {
+
+				m_planets[i].demote_jedi(jedi_name, multiplier);
+			}
+		}
 	}
 }
 
@@ -290,6 +315,21 @@ String Galaxy::get_planet_name(unsigned index)const {
 		throw std::out_of_range("Invalid index!");
 	}
 	return m_planets[index].get_planet_name();
+}
+
+void Galaxy::operator_plus(const String& lhs_planet, const String& rhs_planet) {
+
+	for (unsigned i = 0; i < m_planets.size(); ++i) {
+
+		if (lhs_planet == m_planets[i].get_planet_name()) {
+			for (unsigned j = 0; j < m_planets.size(); ++j) {
+
+				if (rhs_planet == m_planets[j].get_planet_name()) {
+					std::cout << (m_planets[i] + m_planets[j]) << std::endl;
+				}
+			}
+		}
+	}
 }
 
 void Galaxy::copy(const Galaxy& obj) {

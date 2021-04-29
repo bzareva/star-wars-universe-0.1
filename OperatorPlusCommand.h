@@ -7,6 +7,8 @@ class OperatorPlusCommand : public Command {
 public:
 	OperatorPlusCommand() :Command(String("+")) {};
 
+	OperatorPlusCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
@@ -16,7 +18,7 @@ public:
 		manager.operator_plus(m_parameters[0], m_parameters[1]);
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("+")) {
@@ -26,7 +28,7 @@ public:
 
 		if (m_parameters.empy() || m_types.empy()) {
 			std::cerr << "List of arguments is empty!\n";
-			return;
+			return false;
 		}
 
 		if (m_parameters.size() < 2) {

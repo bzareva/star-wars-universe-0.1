@@ -33,44 +33,6 @@ Planet& Planet::operator=(const Planet& rhs) {
 	return *this;
 }
 
-void Planet::promote_jedi(const String& jedi_name, const double& multiplier) {
-
-	bool flag = false;
-	for (unsigned i = 0; i < m_jedi.size(); ++i) {
-
-		if (jedi_name == m_jedi[i].get_name_jedi()) {
-			m_jedi[i].promote(multiplier);
-			flag = true;
-		}
-	}
-
-	if (flag) {
-		std::cout << "\nSuccessful promote " << jedi_name << " on planet " << m_planet_name << std::endl;
-		return;
-	} 
-
-	std::cout << "\nNot successful promote " << jedi_name << " on planet " << m_planet_name << std::endl;
-}
-
-void Planet::demote_jedi(const String& jedi_name, const double& multiplier) {
-
-	bool flag = false;
-	for (unsigned i = 0; i < m_jedi.size(); ++i) {
-
-		if (jedi_name == m_jedi[i].get_name_jedi()) {
-			m_jedi[i].demote(multiplier);
-			flag = true;
-		}
-	}
-
-	if (flag) {
-		std::cout << "\nSuccessful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
-		return;
-	} 
-
-	std::cout << "\nNot successful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
-}
-
 std::istream& operator>>(std::istream& in, Planet& oth) {
 
 	in >> oth.m_planet_name;
@@ -104,7 +66,7 @@ Planet operator+(Planet lhs, const Planet& rhs) {
 
 	lhs += rhs;
 	lhs.sort();
-	std::cout << lhs;
+//	std::cout << lhs;
 	return lhs;
 }
 
@@ -423,21 +385,68 @@ String Planet::get_most_used_saber_color(const String& planet_name)const {
 	return get_most_used_saber_color(planet_name, Rank::GRAND_MASTER);
 }
 
-void Planet::print(const String& name)const {
+void Planet::print_planet(const String& name) {
 
-	std::cout << "\nPlanet name: " << m_planet_name << std::endl;
+	sort();
+	std::cout << *this;
+   //write_to_file();
+
+	//std::cout << "\nPlanet name: " << m_planet_name << std::endl;
+	//for (unsigned i = 0; i < m_jedi.size(); ++i) {
+
+	//	if (m_jedi[i].get_name_jedi() == name) {
+	//		std::cout << m_jedi[i] << std::endl;
+	//	}
+	//}
+}
+
+void Planet::print_jedi(const String& jedi_name)const {
+
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 
-		if (m_jedi[i].get_name_jedi() == name) {
+		if (m_jedi[i].get_name_jedi() == jedi_name) {
 			std::cout << m_jedi[i] << std::endl;
+			//m_jedi[i].write_to_file();
 		}
 	}
 }
 
-void Planet::print() {
+void Planet::promote_jedi(const String& jedi_name, const double& multiplier) {
 
-	sort();
-	std::cout << *this;
+	bool flag = false;
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+
+		if (jedi_name == m_jedi[i].get_name_jedi()) {
+			m_jedi[i].promote(multiplier);
+			flag = true;
+		}
+	}
+
+	if (flag) {
+		std::cout << "\nSuccessful promote " << jedi_name << " on planet " << m_planet_name << std::endl;
+		return;
+	}
+
+	std::cout << "\nNot successful promote " << jedi_name << " on planet " << m_planet_name << std::endl;
+}
+
+void Planet::demote_jedi(const String& jedi_name, const double& multiplier) {
+
+	bool flag = false;
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+
+		if (jedi_name == m_jedi[i].get_name_jedi()) {
+			m_jedi[i].demote(multiplier);
+			flag = true;
+		}
+	}
+
+	if (flag) {
+		std::cout << "\nSuccessful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
+		return;
+	}
+
+	std::cout << "\nNot successful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
 }
 
 void Planet::sort() {

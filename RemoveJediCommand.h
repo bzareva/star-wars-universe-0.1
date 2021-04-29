@@ -7,6 +7,8 @@ class RemoveCommand : public Command {
 public:
 	RemoveCommand() :Command(String("remove_jedi")) {};
 
+	RemoveCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
@@ -16,7 +18,7 @@ public:
 		manager.remove_jedi(m_parameters[0], m_parameters[1]);
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("remove_jedi")) {

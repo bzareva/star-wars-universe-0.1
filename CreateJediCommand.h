@@ -9,6 +9,8 @@ class CreateJediCommand : public Command {
 public:
 	CreateJediCommand() :Command(String("create_jedi")) {};
 
+	CreateJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
@@ -22,7 +24,7 @@ public:
 		manager.create_jedi(m_parameters[0], m_parameters[1], rank, jedi_age, m_parameters[4], jedi_strength);
 	}
 	
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("create_jedi")) {
@@ -32,7 +34,7 @@ public:
 
 		if (m_parameters.empy() || m_types.empy()) {
 			std::cerr << "List of arguments is empty!\n";
-			return;
+			return false;
 		}
 
 		if (m_parameters.size() < 6) {

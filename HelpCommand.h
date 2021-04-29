@@ -16,7 +16,7 @@ public:
 		manager.help();
 	}
 
-
+private:
 	inline bool is_valid()const override {
 
 		if (m_command_name != String("help")) {
