@@ -23,10 +23,6 @@ Inheritance diagram for Planet\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_planet}{Planet}} \& \mbox{\hyperlink{class_planet_a235f05b9c7848b1b2b3a0f6f5e4cd3fe}{operator=}} (const \mbox{\hyperlink{class_planet}{Planet}} \&rhs)
 \begin{DoxyCompactList}\small\item\em assign content \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_planet_a696adfcc492910f835a21d46ffb7f69e}{promote\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name, const double \&multiplier)
-\begin{DoxyCompactList}\small\item\em increases the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank up in ladder and increases its strength by a formula \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_planet_a34a2c1fdac341258f74268e6c9201d68}{demote\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name, const double \&multiplier)
-\begin{DoxyCompactList}\small\item\em decreases the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank down in ladder and lowers its strength by a formula \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_planet_a8dc8b267cb8e5ff1642b365075f869a9}{operator==}} (const \mbox{\hyperlink{class_planet}{Planet}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em checks if two planets are equal \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_planet_ab4e43adc0e030963f15d4c2b9981d1a7}{operator!=}} (const \mbox{\hyperlink{class_planet}{Planet}} \&rhs) const
@@ -65,10 +61,14 @@ virtual \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_planet_ab
 \item 
 virtual \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_planet_a355450fc3cb97240fc325904d6adfb49}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) const override
 \item 
-virtual void \mbox{\hyperlink{class_planet_a09458cab124198dcdfa394a62ad4942e}{print}} (const \mbox{\hyperlink{class_string}{String}} \&name) const override
+virtual void \mbox{\hyperlink{class_planet_a561151ce0816f814e4978711371713d1}{print\+\_\+planet}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) override
 \begin{DoxyCompactList}\small\item\em print information about this planet \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_planet_a119d31be5c293013863bd9b3e84d8f07}{print}} () override
-\begin{DoxyCompactList}\small\item\em print sorted information about planet \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_planet_ad3ba062c0bf90aeccaaf120d4c1811fe}{print\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name) const override
+\begin{DoxyCompactList}\small\item\em print information about jedi \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_planet_af292e9548ea28507b74009171de1d4c5}{promote\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name, const double \&multiplier) override
+\begin{DoxyCompactList}\small\item\em increases the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank up in ladder and increases its strength by a formula \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_planet_a11e8510fdeca4ce5c70073fbb3a39eb3}{demote\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name, const double \&multiplier) override
+\begin{DoxyCompactList}\small\item\em decreases the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank down in ladder and lowers its strength by a formula \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_planet_a231e388976436f5204a88f960b094dd4}{sort}} ()
 \begin{DoxyCompactList}\small\item\em sorts jedi on this planet \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_planet_a43b0d8405e81b287e5f889575ba4c44d}{sort\+\_\+rank}} ()
@@ -192,15 +192,19 @@ add jedi on this planet
 
 Implements \mbox{\hyperlink{class_base_aac448cd0ae33113c3a0efbacd9d3f560}{Base}}.
 
-\mbox{\Hypertarget{class_planet_a34a2c1fdac341258f74268e6c9201d68}\label{class_planet_a34a2c1fdac341258f74268e6c9201d68}} 
+\mbox{\Hypertarget{class_planet_a11e8510fdeca4ce5c70073fbb3a39eb3}\label{class_planet_a11e8510fdeca4ce5c70073fbb3a39eb3}} 
 \index{Planet@{Planet}!demote\_jedi@{demote\_jedi}}
 \index{demote\_jedi@{demote\_jedi}!Planet@{Planet}}
 \doxysubsubsection{\texorpdfstring{demote\_jedi()}{demote\_jedi()}}
-{\footnotesize\ttfamily void Planet\+::demote\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name,  }\item[{const double \&}]{multiplier }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Planet\+::demote\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name,  }\item[{const double \&}]{multiplier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 decreases the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank down in ladder and lowers its strength by a formula 
+
+
+
+Implements \mbox{\hyperlink{class_base_a22d56edcf21b294c6d0730b2ea7ef502}{Base}}.
 
 \mbox{\Hypertarget{class_planet_a502915ab7511f8880874e64fd0232057}\label{class_planet_a502915ab7511f8880874e64fd0232057}} 
 \index{Planet@{Planet}!get\_count\_jedi@{get\_count\_jedi}}
@@ -370,25 +374,25 @@ access element(nonconstant)
 
 access element(constant) 
 
-\mbox{\Hypertarget{class_planet_a119d31be5c293013863bd9b3e84d8f07}\label{class_planet_a119d31be5c293013863bd9b3e84d8f07}} 
-\index{Planet@{Planet}!print@{print}}
-\index{print@{print}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Planet\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_planet_ad3ba062c0bf90aeccaaf120d4c1811fe}\label{class_planet_ad3ba062c0bf90aeccaaf120d4c1811fe}} 
+\index{Planet@{Planet}!print\_jedi@{print\_jedi}}
+\index{print\_jedi@{print\_jedi}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{print\_jedi()}{print\_jedi()}}
+{\footnotesize\ttfamily void Planet\+::print\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-print sorted information about planet 
+print information about jedi 
 
 
 
-Implements \mbox{\hyperlink{class_base_a9df62e25bf69f172d7834beab6d6b727}{Base}}.
+Implements \mbox{\hyperlink{class_base_a42afa1b981dcade0873b80854bb80175}{Base}}.
 
-\mbox{\Hypertarget{class_planet_a09458cab124198dcdfa394a62ad4942e}\label{class_planet_a09458cab124198dcdfa394a62ad4942e}} 
-\index{Planet@{Planet}!print@{print}}
-\index{print@{print}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Planet\+::print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_planet_a561151ce0816f814e4978711371713d1}\label{class_planet_a561151ce0816f814e4978711371713d1}} 
+\index{Planet@{Planet}!print\_planet@{print\_planet}}
+\index{print\_planet@{print\_planet}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{print\_planet()}{print\_planet()}}
+{\footnotesize\ttfamily void Planet\+::print\+\_\+planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -396,17 +400,21 @@ print information about this planet
 
 
 
-Implements \mbox{\hyperlink{class_base_a0999f8b90b9f88ee11b31f1eb620b56f}{Base}}.
+Implements \mbox{\hyperlink{class_base_a832b501b3c13afddcd30e547a79c45e1}{Base}}.
 
-\mbox{\Hypertarget{class_planet_a696adfcc492910f835a21d46ffb7f69e}\label{class_planet_a696adfcc492910f835a21d46ffb7f69e}} 
+\mbox{\Hypertarget{class_planet_af292e9548ea28507b74009171de1d4c5}\label{class_planet_af292e9548ea28507b74009171de1d4c5}} 
 \index{Planet@{Planet}!promote\_jedi@{promote\_jedi}}
 \index{promote\_jedi@{promote\_jedi}!Planet@{Planet}}
 \doxysubsubsection{\texorpdfstring{promote\_jedi()}{promote\_jedi()}}
-{\footnotesize\ttfamily void Planet\+::promote\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name,  }\item[{const double \&}]{multiplier }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Planet\+::promote\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name,  }\item[{const double \&}]{multiplier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 increases the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank up in ladder and increases its strength by a formula 
+
+
+
+Implements \mbox{\hyperlink{class_base_a524e71b2475b86cbace2a0b3a46ae4f5}{Base}}.
 
 \mbox{\Hypertarget{class_planet_af7f8e9faa82e3b5b7450ea9afb4f45b8}\label{class_planet_af7f8e9faa82e3b5b7450ea9afb4f45b8}} 
 \index{Planet@{Planet}!read\_from\_file@{read\_from\_file}}

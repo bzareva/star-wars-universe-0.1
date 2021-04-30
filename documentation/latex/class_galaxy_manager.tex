@@ -9,17 +9,11 @@
 \item 
 \mbox{\hyperlink{class_galaxy_manager_ab60c2e00badd75cca471836b348bc3d8}{Galaxy\+Manager}} ()
 \item 
-\mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_galaxy_manager_aef3b578036bf1e3746093eb65afc1cfa}{read\+\_\+galaxy}} ()
-\item 
-\mbox{\hyperlink{class_planet}{Planet}} \mbox{\hyperlink{class_galaxy_manager_a9094101b1a54a9ca8216c0205e8480ad}{read\+\_\+planet}} ()
-\item 
-\mbox{\hyperlink{class_jedi}{Jedi}} \mbox{\hyperlink{class_galaxy_manager_a63beb92f34ef86b0d2bdae939fa89e2e}{read\+\_\+jedi}} ()
-\item 
-void \mbox{\hyperlink{class_galaxy_manager_a4f7e8db902a56ce374504ffec3138a72}{print\+\_\+galaxy}} () const
+\mbox{\hyperlink{class_galaxy_manager_a1d0ade9d9c2e9c96442e265df4917c3a}{Galaxy\+Manager}} (const \mbox{\hyperlink{class_string}{String}} \&file\+\_\+name, \mbox{\hyperlink{class_galaxy}{Galaxy}} universe=\mbox{\hyperlink{class_galaxy}{Galaxy}}())
 \item 
 void \mbox{\hyperlink{class_galaxy_manager_a862f1e8d088abc7dbe2c2a01146bb45b}{open\+\_\+file}} (const \mbox{\hyperlink{class_string}{String}} \&file\+\_\+name)
 \item 
-void \mbox{\hyperlink{class_galaxy_manager_a2b312167a5107551ad350b9bf1f4ba38}{print}} (const \mbox{\hyperlink{class_string}{String}} \&type\+\_\+object, const \mbox{\hyperlink{class_string}{String}} \&name) const
+void \mbox{\hyperlink{class_galaxy_manager_a6083620a9a02a2acf98e093bde9a25aa}{print}} (const \mbox{\hyperlink{class_string}{String}} \&type\+\_\+object, const \mbox{\hyperlink{class_string}{String}} \&name)
 \item 
 void \mbox{\hyperlink{class_galaxy_manager_a801e19e64a401bbf0ed5c5f4dd58dca5}{help}} () const
 \item 
@@ -51,7 +45,7 @@ void \mbox{\hyperlink{class_galaxy_manager_adbba59a6c149da706bbd53fa66cdc171}{ge
 \item 
 void \mbox{\hyperlink{class_galaxy_manager_a08eccc025a039aaca959038aa09062b7}{operator\+\_\+plus}} (const \mbox{\hyperlink{class_string}{String}} \&lhs\+\_\+planet\+\_\+name, const \mbox{\hyperlink{class_string}{String}} \&rhs\+\_\+planet\+\_\+name)
 \item 
-void \mbox{\hyperlink{class_galaxy_manager_aac5dd55224542b98b20f5b178b7e997b}{print\+\_\+planet}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) const
+void \mbox{\hyperlink{class_galaxy_manager_a231e9a218ef4ab7d425113f6134e54f3}{print\+\_\+planet}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)
 \item 
 void \mbox{\hyperlink{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}{print\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name) const
 \end{DoxyCompactItemize}
@@ -61,8 +55,14 @@ void \mbox{\hyperlink{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}{pr
 \mbox{\Hypertarget{class_galaxy_manager_ab60c2e00badd75cca471836b348bc3d8}\label{class_galaxy_manager_ab60c2e00badd75cca471836b348bc3d8}} 
 \index{GalaxyManager@{GalaxyManager}!GalaxyManager@{GalaxyManager}}
 \index{GalaxyManager@{GalaxyManager}!GalaxyManager@{GalaxyManager}}
-\doxysubsubsection{\texorpdfstring{GalaxyManager()}{GalaxyManager()}}
-{\footnotesize\ttfamily Galaxy\+Manager\+::\+Galaxy\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{\texorpdfstring{GalaxyManager()}{GalaxyManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Galaxy\+Manager\+::\+Galaxy\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_galaxy_manager_a1d0ade9d9c2e9c96442e265df4917c3a}\label{class_galaxy_manager_a1d0ade9d9c2e9c96442e265df4917c3a}} 
+\index{GalaxyManager@{GalaxyManager}!GalaxyManager@{GalaxyManager}}
+\index{GalaxyManager@{GalaxyManager}!GalaxyManager@{GalaxyManager}}
+\doxysubsubsection{\texorpdfstring{GalaxyManager()}{GalaxyManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Galaxy\+Manager\+::\+Galaxy\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{class_galaxy}{Galaxy}}}]{universe = {\ttfamily \mbox{\hyperlink{class_galaxy}{Galaxy}}()} }\end{DoxyParamCaption})}
 
 
 
@@ -139,17 +139,11 @@ void \mbox{\hyperlink{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}{pr
 \doxysubsubsection{\texorpdfstring{operator\_plus()}{operator\_plus()}}
 {\footnotesize\ttfamily void Galaxy\+Manager\+::operator\+\_\+plus (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{lhs\+\_\+planet\+\_\+name,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{rhs\+\_\+planet\+\_\+name }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_galaxy_manager_a2b312167a5107551ad350b9bf1f4ba38}\label{class_galaxy_manager_a2b312167a5107551ad350b9bf1f4ba38}} 
+\mbox{\Hypertarget{class_galaxy_manager_a6083620a9a02a2acf98e093bde9a25aa}\label{class_galaxy_manager_a6083620a9a02a2acf98e093bde9a25aa}} 
 \index{GalaxyManager@{GalaxyManager}!print@{print}}
 \index{print@{print}!GalaxyManager@{GalaxyManager}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily void Galaxy\+Manager\+::print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{type\+\_\+object,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{name }\end{DoxyParamCaption}) const}
-
-\mbox{\Hypertarget{class_galaxy_manager_a4f7e8db902a56ce374504ffec3138a72}\label{class_galaxy_manager_a4f7e8db902a56ce374504ffec3138a72}} 
-\index{GalaxyManager@{GalaxyManager}!print\_galaxy@{print\_galaxy}}
-\index{print\_galaxy@{print\_galaxy}!GalaxyManager@{GalaxyManager}}
-\doxysubsubsection{\texorpdfstring{print\_galaxy()}{print\_galaxy()}}
-{\footnotesize\ttfamily void Galaxy\+Manager\+::print\+\_\+galaxy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily void Galaxy\+Manager\+::print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{type\+\_\+object,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{name }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}\label{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}} 
 \index{GalaxyManager@{GalaxyManager}!print\_jedi@{print\_jedi}}
@@ -157,35 +151,17 @@ void \mbox{\hyperlink{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}{pr
 \doxysubsubsection{\texorpdfstring{print\_jedi()}{print\_jedi()}}
 {\footnotesize\ttfamily void Galaxy\+Manager\+::print\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_galaxy_manager_aac5dd55224542b98b20f5b178b7e997b}\label{class_galaxy_manager_aac5dd55224542b98b20f5b178b7e997b}} 
+\mbox{\Hypertarget{class_galaxy_manager_a231e9a218ef4ab7d425113f6134e54f3}\label{class_galaxy_manager_a231e9a218ef4ab7d425113f6134e54f3}} 
 \index{GalaxyManager@{GalaxyManager}!print\_planet@{print\_planet}}
 \index{print\_planet@{print\_planet}!GalaxyManager@{GalaxyManager}}
 \doxysubsubsection{\texorpdfstring{print\_planet()}{print\_planet()}}
-{\footnotesize\ttfamily void Galaxy\+Manager\+::print\+\_\+planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily void Galaxy\+Manager\+::print\+\_\+planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_galaxy_manager_ad54259d779a437e533762ecf4ff2e84e}\label{class_galaxy_manager_ad54259d779a437e533762ecf4ff2e84e}} 
 \index{GalaxyManager@{GalaxyManager}!promote\_jedi@{promote\_jedi}}
 \index{promote\_jedi@{promote\_jedi}!GalaxyManager@{GalaxyManager}}
 \doxysubsubsection{\texorpdfstring{promote\_jedi()}{promote\_jedi()}}
 {\footnotesize\ttfamily void Galaxy\+Manager\+::promote\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name,  }\item[{const double \&}]{multiplier }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_galaxy_manager_aef3b578036bf1e3746093eb65afc1cfa}\label{class_galaxy_manager_aef3b578036bf1e3746093eb65afc1cfa}} 
-\index{GalaxyManager@{GalaxyManager}!read\_galaxy@{read\_galaxy}}
-\index{read\_galaxy@{read\_galaxy}!GalaxyManager@{GalaxyManager}}
-\doxysubsubsection{\texorpdfstring{read\_galaxy()}{read\_galaxy()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_galaxy}{Galaxy}} Galaxy\+Manager\+::read\+\_\+galaxy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_galaxy_manager_a63beb92f34ef86b0d2bdae939fa89e2e}\label{class_galaxy_manager_a63beb92f34ef86b0d2bdae939fa89e2e}} 
-\index{GalaxyManager@{GalaxyManager}!read\_jedi@{read\_jedi}}
-\index{read\_jedi@{read\_jedi}!GalaxyManager@{GalaxyManager}}
-\doxysubsubsection{\texorpdfstring{read\_jedi()}{read\_jedi()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_jedi}{Jedi}} Galaxy\+Manager\+::read\+\_\+jedi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_galaxy_manager_a9094101b1a54a9ca8216c0205e8480ad}\label{class_galaxy_manager_a9094101b1a54a9ca8216c0205e8480ad}} 
-\index{GalaxyManager@{GalaxyManager}!read\_planet@{read\_planet}}
-\index{read\_planet@{read\_planet}!GalaxyManager@{GalaxyManager}}
-\doxysubsubsection{\texorpdfstring{read\_planet()}{read\_planet()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_planet}{Planet}} Galaxy\+Manager\+::read\+\_\+planet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_galaxy_manager_a786fb0ab297ff2ab98337d3cbd2a3f35}\label{class_galaxy_manager_a786fb0ab297ff2ab98337d3cbd2a3f35}} 
 \index{GalaxyManager@{GalaxyManager}!remove\_jedi@{remove\_jedi}}
@@ -207,6 +183,7 @@ void \mbox{\hyperlink{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}{pr
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_galaxy_manager_8h}{Galaxy\+Manager.\+h}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_galaxy_manager_8h}{Galaxy\+Manager.\+h}}\item 
+C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_galaxy_manager_8cpp}{Galaxy\+Manager.\+cpp}}\end{DoxyCompactItemize}

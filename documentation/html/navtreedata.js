@@ -53,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_add_planet_command_8h.html",
-"class_jedi.html#ad0535752d97306a10b38994e5a51db91"
+"class_jedi.html#affef88f963581fdccabdde53d371d71c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

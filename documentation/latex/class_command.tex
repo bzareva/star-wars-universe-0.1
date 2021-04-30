@@ -15,29 +15,17 @@ Inheritance diagram for Command\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_command_ac3717e409ad40cc49776e4b2f5d8d3db}{Command}} ()=default
 \item 
+virtual \mbox{\hyperlink{class_command_aa545a53d35818f9efb936daf3fa16c61}{$\sim$\+Command}} ()=default
+\item 
 \mbox{\hyperlink{class_command_ac7e67fff131cd66e3e1265849e12abbd}{Command}} (const \mbox{\hyperlink{class_string}{String}} \&command\+\_\+name)
+\item 
+\mbox{\hyperlink{class_command_aeaacf1d50fe58d94443ba72b51b68874}{Command}} (const \mbox{\hyperlink{class_string}{String}} \&command\+\_\+name, const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ \&parameters)
 \item 
 \mbox{\hyperlink{class_command_aefa6a9cfa98e7cdf6661e5de5da96ee6}{Command}} (const \mbox{\hyperlink{class_string}{String}} \&command\+\_\+name, const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ \&parameters, const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{_command_8h_a74bb5b865818f3fff8fb57d8e3185ecb}{Type\+Parameters}} $>$ \&types)
 \item 
-virtual \mbox{\hyperlink{class_command_aa545a53d35818f9efb936daf3fa16c61}{$\sim$\+Command}} ()=default
-\item 
 virtual void \mbox{\hyperlink{class_command_a5e4f37b66ceb0e4424c8011e7c598063}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager)
 \item 
-virtual bool \mbox{\hyperlink{class_command_a889925785410bc43bff2561f7da26b9d}{is\+\_\+valid}} () const
-\item 
-void \mbox{\hyperlink{class_command_a5ec02902771d1625cd1089787de41e5a}{set\+\_\+parameters}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ \&parameters)
-\item 
-void \mbox{\hyperlink{class_command_a428511ae3d77c579c6aa474185ed4a37}{set\+\_\+types}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{_command_8h_a74bb5b865818f3fff8fb57d8e3185ecb}{Type\+Parameters}} $>$ \&types)
-\item 
-void \mbox{\hyperlink{class_command_ac653c6f017c0786b5f746d41f736a87e}{push\+\_\+create}} ()
-\item 
-void \mbox{\hyperlink{class_command_a20ee3894e61bdac4e99f6d35fa4cf403}{push\+\_\+add\+\_\+open\+\_\+print\+\_\+save\+As\+\_\+strongest\+Jedi\+\_\+grand\+Master\+Saber\+Color}} ()
-\item 
-void \mbox{\hyperlink{class_command_a1b3ba65d2032d7b173dd899f16831021}{push\+\_\+remote\+\_\+demote}} ()
-\item 
-void \mbox{\hyperlink{class_command_a940d871f0ff1ead99ef7f3daa82224df}{push\+\_\+youngest\+Jedi\+\_\+most\+Used\+Saber\+Color}} ()
-\item 
-void \mbox{\hyperlink{class_command_af6ce0c881b4d9868373c60d915dcd74e}{push\+\_\+operator\+Plus\+\_\+remove\+Jedi}} ()
+virtual bool \mbox{\hyperlink{class_command_a437dbd088de80a7fac0ff0a72b8a55cc}{is\+\_\+valid}} () const =0
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -54,26 +42,32 @@ void \mbox{\hyperlink{class_command_af6ce0c881b4d9868373c60d915dcd74e}{push\+\_\
 \mbox{\Hypertarget{class_command_ac3717e409ad40cc49776e4b2f5d8d3db}\label{class_command_ac3717e409ad40cc49776e4b2f5d8d3db}} 
 \index{Command@{Command}!Command@{Command}}
 \index{Command@{Command}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
-
-\mbox{\Hypertarget{class_command_ac7e67fff131cd66e3e1265849e12abbd}\label{class_command_ac7e67fff131cd66e3e1265849e12abbd}} 
-\index{Command@{Command}!Command@{Command}}
-\index{Command@{Command}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{command\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_command_aefa6a9cfa98e7cdf6661e5de5da96ee6}\label{class_command_aefa6a9cfa98e7cdf6661e5de5da96ee6}} 
-\index{Command@{Command}!Command@{Command}}
-\index{Command@{Command}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{command\+\_\+name,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ \&}]{parameters,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{_command_8h_a74bb5b865818f3fff8fb57d8e3185ecb}{Type\+Parameters}} $>$ \&}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{class_command_aa545a53d35818f9efb936daf3fa16c61}\label{class_command_aa545a53d35818f9efb936daf3fa16c61}} 
 \index{Command@{Command}!````~Command@{$\sim$Command}}
 \index{````~Command@{$\sim$Command}!Command@{Command}}
 \doxysubsubsection{\texorpdfstring{$\sim$Command()}{~Command()}}
 {\footnotesize\ttfamily virtual Command\+::$\sim$\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_command_ac7e67fff131cd66e3e1265849e12abbd}\label{class_command_ac7e67fff131cd66e3e1265849e12abbd}} 
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{command\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_command_aeaacf1d50fe58d94443ba72b51b68874}\label{class_command_aeaacf1d50fe58d94443ba72b51b68874}} 
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{command\+\_\+name,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ \&}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_command_aefa6a9cfa98e7cdf6661e5de5da96ee6}\label{class_command_aefa6a9cfa98e7cdf6661e5de5da96ee6}} 
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{command\+\_\+name,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ \&}]{parameters,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{_command_8h_a74bb5b865818f3fff8fb57d8e3185ecb}{Type\+Parameters}} $>$ \&}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -88,57 +82,11 @@ void \mbox{\hyperlink{class_command_af6ce0c881b4d9868373c60d915dcd74e}{push\+\_\
 
 Reimplemented in \mbox{\hyperlink{class_save_command_a7a27ff3e4ac41341148a06b2169dbe45}{Save\+Command}}, \mbox{\hyperlink{class_save_as_command_a8275020b79ccf723507bac2142d13f79}{Save\+As\+Command}}, \mbox{\hyperlink{class_remove_command_addafbd09d9db1f46122fec3a4fa095aa}{Remove\+Command}}, \mbox{\hyperlink{class_promote_jedi_command_a7c4755fb82089df85a5574f1186911d7}{Promote\+Jedi\+Command}}, \mbox{\hyperlink{class_print_command_a7dc03cc01ab59affbac0816d70f03f11}{Print\+Command}}, \mbox{\hyperlink{class_operator_plus_command_aafd2d6997cace28071cb3c18bf51c2da}{Operator\+Plus\+Command}}, \mbox{\hyperlink{class_open_command_abec1d2a82f26c119e9fdab8d916ea43d}{Open\+Command}}, \mbox{\hyperlink{class_help_command_ab206aa512bdf2b8925451b4034ea92d8}{Help\+Command}}, \mbox{\hyperlink{class_get_youngest_jedi_command_af692592764fe958f5b688aa3deb476a7}{Get\+Youngest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_strongest_jedi_command_abadfde309569a703d270e727f44b8142}{Get\+Strongest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_most_used_saber_color_command_a4d33fef97f33ead4d749371cf796d8e3}{Get\+Most\+Used\+Saber\+Color\+Command}}, \mbox{\hyperlink{class_exit_command_ab4e167dd63ad04b62defc7a11c0bb91a}{Exit\+Command}}, \mbox{\hyperlink{class_demote_jedi_command_a943af6b0b598fe154b13b67c34bad2d0}{Demote\+Jedi\+Command}}, \mbox{\hyperlink{class_create_jedi_command_aae010aaa5868ddfbce1e7934924e2953}{Create\+Jedi\+Command}}, \mbox{\hyperlink{class_close_command_ab20d19e27c056ddc31a1e7c1a727c881}{Close\+Command}}, and \mbox{\hyperlink{class_add_planet_command_a57a38dd00e8815e70e15b513cb5cf63e}{Add\+Planet\+Command}}.
 
-\mbox{\Hypertarget{class_command_a889925785410bc43bff2561f7da26b9d}\label{class_command_a889925785410bc43bff2561f7da26b9d}} 
+\mbox{\Hypertarget{class_command_a437dbd088de80a7fac0ff0a72b8a55cc}\label{class_command_a437dbd088de80a7fac0ff0a72b8a55cc}} 
 \index{Command@{Command}!is\_valid@{is\_valid}}
 \index{is\_valid@{is\_valid}!Command@{Command}}
 \doxysubsubsection{\texorpdfstring{is\_valid()}{is\_valid()}}
-{\footnotesize\ttfamily virtual bool Command\+::is\+\_\+valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
-
-
-
-Reimplemented in \mbox{\hyperlink{class_save_command_a15d00302857218894e210eb8bcdc478b}{Save\+Command}}, \mbox{\hyperlink{class_save_as_command_afee9122fbf8cc7d6cd291578738e1c12}{Save\+As\+Command}}, \mbox{\hyperlink{class_remove_command_aeaafb158d90818c79166891c281e65ff}{Remove\+Command}}, \mbox{\hyperlink{class_promote_jedi_command_af04f3e4d600291f0ef3a3b268b72cca2}{Promote\+Jedi\+Command}}, \mbox{\hyperlink{class_print_command_a54401b67027b584ab559cca77ee8b9b9}{Print\+Command}}, \mbox{\hyperlink{class_operator_plus_command_ae064cdd94dc5815a54364d48cb903128}{Operator\+Plus\+Command}}, \mbox{\hyperlink{class_open_command_aae4f48983fe4bedac7f0360958194322}{Open\+Command}}, \mbox{\hyperlink{class_help_command_a146364b2b9e99781bc3a62ca4a980e0b}{Help\+Command}}, \mbox{\hyperlink{class_get_youngest_jedi_command_aaf6e5d0c22c8cc5ae90be86406dd671e}{Get\+Youngest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_strongest_jedi_command_a8eaa833136ac24feb2e0948ca259deaa}{Get\+Strongest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_most_used_saber_color_command_aba234ed862c0333b4128b613b986e40e}{Get\+Most\+Used\+Saber\+Color\+Command}}, \mbox{\hyperlink{class_exit_command_a186ef66bbb968bfbac7ec3214b8a7fb1}{Exit\+Command}}, \mbox{\hyperlink{class_demote_jedi_command_a78c994208cbb3497666b1bad67ffafb2}{Demote\+Jedi\+Command}}, \mbox{\hyperlink{class_create_jedi_command_a8a7f480a0d277fabbc90dbe67fb82ffb}{Create\+Jedi\+Command}}, \mbox{\hyperlink{class_close_command_ae982a3d12adbb09fe9a3f09686ccaa1a}{Close\+Command}}, and \mbox{\hyperlink{class_add_planet_command_a85b1e793374d196902739398ee1e2cd7}{Add\+Planet\+Command}}.
-
-\mbox{\Hypertarget{class_command_a20ee3894e61bdac4e99f6d35fa4cf403}\label{class_command_a20ee3894e61bdac4e99f6d35fa4cf403}} 
-\index{Command@{Command}!push\_add\_open\_print\_saveAs\_strongestJedi\_grandMasterSaberColor@{push\_add\_open\_print\_saveAs\_strongestJedi\_grandMasterSaberColor}}
-\index{push\_add\_open\_print\_saveAs\_strongestJedi\_grandMasterSaberColor@{push\_add\_open\_print\_saveAs\_strongestJedi\_grandMasterSaberColor}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{push\_add\_open\_print\_saveAs\_strongestJedi\_grandMasterSaberColor()}{push\_add\_open\_print\_saveAs\_strongestJedi\_grandMasterSaberColor()}}
-{\footnotesize\ttfamily void Command\+::push\+\_\+add\+\_\+open\+\_\+print\+\_\+save\+As\+\_\+strongest\+Jedi\+\_\+grand\+Master\+Saber\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_command_ac653c6f017c0786b5f746d41f736a87e}\label{class_command_ac653c6f017c0786b5f746d41f736a87e}} 
-\index{Command@{Command}!push\_create@{push\_create}}
-\index{push\_create@{push\_create}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{push\_create()}{push\_create()}}
-{\footnotesize\ttfamily void Command\+::push\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_command_af6ce0c881b4d9868373c60d915dcd74e}\label{class_command_af6ce0c881b4d9868373c60d915dcd74e}} 
-\index{Command@{Command}!push\_operatorPlus\_removeJedi@{push\_operatorPlus\_removeJedi}}
-\index{push\_operatorPlus\_removeJedi@{push\_operatorPlus\_removeJedi}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{push\_operatorPlus\_removeJedi()}{push\_operatorPlus\_removeJedi()}}
-{\footnotesize\ttfamily void Command\+::push\+\_\+operator\+Plus\+\_\+remove\+Jedi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_command_a1b3ba65d2032d7b173dd899f16831021}\label{class_command_a1b3ba65d2032d7b173dd899f16831021}} 
-\index{Command@{Command}!push\_remote\_demote@{push\_remote\_demote}}
-\index{push\_remote\_demote@{push\_remote\_demote}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{push\_remote\_demote()}{push\_remote\_demote()}}
-{\footnotesize\ttfamily void Command\+::push\+\_\+remote\+\_\+demote (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_command_a940d871f0ff1ead99ef7f3daa82224df}\label{class_command_a940d871f0ff1ead99ef7f3daa82224df}} 
-\index{Command@{Command}!push\_youngestJedi\_mostUsedSaberColor@{push\_youngestJedi\_mostUsedSaberColor}}
-\index{push\_youngestJedi\_mostUsedSaberColor@{push\_youngestJedi\_mostUsedSaberColor}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{push\_youngestJedi\_mostUsedSaberColor()}{push\_youngestJedi\_mostUsedSaberColor()}}
-{\footnotesize\ttfamily void Command\+::push\+\_\+youngest\+Jedi\+\_\+most\+Used\+Saber\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_command_a5ec02902771d1625cd1089787de41e5a}\label{class_command_a5ec02902771d1625cd1089787de41e5a}} 
-\index{Command@{Command}!set\_parameters@{set\_parameters}}
-\index{set\_parameters@{set\_parameters}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{set\_parameters()}{set\_parameters()}}
-{\footnotesize\ttfamily void Command\+::set\+\_\+parameters (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ \&}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_command_a428511ae3d77c579c6aa474185ed4a37}\label{class_command_a428511ae3d77c579c6aa474185ed4a37}} 
-\index{Command@{Command}!set\_types@{set\_types}}
-\index{set\_types@{set\_types}!Command@{Command}}
-\doxysubsubsection{\texorpdfstring{set\_types()}{set\_types()}}
-{\footnotesize\ttfamily void Command\+::set\+\_\+types (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{_command_8h_a74bb5b865818f3fff8fb57d8e3185ecb}{Type\+Parameters}} $>$ \&}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily virtual bool Command\+::is\+\_\+valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
