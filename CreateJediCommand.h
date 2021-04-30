@@ -3,6 +3,7 @@
 #include "Command.h"
 /*!
  * Create jedi
+ * Only methods which implements are from abstract base class Command
  */
 class CreateJediCommand : public Command {
 
@@ -32,7 +33,7 @@ private:
 			return false;
 		}
 
-		if (m_parameters.empy() || m_types.empy()) {
+		if (m_parameters.empy()) {
 			std::cerr << "List of arguments is empty!\n";
 			return false;
 		}
@@ -44,17 +45,6 @@ private:
 
 		if (m_parameters.size() > 6) {
 			std::cerr << "\nToo much arguments for execution to this command!\n";
-			return false;
-		}
-
-		if (m_types[0] != TypeParameters::STRING  //planet name
-			|| m_types[1] != TypeParameters::STRING // jedi name
-			|| m_types[2] != TypeParameters::RANK // jedi rank
-			|| m_types[3] != TypeParameters::INTEGER // jedi age
-			|| m_types[4] != TypeParameters::STRING // saber color
-			|| m_types[5] != TypeParameters::DOUBLE) { // jedi strength
-
-			std::cerr << "\nTypes of the given argument is not valid!\n";
 			return false;
 		}
 

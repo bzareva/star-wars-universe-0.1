@@ -1,7 +1,6 @@
 #include<iostream>
 #include "Galaxy.h"
-//#include "String.h"
-
+#include "CommandController.h"
 
 
 int main() {
@@ -11,10 +10,12 @@ int main() {
 
 //	std::cout << (str1 += str2) << std::endl;
 
-	Galaxy g1;
-	std::cout << g1;
+	//Galaxy g1;
+	//std::cout << g1;
 	
+	CommandController cc;
 
+	cc.init_command();
 
 //	Jedi j1(43, 34.3, Rank::INITIATE, "PESHO", "light");
 //	std::cout << j1;

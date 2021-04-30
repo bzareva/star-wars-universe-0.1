@@ -1,7 +1,10 @@
 #ifndef __OPEN_COMMAND_H__
 #define __OPEN_COMMAND_H__
 #include "Command.h"
-
+/*!
+ * Open file
+ * All methods which implements are from abstract base class Command
+ */
 class OpenCommand : public Command {
 
 public:
@@ -24,7 +27,7 @@ private:
 			return false;
 		}
 
-		if (m_parameters.empy() || m_types.empy()) {
+		if (m_parameters.empy()) {
 			std::cerr << "List of arguments is empty!\n";
 			return false;
 		}
@@ -36,11 +39,6 @@ private:
 
 		if (m_parameters.size() > 1) {
 			std::cerr << "\nToo much arguments for execution to this command!\n";
-			return false;
-		}
-
-		if (m_types[0] != TypeParameters::STRING) {
-			std::cerr << "\nTypes of the given argument is not valid!\n";
 			return false;
 		}
 

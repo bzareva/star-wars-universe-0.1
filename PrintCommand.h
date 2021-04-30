@@ -1,7 +1,10 @@
 #ifndef __PRINT_COMMAND_H_
 #define __PRINT_COMMAND_H_
 #include "Command.h"
-
+/*!
+ * Print inoformation about Galaxy
+ * All methods which implements are from abstract base class Command
+ */
 class PrintCommand : public Command {
 
 public:
@@ -26,7 +29,7 @@ private:
 			return false;
 		}
 
-		if (m_parameters.empy() || m_types.empy()) {
+		if (m_parameters.empy()) {
 			std::cerr << "List of arguments is empty!\n";
 			return false;
 		}
@@ -38,11 +41,6 @@ private:
 
 		if (m_parameters.size() > 2) {
 			std::cerr << "\nToo much arguments for execution to this command!\n";
-			return false;
-		}
-
-		if (m_types[0] != TypeParameters::STRING || m_types[1] != TypeParameters::STRING) {
-			std::cerr << "\nTypes of the given argument is not valid!\n";
 			return false;
 		}
 

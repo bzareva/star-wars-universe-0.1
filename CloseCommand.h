@@ -1,7 +1,10 @@
 #ifndef __CLOSE_COMMAND_H__
 #define __CLOSE_COMMAND_H__
 #include "Command.h"
-
+/*!
+ * Closes file with which is works 
+ * All methods which implements are from abstract base class Command
+ */
 class CloseCommand : public Command {
 
 public:
@@ -26,11 +29,6 @@ private:
 
 		if (!m_parameters.empy()) {
 			std::cerr << "\nThis command do not need arguments!\n";
-			return false;
-		}
-
-		if (!m_types.empy()) {
-			std::cerr << "\nThis command do not need types of arguments!\n";
 			return false;
 		}
 

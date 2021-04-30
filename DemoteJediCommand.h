@@ -1,7 +1,10 @@
 #ifndef __DEMOTE_JEDI_COMMAND_H__
 #define __DEMOTE_JEDI_COMMAND_H__
 #include "Command.h"
-
+/*!
+ * Demote jedi 
+ * All methods which implements are from abstract base class Command
+ */
 class DemoteJediCommand : public Command {
 
 public:
@@ -27,7 +30,7 @@ private:
 			return false;
 		}
 
-		if (m_parameters.empy() || m_types.empy()) {
+		if (m_parameters.empy()) {
 			std::cerr << "List of arguments is empty!\n";
 			return false;
 		}
@@ -39,11 +42,6 @@ private:
 
 		if (m_parameters.size() > 2) {
 			std::cerr << "\nToo much arguments for execution to this command!\n";
-			return false;
-		}
-
-		if (m_types[0] != TypeParameters::STRING || m_types[1] != TypeParameters::DOUBLE) { 
-			std::cerr << "\nTypes of the given argument is not valid!\n";
 			return false;
 		}
 
