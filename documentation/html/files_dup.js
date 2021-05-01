@@ -9,7 +9,9 @@ var files_dup =
     [ "CloseCommand.h", "_close_command_8h.html", [
       [ "CloseCommand", "class_close_command.html", "class_close_command" ]
     ] ],
-    [ "Command.h", "_command_8h.html", "_command_8h" ],
+    [ "Command.h", "_command_8h.html", [
+      [ "Command", "class_command.html", "class_command" ]
+    ] ],
     [ "CommandController.cpp", "_command_controller_8cpp.html", null ],
     [ "CommandController.h", "_command_controller_8h.html", [
       [ "CommandController", "class_command_controller.html", "class_command_controller" ]
@@ -82,6 +84,10 @@ var files_dup =
     [ "String.cpp", "_string_8cpp.html", "_string_8cpp" ],
     [ "String.h", "_string_8h.html", [
       [ "String", "class_string.html", "class_string" ]
+    ] ],
+    [ "Unite.cpp", "_unite_8cpp.html", null ],
+    [ "Unite.h", "_unite_8h.html", [
+      [ "Unite", "class_unite.html", "class_unite" ]
     ] ],
     [ "Vector.h", "_vector_8h.html", "_vector_8h" ]
 ];

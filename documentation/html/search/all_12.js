@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['vector_170',['Vector',['../class_vector.html',1,'Vector&lt; T &gt;'],['../class_vector.html#a39d6069675db4ecfc1ab81d440da759a',1,'Vector::Vector()'],['../class_vector.html#a29140bb48f3502ee49ba34e637ffd5b3',1,'Vector::Vector(T *data, unsigned size)'],['../class_vector.html#afb477942fef2f69c69e7e65c3cbed355',1,'Vector::Vector(const Vector&lt; T &gt; &amp;obj)']]],
-  ['vector_2eh_171',['Vector.h',['../_vector_8h.html',1,'']]],
-  ['vector_3c_20command_20_2a_20_3e_172',['Vector&lt; Command * &gt;',['../class_vector.html',1,'']]],
-  ['vector_3c_20jedi_20_3e_173',['Vector&lt; Jedi &gt;',['../class_vector.html',1,'']]],
-  ['vector_3c_20planet_20_3e_174',['Vector&lt; Planet &gt;',['../class_vector.html',1,'']]],
-  ['vector_3c_20string_20_3e_175',['Vector&lt; String &gt;',['../class_vector.html',1,'']]],
-  ['vector_3c_20typeparameters_20_3e_176',['Vector&lt; TypeParameters &gt;',['../class_vector.html',1,'']]]
+  ['unite_165',['Unite',['../class_unite.html',1,'Unite'],['../class_unite.html#af0f930631eed63ac737897c96c3d59f8',1,'Unite::Unite()']]],
+  ['unite_2ecpp_166',['Unite.cpp',['../_unite_8cpp.html',1,'']]],
+  ['unite_2eh_167',['Unite.h',['../_unite_8h.html',1,'']]]
 ];

@@ -25,5 +25,6 @@ var annotated_dup =
     [ "SaveAsCommand", "class_save_as_command.html", "class_save_as_command" ],
     [ "SaveCommand", "class_save_command.html", "class_save_command" ],
     [ "String", "class_string.html", "class_string" ],
+    [ "Unite", "class_unite.html", "class_unite" ],
     [ "Vector", "class_vector.html", "class_vector" ]
 ];

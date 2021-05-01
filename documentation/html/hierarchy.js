@@ -27,10 +27,10 @@ var hierarchy =
     [ "IFactory", "class_i_factory.html", null ],
     [ "Jedi", "class_jedi.html", null ],
     [ "String", "class_string.html", null ],
+    [ "Unite", "class_unite.html", null ],
     [ "Vector< T >", "class_vector.html", null ],
     [ "Vector< Command * >", "class_vector.html", null ],
     [ "Vector< Jedi >", "class_vector.html", null ],
     [ "Vector< Planet >", "class_vector.html", null ],
-    [ "Vector< String >", "class_vector.html", null ],
-    [ "Vector< TypeParameters >", "class_vector.html", null ]
+    [ "Vector< String >", "class_vector.html", null ]
 ];

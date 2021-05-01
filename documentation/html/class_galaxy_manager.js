@@ -7,6 +7,7 @@ var class_galaxy_manager =
     [ "create_jedi", "class_galaxy_manager.html#a48fcbbd22e3009212163d80924b18129", null ],
     [ "demote_jedi", "class_galaxy_manager.html#a5ca5c594c0b5c5831805f36fe673bbb4", null ],
     [ "exit_command", "class_galaxy_manager.html#ae81ba490469490c49ad56672b6514e5e", null ],
+    [ "get_file_name", "class_galaxy_manager.html#ac2c9c6a15148699e150025dc08365c3b", null ],
     [ "get_most_used_saber_color", "class_galaxy_manager.html#ad9fa43deda041256c6e247f884493006", null ],
     [ "get_most_used_saber_color", "class_galaxy_manager.html#a738651559d54bdcec8d197d99d69f5d2", null ],
     [ "get_strongest_jedi", "class_galaxy_manager.html#aba5a5021226d9c5852ec13b01caa5ccf", null ],
