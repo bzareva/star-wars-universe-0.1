@@ -13,7 +13,7 @@ Galaxy::Galaxy(std::ifstream& fin) {
 Galaxy::Galaxy(const Vector<Planet> planets) {
 
 	for (unsigned i = 0; i < planets.size(); ++i) {
-		m_planets[i] = planets[i];
+		m_planets.push_back(planets[i]);
 	}
 }
 

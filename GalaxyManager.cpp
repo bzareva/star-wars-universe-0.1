@@ -78,14 +78,13 @@ void GalaxyManager::help()const {
 void GalaxyManager::close_file() {
 
     if (!m_is_open) {
-        std::cerr << "File is already closed!\n";
+        std::cerr << "File is already closed or is not opened!\n";
         return;
     }
 
     std::ofstream fout(m_file_name.get_string(), std::ios::trunc | std::ios::out);
     if (!fout) {
-        std::cerr << "Run again the program!\n";
-        return;
+        throw std::runtime_error("Run again the program!\n");
     }
 
     fout.clear();
@@ -103,8 +102,7 @@ void GalaxyManager::save() {
 
     std::ofstream fout(m_file_name.get_string(), std::ios::out | std::ios::trunc);
     if (!fout) {
-        std::cerr << "File cannot be opened!\n";
-        return;
+        throw std::runtime_error("File cannot be opened!\n");
     }
 
     m_universe.write_to_file(fout);
@@ -118,7 +116,7 @@ void GalaxyManager::save_as(const String& file_name) {
 
     std::ofstream fout(file_name.get_string(), std::ios::out | std::ios::trunc);
     if (!fout) {
-        std::cerr << "File cannot be opened!\n";
+        throw std::runtime_error("File cannot be opened!\n");
         return;
     }
 
@@ -197,4 +195,9 @@ void GalaxyManager::print_planet(const String& planet_name) {
 void GalaxyManager::print_jedi(const String& jedi_name)const {
 
     m_universe.print_jedi(jedi_name);
+}
+
+String GalaxyManager::get_file_name()const {
+
+    return m_file_name;
 }

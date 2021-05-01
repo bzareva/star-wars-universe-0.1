@@ -41,7 +41,7 @@ Jedi::Jedi(unsigned age, double force, Rank rank, String name, String color_of_l
 		m_age = age;
 	}
 
-	if (m_force < 0) {
+	if (force < 0) {
 		m_force = 0.;
 	} else {
 		m_force = force;

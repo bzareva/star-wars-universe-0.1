@@ -1,27 +1,22 @@
-#include<iostream>
-#include "Galaxy.h"
-#include "CommandController.h"
-
-
+#include "Unite.h"
+/*!
+ * - Star wars universe 0.1 is project from the Object-oriented programming course at FMI(2020-2021).
+ * - data 06.04.21
+ * - author Blagovesta Zareva
+ * - brief The program can save the information that is entered
+ *         from the console and also be able to reload it.
+ *         That is, the program must store the information of 
+ *         the planets and the Jedi inhabiting them in a file and 
+ *         support the commands for working with files described in the 
+ *         section Working with the command line. All commands 
+ *         are in lowercase Latin letters, and the arguments are separated by a space. 
+ */
 int main() {
 
-//	String str1("test1");	
-//	String str2("test2");
+	Unite exe;
+	exe.run();
 
-//	std::cout << (str1 += str2) << std::endl;
-
-	//Galaxy g1;
-	//std::cout << g1;
-	
-	CommandController cc;
-
-	cc.init_command();
-
-//	Jedi j1(43, 34.3, Rank::INITIATE, "PESHO", "light");
-//	std::cout << j1;
-
-//	std::cout << "hello";
-
+//	std::cin.get();
 	system("pause");
 	return 0;
 }

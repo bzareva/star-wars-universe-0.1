@@ -2,7 +2,7 @@
 #define __OPERATOR_PLUS_COMMAND_H__
 #include "Command.h"
 /*!
- * Console outputs is sorted form(lexicographic) information about the inhabitants two Jedi planetsle
+ * Console outputs is sorted form(lexicographic) information about the inhabitants two planets
  * All methods which implements are from abstract base class Command
  */
 class OperatorPlusCommand : public Command {
@@ -15,7 +15,7 @@ public:
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
-			return;
+			throw std::runtime_error("Obscure command!");
 		}
 
 		manager.operator_plus(m_parameters[0], m_parameters[1]);

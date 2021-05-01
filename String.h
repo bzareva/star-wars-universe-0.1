@@ -1,5 +1,6 @@
 #ifndef __STRING_H__
 #define __STRING_H__
+#include <exception>
 #include <fstream>
 #include <iostream>
 #include "Rank.h"

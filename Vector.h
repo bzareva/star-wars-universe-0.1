@@ -1,5 +1,6 @@
 #ifndef __VECTOR_H__
 #define __VECTOR_H__
+#include <exception>
 #include <iostream>
 /*!
  *  Realization of basic functionalities from vector library
@@ -166,7 +167,7 @@ inline Vector<T>::~Vector() {
 
 template<class T>
 inline T& Vector<T>::operator[](unsigned index) {
-
+	
 	return at(index);
 }
 

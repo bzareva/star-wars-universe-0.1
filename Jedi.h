@@ -1,6 +1,5 @@
 #ifndef __JEDI_H__
 #define __JEDI_H__
-#include "Rank.h"
 #include "String.h"
 /*!
  * Describes a Jedi

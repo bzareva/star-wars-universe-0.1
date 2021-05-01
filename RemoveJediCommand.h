@@ -15,7 +15,7 @@ public:
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
-			return;
+			throw std::runtime_error("Obscure command!");
 		}
 
 		manager.remove_jedi(m_parameters[0], m_parameters[1]);

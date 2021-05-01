@@ -2,7 +2,7 @@
 #define __COMMAND_H__
 #include "GalaxyManager.h"
 /*!
- * Abstract base class for all commands classes which has to supports the program
+ * Abstract base class for all commands classes which must to supports the program
  */
 class Command {
 

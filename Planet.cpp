@@ -4,7 +4,6 @@ Planet::Planet()
  :m_planet_name(String("planet")) {
 
 	m_jedi.push_back(Jedi());
-//	m_jedi[0] = Jedi();
 }
 
 Planet::Planet(std::ifstream& fin) {
@@ -16,7 +15,7 @@ Planet::Planet(const Vector<Jedi> jedi, const String& planet_name)
  :m_planet_name(planet_name) {
 
 	for (unsigned i = 0; i < jedi.size(); ++i) {
-		m_jedi[i] = jedi[i];
+		m_jedi.push_back(jedi[i]);
 	}
 }
 
@@ -39,7 +38,7 @@ std::istream& operator>>(std::istream& in, Planet& oth) {
 	unsigned cnt;
 	in >> cnt;
 	while (cnt <= 0) {
-		std::cout << "\nWrong input! It has to be possitive number bigger than zero. Try again:";
+		std::cout << "\nWrong input! It has to be possitive number bigger than zero. Enter again:";
 		in >> cnt;
 	}
 
@@ -53,10 +52,10 @@ std::istream& operator>>(std::istream& in, Planet& oth) {
 std::ostream& operator<<(std::ostream& out, const Planet& oth) {
 
 	out << "\nName of planet: " << oth.m_planet_name;
-	out << "\nCount of living jedi on this planet: " << oth.m_jedi.size();
+	out << "\nCount of living jedi on this planet: " << oth.m_jedi.size() << std::endl;
 
 	for (unsigned i = 0; i < oth.m_jedi.size(); ++i) {
-		out << oth.m_jedi[i] << std::endl;
+		out << oth.m_jedi[i];
 	}
 
 	return out;
@@ -304,7 +303,6 @@ Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& je
 				curr = temp[j].get_age();
 			}
 		}
-
 		if (ind != i) {
 			Jedi sw   = temp[i];
 			temp[i]   = temp[ind];
@@ -390,14 +388,6 @@ void Planet::print_planet(const String& name) {
 	sort();
 	std::cout << *this;
    //write_to_file();
-
-	//std::cout << "\nPlanet name: " << m_planet_name << std::endl;
-	//for (unsigned i = 0; i < m_jedi.size(); ++i) {
-
-	//	if (m_jedi[i].get_name_jedi() == name) {
-	//		std::cout << m_jedi[i] << std::endl;
-	//	}
-	//}
 }
 
 void Planet::print_jedi(const String& jedi_name)const {
@@ -417,8 +407,13 @@ void Planet::promote_jedi(const String& jedi_name, const double& multiplier) {
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 
 		if (jedi_name == m_jedi[i].get_name_jedi()) {
-			m_jedi[i].promote(multiplier);
-			flag = true;
+			try {
+				m_jedi[i].promote(multiplier);
+				flag = true;
+			}
+			catch (std::logic_error& e){
+				std::cerr << e.what() << std::endl;
+			}
 		}
 	}
 
@@ -436,8 +431,13 @@ void Planet::demote_jedi(const String& jedi_name, const double& multiplier) {
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 
 		if (jedi_name == m_jedi[i].get_name_jedi()) {
-			m_jedi[i].demote(multiplier);
-			flag = true;
+			try {
+				m_jedi[i].demote(multiplier);
+				flag = true;
+			}
+			catch (std::logic_error& e) {
+				std::cerr << e.what() << std::endl;
+			}
 		}
 	}
 

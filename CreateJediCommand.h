@@ -15,7 +15,7 @@ public:
 	inline void execute(GalaxyManager& manager) override {
 
 		if (!is_valid()) {
-			return;
+			throw std::runtime_error("Obscure command!");
 		}
 
 		Rank rank            = m_parameters[2].convert_to_rank(m_parameters[2].get_string());
