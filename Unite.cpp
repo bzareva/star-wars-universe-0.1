@@ -7,7 +7,7 @@ void Unite::run() {
 	                     {135, 433.5, Rank::GRAND_MASTER, String("Rick1"), String("pink")},
 	                     {83, 334.5, Rank::PADAWAN, String("Pesho"), String("white")},
 	                     {100, 353.5, Rank::KNIGHT, String("Ivan"), String("black")},
-	                     {95, 324.4, Rank::BATTLE_MASTER, String("Asen"), String("yellow")},
+	                     {95, 324.4, Rank::BATTLE_MASTER, String("Ivanka"), String("yellow")},
 	                     {53, 87.7, Rank::MASTER, String("Miky"), String("green")},
 	                     {67, 104.5, Rank::BATTLE_MASTER, String("Stefan"), String("red")} };
 
@@ -16,12 +16,12 @@ void Unite::run() {
 
 
 	Jedi jedi_two[7] = { {57, 321.5, Rank::INITIATE, String("Rick1"), String("blue2")},
-					     {35, 165.4, Rank::KNIGHT_ASPIRANT, String("Rick2"), String("pink2")},
+					     {35, 165.4, Rank::KNIGHT_ASPIRANT, String("Aleks"), String("pink2")},
 					     {93, 234, Rank::GRAND_MASTER, String("Pesho2"), String("white2")},
 					     {140, 456, Rank::GRAND_MASTER, String("Ivan2"), String("black2")},
-					     {95, 424.4, Rank::BATTLE_MASTER, String("Asen2"), String("yellow2")},
+					     {95, 424.4, Rank::BATTLE_MASTER, String("Mimi"), String("yellow2")},
 					     {83, 387.7, Rank::MASTER, String("Miky2"), String("green2")},
-					     {117, 133.5, Rank::YOUNGLING, String("Stefan2"), String("red2")} };
+					     {117, 133.5, Rank::YOUNGLING, String("Pablo"), String("red2")} };
 
 	Vector<Jedi> vec_jedi_two(jedi_two, 7);
 	Planet planet2(vec_jedi_two, String("Mars"));
@@ -38,9 +38,13 @@ void Unite::run() {
 	Vector<Jedi> vec_jedi_three(jedi_three, 7);
 	Planet planet3(vec_jedi_three, String("Saturn"));
 
-	Planet more[3] = { planet1, planet2, planet3 };
+//	Planet more[3] = { planet1, planet2, planet3 };
 
-	Vector<Planet> vec_planets(more, 3);
+	Vector<Planet> vec_planets; // (more, 3);
+	vec_planets.push_back(planet1);
+	vec_planets.push_back(planet2);
+	vec_planets.push_back(planet3);
+
 
     Galaxy cosmos(vec_planets);
 

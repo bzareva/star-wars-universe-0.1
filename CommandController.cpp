@@ -17,7 +17,7 @@
 #include "SaveCommand.h"
 
 
-void CommandController::execute_command(const String& file_name, GalaxyManager cosmos) {
+void CommandController::execute_command(const String& file_name, GalaxyManager& cosmos) {
 
 	for (unsigned i = 0; i < m_commands.size(); ++i) {
 		m_commands[i]->execute(cosmos);
@@ -29,7 +29,7 @@ void CommandController::register_command(Command* register_command) {
 	m_commands.push_back(register_command);
 }
 
-void CommandController::init_command(GalaxyManager cosmos) {
+void CommandController::init_command(GalaxyManager& cosmos) {
 
 	String file = cosmos.get_file_name();
 	String input;
