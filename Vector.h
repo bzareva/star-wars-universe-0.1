@@ -188,7 +188,7 @@ template<class T>
 inline Vector<T>& Vector<T>::operator+=(const Vector<T>& obj) {
 
 	if (m_size + obj.m_size > m_capacity) {
-		reserve(m_size + obj.m_size);
+		reserve(2 * (m_size + obj.m_size));
 	}
 
 	for (unsigned i = 0; i < obj.m_size; i++) {
@@ -285,19 +285,29 @@ inline void Vector<T>::swap(Vector<T>& data) {
 template<class T>
 inline T& Vector<T>::at(unsigned index) {
 
-	if (index < 0 || index > m_size) {
-		throw std::out_of_range("Invalid index!");
+	try {
+		return m_data[index];
 	}
-	return m_data[index];
+	catch (std::out_of_range& e) {
+		std::cerr << e.what() << std::endl;
+		/*if (index < 0 || index > m_size) {
+			throw std::out_of_range("Invalid index!");
+		}*/
+	}
 }
 
 template<class T>
 inline const T& Vector<T>::at(unsigned index)const {
 
-	if (index < 0 || index > m_size) {
-		throw std::out_of_range("Invalid index!");
+	try {
+		return m_data[index];
 	}
-	return m_data[index];
+	catch (std::out_of_range& e) {
+		std::cerr << e.what() << std::endl;
+		/*if (index < 0 || index > m_size) {
+			throw std::out_of_range("Invalid index!");
+		}*/
+	}
 }
 
 template<class T>

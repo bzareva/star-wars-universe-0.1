@@ -4,16 +4,15 @@
 void Unite::run() {
 	
 	Jedi jedi_one[7] = { {23, 334.5, Rank::INITIATE, String("John1"), String("blue")}, 
-	                     {135, 433.5, Rank::GRAND_MASTER, String("Rick1"), String("pink")},
+	                     {25, 433.5, Rank::INITIATE, String("Rick1"), String("black")},
 	                     {83, 334.5, Rank::PADAWAN, String("Pesho"), String("white")},
-	                     {100, 353.5, Rank::KNIGHT, String("Ivan"), String("black")},
+	                     {100, 353.5, Rank::INITIATE, String("Ivan"), String("black")},
 	                     {95, 324.4, Rank::BATTLE_MASTER, String("Ivanka"), String("yellow")},
 	                     {53, 87.7, Rank::MASTER, String("Miky"), String("green")},
 	                     {67, 104.5, Rank::BATTLE_MASTER, String("Stefan"), String("red")} };
 
 	Vector<Jedi> vec_jedi_one(jedi_one, 7);
 	Planet planet1(vec_jedi_one, String("Earth"));
-
 
 	Jedi jedi_two[7] = { {57, 321.5, Rank::INITIATE, String("Rick1"), String("blue2")},
 					     {35, 165.4, Rank::KNIGHT_ASPIRANT, String("Aleks"), String("pink2")},
@@ -35,25 +34,73 @@ void Unite::run() {
 					       {76, 8.7, Rank::PADAWAN, String("Miky3"), String("green3")},
 					       {127, 10.5, Rank::GRAND_MASTER, String("Stefan3"), String("red3")} };
 
+
 	Vector<Jedi> vec_jedi_three(jedi_three, 7);
-	Planet planet3(vec_jedi_three, String("Saturn"));
+	Planet planet3(vec_jedi_three, String("Jupiter"));
+	 
+//----------------------------------------------------------------------------------------------------------------
 
-//	Planet more[3] = { planet1, planet2, planet3 };
+	Vector<Planet> t;
+	t.push_back(planet1);
 
-	Vector<Planet> vec_planets; // (more, 3);
-	vec_planets.push_back(planet1);
-	vec_planets.push_back(planet2);
-	vec_planets.push_back(planet3);
+	std::cout << t;
+	//std::cout << t.size();
+	
 
 
-    Galaxy cosmos(vec_planets);
+//-----------------------------------------------------------------------------------------------------------------
+	//Vector<Base*> vec;
+	//vec.push_back(planet1.clone());
+	//for (unsigned i = 0; i < planet1.get_count_jedi(); ++i) {
+	//	vec.push_back(planet1);
+	//}
 
-	std::cout << ">Enter file name:";
-	String file;
-	std::cin >> file;
+	//vec += planet1;
+	//std::cout << planet1.get_jedi();
+	//vec.push_back(planet1);
+	//std::cout << vec;
 
-	m_manager = GalaxyManager(file.get_string(), cosmos);
+	//Galaxy test;
+	//test.add_planet(planet1);
+	//std::cout << test[0];
 
-	m_controller.init_command(m_manager);
+	//vec_planets.push_back(planet1);
+	//std::cout << planet1;
+	//std::cout << vec_planets;
+	//std::cout << vec_planets[0];
+
+	//vec_planets += planet1;
+	//std::cout << vec_planets << std::endl;
+	//std::cout << planet1.get_count_jedi
+
+	//vec_planets.push_back(planet1);
+	//vec_planets.push_back(planet2);
+	//vec_planets.push_back(planet3);
+
+	//std::cout << planet1;
+	//std::cout << vec_planets[0] << std::endl;
+	//std::cout << vec_planets[0].get_count_jedi() << std::endl;
+
+	//Galaxy cosmos(vec_planets);
+	//std::cout << cosmos[0] << std::endl;
+
+	//std::cout << p1.get_youngest_jedi(String("Saturn"), Rank::INITIATE) << std::endl;
+	//std::cout << p1.get_strongest_jedi(String("Saturn"))<< std::endl;
+	//p1.remove_jedi(String("Rick1"), String("Saturn"));
+	//std::cout << p1.get_most_used_saber_color(String("Saturn"), Rank::INITIATE);
+	//std::cout << p1[2].get_force() << std::endl;
+	//p1.promote_jedi(String("Pesho"), 1);
+	//std::cout << p1[2].get_force() << std::endl;
+
+    //vec_jedi_one += vec_jedi_two;
+    //vec_jedi_one += vec_jedi_three;
+
+	//std::cout << ">Enter file name:";
+	//String file;
+	//std::cin >> file;
+
+	//m_manager = GalaxyManager(file.get_string(), cosmos);
+
+	//m_controller.init_command(m_manager);
 
 }

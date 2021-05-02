@@ -2,34 +2,7 @@
 
 Jedi::Jedi(std::ifstream& fin) {
 
-//	read_from_file(fin);
-	m_name_jedi.loadString(fin);
-	m_color_of_lightsaber.loadString(fin);
-	fin >> m_age;
-	fin >> m_force;
-
-	m_rank = Rank::YOUNGLING;
-	String rank;
-	rank.loadString(fin);
-
-	/*if (rank.str_cmp(rank.get_string(), "youngling") == 0 || rank.str_cmp(rank.get_string(), "YOUNGLING") == 0) {
-		m_rank = Rank::YOUNGLING;
-	} else*/
-	if (rank.str_cmp(rank.get_string(), "initiate") == 0 || rank.str_cmp(rank.get_string(), "INITIATE") == 0) {
-		m_rank = Rank::INITIATE;
-	} else if (rank.str_cmp(rank.get_string(), "padawan") == 0 || rank.str_cmp(rank.get_string(), "PADAWAN") == 0) {
-		m_rank = Rank::PADAWAN;
-	} else if (rank.str_cmp(rank.get_string(), "knight aspirant") == 0 || rank.str_cmp(rank.get_string(), "KNIGHT ASPIRANT") == 0) {
-		m_rank = Rank::KNIGHT_ASPIRANT;
-	} else if (rank.str_cmp(rank.get_string(), "knight") == 0 || rank.str_cmp(rank.get_string(), "KNIGHT") == 0) {
-		m_rank = Rank::KNIGHT;
-	} else if (rank.str_cmp(rank.get_string(), "master") == 0 || rank.str_cmp(rank.get_string(), "MASTER") == 0) {
-		m_rank = Rank::MASTER;
-	} else if (rank.str_cmp(rank.get_string(), "battle master") == 0 || rank.str_cmp(rank.get_string(), "BATTLE MASTER") == 0) {
-		m_rank = Rank::BATTLE_MASTER;
-	} else if(rank.str_cmp(rank.get_string(), "grand master") == 0 || rank.str_cmp(rank.get_string(), "GRAND MASTER") == 0) {
-		m_rank = Rank::GRAND_MASTER;
-	}
+	read_from_file(fin);
 }
 
 Jedi::Jedi(unsigned age, double force, Rank rank, String name, String color_of_lightsaber)
@@ -90,30 +63,29 @@ bool Jedi::operator<(const Jedi& rhs)const {
 std::istream& operator>>(std::istream& in, Jedi& oth) {
 
 	in >> oth.m_name_jedi;
-	in >> oth.m_age;
-	in >> oth.m_force;
 	in >> oth.m_color_of_lightsaber;
 
-	oth.m_rank = Rank::YOUNGLING;
 	String buff;
 	in >> buff;
 
-	/*if (!buff.str_cmp(buff.get_string(), "youngling") || !buff.str_cmp(buff.get_string(), "YOUNGLING")) {
+	in >> oth.m_age;
+	in >> oth.m_force;
+
+	if (buff == String("youngling") || buff == String("YOUNGLING")) {
 		oth.m_rank = Rank::YOUNGLING;
-	} else */
-	if (!buff.str_cmp(buff.get_string(), "initiate") || !buff.str_cmp(buff.get_string(), "INITIATE")) {
+	} else if (buff == String("initiate") || buff == String("INITIATE")) {
 		oth.m_rank = Rank::INITIATE;
-	} else if (!buff.str_cmp(buff.get_string(), "padawan") || !buff.str_cmp(buff.get_string(), "PADAWAN")) {
+	} else if (buff == String("padawan") || buff == String("PADAWAN")) {
 		oth.m_rank = Rank::PADAWAN;
-	} else if (!buff.str_cmp(buff.get_string(), "knight aspirant") || !buff.str_cmp(buff.get_string(), "KNIGHT ASPIRANT")) {
+	} else if (buff == String("knight aspirant") || buff == String("KNIGHT ASPIRANT")) {
 		oth.m_rank = Rank::KNIGHT_ASPIRANT;
-	} else if (!buff.str_cmp(buff.get_string(), "knight") || !buff.str_cmp(buff.get_string(), "KNIGHT")) {
+	} else if (buff == String("knight") || buff == String("KNIGHT")) {
 		oth.m_rank = Rank::KNIGHT;
-	} else if (!buff.str_cmp(buff.get_string(), "master") || !buff.str_cmp(buff.get_string(), "MASTER")) {
+	} else if (buff == String("master") || buff == String("MASTER")) {
 		oth.m_rank = Rank::MASTER;
-	} else if (!buff.str_cmp(buff.get_string(), "battle master") || !buff.str_cmp(buff.get_string(), "BATTLE MASTER")) {
+	} else if (buff == String("battle master") || buff == String("BATTLE MASTER")) {
 		oth.m_rank = Rank::BATTLE_MASTER;
-	} else if (!buff.str_cmp(buff.get_string(), "grand master") || !buff.str_cmp(buff.get_string(), "GRAND MASTER")) {
+	} else if (buff == String("grand master") || buff == String("GRAND MASTER")) {
 		oth.m_rank = Rank::GRAND_MASTER;
 	} 
 
@@ -232,29 +204,28 @@ void Jedi::read_from_file(std::ifstream& fin) {
 
 	m_name_jedi.loadString(fin);
 	m_color_of_lightsaber.loadString(fin);
-	fin >> m_age;
-	fin >> m_force;
 
-	m_rank = Rank::YOUNGLING;
 	String buff;
 	buff.loadString(fin);
 
-	/*if (buff.str_cmp(buff.get_string(), "youngling") == 0 || buff.str_cmp(buff.get_string(), "YOUNGLING") == 0) {
+	fin >> m_age;
+	fin >> m_force;
+
+	if (buff == String("youngling") || buff ==  String("YOUNGLING")) {
 		m_rank = Rank::YOUNGLING;
-	} else*/
-	if (buff.str_cmp(buff.get_string(), "initiate") == 0 || buff.str_cmp(buff.get_string(), "INITIATE") == 0) {
+	} else if (buff == String("initiate") || buff ==  String("INITIATE")) {
 		m_rank = Rank::INITIATE;
-	} else if (buff.str_cmp(buff.get_string(), "padawan") == 0 || buff.str_cmp(buff.get_string(), "PADAWAN") == 0) {
+	} else if (buff == String("padawan") || buff == String("PADAWAN")) {
 		m_rank = Rank::PADAWAN;
-	} else if (buff.str_cmp(buff.get_string(), "knight aspirant") == 0 || buff.str_cmp(buff.get_string(), "KNIGHT ASPIRANT") == 0) {
+	} else if (buff == String("knight aspirant") || buff == String("KNIGHT ASPIRANT")) {
 		m_rank = Rank::KNIGHT_ASPIRANT;
-	} else if (buff.str_cmp(buff.get_string(), "knight") == 0 || buff.str_cmp(buff.get_string(), "KNIGHT") == 0) {
+	} else if (buff == String("knight") || buff == String("KNIGHT")) {
 		m_rank = Rank::KNIGHT;
-	} else if (buff.str_cmp(buff.get_string(), "master") == 0 || buff.str_cmp(buff.get_string(), "MASTER") == 0) {
+	} else if (buff == String("master") || buff == String("MASTER")) {
 		m_rank = Rank::MASTER;
-	} else if (buff.str_cmp(buff.get_string(), "battle master") == 0 || buff.str_cmp(buff.get_string(), "BATTLE MASTER") == 0) {
+	} else if (buff == String("battle master") || buff == String("BATTLE MASTER")) {
 		m_rank = Rank::BATTLE_MASTER;
-	} else if (buff.str_cmp(buff.get_string(), "grand master") == 0 || buff.str_cmp(buff.get_string(), "GRAND MASTER") == 0) {
+	} else if (buff == String("grand master") || buff == String("GRAND MASTER")) {
 		m_rank = Rank::GRAND_MASTER;
 	} 
 }

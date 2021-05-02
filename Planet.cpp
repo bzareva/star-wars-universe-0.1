@@ -54,7 +54,7 @@ std::ostream& operator<<(std::ostream& out, const Planet& oth) {
 	out << "\nName of planet: " << oth.m_planet_name;
 	out << "\nCount of living jedi on this planet: " << oth.m_jedi.size() << std::endl;
 
-	for (unsigned i = 0; i < oth.m_jedi.size(); ++i) {
+	for (unsigned i = 0; i < oth.m_jedi.size(); ++i) { 
 		out << oth.m_jedi[i];
 	}
 
@@ -109,7 +109,8 @@ Planet& Planet::operator+=(const Jedi& rhs) {
 
 Planet& Planet::operator+=(const Planet& rhs) {
 
-	for (unsigned i = 0; i < rhs.m_jedi.size(); ++i) {
+	for (unsigned i = 0; i < rhs.m_jedi.size(); ++i) { //rhs.m_jedi.size() == rhs.get_count_jedi()
+		//m_jedi += rhs.m_jedi[i];
 		m_jedi.push_back(rhs.m_jedi[i]);
 	}
 	return *this;
@@ -172,10 +173,10 @@ void Planet::read_from_file(std::ifstream& fin) {
 	fin >> m_planet_name;
 	unsigned cnt;
 	fin >> cnt;
-//	while (cnt <= 0) {
-//		std::cout << "\nWrong input! Try again:";
-//		fin >> cnt;
-//	}
+	while (cnt <= 0) {
+		std::cout << "\nWrong input! Try again:";
+		fin >> cnt;
+	}
 
 	for (unsigned i = 0; i < cnt; ++i) {
 		m_jedi[i].read_from_file(fin);
@@ -203,24 +204,7 @@ void Planet::create_jedi(const String& planet_name, const String& jedi_name, con
 		}
 	}
 
-	Rank rank = Rank::YOUNGLING;
-    if (jedi_rank == Rank::INITIATE) {
-		rank = Rank::INITIATE;
-	} else if (jedi_rank == Rank::PADAWAN) {
-		rank = Rank::PADAWAN;
-	} else if (jedi_rank == Rank::KNIGHT_ASPIRANT) {
-		rank = Rank::KNIGHT_ASPIRANT;
-	} else if (jedi_rank == Rank::KNIGHT) {
-		rank = Rank::KNIGHT;
-	} else if (jedi_rank == Rank::MASTER) {
-		rank = Rank::MASTER;
-	} else if (jedi_rank == Rank::BATTLE_MASTER) {
-		rank = Rank::BATTLE_MASTER;
-	} else if (jedi_rank == Rank::GRAND_MASTER) {
-		rank = Rank::GRAND_MASTER;
-	}
-
-	Jedi curr(jedi_age, jedi_strength, rank, jedi_name, saber_color);
+	Jedi curr(jedi_age, jedi_strength, jedi_rank, jedi_name, saber_color);
 //	curr.create_jedi(planet_name, jedi_name, jedi_rank, saber_color, jedi_strength);
 	m_jedi.push_back(curr);
 //	m_jedi += curr;
@@ -261,29 +245,12 @@ Jedi Planet::get_strongest_jedi(const String& planet_name)const {
 
 Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& jedi_rank)const {
 
-	Rank rank = Rank::YOUNGLING;
-	if (jedi_rank == Rank::INITIATE) {
-		rank = Rank::INITIATE;
-	} else if (jedi_rank == Rank::PADAWAN) {
-		rank = Rank::PADAWAN;
-	} else if (jedi_rank == Rank::KNIGHT_ASPIRANT) {
-		rank = Rank::KNIGHT_ASPIRANT;
-	} else if (jedi_rank == Rank::KNIGHT) {
-		rank = Rank::KNIGHT;
-	} else if (jedi_rank == Rank::MASTER) {
-		rank = Rank::MASTER;
-	} else if (jedi_rank == Rank::BATTLE_MASTER) {
-		rank = Rank::BATTLE_MASTER;
-	} else if (jedi_rank == Rank::GRAND_MASTER) {
-		rank = Rank::GRAND_MASTER;
-	}
-
 	bool flag = false;
 	Vector<Jedi> temp;
 
-	for (unsigned i = 1; i < m_jedi.size(); ++i) {
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 
-		if (m_jedi[i].get_rank() == rank) {
+		if (m_jedi[i].get_rank() == jedi_rank) {
 			temp.push_back(m_jedi[i]);
 			flag = true;
 		}
@@ -311,7 +278,7 @@ Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& je
 	}
 
 	unsigned first = m_jedi[0].get_age();
-	for (unsigned i = 1; i < temp.size(); ++i) {
+	for (unsigned i = 1; i < temp.size() - 1; ++i) {
 		if (temp[i].get_age() != first) {
 
 			temp.erase(i);
@@ -329,38 +296,30 @@ Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& je
 
 String Planet::get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const {
 
-	Rank rank = Rank::YOUNGLING;
-	if (jedi_rank == Rank::INITIATE) {
-		rank = Rank::INITIATE;
-	} else if (jedi_rank == Rank::PADAWAN) {
-		rank = Rank::PADAWAN;
-	} else if (jedi_rank == Rank::KNIGHT_ASPIRANT) {
-		rank = Rank::KNIGHT_ASPIRANT;
-	} else if (jedi_rank == Rank::KNIGHT) {
-		rank = Rank::KNIGHT;
-	} else if (jedi_rank == Rank::MASTER) {
-		rank = Rank::MASTER;
-	} else if (jedi_rank == Rank::BATTLE_MASTER) {
-		rank = Rank::BATTLE_MASTER;
-	} else if (jedi_rank == Rank::GRAND_MASTER) {
-		rank = Rank::GRAND_MASTER;
-	}
-
 	Vector<String> colors;
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
-		if (m_jedi[i].get_rank() == rank) {
+		if (m_jedi[i].get_rank() == jedi_rank) {
 			colors.push_back(m_jedi[i].get_color_of_lightsaber());
 		}
 	}
 
+	Vector<String> erase_repeates = colors;
+	for (unsigned i = 0; i < erase_repeates.size() - 1; ++i) {
+
+		for (unsigned j = i + 1; j < erase_repeates.size(); ++j) {
+			if (erase_repeates[i] == erase_repeates[j]) {
+				erase_repeates.erase(j);
+			}
+		}
+	}
+
 	Vector<int> cnt_colors;
-	for (unsigned i = 0; i < colors.size() - 1; ++i) {
+	for (unsigned i = 0; i < erase_repeates.size(); ++i) {
 
-		unsigned br = 1;
-		for (unsigned j = i + 1; j < colors.size(); ++j) {
+		unsigned br = 0;
+		for (unsigned j = 0; j < colors.size(); ++j) {
 
-			if (colors[i] == colors[j]) {
-				colors.erase(j);
+			if (erase_repeates[i] == colors[j]) {
 				++br;
 			}
 		}
@@ -369,13 +328,13 @@ String Planet::get_most_used_saber_color(const String& planet_name, const Rank& 
 	}
 
 	unsigned ind = 0;
-	for (unsigned i = 1; i < colors.size(); ++i) {
+	for (unsigned i = 1; i < cnt_colors.size(); ++i) {
 		if (cnt_colors[i] > cnt_colors[ind]) {
 			ind = i;
 		}
 	}
 
-	return colors[ind];
+	return erase_repeates[ind];
 }
 
 String Planet::get_most_used_saber_color(const String& planet_name)const {
