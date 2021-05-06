@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"installed__doctest__cmake_2dll_2dll_8cpp.html#a6bb7cbc91f40ca934f73b2cb4e545956":[26,0,0,2,4,0,0,2],
 "installed__doctest__cmake_2dll_2dll_8cpp.html#a943077000ca34e413469c28a1bf9854e":[26,0,0,2,4,0,0,3],
 "installed__doctest__cmake_2dll_2dll_8cpp.html#ac7c3b557a9e89c6eddc3c75389309a62":[26,0,0,2,4,0,0,1],
 "installed__doctest__cmake_2dll_2dll_8cpp.html#adf980eb1ed0df2191c56fd3d218c2819":[26,0,0,2,4,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "namespacebench.html":[24,0,23],
 "namespacebench.html#a14b47faa0d4dc7f426b7987af62d617a":[24,0,23,1],
 "namespacebench.html#a1a2e7ce3cad58089c2bbef352dff6145":[24,0,23,9],
-"namespacebench.html#a2bf40612e01424144f5520a36a5d878f":[24,0,23,20],
-"namespacebench.html#a2cfadb907f726d823e13215abec7e5df":[24,0,23,5]
+"namespacebench.html#a2bf40612e01424144f5520a36a5d878f":[24,0,23,20]
 };

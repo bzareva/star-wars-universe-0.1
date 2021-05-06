@@ -28,7 +28,6 @@ var files_dup =
     [ "ExitCommand.h", "_exit_command_8h.html", [
       [ "ExitCommand", "class_exit_command.html", "class_exit_command" ]
     ] ],
-    [ "FileFactory.cpp", "_file_factory_8cpp.html", null ],
     [ "FileFactory.h", "_file_factory_8h.html", null ],
     [ "Galaxy.cpp", "_galaxy_8cpp.html", "_galaxy_8cpp" ],
     [ "Galaxy.h", "_galaxy_8h.html", [

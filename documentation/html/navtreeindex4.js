@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"doctest_2doctest_8h.html#aca675e788cb45921358501d70f0a2529":[26,0,0,1,2,409],
 "doctest_2doctest_8h.html#acab009b596160e614aec1ace5aa8560b":[26,0,0,1,2,56],
 "doctest_2doctest_8h.html#acc08da2add47137024ca50062129be4b":[26,0,0,1,2,138],
 "doctest_2doctest_8h.html#acc9e700fe563dbe4d9406dd36dbf1fc1":[26,0,0,1,2,332],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "doctest_2examples_2executable__dll__and__plugin_2main_8cpp.html#ac7c3b557a9e89c6eddc3c75389309a62":[26,0,0,2,3,3,0],
 "doctest_2examples_2executable__dll__and__plugin_2main_8cpp.html#af03d0e870b24e4cf1ae54194cae2415e":[26,0,0,2,3,3,2],
 "doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html":[26,0,0,2,4,0,3],
-"doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627":[26,0,0,2,4,0,3,1],
-"doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#ac17c6907bbf4fd3dcd1846977a1f49b8":[26,0,0,2,4,0,3,3]
+"doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627":[26,0,0,2,4,0,3,1]
 };

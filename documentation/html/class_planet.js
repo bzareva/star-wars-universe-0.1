@@ -1,6 +1,6 @@
 var class_planet =
 [
-    [ "Planet", "class_planet.html#ac88200b337a62e1377858e3116f9412b", null ],
+    [ "Planet", "class_planet.html#a7ebe23c5ea656216f7ac638d60e33d79", null ],
     [ "Planet", "class_planet.html#ac00facbec0b9c5b7080ea253c8ab0637", null ],
     [ "Planet", "class_planet.html#a1cf90851c9d28e06dc44a35f463e8671", null ],
     [ "Planet", "class_planet.html#a02cff1d1b9c46249f924f903419a7542", null ],
@@ -17,7 +17,6 @@ var class_planet =
     [ "get_planet_name", "class_planet.html#a7fd2135bf86cba558b14cd66a372d1e9", null ],
     [ "get_strongest_jedi", "class_planet.html#a43cb166aaedab24ed834d560d701061c", null ],
     [ "get_youngest_jedi", "class_planet.html#a88bc2701cd0af73c1bb2fac49b85b571", null ],
-    [ "init_planet", "class_planet.html#a42e8fc483b60004974efc3807d01138d", null ],
     [ "operator!=", "class_planet.html#ab4e43adc0e030963f15d4c2b9981d1a7", null ],
     [ "operator+=", "class_planet.html#adc0060cbf641a11b9906191ad74beacf", null ],
     [ "operator+=", "class_planet.html#aaa15b13d2a89cfb81a9b71868f460c83", null ],
@@ -31,6 +30,7 @@ var class_planet =
     [ "promote_jedi", "class_planet.html#af292e9548ea28507b74009171de1d4c5", null ],
     [ "read_from_file", "class_planet.html#af7f8e9faa82e3b5b7450ea9afb4f45b8", null ],
     [ "remove_jedi", "class_planet.html#a09534a0c1ddff29b6d9e70333bc30f99", null ],
+    [ "set_jedi", "class_planet.html#a26120483d456af523c5a0b149b3bf791", null ],
     [ "set_planet_name", "class_planet.html#ace66459c821229b8a6537db309c49ced", null ],
     [ "sort", "class_planet.html#a231e388976436f5204a88f960b094dd4", null ],
     [ "sort_names", "class_planet.html#a9eec775fd22342271c516f7f0e3e5244", null ],

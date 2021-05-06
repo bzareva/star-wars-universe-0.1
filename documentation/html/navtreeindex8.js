@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"doctest__proxy_8h.html#a59ae4aa16b813e697cdd86f0d186cae4":[26,0,0,2,0,4,41],
 "doctest__proxy_8h.html#a5cebba865ce23b57972ca1121388f778":[26,0,0,2,0,4,49],
 "doctest__proxy_8h.html#a5e3994ee2a390162b1178e678beb238a":[26,0,0,2,0,4,36],
 "doctest__proxy_8h.html#a64816062909424d656483001c09a7361":[26,0,0,2,0,4,40],
@@ -153,8 +154,8 @@ var NAVTREEINDEX8 =
 "generate__html_8py.html#ac081979d917da9b5d9789b56437ac6ff":[26,0,0,3,5,4],
 "generate__html_8py.html#ac99c3ffa9ae2aaf4e07249f6f25c8be7":[26,0,0,3,5,3],
 "generate__html_8py.html#adb5dda22466bdb916f0d36113919f68b":[26,0,0,3,5,5],
-"globals.html":[26,1,0],
 "globals.html":[26,1,0,0],
+"globals.html":[26,1,0],
 "globals_b.html":[26,1,0,1],
 "globals_c.html":[26,1,0,2],
 "globals_d.html":[26,1,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "implementation__2_8cpp.html":[26,0,0,2,3,2],
 "implementation__2_8cpp.html#a3e6a647c46a0c43b60d9c927d6791ef2":[26,0,0,2,3,2,0],
 "index.html":[],
-"installed__doctest__cmake_2dll_2dll_8cpp.html":[26,0,0,2,4,0,0],
-"installed__doctest__cmake_2dll_2dll_8cpp.html#a6bb7cbc91f40ca934f73b2cb4e545956":[26,0,0,2,4,0,0,2]
+"installed__doctest__cmake_2dll_2dll_8cpp.html":[26,0,0,2,4,0,0]
 };

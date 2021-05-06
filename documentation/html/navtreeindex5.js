@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#ac17c6907bbf4fd3dcd1846977a1f49b8":[26,0,0,2,4,0,3,3],
 "doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#ac7c3b557a9e89c6eddc3c75389309a62":[26,0,0,2,4,0,3,0],
 "doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#afedfd31dbf864c397aec0565616dac51":[26,0,0,2,4,0,3,2],
 "doctest_2examples_2installed__doctest__cmake_2executable_2main_8cpp.html":[26,0,0,2,4,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "doctest__fwd_8h.html#a4147381e5cb6f68c1a315a852c63bf70":[26,0,0,1,1,1,342],
 "doctest__fwd_8h.html#a41e14871f960ec76113197ad929d18c8":[26,0,0,1,1,1,279],
 "doctest__fwd_8h.html#a4390850609b0f465bc8a4e7355f91177":[26,0,0,1,1,1,112],
-"doctest__fwd_8h.html#a43b51978c9505f682cbff9462a02f8af":[26,0,0,1,1,1,460],
-"doctest__fwd_8h.html#a4421c22609cbdce3ff36ad2d536daf5f":[26,0,0,1,1,1,290]
+"doctest__fwd_8h.html#a43b51978c9505f682cbff9462a02f8af":[26,0,0,1,1,1,460]
 };

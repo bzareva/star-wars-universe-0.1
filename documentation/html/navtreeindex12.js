@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"namespacedoctest_1_1detail_1_1binary_assert_comparison.html#a2117cafa5b007d26f2e0988f3a081569a3c74de0a3c132d12c394be6643e44e1b":[24,0,24,2,1,0,7],
 "namespacedoctest_1_1detail_1_1binary_assert_comparison.html#a2117cafa5b007d26f2e0988f3a081569a3c74de0a3c132d12c394be6643e44e1b":[24,0,24,2,1,1,7],
 "namespacedoctest_1_1detail_1_1binary_assert_comparison.html#a2117cafa5b007d26f2e0988f3a081569a7f152bed97655feae5e0809dc1326178":[24,0,24,2,1,0,8],
 "namespacedoctest_1_1detail_1_1binary_assert_comparison.html#a2117cafa5b007d26f2e0988f3a081569a7f152bed97655feae5e0809dc1326178":[24,0,24,2,1,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "structdoctest_1_1_context_options.html#a4651b5efbaf2ffc03d60fb4140d21dd3":[25,0,1,7,4],
 "structdoctest_1_1_context_options.html#a4e22eec59e63ed4ff6ab4dfce2389c99":[25,0,1,7,25],
 "structdoctest_1_1_context_options.html#a4fc9b6673b818b8cb5969725f16b59c3":[25,0,1,7,18],
-"structdoctest_1_1_context_options.html#a51b278efd4662f92bb3f7eb6a57974ba":[25,0,1,7,30],
-"structdoctest_1_1_context_options.html#a56344ffa781ee4da6cbf3f6c11da8564":[25,0,1,7,24]
+"structdoctest_1_1_context_options.html#a51b278efd4662f92bb3f7eb6a57974ba":[25,0,1,7,30]
 };

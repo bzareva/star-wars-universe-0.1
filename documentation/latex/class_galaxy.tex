@@ -24,8 +24,8 @@ Inheritance diagram for Galaxy\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em constructor with parameter from type ifstream for load to text file \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_galaxy_a057500667a569b2a25d25265a2ca4209}{Galaxy}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_planet}{Planet}} $>$ \&planets)
 \begin{DoxyCompactList}\small\item\em constructor with parameters \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_galaxy_a6c025516526b1838c635a1fb765ca483}{Galaxy}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&\mbox{\hyperlink{class_jedi}{Jedi}}, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)
-\begin{DoxyCompactList}\small\item\em separated data for adding one planet in the galaxy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy_a906c9822d54ba52adaeb0b9cf4019215}{Galaxy}} (const \mbox{\hyperlink{class_planet}{Planet}} \&planet)
+\begin{DoxyCompactList}\small\item\em constructor who adds only one planets for begin object \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_galaxy_acc968b7671d47b6559c26d4e63b7bbb1}{Galaxy}} (const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&obj)
 \begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_galaxy}{Galaxy}} \& \mbox{\hyperlink{class_galaxy_a0b3b71ede3fb88bd8b02886a70a2cc3a}{operator=}} (const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&rhs)
@@ -72,7 +72,7 @@ virtual void \mbox{\hyperlink{class_galaxy_a5e34f7cfcdcbd543fbee4245a5b2a389}{pr
 \begin{DoxyCompactList}\small\item\em increases the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank up in ladder and increases its strength by a formula \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_galaxy_a4aebd5362d002499791f8c0a48a3d04d}{demote\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name, const double \&multiplier) override
 \begin{DoxyCompactList}\small\item\em decreases the given \mbox{\hyperlink{class_jedi}{Jedi}} by one rank down in ladder and lowers its strength by a formula \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_galaxy_aecfac4c178e05ca19dff485bf02910d4}{add\+\_\+planet}} (const \mbox{\hyperlink{class_planet}{Planet}} \&planet\+\_\+name)
+void \mbox{\hyperlink{class_galaxy_a066b18edb85a2510e1a1001b329572ad}{add\+\_\+planet}} (const \mbox{\hyperlink{class_planet}{Planet}} \&planet)
 \begin{DoxyCompactList}\small\item\em adds planet to galaxy \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{class_galaxy_a8b5af87436dc52f5e816a67330bae6db}{get\+\_\+count\+\_\+planet}} () const
 \item 
@@ -80,7 +80,7 @@ unsigned \mbox{\hyperlink{class_galaxy_a8b5af87436dc52f5e816a67330bae6db}{get\+\
 \item 
 void \mbox{\hyperlink{class_galaxy_a3f6100f69629d0e79e82fe7b9fd17387}{operator\+\_\+plus}} (const \mbox{\hyperlink{class_string}{String}} \&lhs\+\_\+planet, const \mbox{\hyperlink{class_string}{String}} \&rhs\+\_\+planet)
 \begin{DoxyCompactList}\small\item\em console outputs is sorted form (lexicographic) information about the inhabitants two \mbox{\hyperlink{class_jedi}{Jedi}} planets \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_galaxy_aac59485045593b01ba1b46130d3e0700}{add\+\_\+vec\+\_\+jedi}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&jedi, const unsigned \&index, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)
+void \mbox{\hyperlink{class_galaxy_a85ca37ae77f1ad9c09b0647dc363c5f7}{add\+\_\+vec\+\_\+jedi}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&jedi, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)
 \begin{DoxyCompactList}\small\item\em adds vector of jedi in given planet \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -133,15 +133,15 @@ constructor with parameter from type ifstream for load to text file
 
 constructor with parameters 
 
-\mbox{\Hypertarget{class_galaxy_a6c025516526b1838c635a1fb765ca483}\label{class_galaxy_a6c025516526b1838c635a1fb765ca483}} 
+\mbox{\Hypertarget{class_galaxy_a906c9822d54ba52adaeb0b9cf4019215}\label{class_galaxy_a906c9822d54ba52adaeb0b9cf4019215}} 
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
 \doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
-{\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&}]{Jedi,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{planet }\end{DoxyParamCaption})}
 
 
 
-separated data for adding one planet in the galaxy 
+constructor who adds only one planets for begin object 
 
 \mbox{\Hypertarget{class_galaxy_acc968b7671d47b6559c26d4e63b7bbb1}\label{class_galaxy_acc968b7671d47b6559c26d4e63b7bbb1}} 
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
@@ -156,21 +156,21 @@ copy constructor
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_galaxy_aecfac4c178e05ca19dff485bf02910d4}\label{class_galaxy_aecfac4c178e05ca19dff485bf02910d4}} 
+\mbox{\Hypertarget{class_galaxy_a066b18edb85a2510e1a1001b329572ad}\label{class_galaxy_a066b18edb85a2510e1a1001b329572ad}} 
 \index{Galaxy@{Galaxy}!add\_planet@{add\_planet}}
 \index{add\_planet@{add\_planet}!Galaxy@{Galaxy}}
 \doxysubsubsection{\texorpdfstring{add\_planet()}{add\_planet()}}
-{\footnotesize\ttfamily void Galaxy\+::add\+\_\+planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Galaxy\+::add\+\_\+planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{planet }\end{DoxyParamCaption})}
 
 
 
 adds planet to galaxy 
 
-\mbox{\Hypertarget{class_galaxy_aac59485045593b01ba1b46130d3e0700}\label{class_galaxy_aac59485045593b01ba1b46130d3e0700}} 
+\mbox{\Hypertarget{class_galaxy_a85ca37ae77f1ad9c09b0647dc363c5f7}\label{class_galaxy_a85ca37ae77f1ad9c09b0647dc363c5f7}} 
 \index{Galaxy@{Galaxy}!add\_vec\_jedi@{add\_vec\_jedi}}
 \index{add\_vec\_jedi@{add\_vec\_jedi}!Galaxy@{Galaxy}}
 \doxysubsubsection{\texorpdfstring{add\_vec\_jedi()}{add\_vec\_jedi()}}
-{\footnotesize\ttfamily void Galaxy\+::add\+\_\+vec\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&}]{jedi,  }\item[{const unsigned \&}]{index,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Galaxy\+::add\+\_\+vec\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&}]{jedi,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
 
 
 
