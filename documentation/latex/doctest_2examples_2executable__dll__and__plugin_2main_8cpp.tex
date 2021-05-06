@@ -1,0 +1,65 @@
+\hypertarget{doctest_2examples_2executable__dll__and__plugin_2main_8cpp}{}\doxysection{C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/executable\+\_\+dll\+\_\+and\+\_\+plugin/main.cpp File Reference}
+\label{doctest_2examples_2executable__dll__and__plugin_2main_8cpp}\index{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/executable\_dll\_and\_plugin/main.cpp@{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/executable\_dll\_and\_plugin/main.cpp}}
+{\ttfamily \#include $<$doctest/doctest.\+h$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$dlfcn.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_ac7c3b557a9e89c6eddc3c75389309a62}{DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENTATION\+\_\+\+IN\+\_\+\+DLL}}
+\item 
+\#define \mbox{\hyperlink{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_ab17c427949b008ed77726d347525fb71}{Load\+Dynamic\+Lib}}(lib)~dlopen(\char`\"{}lib\char`\"{} lib \char`\"{}.so\char`\"{}, RTLD\+\_\+\+NOW)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_a8d4bcda90b381d9ce4b1a87c7f353414}{TEST\+\_\+\+CASE}} (\char`\"{}executable\char`\"{})
+\item 
+\mbox{\hyperlink{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_a556bea068ab4f7f0ac208fe5ab937384}{REGISTER\+\_\+\+EXCEPTION\+\_\+\+TRANSLATOR}} (double \&e)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a4fd9f1ce2de2fad78a45972c2ee216d4}{DOCTEST\+\_\+\+SYMBOL\+\_\+\+IMPORT}} void \mbox{\hyperlink{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_af03d0e870b24e4cf1ae54194cae2415e}{from\+\_\+dll}} ()
+\item 
+int \mbox{\hyperlink{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_ac7c3b557a9e89c6eddc3c75389309a62}\label{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_ac7c3b557a9e89c6eddc3c75389309a62}} 
+\index{main.cpp@{main.cpp}!DOCTEST\_CONFIG\_IMPLEMENTATION\_IN\_DLL@{DOCTEST\_CONFIG\_IMPLEMENTATION\_IN\_DLL}}
+\index{DOCTEST\_CONFIG\_IMPLEMENTATION\_IN\_DLL@{DOCTEST\_CONFIG\_IMPLEMENTATION\_IN\_DLL}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_CONFIG\_IMPLEMENTATION\_IN\_DLL}{DOCTEST\_CONFIG\_IMPLEMENTATION\_IN\_DLL}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENTATION\+\_\+\+IN\+\_\+\+DLL}
+
+\mbox{\Hypertarget{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_ab17c427949b008ed77726d347525fb71}\label{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_ab17c427949b008ed77726d347525fb71}} 
+\index{main.cpp@{main.cpp}!LoadDynamicLib@{LoadDynamicLib}}
+\index{LoadDynamicLib@{LoadDynamicLib}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{LoadDynamicLib}{LoadDynamicLib}}
+{\footnotesize\ttfamily \#define Load\+Dynamic\+Lib(\begin{DoxyParamCaption}\item[{}]{lib }\end{DoxyParamCaption})~dlopen(\char`\"{}lib\char`\"{} lib \char`\"{}.so\char`\"{}, RTLD\+\_\+\+NOW)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_af03d0e870b24e4cf1ae54194cae2415e}\label{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_af03d0e870b24e4cf1ae54194cae2415e}} 
+\index{main.cpp@{main.cpp}!from\_dll@{from\_dll}}
+\index{from\_dll@{from\_dll}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{from\_dll()}{from\_dll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_a4fd9f1ce2de2fad78a45972c2ee216d4}{DOCTEST\+\_\+\+SYMBOL\+\_\+\+IMPORT}} void from\+\_\+dll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_a556bea068ab4f7f0ac208fe5ab937384}\label{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_a556bea068ab4f7f0ac208fe5ab937384}} 
+\index{main.cpp@{main.cpp}!REGISTER\_EXCEPTION\_TRANSLATOR@{REGISTER\_EXCEPTION\_TRANSLATOR}}
+\index{REGISTER\_EXCEPTION\_TRANSLATOR@{REGISTER\_EXCEPTION\_TRANSLATOR}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{REGISTER\_EXCEPTION\_TRANSLATOR()}{REGISTER\_EXCEPTION\_TRANSLATOR()}}
+{\footnotesize\ttfamily REGISTER\+\_\+\+EXCEPTION\+\_\+\+TRANSLATOR (\begin{DoxyParamCaption}\item[{double \&}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_a8d4bcda90b381d9ce4b1a87c7f353414}\label{doctest_2examples_2executable__dll__and__plugin_2main_8cpp_a8d4bcda90b381d9ce4b1a87c7f353414}} 
+\index{main.cpp@{main.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}executable\char`\"{}}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,81 @@
+\hypertarget{logging_8cpp}{}\doxysection{C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\+\_\+features/logging.cpp File Reference}
+\label{logging_8cpp}\index{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/logging.cpp@{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/logging.cpp}}
+{\ttfamily \#include $<$doctest/doctest.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logging_8cpp_adfcbd19768771f2e9ec8c0ab7b2dbaec}{MY\+\_\+\+ASSERT}}(x)~third\+Party\+Assert(x, false, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{logging_8cpp_a0f7d2df99fd18d442aa70f537886a7e8}{MY\+\_\+\+ASSERT\+\_\+\+FATAL}}(x)~third\+Party\+Assert(x, true, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_ad3e5c37dc8bd7b0f9346c99c6aab2d1d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+BEGIN}} \mbox{\hyperlink{doctest__fwd_8h_acca96650713994a51c3deb8e4bdec43d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+END}} \mbox{\hyperlink{logging_8cpp_abd9bbde182bac9203874ebe68824ac77}{TEST\+\_\+\+CASE}} (\char`\"{}logging the counter of a loop\char`\"{})
+\item 
+\mbox{\hyperlink{logging_8cpp_a12922916914c906add3fa833d0180fde}{TEST\+\_\+\+CASE}} (\char`\"{}a \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case that will end from an exception\char`\"{})
+\item 
+\mbox{\hyperlink{logging_8cpp_a689a29deb73f051ef0cf50c0ed602bc3}{TEST\+\_\+\+CASE}} (\char`\"{}a \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case that will end from an exception and should print the unprinted context\char`\"{})
+\item 
+\mbox{\hyperlink{logging_8cpp_a3a03dd7be6598773ad524243271fd31d}{TEST\+\_\+\+CASE}} (\char`\"{}third party asserts can report \mbox{\hyperlink{doctest_8cpp_adcd503b59018cb83977f0de47e855218}{failures}} to doctest\char`\"{})
+\item 
+\mbox{\hyperlink{logging_8cpp_abdf6bdcced5ed9f784bdc7df2ec90de9}{TEST\+\_\+\+CASE}} (\char`\"{}explicit \mbox{\hyperlink{doctest_8cpp_adcd503b59018cb83977f0de47e855218}{failures}} 1\char`\"{})
+\item 
+\mbox{\hyperlink{logging_8cpp_a278a790732e171021d8af146071bb61f}{TEST\+\_\+\+CASE}} (\char`\"{}explicit \mbox{\hyperlink{doctest_8cpp_adcd503b59018cb83977f0de47e855218}{failures}} 2\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logging_8cpp_adfcbd19768771f2e9ec8c0ab7b2dbaec}\label{logging_8cpp_adfcbd19768771f2e9ec8c0ab7b2dbaec}} 
+\index{logging.cpp@{logging.cpp}!MY\_ASSERT@{MY\_ASSERT}}
+\index{MY\_ASSERT@{MY\_ASSERT}!logging.cpp@{logging.cpp}}
+\doxysubsubsection{\texorpdfstring{MY\_ASSERT}{MY\_ASSERT}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+ASSERT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~third\+Party\+Assert(x, false, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{logging_8cpp_a0f7d2df99fd18d442aa70f537886a7e8}\label{logging_8cpp_a0f7d2df99fd18d442aa70f537886a7e8}} 
+\index{logging.cpp@{logging.cpp}!MY\_ASSERT\_FATAL@{MY\_ASSERT\_FATAL}}
+\index{MY\_ASSERT\_FATAL@{MY\_ASSERT\_FATAL}!logging.cpp@{logging.cpp}}
+\doxysubsubsection{\texorpdfstring{MY\_ASSERT\_FATAL}{MY\_ASSERT\_FATAL}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+ASSERT\+\_\+\+FATAL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~third\+Party\+Assert(x, true, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{logging_8cpp_a689a29deb73f051ef0cf50c0ed602bc3}\label{logging_8cpp_a689a29deb73f051ef0cf50c0ed602bc3}} 
+\index{logging.cpp@{logging.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!logging.cpp@{logging.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}a \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case that will end from an exception and should print the unprinted context\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8cpp_a12922916914c906add3fa833d0180fde}\label{logging_8cpp_a12922916914c906add3fa833d0180fde}} 
+\index{logging.cpp@{logging.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!logging.cpp@{logging.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}a \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case that will end from an exception\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8cpp_abdf6bdcced5ed9f784bdc7df2ec90de9}\label{logging_8cpp_abdf6bdcced5ed9f784bdc7df2ec90de9}} 
+\index{logging.cpp@{logging.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!logging.cpp@{logging.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}explicit \mbox{\hyperlink{doctest_8cpp_adcd503b59018cb83977f0de47e855218}{failures}} 1\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8cpp_a278a790732e171021d8af146071bb61f}\label{logging_8cpp_a278a790732e171021d8af146071bb61f}} 
+\index{logging.cpp@{logging.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!logging.cpp@{logging.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}explicit \mbox{\hyperlink{doctest_8cpp_adcd503b59018cb83977f0de47e855218}{failures}} 2\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8cpp_abd9bbde182bac9203874ebe68824ac77}\label{logging_8cpp_abd9bbde182bac9203874ebe68824ac77}} 
+\index{logging.cpp@{logging.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!logging.cpp@{logging.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_ad3e5c37dc8bd7b0f9346c99c6aab2d1d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+BEGIN}} \mbox{\hyperlink{doctest__fwd_8h_acca96650713994a51c3deb8e4bdec43d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+END}} TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}logging the counter of a loop\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8cpp_a3a03dd7be6598773ad524243271fd31d}\label{logging_8cpp_a3a03dd7be6598773ad524243271fd31d}} 
+\index{logging.cpp@{logging.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!logging.cpp@{logging.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}third party asserts can report \mbox{\hyperlink{doctest_8cpp_adcd503b59018cb83977f0de47e855218}{failures}} to doctest\char`\"{}}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,74 @@
+\hypertarget{struct_info_builder}{}\doxysection{Info\+Builder Struct Reference}
+\label{struct_info_builder}\index{InfoBuilder@{InfoBuilder}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_info_builder_1_1_capture}{Capture}}
+\item 
+struct \mbox{\hyperlink{struct_info_builder_1_1_chunk}{Chunk}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_info_builder}{Info\+Builder}} \& \mbox{\hyperlink{struct_info_builder_a91ddf055031d9909a1e57020e28ee9b3}{operator$<$$<$}} (const T \&in)
+\item 
+\mbox{\hyperlink{struct_info_builder_af734945e1bb638f146e6b59ad4476f09}{$\sim$\+Info\+Builder}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_info_builder}{Info\+Builder}} \& \mbox{\hyperlink{struct_info_builder_abde24ebe918593f4727e0c8fb75356f5}{operator$<$$<$}} (const T \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_info_builder_1_1_chunk}{Chunk}} \mbox{\hyperlink{struct_info_builder_aa103bedd426971beab50370fd9fd3f7d}{stack\+Chunks}} \mbox{[}\mbox{\hyperlink{how__captures__work_8cpp_a5b6826d539cb124c75de34dbd030fd86}{NUM\+\_\+\+CAPTURES\+\_\+\+ON\+\_\+\+STACK}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_info_builder_aa21ab297b19943daa1695bdbf6aabed1}{num\+Captures}} = 0
+\item 
+std\+::list$<$ \mbox{\hyperlink{struct_info_builder_1_1_chunk}{Chunk}} $>$ \mbox{\hyperlink{struct_info_builder_a3deb8fa4a605efd8eca70ad4af86947d}{heap\+Chunks}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_info_builder_af734945e1bb638f146e6b59ad4476f09}\label{struct_info_builder_af734945e1bb638f146e6b59ad4476f09}} 
+\index{InfoBuilder@{InfoBuilder}!````~InfoBuilder@{$\sim$InfoBuilder}}
+\index{````~InfoBuilder@{$\sim$InfoBuilder}!InfoBuilder@{InfoBuilder}}
+\doxysubsubsection{\texorpdfstring{$\sim$InfoBuilder()}{~InfoBuilder()}}
+{\footnotesize\ttfamily Info\+Builder\+::$\sim$\+Info\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_info_builder_abde24ebe918593f4727e0c8fb75356f5}\label{struct_info_builder_abde24ebe918593f4727e0c8fb75356f5}} 
+\index{InfoBuilder@{InfoBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!InfoBuilder@{InfoBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_info_builder}{Info\+Builder}}\& Info\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const T \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{struct_info_builder_a91ddf055031d9909a1e57020e28ee9b3}\label{struct_info_builder_a91ddf055031d9909a1e57020e28ee9b3}} 
+\index{InfoBuilder@{InfoBuilder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!InfoBuilder@{InfoBuilder}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_info_builder}{Info\+Builder}}\& Info\+Builder\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_info_builder_a3deb8fa4a605efd8eca70ad4af86947d}\label{struct_info_builder_a3deb8fa4a605efd8eca70ad4af86947d}} 
+\index{InfoBuilder@{InfoBuilder}!heapChunks@{heapChunks}}
+\index{heapChunks@{heapChunks}!InfoBuilder@{InfoBuilder}}
+\doxysubsubsection{\texorpdfstring{heapChunks}{heapChunks}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{struct_info_builder_1_1_chunk}{Chunk}}$>$ Info\+Builder\+::heap\+Chunks}
+
+\mbox{\Hypertarget{struct_info_builder_aa21ab297b19943daa1695bdbf6aabed1}\label{struct_info_builder_aa21ab297b19943daa1695bdbf6aabed1}} 
+\index{InfoBuilder@{InfoBuilder}!numCaptures@{numCaptures}}
+\index{numCaptures@{numCaptures}!InfoBuilder@{InfoBuilder}}
+\doxysubsubsection{\texorpdfstring{numCaptures}{numCaptures}}
+{\footnotesize\ttfamily int Info\+Builder\+::num\+Captures = 0}
+
+\mbox{\Hypertarget{struct_info_builder_aa103bedd426971beab50370fd9fd3f7d}\label{struct_info_builder_aa103bedd426971beab50370fd9fd3f7d}} 
+\index{InfoBuilder@{InfoBuilder}!stackChunks@{stackChunks}}
+\index{stackChunks@{stackChunks}!InfoBuilder@{InfoBuilder}}
+\doxysubsubsection{\texorpdfstring{stackChunks}{stackChunks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_info_builder_1_1_chunk}{Chunk}} Info\+Builder\+::stack\+Chunks\mbox{[}\mbox{\hyperlink{how__captures__work_8cpp_a5b6826d539cb124c75de34dbd030fd86}{NUM\+\_\+\+CAPTURES\+\_\+\+ON\+\_\+\+STACK}}\mbox{]}}
+

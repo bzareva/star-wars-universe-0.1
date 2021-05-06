@@ -2,6 +2,11 @@
 \label{class_galaxy}\index{Galaxy@{Galaxy}}
 
 
+Inherits of \mbox{\hyperlink{class_base}{Base}} class.  
+
+
+
+
 {\ttfamily \#include $<$Galaxy.\+h$>$}
 
 Inheritance diagram for Galaxy\+:\begin{figure}[H]
@@ -17,8 +22,10 @@ Inheritance diagram for Galaxy\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_galaxy_a6d5a863cd384e409155568401e82ced1}{Galaxy}} (std\+::ifstream \&fin)
 \begin{DoxyCompactList}\small\item\em constructor with parameter from type ifstream for load to text file \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_galaxy_a65cc4c3ebf65ec75da01c11cc7a6e3aa}{Galaxy}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_planet}{Planet}} $>$ planets)
+\mbox{\hyperlink{class_galaxy_a057500667a569b2a25d25265a2ca4209}{Galaxy}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_planet}{Planet}} $>$ \&planets)
 \begin{DoxyCompactList}\small\item\em constructor with parameters \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_galaxy_a6c025516526b1838c635a1fb765ca483}{Galaxy}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&\mbox{\hyperlink{class_jedi}{Jedi}}, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)
+\begin{DoxyCompactList}\small\item\em separated data for adding one planet in the galaxy \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_galaxy_acc968b7671d47b6559c26d4e63b7bbb1}{Galaxy}} (const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&obj)
 \begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_galaxy}{Galaxy}} \& \mbox{\hyperlink{class_galaxy_a0b3b71ede3fb88bd8b02886a70a2cc3a}{operator=}} (const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&rhs)
@@ -72,13 +79,15 @@ unsigned \mbox{\hyperlink{class_galaxy_a8b5af87436dc52f5e816a67330bae6db}{get\+\
 \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_galaxy_a171fb4b16eb0231231729f6a53b0e88a}{get\+\_\+planet\+\_\+name}} (unsigned index) const
 \item 
 void \mbox{\hyperlink{class_galaxy_a3f6100f69629d0e79e82fe7b9fd17387}{operator\+\_\+plus}} (const \mbox{\hyperlink{class_string}{String}} \&lhs\+\_\+planet, const \mbox{\hyperlink{class_string}{String}} \&rhs\+\_\+planet)
-\begin{DoxyCompactList}\small\item\em console outputs is sorted form (lexicographic) information about the inhabitants two \mbox{\hyperlink{class_jedi}{Jedi}} planets \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em console outputs is sorted form (lexicographic) information about the inhabitants two \mbox{\hyperlink{class_jedi}{Jedi}} planets \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_galaxy_aac59485045593b01ba1b46130d3e0700}{add\+\_\+vec\+\_\+jedi}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&jedi, const unsigned \&index, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)
+\begin{DoxyCompactList}\small\item\em adds vector of jedi in given planet \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 std\+::istream \& \mbox{\hyperlink{class_galaxy_aa89b546629b0ec74519b497bf1503a32}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_galaxy}{Galaxy}} \&obj)
 \begin{DoxyCompactList}\small\item\em input from console for \mbox{\hyperlink{class_galaxy}{Galaxy}} \end{DoxyCompactList}\item 
-std\+::ostream \& \mbox{\hyperlink{class_galaxy_ad777caa6f609be5d0cf87b2c1894ba29}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&obj)
+\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \& \mbox{\hyperlink{class_galaxy_ad777caa6f609be5d0cf87b2c1894ba29}{operator$<$$<$}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&out, const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&obj)
 \begin{DoxyCompactList}\small\item\em formatted output for \mbox{\hyperlink{class_galaxy}{Galaxy}} on console \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_galaxy}{Galaxy}} \mbox{\hyperlink{class_galaxy_a890dbcd1c994591cb3a2d2be9399c500}{operator+}} (\mbox{\hyperlink{class_galaxy}{Galaxy}} lhs, const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&rhs)
 \begin{DoxyCompactList}\small\item\em gathers the inhabitants of two galaxy \end{DoxyCompactList}\item 
@@ -89,13 +98,15 @@ std\+::ostream \& \mbox{\hyperlink{class_galaxy_ad777caa6f609be5d0cf87b2c1894ba2
 
 
 \doxysubsection{Detailed Description}
-Inherits of \mbox{\hyperlink{class_base}{Base}} class. Container of planets. 
+Inherits of \mbox{\hyperlink{class_base}{Base}} class. 
+
+Container of planets. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_galaxy_aac431eec66d158f5f82cdbc3eec39586}\label{class_galaxy_aac431eec66d158f5f82cdbc3eec39586}} 
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
-\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
 {\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -105,27 +116,37 @@ default constructor
 \mbox{\Hypertarget{class_galaxy_a6d5a863cd384e409155568401e82ced1}\label{class_galaxy_a6d5a863cd384e409155568401e82ced1}} 
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
-\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{fin }\end{DoxyParamCaption})}
 
 
 
 constructor with parameter from type ifstream for load to text file 
 
-\mbox{\Hypertarget{class_galaxy_a65cc4c3ebf65ec75da01c11cc7a6e3aa}\label{class_galaxy_a65cc4c3ebf65ec75da01c11cc7a6e3aa}} 
+\mbox{\Hypertarget{class_galaxy_a057500667a569b2a25d25265a2ca4209}\label{class_galaxy_a057500667a569b2a25d25265a2ca4209}} 
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
-\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_planet}{Planet}} $>$}]{planets }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_planet}{Planet}} $>$ \&}]{planets }\end{DoxyParamCaption})}
 
 
 
 constructor with parameters 
 
+\mbox{\Hypertarget{class_galaxy_a6c025516526b1838c635a1fb765ca483}\label{class_galaxy_a6c025516526b1838c635a1fb765ca483}} 
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&}]{Jedi,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+separated data for adding one planet in the galaxy 
+
 \mbox{\Hypertarget{class_galaxy_acc968b7671d47b6559c26d4e63b7bbb1}\label{class_galaxy_acc968b7671d47b6559c26d4e63b7bbb1}} 
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
 \index{Galaxy@{Galaxy}!Galaxy@{Galaxy}}
-\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+\doxysubsubsection{\texorpdfstring{Galaxy()}{Galaxy()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
 {\footnotesize\ttfamily Galaxy\+::\+Galaxy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&}]{obj }\end{DoxyParamCaption})}
 
 
@@ -144,6 +165,16 @@ copy constructor
 
 
 adds planet to galaxy 
+
+\mbox{\Hypertarget{class_galaxy_aac59485045593b01ba1b46130d3e0700}\label{class_galaxy_aac59485045593b01ba1b46130d3e0700}} 
+\index{Galaxy@{Galaxy}!add\_vec\_jedi@{add\_vec\_jedi}}
+\index{add\_vec\_jedi@{add\_vec\_jedi}!Galaxy@{Galaxy}}
+\doxysubsubsection{\texorpdfstring{add\_vec\_jedi()}{add\_vec\_jedi()}}
+{\footnotesize\ttfamily void Galaxy\+::add\+\_\+vec\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&}]{jedi,  }\item[{const unsigned \&}]{index,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+adds vector of jedi in given planet 
 
 \mbox{\Hypertarget{class_galaxy_aee3ef9b038084f88d6ef6edfde236f41}\label{class_galaxy_aee3ef9b038084f88d6ef6edfde236f41}} 
 \index{Galaxy@{Galaxy}!at@{at}}
@@ -483,7 +514,7 @@ remove planet from this galaxy
 \index{Galaxy@{Galaxy}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Galaxy@{Galaxy}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&}]{out,  }\item[{const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -499,9 +530,3 @@ formatted output for \mbox{\hyperlink{class_galaxy}{Galaxy}} on console
 
 input from console for \mbox{\hyperlink{class_galaxy}{Galaxy}} 
 
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_galaxy_8h}{Galaxy.\+h}}\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_galaxy_8cpp}{Galaxy.\+cpp}}\end{DoxyCompactItemize}

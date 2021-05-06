@@ -1,0 +1,152 @@
+{\bfseries{doctest}} works quite nicely without any command line options at all -\/ but for more control a bunch are available.
+
+{\bfseries{Query flags}} -\/ after the result is printed the program quits without executing any test cases (and if the framework is integrated into a client codebase which \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_main}{$\ast$$\ast$supplies it\textquotesingle{}s own \`{}\`{}\`{}main()\`{}\`{}\`{} entry point$\ast$$\ast$}} -\/ the program should check the result of {\ttfamily should\+Exit()} method after calling {\ttfamily run()} on a {\ttfamily \mbox{\hyperlink{classdoctest_1_1_context}{doctest\+::\+Context}}} object and should exit -\/ this is left up to the user).
+
+{\bfseries{Int/\+String options}} -\/ they require a value after the {\ttfamily =} sign -\/ without spaces! For example\+: {\ttfamily -\/-\/order-\/by=rand}.
+
+{\bfseries{Bool options}} -\/ they expect {\ttfamily 1}/{\ttfamily yes}/{\ttfamily on}/{\ttfamily true} or {\ttfamily 0}/{\ttfamily no}/{\ttfamily off}/{\ttfamily false} after the {\ttfamily =} sign -\/ but they can also be used like flags and the {\ttfamily =value} part can be skipped -\/ then {\ttfamily true} is assumed. ~\newline
+
+
+{\bfseries{Filters}} use wildcards for matching values -\/ where {\ttfamily $\ast$} means \char`\"{}match any sequence\char`\"{} and {\ttfamily ?} means \char`\"{}match any one character\char`\"{}. To pass a pattern with an interval use {\ttfamily \char`\"{}\char`\"{}} like this\+: {\ttfamily -\/-\/test-\/case=\char`\"{}$\ast$no sound$\ast$,vaguely named test number ?\char`\"{}}.
+
+All the options can also be set with code (defaults/overrides) if the user \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_main}{$\ast$$\ast$supplies the \`{}\`{}\`{}main()\`{}\`{}\`{} function$\ast$$\ast$}}.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Query Flags   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Query Flags   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily -\/?} ~~~ {\ttfamily -\/-\/help} {\ttfamily -\/h}   &Prints a help message listing all these flags/options    \\\cline{1-2}
+{\ttfamily -\/v} ~~~ {\ttfamily -\/-\/version}   &Prints the version of the {\bfseries{doctest}} framework    \\\cline{1-2}
+{\ttfamily -\/c} ~~~ {\ttfamily -\/-\/count}   &Prints the number of test cases matching the current filters (see below)    \\\cline{1-2}
+{\ttfamily -\/ltc} {\ttfamily -\/-\/list-\/test-\/cases}   &Lists all test cases by name which match the current filters (see below)    \\\cline{1-2}
+{\ttfamily -\/lts} {\ttfamily -\/-\/list-\/test-\/suites}   &Lists all test suites by name which have at least one test case matching the current filters (see below)    \\\cline{1-2}
+{\ttfamily -\/lr} {\ttfamily -\/-\/list-\/reporters}   &Lists all registered \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_reporters}{$\ast$$\ast$reporters$\ast$$\ast$}}    \\\cline{1-2}
+{\bfseries{Int/\+String Options}}   &\DoxyHorRuler{1}
+    \\\cline{1-2}
+{\ttfamily -\/tc} ~ {\ttfamily -\/-\/test-\/case=$<$filters$>$}   &Filters test cases based on their name. By default all test cases match but if a value is given to this filter like {\ttfamily -\/-\/test-\/case=$\ast$math$\ast$,$\ast$sound$\ast$} then only test cases who match at least one of the patterns in the comma-\/separated list with wildcards will get executed/counted/listed    \\\cline{1-2}
+{\ttfamily -\/tce} {\ttfamily -\/-\/test-\/case-\/exclude=$<$filters$>$}   &Same as the {\ttfamily -\/test-\/case=$<$filters$>$} option but if any of the patterns in the comma-\/separated list of values matches -\/ then the test case is skipped    \\\cline{1-2}
+{\ttfamily -\/sf} ~ {\ttfamily -\/-\/source-\/file=$<$filters$>$}   &Same as {\ttfamily -\/-\/test-\/case=$<$filters$>$} but filters based on the file in which test cases are written    \\\cline{1-2}
+{\ttfamily -\/sfe} {\ttfamily -\/-\/source-\/file-\/exclude=$<$filters$>$}   &Same as {\ttfamily -\/-\/test-\/case-\/exclude=$<$filters$>$} but filters based on the file in which test cases are written    \\\cline{1-2}
+{\ttfamily -\/ts} ~ {\ttfamily -\/-\/test-\/suite=$<$filters$>$}   &Same as {\ttfamily -\/-\/test-\/case=$<$filters$>$} but filters based on the test suite in which test cases are in    \\\cline{1-2}
+{\ttfamily -\/tse} {\ttfamily -\/-\/test-\/suite-\/exclude=$<$filters$>$}   &Same as {\ttfamily -\/-\/test-\/case-\/exclude=$<$filters$>$} but filters based on the test suite in which test cases are in    \\\cline{1-2}
+{\ttfamily -\/sc} ~ {\ttfamily -\/-\/subcase=$<$filters$>$}   &Same as {\ttfamily -\/-\/test-\/case=$<$filters$>$} but filters subcases based on their names    \\\cline{1-2}
+{\ttfamily -\/sce} {\ttfamily -\/-\/subcase-\/exclude=$<$filters$>$}   &Same as {\ttfamily -\/-\/test-\/case-\/exclude=$<$filters$>$} but filters based on subcase names    \\\cline{1-2}
+{\ttfamily -\/r} {\ttfamily -\/-\/reporters=$<$filters$>$}   &List of \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_reporters}{$\ast$$\ast$reporters$\ast$$\ast$}} to use (default is {\ttfamily console})    \\\cline{1-2}
+{\ttfamily -\/o} ~ {\ttfamily -\/-\/out=$<$string$>$}   &Output filename    \\\cline{1-2}
+{\ttfamily -\/ob} ~ {\ttfamily -\/-\/order-\/by=$<$string$>$}   &Test cases will be sorted before being executed either by {\bfseries{the file in which they are}} / {\bfseries{the test suite they are in}} / {\bfseries{their name}} / {\bfseries{random}}. The possible values of {\ttfamily $<$string$>$} are {\ttfamily file}/{\ttfamily suite}/{\ttfamily name}/{\ttfamily rand}/{\ttfamily none}. The default is {\ttfamily file}. {\bfseries{NOTE\+: the order produced by the {\ttfamily file}, {\ttfamily suite} and {\ttfamily name} options is compiler-\/dependent and might differ depending on the compiler used.}}    \\\cline{1-2}
+{\ttfamily -\/rs} ~ {\ttfamily -\/-\/rand-\/seed=$<$int$>$}   &The seed for random ordering    \\\cline{1-2}
+{\ttfamily -\/f} ~~~ {\ttfamily -\/-\/first=$<$int$>$}   &The {\bfseries{first}} test case to execute which passes the current filters -\/ for range-\/based execution -\/ see \href{../../examples/range_based_execution.py}{\texttt{ {\bfseries{the example python script}}}}    \\\cline{1-2}
+{\ttfamily -\/l} ~~~ {\ttfamily -\/-\/last=$<$int$>$}   &The {\bfseries{last}} test case to execute which passes the current filters -\/ for range-\/based execution -\/ see \href{../../examples/range_based_execution.py}{\texttt{ {\bfseries{the example python script}}}}    \\\cline{1-2}
+{\ttfamily -\/aa} ~ {\ttfamily -\/-\/abort-\/after=$<$int$>$}   &The testing framework will stop executing test cases/assertions after this many failed assertions. The default is 0 which means don\textquotesingle{}t stop at all. Note that the framework uses an exception to stop the current test case regardless of the level of the assert ({\ttfamily CHECK}/{\ttfamily REQUIRE}) -\/ so be careful with asserts in destructors...    \\\cline{1-2}
+{\ttfamily -\/scfl} {\ttfamily -\/-\/subcase-\/filter-\/levels=$<$int$>$}   &Apply subcase filters only for the first {\ttfamily $<$int$>$} levels of nested subcases and just run the ones nested deeper. Default is a very high number which means {\itshape filter any subcase}    \\\cline{1-2}
+{\bfseries{Bool Options}}   &\DoxyHorRuler{1}
+    \\\cline{1-2}
+{\ttfamily -\/s} ~~~ {\ttfamily -\/-\/success=$<$bool$>$}   &To include successful assertions in the output    \\\cline{1-2}
+{\ttfamily -\/cs} ~ {\ttfamily -\/-\/case-\/sensitive=$<$bool$>$}   &Filters being treated as case sensitive    \\\cline{1-2}
+{\ttfamily -\/e} ~~~ {\ttfamily -\/-\/exit=$<$bool$>$}   &Exits after the tests finish -\/ this is meaningful only when the client has \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_main}{$\ast$$\ast$provided the \`{}\`{}\`{}main()\`{}\`{}\`{} entry point$\ast$$\ast$}} -\/ the program should check the {\ttfamily should\+Exit()} method after calling {\ttfamily run()} on a {\ttfamily \mbox{\hyperlink{classdoctest_1_1_context}{doctest\+::\+Context}}} object and should exit -\/ this is left up to the user. The idea is to be able to execute just the tests in a client program and to not continue with it\textquotesingle{}s execution    \\\cline{1-2}
+{\ttfamily -\/d} ~ {\ttfamily -\/-\/duration=$<$bool$>$}   &Prints the time each test case took in seconds    \\\cline{1-2}
+{\ttfamily -\/nt} ~ {\ttfamily -\/-\/no-\/throw=$<$bool$>$}   &Skips \href{assertions.md\#exceptions}{\texttt{ {\bfseries{exceptions-\/related assertion}}}} checks    \\\cline{1-2}
+{\ttfamily -\/ne} ~ {\ttfamily -\/-\/no-\/exitcode=$<$bool$>$}   &Always returns a successful exit code -\/ even if a test case has failed    \\\cline{1-2}
+{\ttfamily -\/nr} ~ {\ttfamily -\/-\/no-\/run=$<$bool$>$}   &Skips all runtime {\bfseries{doctest}} operations (except the test registering which happens before the program enters {\ttfamily \mbox{\hyperlink{doctest_2examples_2all__features_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main()}}}). This is useful if the testing framework is integrated into a client codebase which has \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_main}{$\ast$$\ast$provided the \`{}\`{}\`{}main()\`{}\`{}\`{} entry point$\ast$$\ast$}} and the user wants to skip running the tests and just use the program    \\\cline{1-2}
+{\ttfamily -\/nv} ~ {\ttfamily -\/-\/no-\/version=$<$bool$>$}   &Omits the framework version in the output    \\\cline{1-2}
+{\ttfamily -\/nc} ~ {\ttfamily -\/-\/no-\/colors=$<$bool$>$}   &Disables colors in the output    \\\cline{1-2}
+{\ttfamily -\/fc} ~ {\ttfamily -\/-\/force-\/colors=$<$bool$>$}   &Forces the use of colors even when a tty cannot be detected    \\\cline{1-2}
+{\ttfamily -\/nb} ~ {\ttfamily -\/-\/no-\/breaks=$<$bool$>$}   &Disables breakpoints in debuggers when an assertion fails    \\\cline{1-2}
+{\ttfamily -\/ns} ~ {\ttfamily -\/-\/no-\/skip=$<$bool$>$}   &Don\textquotesingle{}t skip test cases marked as skip with a decorator    \\\cline{1-2}
+{\ttfamily -\/gfl} {\ttfamily -\/-\/gnu-\/file-\/line=$<$bool$>$}   &{\ttfamily \+:n\+:} vs {\ttfamily (n)\+:} for line numbers in output (gnu mode is usually for linux tools/\+IDEs and is with the {\ttfamily \+:} separator)    \\\cline{1-2}
+{\ttfamily -\/npf} {\ttfamily -\/-\/no-\/path-\/filenames=$<$bool$>$}   &Paths are removed from the output when a filename is printed -\/ useful if you want the same output from the testing framework on different environments    \\\cline{1-2}
+{\ttfamily -\/nln} {\ttfamily -\/-\/no-\/line-\/numbers=$<$bool$>$}   &Line numbers are replaced with {\ttfamily 0} in the output when a source location is printed -\/ useful if you want the same output from the testing framework even when test positions change within a source file    \\\cline{1-2}
+{\ttfamily -\/ndo} {\ttfamily -\/-\/no-\/debug-\/output=$<$bool$>$}   &Disables output in the debug console when a debugger is attached    \\\cline{1-2}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   &\\\cline{1-2}
+\end{longtabu}
+
+
+All the flags/options also come with a prefixed version (with {\ttfamily -\/-\/dt-\/} at the front by default) -\/ for example {\ttfamily -\/-\/version} can be used also with {\ttfamily -\/-\/dt-\/version} or {\ttfamily -\/-\/dt-\/v}.
+
+The default prefix is {\ttfamily -\/-\/dt-\/}, but this can be changed by setting the \href{configuration.md\#doctest_config_options_prefix}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+OPTIONS\+\_\+\+PREFIX}$\ast$$\ast$}} define.
+
+All the unprefixed versions listed here can be disabled with the \href{configuration.md\#doctest_config_no_unprefixed_options}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+UNPREFIXED\+\_\+\+OPTIONS}$\ast$$\ast$}} define.
+
+This is done for easy interoperability with client command line option handling when the testing framework is integrated within a client codebase -\/ all {\bfseries{doctest}} related flags/options can be prefixed so there are no clashes and so that the user can exclude everything starting with {\ttfamily -\/-\/dt-\/} from their option parsing.
+
+If there isn\textquotesingle{}t an option to exclude those starting with {\ttfamily -\/-\/dt-\/} then the {\ttfamily dt\+\_\+removed} helper class might help to filter them out\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{\#define DOCTEST\_CONFIG\_NO\_UNPREFIXED\_OPTIONS}
+\DoxyCodeLine{\#define DOCTEST\_CONFIG\_IMPLEMENT}
+\DoxyCodeLine{\#include "{}doctest.h"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{class dt\_removed \{}
+\DoxyCodeLine{    std::vector<const char*> vec;}
+\DoxyCodeLine{public:}
+\DoxyCodeLine{    dt\_removed(const char** argv\_in) \{}
+\DoxyCodeLine{        for(; *argv\_in; ++argv\_in)}
+\DoxyCodeLine{            if(strncmp(*argv\_in, "{}-\/-\/dt-\/"{}, strlen("{}-\/-\/dt-\/"{})) != 0)}
+\DoxyCodeLine{                vec.push\_back(*argv\_in);}
+\DoxyCodeLine{        vec.push\_back(NULL);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    int          argc() \{ return static\_cast<int>(vec.size()) -\/ 1; \}}
+\DoxyCodeLine{    const char** argv() \{ return \&vec[0]; \} // Note: non-\/const char **:}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{int program(int argc, const char** argv);}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main(int argc, const char** argv) \{}
+\DoxyCodeLine{    doctest::Context context(argc, argv);}
+\DoxyCodeLine{    int test\_result = context.run(); // run queries, or run tests unless -\/-\/no-\/run}
+\DoxyCodeLine{}
+\DoxyCodeLine{    if(context.shouldExit()) // honor query flags and -\/-\/exit}
+\DoxyCodeLine{        return test\_result;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    dt\_removed args(argv);}
+\DoxyCodeLine{    int app\_result = program(args.argc(), args.argv());}
+\DoxyCodeLine{}
+\DoxyCodeLine{    return test\_result + app\_result; // combine the 2 results}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{int program(int argc, const char** argv) \{}
+\DoxyCodeLine{    printf("{}Program: \%d arguments received:\(\backslash\)n"{}, argc -\/ 1);}
+\DoxyCodeLine{    while(*++argv)}
+\DoxyCodeLine{        printf("{}'\%s'\(\backslash\)n"{}, *argv);}
+\DoxyCodeLine{    return EXIT\_SUCCESS;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+When ran like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{program.exe -\/-\/dt-\/test-\/case=math* -\/-\/my-\/option -\/s -\/-\/dt-\/no-\/breaks}
+
+\end{DoxyCode}
+
+
+Will output this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Program: 2 arguments received:}
+\DoxyCodeLine{'-\/-\/my-\/option'}
+\DoxyCodeLine{'-\/s'}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+
+
+

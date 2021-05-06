@@ -1,0 +1,230 @@
+\hypertarget{namespacebench}{}\doxysection{bench Namespace Reference}
+\label{namespacebench}\index{bench@{bench}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacebench_a6af0b6762f1eaddb509e37f0267e89f6}{add\+Common\+Flags}} (\mbox{\hyperlink{namespacebench_abd56138379be6816ab86ff1d7695a816}{parser}})
+\item 
+def \mbox{\hyperlink{namespacebench_a14b47faa0d4dc7f426b7987af62d617a}{compile}} (\mbox{\hyperlink{namespacebench_a608a03d270995ecd8974becbaa517116}{args}})
+\item 
+def \mbox{\hyperlink{namespacebench_a81b39fe876e1df7f00ab87ab10d0a3ae}{runtime}} (\mbox{\hyperlink{namespacebench_a608a03d270995ecd8974becbaa517116}{args}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebench_abd56138379be6816ab86ff1d7695a816}{parser}} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespacebench_a3c99f96895a47f4328cbabd7d72d44d6}{subparsers}} = parser.\+add\+\_\+subparsers()
+\item 
+\mbox{\hyperlink{namespacebench_a7d9d10649b50acc709ce1f6338d34f48}{parser\+\_\+c}} = subparsers.\+add\+\_\+parser(\textquotesingle{}\mbox{\hyperlink{namespacebench_a14b47faa0d4dc7f426b7987af62d617a}{compile}}\textquotesingle{}, \mbox{\hyperlink{namespacebench_ab56ea727fb0f04b558c15f39c5c9ce03}{help}}=\textquotesingle{}benchmark \mbox{\hyperlink{namespacebench_a14b47faa0d4dc7f426b7987af62d617a}{compile}} times\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacebench_ae2deebb589c32069d49dd046c3a5d800}{action}}
+\item 
+\mbox{\hyperlink{namespacebench_ab56ea727fb0f04b558c15f39c5c9ce03}{help}}
+\item 
+\mbox{\hyperlink{namespacebench_a2bf40612e01424144f5520a36a5d878f}{parser\+\_\+r}} = subparsers.\+add\+\_\+parser(\textquotesingle{}\mbox{\hyperlink{namespacebench_a81b39fe876e1df7f00ab87ab10d0a3ae}{runtime}}\textquotesingle{}, \mbox{\hyperlink{namespacebench_ab56ea727fb0f04b558c15f39c5c9ce03}{help}}=\textquotesingle{}benchmark \mbox{\hyperlink{namespacebench_a81b39fe876e1df7f00ab87ab10d0a3ae}{runtime}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacebench_a9c991e4e8b85fe943346b8c680952727}{type}}
+\item 
+\mbox{\hyperlink{namespacebench_a749bf9cb640c901dd75d5782959df4b8}{int}}
+\item 
+\mbox{\hyperlink{namespacebench_a1a2e7ce3cad58089c2bbef352dff6145}{default}}
+\item 
+\mbox{\hyperlink{namespacebench_a608a03d270995ecd8974becbaa517116}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacebench_ac8589b144c2f4f80126edb5b64100a21}{width}}
+\item 
+string \mbox{\hyperlink{namespacebench_a409128d2a2fd30afff90dc9f74c66a63}{catch\+\_\+ver}} = \char`\"{}2.\+3.\+0\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacebench_a2cfadb907f726d823e13215abec7e5df}{catch\+\_\+header}} = \char`\"{}catch.\char`\"{} + catch\+\_\+ver + \char`\"{}.hpp\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacebench_aaacc42d6db131e3df8918d4ed95275c2}{the\+\_\+folder}} = \textquotesingle{}project\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacebench_a594532123ac3fcb7822171e38a08becc}{defines}} = \char`\"{}\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacebench_a76757b37d6df618cb5c2907dc2bdaf89}{define\+\_\+implement}} = \char`\"{}\#define DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\textbackslash{}n\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacebench_a7bf4bf0d9e926c1c995b25153e86e7b6}{macro}} = \char`\"{} CHECK(a == b);\textbackslash{}n\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacebench_a8b302bc56107a1d68af63350cfe9b4da}{include}} = \textquotesingle{}\#include \char`\"{}doctest.\+h\char`\"{}\textbackslash{}n\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacebench_a77947313af56951cedb44c9592bbf758}{f}} = open(str(i) + \textquotesingle{}.cpp\textquotesingle{}, \textquotesingle{}w\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacebench_aa6c829ef405cd28c89216171eb42c1af}{compiler}} = \char`\"{}\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacebench_a794647383109975d559a7e9268640acb}{cmake\+\_\+command}} = \textquotesingle{}cmake . -\/G \char`\"{}Visual Studio 15 Win64\char`\"{}\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacebench_a620e7db8ca35c983633873f4ed59e6e2}{the\+\_\+config}} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacebench_a8bb2558915414b0e3454fd161abd7227}{start}} = datetime.\+now()
+\item 
+\mbox{\hyperlink{namespacebench_a7ce78ea39893edd8f6e84722cda05eff}{end}} = datetime.\+now()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacebench_a6af0b6762f1eaddb509e37f0267e89f6}\label{namespacebench_a6af0b6762f1eaddb509e37f0267e89f6}} 
+\index{bench@{bench}!addCommonFlags@{addCommonFlags}}
+\index{addCommonFlags@{addCommonFlags}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{addCommonFlags()}{addCommonFlags()}}
+{\footnotesize\ttfamily def bench.\+add\+Common\+Flags (\begin{DoxyParamCaption}\item[{}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebench_a14b47faa0d4dc7f426b7987af62d617a}\label{namespacebench_a14b47faa0d4dc7f426b7987af62d617a}} 
+\index{bench@{bench}!compile@{compile}}
+\index{compile@{compile}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily def bench.\+compile (\begin{DoxyParamCaption}\item[{}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebench_a81b39fe876e1df7f00ab87ab10d0a3ae}\label{namespacebench_a81b39fe876e1df7f00ab87ab10d0a3ae}} 
+\index{bench@{bench}!runtime@{runtime}}
+\index{runtime@{runtime}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{runtime()}{runtime()}}
+{\footnotesize\ttfamily def bench.\+runtime (\begin{DoxyParamCaption}\item[{}]{args }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacebench_ae2deebb589c32069d49dd046c3a5d800}\label{namespacebench_ae2deebb589c32069d49dd046c3a5d800}} 
+\index{bench@{bench}!action@{action}}
+\index{action@{action}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily bench.\+action}
+
+\mbox{\Hypertarget{namespacebench_a608a03d270995ecd8974becbaa517116}\label{namespacebench_a608a03d270995ecd8974becbaa517116}} 
+\index{bench@{bench}!args@{args}}
+\index{args@{args}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily bench.\+args = parser.\+parse\+\_\+args()}
+
+\mbox{\Hypertarget{namespacebench_a2cfadb907f726d823e13215abec7e5df}\label{namespacebench_a2cfadb907f726d823e13215abec7e5df}} 
+\index{bench@{bench}!catch\_header@{catch\_header}}
+\index{catch\_header@{catch\_header}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{catch\_header}{catch\_header}}
+{\footnotesize\ttfamily string bench.\+catch\+\_\+header = \char`\"{}catch.\char`\"{} + catch\+\_\+ver + \char`\"{}.hpp\char`\"{}}
+
+\mbox{\Hypertarget{namespacebench_a409128d2a2fd30afff90dc9f74c66a63}\label{namespacebench_a409128d2a2fd30afff90dc9f74c66a63}} 
+\index{bench@{bench}!catch\_ver@{catch\_ver}}
+\index{catch\_ver@{catch\_ver}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{catch\_ver}{catch\_ver}}
+{\footnotesize\ttfamily string bench.\+catch\+\_\+ver = \char`\"{}2.\+3.\+0\char`\"{}}
+
+\mbox{\Hypertarget{namespacebench_a794647383109975d559a7e9268640acb}\label{namespacebench_a794647383109975d559a7e9268640acb}} 
+\index{bench@{bench}!cmake\_command@{cmake\_command}}
+\index{cmake\_command@{cmake\_command}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{cmake\_command}{cmake\_command}}
+{\footnotesize\ttfamily string bench.\+cmake\+\_\+command = \textquotesingle{}cmake . -\/G \char`\"{}Visual Studio 15 Win64\char`\"{}\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacebench_aa6c829ef405cd28c89216171eb42c1af}\label{namespacebench_aa6c829ef405cd28c89216171eb42c1af}} 
+\index{bench@{bench}!compiler@{compiler}}
+\index{compiler@{compiler}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{compiler}{compiler}}
+{\footnotesize\ttfamily string bench.\+compiler = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{namespacebench_a1a2e7ce3cad58089c2bbef352dff6145}\label{namespacebench_a1a2e7ce3cad58089c2bbef352dff6145}} 
+\index{bench@{bench}!default@{default}}
+\index{default@{default}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily bench.\+default}
+
+\mbox{\Hypertarget{namespacebench_a76757b37d6df618cb5c2907dc2bdaf89}\label{namespacebench_a76757b37d6df618cb5c2907dc2bdaf89}} 
+\index{bench@{bench}!define\_implement@{define\_implement}}
+\index{define\_implement@{define\_implement}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{define\_implement}{define\_implement}}
+{\footnotesize\ttfamily string bench.\+define\+\_\+implement = \char`\"{}\#define DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{namespacebench_a594532123ac3fcb7822171e38a08becc}\label{namespacebench_a594532123ac3fcb7822171e38a08becc}} 
+\index{bench@{bench}!defines@{defines}}
+\index{defines@{defines}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{defines}{defines}}
+{\footnotesize\ttfamily string bench.\+defines = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{namespacebench_a7ce78ea39893edd8f6e84722cda05eff}\label{namespacebench_a7ce78ea39893edd8f6e84722cda05eff}} 
+\index{bench@{bench}!end@{end}}
+\index{end@{end}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily bench.\+end = datetime.\+now()}
+
+\mbox{\Hypertarget{namespacebench_a77947313af56951cedb44c9592bbf758}\label{namespacebench_a77947313af56951cedb44c9592bbf758}} 
+\index{bench@{bench}!f@{f}}
+\index{f@{f}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily bench.\+f = open(str(i) + \textquotesingle{}.cpp\textquotesingle{}, \textquotesingle{}w\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacebench_ab56ea727fb0f04b558c15f39c5c9ce03}\label{namespacebench_ab56ea727fb0f04b558c15f39c5c9ce03}} 
+\index{bench@{bench}!help@{help}}
+\index{help@{help}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily bench.\+help}
+
+\mbox{\Hypertarget{namespacebench_a8b302bc56107a1d68af63350cfe9b4da}\label{namespacebench_a8b302bc56107a1d68af63350cfe9b4da}} 
+\index{bench@{bench}!include@{include}}
+\index{include@{include}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{include}{include}}
+{\footnotesize\ttfamily string bench.\+include = \textquotesingle{}\#include \char`\"{}doctest.\+h\char`\"{}\textbackslash{}n\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacebench_a749bf9cb640c901dd75d5782959df4b8}\label{namespacebench_a749bf9cb640c901dd75d5782959df4b8}} 
+\index{bench@{bench}!int@{int}}
+\index{int@{int}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{int}{int}}
+{\footnotesize\ttfamily bench.\+int}
+
+\mbox{\Hypertarget{namespacebench_a7bf4bf0d9e926c1c995b25153e86e7b6}\label{namespacebench_a7bf4bf0d9e926c1c995b25153e86e7b6}} 
+\index{bench@{bench}!macro@{macro}}
+\index{macro@{macro}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{macro}{macro}}
+{\footnotesize\ttfamily string bench.\+macro = \char`\"{} CHECK(a == b);\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{namespacebench_abd56138379be6816ab86ff1d7695a816}\label{namespacebench_abd56138379be6816ab86ff1d7695a816}} 
+\index{bench@{bench}!parser@{parser}}
+\index{parser@{parser}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily bench.\+parser = argparse.\+Argument\+Parser()}
+
+\mbox{\Hypertarget{namespacebench_a7d9d10649b50acc709ce1f6338d34f48}\label{namespacebench_a7d9d10649b50acc709ce1f6338d34f48}} 
+\index{bench@{bench}!parser\_c@{parser\_c}}
+\index{parser\_c@{parser\_c}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{parser\_c}{parser\_c}}
+{\footnotesize\ttfamily bench.\+parser\+\_\+c = subparsers.\+add\+\_\+parser(\textquotesingle{}\mbox{\hyperlink{namespacebench_a14b47faa0d4dc7f426b7987af62d617a}{compile}}\textquotesingle{}, \mbox{\hyperlink{namespacebench_ab56ea727fb0f04b558c15f39c5c9ce03}{help}}=\textquotesingle{}benchmark \mbox{\hyperlink{namespacebench_a14b47faa0d4dc7f426b7987af62d617a}{compile}} times\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacebench_a2bf40612e01424144f5520a36a5d878f}\label{namespacebench_a2bf40612e01424144f5520a36a5d878f}} 
+\index{bench@{bench}!parser\_r@{parser\_r}}
+\index{parser\_r@{parser\_r}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{parser\_r}{parser\_r}}
+{\footnotesize\ttfamily bench.\+parser\+\_\+r = subparsers.\+add\+\_\+parser(\textquotesingle{}\mbox{\hyperlink{namespacebench_a81b39fe876e1df7f00ab87ab10d0a3ae}{runtime}}\textquotesingle{}, \mbox{\hyperlink{namespacebench_ab56ea727fb0f04b558c15f39c5c9ce03}{help}}=\textquotesingle{}benchmark \mbox{\hyperlink{namespacebench_a81b39fe876e1df7f00ab87ab10d0a3ae}{runtime}}\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacebench_a8bb2558915414b0e3454fd161abd7227}\label{namespacebench_a8bb2558915414b0e3454fd161abd7227}} 
+\index{bench@{bench}!start@{start}}
+\index{start@{start}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily bench.\+start = datetime.\+now()}
+
+\mbox{\Hypertarget{namespacebench_a3c99f96895a47f4328cbabd7d72d44d6}\label{namespacebench_a3c99f96895a47f4328cbabd7d72d44d6}} 
+\index{bench@{bench}!subparsers@{subparsers}}
+\index{subparsers@{subparsers}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{subparsers}{subparsers}}
+{\footnotesize\ttfamily bench.\+subparsers = parser.\+add\+\_\+subparsers()}
+
+\mbox{\Hypertarget{namespacebench_a620e7db8ca35c983633873f4ed59e6e2}\label{namespacebench_a620e7db8ca35c983633873f4ed59e6e2}} 
+\index{bench@{bench}!the\_config@{the\_config}}
+\index{the\_config@{the\_config}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{the\_config}{the\_config}}
+{\footnotesize\ttfamily bench.\+the\+\_\+config = \textquotesingle{}\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacebench_aaacc42d6db131e3df8918d4ed95275c2}\label{namespacebench_aaacc42d6db131e3df8918d4ed95275c2}} 
+\index{bench@{bench}!the\_folder@{the\_folder}}
+\index{the\_folder@{the\_folder}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{the\_folder}{the\_folder}}
+{\footnotesize\ttfamily string bench.\+the\+\_\+folder = \textquotesingle{}project\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacebench_a9c991e4e8b85fe943346b8c680952727}\label{namespacebench_a9c991e4e8b85fe943346b8c680952727}} 
+\index{bench@{bench}!type@{type}}
+\index{type@{type}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily bench.\+type}
+
+\mbox{\Hypertarget{namespacebench_ac8589b144c2f4f80126edb5b64100a21}\label{namespacebench_ac8589b144c2f4f80126edb5b64100a21}} 
+\index{bench@{bench}!width@{width}}
+\index{width@{width}!bench@{bench}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily bench.\+width}
+

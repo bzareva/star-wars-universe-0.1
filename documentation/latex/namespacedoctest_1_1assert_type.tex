@@ -1,0 +1,1310 @@
+\hypertarget{namespacedoctest_1_1assert_type}{}\doxysection{doctest\+::assert\+Type Namespace Reference}
+\label{namespacedoctest_1_1assert_type}\index{doctest::assertType@{doctest::assertType}}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3}{Enum}} \{ \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}{is\+\_\+warn}} = 1
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}{is\+\_\+check}} = 2 $\ast$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}{is\+\_\+require}} = 2 $\ast$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}{is\+\_\+normal}} = 2 $\ast$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}{is\+\_\+throws}} = 2 $\ast$ is\+\_\+normal
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}{is\+\_\+throws\+\_\+as}} = 2 $\ast$ is\+\_\+throws
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}{is\+\_\+throws\+\_\+with}} = 2 $\ast$ is\+\_\+throws\+\_\+as
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}{is\+\_\+nothrow}} = 2 $\ast$ is\+\_\+throws\+\_\+with
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}{is\+\_\+false}} = 2 $\ast$ is\+\_\+nothrow
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}{is\+\_\+unary}} = 2 $\ast$ is\+\_\+false
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}{is\+\_\+eq}} = 2 $\ast$ is\+\_\+unary
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}{is\+\_\+ne}} = 2 $\ast$ is\+\_\+eq
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}{is\+\_\+lt}} = 2 $\ast$ is\+\_\+ne
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}{is\+\_\+gt}} = 2 $\ast$ is\+\_\+lt
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}{is\+\_\+ge}} = 2 $\ast$ is\+\_\+gt
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}{is\+\_\+le}} = 2 $\ast$ is\+\_\+ge
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}{DT\+\_\+\+WARN}} = is\+\_\+normal $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}{DT\+\_\+\+CHECK}} = is\+\_\+normal $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}{DT\+\_\+\+REQUIRE}} = is\+\_\+normal $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}{DT\+\_\+\+WARN\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}{DT\+\_\+\+CHECK\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}{DT\+\_\+\+REQUIRE\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}{DT\+\_\+\+WARN\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}{DT\+\_\+\+CHECK\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}{DT\+\_\+\+WARN\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}{DT\+\_\+\+CHECK\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}{DT\+\_\+\+REQUIRE\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}{DT\+\_\+\+WARN\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}{DT\+\_\+\+CHECK\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}{DT\+\_\+\+REQUIRE\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}{DT\+\_\+\+WARN\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}{DT\+\_\+\+CHECK\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}{DT\+\_\+\+REQUIRE\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}{DT\+\_\+\+WARN\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}{DT\+\_\+\+CHECK\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}{DT\+\_\+\+REQUIRE\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}{DT\+\_\+\+WARN\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}{DT\+\_\+\+CHECK\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}{DT\+\_\+\+REQUIRE\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}{DT\+\_\+\+WARN\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}{DT\+\_\+\+CHECK\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}{DT\+\_\+\+REQUIRE\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}{DT\+\_\+\+WARN\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}{DT\+\_\+\+CHECK\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}{DT\+\_\+\+REQUIRE\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}{DT\+\_\+\+WARN\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}{DT\+\_\+\+CHECK\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}{DT\+\_\+\+REQUIRE\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}{DT\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}{DT\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}{DT\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}{is\+\_\+warn}} = 1
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}{is\+\_\+check}} = 2 $\ast$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}{is\+\_\+require}} = 2 $\ast$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}{is\+\_\+normal}} = 2 $\ast$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}{is\+\_\+throws}} = 2 $\ast$ is\+\_\+normal
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}{is\+\_\+throws\+\_\+as}} = 2 $\ast$ is\+\_\+throws
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}{is\+\_\+throws\+\_\+with}} = 2 $\ast$ is\+\_\+throws\+\_\+as
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}{is\+\_\+nothrow}} = 2 $\ast$ is\+\_\+throws\+\_\+with
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}{is\+\_\+false}} = 2 $\ast$ is\+\_\+nothrow
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}{is\+\_\+unary}} = 2 $\ast$ is\+\_\+false
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}{is\+\_\+eq}} = 2 $\ast$ is\+\_\+unary
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}{is\+\_\+ne}} = 2 $\ast$ is\+\_\+eq
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}{is\+\_\+lt}} = 2 $\ast$ is\+\_\+ne
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}{is\+\_\+gt}} = 2 $\ast$ is\+\_\+lt
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}{is\+\_\+ge}} = 2 $\ast$ is\+\_\+gt
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}{is\+\_\+le}} = 2 $\ast$ is\+\_\+ge
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}{DT\+\_\+\+WARN}} = is\+\_\+normal $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}{DT\+\_\+\+CHECK}} = is\+\_\+normal $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}{DT\+\_\+\+REQUIRE}} = is\+\_\+normal $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}{DT\+\_\+\+WARN\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}{DT\+\_\+\+CHECK\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}{DT\+\_\+\+REQUIRE\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}{DT\+\_\+\+WARN\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}{DT\+\_\+\+CHECK\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}{DT\+\_\+\+WARN\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}{DT\+\_\+\+CHECK\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}{DT\+\_\+\+REQUIRE\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}{DT\+\_\+\+WARN\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}{DT\+\_\+\+CHECK\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}{DT\+\_\+\+REQUIRE\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}{DT\+\_\+\+WARN\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}{DT\+\_\+\+CHECK\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}{DT\+\_\+\+REQUIRE\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}{DT\+\_\+\+WARN\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}{DT\+\_\+\+CHECK\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}{DT\+\_\+\+REQUIRE\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}{DT\+\_\+\+WARN\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}{DT\+\_\+\+CHECK\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}{DT\+\_\+\+REQUIRE\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}{DT\+\_\+\+WARN\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}{DT\+\_\+\+CHECK\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}{DT\+\_\+\+REQUIRE\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}{DT\+\_\+\+WARN\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}{DT\+\_\+\+CHECK\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}{DT\+\_\+\+REQUIRE\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}{DT\+\_\+\+WARN\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}{DT\+\_\+\+CHECK\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}{DT\+\_\+\+REQUIRE\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}{DT\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}{DT\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}{DT\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+require
+ \}
+\item 
+enum \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3}{Enum}} \{ \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}{is\+\_\+warn}} = 1
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}{is\+\_\+check}} = 2 $\ast$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}{is\+\_\+require}} = 2 $\ast$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}{is\+\_\+normal}} = 2 $\ast$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}{is\+\_\+throws}} = 2 $\ast$ is\+\_\+normal
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}{is\+\_\+throws\+\_\+as}} = 2 $\ast$ is\+\_\+throws
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}{is\+\_\+throws\+\_\+with}} = 2 $\ast$ is\+\_\+throws\+\_\+as
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}{is\+\_\+nothrow}} = 2 $\ast$ is\+\_\+throws\+\_\+with
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}{is\+\_\+false}} = 2 $\ast$ is\+\_\+nothrow
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}{is\+\_\+unary}} = 2 $\ast$ is\+\_\+false
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}{is\+\_\+eq}} = 2 $\ast$ is\+\_\+unary
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}{is\+\_\+ne}} = 2 $\ast$ is\+\_\+eq
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}{is\+\_\+lt}} = 2 $\ast$ is\+\_\+ne
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}{is\+\_\+gt}} = 2 $\ast$ is\+\_\+lt
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}{is\+\_\+ge}} = 2 $\ast$ is\+\_\+gt
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}{is\+\_\+le}} = 2 $\ast$ is\+\_\+ge
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}{DT\+\_\+\+WARN}} = is\+\_\+normal $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}{DT\+\_\+\+CHECK}} = is\+\_\+normal $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}{DT\+\_\+\+REQUIRE}} = is\+\_\+normal $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}{DT\+\_\+\+WARN\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}{DT\+\_\+\+CHECK\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}{DT\+\_\+\+REQUIRE\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}{DT\+\_\+\+WARN\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}{DT\+\_\+\+CHECK\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}{DT\+\_\+\+WARN\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}{DT\+\_\+\+CHECK\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}{DT\+\_\+\+REQUIRE\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}{DT\+\_\+\+WARN\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}{DT\+\_\+\+CHECK\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}{DT\+\_\+\+REQUIRE\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}{DT\+\_\+\+WARN\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}{DT\+\_\+\+CHECK\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}{DT\+\_\+\+REQUIRE\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}{DT\+\_\+\+WARN\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}{DT\+\_\+\+CHECK\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}{DT\+\_\+\+REQUIRE\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}{DT\+\_\+\+WARN\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}{DT\+\_\+\+CHECK\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}{DT\+\_\+\+REQUIRE\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}{DT\+\_\+\+WARN\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}{DT\+\_\+\+CHECK\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}{DT\+\_\+\+REQUIRE\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}{DT\+\_\+\+WARN\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}{DT\+\_\+\+CHECK\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}{DT\+\_\+\+REQUIRE\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}{DT\+\_\+\+WARN\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}{DT\+\_\+\+CHECK\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}{DT\+\_\+\+REQUIRE\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}{DT\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}{DT\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}{DT\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}{is\+\_\+warn}} = 1
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}{is\+\_\+check}} = 2 $\ast$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}{is\+\_\+require}} = 2 $\ast$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}{is\+\_\+normal}} = 2 $\ast$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}{is\+\_\+throws}} = 2 $\ast$ is\+\_\+normal
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}{is\+\_\+throws\+\_\+as}} = 2 $\ast$ is\+\_\+throws
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}{is\+\_\+throws\+\_\+with}} = 2 $\ast$ is\+\_\+throws\+\_\+as
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}{is\+\_\+nothrow}} = 2 $\ast$ is\+\_\+throws\+\_\+with
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}{is\+\_\+false}} = 2 $\ast$ is\+\_\+nothrow
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}{is\+\_\+unary}} = 2 $\ast$ is\+\_\+false
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}{is\+\_\+eq}} = 2 $\ast$ is\+\_\+unary
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}{is\+\_\+ne}} = 2 $\ast$ is\+\_\+eq
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}{is\+\_\+lt}} = 2 $\ast$ is\+\_\+ne
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}{is\+\_\+gt}} = 2 $\ast$ is\+\_\+lt
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}{is\+\_\+ge}} = 2 $\ast$ is\+\_\+gt
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}{is\+\_\+le}} = 2 $\ast$ is\+\_\+ge
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}{DT\+\_\+\+WARN}} = is\+\_\+normal $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}{DT\+\_\+\+CHECK}} = is\+\_\+normal $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}{DT\+\_\+\+REQUIRE}} = is\+\_\+normal $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}{DT\+\_\+\+WARN\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}{DT\+\_\+\+CHECK\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}{DT\+\_\+\+REQUIRE\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}{DT\+\_\+\+WARN\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}{DT\+\_\+\+CHECK\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS}} = is\+\_\+throws $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS}} = is\+\_\+throws\+\_\+as $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}{DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}{DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}{DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}} = is\+\_\+throws\+\_\+with $\vert$ is\+\_\+throws\+\_\+as $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}{DT\+\_\+\+WARN\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}{DT\+\_\+\+CHECK\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}{DT\+\_\+\+REQUIRE\+\_\+\+NOTHROW}} = is\+\_\+nothrow $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}{DT\+\_\+\+WARN\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}{DT\+\_\+\+CHECK\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}{DT\+\_\+\+REQUIRE\+\_\+\+EQ}} = is\+\_\+normal $\vert$ is\+\_\+eq $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}{DT\+\_\+\+WARN\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}{DT\+\_\+\+CHECK\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}{DT\+\_\+\+REQUIRE\+\_\+\+NE}} = is\+\_\+normal $\vert$ is\+\_\+ne $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}{DT\+\_\+\+WARN\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}{DT\+\_\+\+CHECK\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}{DT\+\_\+\+REQUIRE\+\_\+\+GT}} = is\+\_\+normal $\vert$ is\+\_\+gt $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}{DT\+\_\+\+WARN\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}{DT\+\_\+\+CHECK\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}{DT\+\_\+\+REQUIRE\+\_\+\+LT}} = is\+\_\+normal $\vert$ is\+\_\+lt $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}{DT\+\_\+\+WARN\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}{DT\+\_\+\+CHECK\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+check
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}{DT\+\_\+\+REQUIRE\+\_\+\+GE}} = is\+\_\+normal $\vert$ is\+\_\+ge $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}{DT\+\_\+\+WARN\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}{DT\+\_\+\+CHECK\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}{DT\+\_\+\+REQUIRE\+\_\+\+LE}} = is\+\_\+normal $\vert$ is\+\_\+le $\vert$ is\+\_\+require
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}{DT\+\_\+\+WARN\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+warn
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}{DT\+\_\+\+CHECK\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}{DT\+\_\+\+REQUIRE\+\_\+\+UNARY}} = is\+\_\+normal $\vert$ is\+\_\+unary $\vert$ is\+\_\+require
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}{DT\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+warn
+, \newline
+\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}{DT\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+check
+, \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}{DT\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE}} = is\+\_\+normal $\vert$ is\+\_\+false $\vert$ is\+\_\+unary $\vert$ is\+\_\+require
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3}} 
+\index{doctest::assertType@{doctest::assertType}!Enum@{Enum}}
+\index{Enum@{Enum}!doctest::assertType@{doctest::assertType}}
+\doxysubsubsection{\texorpdfstring{Enum}{Enum}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3}{doctest\+::assert\+Type\+::\+Enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_warn@{is\_warn}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_warn@{is\_warn}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}} 
+is\+\_\+warn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_check@{is\_check}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_check@{is\_check}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}} 
+is\+\_\+check&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_require@{is\_require}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_require@{is\_require}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}} 
+is\+\_\+require&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_normal@{is\_normal}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_normal@{is\_normal}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}} 
+is\+\_\+normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws@{is\_throws}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws@{is\_throws}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}} 
+is\+\_\+throws&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws\_as@{is\_throws\_as}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws\_as@{is\_throws\_as}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}} 
+is\+\_\+throws\+\_\+as&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws\_with@{is\_throws\_with}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws\_with@{is\_throws\_with}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}} 
+is\+\_\+throws\+\_\+with&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_nothrow@{is\_nothrow}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_nothrow@{is\_nothrow}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}} 
+is\+\_\+nothrow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_false@{is\_false}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_false@{is\_false}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}} 
+is\+\_\+false&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_unary@{is\_unary}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_unary@{is\_unary}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}} 
+is\+\_\+unary&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_eq@{is\_eq}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_eq@{is\_eq}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}} 
+is\+\_\+eq&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_ne@{is\_ne}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_ne@{is\_ne}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}} 
+is\+\_\+ne&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_lt@{is\_lt}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_lt@{is\_lt}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}} 
+is\+\_\+lt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_gt@{is\_gt}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_gt@{is\_gt}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}} 
+is\+\_\+gt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_ge@{is\_ge}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_ge@{is\_ge}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}} 
+is\+\_\+ge&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_le@{is\_le}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_le@{is\_le}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}} 
+is\+\_\+le&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN@{DT\_WARN}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN@{DT\_WARN}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}} 
+DT\+\_\+\+WARN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK@{DT\_CHECK}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK@{DT\_CHECK}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}} 
+DT\+\_\+\+CHECK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE@{DT\_REQUIRE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE@{DT\_REQUIRE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}} 
+DT\+\_\+\+REQUIRE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_FALSE@{DT\_WARN\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_FALSE@{DT\_WARN\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}} 
+DT\+\_\+\+WARN\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_FALSE@{DT\_CHECK\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_FALSE@{DT\_CHECK\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}} 
+DT\+\_\+\+CHECK\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_FALSE@{DT\_REQUIRE\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_FALSE@{DT\_REQUIRE\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}} 
+DT\+\_\+\+REQUIRE\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS@{DT\_WARN\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS@{DT\_WARN\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS@{DT\_CHECK\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS@{DT\_CHECK\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS@{DT\_REQUIRE\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS@{DT\_REQUIRE\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_AS@{DT\_WARN\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_AS@{DT\_WARN\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_AS@{DT\_CHECK\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_AS@{DT\_CHECK\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_AS@{DT\_REQUIRE\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_AS@{DT\_REQUIRE\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_WITH@{DT\_WARN\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_WITH@{DT\_WARN\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_WITH@{DT\_CHECK\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_WITH@{DT\_CHECK\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_WITH@{DT\_REQUIRE\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_WITH@{DT\_REQUIRE\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_WITH\_AS@{DT\_WARN\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_WITH\_AS@{DT\_WARN\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_WITH\_AS@{DT\_CHECK\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_WITH\_AS@{DT\_CHECK\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_WITH\_AS@{DT\_REQUIRE\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_WITH\_AS@{DT\_REQUIRE\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_NOTHROW@{DT\_WARN\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_NOTHROW@{DT\_WARN\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}} 
+DT\+\_\+\+WARN\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_NOTHROW@{DT\_CHECK\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_NOTHROW@{DT\_CHECK\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}} 
+DT\+\_\+\+CHECK\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_NOTHROW@{DT\_REQUIRE\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_NOTHROW@{DT\_REQUIRE\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}} 
+DT\+\_\+\+REQUIRE\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_EQ@{DT\_WARN\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_EQ@{DT\_WARN\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}} 
+DT\+\_\+\+WARN\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_EQ@{DT\_CHECK\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_EQ@{DT\_CHECK\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}} 
+DT\+\_\+\+CHECK\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_EQ@{DT\_REQUIRE\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_EQ@{DT\_REQUIRE\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_NE@{DT\_WARN\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_NE@{DT\_WARN\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}} 
+DT\+\_\+\+WARN\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_NE@{DT\_CHECK\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_NE@{DT\_CHECK\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}} 
+DT\+\_\+\+CHECK\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_NE@{DT\_REQUIRE\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_NE@{DT\_REQUIRE\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}} 
+DT\+\_\+\+REQUIRE\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_GT@{DT\_WARN\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_GT@{DT\_WARN\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}} 
+DT\+\_\+\+WARN\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_GT@{DT\_CHECK\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_GT@{DT\_CHECK\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}} 
+DT\+\_\+\+CHECK\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_GT@{DT\_REQUIRE\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_GT@{DT\_REQUIRE\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_LT@{DT\_WARN\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_LT@{DT\_WARN\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}} 
+DT\+\_\+\+WARN\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_LT@{DT\_CHECK\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_LT@{DT\_CHECK\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}} 
+DT\+\_\+\+CHECK\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_LT@{DT\_REQUIRE\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_LT@{DT\_REQUIRE\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}} 
+DT\+\_\+\+REQUIRE\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_GE@{DT\_WARN\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_GE@{DT\_WARN\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}} 
+DT\+\_\+\+WARN\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_GE@{DT\_CHECK\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_GE@{DT\_CHECK\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}} 
+DT\+\_\+\+CHECK\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_GE@{DT\_REQUIRE\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_GE@{DT\_REQUIRE\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}} 
+DT\+\_\+\+REQUIRE\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_LE@{DT\_WARN\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_LE@{DT\_WARN\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}} 
+DT\+\_\+\+WARN\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_LE@{DT\_CHECK\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_LE@{DT\_CHECK\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}} 
+DT\+\_\+\+CHECK\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_LE@{DT\_REQUIRE\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_LE@{DT\_REQUIRE\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_UNARY@{DT\_WARN\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_UNARY@{DT\_WARN\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}} 
+DT\+\_\+\+WARN\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_UNARY@{DT\_CHECK\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_UNARY@{DT\_CHECK\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}} 
+DT\+\_\+\+CHECK\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_UNARY@{DT\_REQUIRE\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_UNARY@{DT\_REQUIRE\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}} 
+DT\+\_\+\+REQUIRE\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_UNARY\_FALSE@{DT\_WARN\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_UNARY\_FALSE@{DT\_WARN\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}} 
+DT\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_UNARY\_FALSE@{DT\_CHECK\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_UNARY\_FALSE@{DT\_CHECK\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}} 
+DT\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_UNARY\_FALSE@{DT\_REQUIRE\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_UNARY\_FALSE@{DT\_REQUIRE\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}} 
+DT\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_warn@{is\_warn}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_warn@{is\_warn}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}} 
+is\+\_\+warn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_check@{is\_check}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_check@{is\_check}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}} 
+is\+\_\+check&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_require@{is\_require}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_require@{is\_require}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}} 
+is\+\_\+require&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_normal@{is\_normal}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_normal@{is\_normal}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}} 
+is\+\_\+normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws@{is\_throws}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws@{is\_throws}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}} 
+is\+\_\+throws&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws\_as@{is\_throws\_as}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws\_as@{is\_throws\_as}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}} 
+is\+\_\+throws\+\_\+as&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws\_with@{is\_throws\_with}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws\_with@{is\_throws\_with}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}} 
+is\+\_\+throws\+\_\+with&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_nothrow@{is\_nothrow}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_nothrow@{is\_nothrow}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}} 
+is\+\_\+nothrow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_false@{is\_false}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_false@{is\_false}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}} 
+is\+\_\+false&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_unary@{is\_unary}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_unary@{is\_unary}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}} 
+is\+\_\+unary&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_eq@{is\_eq}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_eq@{is\_eq}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}} 
+is\+\_\+eq&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_ne@{is\_ne}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_ne@{is\_ne}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}} 
+is\+\_\+ne&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_lt@{is\_lt}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_lt@{is\_lt}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}} 
+is\+\_\+lt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_gt@{is\_gt}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_gt@{is\_gt}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}} 
+is\+\_\+gt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_ge@{is\_ge}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_ge@{is\_ge}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}} 
+is\+\_\+ge&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_le@{is\_le}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_le@{is\_le}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}} 
+is\+\_\+le&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN@{DT\_WARN}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN@{DT\_WARN}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}} 
+DT\+\_\+\+WARN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK@{DT\_CHECK}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK@{DT\_CHECK}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}} 
+DT\+\_\+\+CHECK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE@{DT\_REQUIRE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE@{DT\_REQUIRE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}} 
+DT\+\_\+\+REQUIRE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_FALSE@{DT\_WARN\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_FALSE@{DT\_WARN\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}} 
+DT\+\_\+\+WARN\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_FALSE@{DT\_CHECK\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_FALSE@{DT\_CHECK\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}} 
+DT\+\_\+\+CHECK\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_FALSE@{DT\_REQUIRE\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_FALSE@{DT\_REQUIRE\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}} 
+DT\+\_\+\+REQUIRE\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS@{DT\_WARN\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS@{DT\_WARN\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS@{DT\_CHECK\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS@{DT\_CHECK\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS@{DT\_REQUIRE\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS@{DT\_REQUIRE\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_AS@{DT\_WARN\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_AS@{DT\_WARN\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_AS@{DT\_CHECK\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_AS@{DT\_CHECK\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_AS@{DT\_REQUIRE\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_AS@{DT\_REQUIRE\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_WITH@{DT\_WARN\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_WITH@{DT\_WARN\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_WITH@{DT\_CHECK\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_WITH@{DT\_CHECK\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_WITH@{DT\_REQUIRE\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_WITH@{DT\_REQUIRE\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_WITH\_AS@{DT\_WARN\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_WITH\_AS@{DT\_WARN\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_WITH\_AS@{DT\_CHECK\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_WITH\_AS@{DT\_CHECK\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_WITH\_AS@{DT\_REQUIRE\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_WITH\_AS@{DT\_REQUIRE\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_NOTHROW@{DT\_WARN\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_NOTHROW@{DT\_WARN\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}} 
+DT\+\_\+\+WARN\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_NOTHROW@{DT\_CHECK\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_NOTHROW@{DT\_CHECK\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}} 
+DT\+\_\+\+CHECK\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_NOTHROW@{DT\_REQUIRE\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_NOTHROW@{DT\_REQUIRE\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}} 
+DT\+\_\+\+REQUIRE\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_EQ@{DT\_WARN\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_EQ@{DT\_WARN\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}} 
+DT\+\_\+\+WARN\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_EQ@{DT\_CHECK\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_EQ@{DT\_CHECK\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}} 
+DT\+\_\+\+CHECK\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_EQ@{DT\_REQUIRE\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_EQ@{DT\_REQUIRE\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_NE@{DT\_WARN\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_NE@{DT\_WARN\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}} 
+DT\+\_\+\+WARN\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_NE@{DT\_CHECK\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_NE@{DT\_CHECK\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}} 
+DT\+\_\+\+CHECK\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_NE@{DT\_REQUIRE\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_NE@{DT\_REQUIRE\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}} 
+DT\+\_\+\+REQUIRE\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_GT@{DT\_WARN\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_GT@{DT\_WARN\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}} 
+DT\+\_\+\+WARN\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_GT@{DT\_CHECK\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_GT@{DT\_CHECK\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}} 
+DT\+\_\+\+CHECK\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_GT@{DT\_REQUIRE\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_GT@{DT\_REQUIRE\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_LT@{DT\_WARN\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_LT@{DT\_WARN\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}} 
+DT\+\_\+\+WARN\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_LT@{DT\_CHECK\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_LT@{DT\_CHECK\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}} 
+DT\+\_\+\+CHECK\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_LT@{DT\_REQUIRE\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_LT@{DT\_REQUIRE\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}} 
+DT\+\_\+\+REQUIRE\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_GE@{DT\_WARN\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_GE@{DT\_WARN\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}} 
+DT\+\_\+\+WARN\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_GE@{DT\_CHECK\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_GE@{DT\_CHECK\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}} 
+DT\+\_\+\+CHECK\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_GE@{DT\_REQUIRE\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_GE@{DT\_REQUIRE\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}} 
+DT\+\_\+\+REQUIRE\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_LE@{DT\_WARN\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_LE@{DT\_WARN\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}} 
+DT\+\_\+\+WARN\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_LE@{DT\_CHECK\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_LE@{DT\_CHECK\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}} 
+DT\+\_\+\+CHECK\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_LE@{DT\_REQUIRE\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_LE@{DT\_REQUIRE\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_UNARY@{DT\_WARN\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_UNARY@{DT\_WARN\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}} 
+DT\+\_\+\+WARN\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_UNARY@{DT\_CHECK\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_UNARY@{DT\_CHECK\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}} 
+DT\+\_\+\+CHECK\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_UNARY@{DT\_REQUIRE\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_UNARY@{DT\_REQUIRE\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}} 
+DT\+\_\+\+REQUIRE\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_UNARY\_FALSE@{DT\_WARN\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_UNARY\_FALSE@{DT\_WARN\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}} 
+DT\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_UNARY\_FALSE@{DT\_CHECK\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_UNARY\_FALSE@{DT\_CHECK\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}} 
+DT\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_UNARY\_FALSE@{DT\_REQUIRE\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_UNARY\_FALSE@{DT\_REQUIRE\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}} 
+DT\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3}} 
+\index{doctest::assertType@{doctest::assertType}!Enum@{Enum}}
+\index{Enum@{Enum}!doctest::assertType@{doctest::assertType}}
+\doxysubsubsection{\texorpdfstring{Enum}{Enum}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3}{doctest\+::assert\+Type\+::\+Enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_warn@{is\_warn}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_warn@{is\_warn}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}} 
+is\+\_\+warn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_check@{is\_check}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_check@{is\_check}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}} 
+is\+\_\+check&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_require@{is\_require}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_require@{is\_require}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}} 
+is\+\_\+require&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_normal@{is\_normal}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_normal@{is\_normal}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}} 
+is\+\_\+normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws@{is\_throws}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws@{is\_throws}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}} 
+is\+\_\+throws&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws\_as@{is\_throws\_as}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws\_as@{is\_throws\_as}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}} 
+is\+\_\+throws\+\_\+as&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws\_with@{is\_throws\_with}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws\_with@{is\_throws\_with}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}} 
+is\+\_\+throws\+\_\+with&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_nothrow@{is\_nothrow}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_nothrow@{is\_nothrow}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}} 
+is\+\_\+nothrow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_false@{is\_false}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_false@{is\_false}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}} 
+is\+\_\+false&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_unary@{is\_unary}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_unary@{is\_unary}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}} 
+is\+\_\+unary&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_eq@{is\_eq}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_eq@{is\_eq}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}} 
+is\+\_\+eq&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_ne@{is\_ne}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_ne@{is\_ne}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}} 
+is\+\_\+ne&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_lt@{is\_lt}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_lt@{is\_lt}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}} 
+is\+\_\+lt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_gt@{is\_gt}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_gt@{is\_gt}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}} 
+is\+\_\+gt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_ge@{is\_ge}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_ge@{is\_ge}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}} 
+is\+\_\+ge&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_le@{is\_le}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_le@{is\_le}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}} 
+is\+\_\+le&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN@{DT\_WARN}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN@{DT\_WARN}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}} 
+DT\+\_\+\+WARN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK@{DT\_CHECK}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK@{DT\_CHECK}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}} 
+DT\+\_\+\+CHECK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE@{DT\_REQUIRE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE@{DT\_REQUIRE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}} 
+DT\+\_\+\+REQUIRE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_FALSE@{DT\_WARN\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_FALSE@{DT\_WARN\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}} 
+DT\+\_\+\+WARN\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_FALSE@{DT\_CHECK\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_FALSE@{DT\_CHECK\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}} 
+DT\+\_\+\+CHECK\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_FALSE@{DT\_REQUIRE\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_FALSE@{DT\_REQUIRE\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}} 
+DT\+\_\+\+REQUIRE\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS@{DT\_WARN\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS@{DT\_WARN\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS@{DT\_CHECK\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS@{DT\_CHECK\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS@{DT\_REQUIRE\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS@{DT\_REQUIRE\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_AS@{DT\_WARN\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_AS@{DT\_WARN\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_AS@{DT\_CHECK\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_AS@{DT\_CHECK\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_AS@{DT\_REQUIRE\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_AS@{DT\_REQUIRE\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_WITH@{DT\_WARN\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_WITH@{DT\_WARN\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_WITH@{DT\_CHECK\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_WITH@{DT\_CHECK\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_WITH@{DT\_REQUIRE\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_WITH@{DT\_REQUIRE\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_WITH\_AS@{DT\_WARN\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_WITH\_AS@{DT\_WARN\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_WITH\_AS@{DT\_CHECK\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_WITH\_AS@{DT\_CHECK\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_WITH\_AS@{DT\_REQUIRE\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_WITH\_AS@{DT\_REQUIRE\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_NOTHROW@{DT\_WARN\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_NOTHROW@{DT\_WARN\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}} 
+DT\+\_\+\+WARN\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_NOTHROW@{DT\_CHECK\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_NOTHROW@{DT\_CHECK\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}} 
+DT\+\_\+\+CHECK\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_NOTHROW@{DT\_REQUIRE\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_NOTHROW@{DT\_REQUIRE\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}} 
+DT\+\_\+\+REQUIRE\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_EQ@{DT\_WARN\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_EQ@{DT\_WARN\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}} 
+DT\+\_\+\+WARN\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_EQ@{DT\_CHECK\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_EQ@{DT\_CHECK\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}} 
+DT\+\_\+\+CHECK\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_EQ@{DT\_REQUIRE\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_EQ@{DT\_REQUIRE\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_NE@{DT\_WARN\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_NE@{DT\_WARN\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}} 
+DT\+\_\+\+WARN\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_NE@{DT\_CHECK\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_NE@{DT\_CHECK\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}} 
+DT\+\_\+\+CHECK\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_NE@{DT\_REQUIRE\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_NE@{DT\_REQUIRE\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}} 
+DT\+\_\+\+REQUIRE\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_GT@{DT\_WARN\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_GT@{DT\_WARN\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}} 
+DT\+\_\+\+WARN\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_GT@{DT\_CHECK\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_GT@{DT\_CHECK\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}} 
+DT\+\_\+\+CHECK\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_GT@{DT\_REQUIRE\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_GT@{DT\_REQUIRE\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_LT@{DT\_WARN\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_LT@{DT\_WARN\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}} 
+DT\+\_\+\+WARN\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_LT@{DT\_CHECK\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_LT@{DT\_CHECK\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}} 
+DT\+\_\+\+CHECK\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_LT@{DT\_REQUIRE\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_LT@{DT\_REQUIRE\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}} 
+DT\+\_\+\+REQUIRE\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_GE@{DT\_WARN\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_GE@{DT\_WARN\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}} 
+DT\+\_\+\+WARN\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_GE@{DT\_CHECK\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_GE@{DT\_CHECK\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}} 
+DT\+\_\+\+CHECK\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_GE@{DT\_REQUIRE\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_GE@{DT\_REQUIRE\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}} 
+DT\+\_\+\+REQUIRE\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_LE@{DT\_WARN\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_LE@{DT\_WARN\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}} 
+DT\+\_\+\+WARN\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_LE@{DT\_CHECK\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_LE@{DT\_CHECK\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}} 
+DT\+\_\+\+CHECK\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_LE@{DT\_REQUIRE\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_LE@{DT\_REQUIRE\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_UNARY@{DT\_WARN\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_UNARY@{DT\_WARN\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}} 
+DT\+\_\+\+WARN\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_UNARY@{DT\_CHECK\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_UNARY@{DT\_CHECK\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}} 
+DT\+\_\+\+CHECK\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_UNARY@{DT\_REQUIRE\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_UNARY@{DT\_REQUIRE\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}} 
+DT\+\_\+\+REQUIRE\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_UNARY\_FALSE@{DT\_WARN\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_UNARY\_FALSE@{DT\_WARN\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}} 
+DT\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_UNARY\_FALSE@{DT\_CHECK\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_UNARY\_FALSE@{DT\_CHECK\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}} 
+DT\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_UNARY\_FALSE@{DT\_REQUIRE\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_UNARY\_FALSE@{DT\_REQUIRE\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}} 
+DT\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_warn@{is\_warn}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_warn@{is\_warn}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a338b9d86d4ba91306966385df94c4e73}} 
+is\+\_\+warn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_check@{is\_check}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_check@{is\_check}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab5947af73aa1ba3d6aa391d7542dbeeb}} 
+is\+\_\+check&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_require@{is\_require}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_require@{is\_require}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac56bfff8b2d76dea5d06039f7521012a}} 
+is\+\_\+require&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_normal@{is\_normal}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_normal@{is\_normal}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a92e42919762197665a685b8c738507c4}} 
+is\+\_\+normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws@{is\_throws}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws@{is\_throws}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afa3c93eb2cfc13b22463a939c880426f}} 
+is\+\_\+throws&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws\_as@{is\_throws\_as}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws\_as@{is\_throws\_as}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a963a644bdf5862ad090793796ceb66bb}} 
+is\+\_\+throws\+\_\+as&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_throws\_with@{is\_throws\_with}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_throws\_with@{is\_throws\_with}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0ea2bbff31127e391e116ae517d5c514}} 
+is\+\_\+throws\+\_\+with&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_nothrow@{is\_nothrow}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_nothrow@{is\_nothrow}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5f3e310c10ba1f854da0049c3915130e}} 
+is\+\_\+nothrow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_false@{is\_false}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_false@{is\_false}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a812e83ede566e134017f41d5c72b2ac5}} 
+is\+\_\+false&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_unary@{is\_unary}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_unary@{is\_unary}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a817743d67795f8026724f7996c88b886}} 
+is\+\_\+unary&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_eq@{is\_eq}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_eq@{is\_eq}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a6a46d773b45c0d2219d81fcce351590a}} 
+is\+\_\+eq&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_ne@{is\_ne}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_ne@{is\_ne}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a405685d69fea393e6799b8189824b468}} 
+is\+\_\+ne&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_lt@{is\_lt}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_lt@{is\_lt}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a0083b77ce64a925eeaa559928b9cc5b3}} 
+is\+\_\+lt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_gt@{is\_gt}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_gt@{is\_gt}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4fdc484830c8109f424ddb2615474473}} 
+is\+\_\+gt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_ge@{is\_ge}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_ge@{is\_ge}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa4c3ee89546898afdd61ab915d76722c}} 
+is\+\_\+ge&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_le@{is\_le}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!is\_le@{is\_le}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aeece2ca988e70f9fdf66da7deb76bfcd}} 
+is\+\_\+le&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN@{DT\_WARN}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN@{DT\_WARN}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af6a39192815719381b5fac77a36a4af7}} 
+DT\+\_\+\+WARN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK@{DT\_CHECK}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK@{DT\_CHECK}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af76e26710fc328f589e5b4d3249b3ca7}} 
+DT\+\_\+\+CHECK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE@{DT\_REQUIRE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE@{DT\_REQUIRE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af8e3a004dbc46bd595c0f6161a9c631d}} 
+DT\+\_\+\+REQUIRE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_FALSE@{DT\_WARN\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_FALSE@{DT\_WARN\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a40aec9d0d18bf21ce8cd35e14eb213b3}} 
+DT\+\_\+\+WARN\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_FALSE@{DT\_CHECK\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_FALSE@{DT\_CHECK\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ab820bef738bb45afc3f687a1eec30f6e}} 
+DT\+\_\+\+CHECK\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_FALSE@{DT\_REQUIRE\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_FALSE@{DT\_REQUIRE\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a70bf5f2c07e2b981c056715ca74f53da}} 
+DT\+\_\+\+REQUIRE\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS@{DT\_WARN\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS@{DT\_WARN\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a2a12ac53964b0d738c86049b984c4559}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS@{DT\_CHECK\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS@{DT\_CHECK\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad4e0dd92a8500cb55ed0881f61374daa}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS@{DT\_REQUIRE\_THROWS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS@{DT\_REQUIRE\_THROWS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa41741357a8c8828c831401ead8183a3}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_AS@{DT\_WARN\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_AS@{DT\_WARN\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a5c8a7be78a0a01e5c486b7c74db5187c}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_AS@{DT\_CHECK\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_AS@{DT\_CHECK\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f1f57bb74b7dbe7471e524a6edc0656}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_AS@{DT\_REQUIRE\_THROWS\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_AS@{DT\_REQUIRE\_THROWS\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a917d915963a5e5880ea105740d11acf0}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_WITH@{DT\_WARN\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_WITH@{DT\_WARN\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae9ae0bf430abe2b14cdf14acc0e1a155}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_WITH@{DT\_CHECK\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_WITH@{DT\_CHECK\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ae02fd677eb17511ef112edce1810a0cf}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_WITH@{DT\_REQUIRE\_THROWS\_WITH}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_WITH@{DT\_REQUIRE\_THROWS\_WITH}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aa5c3be1e6ecdd052937de72527e48c11}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_THROWS\_WITH\_AS@{DT\_WARN\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_THROWS\_WITH\_AS@{DT\_WARN\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af077308d7b56fc8f2d1e6e8434de45c0}} 
+DT\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_THROWS\_WITH\_AS@{DT\_CHECK\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_THROWS\_WITH\_AS@{DT\_CHECK\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a158f3cff2cc188aeac90f9683aacd36b}} 
+DT\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_THROWS\_WITH\_AS@{DT\_REQUIRE\_THROWS\_WITH\_AS}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_THROWS\_WITH\_AS@{DT\_REQUIRE\_THROWS\_WITH\_AS}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a37b9b168af88f4d301684a6ac6a0e203}} 
+DT\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_NOTHROW@{DT\_WARN\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_NOTHROW@{DT\_WARN\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a486ef45a1bc30cc2e15e82135d86e357}} 
+DT\+\_\+\+WARN\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_NOTHROW@{DT\_CHECK\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_NOTHROW@{DT\_CHECK\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a57391420d647d521f0247d243db96962}} 
+DT\+\_\+\+CHECK\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_NOTHROW@{DT\_REQUIRE\_NOTHROW}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_NOTHROW@{DT\_REQUIRE\_NOTHROW}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3af3139c12be432566e09c7d748bb99228}} 
+DT\+\_\+\+REQUIRE\+\_\+\+NOTHROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_EQ@{DT\_WARN\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_EQ@{DT\_WARN\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9adc8bcec1d06ea856947a6ae2cb6fb7}} 
+DT\+\_\+\+WARN\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_EQ@{DT\_CHECK\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_EQ@{DT\_CHECK\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed8b8c0e25e90998dd29df68aaf019c2}} 
+DT\+\_\+\+CHECK\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_EQ@{DT\_REQUIRE\_EQ}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_EQ@{DT\_REQUIRE\_EQ}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3acc1ab55f3c7428ba73b791002d52297d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_NE@{DT\_WARN\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_NE@{DT\_WARN\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3afea91e7392a43ecc4ef6a4d6d8670708}} 
+DT\+\_\+\+WARN\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_NE@{DT\_CHECK\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_NE@{DT\_CHECK\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f22bf979e32324aa2dd54748948e95c}} 
+DT\+\_\+\+CHECK\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_NE@{DT\_REQUIRE\_NE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_NE@{DT\_REQUIRE\_NE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4270a0d1c9d2d1f43b6197f483539e44}} 
+DT\+\_\+\+REQUIRE\+\_\+\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_GT@{DT\_WARN\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_GT@{DT\_WARN\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a185b734ee0e242cd3fc8eb42dd1b7a38}} 
+DT\+\_\+\+WARN\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_GT@{DT\_CHECK\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_GT@{DT\_CHECK\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac2cd22d626b3cd46f4752644ad45d008}} 
+DT\+\_\+\+CHECK\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_GT@{DT\_REQUIRE\_GT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_GT@{DT\_REQUIRE\_GT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a835ae4380aea6d530095f8b0210c671d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_LT@{DT\_WARN\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_LT@{DT\_WARN\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac0155160d30daf2c4b2677c7e32ed88c}} 
+DT\+\_\+\+WARN\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_LT@{DT\_CHECK\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_LT@{DT\_CHECK\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a668c458591d7fa5b398b3280bd99e497}} 
+DT\+\_\+\+CHECK\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_LT@{DT\_REQUIRE\_LT}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_LT@{DT\_REQUIRE\_LT}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a7f3cf9611e8b7ec3a1e486272e86e435}} 
+DT\+\_\+\+REQUIRE\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_GE@{DT\_WARN\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_GE@{DT\_WARN\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a9d396e58efa1e54e9e5803143330aef3}} 
+DT\+\_\+\+WARN\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_GE@{DT\_CHECK\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_GE@{DT\_CHECK\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a16227237a2140fd877dbd9e6bf8dcde0}} 
+DT\+\_\+\+CHECK\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_GE@{DT\_REQUIRE\_GE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_GE@{DT\_REQUIRE\_GE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a39ccaa685df8522892a3baa6ce5002dc}} 
+DT\+\_\+\+REQUIRE\+\_\+\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_LE@{DT\_WARN\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_LE@{DT\_WARN\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aed02321201b6add80ba71104a3351cdc}} 
+DT\+\_\+\+WARN\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_LE@{DT\_CHECK\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_LE@{DT\_CHECK\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a06431d2dc6fe9f278feb1c57438744a1}} 
+DT\+\_\+\+CHECK\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_LE@{DT\_REQUIRE\_LE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_LE@{DT\_REQUIRE\_LE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a42f79b61640a90d4e30c06685672310d}} 
+DT\+\_\+\+REQUIRE\+\_\+\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_UNARY@{DT\_WARN\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_UNARY@{DT\_WARN\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a46ba7012d284320721f026f9c557b7d5}} 
+DT\+\_\+\+WARN\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_UNARY@{DT\_CHECK\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_UNARY@{DT\_CHECK\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d}} 
+DT\+\_\+\+CHECK\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_UNARY@{DT\_REQUIRE\_UNARY}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_UNARY@{DT\_REQUIRE\_UNARY}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ac12e9aaa7d2158a39f3b3e574419bc84}} 
+DT\+\_\+\+REQUIRE\+\_\+\+UNARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_WARN\_UNARY\_FALSE@{DT\_WARN\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_WARN\_UNARY\_FALSE@{DT\_WARN\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a4aef276b6631ff279a6a2c3ca270de46}} 
+DT\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_CHECK\_UNARY\_FALSE@{DT\_CHECK\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_CHECK\_UNARY\_FALSE@{DT\_CHECK\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3ad654d8c450de11b4d132c7309f612cb4}} 
+DT\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DT\_REQUIRE\_UNARY\_FALSE@{DT\_REQUIRE\_UNARY\_FALSE}!doctest::assertType@{doctest::assertType}}\index{doctest::assertType@{doctest::assertType}!DT\_REQUIRE\_UNARY\_FALSE@{DT\_REQUIRE\_UNARY\_FALSE}}}\mbox{\Hypertarget{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}\label{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3a8ef9faccbc4c56f6f192fdfa8fa83807}} 
+DT\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE&\\
+\hline
+
+\end{DoxyEnumFields}

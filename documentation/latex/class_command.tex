@@ -2,6 +2,11 @@
 \label{class_command}\index{Command@{Command}}
 
 
+Abstract base class for all commands classes which must to supports the program.  
+
+
+
+
 {\ttfamily \#include $<$Command.\+h$>$}
 
 Inheritance diagram for Command\+:\begin{figure}[H]
@@ -22,7 +27,7 @@ virtual \mbox{\hyperlink{class_command_aa545a53d35818f9efb936daf3fa16c61}{$\sim$
 \mbox{\hyperlink{class_command_aeaacf1d50fe58d94443ba72b51b68874}{Command}} (const \mbox{\hyperlink{class_string}{String}} \&command\+\_\+name, const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ \&parameters)
 \item 
 virtual void \mbox{\hyperlink{class_command_a5e4f37b66ceb0e4424c8011e7c598063}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Each of heirs implementing it to a different way. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,7 +38,7 @@ virtual void \mbox{\hyperlink{class_command_a5e4f37b66ceb0e4424c8011e7c598063}{e
 
 
 \doxysubsection{Detailed Description}
-Abstract base class for all commands classes which must to supports the program 
+Abstract base class for all commands classes which must to supports the program. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_command_ac3717e409ad40cc49776e4b2f5d8d3db}\label{class_command_ac3717e409ad40cc49776e4b2f5d8d3db}} 
@@ -69,7 +74,16 @@ Abstract base class for all commands classes which must to supports the program
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
 {\footnotesize\ttfamily virtual void Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
-Each of heirs implementing it to a different way @ param manager Calls methods for successful execution of program through the given command 
+
+
+Each of heirs implementing it to a different way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Calls methods for successful execution of program through the given command \\
+\hline
+\end{DoxyParams}
+
 
 Reimplemented in \mbox{\hyperlink{class_save_command_a7a27ff3e4ac41341148a06b2169dbe45}{Save\+Command}}, \mbox{\hyperlink{class_save_as_command_a8275020b79ccf723507bac2142d13f79}{Save\+As\+Command}}, \mbox{\hyperlink{class_remove_command_addafbd09d9db1f46122fec3a4fa095aa}{Remove\+Command}}, \mbox{\hyperlink{class_promote_jedi_command_a7c4755fb82089df85a5574f1186911d7}{Promote\+Jedi\+Command}}, \mbox{\hyperlink{class_print_command_a7dc03cc01ab59affbac0816d70f03f11}{Print\+Command}}, \mbox{\hyperlink{class_operator_plus_command_aafd2d6997cace28071cb3c18bf51c2da}{Operator\+Plus\+Command}}, \mbox{\hyperlink{class_open_command_abec1d2a82f26c119e9fdab8d916ea43d}{Open\+Command}}, \mbox{\hyperlink{class_help_command_ab206aa512bdf2b8925451b4034ea92d8}{Help\+Command}}, \mbox{\hyperlink{class_get_youngest_jedi_command_af692592764fe958f5b688aa3deb476a7}{Get\+Youngest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_strongest_jedi_command_abadfde309569a703d270e727f44b8142}{Get\+Strongest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_most_used_saber_color_command_a4d33fef97f33ead4d749371cf796d8e3}{Get\+Most\+Used\+Saber\+Color\+Command}}, \mbox{\hyperlink{class_exit_command_ab4e167dd63ad04b62defc7a11c0bb91a}{Exit\+Command}}, \mbox{\hyperlink{class_demote_jedi_command_a943af6b0b598fe154b13b67c34bad2d0}{Demote\+Jedi\+Command}}, \mbox{\hyperlink{class_create_jedi_command_aae010aaa5868ddfbce1e7934924e2953}{Create\+Jedi\+Command}}, \mbox{\hyperlink{class_close_command_ab20d19e27c056ddc31a1e7c1a727c881}{Close\+Command}}, and \mbox{\hyperlink{class_add_planet_command_a57a38dd00e8815e70e15b513cb5cf63e}{Add\+Planet\+Command}}.
 
@@ -88,8 +102,3 @@ Reimplemented in \mbox{\hyperlink{class_save_command_a7a27ff3e4ac41341148a06b216
 \doxysubsubsection{\texorpdfstring{m\_parameters}{m\_parameters}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_vector}{Vector}}$<$\mbox{\hyperlink{class_string}{String}}$>$ Command\+::m\+\_\+parameters\hspace{0.3cm}{\ttfamily [protected]}}
 
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
-\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_command_8h}{Command.\+h}}\end{DoxyCompactItemize}

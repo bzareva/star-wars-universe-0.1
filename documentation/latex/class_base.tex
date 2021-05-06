@@ -2,6 +2,11 @@
 \label{class_base}\index{Base@{Base}}
 
 
+Abstract base class.  
+
+
+
+
 {\ttfamily \#include $<$Base.\+h$>$}
 
 Inheritance diagram for Base\+:\begin{figure}[H]
@@ -20,7 +25,7 @@ Inheritance diagram for Base\+:\begin{figure}[H]
 virtual \mbox{\hyperlink{class_base_a306fb25541331080645a716286357ef9}{$\sim$\+Base}} ()=default
 \begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_base}{Base}} $\ast$ \mbox{\hyperlink{class_base_ab99040cf7517193fb67b86ce0c29df6a}{clone}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Pure virtual clone method. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_base_a920a3bc2ded309777ce0ae2af91e6d21}{write\+\_\+to\+\_\+file}} (std\+::ofstream \&fout) const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base}} heirs(\+Jedi, Planet) to be displayed in its own way on {\itshape file}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_base_aa464997c0ff7060d1dd2568e1590b4b6}{read\+\_\+from\+\_\+file}} (std\+::ifstream \&fin)=0
@@ -28,14 +33,14 @@ virtual void \mbox{\hyperlink{class_base_aa464997c0ff7060d1dd2568e1590b4b6}{read
 virtual \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_base_a9e41ad5ad36312ea1af527f8154a5a51}{type\+\_\+name}} () const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual method which return name of type object. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_base_aac448cd0ae33113c3a0efbacd9d3f560}{create\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name, const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank, const unsigned \&jedi\+\_\+age, const \mbox{\hyperlink{class_string}{String}} \&saber\+\_\+color, const double \&jedi\+\_\+strength)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Pure virtual create method. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_base_afde26e7c513aa9d2cbc5b3dd6eedfa82}{remove\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)=0
 \begin{DoxyCompactList}\small\item\em Displays a message whether the removal was successful or not (the \mbox{\hyperlink{class_jedi}{Jedi}} did not inhabits this planet). \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_jedi}{Jedi}} \mbox{\hyperlink{class_base_a27ac8e644c353fbe9690d4cc89ce083a}{get\+\_\+strongest\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) const =0
 \begin{DoxyCompactList}\small\item\em Displays information about the strongest \mbox{\hyperlink{class_jedi}{Jedi}} of the submitted planet(with the greatest force). ~\newline
  \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \mbox{\hyperlink{class_base_a7a6218ef6804c920c7ef56903d989ff2}{get\+\_\+youngest\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank) const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Brings out the youngest \mbox{\hyperlink{class_jedi}{Jedi}} inhabiting the given planet and has the corresponding rank (if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message). \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_base_a10103d0c8414c13b1df927286071c1da}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank) const =0
 \item 
 virtual \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_base_a0dcaec099589dfe62c7e623cb11e6145}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) const =0
@@ -51,7 +56,9 @@ virtual void \mbox{\hyperlink{class_base_a22d56edcf21b294c6d0730b2ea7ef502}{demo
 
 
 \doxysubsection{Detailed Description}
-Abstract base class. \mbox{\hyperlink{class_planet}{Planet}} and \mbox{\hyperlink{class_galaxy}{Galaxy}} herited this class and they implement all of the functions in own way. 
+Abstract base class. 
+
+\mbox{\hyperlink{class_planet}{Planet}} and \mbox{\hyperlink{class_galaxy}{Galaxy}} herited this class and they implement all of the functions in own way. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_base_a58887755525abd3f340963e2bbdcc972}\label{class_base_a58887755525abd3f340963e2bbdcc972}} 
@@ -83,7 +90,11 @@ default destructor
 \doxysubsubsection{\texorpdfstring{clone()}{clone()}}
 {\footnotesize\ttfamily virtual \mbox{\hyperlink{class_base}{Base}}$\ast$ Base\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-Pure virtual clone method. Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. Access to the object of this class is realize with clone method. 
+
+
+Pure virtual clone method. 
+
+Makes a copy of the \mbox{\hyperlink{class_base}{Base}} object. Access to the object of this class is realize with clone method. 
 
 Implemented in \mbox{\hyperlink{class_planet_a0ae719d72f211ef4ec5976c5f9862a8f}{Planet}}, and \mbox{\hyperlink{class_galaxy_aa08a6b5ffebb121112cf75f400f66097}{Galaxy}}.
 
@@ -93,7 +104,11 @@ Implemented in \mbox{\hyperlink{class_planet_a0ae719d72f211ef4ec5976c5f9862a8f}{
 \doxysubsubsection{\texorpdfstring{create\_jedi()}{create\_jedi()}}
 {\footnotesize\ttfamily virtual void Base\+::create\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name,  }\item[{const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank,  }\item[{const unsigned \&}]{jedi\+\_\+age,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{saber\+\_\+color,  }\item[{const double \&}]{jedi\+\_\+strength }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-Pure virtual create method. Display a message whether the addition was successful or not (there is a \mbox{\hyperlink{class_jedi}{Jedi}} with such a name on this or that planet, or not there is a planet with such a name). 
+
+
+Pure virtual create method. 
+
+Display a message whether the addition was successful or not (there is a \mbox{\hyperlink{class_jedi}{Jedi}} with such a name on this or that planet, or not there is a planet with such a name). 
 
 Implemented in \mbox{\hyperlink{class_planet_a2bf100341c1507fdcb06d46cfb9c5dd0}{Planet}}, and \mbox{\hyperlink{class_galaxy_aed4036d02bc8eb00266fb813f3800add}{Galaxy}}.
 
@@ -158,7 +173,11 @@ Implemented in \mbox{\hyperlink{class_planet_a43cb166aaedab24ed834d560d701061c}{
 \doxysubsubsection{\texorpdfstring{get\_youngest\_jedi()}{get\_youngest\_jedi()}}
 {\footnotesize\ttfamily virtual \mbox{\hyperlink{class_vector}{Vector}}$<$\mbox{\hyperlink{class_jedi}{Jedi}}$>$ Base\+::get\+\_\+youngest\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name,  }\item[{const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+
+
 Brings out the youngest \mbox{\hyperlink{class_jedi}{Jedi}} inhabiting the given planet and has the corresponding rank (if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message). 
+
+
 
 Implemented in \mbox{\hyperlink{class_planet_a88bc2701cd0af73c1bb2fac49b85b571}{Planet}}, and \mbox{\hyperlink{class_galaxy_a90490b6ab0c39f3011bfaa0e9c26cd23}{Galaxy}}.
 
@@ -270,8 +289,3 @@ Pure virtual print method which allows each of \mbox{\hyperlink{class_base}{Base
 
 Implemented in \mbox{\hyperlink{class_planet_a563c09b4640f2718358a50365c831785}{Planet}}, and \mbox{\hyperlink{class_galaxy_afbc8202c03f80f6b2ef399f3af87efca}{Galaxy}}.
 
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
-\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_base_8h}{Base.\+h}}\end{DoxyCompactItemize}

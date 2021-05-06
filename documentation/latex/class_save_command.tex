@@ -2,6 +2,11 @@
 \label{class_save_command}\index{SaveCommand@{SaveCommand}}
 
 
+Save information in current opened file All methods which implements are from abstract base class \mbox{\hyperlink{class_command}{Command}}.  
+
+
+
+
 {\ttfamily \#include $<$Save\+Command.\+h$>$}
 
 Inheritance diagram for Save\+Command\+:\begin{figure}[H]
@@ -16,12 +21,12 @@ Inheritance diagram for Save\+Command\+:\begin{figure}[H]
 \mbox{\hyperlink{class_save_command_a388548ec95a485e72dd8799dd60b475c}{Save\+Command}} ()
 \item 
 void \mbox{\hyperlink{class_save_command_a7a27ff3e4ac41341148a06b2169dbe45}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Each of heirs implementing it to a different way. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
-Save information in current opened file All methods which implements are from abstract base class \mbox{\hyperlink{class_command}{Command}} 
+Save information in current opened file All methods which implements are from abstract base class \mbox{\hyperlink{class_command}{Command}}. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_save_command_a388548ec95a485e72dd8799dd60b475c}\label{class_save_command_a388548ec95a485e72dd8799dd60b475c}} 
@@ -39,12 +44,16 @@ Save information in current opened file All methods which implements are from ab
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
 {\footnotesize\ttfamily void Save\+Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
-Each of heirs implementing it to a different way @ param manager Calls methods for successful execution of program through the given command 
+
+
+Each of heirs implementing it to a different way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Calls methods for successful execution of program through the given command \\
+\hline
+\end{DoxyParams}
+
 
 Reimplemented from \mbox{\hyperlink{class_command_a5e4f37b66ceb0e4424c8011e7c598063}{Command}}.
 
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
-\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_save_command_8h}{Save\+Command.\+h}}\end{DoxyCompactItemize}

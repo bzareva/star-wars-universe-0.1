@@ -2,6 +2,11 @@
 \label{class_planet}\index{Planet@{Planet}}
 
 
+Inherits of \mbox{\hyperlink{class_base}{Base}} class.  
+
+
+
+
 {\ttfamily \#include $<$Planet.\+h$>$}
 
 Inheritance diagram for Planet\+:\begin{figure}[H]
@@ -17,7 +22,7 @@ Inheritance diagram for Planet\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_planet_ac00facbec0b9c5b7080ea253c8ab0637}{Planet}} (std\+::ifstream \&fin)
 \begin{DoxyCompactList}\small\item\em constructor with parameter from type ifstream for load to text file \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_planet_af2afd1051449a011f12331c7f83e82f3}{Planet}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ jedi, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+planet\char`\"{}))
+\mbox{\hyperlink{class_planet_a1cf90851c9d28e06dc44a35f463e8671}{Planet}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&jedi, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+planet\char`\"{}))
 \begin{DoxyCompactList}\small\item\em constructor with parameters \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_planet_a02cff1d1b9c46249f924f903419a7542}{Planet}} (const \mbox{\hyperlink{class_planet}{Planet}} \&obj)
 \begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
@@ -82,13 +87,17 @@ unsigned \mbox{\hyperlink{class_planet_a502915ab7511f8880874e64fd0232057}{get\+\
 \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \mbox{\hyperlink{class_planet_ae5103d6401269ea25a09243313168106}{get\+\_\+jedi}} () const
 \item 
 \mbox{\hyperlink{class_jedi}{Jedi}} \mbox{\hyperlink{class_planet_ad3630562993c0137eddb46d839928064}{get\+\_\+jedi}} (const unsigned \&index) const
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_planet_ace66459c821229b8a6537db309c49ced}{set\+\_\+planet\+\_\+name}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)
+\begin{DoxyCompactList}\small\item\em setters for planet name \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_planet_a42e8fc483b60004974efc3807d01138d}{init\+\_\+planet}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&jedi, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+planet\char`\"{}))
+\begin{DoxyCompactList}\small\item\em initialize the planet \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 std\+::istream \& \mbox{\hyperlink{class_planet_aa851b8669c587bef2cfe9c1a4702ff2d}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_planet}{Planet}} \&obj)
 \begin{DoxyCompactList}\small\item\em input from console for \mbox{\hyperlink{class_planet}{Planet}} \end{DoxyCompactList}\item 
-std\+::ostream \& \mbox{\hyperlink{class_planet_a7b00862fc7508aa185cc62d7fe2a245e}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_planet}{Planet}} \&obj)
+\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \& \mbox{\hyperlink{class_planet_a7b00862fc7508aa185cc62d7fe2a245e}{operator$<$$<$}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&out, const \mbox{\hyperlink{class_planet}{Planet}} \&obj)
 \begin{DoxyCompactList}\small\item\em formatted output for \mbox{\hyperlink{class_planet}{Planet}} on console \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_planet}{Planet}} \mbox{\hyperlink{class_planet_ab3e1c214071b8f5455ddf44333134850}{operator+}} (\mbox{\hyperlink{class_planet}{Planet}} lhs, const \mbox{\hyperlink{class_planet}{Planet}} \&rhs)
 \begin{DoxyCompactList}\small\item\em gathers the inhabitants of two planets \end{DoxyCompactList}\item 
@@ -99,7 +108,7 @@ std\+::ostream \& \mbox{\hyperlink{class_planet_a7b00862fc7508aa185cc62d7fe2a245
 
 
 \doxysubsection{Detailed Description}
-Inherits of \mbox{\hyperlink{class_base}{Base}} class 
+Inherits of \mbox{\hyperlink{class_base}{Base}} class. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_planet_ac88200b337a62e1377858e3116f9412b}\label{class_planet_ac88200b337a62e1377858e3116f9412b}} 
@@ -122,11 +131,11 @@ default constructor
 
 constructor with parameter from type ifstream for load to text file 
 
-\mbox{\Hypertarget{class_planet_af2afd1051449a011f12331c7f83e82f3}\label{class_planet_af2afd1051449a011f12331c7f83e82f3}} 
+\mbox{\Hypertarget{class_planet_a1cf90851c9d28e06dc44a35f463e8671}\label{class_planet_a1cf90851c9d28e06dc44a35f463e8671}} 
 \index{Planet@{Planet}!Planet@{Planet}}
 \index{Planet@{Planet}!Planet@{Planet}}
 \doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily Planet\+::\+Planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$}]{jedi,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+planet\char`\"{})} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Planet\+::\+Planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&}]{jedi,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+planet\char`\"{})} }\end{DoxyParamCaption})}
 
 
 
@@ -294,6 +303,16 @@ Youngest jedi on this planet
 
 Implements \mbox{\hyperlink{class_base_a7a6218ef6804c920c7ef56903d989ff2}{Base}}.
 
+\mbox{\Hypertarget{class_planet_a42e8fc483b60004974efc3807d01138d}\label{class_planet_a42e8fc483b60004974efc3807d01138d}} 
+\index{Planet@{Planet}!init\_planet@{init\_planet}}
+\index{init\_planet@{init\_planet}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{init\_planet()}{init\_planet()}}
+{\footnotesize\ttfamily void Planet\+::init\+\_\+planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&}]{jedi,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+planet\char`\"{})} }\end{DoxyParamCaption})}
+
+
+
+initialize the planet 
+
 \mbox{\Hypertarget{class_planet_ab4e43adc0e030963f15d4c2b9981d1a7}\label{class_planet_ab4e43adc0e030963f15d4c2b9981d1a7}} 
 \index{Planet@{Planet}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!Planet@{Planet}}
@@ -444,6 +463,16 @@ remove jedi from this planet
 
 Implements \mbox{\hyperlink{class_base_afde26e7c513aa9d2cbc5b3dd6eedfa82}{Base}}.
 
+\mbox{\Hypertarget{class_planet_ace66459c821229b8a6537db309c49ced}\label{class_planet_ace66459c821229b8a6537db309c49ced}} 
+\index{Planet@{Planet}!set\_planet\_name@{set\_planet\_name}}
+\index{set\_planet\_name@{set\_planet\_name}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{set\_planet\_name()}{set\_planet\_name()}}
+{\footnotesize\ttfamily void Planet\+::set\+\_\+planet\+\_\+name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+setters for planet name 
+
 \mbox{\Hypertarget{class_planet_a231e388976436f5204a88f960b094dd4}\label{class_planet_a231e388976436f5204a88f960b094dd4}} 
 \index{Planet@{Planet}!sort@{sort}}
 \index{sort@{sort}!Planet@{Planet}}
@@ -541,7 +570,7 @@ remove jedi from this planet
 \index{Planet@{Planet}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Planet@{Planet}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&}]{out,  }\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -557,9 +586,3 @@ formatted output for \mbox{\hyperlink{class_planet}{Planet}} on console
 
 input from console for \mbox{\hyperlink{class_planet}{Planet}} 
 
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_planet_8h}{Planet.\+h}}\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_planet_8cpp}{Planet.\+cpp}}\end{DoxyCompactItemize}

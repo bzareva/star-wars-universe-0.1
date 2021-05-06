@@ -1,0 +1,470 @@
+\hypertarget{doctest_8cpp}{}\doxysection{C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/doctest/parts/doctest.cpp File Reference}
+\label{doctest_8cpp}\index{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/doctest/parts/doctest.cpp@{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/doctest/parts/doctest.cpp}}
+{\ttfamily \#include \char`\"{}doctest\+\_\+fwd.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$new$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$csignal$>$}\newline
+{\ttfamily \#include $<$cfloat$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdoctest_1_1detail_1_1_errno_guard}{doctest\+::detail\+::\+Errno\+Guard}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacedoctest__detail__test__suite__ns}{doctest\+\_\+detail\+\_\+test\+\_\+suite\+\_\+ns}}
+\item 
+ \mbox{\hyperlink{namespacedoctest}{doctest}}
+\item 
+ \mbox{\hyperlink{namespacedoctest_1_1detail}{doctest\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_aab6dd1fdb95367987cb9be4f5d4ce2ab}{DOCTEST\+\_\+\+LIBRARY\+\_\+\+IMPLEMENTATION}}
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_abd165ee6474b5b75bf075842fff13a04}{STDOUT\+\_\+\+FILENO}}~fileno(stdout)
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_a613ab1d060fe3fb972c3b777744e7579}{DOCTEST\+\_\+\+COUNTOF}}(x)~(sizeof(x) / sizeof(x\mbox{[}0\mbox{]}))
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_ad560d71151aef18edd4ca7a13e1c16ee}{DOCTEST\+\_\+\+BRANCH\+\_\+\+ON\+\_\+\+DISABLED}}(if\+\_\+disabled,  if\+\_\+not\+\_\+disabled)~if\+\_\+not\+\_\+disabled
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}{DOCTEST\+\_\+\+CONFIG\+\_\+\+OPTIONS\+\_\+\+PREFIX}}~\char`\"{}dt-\/\char`\"{}
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_a8f3293f622cc7fbd71ddfeb73fb37340}{DOCTEST\+\_\+\+THREAD\+\_\+\+LOCAL}}~thread\+\_\+local
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_a9287b3dcfc1184fca554e6e1674fee4c}{DOCTEST\+\_\+\+MULTI\+\_\+\+LANE\+\_\+\+ATOMICS\+\_\+\+THREAD\+\_\+\+LANES}}~32
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_ace932f88ae6fa26ad3862e9abb187867}{DOCTEST\+\_\+\+MULTI\+\_\+\+LANE\+\_\+\+ATOMICS\+\_\+\+CACHE\+\_\+\+LINE\+\_\+\+SIZE}}~64
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_ac75ba8dd3658b27170c7f73f563422eb}{DOCTEST\+\_\+\+OPTIONS\+\_\+\+PREFIX\+\_\+\+DISPLAY}}~\char`\"{}\char`\"{}
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_aae8013349d220f6e9013be3eb937f88d}{DOCTEST\+\_\+\+TO\+\_\+\+STRING\+\_\+\+OVERLOAD}}(\mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}},  fmt)
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_ae2e6d774b3c2d41781192c176820bdf1}{DOCTEST\+\_\+\+CONFIG\+\_\+\+COLORS\+\_\+\+ANSI}}
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_a590edce32e9348c4b55365ef126426d7}{DOCTEST\+\_\+\+ITERATE\+\_\+\+THROUGH\+\_\+\+REPORTERS}}(function, ...)
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_a01ec2dbba7655d16a6a2b1fbf909ceb5}{DOCTEST\+\_\+\+OUTPUT\+\_\+\+DEBUG\+\_\+\+STRING}}(text)
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_aec379da2959e1a4d6d1ca8b957f797d2}{DOCTEST\+\_\+\+INTERNAL\+\_\+\+ERROR}}(msg)
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_a49a0d00014eeffb9b904cdaeaccc2870}{DOCTEST\+\_\+\+PARSE\+\_\+\+AS\+\_\+\+BOOL\+\_\+\+OR\+\_\+\+FLAG}}(\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  sname,  var,  default)
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_a608401f25679702de753228fbd05d992}{DOCTEST\+\_\+\+PARSE\+\_\+\+INT\+\_\+\+OPTION}}(\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  sname,  var,  default)
+\item 
+\#define \mbox{\hyperlink{doctest_8cpp_ad462dc1f6a4beee23671682dcf7d03dd}{DOCTEST\+\_\+\+PARSE\+\_\+\+STR\+\_\+\+OPTION}}(\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  sname,  var,  default)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a569dfd3f8dfae352f35e8f62aadbdbc4}{DOCTEST\+\_\+\+CLANG\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+POP}} \mbox{\hyperlink{doctest__fwd_8h_a628491cf2971a026350d5401986bf6d3}{DOCTEST\+\_\+\+CLANG\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+PUSH}} \mbox{\hyperlink{doctest__fwd_8h_a8015d10af2883db80a955ce0d523886d}{DOCTEST\+\_\+\+GCC\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+PUSH}} \mbox{\hyperlink{doctest__fwd_8h_aec6d713a9dde361b8e68afe78c5bf3cf}{DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+PUSH}} \mbox{\hyperlink{doctest_8cpp_a7abd20a8cfb67ea45b4ec644c14b5a37}{DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING}} (4616) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4619) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4996) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4267) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4706) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4512) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4127) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4530) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4577) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4774) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4365) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4820) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4640) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(5039) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(5045) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4626) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(5027) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(5026) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4625) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(4800) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(26439) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(26495) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(26451) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(26444) DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING(26812) \mbox{\hyperlink{doctest__fwd_8h_ad3e5c37dc8bd7b0f9346c99c6aab2d1d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+BEGIN}} \mbox{\hyperlink{doctest__fwd_8h_acca96650713994a51c3deb8e4bdec43d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+END}} namespace doctest
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} \mbox{\hyperlink{structdoctest_1_1detail_1_1_test_suite}{doctest\+::detail\+::\+Test\+Suite}} \& \mbox{\hyperlink{namespacedoctest__detail__test__suite__ns_a63d04c2e0ba35dff1e33cf0a24ec66c8}{doctest\+\_\+detail\+\_\+test\+\_\+suite\+\_\+ns\+::get\+Current\+Test\+Suite}} ()
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} bool \mbox{\hyperlink{namespacedoctest_1_1detail_acec9ff072dd86af95225a8beb9c57298}{doctest\+::detail\+::check\+If\+Should\+Throw}} (assert\+Type\+::\+Enum at)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a60ffd50b9ee7adfcafc078f333aac8b6}{doctest\+::detail\+::throw\+Exception}} ()
+\item 
+\mbox{\hyperlink{namespacedoctest_1_1detail_aaeabe9bfc5ec6b94d8679e8d66d82fb1}{doctest\+::detail\+::\+DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+WITH\+\_\+\+PUSH}} (4996) \mbox{\hyperlink{struct_subcase}{Subcase}}
+\item 
+\mbox{\hyperlink{namespacedoctest_1_1detail_af484e6d3371cb1bbb07557d3324e145d}{doctest\+::detail\+::\+DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+WITH\+\_\+\+PUSH}} (26434) \mbox{\hyperlink{subcases_8cpp_a43b00241b8c43b79acc4a901002bbbe4}{DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING}}(26437) Test\+Case \&Test\+Case
+\item 
+std\+::set$<$ Test\+Case $>$ \& \mbox{\hyperlink{namespacedoctest_1_1detail_aed2905315b45962350d830b35cae3082}{doctest\+::detail\+::get\+Registered\+Tests}} ()
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} int \mbox{\hyperlink{namespacedoctest_1_1detail_a00f99edefb8490a8e2602d58c96431f4}{doctest\+::detail\+::reg\+Test}} (const Test\+Case \&\mbox{\hyperlink{doctest_8cpp_aa04e2177279260cb81d1c6afc66bab2c}{tc}})
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} int \mbox{\hyperlink{namespacedoctest_1_1detail_ae79cb8df06d35468dd0ba9f04c85802c}{doctest\+::detail\+::set\+Test\+Suite}} (const Test\+Suite \&ts)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} bool \mbox{\hyperlink{namespacedoctest_1_1detail_a013828c4e677241cc26aeea33f762710}{doctest\+::detail\+::is\+Debugger\+Active}} ()
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a3887426da16e0d12e6f0e270a767a6a5}{doctest\+::detail\+::register\+Exception\+Translator\+Impl}} (const IException\+Translator $\ast$et)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a54f817dd0c3e33a4f96de3e638d4c559}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, bool in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_ac0ab7be576543b52b480df7f44ee13c5}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, float in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_aa0aa6b2f4cd2ab8cc0b5c4c6a1745e05}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, double in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_aa7f9d8383116a268a72993244a43d74d}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, double long in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_aee32c9e6a9e1b419c6feb44e8c1b6205}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, char in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_aba277e0f00b9cf14b7161bbe033b126f}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, char signed in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a23f8f4324507a40de4fb636f20f36fb7}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, char unsigned in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_aaa111edaaf87cd57961d2c1923d762cb}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, int short in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a72d0259a5b3c0f0f3a88ea8d732223f8}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, int short unsigned in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_af6f60470d3f0f2b858a03dad822ca9c6}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, int in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a7001b8028c2c21968f2a0deb3417e9a4}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, int unsigned in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a830b2dd9dae3bc74ae0c9002b7a2dbed}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, int long in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a82d6e6a85cac7cfb399d8215308369fc}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, int long unsigned in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a359e9b95a3fbe0322056d9d9c7385cde}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, int long long in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a22df719818a3df2b975ba0f7045cc8fd}{doctest\+::detail\+::to\+Stream}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} $\ast$\mbox{\hyperlink{doctest_8cpp_a856811d3486b5ce13dac633470f21574}{s}}, int long long unsigned in)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a0ff832be68bf666d856aefd539e1ce81}{doctest\+::detail\+::failed\+\_\+out\+\_\+of\+\_\+a\+\_\+testing\+\_\+context}} (const Assert\+Data \&ad)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a6d4efb043e9e5a6fa0db64f0e230a7a7}{doctest\+::detail\+::decomp\+\_\+assert}} (assert\+Type\+::\+Enum at, const char $\ast$file, int line, const char $\ast$expr, Result result)
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_a9c16ffc635ec47f07797d21ede26b1a5}{DOCTEST\+\_\+\+INTERFACE}} void \mbox{\hyperlink{namespacedoctest_1_1detail_a828e011bb6028ab94eb14a3c7d8bd2c4}{doctest\+::detail\+::register\+Reporter\+Impl}} (const char $\ast$\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, int prio, reporter\+Creator\+Func c, bool is\+Reporter)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doctest_8cpp_a8f3293f622cc7fbd71ddfeb73fb37340}{DOCTEST\+\_\+\+THREAD\+\_\+\+LOCAL}} std\+::vector$<$ IContext\+Scope $\ast$ $>$ \mbox{\hyperlink{namespacedoctest_1_1detail_af7ef137800726c15086b16199621401b}{doctest\+::detail\+::g\+\_\+info\+Contexts}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{doctest_8cpp_ad560d71151aef18edd4ca7a13e1c16ee}\label{doctest_8cpp_ad560d71151aef18edd4ca7a13e1c16ee}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_BRANCH\_ON\_DISABLED@{DOCTEST\_BRANCH\_ON\_DISABLED}}
+\index{DOCTEST\_BRANCH\_ON\_DISABLED@{DOCTEST\_BRANCH\_ON\_DISABLED}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_BRANCH\_ON\_DISABLED}{DOCTEST\_BRANCH\_ON\_DISABLED}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+BRANCH\+\_\+\+ON\+\_\+\+DISABLED(\begin{DoxyParamCaption}\item[{}]{if\+\_\+disabled,  }\item[{}]{if\+\_\+not\+\_\+disabled }\end{DoxyParamCaption})~if\+\_\+not\+\_\+disabled}
+
+\mbox{\Hypertarget{doctest_8cpp_ae2e6d774b3c2d41781192c176820bdf1}\label{doctest_8cpp_ae2e6d774b3c2d41781192c176820bdf1}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_CONFIG\_COLORS\_ANSI@{DOCTEST\_CONFIG\_COLORS\_ANSI}}
+\index{DOCTEST\_CONFIG\_COLORS\_ANSI@{DOCTEST\_CONFIG\_COLORS\_ANSI}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_CONFIG\_COLORS\_ANSI}{DOCTEST\_CONFIG\_COLORS\_ANSI}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+CONFIG\+\_\+\+COLORS\+\_\+\+ANSI}
+
+\mbox{\Hypertarget{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}\label{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_CONFIG\_OPTIONS\_PREFIX@{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}}
+\index{DOCTEST\_CONFIG\_OPTIONS\_PREFIX@{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+CONFIG\+\_\+\+OPTIONS\+\_\+\+PREFIX~\char`\"{}dt-\/\char`\"{}}
+
+\mbox{\Hypertarget{doctest_8cpp_a613ab1d060fe3fb972c3b777744e7579}\label{doctest_8cpp_a613ab1d060fe3fb972c3b777744e7579}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_COUNTOF@{DOCTEST\_COUNTOF}}
+\index{DOCTEST\_COUNTOF@{DOCTEST\_COUNTOF}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_COUNTOF}{DOCTEST\_COUNTOF}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+COUNTOF(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(sizeof(x) / sizeof(x\mbox{[}0\mbox{]}))}
+
+\mbox{\Hypertarget{doctest_8cpp_aec379da2959e1a4d6d1ca8b957f797d2}\label{doctest_8cpp_aec379da2959e1a4d6d1ca8b957f797d2}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_INTERNAL\_ERROR@{DOCTEST\_INTERNAL\_ERROR}}
+\index{DOCTEST\_INTERNAL\_ERROR@{DOCTEST\_INTERNAL\_ERROR}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_INTERNAL\_ERROR}{DOCTEST\_INTERNAL\_ERROR}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+INTERNAL\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    throw\_exception(std::logic\_error(                                                              \(\backslash\)}
+\DoxyCodeLine{            \_\_FILE\_\_ \textcolor{stringliteral}{"{}:"{}} \mbox{\hyperlink{doctest_2doctest_8h_aa928e63972e4bc49fcf27641202f2f38}{DOCTEST\_TOSTR}}(\_\_LINE\_\_) \textcolor{stringliteral}{"{}: Internal doctest error: "{}} msg))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{doctest_8cpp_a590edce32e9348c4b55365ef126426d7}\label{doctest_8cpp_a590edce32e9348c4b55365ef126426d7}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_ITERATE\_THROUGH\_REPORTERS@{DOCTEST\_ITERATE\_THROUGH\_REPORTERS}}
+\index{DOCTEST\_ITERATE\_THROUGH\_REPORTERS@{DOCTEST\_ITERATE\_THROUGH\_REPORTERS}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_ITERATE\_THROUGH\_REPORTERS}{DOCTEST\_ITERATE\_THROUGH\_REPORTERS}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+ITERATE\+\_\+\+THROUGH\+\_\+\+REPORTERS(\begin{DoxyParamCaption}\item[{}]{function,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& curr\_rep : g\_cs-\/>reporters\_currently\_used)                                           \(\backslash\)}
+\DoxyCodeLine{    curr\_rep-\/>function(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{doctest_8cpp_aab6dd1fdb95367987cb9be4f5d4ce2ab}\label{doctest_8cpp_aab6dd1fdb95367987cb9be4f5d4ce2ab}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_LIBRARY\_IMPLEMENTATION@{DOCTEST\_LIBRARY\_IMPLEMENTATION}}
+\index{DOCTEST\_LIBRARY\_IMPLEMENTATION@{DOCTEST\_LIBRARY\_IMPLEMENTATION}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_LIBRARY\_IMPLEMENTATION}{DOCTEST\_LIBRARY\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+LIBRARY\+\_\+\+IMPLEMENTATION}
+
+\mbox{\Hypertarget{doctest_8cpp_ace932f88ae6fa26ad3862e9abb187867}\label{doctest_8cpp_ace932f88ae6fa26ad3862e9abb187867}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_MULTI\_LANE\_ATOMICS\_CACHE\_LINE\_SIZE@{DOCTEST\_MULTI\_LANE\_ATOMICS\_CACHE\_LINE\_SIZE}}
+\index{DOCTEST\_MULTI\_LANE\_ATOMICS\_CACHE\_LINE\_SIZE@{DOCTEST\_MULTI\_LANE\_ATOMICS\_CACHE\_LINE\_SIZE}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_MULTI\_LANE\_ATOMICS\_CACHE\_LINE\_SIZE}{DOCTEST\_MULTI\_LANE\_ATOMICS\_CACHE\_LINE\_SIZE}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+MULTI\+\_\+\+LANE\+\_\+\+ATOMICS\+\_\+\+CACHE\+\_\+\+LINE\+\_\+\+SIZE~64}
+
+\mbox{\Hypertarget{doctest_8cpp_a9287b3dcfc1184fca554e6e1674fee4c}\label{doctest_8cpp_a9287b3dcfc1184fca554e6e1674fee4c}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_MULTI\_LANE\_ATOMICS\_THREAD\_LANES@{DOCTEST\_MULTI\_LANE\_ATOMICS\_THREAD\_LANES}}
+\index{DOCTEST\_MULTI\_LANE\_ATOMICS\_THREAD\_LANES@{DOCTEST\_MULTI\_LANE\_ATOMICS\_THREAD\_LANES}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_MULTI\_LANE\_ATOMICS\_THREAD\_LANES}{DOCTEST\_MULTI\_LANE\_ATOMICS\_THREAD\_LANES}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+MULTI\+\_\+\+LANE\+\_\+\+ATOMICS\+\_\+\+THREAD\+\_\+\+LANES~32}
+
+\mbox{\Hypertarget{doctest_8cpp_ac75ba8dd3658b27170c7f73f563422eb}\label{doctest_8cpp_ac75ba8dd3658b27170c7f73f563422eb}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_OPTIONS\_PREFIX\_DISPLAY@{DOCTEST\_OPTIONS\_PREFIX\_DISPLAY}}
+\index{DOCTEST\_OPTIONS\_PREFIX\_DISPLAY@{DOCTEST\_OPTIONS\_PREFIX\_DISPLAY}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_OPTIONS\_PREFIX\_DISPLAY}{DOCTEST\_OPTIONS\_PREFIX\_DISPLAY}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+OPTIONS\+\_\+\+PREFIX\+\_\+\+DISPLAY~\char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{doctest_8cpp_a01ec2dbba7655d16a6a2b1fbf909ceb5}\label{doctest_8cpp_a01ec2dbba7655d16a6a2b1fbf909ceb5}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_OUTPUT\_DEBUG\_STRING@{DOCTEST\_OUTPUT\_DEBUG\_STRING}}
+\index{DOCTEST\_OUTPUT\_DEBUG\_STRING@{DOCTEST\_OUTPUT\_DEBUG\_STRING}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_OUTPUT\_DEBUG\_STRING}{DOCTEST\_OUTPUT\_DEBUG\_STRING}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+OUTPUT\+\_\+\+DEBUG\+\_\+\+STRING(\begin{DoxyParamCaption}\item[{}]{text }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{doctest_8cpp_a49a0d00014eeffb9b904cdaeaccc2870}\label{doctest_8cpp_a49a0d00014eeffb9b904cdaeaccc2870}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_PARSE\_AS\_BOOL\_OR\_FLAG@{DOCTEST\_PARSE\_AS\_BOOL\_OR\_FLAG}}
+\index{DOCTEST\_PARSE\_AS\_BOOL\_OR\_FLAG@{DOCTEST\_PARSE\_AS\_BOOL\_OR\_FLAG}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_PARSE\_AS\_BOOL\_OR\_FLAG}{DOCTEST\_PARSE\_AS\_BOOL\_OR\_FLAG}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+PARSE\+\_\+\+AS\+\_\+\+BOOL\+\_\+\+OR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  }\item[{}]{sname,  }\item[{}]{var,  }\item[{}]{default }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(parseIntOption(argc, argv, \mbox{\hyperlink{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}} \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}} \textcolor{stringliteral}{"{}="{}}, option\_bool, intRes) ||  \(\backslash\)}
+\DoxyCodeLine{       parseIntOption(argc, argv, \mbox{\hyperlink{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}} sname \textcolor{stringliteral}{"{}="{}}, option\_bool, intRes))   \(\backslash\)}
+\DoxyCodeLine{        p-\/>var = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(intRes);                                                        \(\backslash\)}
+\DoxyCodeLine{    else \textcolor{keywordflow}{if}(parseFlag(argc, argv, \mbox{\hyperlink{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}} \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}) ||                           \(\backslash\)}
+\DoxyCodeLine{            parseFlag(argc, argv, \mbox{\hyperlink{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}} sname))                            \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{namespacerange__based__execution_a3cbfb4cb2a4db7e87bfaf712902acfa7}{p}}-\/>var = \textcolor{keyword}{true};                                                                             \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(withDefaults)                                                                          \(\backslash\)}
+\DoxyCodeLine{    p-\/>var = \textcolor{keywordflow}{default}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{doctest_8cpp_a608401f25679702de753228fbd05d992}\label{doctest_8cpp_a608401f25679702de753228fbd05d992}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_PARSE\_INT\_OPTION@{DOCTEST\_PARSE\_INT\_OPTION}}
+\index{DOCTEST\_PARSE\_INT\_OPTION@{DOCTEST\_PARSE\_INT\_OPTION}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_PARSE\_INT\_OPTION}{DOCTEST\_PARSE\_INT\_OPTION}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+PARSE\+\_\+\+INT\+\_\+\+OPTION(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  }\item[{}]{sname,  }\item[{}]{var,  }\item[{}]{default }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(parseIntOption(argc, argv, \mbox{\hyperlink{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}} \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}} \textcolor{stringliteral}{"{}="{}}, option\_int, intRes) ||   \(\backslash\)}
+\DoxyCodeLine{       parseIntOption(argc, argv, \mbox{\hyperlink{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}} sname \textcolor{stringliteral}{"{}="{}}, option\_int, intRes))    \(\backslash\)}
+\DoxyCodeLine{        p-\/>var = intRes;                                                                           \(\backslash\)}
+\DoxyCodeLine{    else \textcolor{keywordflow}{if}(withDefaults)                                                                          \(\backslash\)}
+\DoxyCodeLine{    p-\/>var = \textcolor{keywordflow}{default}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{doctest_8cpp_ad462dc1f6a4beee23671682dcf7d03dd}\label{doctest_8cpp_ad462dc1f6a4beee23671682dcf7d03dd}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_PARSE\_STR\_OPTION@{DOCTEST\_PARSE\_STR\_OPTION}}
+\index{DOCTEST\_PARSE\_STR\_OPTION@{DOCTEST\_PARSE\_STR\_OPTION}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_PARSE\_STR\_OPTION}{DOCTEST\_PARSE\_STR\_OPTION}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+PARSE\+\_\+\+STR\+\_\+\+OPTION(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  }\item[{}]{sname,  }\item[{}]{var,  }\item[{}]{default }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(parseOption(argc, argv, \mbox{\hyperlink{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}} \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}} \textcolor{stringliteral}{"{}="{}}, \&strRes, \textcolor{keywordflow}{default}) ||        \(\backslash\)}
+\DoxyCodeLine{       parseOption(argc, argv, \mbox{\hyperlink{doctest_8cpp_a805231f664ebd4bab301e2443810f29b}{DOCTEST\_CONFIG\_OPTIONS\_PREFIX}} sname \textcolor{stringliteral}{"{}="{}}, \&strRes, \textcolor{keywordflow}{default}) ||       \(\backslash\)}
+\DoxyCodeLine{       withDefaults)                                                                               \(\backslash\)}
+\DoxyCodeLine{    p-\/>var = strRes}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{doctest_8cpp_a8f3293f622cc7fbd71ddfeb73fb37340}\label{doctest_8cpp_a8f3293f622cc7fbd71ddfeb73fb37340}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_THREAD\_LOCAL@{DOCTEST\_THREAD\_LOCAL}}
+\index{DOCTEST\_THREAD\_LOCAL@{DOCTEST\_THREAD\_LOCAL}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_THREAD\_LOCAL}{DOCTEST\_THREAD\_LOCAL}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+THREAD\+\_\+\+LOCAL~thread\+\_\+local}
+
+\mbox{\Hypertarget{doctest_8cpp_aae8013349d220f6e9013be3eb937f88d}\label{doctest_8cpp_aae8013349d220f6e9013be3eb937f88d}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_TO\_STRING\_OVERLOAD@{DOCTEST\_TO\_STRING\_OVERLOAD}}
+\index{DOCTEST\_TO\_STRING\_OVERLOAD@{DOCTEST\_TO\_STRING\_OVERLOAD}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_TO\_STRING\_OVERLOAD}{DOCTEST\_TO\_STRING\_OVERLOAD}}
+{\footnotesize\ttfamily \#define DOCTEST\+\_\+\+TO\+\_\+\+STRING\+\_\+\+OVERLOAD(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}},  }\item[{}]{fmt }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{namespacedoctest_a468ff6c2b0a692bcf88a7a97a5de0a53}{toString}}(\mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}} in) \{                                                                     \(\backslash\)}
+\DoxyCodeLine{        char buf[64];                                                                              \(\backslash\)}
+\DoxyCodeLine{        std::sprintf(buf, fmt, in);                                                                \(\backslash\)}
+\DoxyCodeLine{        return buf;                                                                                \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{doctest_8cpp_abd165ee6474b5b75bf075842fff13a04}\label{doctest_8cpp_abd165ee6474b5b75bf075842fff13a04}} 
+\index{doctest.cpp@{doctest.cpp}!STDOUT\_FILENO@{STDOUT\_FILENO}}
+\index{STDOUT\_FILENO@{STDOUT\_FILENO}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{STDOUT\_FILENO}{STDOUT\_FILENO}}
+{\footnotesize\ttfamily \#define STDOUT\+\_\+\+FILENO~fileno(stdout)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{doctest_8cpp_a7abd20a8cfb67ea45b4ec644c14b5a37}\label{doctest_8cpp_a7abd20a8cfb67ea45b4ec644c14b5a37}} 
+\index{doctest.cpp@{doctest.cpp}!DOCTEST\_MSVC\_SUPPRESS\_WARNING@{DOCTEST\_MSVC\_SUPPRESS\_WARNING}}
+\index{DOCTEST\_MSVC\_SUPPRESS\_WARNING@{DOCTEST\_MSVC\_SUPPRESS\_WARNING}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_MSVC\_SUPPRESS\_WARNING()}{DOCTEST\_MSVC\_SUPPRESS\_WARNING()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_a569dfd3f8dfae352f35e8f62aadbdbc4}{DOCTEST\+\_\+\+CLANG\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+POP}} \mbox{\hyperlink{doctest__fwd_8h_a628491cf2971a026350d5401986bf6d3}{DOCTEST\+\_\+\+CLANG\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+PUSH}} \mbox{\hyperlink{doctest__fwd_8h_a8015d10af2883db80a955ce0d523886d}{DOCTEST\+\_\+\+GCC\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+PUSH}} \mbox{\hyperlink{doctest__fwd_8h_aec6d713a9dde361b8e68afe78c5bf3cf}{DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING\+\_\+\+PUSH}} DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING (\begin{DoxyParamCaption}\item[{4616}]{ }\end{DoxyParamCaption})}
+
+OCLINT missing default in switch statements
+
+OCLINT bitwise operator in conditional
+
+OCLINT bitwise operator in conditional
+
+OCLINT bitwise operator in conditional
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{doctest_8cpp_afb4d9a95883f226ea8c912dce4c506d3}\label{doctest_8cpp_afb4d9a95883f226ea8c912dce4c506d3}} 
+\index{doctest.cpp@{doctest.cpp}!classname@{classname}}
+\index{classname@{classname}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{classname}{classname}}
+{\footnotesize\ttfamily std\+::string classname}
+
+\mbox{\Hypertarget{doctest_8cpp_a4aecc78e31c1f3c1138a9c2d52e80489}\label{doctest_8cpp_a4aecc78e31c1f3c1138a9c2d52e80489}} 
+\index{doctest.cpp@{doctest.cpp}!currentSubcaseLevel@{currentSubcaseLevel}}
+\index{currentSubcaseLevel@{currentSubcaseLevel}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{currentSubcaseLevel}{currentSubcaseLevel}}
+{\footnotesize\ttfamily size\+\_\+t current\+Subcase\+Level}
+
+\mbox{\Hypertarget{doctest_8cpp_a1445e3a531cd00ec6ad073984a7426bb}\label{doctest_8cpp_a1445e3a531cd00ec6ad073984a7426bb}} 
+\index{doctest.cpp@{doctest.cpp}!deepestSubcaseStackNames@{deepestSubcaseStackNames}}
+\index{deepestSubcaseStackNames@{deepestSubcaseStackNames}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{deepestSubcaseStackNames}{deepestSubcaseStackNames}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_string}{String}}$>$ deepest\+Subcase\+Stack\+Names}
+
+\mbox{\Hypertarget{doctest_8cpp_adfd48101c5417e0d6fa1c59b9dffbeaa}\label{doctest_8cpp_adfd48101c5417e0d6fa1c59b9dffbeaa}} 
+\index{doctest.cpp@{doctest.cpp}!details@{details}}
+\index{details@{details}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{details}{details}}
+{\footnotesize\ttfamily std\+::string details}
+
+\mbox{\Hypertarget{doctest_8cpp_a7bdea144186f2de6f66eb37307f2dbfe}\label{doctest_8cpp_a7bdea144186f2de6f66eb37307f2dbfe}} 
+\index{doctest.cpp@{doctest.cpp}!errors@{errors}}
+\index{errors@{errors}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{errors}{errors}}
+{\footnotesize\ttfamily std\+::vector$<$JUnit\+Test\+Message$>$ errors}
+
+\mbox{\Hypertarget{doctest_8cpp_adcd503b59018cb83977f0de47e855218}\label{doctest_8cpp_adcd503b59018cb83977f0de47e855218}} 
+\index{doctest.cpp@{doctest.cpp}!failures@{failures}}
+\index{failures@{failures}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{failures}{failures}}
+{\footnotesize\ttfamily std\+::vector$<$JUnit\+Test\+Message$>$ failures}
+
+\mbox{\Hypertarget{doctest_8cpp_abbd0ae118831e126e2cd2a585cce6068}\label{doctest_8cpp_abbd0ae118831e126e2cd2a585cce6068}} 
+\index{doctest.cpp@{doctest.cpp}!hasLoggedCurrentTestStart@{hasLoggedCurrentTestStart}}
+\index{hasLoggedCurrentTestStart@{hasLoggedCurrentTestStart}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{hasLoggedCurrentTestStart}{hasLoggedCurrentTestStart}}
+{\footnotesize\ttfamily bool has\+Logged\+Current\+Test\+Start}
+
+\mbox{\Hypertarget{doctest_8cpp_a7441ef0865bcb3db9b8064dd7375c1ea}\label{doctest_8cpp_a7441ef0865bcb3db9b8064dd7375c1ea}} 
+\index{doctest.cpp@{doctest.cpp}!id@{id}}
+\index{id@{id}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int id}
+
+\mbox{\Hypertarget{doctest_8cpp_a36bd74109f547f7f8198faf5a12d2879}\label{doctest_8cpp_a36bd74109f547f7f8198faf5a12d2879}} 
+\index{doctest.cpp@{doctest.cpp}!message@{message}}
+\index{message@{message}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily std\+::string message}
+
+\mbox{\Hypertarget{doctest_8cpp_a1be3f7fa26e4521098de5f1ec0f865f3}\label{doctest_8cpp_a1be3f7fa26e4521098de5f1ec0f865f3}} 
+\index{doctest.cpp@{doctest.cpp}!mutex@{mutex}}
+\index{mutex@{mutex}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily std\+::mutex mutex}
+
+\mbox{\Hypertarget{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}\label{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}} 
+\index{doctest.cpp@{doctest.cpp}!name@{name}}
+\index{name@{name}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string name}
+
+\mbox{\Hypertarget{doctest_8cpp_a031a51fafa95247151d7ab0557117d0c}\label{doctest_8cpp_a031a51fafa95247151d7ab0557117d0c}} 
+\index{doctest.cpp@{doctest.cpp}!nrSpaces@{nrSpaces}}
+\index{nrSpaces@{nrSpaces}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{nrSpaces}{nrSpaces}}
+{\footnotesize\ttfamily int nr\+Spaces}
+
+\mbox{\Hypertarget{doctest_8cpp_ab360140a1f426698b9f442fa3bccfef9}\label{doctest_8cpp_ab360140a1f426698b9f442fa3bccfef9}} 
+\index{doctest.cpp@{doctest.cpp}!opt@{opt}}
+\index{opt@{opt}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{opt}{opt}}
+{\footnotesize\ttfamily const Context\+Options\& opt}
+
+\mbox{\Hypertarget{doctest_8cpp_a856811d3486b5ce13dac633470f21574}\label{doctest_8cpp_a856811d3486b5ce13dac633470f21574}} 
+\index{doctest.cpp@{doctest.cpp}!s@{s}}
+\index{s@{s}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& s}
+
+\mbox{\Hypertarget{doctest_8cpp_a8e6abd2f955ee7d110c6772cc256e978}\label{doctest_8cpp_a8e6abd2f955ee7d110c6772cc256e978}} 
+\index{doctest.cpp@{doctest.cpp}!subcasesStack@{subcasesStack}}
+\index{subcasesStack@{subcasesStack}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{subcasesStack}{subcasesStack}}
+{\footnotesize\ttfamily std\+::vector$<$Subcase\+Signature$>$ subcases\+Stack}
+
+\mbox{\Hypertarget{doctest_8cpp_aa04e2177279260cb81d1c6afc66bab2c}\label{doctest_8cpp_aa04e2177279260cb81d1c6afc66bab2c}} 
+\index{doctest.cpp@{doctest.cpp}!tc@{tc}}
+\index{tc@{tc}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{tc}{tc}}
+{\footnotesize\ttfamily const Test\+Case\+Data$\ast$ tc = nullptr}
+
+\mbox{\Hypertarget{doctest_8cpp_a6ad23a8cdcb0f8a552d94c1af489028d}\label{doctest_8cpp_a6ad23a8cdcb0f8a552d94c1af489028d}} 
+\index{doctest.cpp@{doctest.cpp}!testCaseData@{testCaseData}}
+\index{testCaseData@{testCaseData}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{testCaseData}{testCaseData}}
+{\footnotesize\ttfamily JUnit\+Test\+Case\+Data test\+Case\+Data}
+
+\mbox{\Hypertarget{doctest_8cpp_a67b63f9b0417c48e5227f88d3e0f7e74}\label{doctest_8cpp_a67b63f9b0417c48e5227f88d3e0f7e74}} 
+\index{doctest.cpp@{doctest.cpp}!testcases@{testcases}}
+\index{testcases@{testcases}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{testcases}{testcases}}
+{\footnotesize\ttfamily std\+::vector$<$JUnit\+Test\+Case$>$ testcases}
+
+\mbox{\Hypertarget{doctest_8cpp_ab2d5aa7fce1a14d8bddfb2c333ea9679}\label{doctest_8cpp_ab2d5aa7fce1a14d8bddfb2c333ea9679}} 
+\index{doctest.cpp@{doctest.cpp}!time@{time}}
+\index{time@{time}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily double time}
+
+\mbox{\Hypertarget{doctest_8cpp_aaf7e0389622e8f7b78393ee10d8e93a4}\label{doctest_8cpp_aaf7e0389622e8f7b78393ee10d8e93a4}} 
+\index{doctest.cpp@{doctest.cpp}!timer@{timer}}
+\index{timer@{timer}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily Timer timer}
+
+\mbox{\Hypertarget{doctest_8cpp_a101b5871fef1a9a0c56b6cfa1ebc2d92}\label{doctest_8cpp_a101b5871fef1a9a0c56b6cfa1ebc2d92}} 
+\index{doctest.cpp@{doctest.cpp}!totalErrors@{totalErrors}}
+\index{totalErrors@{totalErrors}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{totalErrors}{totalErrors}}
+{\footnotesize\ttfamily int total\+Errors = 0}
+
+\mbox{\Hypertarget{doctest_8cpp_aab6177afa502f605c47940c59d5dc82d}\label{doctest_8cpp_aab6177afa502f605c47940c59d5dc82d}} 
+\index{doctest.cpp@{doctest.cpp}!totalFailures@{totalFailures}}
+\index{totalFailures@{totalFailures}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{totalFailures}{totalFailures}}
+{\footnotesize\ttfamily int total\+Failures = 0}
+
+\mbox{\Hypertarget{doctest_8cpp_ad3967dbf877ca38171fd216177e6266d}\label{doctest_8cpp_ad3967dbf877ca38171fd216177e6266d}} 
+\index{doctest.cpp@{doctest.cpp}!totalSeconds@{totalSeconds}}
+\index{totalSeconds@{totalSeconds}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{totalSeconds}{totalSeconds}}
+{\footnotesize\ttfamily double total\+Seconds = 0}
+
+\mbox{\Hypertarget{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}\label{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}} 
+\index{doctest.cpp@{doctest.cpp}!type@{type}}
+\index{type@{type}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string type}
+
+\mbox{\Hypertarget{doctest_8cpp_abd80486b93d11efbbdcda006f518b0cb}\label{doctest_8cpp_abd80486b93d11efbbdcda006f518b0cb}} 
+\index{doctest.cpp@{doctest.cpp}!xml@{xml}}
+\index{xml@{xml}!doctest.cpp@{doctest.cpp}}
+\doxysubsubsection{\texorpdfstring{xml}{xml}}
+{\footnotesize\ttfamily Xml\+Writer xml}
+

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['init_5fcommand_305',['init_command',['../class_command_controller.html#a00c070926c672cf43dde17612afa6319',1,'CommandController']]],
-  ['insert_306',['insert',['../class_vector.html#aa95f84b28df71b734967265e3268b1dc',1,'Vector']]],
-  ['insert_5fat_307',['insert_at',['../class_string.html#a31727d03e794df91df61721be5987562',1,'String']]]
+  ['headers_1602',['headers',['../namespacesend__to__wandbox.html#a0f4297d103b8e1907e2a9b98c2eceace',1,'send_to_wandbox']]],
+  ['help_1603',['help',['../class_galaxy_manager.html#a801e19e64a401bbf0ed5c5f4dd58dca5',1,'GalaxyManager']]],
+  ['helpcommand_1604',['HelpCommand',['../class_help_command.html#a530e265a79207f822648bb0591d17dc0',1,'HelpCommand']]]
 ];

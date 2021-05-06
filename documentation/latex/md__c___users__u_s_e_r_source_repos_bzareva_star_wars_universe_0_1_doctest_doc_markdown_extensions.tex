@@ -1,0 +1,137 @@
+The doctest header doesn\textquotesingle{}t include any external or stdlib headers in it\textquotesingle{}s interface part in order to provide the most optimal build times but that means it is limited in what it can provide as functionality =$>$ that\textquotesingle{}s when extensions come into play. They are located as header files in \href{../../doctest/extensions}{\texttt{ {\ttfamily doctest/extensions}}} and each of them is documented in a section here.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md105}{}\doxysection{$<$a href=\char`\"{}../../doctest/extensions/doctest\+\_\+util.\+h\char`\"{}$>$\+Utils$<$/a$>$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md105}
+nothing here yet...\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md106}{}\doxysection{$<$a href=\char`\"{}../../doctest/extensions/doctest\+\_\+mpi.\+h\char`\"{}$>$\+Distributed tests with MPI$<$/a$>$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md106}
+\mbox{[}Bruno Maugars and Bérenger Berthoul, ONERA\mbox{]}
+
+Testing code over distributed processes requires support from the testing framework. {\bfseries{Doctest}} support for MPI parallel communication is provided in the {\ttfamily \char`\"{}doctest/extensions/doctest\+\_\+mpi.\+h\char`\"{}} header.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md107}{}\doxysubsection{Example}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md107}
+See \href{../../examples/mpi/mpi.cpp}{\texttt{ {\bfseries{the complete test}}}} and \href{../../examples/mpi/main.cpp}{\texttt{ {\bfseries{the configuration of main()}}}}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md108}{}\doxysubsubsection{MPI\+\_\+\+TEST\+\_\+\+CASE}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md108}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{\#include "{}doctest/extensions/doctest\_mpi.h"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{int my\_function\_to\_test(MPI\_Comm comm) \{}
+\DoxyCodeLine{  int rank;}
+\DoxyCodeLine{  MPI\_comm\_rank(comm,\&rank);}
+\DoxyCodeLine{  if (rank == 0) \{}
+\DoxyCodeLine{    return 10;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  return 11;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{MPI\_TEST\_CASE("{}test over two processes"{},2) \{ // Parallel test on 2 processes}
+\DoxyCodeLine{  int x = my\_function\_to\_test(test\_comm);}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  MPI\_CHECK( 0,  x==10 ); // CHECK for rank 0, that x==10}
+\DoxyCodeLine{  MPI\_CHECK( 1,  x==11 ); // CHECK for rank 1, that x==11}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+An {\ttfamily MPI\+\_\+\+TEST\+\_\+\+CASE} is like a regular {\ttfamily TEST\+\_\+\+CASE}, except it takes a second argument, which is the number of processes needed to run the test. If the number of processes is less than 2, the test will fail. If the number of processes is greater than or equal to 2, it will create a sub-\/communicator over 2 processes, called {\ttfamily test\+\_\+comm}, and execute the test over these processes. Three objects are provided by {\ttfamily MPI\+\_\+\+TEST\+\_\+\+CASE}\+:
+\begin{DoxyItemize}
+\item {\ttfamily test\+\_\+comm}, of type {\ttfamily MPI\+\_\+\+Comm}\+: the mpi communicator on which the test is running,
+\item {\ttfamily test\+\_\+rank} and {\ttfamily test\+\_\+nb\+\_\+procs}, two {\ttfamily int} giving respectively the rank of the current process and the size of the communicator for {\ttfamily test\+\_\+comm}. These last two are just here for convenience and could be retrived from {\ttfamily test\+\_\+comm}.
+\end{DoxyItemize}
+
+We always have\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{MPI\_TEST\_CASE("{}my\_test"{},N) \{}
+\DoxyCodeLine{  CHECK( test\_nb\_procs == N );}
+\DoxyCodeLine{  MPI\_CHECK( i, test\_rank==i ); // for any i<N}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md109}{}\doxysubsubsection{Assertions}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md109}
+It is possible to use regular assertions in an {\ttfamily MPI\+\_\+\+TEST\+\_\+\+CASE}. MPI-\/specific assertions are also provided and are all prefixed with {\ttfamily MPI\+\_\+} ({\ttfamily MPI\+\_\+\+CHECK}, {\ttfamily MPI\+\_\+\+ASSERT}...). The first argument is the rank for which they are checked, and the second is the usual expression to check.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md110}{}\doxysubsection{The main entry points and mpi reporters}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md110}
+You need to launch the unit tests with an {\ttfamily mpirun} command\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mpirun -\/np 2 unit\_test\_executable.exe}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{MPI\_Init```\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{```c++}
+\DoxyCodeLine{\#define DOCTEST\_CONFIG\_IMPLEMENT}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#include "{}doctest/mpi/doctest.h"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main(int argc, char** argv) \{}
+\DoxyCodeLine{  MPI\_Init(\&argc, \&argv);}
+\DoxyCodeLine{}
+\DoxyCodeLine{  doctest::Context ctx;}
+\DoxyCodeLine{  ctx.setOption("{}reporters"{}, "{}MpiConsoleReporter"{});}
+\DoxyCodeLine{  ctx.setOption("{}reporters"{}, "{}MpiFileReporter"{});}
+\DoxyCodeLine{  ctx.setOption("{}force-\/colors"{}, true);}
+\DoxyCodeLine{  ctx.applyCommandLine(argc, argv);}
+\DoxyCodeLine{}
+\DoxyCodeLine{  int test\_result = ctx.run();}
+\DoxyCodeLine{}
+\DoxyCodeLine{  MPI\_Finalize();}
+\DoxyCodeLine{}
+\DoxyCodeLine{  return test\_result;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md111}{}\doxysubsubsection{Mpi\+Console\+Reporter}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md111}
+The {\ttfamily Mpi\+Console\+Reporter} should be substituted to the default reporter. It does the same as the default console reporter for regular assertions, but only outputs on process 0. For MPI test cases, if there is a failure it tells the process that failed
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[doctest] doctest version is "{}2.4.0"{}}
+\DoxyCodeLine{[doctest] run with "{}-\/-\/help"{} for options}
+\DoxyCodeLine{===============================================================================}
+\DoxyCodeLine{[doctest] test cases:    171 |    171 passed |      0 failed |      0 skipped}
+\DoxyCodeLine{[doctest] assertions:    864 |    864 passed |      0 failed |}
+\DoxyCodeLine{[doctest] Status: SUCCESS!}
+\DoxyCodeLine{std\_e\_mpi\_unit\_tests}
+\DoxyCodeLine{[doctest] doctest version is "{}2.4.0"{}}
+\DoxyCodeLine{[doctest] run with "{}-\/-\/help"{} for options}
+\DoxyCodeLine{===============================================================================}
+\DoxyCodeLine{path/to/test.cpp:30:}
+\DoxyCodeLine{TEST CASE: my test case }
+\DoxyCodeLine{}
+\DoxyCodeLine{On rank [2] : path/to/test.cpp:35: CHECK( x==-\/1 ) is NOT correct!}
+\DoxyCodeLine{  values: CHECK( 0 == -\/1 )}
+\DoxyCodeLine{}
+\DoxyCodeLine{===============================================================================}
+\DoxyCodeLine{[doctest] test cases:      2 |      2 passed |      0 failed |      0 skipped}
+\DoxyCodeLine{[doctest] assertions:      2 |      2 passed |      0 failed |}
+\DoxyCodeLine{[doctest] Status: SUCCESS!}
+\DoxyCodeLine{===============================================================================}
+\DoxyCodeLine{[doctest] glob assertions:      5 |      4 passed |      1 failed |}
+\DoxyCodeLine{===============================================================================}
+\DoxyCodeLine{[doctest] fail on rank:     }
+\DoxyCodeLine{    -\/> On rank [2] with 1 test failed}
+\DoxyCodeLine{[doctest] Status: FAILURE!}
+
+\end{DoxyCode}
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md112}{}\doxysubsubsection{Mpi\+File\+Reporter}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md112}
+The {\ttfamily Mpi\+File\+Reporter} will just print the result of each process in its own file, named {\ttfamily doctest\+\_\+\mbox{[}rank\mbox{]}.log}. Only use this reporter as a debug facility if you want to know what is going on exactly when a parallel test case is failing.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md113}{}\doxysubsubsection{Other reporters}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md113}
+Other reporters (j\+Unit, XML) are not supported directly, which mean that you can always print the result of each process to its own file, but there is (currently) no equivalent of the {\ttfamily Mpi\+Console\+Reporter} that will aggregate the results of all processes.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md114}{}\doxysubsection{Note}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md114}
+This feature is provided to unit-\/test mpi-\/distributed code. It is {\bfseries{not}} a way to parallelize many unit tests over several processes (for that, see \href{../../examples/range_based_execution.py}{\texttt{ {\bfseries{the example python script}}}}).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md115}{}\doxysubsection{TODO}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions_autotoc_md115}
+
+\begin{DoxyItemize}
+\item Pass {\ttfamily s} member variable of {\ttfamily Console\+Reporter} as an argument to member functions so we can use them with another object (would help to factorize {\ttfamily MPIConsole\+Reporter})
+\item Only MPI\+\_\+\+CHECK tested. MPI\+\_\+\+REQUIRE, exception handling\+: nothing tested
+\item If the number of processes is not enought, prints the correct message, but then deadlocks (comes from {\ttfamily MPI\+\_\+\+Probe} in {\ttfamily Mpi\+Console\+Reporter})
+\item \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} is C++17
+\item More testing, automatic testing
+\item Packaging\+: create a new target {\ttfamily mpi\+\_\+doctest}? (probably cleaner to depend explicitly on MPI for mpi/doctest.\+h)
+\item Later, maybe\+: have a general mechanism to represent assertions so we can separate the report format (console, xml, junit...) from the reporting strategy (sequential vs. MPI)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+

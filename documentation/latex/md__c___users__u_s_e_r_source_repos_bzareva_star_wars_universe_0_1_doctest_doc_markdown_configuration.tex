@@ -1,0 +1,193 @@
+{\bfseries{doctest}} is designed to \char`\"{}just work\char`\"{} as much as possible. It also allows configuring how it is built with a set of identifiers.
+
+The identifiers should be defined before the inclusion of the framework header.
+
+Defining something {\ttfamily globally} means for every source file of the binary (executable / shared object).
+
+
+\begin{DoxyItemize}
+\item \href{\#doctest_config_implement_with_main}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\+\_\+\+WITH\+\_\+\+MAIN}$\ast$$\ast$}}
+\item \href{\#doctest_config_implement}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT}$\ast$$\ast$}}
+\item \href{\#doctest_config_disable}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$}}
+\item \href{\#doctest_config_implementation_in_dll}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENTATION\+\_\+\+IN\+\_\+\+DLL}$\ast$$\ast$}}
+\item \href{\#doctest_config_no_short_macro_names}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+SHORT\+\_\+\+MACRO\+\_\+\+NAMES}$\ast$$\ast$}}
+\item \href{\#doctest_config_treat_char_star_as_string}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+TREAT\+\_\+\+CHAR\+\_\+\+STAR\+\_\+\+AS\+\_\+\+STRING}$\ast$$\ast$}}
+\item \href{\#doctest_config_super_fast_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+SUPER\+\_\+\+FAST\+\_\+\+ASSERTS}$\ast$$\ast$}}
+\item \href{\#doctest_config_use_std_headers}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+USE\+\_\+\+STD\+\_\+\+HEADERS}$\ast$$\ast$}}
+\item \href{\#doctest_config_void_cast_expressions}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+VOID\+\_\+\+CAST\+\_\+\+EXPRESSIONS}$\ast$$\ast$}}
+\item \href{\#doctest_config_no_comparison_warning_suppression}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+COMPARISON\+\_\+\+WARNING\+\_\+\+SUPPRESSION}$\ast$$\ast$}}
+\item \href{\#doctest_config_options_prefix}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+OPTIONS\+\_\+\+PREFIX}$\ast$$\ast$}}
+\item \href{\#doctest_config_no_unprefixed_options}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+UNPREFIXED\+\_\+\+OPTIONS}$\ast$$\ast$}}
+\item \href{\#doctest_config_no_try_catch_in_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+TRY\+\_\+\+CATCH\+\_\+\+IN\+\_\+\+ASSERTS}$\ast$$\ast$}}
+\item \href{\#doctest_config_no_exceptions}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+EXCEPTIONS}$\ast$$\ast$}}
+\item \href{\#doctest_config_no_exceptions_but_with_all_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+EXCEPTIONS\+\_\+\+BUT\+\_\+\+WITH\+\_\+\+ALL\+\_\+\+ASSERTS}$\ast$$\ast$}}
+\item \href{\#doctest_config_assertion_parameters_by_value}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+ASSERTION\+\_\+\+PARAMETERS\+\_\+\+BY\+\_\+\+VALUE}$\ast$$\ast$}}
+\item \href{\#doctest_config_colors_none}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+COLORS\+\_\+\+NONE}$\ast$$\ast$}}
+\item \href{\#doctest_config_colors_windows}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+COLORS\+\_\+\+WINDOWS}$\ast$$\ast$}}
+\item \href{\#doctest_config_colors_ansi}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+COLORS\+\_\+\+ANSI}$\ast$$\ast$}}
+\item \href{\#doctest_config_windows_seh}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+WINDOWS\+\_\+\+SEH}$\ast$$\ast$}}
+\item \href{\#doctest_config_no_windows_seh}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+WINDOWS\+\_\+\+SEH}$\ast$$\ast$}}
+\item \href{\#doctest_config_posix_signals}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+POSIX\+\_\+\+SIGNALS}$\ast$$\ast$}}
+\item \href{\#doctest_config_no_posix_signals}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+POSIX\+\_\+\+SIGNALS}$\ast$$\ast$}}
+\item \href{\#doctest_config_include_type_traits}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+INCLUDE\+\_\+\+TYPE\+\_\+\+TRAITS}$\ast$$\ast$}}
+\item \href{\#doctest_config_no_multi_lane_atomics}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+MULTI\+\_\+\+LANE\+\_\+\+ATOMICS}$\ast$$\ast$}}
+\end{DoxyItemize}
+
+For most people the only configuration needed is telling {\bfseries{doctest}} which source file should host all the implementation code\+:\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md78}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\+\_\+\+WITH\+\_\+\+MAIN$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md78}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{\#define DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}
+\DoxyCodeLine{\#include "{}doctest.h"{}}
+
+\end{DoxyCode}
+
+
+This should be defined only in the source file where the library is implemented. It also creates a {\ttfamily \mbox{\hyperlink{doctest_2examples_2all__features_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main()}}} entry point.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md79}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md79}
+If the client wants to \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_main}{$\ast$$\ast$supply the \`{}\`{}\`{}main()\`{}\`{}\`{} function$\ast$$\ast$}} (either to set an option with some value from the code or to integrate the framework into his existing project codebase) this identifier should be used.
+
+This should be defined only in the source file where the library is implemented.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md80}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md80}
+One of the most most important configuration option -\/ everything testing-\/related is removed from the binary -\/ including most of the framework implementation and every test case written anywhere! This is one of the most unique features of {\bfseries{doctest}}.
+
+This should be defined globally.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md81}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENTATION\+\_\+\+IN\+\_\+\+DLL$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md81}
+This will affect the public interface of doctest -\/ all necessary forward declarations for writing tests will be turned into imported symbols. That way the test runner doesn\textquotesingle{}t have to be implemented in the binary (executable / shared object) and can be reused from another binary where it is built and exported.
+
+To export the test runner from a binary simply use \href{\#doctest_config_implementation_in_dll}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENTATION\+\_\+\+IN\+\_\+\+DLL}$\ast$$\ast$}} together with \href{\#doctest_config_implement}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT}$\ast$$\ast$}} (or \href{\#doctest_config_implement_with_main}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\+\_\+\+WITH\+\_\+\+MAIN}$\ast$$\ast$}} but then the other binaries will have to link to the executable) in whatever source file the test runner gets implemented into. Note that this identifier should not be defined in the other source files of the binary which exports the doctest test runner -\/ or there will be linker conflicts -\/ having the same symbols as both imported and exported within the same binary.
+
+Checkout the \href{../../examples/executable_dll_and_plugin/}{\texttt{ {\bfseries{example}}}} -\/ it shows how to have the test runner implemented in a dll (and there are even tests in a plugin which is dynamically loaded).
+
+This should be defined globally in binaries that import the symbols.
+
+This should be defined only in the source file where the library is implemented for binaries that export the test runner.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md82}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+SHORT\+\_\+\+MACRO\+\_\+\+NAMES$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md82}
+This will remove all macros from {\bfseries{doctest}} that don\textquotesingle{}t have the $\ast$$\ast${\ttfamily DOCTEST\+\_\+}$\ast$$\ast$ prefix -\/ like $\ast$$\ast${\ttfamily CHECK}$\ast$$\ast$, $\ast$$\ast${\ttfamily TEST\+\_\+\+CASE}$\ast$$\ast$ and $\ast$$\ast${\ttfamily SUBCASE}$\ast$$\ast$. Then only the full macro names will be available -\/ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CHECK}$\ast$$\ast$, $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+TEST\+\_\+\+CASE}$\ast$$\ast$ and $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+SUBCASE}$\ast$$\ast$. The user is free to make his own short versions of these macros -\/ \href{../../examples/all_features/alternative_macros.cpp}{\texttt{ {\bfseries{example}}}}.
+
+This can be defined both globally and in specific source files only.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md83}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+TREAT\+\_\+\+CHAR\+\_\+\+STAR\+\_\+\+AS\+\_\+\+STRING$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md83}
+By default {\ttfamily char$\ast$} is being treated as a pointer. With this option comparing {\ttfamily char$\ast$} pointers will switch to using {\ttfamily strcmp()} for comparisons and when stringified the string will be printed instead of the pointer value.
+
+This should be defined globally.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md84}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+SUPER\+\_\+\+FAST\+\_\+\+ASSERTS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md84}
+This config option makes the assert macros (except for those dealing with exceptions) compile \href{benchmarks.md\#cost-of-an-assertion-macro}{\texttt{ {\bfseries{much faster}}}}! (31-\/91\% -\/ depending on the type -\/ \href{assertions.md\#expression-decomposing-asserts}{\texttt{ {\bfseries{normal}}}} or \href{assertions.md\#binary-and-unary-asserts}{\texttt{ {\bfseries{binary}}}})
+
+Each assert is turned into a single function call -\/ the only downside of this is\+: if an assert fails and a debugger is attached -\/ when it breaks it will be in an internal function -\/ the user will have to go 1 level up in the callstack to see the actual assert.
+
+It also implies \href{\#doctest_config_no_try_catch_in_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+TRY\+\_\+\+CATCH\+\_\+\+IN\+\_\+\+ASSERTS}$\ast$$\ast$}} (so exceptions thrown during the evaluation of an assert are not caught by the assert itself but by the testing framework -\/ meaning that the test case is immediately aborted).
+
+This can be defined both globally and in specific source files only.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md85}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+USE\+\_\+\+STD\+\_\+\+HEADERS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md85}
+The library by default provides a forward declaration of {\ttfamily std\+::ostream} in order to support the {\ttfamily operator$<$$<$} \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification}{$\ast$$\ast$stringification$\ast$$\ast$}} mechanism (also {\ttfamily std\+::tuple$<$$>$} and {\ttfamily std\+::nullptr\+\_\+t}). This is forbidden by the standard (even though it works everywhere on all tested compilers). However if the user wishes to be 100\% standards compliant -\/ then this configuration option can be used to force the inclusion of the relevant standard headers.
+
+Also it is possible that some STL implementation of a compiler with niche usage defines them differently -\/ then there will be compilation errors in STL headers and using this option should fix the problem. ~\newline
+
+
+This should be defined globally.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md86}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+VOID\+\_\+\+CAST\+\_\+\+EXPRESSIONS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md86}
+This affects the \href{assertions.md\#exceptions}{\texttt{ asserts dealing with exceptions}} -\/ the expression is cast to void to avoid problems such as when functions with the {\ttfamily \mbox{[}\mbox{[}nodiscard\mbox{]}\mbox{]}} attribute are used but their result isn\textquotesingle{}t checked.
+
+This can be defined both globally and in specific source files only.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md87}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+COMPARISON\+\_\+\+WARNING\+\_\+\+SUPPRESSION$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md87}
+By default the library suppresses warnings about comparing signed and unsigned types, etc.
+
+
+\begin{DoxyItemize}
+\item g++/clang {\ttfamily -\/Wsign-\/conversion}
+\item g++/clang {\ttfamily -\/Wsign-\/compare}
+\item msvc {\ttfamily C4389} \textquotesingle{}operator\textquotesingle{} \+: signed/unsigned mismatch
+\item msvc {\ttfamily C4018} \textquotesingle{}expression\textquotesingle{} \+: signed/unsigned mismatch
+\end{DoxyItemize}
+
+You can checkout \href{https://github.com/onqtam/doctest/issues/16\#issuecomment-246803303}{\texttt{ {\bfseries{this}}}} issue to better understand why I suppress these warnings by default.
+
+This can be defined both globally and in specific source files only.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md88}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+OPTIONS\+\_\+\+PREFIX$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md88}
+Defining this as a string will change the prefix of the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$command line$\ast$$\ast$}} options to use the given prefix instead of the default {\ttfamily dt-\/} prefix. This can be useful for integrating the testing framework into a client codebase, where a command option prefix like {\ttfamily selftest-\/} might be more clear to users.
+
+This should be defined only in the source file where the library is implemented (it\textquotesingle{}s relevant only there).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md89}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+UNPREFIXED\+\_\+\+OPTIONS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md89}
+This will disable the short versions of the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$command line$\ast$$\ast$}} options and only the versions with {\ttfamily -\/-\/dt-\/} prefix will be parsed by {\bfseries{doctest}} -\/ this is possible for easy interoperability with client command line option handling when the testing framework is integrated within a client codebase -\/ so there are no clashes and so that the user can exclude everything starting with {\ttfamily -\/-\/dt-\/} from their option parsing.
+
+This should be defined only in the source file where the library is implemented (it\textquotesingle{}s relevant only there).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md90}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+TRY\+\_\+\+CATCH\+\_\+\+IN\+\_\+\+ASSERTS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md90}
+This will remove all {\ttfamily try} / {\ttfamily catch} sections from\+:
+
+
+\begin{DoxyItemize}
+\item the \href{assertions.md\#expression-decomposing-asserts}{\texttt{ normal asserts}}
+\item the \href{assertions.md\#binary-and-unary-asserts}{\texttt{ binary and unary asserts}}
+\end{DoxyItemize}
+
+so exceptions thrown while evaluating the expression in an assert will terminate the current test case.
+
+This can be used for some mild compile time savings but for greater impact look into \href{configuration.md\#doctest_config_super_fast_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+SUPER\+\_\+\+FAST\+\_\+\+ASSERTS}$\ast$$\ast$}}.
+
+This can be defined both globally and in specific source files only.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md91}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+EXCEPTIONS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md91}
+This will remove everything that uses exceptions from the framework -\/ it is also auto detectable if exceptions are disabled for compilers (like with {\ttfamily -\/fno-\/exceptions} for GCC/\+Clang).
+
+What gets changed\+:
+
+
+\begin{DoxyItemize}
+\item asserts that evaluate the expression in a {\ttfamily try} / {\ttfamily catch} section no longer evaluate in such a context
+\item {\ttfamily REQUIRE} macros are gone (undefined)
+\item \href{assertions.md\#exceptions}{\texttt{ exception macros}} are gone (undefined)
+\item the {\ttfamily abort-\/after} option won\textquotesingle{}t be fully working because an exception is used to terminate test cases
+\end{DoxyItemize}
+
+The {\ttfamily REQUIRE} family of asserts uses exceptions to terminate the current test case when they fail. An exception is used instead of a simple {\ttfamily return;} because asserts can be used not only in a test case but also in functions called by a test case.
+
+Also some of the \href{logging.md\#messages-which-can-optionally-fail-test-cases}{\texttt{ {\bfseries{logging macros}}}} which act like a {\ttfamily REQUIRE} assert (terminating the test case) -\/ like {\ttfamily \mbox{\hyperlink{doctest_2doctest_8h_ac8d1eaf65528f86b445cf6e45b2d72c9}{FAIL()}}} -\/ start to work differently -\/ like a {\ttfamily \mbox{\hyperlink{doctest_2doctest_8h_a3c2341a3238242fdc02d33a1968bd1d2}{FAIL\+\_\+\+CHECK()}}}.
+
+\href{\#doctest_config_no_exceptions}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+EXCEPTIONS}$\ast$$\ast$}} implies \href{\#doctest_config_no_try_catch_in_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+TRY\+\_\+\+CATCH\+\_\+\+IN\+\_\+\+ASSERTS}$\ast$$\ast$}}
+
+If you wish to use asserts that deal with exceptions and only sometimes build without exceptions -\/ check the \href{\#doctest_config_no_exceptions_but_with_all_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+EXCEPTIONS\+\_\+\+BUT\+\_\+\+WITH\+\_\+\+ALL\+\_\+\+ASSERTS}$\ast$$\ast$}} config option.
+
+This should be defined globally.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md92}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+EXCEPTIONS\+\_\+\+BUT\+\_\+\+WITH\+\_\+\+ALL\+\_\+\+ASSERTS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md92}
+When building with no exceptions (see \href{\#doctest_config_no_exceptions}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+EXCEPTIONS}$\ast$$\ast$}}) {\ttfamily REQUIRE} asserts and the ones about dealing with exceptions are gone.
+
+If however you want your code to use these assertions and only sometimes build without exceptions -\/ then using this config will be of help. The effects of using it are the following\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily REQUIRE} asserts are not gone -\/ but they act like {\ttfamily CHECK} asserts -\/ when one of them fails the whole test case will be marked as failed but will not be exited immediately
+\item the \href{assertions.md\#exceptions}{\texttt{ asserts for dealing with exceptions}} are turned into a no-\/op (instead of being totally undefined)
+\end{DoxyItemize}
+
+This can be defined both globally and in specific source files only.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md93}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+ASSERTION\+\_\+\+PARAMETERS\+\_\+\+BY\+\_\+\+VALUE$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md93}
+This option forces all doctest asserts to copy by value the expressions they are given instead of binding them to const references. This might be useful to avoid ODR-\/usage of static constants (which might lead to linker errors with g++/clang)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{template<typename T> struct type\_traits \{ static const bool value = false; \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{// unless DOCTEST\_CONFIG\_ASSERTION\_PARAMETERS\_BY\_VALUE is defined the following assertion}
+\DoxyCodeLine{// will lead to a linker error if type\_traits<int>::value isn't defined in a translation unit}
+\DoxyCodeLine{CHECK(type\_traits<int>::value == false);}
+
+\end{DoxyCode}
+
+
+This can be defined both globally and in specific source files only.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md94}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+COLORS\+\_\+\+NONE$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md94}
+This will remove support for colors in the console output of the framework.
+
+This should be defined only in the source file where the library is implemented (it\textquotesingle{}s relevant only there).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md95}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+COLORS\+\_\+\+WINDOWS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md95}
+This will force the support for colors in the console output to use the Windows APIs and headers.
+
+This should be defined only in the source file where the library is implemented (it\textquotesingle{}s relevant only there).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md96}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+COLORS\+\_\+\+ANSI$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md96}
+This will force the support for colors in the console output to use ANSI escape codes.
+
+This should be defined only in the source file where the library is implemented (it\textquotesingle{}s relevant only there).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md97}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+WINDOWS\+\_\+\+SEH$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md97}
+This will enable SEH handling on Windows. Currently enabled only when compiled with MSVC, because some versions of Min\+GW do not have the necessary Win32 API support. The user may choose to enable this explicitly -\/ it is known to work with the Min\+GW-\/w64 project.
+
+This should be defined only in the source file where the library is implemented (it\textquotesingle{}s relevant only there).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md98}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+WINDOWS\+\_\+\+SEH$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md98}
+This can be used to disable $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+WINDOWS\+\_\+\+SEH}$\ast$$\ast$ when it is auto-\/selected by the library.
+
+This should be defined only in the source file where the library is implemented (it\textquotesingle{}s relevant only there).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md99}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+POSIX\+\_\+\+SIGNALS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md99}
+This will enable the use of signals under UNIX for handling crashes. On by default.
+
+This should be defined only in the source file where the library is implemented (it\textquotesingle{}s relevant only there).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md100}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+POSIX\+\_\+\+SIGNALS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md100}
+This can be used to disable $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+POSIX\+\_\+\+SIGNALS}$\ast$$\ast$ when it is auto-\/selected by the library.
+
+This should be defined only in the source file where the library is implemented (it\textquotesingle{}s relevant only there).\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md101}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+INCLUDE\+\_\+\+TYPE\+\_\+\+TRAITS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md101}
+This can be used to include the {\ttfamily $<$type\+\_\+traits$>$} C++11 header. That in turn will enable the ability for the {\ttfamily Approx} helper to be used with strong typedefs of {\ttfamily double} -\/ check \href{https://github.com/onqtam/doctest/issues/62}{\texttt{ this}} or \href{https://github.com/onqtam/doctest/issues/85}{\texttt{ this}} issue for more details on that.
+
+This can be defined both globally and in specific source files only.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md102}{}\doxysubsection{$\ast$$\ast$$<$tt$>$\+DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+MULTI\+\_\+\+LANE\+\_\+\+ATOMICS$<$/tt$>$$\ast$$\ast$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration_autotoc_md102}
+This can be used to disable multi lane atomics. Multi lane atomics can speed up highly parallel use of assert statements, but have a small overhead for single threaded applications.
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+

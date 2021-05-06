@@ -1,0 +1,83 @@
+\hypertarget{subcases_8cpp}{}\doxysection{C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\+\_\+features/subcases.cpp File Reference}
+\label{subcases_8cpp}\index{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/subcases.cpp@{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/subcases.cpp}}
+{\ttfamily \#include $<$doctest/doctest.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{subcases_8cpp_a124915cdf23ad50bf5aaf7a3184308c2}{SUBCASE}}(...)~\mbox{\hyperlink{doctest__fwd_8h_a5acad2b6cef499ee884b8027ef41fbf6}{DOCTEST\+\_\+\+SUBCASE}}(std\+::string(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+).c\+\_\+str())
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_acca96650713994a51c3deb8e4bdec43d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+END}} \mbox{\hyperlink{subcases_8cpp_ab8340a9e8495900452b99e9cff1f088a}{TEST\+\_\+\+CASE}} (\char`\"{}lots of nested subcases\char`\"{})
+\item 
+\mbox{\hyperlink{subcases_8cpp_ad474fee7910c42cb88cf377c67773f55}{TEST\+\_\+\+CASE}} (\char`\"{}subcases can be used in a separate function as well\char`\"{})
+\item 
+\mbox{\hyperlink{subcases_8cpp_a742637a036c3d6902ea2777c53367b10}{SCENARIO}} (\char`\"{}vectors can be sized and resized\char`\"{})
+\item 
+\mbox{\hyperlink{subcases_8cpp_a0424e7987ad01d3db508b626ea0d442e}{TEST\+\_\+\+CASE}} (\char`\"{}test case should fail even though the last \mbox{\hyperlink{how__subcases__work_8cpp_a233512ea2462b6cbda8d6c6598a88c10}{subcase}} passes\char`\"{})
+\item 
+\mbox{\hyperlink{subcases_8cpp_a63ed714a5493ee4e5d15bef60cf48a5b}{TEST\+\_\+\+CASE}} (\char`\"{}fails from an exception but gets re-\/entered to traverse all subcases\char`\"{})
+\item 
+\mbox{\hyperlink{subcases_8cpp_ac2710471c2528ee4659224ddff6c6d88}{TEST\+\_\+\+CASE}} (\char`\"{}Nested -\/ related to https\+://github.\+com/onqtam/doctest/issues/282\char`\"{})
+\item 
+\mbox{\hyperlink{subcases_8cpp_a43b00241b8c43b79acc4a901002bbbe4}{DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING}} (5045) \mbox{\hyperlink{doctest__fwd_8h_a361747fc17fa1c6609c3cc939b4fc983}{DOCTEST\+\_\+\+GCC\+\_\+\+SUPPRESS\+\_\+\+WARNING}}(\char`\"{}-\/Wuseless-\/cast\char`\"{}) TEST\+\_\+\+CASE(\char`\"{}subcases with changing names\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{subcases_8cpp_a124915cdf23ad50bf5aaf7a3184308c2}\label{subcases_8cpp_a124915cdf23ad50bf5aaf7a3184308c2}} 
+\index{subcases.cpp@{subcases.cpp}!SUBCASE@{SUBCASE}}
+\index{SUBCASE@{SUBCASE}!subcases.cpp@{subcases.cpp}}
+\doxysubsubsection{\texorpdfstring{SUBCASE}{SUBCASE}}
+{\footnotesize\ttfamily \#define SUBCASE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\mbox{\hyperlink{doctest__fwd_8h_a5acad2b6cef499ee884b8027ef41fbf6}{DOCTEST\+\_\+\+SUBCASE}}(std\+::string(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+).c\+\_\+str())}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{subcases_8cpp_a43b00241b8c43b79acc4a901002bbbe4}\label{subcases_8cpp_a43b00241b8c43b79acc4a901002bbbe4}} 
+\index{subcases.cpp@{subcases.cpp}!DOCTEST\_MSVC\_SUPPRESS\_WARNING@{DOCTEST\_MSVC\_SUPPRESS\_WARNING}}
+\index{DOCTEST\_MSVC\_SUPPRESS\_WARNING@{DOCTEST\_MSVC\_SUPPRESS\_WARNING}!subcases.cpp@{subcases.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_MSVC\_SUPPRESS\_WARNING()}{DOCTEST\_MSVC\_SUPPRESS\_WARNING()}}
+{\footnotesize\ttfamily DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING (\begin{DoxyParamCaption}\item[{5045}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{subcases_8cpp_a742637a036c3d6902ea2777c53367b10}\label{subcases_8cpp_a742637a036c3d6902ea2777c53367b10}} 
+\index{subcases.cpp@{subcases.cpp}!SCENARIO@{SCENARIO}}
+\index{SCENARIO@{SCENARIO}!subcases.cpp@{subcases.cpp}}
+\doxysubsubsection{\texorpdfstring{SCENARIO()}{SCENARIO()}}
+{\footnotesize\ttfamily SCENARIO (\begin{DoxyParamCaption}\item[{\char`\"{}vectors can be sized and resized\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{subcases_8cpp_a63ed714a5493ee4e5d15bef60cf48a5b}\label{subcases_8cpp_a63ed714a5493ee4e5d15bef60cf48a5b}} 
+\index{subcases.cpp@{subcases.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!subcases.cpp@{subcases.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}fails from an exception but gets re-\/entered to traverse all subcases\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{subcases_8cpp_ab8340a9e8495900452b99e9cff1f088a}\label{subcases_8cpp_ab8340a9e8495900452b99e9cff1f088a}} 
+\index{subcases.cpp@{subcases.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!subcases.cpp@{subcases.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_acca96650713994a51c3deb8e4bdec43d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+END}} TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}lots of nested subcases\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{subcases_8cpp_ac2710471c2528ee4659224ddff6c6d88}\label{subcases_8cpp_ac2710471c2528ee4659224ddff6c6d88}} 
+\index{subcases.cpp@{subcases.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!subcases.cpp@{subcases.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}Nested -\/ related to https\+://github.\+com/onqtam/doctest/issues/282\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{subcases_8cpp_ad474fee7910c42cb88cf377c67773f55}\label{subcases_8cpp_ad474fee7910c42cb88cf377c67773f55}} 
+\index{subcases.cpp@{subcases.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!subcases.cpp@{subcases.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}subcases can be used in a separate function as well\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{subcases_8cpp_a0424e7987ad01d3db508b626ea0d442e}\label{subcases_8cpp_a0424e7987ad01d3db508b626ea0d442e}} 
+\index{subcases.cpp@{subcases.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!subcases.cpp@{subcases.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}test case should fail even though the last \mbox{\hyperlink{how__subcases__work_8cpp_a233512ea2462b6cbda8d6c6598a88c10}{subcase}} passes\char`\"{}}]{ }\end{DoxyParamCaption})}
+

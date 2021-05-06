@@ -1,0 +1,115 @@
+Doctest has a modular reporter/listener system with which users can write their own reporters and register them. The reporter interface can also be used for \char`\"{}listening\char`\"{} to events.
+
+You can list all registered reporters/listeners with {\ttfamily -\/-\/list-\/reporters}. There are a few implemented reporters in the framework\+:
+\begin{DoxyItemize}
+\item {\ttfamily console} -\/ streaming -\/ writes normal lines of text with coloring if a capable terminal is detected
+\item {\ttfamily xml} -\/ streaming -\/ writes in xml format tailored to doctest
+\item {\ttfamily junit} -\/ buffering -\/ writes in JUnit-\/compatible xml -\/ for more information look \href{https://github.com/onqtam/doctest/issues/318}{\texttt{ here}} and \href{https://github.com/onqtam/doctest/issues/376}{\texttt{ here}}.
+\end{DoxyItemize}
+
+Streaming means that results are delivered progressively and not at the end of the test run.
+
+The output is by default written to {\ttfamily stdout} but can be redirected with the use of the {\ttfamily -\/-\/out=$<$filename$>$} \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$command line option$\ast$$\ast$}}.
+
+Example how to define your own reporter\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{\#include <doctest/doctest.h>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#include <mutex>}
+\DoxyCodeLine{}
+\DoxyCodeLine{using namespace doctest;}
+\DoxyCodeLine{}
+\DoxyCodeLine{struct MyXmlReporter : public IReporter}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    // caching pointers/references to objects of these types -\/ safe to do}
+\DoxyCodeLine{    std::ostream\&         stdout\_stream;}
+\DoxyCodeLine{    const ContextOptions\& opt;}
+\DoxyCodeLine{    const TestCaseData*   tc;}
+\DoxyCodeLine{    std::mutex            mutex;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // constructor has to accept the ContextOptions by ref as a single argument}
+\DoxyCodeLine{    MyXmlReporter(const ContextOptions\& in)}
+\DoxyCodeLine{            : stdout\_stream(*in.cout)}
+\DoxyCodeLine{            , opt(in) \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void report\_query(const QueryData\& /*in*/) override \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void test\_run\_start() override \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void test\_run\_end(const TestRunStats\& /*in*/) override \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void test\_case\_start(const TestCaseData\& in) override \{ tc = \&in; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // called when a test case is reentered because of unfinished subcases}
+\DoxyCodeLine{    void test\_case\_reenter(const TestCaseData\& /*in*/) override \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void test\_case\_end(const CurrentTestCaseStats\& /*in*/) override \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void test\_case\_exception(const TestCaseException\& /*in*/) override \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void subcase\_start(const SubcaseSignature\& /*in*/) override \{}
+\DoxyCodeLine{        std::lock\_guard<std::mutex> lock(mutex);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void subcase\_end() override \{}
+\DoxyCodeLine{        std::lock\_guard<std::mutex> lock(mutex);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void log\_assert(const AssertData\& in) override \{}
+\DoxyCodeLine{        // don't include successful asserts by default -\/ this is done here}
+\DoxyCodeLine{        // instead of in the framework itself because doctest doesn't know}
+\DoxyCodeLine{        // if/when a reporter/listener cares about successful results}
+\DoxyCodeLine{        if(!in.m\_failed \&\& !opt.success)}
+\DoxyCodeLine{            return;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        // make sure there are no races -\/ this is done here instead of in the}
+\DoxyCodeLine{        // framework itself because doctest doesn't know if reporters/listeners}
+\DoxyCodeLine{        // care about successful asserts and thus doesn't lock a mutex unnecessarily}
+\DoxyCodeLine{        std::lock\_guard<std::mutex> lock(mutex);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        // ...}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void log\_message(const MessageData\& /*in*/) override \{}
+\DoxyCodeLine{        // messages too can be used in a multi-\/threaded context -\/ like asserts}
+\DoxyCodeLine{        std::lock\_guard<std::mutex> lock(mutex);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        // ...}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    void test\_case\_skipped(const TestCaseData\& /*in*/) override \{\}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{// "{}1"{} is the priority -\/ used for ordering when multiple reporters are used}
+\DoxyCodeLine{REGISTER\_REPORTER("{}my\_xml"{}, 1, MyXmlReporter);}
+\DoxyCodeLine{}
+\DoxyCodeLine{// registering the same class as a reporter and as a listener is nonsense but it's possible}
+\DoxyCodeLine{REGISTER\_LISTENER("{}my\_listener"{}, 1, MyXmlReporter);}
+
+\end{DoxyCode}
+
+
+Custom {\ttfamily IReporter} implementations must be registered with one of\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily REGISTER\+\_\+\+REPORTER}, for when the new reporter is an option that users may choose at run-\/time.
+\item {\ttfamily REGISTER\+\_\+\+LISTENER}, for when the reporter is actually a listener and must always be executed, regardless of which reporters have been chosen at run-\/time.
+\end{DoxyItemize}
+
+Multiple reporters can be used at the same time -\/ just specify them through the {\ttfamily -\/-\/reporters=...} \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$command line filtering option$\ast$$\ast$}} using commas to separate them like this\+: {\ttfamily -\/-\/reporters=my\+Reporter,xml} and their order of execution will be based on their priority -\/ that is the number \char`\"{}1\char`\"{} in the case of the example reporter above (lower means earlier -\/ the default console/xml reporters from the framework have 0 as their priority and negative numbers are accepted as well).
+
+All registered listeners ({\ttfamily REGISTER\+\_\+\+LISTENER}) will be executed before any reporter -\/ they do not need to be specified and cannot be filtered through the command line.
+
+When implementing a reporter users are advised to follow the comments from the example above and look at the few implemented reporters in the framework itself. Also check out the \href{../../examples/all_features/reporters_and_listeners.cpp}{\texttt{ {\bfseries{example}}}}.
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+
+
+

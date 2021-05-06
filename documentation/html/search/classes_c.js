@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['saveascommand_203',['SaveAsCommand',['../class_save_as_command.html',1,'']]],
-  ['savecommand_204',['SaveCommand',['../class_save_command.html',1,'']]],
-  ['string_205',['String',['../class_string.html',1,'']]]
+  ['opencommand_1302',['OpenCommand',['../class_open_command.html',1,'']]],
+  ['operatorpluscommand_1303',['OperatorPlusCommand',['../class_operator_plus_command.html',1,'']]]
 ];

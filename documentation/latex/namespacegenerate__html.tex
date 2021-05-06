@@ -1,0 +1,56 @@
+\hypertarget{namespacegenerate__html}{}\doxysection{generate\+\_\+html Namespace Reference}
+\label{namespacegenerate__html}\index{generate\_html@{generate\_html}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacegenerate__html_a5dd4638fcbe2b04b58d53dd386669ded}{html\+\_\+dir}} = \char`\"{}../doc/html\+\_\+generated/\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacegenerate__html_adb5dda22466bdb916f0d36113919f68b}{md\+\_\+dir}} = \char`\"{}../doc/markdown/\char`\"{}
+\item 
+list \mbox{\hyperlink{namespacegenerate__html_a1d34d0a9c5f919d65f5c5a85922a1c38}{filelist}} = \mbox{[}f for f in os.\+listdir(\mbox{\hyperlink{namespacegenerate__html_a5dd4638fcbe2b04b58d53dd386669ded}{html\+\_\+dir}}) if f.\+endswith(\char`\"{}.html\char`\"{})\mbox{]}
+\item 
+\mbox{\hyperlink{namespacegenerate__html_ac99c3ffa9ae2aaf4e07249f6f25c8be7}{md}} = open(\mbox{\hyperlink{namespacegenerate__html_adb5dda22466bdb916f0d36113919f68b}{md\+\_\+dir}} + filename, \char`\"{}r\char`\"{})
+\item 
+\mbox{\hyperlink{namespacegenerate__html_ac081979d917da9b5d9789b56437ac6ff}{md\+\_\+contents}} = md.\+read()
+\item 
+\mbox{\hyperlink{namespacegenerate__html_a9d52bedf28ce7ffd47260dd184760b7e}{html}} = open(\mbox{\hyperlink{namespacegenerate__html_a5dd4638fcbe2b04b58d53dd386669ded}{html\+\_\+dir}} + filename\mbox{[}\+:-\/3\mbox{]} + \char`\"{}.html\char`\"{}, \char`\"{}w\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacegenerate__html_a1d34d0a9c5f919d65f5c5a85922a1c38}\label{namespacegenerate__html_a1d34d0a9c5f919d65f5c5a85922a1c38}} 
+\index{generate\_html@{generate\_html}!filelist@{filelist}}
+\index{filelist@{filelist}!generate\_html@{generate\_html}}
+\doxysubsubsection{\texorpdfstring{filelist}{filelist}}
+{\footnotesize\ttfamily list generate\+\_\+html.\+filelist = \mbox{[}f for f in os.\+listdir(\mbox{\hyperlink{namespacegenerate__html_a5dd4638fcbe2b04b58d53dd386669ded}{html\+\_\+dir}}) if f.\+endswith(\char`\"{}.html\char`\"{})\mbox{]}}
+
+\mbox{\Hypertarget{namespacegenerate__html_a9d52bedf28ce7ffd47260dd184760b7e}\label{namespacegenerate__html_a9d52bedf28ce7ffd47260dd184760b7e}} 
+\index{generate\_html@{generate\_html}!html@{html}}
+\index{html@{html}!generate\_html@{generate\_html}}
+\doxysubsubsection{\texorpdfstring{html}{html}}
+{\footnotesize\ttfamily generate\+\_\+html.\+html = open(\mbox{\hyperlink{namespacegenerate__html_a5dd4638fcbe2b04b58d53dd386669ded}{html\+\_\+dir}} + filename\mbox{[}\+:-\/3\mbox{]} + \char`\"{}.html\char`\"{}, \char`\"{}w\char`\"{})}
+
+\mbox{\Hypertarget{namespacegenerate__html_a5dd4638fcbe2b04b58d53dd386669ded}\label{namespacegenerate__html_a5dd4638fcbe2b04b58d53dd386669ded}} 
+\index{generate\_html@{generate\_html}!html\_dir@{html\_dir}}
+\index{html\_dir@{html\_dir}!generate\_html@{generate\_html}}
+\doxysubsubsection{\texorpdfstring{html\_dir}{html\_dir}}
+{\footnotesize\ttfamily string generate\+\_\+html.\+html\+\_\+dir = \char`\"{}../doc/html\+\_\+generated/\char`\"{}}
+
+\mbox{\Hypertarget{namespacegenerate__html_ac99c3ffa9ae2aaf4e07249f6f25c8be7}\label{namespacegenerate__html_ac99c3ffa9ae2aaf4e07249f6f25c8be7}} 
+\index{generate\_html@{generate\_html}!md@{md}}
+\index{md@{md}!generate\_html@{generate\_html}}
+\doxysubsubsection{\texorpdfstring{md}{md}}
+{\footnotesize\ttfamily generate\+\_\+html.\+md = open(\mbox{\hyperlink{namespacegenerate__html_adb5dda22466bdb916f0d36113919f68b}{md\+\_\+dir}} + filename, \char`\"{}r\char`\"{})}
+
+\mbox{\Hypertarget{namespacegenerate__html_ac081979d917da9b5d9789b56437ac6ff}\label{namespacegenerate__html_ac081979d917da9b5d9789b56437ac6ff}} 
+\index{generate\_html@{generate\_html}!md\_contents@{md\_contents}}
+\index{md\_contents@{md\_contents}!generate\_html@{generate\_html}}
+\doxysubsubsection{\texorpdfstring{md\_contents}{md\_contents}}
+{\footnotesize\ttfamily generate\+\_\+html.\+md\+\_\+contents = md.\+read()}
+
+\mbox{\Hypertarget{namespacegenerate__html_adb5dda22466bdb916f0d36113919f68b}\label{namespacegenerate__html_adb5dda22466bdb916f0d36113919f68b}} 
+\index{generate\_html@{generate\_html}!md\_dir@{md\_dir}}
+\index{md\_dir@{md\_dir}!generate\_html@{generate\_html}}
+\doxysubsubsection{\texorpdfstring{md\_dir}{md\_dir}}
+{\footnotesize\ttfamily string generate\+\_\+html.\+md\+\_\+dir = \char`\"{}../doc/markdown/\char`\"{}}
+

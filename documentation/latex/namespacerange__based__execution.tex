@@ -1,0 +1,86 @@
+\hypertarget{namespacerange__based__execution}{}\doxysection{range\+\_\+based\+\_\+execution Namespace Reference}
+\label{namespacerange__based__execution}\index{range\_based\_execution@{range\_based\_execution}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacerange__based__execution_a7b6f721c2c84ef9f00872ad1a3d001bf}{worker}} (first, last)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacerange__based__execution_ae599707c3d1dd0d50210b6f959722931}{num\+\_\+tests}} = 0
+\item 
+list \mbox{\hyperlink{namespacerange__based__execution_a1ea863a2c801b31809ee56655163b896}{program\+\_\+with\+\_\+args}} = \mbox{[}sys.\+argv\mbox{[}1\mbox{]}, \char`\"{}-\/-\/dt-\/count=1\char`\"{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacerange__based__execution_ac2847575523f7515474d6e72857725f0}{result}} = subprocess.\+Popen(\mbox{\hyperlink{namespacerange__based__execution_a1ea863a2c801b31809ee56655163b896}{program\+\_\+with\+\_\+args}}, stdout = subprocess.\+PIPE).communicate()\mbox{[}0\mbox{]}
+\item 
+\mbox{\hyperlink{namespacerange__based__execution_ad94693e162522fb5c80f10f601462457}{cores}} = multiprocessing.\+cpu\+\_\+count()
+\item 
+\mbox{\hyperlink{namespacerange__based__execution_a3842bfa8a8a04c96e07965ea3ddf0791}{l}} = range(\mbox{\hyperlink{namespacerange__based__execution_ae599707c3d1dd0d50210b6f959722931}{num\+\_\+tests}} + 1)
+\item 
+\mbox{\hyperlink{namespacerange__based__execution_af3ac9e90a688be66c9eab64cbfc3c1da}{n}} = int(math.\+ceil(float(len( \mbox{\hyperlink{namespacerange__based__execution_a3842bfa8a8a04c96e07965ea3ddf0791}{l}} )) / \mbox{\hyperlink{namespacerange__based__execution_ad94693e162522fb5c80f10f601462457}{cores}}))
+\item 
+list \mbox{\hyperlink{namespacerange__based__execution_a42d7b70280336dbbf7cfa8e17ca63dd3}{data}} = \mbox{[}\mbox{\hyperlink{namespacerange__based__execution_a3842bfa8a8a04c96e07965ea3ddf0791}{l}}\mbox{[}i \+: i + \mbox{\hyperlink{namespacerange__based__execution_af3ac9e90a688be66c9eab64cbfc3c1da}{n}}\mbox{]} for i in range(1, len( \mbox{\hyperlink{namespacerange__based__execution_a3842bfa8a8a04c96e07965ea3ddf0791}{l}} ), \mbox{\hyperlink{namespacerange__based__execution_af3ac9e90a688be66c9eab64cbfc3c1da}{n}})\mbox{]}
+\item 
+\mbox{\hyperlink{namespacerange__based__execution_a3cbfb4cb2a4db7e87bfaf712902acfa7}{p}} = multiprocessing.\+Pool(\mbox{\hyperlink{namespacerange__based__execution_ad94693e162522fb5c80f10f601462457}{cores}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerange__based__execution_a7b6f721c2c84ef9f00872ad1a3d001bf}\label{namespacerange__based__execution_a7b6f721c2c84ef9f00872ad1a3d001bf}} 
+\index{range\_based\_execution@{range\_based\_execution}!worker@{worker}}
+\index{worker@{worker}!range\_based\_execution@{range\_based\_execution}}
+\doxysubsubsection{\texorpdfstring{worker()}{worker()}}
+{\footnotesize\ttfamily def range\+\_\+based\+\_\+execution.\+worker (\begin{DoxyParamCaption}\item[{}]{first,  }\item[{}]{last }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerange__based__execution_ad94693e162522fb5c80f10f601462457}\label{namespacerange__based__execution_ad94693e162522fb5c80f10f601462457}} 
+\index{range\_based\_execution@{range\_based\_execution}!cores@{cores}}
+\index{cores@{cores}!range\_based\_execution@{range\_based\_execution}}
+\doxysubsubsection{\texorpdfstring{cores}{cores}}
+{\footnotesize\ttfamily range\+\_\+based\+\_\+execution.\+cores = multiprocessing.\+cpu\+\_\+count()}
+
+\mbox{\Hypertarget{namespacerange__based__execution_a42d7b70280336dbbf7cfa8e17ca63dd3}\label{namespacerange__based__execution_a42d7b70280336dbbf7cfa8e17ca63dd3}} 
+\index{range\_based\_execution@{range\_based\_execution}!data@{data}}
+\index{data@{data}!range\_based\_execution@{range\_based\_execution}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily range\+\_\+based\+\_\+execution.\+data = \mbox{[}\mbox{\hyperlink{namespacerange__based__execution_a3842bfa8a8a04c96e07965ea3ddf0791}{l}}\mbox{[}i \+: i + \mbox{\hyperlink{namespacerange__based__execution_af3ac9e90a688be66c9eab64cbfc3c1da}{n}}\mbox{]} for i in range(1, len( \mbox{\hyperlink{namespacerange__based__execution_a3842bfa8a8a04c96e07965ea3ddf0791}{l}} ), \mbox{\hyperlink{namespacerange__based__execution_af3ac9e90a688be66c9eab64cbfc3c1da}{n}})\mbox{]}}
+
+\mbox{\Hypertarget{namespacerange__based__execution_a3842bfa8a8a04c96e07965ea3ddf0791}\label{namespacerange__based__execution_a3842bfa8a8a04c96e07965ea3ddf0791}} 
+\index{range\_based\_execution@{range\_based\_execution}!l@{l}}
+\index{l@{l}!range\_based\_execution@{range\_based\_execution}}
+\doxysubsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily range\+\_\+based\+\_\+execution.\+l = range(\mbox{\hyperlink{namespacerange__based__execution_ae599707c3d1dd0d50210b6f959722931}{num\+\_\+tests}} + 1)}
+
+\mbox{\Hypertarget{namespacerange__based__execution_af3ac9e90a688be66c9eab64cbfc3c1da}\label{namespacerange__based__execution_af3ac9e90a688be66c9eab64cbfc3c1da}} 
+\index{range\_based\_execution@{range\_based\_execution}!n@{n}}
+\index{n@{n}!range\_based\_execution@{range\_based\_execution}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily range\+\_\+based\+\_\+execution.\+n = int(math.\+ceil(float(len( \mbox{\hyperlink{namespacerange__based__execution_a3842bfa8a8a04c96e07965ea3ddf0791}{l}} )) / \mbox{\hyperlink{namespacerange__based__execution_ad94693e162522fb5c80f10f601462457}{cores}}))}
+
+\mbox{\Hypertarget{namespacerange__based__execution_ae599707c3d1dd0d50210b6f959722931}\label{namespacerange__based__execution_ae599707c3d1dd0d50210b6f959722931}} 
+\index{range\_based\_execution@{range\_based\_execution}!num\_tests@{num\_tests}}
+\index{num\_tests@{num\_tests}!range\_based\_execution@{range\_based\_execution}}
+\doxysubsubsection{\texorpdfstring{num\_tests}{num\_tests}}
+{\footnotesize\ttfamily range\+\_\+based\+\_\+execution.\+num\+\_\+tests = 0}
+
+\mbox{\Hypertarget{namespacerange__based__execution_a3cbfb4cb2a4db7e87bfaf712902acfa7}\label{namespacerange__based__execution_a3cbfb4cb2a4db7e87bfaf712902acfa7}} 
+\index{range\_based\_execution@{range\_based\_execution}!p@{p}}
+\index{p@{p}!range\_based\_execution@{range\_based\_execution}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily range\+\_\+based\+\_\+execution.\+p = multiprocessing.\+Pool(\mbox{\hyperlink{namespacerange__based__execution_ad94693e162522fb5c80f10f601462457}{cores}})}
+
+\mbox{\Hypertarget{namespacerange__based__execution_a1ea863a2c801b31809ee56655163b896}\label{namespacerange__based__execution_a1ea863a2c801b31809ee56655163b896}} 
+\index{range\_based\_execution@{range\_based\_execution}!program\_with\_args@{program\_with\_args}}
+\index{program\_with\_args@{program\_with\_args}!range\_based\_execution@{range\_based\_execution}}
+\doxysubsubsection{\texorpdfstring{program\_with\_args}{program\_with\_args}}
+{\footnotesize\ttfamily list range\+\_\+based\+\_\+execution.\+program\+\_\+with\+\_\+args = \mbox{[}sys.\+argv\mbox{[}1\mbox{]}, \char`\"{}-\/-\/dt-\/count=1\char`\"{}\mbox{]}}
+
+\mbox{\Hypertarget{namespacerange__based__execution_ac2847575523f7515474d6e72857725f0}\label{namespacerange__based__execution_ac2847575523f7515474d6e72857725f0}} 
+\index{range\_based\_execution@{range\_based\_execution}!result@{result}}
+\index{result@{result}!range\_based\_execution@{range\_based\_execution}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily range\+\_\+based\+\_\+execution.\+result = subprocess.\+Popen(\mbox{\hyperlink{namespacerange__based__execution_a1ea863a2c801b31809ee56655163b896}{program\+\_\+with\+\_\+args}}, stdout = subprocess.\+PIPE).communicate()\mbox{[}0\mbox{]}}
+

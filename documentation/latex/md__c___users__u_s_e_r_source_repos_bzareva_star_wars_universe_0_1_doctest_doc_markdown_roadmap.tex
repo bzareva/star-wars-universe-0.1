@@ -1,0 +1,199 @@
+This library is free, and will stay free but needs your support to sustain its development. There are lots of \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap}{$\ast$$\ast$new features$\ast$$\ast$}} and maintenance to do. If you work for a company using {\bfseries{doctest}} or have the means to do so, please consider financial support.
+
+\href{http://www.patreon.com/onqtam}{\texttt{ }} \href{https://www.paypal.me/onqtam/10}{\texttt{ }}
+
+Planned features for future releases -\/ order changes constantly... Also look through the \href{https://github.com/onqtam/doctest/issues}{\texttt{ {\bfseries{issues}}}}.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md154}{}\doxysubsection{For 2.\+5\+:}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md154}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/onqtam/doctest/issues/208}{\texttt{ https\+://github.\+com/onqtam/doctest/issues/208}}
+\item reporters\+:
+\begin{DoxyItemize}
+\item ability to redirect the stdout/stderr from test cases and capture it -\/ like Catch does it
+\item x\+Unit/\+Team\+City reporter
+\item compact reporter
+\item options
+\begin{DoxyItemize}
+\item absolutely no output on success (AKA quiet mode)
+\item summary only (verbosity levels?)
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item matchers -\/ should investigate what they are -\/ look at google test/mock and Catch (also predicates and boost test)
+\item header with extensions
+\begin{DoxyItemize}
+\item demangling with the use of the cxxabi header
+\item stringification of types from std, also enums with the help of traits as discussed in \#121
+\item esoteric reporters
+\end{DoxyItemize}
+\item convolution support for the assertion macros (with a predicate)
+\item Value-\/\+Parameterized test cases
+\item generators? -\/ look at Catch -\/ and investigate what they are (also SUBCASEs can be while() loops instead of if() statements! that might be useful...)
+\item look at property based testing
+\begin{DoxyItemize}
+\item \href{https://github.com/emil-e/rapidcheck}{\texttt{ rapidcheck}}
+\item \href{https://github.com/thejohnfreeman/autocheck}{\texttt{ autocheck}}
+\item \href{https://github.com/grogers0/CppQuickCheck}{\texttt{ Cpp\+Quick\+Check}}
+\end{DoxyItemize}
+\item proper conan package -\/ \href{https://github.com/onqtam/doctest/issues/103}{\texttt{ https\+://github.\+com/onqtam/doctest/issues/103}}
+\item IDE integration
+\begin{DoxyItemize}
+\item \href{https://blogs.msdn.microsoft.com/vcblog/2017/05/10/unit-testing-and-the-future-announcing-the-test-adapter-for-google-test/}{\texttt{ https\+://blogs.\+msdn.\+microsoft.\+com/vcblog/2017/05/10/unit-\/testing-\/and-\/the-\/future-\/announcing-\/the-\/test-\/adapter-\/for-\/google-\/test/}}
+\item \href{https://www.reddit.com/r/cpp/comments/65c0f1/run_cpp_unit_tests_from_xcode_and_visual_studio/}{\texttt{ https\+://www.\+reddit.\+com/r/cpp/comments/65c0f1/run\+\_\+cpp\+\_\+unit\+\_\+tests\+\_\+from\+\_\+xcode\+\_\+and\+\_\+visual\+\_\+studio/}}
+\item \href{https://github.com/k-brac/CUTI}{\texttt{ https\+://github.\+com/k-\/brac/\+CUTI}}
+\item \href{https://github.com/csoltenborn/GoogleTestAdapter}{\texttt{ https\+://github.\+com/csoltenborn/\+Google\+Test\+Adapter}}
+\item MSTest
+\begin{DoxyItemize}
+\item \href{http://accu.org/index.php/journals/1851}{\texttt{ http\+://accu.\+org/index.\+php/journals/1851}}
+\item \href{https://msdn.microsoft.com/en-us/library/hh270865.aspx}{\texttt{ https\+://msdn.\+microsoft.\+com/en-\/us/library/hh270865.\+aspx}}
+\item \href{https://msdn.microsoft.com/en-us/library/hh598953.aspx}{\texttt{ https\+://msdn.\+microsoft.\+com/en-\/us/library/hh598953.\+aspx}}
+\item \href{https://blogs.msdn.microsoft.com/vcblog/2017/04/19/cpp-testing-in-visual-studio/}{\texttt{ https\+://blogs.\+msdn.\+microsoft.\+com/vcblog/2017/04/19/cpp-\/testing-\/in-\/visual-\/studio/}}
+\item \href{https://msdn.microsoft.com/en-us/library/hh419385.aspx}{\texttt{ https\+://msdn.\+microsoft.\+com/en-\/us/library/hh419385.\+aspx}}
+\end{DoxyItemize}
+\item XCode -\/ \href{https://github.com/catchorg/Catch2/pull/454}{\texttt{ https\+://github.\+com/catchorg/\+Catch2/pull/454}}
+\item CLion
+\begin{DoxyItemize}
+\item \href{https://www.jetbrains.com/clion/features/unit-testing.html}{\texttt{ https\+://www.\+jetbrains.\+com/clion/features/unit-\/testing.\+html}}
+\item \href{https://blog.jetbrains.com/clion/2017/03/clion-2017-1-released/\#catch}{\texttt{ https\+://blog.\+jetbrains.\+com/clion/2017/03/clion-\/2017-\/1-\/released/\#catch}}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md155}{}\doxysubsection{For 2.\+6\+:}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md155}
+
+\begin{DoxyItemize}
+\item log levels -\/ like in \href{http://www.boost.org/doc/libs/1_63_0/libs/test/doc/html/boost_test/utf_reference/rt_param_reference/log_level.html}{\texttt{ boost test}}
+\item running tests a \href{https://github.com/google/googletest/blob/master/googletest/docs/AdvancedGuide.md\#repeating-the-tests}{\texttt{ few times}}
+\item test execution in \href{https://github.com/catchorg/Catch2/issues/853}{\texttt{ separate processes}} -\/ {\ttfamily fork()} for UNIX and \href{https://github.com/nemequ/munit/issues/2}{\texttt{ this}} for Windows
+\item killing a test that exceeds a time limit (will perhaps require threading or processes)
+\item \href{https://github.com/facebook/folly/tree/master/folly/experimental/symbolizer}{\texttt{ symbolizer}} -\/ for a stack trace -\/ when an assertion fails -\/ and it\textquotesingle{}s in a user function with some deep callstack away from the current test case -\/ how to know the exact code path that lead to the failing assert
+\item ability to make the framework not capture unexpected exceptions -\/ as requested \href{https://github.com/onqtam/doctest/issues/12\#issuecomment-235334585}{\texttt{ here}}
+\item add Approx ability to compare with absolute epsilon -\/ \href{https://github.com/catchorg/Catch2/pull/538}{\texttt{ Catch PR}}
+\item ability to customize the colors in the console output (may also use styles -\/ based on \href{https://github.com/agauniyal/rang}{\texttt{ this}} or \href{https://github.com/ikalnytskyi/termcolor}{\texttt{ this}})
+\item implement breaking into the debugger under linux -\/ see \href{https://github.com/catchorg/Catch2/pull/585}{\texttt{ here}} and \href{https://github.com/scottt/debugbreak}{\texttt{ here}}
+\item better testing of the library
+\begin{DoxyItemize}
+\item unit test the \mbox{\hyperlink{class_string}{String}} class
+\item should unit test internals -\/ currently even if a bug is caught by different output it\textquotesingle{}s very difficult to track the reason
+\item should test stuff that should not compile
+\begin{DoxyItemize}
+\item \href{https://github.com/ldionne/dyno/blob/master/cmake/CompileFailTest.cmake}{\texttt{ https\+://github.\+com/ldionne/dyno/blob/master/cmake/\+Compile\+Fail\+Test.\+cmake}}
+\item see slide 38 here -\/ \href{https://github.com/boostcon/cppnow_presentations_2017/blob/master/05-19-2017_friday/effective_cmake__daniel_pfeifer__cppnow_05-19-2017.pdf}{\texttt{ https\+://github.\+com/boostcon/cppnow\+\_\+presentations\+\_\+2017/blob/master/05-\/19-\/2017\+\_\+friday/effective\+\_\+cmake\+\_\+\+\_\+daniel\+\_\+pfeifer\+\_\+\+\_\+cppnow\+\_\+05-\/19-\/2017.\+pdf}}
+\end{DoxyItemize}
+\item should test crash handling
+\item should test more config options
+\item don\textquotesingle{}t cheat for maxing out code coverage (see \href{../../examples/all_features/coverage_maxout.cpp}{\texttt{ coverage\+\_\+maxout.\+cpp}})
+\item should test C++11 stuff -\/ perhaps inspect the CMAKE\+\_\+\+CXX\+\_\+\+FLAGS for -\/std=c++11 on the CI and add more targets/tests
+\item test tricky stuff like expressions with commas in asserts
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md156}{}\doxysubsection{For 3.\+0\+:}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md156}
+
+\begin{DoxyItemize}
+\item use modules -\/ use {\ttfamily std\+::string} and whatever else comes from the standard -\/ no more hand rolled traits and classes
+\item minimize the use of the preprocessor
+\item remove backwards-\/compatible macros for the fast asserts
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md157}{}\doxysubsection{Things that are being considered but not part of the roadmap yet\+:}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md157}
+
+\begin{DoxyItemize}
+\item add ability to print a diff for strings/values instead of the whole 2 versions (gtest does that)
+\item add LIKELY \& friends for the conditions of asserts -\/ look at BOOST\+\_\+\+LIKELY, ppk\+\_\+assert, foonathan/debug\+\_\+assert, etc
+\item ability for users to register their own command line options and access them later on
+\item fix this\+: \href{https://github.com/catchorg/Catch2/issues/1292}{\texttt{ https\+://github.\+com/catchorg/\+Catch2/issues/1292}}
+\item Fake\+It mocking integration -\/ like \href{https://github.com/eranpeer/FakeIt/tree/master/config/catch}{\texttt{ catch}} (also checkout \href{https://github.com/ujiro99/doctest-sample}{\texttt{ this}})
+\item look into \href{https://github.com/cpp-testing/GUnit}{\texttt{ https\+://github.\+com/cpp-\/testing/\+GUnit}} -\/ \href{https://www.youtube.com/watch?v=NVrZjT5lW5o}{\texttt{ https\+://www.\+youtube.\+com/watch?v=\+NVr\+Zj\+T5l\+W5o}}
+\item consider the following 2 properties for the MSVC static code analyzer\+: Enable\+Cpp\+Core\+Check, Enable\+Experimental\+Cpp\+Core\+Check
+\item rpm package? like this\+: \href{https://github.com/vietjtnguyen/argagg/blob/master/packaging/rpm/argagg.spec}{\texttt{ https\+://github.\+com/vietjtnguyen/argagg/blob/master/packaging/rpm/argagg.\+spec}}
+\item get the current test case/section path -\/ \href{https://github.com/catchorg/Catch2/issues/522}{\texttt{ https\+://github.\+com/catchorg/\+Catch2/issues/522}}
+\item when no assertion is encountered in a test case it should fail -\/ and should also add a SUCCEED() call
+\item failure reporting should print out previous SECTIONs for data-\/driven testing -\/ as requested \href{https://github.com/catchorg/Catch2/issues/734}{\texttt{ here}}
+\item {\ttfamily Bitwise()} class that has overloaded operators for comparison -\/ to be used to check objects bitwise against each other
+\item detect floating point exceptions
+\item checkpoint/passpoint -\/ like in \href{http://www.boost.org/doc/libs/1_63_0/libs/test/doc/html/boost_test/test_output/test_tools_support_for_logging/checkpoints.html}{\texttt{ boost test}} (also make all assert/subcase/logging macros to act as passpoints and print the last one on crashes or exceptions)
+\item queries for the current test case -\/ name (and probably decorators)
+\item support for Lib\+Identify
+\item add CHECKED\+\_\+\+IF \& friends\+: \href{https://github.com/catchorg/Catch2/issues/1278}{\texttt{ https\+://github.\+com/catchorg/\+Catch2/issues/1278}}
+\item support for running tests in parallel in multiple threads
+\item death tests -\/ as in \href{https://github.com/google/googletest/blob/master/googletest/docs/advanced.md\#death-tests}{\texttt{ google test}}
+\item config options
+\begin{DoxyItemize}
+\item test case name uniqueness -\/ reject the ones with identical names
+\end{DoxyItemize}
+\item command line options
+\begin{DoxyItemize}
+\item ability to specify ASC/\+DESC for the order option
+\item global timeout option (per test or per entire session?)
+\item command line error handling/reporting
+\item option to not print context info when the --success option is used
+\item ability for the user to extend the command line -\/ as requested \href{https://github.com/catchorg/Catch2/issues/622}{\texttt{ here}}
+\item option to list files in which there are test cases who match the current filters
+\item option for filters to switch from \char`\"{}match any\char`\"{} to \char`\"{}match all\char`\"{} mode
+\item option to list test suites and test cases in a tree view
+\item add a \char`\"{}wait key\char`\"{} option (before and after tests) -\/ as requested \href{https://github.com/catchorg/Catch2/issues/477\#issuecomment-256417686}{\texttt{ here}}
+\end{DoxyItemize}
+\item decorators for test cases and test suites-\/ like in boost test
+\begin{DoxyItemize}
+\item depends\+\_\+on
+\item precondition
+\item fixture
+\item label (tag) -\/ with the ability to have multiple labels (tags) for a test case and also the ability to list them
+\item run X times (should also multiply with (or just override) the global test run times)
+\item throw an exception when incompatible decorators are given in the same list of decorators -\/ like may\+\_\+fail and should\+\_\+fail
+\end{DoxyItemize}
+\item setup / teardown support
+\begin{DoxyItemize}
+\item global setup / teardown -\/ can be currently achieved by providing a custom main function
+\item per test suite (block? only? and not all blocks of the same test suite?)
+\item as decorators
+\item see how it\textquotesingle{}s done in boost test -\/ with the fixture decorator
+\item perhaps for fixtures in addition to the constructor / destructor -\/ since throwing in the destructor might terminate the program
+\item or just ignore all of this this -\/ it would require globals or classes and inheritance -\/ and we already have subcases
+\end{DoxyItemize}
+\item doctest in a GUI environment? with no console? APIs for attaching a console? querying if there is one? \href{https://github.com/catchorg/Catch2/blob/master/docs/configuration.md\#stdout}{\texttt{ investigate...}}
+\item runtime performance
+\begin{DoxyItemize}
+\item look at this\+: \href{https://github.com/catchorg/Catch2/issues/1086}{\texttt{ https\+://github.\+com/catchorg/\+Catch2/issues/1086}}
+\item startup -\/ the set holding all registered tests should use a specialized allocator to minimize program startup time
+\item optimize the mutex lock\+:
+\begin{DoxyItemize}
+\item \href{http://preshing.com/20111124/always-use-a-lightweight-mutex/}{\texttt{ http\+://preshing.\+com/20111124/always-\/use-\/a-\/lightweight-\/mutex/}}
+\item \href{http://preshing.com/20120226/roll-your-own-lightweight-mutex/}{\texttt{ http\+://preshing.\+com/20120226/roll-\/your-\/own-\/lightweight-\/mutex/}}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item ability to provide a temp folder that is cleared between each test case
+\item make the \+\_\+\+MESSAGE assert macros work with variadic arguments -\/ and maybe write the ones for binary/unary asserts as well
+\item move from operator \char`\"{}$<$$<$\char`\"{} to \char`\"{}$<$=\char`\"{} for capturing the left operand when decomposing binary expressions with templates
+\item think about silencing warnings about unused variables when DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE is used -\/ see commit 6b61e8aa3818c5ea100cedc1bb48a60ea10df6e8 or issue \#61
+\begin{DoxyItemize}
+\item also this\+: {\ttfamily (void)(true ? (void)0 \+: ((void)(expression)))}
+\end{DoxyItemize}
+\item think about optionally using {\ttfamily $<$typeinfo$>$} and libcxxabi for demangling so users don\textquotesingle{}t have to use {\ttfamily \mbox{\hyperlink{doctest_2doctest_8h_a8245b61f7381307d76a1472436d35ebe}{TYPE\+\_\+\+TO\+\_\+\+STRING()}}}
+\item handle more complex expressions -\/ {\ttfamily CHECK(foo() == 1 $\vert$$\vert$ \mbox{\hyperlink{foo_8h_ad8a2dfa8cbec508ec4cf97b2c5452797}{bar()}} == 2);}
+\item add \mbox{[}\mbox{[}noreturn\mbox{]}\mbox{]} to Message\+Builder\+::react() -\/ and actually make a separate function (react2) for the \mbox{\hyperlink{doctest_2doctest_8h_ac8d1eaf65528f86b445cf6e45b2d72c9}{FAIL()}} case
+\item think about using a string view of some sorts
+\item benchmark against google test and boost test
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md158}{}\doxysubsection{Things that are very unlikely to enter the roadmap\+:}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap_autotoc_md158}
+
+\begin{DoxyItemize}
+\item rethink static code analysis suppressions -\/ users shouldn\textquotesingle{}t have to use the same flags for code which uses doctest macros/types
+\item move the \char`\"{}react()\char`\"{} part (the one that throws for REQUIRE asserts -\/ or for when \char`\"{}abort-\/after=$<$int$>$\char`\"{} is reached) to a function call in the while() part of the asserts
+\item stop using underscores for the beginning of identifiers -\/ the anonymous variables -\/ against the standard...
+\item templated fixture test cases
+\item test with missed warning flags for GCC
+\begin{DoxyItemize}
+\item \href{https://github.com/Barro/compiler-warnings}{\texttt{ https\+://github.\+com/\+Barro/compiler-\/warnings}}
+\item \href{https://stackoverflow.com/a/34971392/3162383}{\texttt{ https\+://stackoverflow.\+com/a/34971392/3162383}}
+\end{DoxyItemize}
+\item utf8 / unicode ???
+\begin{DoxyItemize}
+\item \href{https://github.com/catchorg/Catch2/pull/903}{\texttt{ https\+://github.\+com/catchorg/\+Catch2/pull/903}}
+\end{DoxyItemize}
+\item handle {\ttfamily wchar} strings???
+\item hierarchical test suites -\/ using a stack for the pushed ones
+\item ability to specify the width of the terminal in terms of characters (for example 60 -\/ less than 80 -\/ the default)
+\item ability to re-\/run only newly compiled tests based on time stamps using {\ttfamily \+\_\+\+\_\+\+DATE\+\_\+\+\_\+} and {\ttfamily \+\_\+\+\_\+\+TIME\+\_\+\+\_\+} -\/ stored in some file
+\item add underscores to all preprocessor identifiers not intended for use by the user
+\item put everything from the {\ttfamily detail} namespace also in a nested anonymous namespace to make them with internal linkage
+\item ability to put everything from doctest into an anonymous namespace -\/ to allow the use of multiple different versions of {\bfseries{doctest}} within the same binary (executable/dll) -\/ like the \href{https://github.com/nothings/stb}{\texttt{ {\bfseries{stb}}}} libraries can
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+

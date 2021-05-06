@@ -1,0 +1,36 @@
+
+\begin{DoxyItemize}
+\item update version in version.\+txt
+\end{DoxyItemize}
+
+run \mbox{\hyperlink{update__stuff_8py}{update\+\_\+stuff.\+py}} from the scripts folder
+\begin{DoxyItemize}
+\item regenerate test output by running cmake with -\/DDOCTEST\+\_\+\+TEST\+\_\+\+MODE=COLLECT and then running ctest
+\item run \mbox{\hyperlink{update__wandbox__link_8py}{update\+\_\+wandbox\+\_\+link.\+py}}
+\begin{DoxyItemize}
+\item might need to do this first\+: set path=C\+:/\+Python27;PATH\% -\/ or just call python from C\+:\textbackslash{}\+Python27\textbackslash{}python.exe
+\end{DoxyItemize}
+\item commit in dev
+\item merge dev in master and coverity\+\_\+scan (and rebase them?)
+\item push all branches (git push --all)
+\item run \mbox{\hyperlink{update__changelog_8py}{update\+\_\+changelog.\+py}} in master
+\begin{DoxyItemize}
+\item might need a tmp folder in the root drive (C or D)
+\end{DoxyItemize}
+\item commit in master and push
+\item create github release with the same semver tag as the changelog
+\item merge master in dev
+\item update packages
+\begin{DoxyItemize}
+\item vcpkg \href{https://github.com/Microsoft/vcpkg/tree/master/ports/doctest}{\texttt{ https\+://github.\+com/\+Microsoft/vcpkg/tree/master/ports/doctest}}
+\item hunter
+\begin{DoxyItemize}
+\item \href{https://github.com/ruslo/hunter/blob/master/cmake/configs/default.cmake}{\texttt{ https\+://github.\+com/ruslo/hunter/blob/master/cmake/configs/default.\+cmake}}
+\item \href{https://github.com/ruslo/hunter/blob/master/cmake/projects/doctest/hunter.cmake}{\texttt{ https\+://github.\+com/ruslo/hunter/blob/master/cmake/projects/doctest/hunter.\+cmake}}
+\end{DoxyItemize}
+\item conan
+\begin{DoxyItemize}
+\item \href{https://github.com/bincrafters/conan-doctest}{\texttt{ https\+://github.\+com/bincrafters/conan-\/doctest}} 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}

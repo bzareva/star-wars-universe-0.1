@@ -1,0 +1,179 @@
+\hypertarget{assertion__macros_8cpp}{}\doxysection{C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\+\_\+features/assertion\+\_\+macros.cpp File Reference}
+\label{assertion__macros_8cpp}\index{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/assertion\_macros.cpp@{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/assertion\_macros.cpp}}
+{\ttfamily \#include $<$doctest/doctest.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_ad3e5c37dc8bd7b0f9346c99c6aab2d1d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+BEGIN}} \mbox{\hyperlink{doctest__fwd_8h_acca96650713994a51c3deb8e4bdec43d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+END}} \mbox{\hyperlink{assertion__macros_8cpp_a95f0c0efa944e7635aa339609a212541}{TEST\+\_\+\+CASE}} (\char`\"{}normal macros\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_ab46585a2fcb247f654ac11d7c2950911}{TEST\+\_\+\+CASE}} (\char`\"{}expressions should be evaluated only once\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_aae9d0b1dacf7f5fa60a0c20d222f1842}{TEST\+\_\+\+CASE}} (\char`\"{}exceptions-\/related macros\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a62c457295e4c1fca59fd16fdae6ba7f7}{TEST\+\_\+\+CASE}} (\char`\"{}exceptions-\/related macros for std\+::exception\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a61cb46a6e34bc72c818bc846f1c538e3}{TEST\+\_\+\+CASE}} (\char`\"{}WARN level of asserts don\textquotesingle{}t fail the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a7d3739633f81aa818039c245ab60a598}{TEST\+\_\+\+CASE}} (\char`\"{}CHECK level of asserts fail the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case but don\textquotesingle{}t abort it\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a08f0b6ad4a50f0ddaee01239d8c507e1}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 1\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a83ece59eec496db2df7c8387cb22d176}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 2\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a29b82c7b62c073a579f0a9f0e2b36a0b}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 3\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_ac80b79fb169857c7dcc945eb683d378c}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 4\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a8293cc8bf2ea93f233473fad7770cb7b}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 5\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_ae93bb26f2fadb2bd27c07786187dd967}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 6\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a357c99b56d1d7df91c5bf61795cdff19}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 7\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a015189f41e9f0919c92c7ca9cfc316f8}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 8\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a14bfe3ff4a155a4deb150b4a05a45ddd}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 9\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a71b9195514595ce6b50244088da2dab8}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 10\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_ac1ac7ccb2f6b0d944bccfa246e93d561}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 11\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_af24a9f698795be5b6ea6f44b71903a4b}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 12\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_afe8347837c0714f2328334ef6bf70e87}{TEST\+\_\+\+CASE}} (\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 13\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a104afb055a5a9a24c557220b514b9665}{TEST\+\_\+\+CASE}} (\char`\"{}all binary assertions\char`\"{})
+\item 
+\mbox{\hyperlink{assertion__macros_8cpp_a742e90c2689987c9f93197886bc78eaa}{TEST\+\_\+\+CASE}} (\char`\"{}some asserts used in a function called by a \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{assertion__macros_8cpp_a104afb055a5a9a24c557220b514b9665}\label{assertion__macros_8cpp_a104afb055a5a9a24c557220b514b9665}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}all binary assertions\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a7d3739633f81aa818039c245ab60a598}\label{assertion__macros_8cpp_a7d3739633f81aa818039c245ab60a598}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}CHECK level of asserts fail the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case but don\textquotesingle{}t abort it\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a62c457295e4c1fca59fd16fdae6ba7f7}\label{assertion__macros_8cpp_a62c457295e4c1fca59fd16fdae6ba7f7}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}exceptions-\/related macros for std\+::exception\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_aae9d0b1dacf7f5fa60a0c20d222f1842}\label{assertion__macros_8cpp_aae9d0b1dacf7f5fa60a0c20d222f1842}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}exceptions-\/related macros\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_ab46585a2fcb247f654ac11d7c2950911}\label{assertion__macros_8cpp_ab46585a2fcb247f654ac11d7c2950911}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}expressions should be evaluated only once\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a95f0c0efa944e7635aa339609a212541}\label{assertion__macros_8cpp_a95f0c0efa944e7635aa339609a212541}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/21]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_ad3e5c37dc8bd7b0f9346c99c6aab2d1d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+BEGIN}} \mbox{\hyperlink{doctest__fwd_8h_acca96650713994a51c3deb8e4bdec43d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+END}} TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}normal macros\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a08f0b6ad4a50f0ddaee01239d8c507e1}\label{assertion__macros_8cpp_a08f0b6ad4a50f0ddaee01239d8c507e1}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 1\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a71b9195514595ce6b50244088da2dab8}\label{assertion__macros_8cpp_a71b9195514595ce6b50244088da2dab8}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 10\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_ac1ac7ccb2f6b0d944bccfa246e93d561}\label{assertion__macros_8cpp_ac1ac7ccb2f6b0d944bccfa246e93d561}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 11\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_af24a9f698795be5b6ea6f44b71903a4b}\label{assertion__macros_8cpp_af24a9f698795be5b6ea6f44b71903a4b}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 12\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_afe8347837c0714f2328334ef6bf70e87}\label{assertion__macros_8cpp_afe8347837c0714f2328334ef6bf70e87}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 13\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a83ece59eec496db2df7c8387cb22d176}\label{assertion__macros_8cpp_a83ece59eec496db2df7c8387cb22d176}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 2\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a29b82c7b62c073a579f0a9f0e2b36a0b}\label{assertion__macros_8cpp_a29b82c7b62c073a579f0a9f0e2b36a0b}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 3\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_ac80b79fb169857c7dcc945eb683d378c}\label{assertion__macros_8cpp_ac80b79fb169857c7dcc945eb683d378c}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 4\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a8293cc8bf2ea93f233473fad7770cb7b}\label{assertion__macros_8cpp_a8293cc8bf2ea93f233473fad7770cb7b}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 5\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_ae93bb26f2fadb2bd27c07786187dd967}\label{assertion__macros_8cpp_ae93bb26f2fadb2bd27c07786187dd967}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [16/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 6\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a357c99b56d1d7df91c5bf61795cdff19}\label{assertion__macros_8cpp_a357c99b56d1d7df91c5bf61795cdff19}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [17/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 7\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a015189f41e9f0919c92c7ca9cfc316f8}\label{assertion__macros_8cpp_a015189f41e9f0919c92c7ca9cfc316f8}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [18/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 8\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a14bfe3ff4a155a4deb150b4a05a45ddd}\label{assertion__macros_8cpp_a14bfe3ff4a155a4deb150b4a05a45ddd}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [19/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}REQUIRE level of asserts fail and abort the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case -\/ 9\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a742e90c2689987c9f93197886bc78eaa}\label{assertion__macros_8cpp_a742e90c2689987c9f93197886bc78eaa}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [20/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}some asserts used in a function called by a \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assertion__macros_8cpp_a61cb46a6e34bc72c818bc846f1c538e3}\label{assertion__macros_8cpp_a61cb46a6e34bc72c818bc846f1c538e3}} 
+\index{assertion\_macros.cpp@{assertion\_macros.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!assertion\_macros.cpp@{assertion\_macros.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [21/21]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}WARN level of asserts don\textquotesingle{}t fail the \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case\char`\"{}}]{ }\end{DoxyParamCaption})}
+

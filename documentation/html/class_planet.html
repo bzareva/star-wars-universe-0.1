@@ -101,6 +101,9 @@ $(document).ready(function(){initNavTree('class_planet.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
+<p>Inherits of <a class="el" href="class_base.html" title="Abstract base class.">Base</a> class.  
+ <a href="class_planet.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_planet_8h_source.html">Planet.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Planet:</div>
@@ -108,7 +111,7 @@ Inheritance diagram for Planet:</div>
  <div class="center">
   <img src="class_planet.png" usemap="#Planet_map" alt=""/>
   <map id="Planet_map" name="Planet_map">
-<area href="class_base.html" alt="Base" shape="rect" coords="0,0,47,24"/>
+<area href="class_base.html" title="Abstract base class." alt="Base" shape="rect" coords="0,0,47,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -120,9 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac00facbec0b9c5b7080ea253c8ab0637"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#ac00facbec0b9c5b7080ea253c8ab0637">Planet</a> (std::ifstream &amp;fin)</td></tr>
 <tr class="memdesc:ac00facbec0b9c5b7080ea253c8ab0637"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor with parameter from type ifstream for load to text file  <a href="class_planet.html#ac00facbec0b9c5b7080ea253c8ab0637">More...</a><br /></td></tr>
 <tr class="separator:ac00facbec0b9c5b7080ea253c8ab0637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2afd1051449a011f12331c7f83e82f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#af2afd1051449a011f12331c7f83e82f3">Planet</a> (const <a class="el" href="class_vector.html">Vector</a>&lt; <a class="el" href="class_jedi.html">Jedi</a> &gt; jedi, const <a class="el" href="class_string.html">String</a> &amp;planet_name=<a class="el" href="class_string.html">String</a>(&quot;def_planet&quot;))</td></tr>
-<tr class="memdesc:af2afd1051449a011f12331c7f83e82f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor with parameters  <a href="class_planet.html#af2afd1051449a011f12331c7f83e82f3">More...</a><br /></td></tr>
-<tr class="separator:af2afd1051449a011f12331c7f83e82f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf90851c9d28e06dc44a35f463e8671"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a1cf90851c9d28e06dc44a35f463e8671">Planet</a> (const <a class="el" href="class_vector.html">Vector</a>&lt; <a class="el" href="class_jedi.html">Jedi</a> &gt; &amp;jedi, const <a class="el" href="class_string.html">String</a> &amp;planet_name=<a class="el" href="class_string.html">String</a>(&quot;def_planet&quot;))</td></tr>
+<tr class="memdesc:a1cf90851c9d28e06dc44a35f463e8671"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor with parameters  <a href="class_planet.html#a1cf90851c9d28e06dc44a35f463e8671">More...</a><br /></td></tr>
+<tr class="separator:a1cf90851c9d28e06dc44a35f463e8671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02cff1d1b9c46249f924f903419a7542"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a02cff1d1b9c46249f924f903419a7542">Planet</a> (const <a class="el" href="class_planet.html">Planet</a> &amp;obj)</td></tr>
 <tr class="memdesc:a02cff1d1b9c46249f924f903419a7542"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy constructor  <a href="class_planet.html#a02cff1d1b9c46249f924f903419a7542">More...</a><br /></td></tr>
 <tr class="separator:a02cff1d1b9c46249f924f903419a7542"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,10 +190,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad3ba062c0bf90aeccaaf120d4c1811fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">print information about jedi  <a href="class_planet.html#ad3ba062c0bf90aeccaaf120d4c1811fe">More...</a><br /></td></tr>
 <tr class="separator:ad3ba062c0bf90aeccaaf120d4c1811fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af292e9548ea28507b74009171de1d4c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#af292e9548ea28507b74009171de1d4c5">promote_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;jedi_name, const double &amp;multiplier) override</td></tr>
-<tr class="memdesc:af292e9548ea28507b74009171de1d4c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">increases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank up in ladder and increases its strength by a formula  <a href="class_planet.html#af292e9548ea28507b74009171de1d4c5">More...</a><br /></td></tr>
+<tr class="memdesc:af292e9548ea28507b74009171de1d4c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">increases the given <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> by one rank up in ladder and increases its strength by a formula  <a href="class_planet.html#af292e9548ea28507b74009171de1d4c5">More...</a><br /></td></tr>
 <tr class="separator:af292e9548ea28507b74009171de1d4c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11e8510fdeca4ce5c70073fbb3a39eb3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a11e8510fdeca4ce5c70073fbb3a39eb3">demote_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;jedi_name, const double &amp;multiplier) override</td></tr>
-<tr class="memdesc:a11e8510fdeca4ce5c70073fbb3a39eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">decreases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank down in ladder and lowers its strength by a formula  <a href="class_planet.html#a11e8510fdeca4ce5c70073fbb3a39eb3">More...</a><br /></td></tr>
+<tr class="memdesc:a11e8510fdeca4ce5c70073fbb3a39eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">decreases the given <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> by one rank down in ladder and lowers its strength by a formula  <a href="class_planet.html#a11e8510fdeca4ce5c70073fbb3a39eb3">More...</a><br /></td></tr>
 <tr class="separator:a11e8510fdeca4ce5c70073fbb3a39eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231e388976436f5204a88f960b094dd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a231e388976436f5204a88f960b094dd4">sort</a> ()</td></tr>
 <tr class="memdesc:a231e388976436f5204a88f960b094dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">sorts jedi on this planet  <a href="class_planet.html#a231e388976436f5204a88f960b094dd4">More...</a><br /></td></tr>
@@ -209,6 +212,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae5103d6401269ea25a09243313168106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3630562993c0137eddb46d839928064"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jedi.html">Jedi</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#ad3630562993c0137eddb46d839928064">get_jedi</a> (const unsigned &amp;index) const</td></tr>
 <tr class="separator:ad3630562993c0137eddb46d839928064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace66459c821229b8a6537db309c49ced"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#ace66459c821229b8a6537db309c49ced">set_planet_name</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name)</td></tr>
+<tr class="memdesc:ace66459c821229b8a6537db309c49ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">setters for planet name  <a href="class_planet.html#ace66459c821229b8a6537db309c49ced">More...</a><br /></td></tr>
+<tr class="separator:ace66459c821229b8a6537db309c49ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e8fc483b60004974efc3807d01138d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a42e8fc483b60004974efc3807d01138d">init_planet</a> (const <a class="el" href="class_vector.html">Vector</a>&lt; <a class="el" href="class_jedi.html">Jedi</a> &gt; &amp;jedi, const <a class="el" href="class_string.html">String</a> &amp;planet_name=<a class="el" href="class_string.html">String</a>(&quot;def_planet&quot;))</td></tr>
+<tr class="memdesc:a42e8fc483b60004974efc3807d01138d"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the planet  <a href="class_planet.html#a42e8fc483b60004974efc3807d01138d">More...</a><br /></td></tr>
+<tr class="separator:a42e8fc483b60004974efc3807d01138d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_base.html">Base</a></td></tr>
 <tr class="memitem:a58887755525abd3f340963e2bbdcc972 inherit pub_methods_class_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a58887755525abd3f340963e2bbdcc972">Base</a> ()=default</td></tr>
 <tr class="memdesc:a58887755525abd3f340963e2bbdcc972 inherit pub_methods_class_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="class_base.html#a58887755525abd3f340963e2bbdcc972">More...</a><br /></td></tr>
@@ -223,10 +232,10 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:aa851b8669c587bef2cfe9c1a4702ff2d"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#aa851b8669c587bef2cfe9c1a4702ff2d">operator&gt;&gt;</a> (std::istream &amp;in, <a class="el" href="class_planet.html">Planet</a> &amp;obj)</td></tr>
-<tr class="memdesc:aa851b8669c587bef2cfe9c1a4702ff2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">input from console for <a class="el" href="class_planet.html">Planet</a>  <a href="class_planet.html#aa851b8669c587bef2cfe9c1a4702ff2d">More...</a><br /></td></tr>
+<tr class="memdesc:aa851b8669c587bef2cfe9c1a4702ff2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">input from console for <a class="el" href="class_planet.html" title="Inherits of Base class.">Planet</a>  <a href="class_planet.html#aa851b8669c587bef2cfe9c1a4702ff2d">More...</a><br /></td></tr>
 <tr class="separator:aa851b8669c587bef2cfe9c1a4702ff2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b00862fc7508aa185cc62d7fe2a245e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a7b00862fc7508aa185cc62d7fe2a245e">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="class_planet.html">Planet</a> &amp;obj)</td></tr>
-<tr class="memdesc:a7b00862fc7508aa185cc62d7fe2a245e"><td class="mdescLeft">&#160;</td><td class="mdescRight">formatted output for <a class="el" href="class_planet.html">Planet</a> on console  <a href="class_planet.html#a7b00862fc7508aa185cc62d7fe2a245e">More...</a><br /></td></tr>
+<tr class="memitem:a7b00862fc7508aa185cc62d7fe2a245e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest__fwd_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#a7b00862fc7508aa185cc62d7fe2a245e">operator&lt;&lt;</a> (<a class="el" href="doctest__fwd_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a> &amp;out, const <a class="el" href="class_planet.html">Planet</a> &amp;obj)</td></tr>
+<tr class="memdesc:a7b00862fc7508aa185cc62d7fe2a245e"><td class="mdescLeft">&#160;</td><td class="mdescRight">formatted output for <a class="el" href="class_planet.html" title="Inherits of Base class.">Planet</a> on console  <a href="class_planet.html#a7b00862fc7508aa185cc62d7fe2a245e">More...</a><br /></td></tr>
 <tr class="separator:a7b00862fc7508aa185cc62d7fe2a245e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3e1c214071b8f5455ddf44333134850"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_planet.html">Planet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_planet.html#ab3e1c214071b8f5455ddf44333134850">operator+</a> (<a class="el" href="class_planet.html">Planet</a> lhs, const <a class="el" href="class_planet.html">Planet</a> &amp;rhs)</td></tr>
 <tr class="memdesc:ab3e1c214071b8f5455ddf44333134850"><td class="mdescLeft">&#160;</td><td class="mdescRight">gathers the inhabitants of two planets  <a href="class_planet.html#ab3e1c214071b8f5455ddf44333134850">More...</a><br /></td></tr>
@@ -239,7 +248,7 @@ Friends</h2></td></tr>
 <tr class="separator:a1ecea62efb821ac1836ce5805864ceb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Inherits of <a class="el" href="class_base.html">Base</a> class </p>
+<div class="textblock"><p>Inherits of <a class="el" href="class_base.html" title="Abstract base class.">Base</a> class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac88200b337a62e1377858e3116f9412b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac88200b337a62e1377858e3116f9412b">&#9670;&nbsp;</a></span>Planet() <span class="overload">[1/4]</span></h2>
@@ -280,8 +289,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="af2afd1051449a011f12331c7f83e82f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2afd1051449a011f12331c7f83e82f3">&#9670;&nbsp;</a></span>Planet() <span class="overload">[3/4]</span></h2>
+<a id="a1cf90851c9d28e06dc44a35f463e8671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf90851c9d28e06dc44a35f463e8671">&#9670;&nbsp;</a></span>Planet() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,7 +298,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Planet::Planet </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a>&lt; <a class="el" href="class_jedi.html">Jedi</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a>&lt; <a class="el" href="class_jedi.html">Jedi</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>jedi</em>, </td>
         </tr>
         <tr>
@@ -393,7 +402,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>A pointer to a dynamically allocated polymorphic <a class="el" href="class_planet.html">Planet</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a dynamically allocated polymorphic <a class="el" href="class_planet.html" title="Inherits of Base class.">Planet</a> </dd></dl>
 
 <p>Implements <a class="el" href="class_base.html#ab99040cf7517193fb67b86ce0c29df6a">Base</a>.</p>
 
@@ -497,7 +506,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>decreases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank down in ladder and lowers its strength by a formula </p>
+<p>decreases the given <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> by one rank down in ladder and lowers its strength by a formula </p>
 
 <p>Implements <a class="el" href="class_base.html#a22d56edcf21b294c6d0730b2ea7ef502">Base</a>.</p>
 
@@ -554,7 +563,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_jedi.html">Jedi</a> on given index </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> on given index </dd></dl>
 
 </div>
 </div>
@@ -709,6 +718,36 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Youngest jedi on this planet </dd></dl>
 
 <p>Implements <a class="el" href="class_base.html#a7a6218ef6804c920c7ef56903d989ff2">Base</a>.</p>
+
+</div>
+</div>
+<a id="a42e8fc483b60004974efc3807d01138d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e8fc483b60004974efc3807d01138d">&#9670;&nbsp;</a></span>init_planet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Planet::init_planet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a>&lt; <a class="el" href="class_jedi.html">Jedi</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>jedi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>planet_name</em> = <code><a class="el" href="class_string.html">String</a>(&quot;def_planet&quot;)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize the planet </p>
 
 </div>
 </div>
@@ -966,7 +1005,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>increases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank up in ladder and increases its strength by a formula </p>
+<p>increases the given <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> by one rank up in ladder and increases its strength by a formula </p>
 
 <p>Implements <a class="el" href="class_base.html#a524e71b2475b86cbace2a0b3a46ae4f5">Base</a>.</p>
 
@@ -1039,6 +1078,26 @@ Friends</h2></td></tr>
 <p>remove jedi from this planet </p>
 
 <p>Implements <a class="el" href="class_base.html#afde26e7c513aa9d2cbc5b3dd6eedfa82">Base</a>.</p>
+
+</div>
+</div>
+<a id="ace66459c821229b8a6537db309c49ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace66459c821229b8a6537db309c49ced">&#9670;&nbsp;</a></span>set_planet_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Planet::set_planet_name </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>planet_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>setters for planet name </p>
 
 </div>
 </div>
@@ -1283,9 +1342,9 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td class="memname"><a class="el" href="doctest__fwd_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a>&amp; operator&lt;&lt; </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="doctest__fwd_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a> &amp;&#160;</td>
           <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
@@ -1307,7 +1366,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>formatted output for <a class="el" href="class_planet.html">Planet</a> on console </p>
+<p>formatted output for <a class="el" href="class_planet.html" title="Inherits of Base class.">Planet</a> on console </p>
 
 </div>
 </div>
@@ -1345,14 +1404,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>input from console for <a class="el" href="class_planet.html">Planet</a> </p>
+<p>input from console for <a class="el" href="class_planet.html" title="Inherits of Base class.">Planet</a> </p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/USER/source/repos/bzareva/star-wars-universe-0.1/<a class="el" href="_planet_8h_source.html">Planet.h</a></li>
-<li>C:/Users/USER/source/repos/bzareva/star-wars-universe-0.1/<a class="el" href="_planet_8cpp.html">Planet.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

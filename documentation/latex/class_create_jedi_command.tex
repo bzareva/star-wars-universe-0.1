@@ -2,6 +2,11 @@
 \label{class_create_jedi_command}\index{CreateJediCommand@{CreateJediCommand}}
 
 
+Create jedi Only methods which implements are from abstract base class \mbox{\hyperlink{class_command}{Command}}.  
+
+
+
+
 {\ttfamily \#include $<$Create\+Jedi\+Command.\+h$>$}
 
 Inheritance diagram for Create\+Jedi\+Command\+:\begin{figure}[H]
@@ -18,12 +23,12 @@ Inheritance diagram for Create\+Jedi\+Command\+:\begin{figure}[H]
 \mbox{\hyperlink{class_create_jedi_command_aa01c2ca44c1b1a8d3def7b18a4bd940f}{Create\+Jedi\+Command}} (const \mbox{\hyperlink{class_string}{String}} \&cmd, const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ args)
 \item 
 void \mbox{\hyperlink{class_create_jedi_command_aae010aaa5868ddfbce1e7934924e2953}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Each of heirs implementing it to a different way. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
-Create jedi Only methods which implements are from abstract base class \mbox{\hyperlink{class_command}{Command}} 
+Create jedi Only methods which implements are from abstract base class \mbox{\hyperlink{class_command}{Command}}. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_create_jedi_command_a4a42b9262c19117eedadabc9a5aea5f0}\label{class_create_jedi_command_a4a42b9262c19117eedadabc9a5aea5f0}} 
@@ -47,12 +52,16 @@ Create jedi Only methods which implements are from abstract base class \mbox{\hy
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
 {\footnotesize\ttfamily void Create\+Jedi\+Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
-Each of heirs implementing it to a different way @ param manager Calls methods for successful execution of program through the given command 
+
+
+Each of heirs implementing it to a different way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Calls methods for successful execution of program through the given command \\
+\hline
+\end{DoxyParams}
+
 
 Reimplemented from \mbox{\hyperlink{class_command_a5e4f37b66ceb0e4424c8011e7c598063}{Command}}.
 
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
-\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_create_jedi_command_8h}{Create\+Jedi\+Command.\+h}}\end{DoxyCompactItemize}

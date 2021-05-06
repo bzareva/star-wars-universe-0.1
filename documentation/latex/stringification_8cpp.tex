@@ -1,0 +1,88 @@
+\hypertarget{stringification_8cpp}{}\doxysection{C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\+\_\+features/stringification.cpp File Reference}
+\label{stringification_8cpp}\index{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/stringification.cpp@{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/stringification.cpp}}
+{\ttfamily \#include $<$doctest/doctest.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdoctest_1_1_string_maker_3_01std_1_1list_3_01_t_01_4_01_4}{doctest\+::\+String\+Maker$<$ std\+::list$<$ T $>$ $>$}}
+\item 
+struct \mbox{\hyperlink{struct_my_type}{My\+Type$<$ T, K $>$}}
+\item 
+struct \mbox{\hyperlink{struct_my_type_inherited}{My\+Type\+Inherited$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{struct_bar_1_1_foo}{Bar\+::\+Foo}}
+\item 
+struct \mbox{\hyperlink{struct_bar_1_1_my_other_type}{Bar\+::\+My\+Other\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacedoctest}{doctest}}
+\item 
+ \mbox{\hyperlink{namespace_bar}{Bar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doctest__fwd_8h_ad3e5c37dc8bd7b0f9346c99c6aab2d1d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+BEGIN}} \mbox{\hyperlink{doctest__fwd_8h_acca96650713994a51c3deb8e4bdec43d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+END}} \mbox{\hyperlink{stringification_8cpp_aaf36d92bfb3f60c00f3eab2133bba076}{DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING}} (5045) namespace std
+\item 
+{\footnotesize template$<$typename T , typename K $>$ }\\bool \mbox{\hyperlink{stringification_8cpp_a1f781ff7a0bf5be5472c21f819671121}{operator==}} (const \mbox{\hyperlink{struct_my_type}{My\+Type}}$<$ T, K $>$ \&lhs, const \mbox{\hyperlink{struct_my_type}{My\+Type}}$<$ T, K $>$ \&rhs)
+\item 
+{\footnotesize template$<$typename T , typename K $>$ }\\\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \& \mbox{\hyperlink{stringification_8cpp_a635ab476247bfe5cdfff899c896ac80f}{operator$<$$<$}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&stream, const \mbox{\hyperlink{struct_my_type}{My\+Type}}$<$ T, K $>$ \&in)
+\item 
+\mbox{\hyperlink{classdoctest_1_1_string}{doctest\+::\+String}} \mbox{\hyperlink{namespace_bar_afaaac24a49a90d14978aceb5d1212451}{Bar\+::to\+String}} (const Foo \&)
+\item 
+{\footnotesize template$<$class OStream $>$ }\\OStream \& \mbox{\hyperlink{namespace_bar_acd854917bac41d159b9c332685c7ad53}{Bar\+::operator$<$$<$}} (OStream \&stream, const My\+Other\+Type \&in)
+\item 
+\mbox{\hyperlink{stringification_8cpp_ac49781eb2fe15b0a1820ba0e3ef1558e}{REGISTER\+\_\+\+EXCEPTION\+\_\+\+TRANSLATOR}} (\mbox{\hyperlink{struct_my_type_inherited}{My\+Type\+Inherited}}$<$ int $>$ \&ex)
+\item 
+\mbox{\hyperlink{stringification_8cpp_a26a9fbf928bf7887fb023d7f7ca1e5d5}{TEST\+\_\+\+CASE}} (\char`\"{}all asserts should fail and show how the objects get stringified\char`\"{})
+\item 
+\mbox{\hyperlink{stringification_8cpp_a59e8cda39bc152624b5ef0099060d9f6}{TEST\+\_\+\+CASE}} (\char`\"{}a \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case that registers an exception translator for int and then throws one\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{stringification_8cpp_aaf36d92bfb3f60c00f3eab2133bba076}\label{stringification_8cpp_aaf36d92bfb3f60c00f3eab2133bba076}} 
+\index{stringification.cpp@{stringification.cpp}!DOCTEST\_MSVC\_SUPPRESS\_WARNING@{DOCTEST\_MSVC\_SUPPRESS\_WARNING}}
+\index{DOCTEST\_MSVC\_SUPPRESS\_WARNING@{DOCTEST\_MSVC\_SUPPRESS\_WARNING}!stringification.cpp@{stringification.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_MSVC\_SUPPRESS\_WARNING()}{DOCTEST\_MSVC\_SUPPRESS\_WARNING()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_ad3e5c37dc8bd7b0f9346c99c6aab2d1d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+BEGIN}} \mbox{\hyperlink{doctest__fwd_8h_acca96650713994a51c3deb8e4bdec43d}{DOCTEST\+\_\+\+MAKE\+\_\+\+STD\+\_\+\+HEADERS\+\_\+\+CLEAN\+\_\+\+FROM\+\_\+\+WARNINGS\+\_\+\+ON\+\_\+\+WALL\+\_\+\+END}} DOCTEST\+\_\+\+MSVC\+\_\+\+SUPPRESS\+\_\+\+WARNING (\begin{DoxyParamCaption}\item[{5045}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stringification_8cpp_a635ab476247bfe5cdfff899c896ac80f}\label{stringification_8cpp_a635ab476247bfe5cdfff899c896ac80f}} 
+\index{stringification.cpp@{stringification.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!stringification.cpp@{stringification.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T , typename K $>$ \\
+\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&}]{stream,  }\item[{const \mbox{\hyperlink{struct_my_type}{My\+Type}}$<$ T, K $>$ \&}]{in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stringification_8cpp_a1f781ff7a0bf5be5472c21f819671121}\label{stringification_8cpp_a1f781ff7a0bf5be5472c21f819671121}} 
+\index{stringification.cpp@{stringification.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!stringification.cpp@{stringification.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T , typename K $>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_my_type}{My\+Type}}$<$ T, K $>$ \&}]{lhs,  }\item[{const \mbox{\hyperlink{struct_my_type}{My\+Type}}$<$ T, K $>$ \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stringification_8cpp_ac49781eb2fe15b0a1820ba0e3ef1558e}\label{stringification_8cpp_ac49781eb2fe15b0a1820ba0e3ef1558e}} 
+\index{stringification.cpp@{stringification.cpp}!REGISTER\_EXCEPTION\_TRANSLATOR@{REGISTER\_EXCEPTION\_TRANSLATOR}}
+\index{REGISTER\_EXCEPTION\_TRANSLATOR@{REGISTER\_EXCEPTION\_TRANSLATOR}!stringification.cpp@{stringification.cpp}}
+\doxysubsubsection{\texorpdfstring{REGISTER\_EXCEPTION\_TRANSLATOR()}{REGISTER\_EXCEPTION\_TRANSLATOR()}}
+{\footnotesize\ttfamily REGISTER\+\_\+\+EXCEPTION\+\_\+\+TRANSLATOR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_my_type_inherited}{My\+Type\+Inherited}}$<$ int $>$ \&}]{ex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stringification_8cpp_a59e8cda39bc152624b5ef0099060d9f6}\label{stringification_8cpp_a59e8cda39bc152624b5ef0099060d9f6}} 
+\index{stringification.cpp@{stringification.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!stringification.cpp@{stringification.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}a \mbox{\hyperlink{how__subcases__work_8cpp_ae1a3968e7947464bee7714f6d43b7002}{test}} case that registers an exception translator for int and then throws one\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stringification_8cpp_a26a9fbf928bf7887fb023d7f7ca1e5d5}\label{stringification_8cpp_a26a9fbf928bf7887fb023d7f7ca1e5d5}} 
+\index{stringification.cpp@{stringification.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!stringification.cpp@{stringification.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}all asserts should fail and show how the objects get stringified\char`\"{}}]{ }\end{DoxyParamCaption})}
+

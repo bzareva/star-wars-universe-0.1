@@ -1,0 +1,473 @@
+\hypertarget{doctest__proxy_8h}{}\doxysection{C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\+\_\+features/doctest\+\_\+proxy.h File Reference}
+\label{doctest__proxy_8h}\index{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/doctest\_proxy.h@{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/examples/all\_features/doctest\_proxy.h}}
+{\ttfamily \#include $<$doctest/doctest.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ae789b57d915c95718de6a3c1dd874f6e}{MY\+\_\+\+PROXY\+\_\+\+MACROS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a772035fe973fe9418f31d53eb8c6aa66}{my\+\_\+testcase}}~\mbox{\hyperlink{doctest__fwd_8h_ac1216c5a9ba44f5af8b7115a3badaae2}{DOCTEST\+\_\+\+TEST\+\_\+\+CASE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a5e3994ee2a390162b1178e678beb238a}{my\+\_\+testcase\+\_\+class}}~\mbox{\hyperlink{doctest__fwd_8h_a41431265482f363020f93a13e4af4c6a}{DOCTEST\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+CLASS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ad9ee04c3835217961402587ae3970540}{my\+\_\+testcase\+\_\+fixture}}~\mbox{\hyperlink{doctest__fwd_8h_a22130c0eff96eac3ed682b7d8854e0f6}{DOCTEST\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+FIXTURE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a02fc2e8ec55f6d3c6532a933e52707c6}{my\+\_\+subcase}}~\mbox{\hyperlink{doctest__fwd_8h_a5acad2b6cef499ee884b8027ef41fbf6}{DOCTEST\+\_\+\+SUBCASE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a7fad6c55a9c35e997bc6befaa6277630}{my\+\_\+testsuite}}~\mbox{\hyperlink{doctest__fwd_8h_aa64ce392f41c8ba1d22cfb5b83847f55}{DOCTEST\+\_\+\+TEST\+\_\+\+SUITE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ae97e44adacae4dfbf220e04bf4da080e}{my\+\_\+testsuite\+\_\+begin}}~\mbox{\hyperlink{doctest__fwd_8h_a64f9649162581c1c24a78e65cf01492f}{DOCTEST\+\_\+\+TEST\+\_\+\+SUITE\+\_\+\+BEGIN}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a64816062909424d656483001c09a7361}{my\+\_\+testsuite\+\_\+end}}~\mbox{\hyperlink{doctest__fwd_8h_ab39047b0a7b7ceca753fa85e47b2e48e}{DOCTEST\+\_\+\+TEST\+\_\+\+SUITE\+\_\+\+END}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a00dea10a79dcce02a09e09a0ca3ce514}{my\+\_\+warn}}~\mbox{\hyperlink{doctest__fwd_8h_a5543bf17193d5cf77558fabbd9cfb02f}{DOCTEST\+\_\+\+WARN}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a2bb0915f12c0acf29696e6a3616e67dd}{my\+\_\+warn\+\_\+false}}~\mbox{\hyperlink{doctest__fwd_8h_a207c474577961221a4003351186b5378}{DOCTEST\+\_\+\+WARN\+\_\+\+FALSE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a178de040a578de22c302d4874ee09bb4}{my\+\_\+warn\+\_\+throws}}~\mbox{\hyperlink{doctest__fwd_8h_ad969cd19e5751fd38d2429ce8049065e}{DOCTEST\+\_\+\+WARN\+\_\+\+THROWS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a04a191e9a9a274c5ba058430892b4034}{my\+\_\+warn\+\_\+throws\+\_\+as}}~\mbox{\hyperlink{doctest__fwd_8h_a0c61debdc225c16793ce21792448bdd2}{DOCTEST\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a81070d2d17723114bb09fe2cd7ef1b19}{my\+\_\+warn\+\_\+throws\+\_\+with}}~\mbox{\hyperlink{doctest__fwd_8h_a0d30b4e4f2a0e5b7e845efe285bf270f}{DOCTEST\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a07ed3f2202bbee6da3d967cbf3b1e914}{my\+\_\+warn\+\_\+throws\+\_\+with\+\_\+as}}~\mbox{\hyperlink{doctest__fwd_8h_ab808e9a932cbd988fc3790137ed365a9}{DOCTEST\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a48e74884c69aa1e3f66cb973916b8e44}{my\+\_\+warn\+\_\+nothrow}}~\mbox{\hyperlink{doctest__fwd_8h_a2de5ec015a9fbf92197a289b11db462c}{DOCTEST\+\_\+\+WARN\+\_\+\+NOTHROW}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a85bcf981ca5ac9797c93218d9dc448c1}{my\+\_\+check}}~\mbox{\hyperlink{doctest__fwd_8h_a8f40c4072e85f02a3e58c5f67a182297}{DOCTEST\+\_\+\+CHECK}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_aa2aec96da4122beb85b8628ddbed6792}{my\+\_\+check\+\_\+false}}~\mbox{\hyperlink{doctest__fwd_8h_a7ecf2c25ffc2fad220a251af0ab37ff8}{DOCTEST\+\_\+\+CHECK\+\_\+\+FALSE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_aa0b1293c855fd05419a14637a4068809}{my\+\_\+check\+\_\+throws}}~\mbox{\hyperlink{doctest__fwd_8h_a4390850609b0f465bc8a4e7355f91177}{DOCTEST\+\_\+\+CHECK\+\_\+\+THROWS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_afea780537c3c5c0867f36dfe4f416af5}{my\+\_\+check\+\_\+throws\+\_\+as}}~\mbox{\hyperlink{doctest__fwd_8h_a84f4eb0aeb37b27b3cad5f3e44c08195}{DOCTEST\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ada366be31daee42ef8d517a0d7a423fa}{my\+\_\+check\+\_\+throws\+\_\+with}}~\mbox{\hyperlink{doctest__fwd_8h_a141ab91ff9697fa7d978989d56ce42d5}{DOCTEST\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a29de470274a9e71ab05a5be01117a33d}{my\+\_\+check\+\_\+throws\+\_\+with\+\_\+as}}~\mbox{\hyperlink{doctest__fwd_8h_ac53fee45159d080520c2d16416e6468f}{DOCTEST\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ab8f99b9c4bc4a28233f8ae1c0ac12616}{my\+\_\+check\+\_\+nothrow}}~\mbox{\hyperlink{doctest__fwd_8h_aac7b7640f3d6611423a2c5a18d905069}{DOCTEST\+\_\+\+CHECK\+\_\+\+NOTHROW}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a2e4d064c31f7fe96ef0ac8ab3583c53c}{my\+\_\+require}}~\mbox{\hyperlink{doctest__fwd_8h_a35b7bf4bf062cc1359ab36c4119d680a}{DOCTEST\+\_\+\+REQUIRE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a27f2e249dad2d474c4caed5d03e40de7}{my\+\_\+require\+\_\+false}}~\mbox{\hyperlink{doctest__fwd_8h_a0567e21b7ebdae9dbe84e4e46b230e12}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+FALSE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ae55a295d54cacba9bda84b6f3dc52e0d}{my\+\_\+require\+\_\+throws}}~\mbox{\hyperlink{doctest__fwd_8h_a00ac74412c24337acdb25b2f0587f6a5}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+THROWS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a904d920e7c4f8f72c40894d03b270549}{my\+\_\+require\+\_\+throws\+\_\+as}}~\mbox{\hyperlink{doctest__fwd_8h_a0a5e62cddee11560955d5213caac78a4}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a583af186e66fec0561d01cf5d2052728}{my\+\_\+require\+\_\+throws\+\_\+with\+\_\+as}}~\mbox{\hyperlink{doctest__fwd_8h_a9deaef85b8ec7fa5a63ad99a9eb5b469}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ada4cb6afc457da258789fecc307e7e52}{my\+\_\+require\+\_\+nothrow}}~\mbox{\hyperlink{doctest__fwd_8h_af736ab1a8a0779fa8df23e8177a52abb}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+NOTHROW}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a47f261410affbe1af3ee081bb9f7cf1b}{my\+\_\+scenario}}~\mbox{\hyperlink{doctest__fwd_8h_ab990e5952d346329356aeb62a261386a}{DOCTEST\+\_\+\+SCENARIO}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a01f7b0c494246a87be0ca5d712210d9e}{my\+\_\+given}}~\mbox{\hyperlink{doctest__fwd_8h_a391063a35ec9bea4c600c15b0a27cb54}{DOCTEST\+\_\+\+GIVEN}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_adada540159fcaf1022bba550c904be56}{my\+\_\+when}}~\mbox{\hyperlink{doctest__fwd_8h_a570ec2864c36b1b5c8ccfd94c6b8b629}{DOCTEST\+\_\+\+WHEN}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ad953c58b671a2cc08a25bc2f1f97c2da}{my\+\_\+and\+\_\+when}}~\mbox{\hyperlink{doctest__fwd_8h_a9e696b9f04c18580c871e07653affcbf}{DOCTEST\+\_\+\+AND\+\_\+\+WHEN}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a59ae4aa16b813e697cdd86f0d186cae4}{my\+\_\+then}}~\mbox{\hyperlink{doctest__fwd_8h_aab2f195b2c866cd010123c1d5b70217f}{DOCTEST\+\_\+\+THEN}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a80e18e251f97f02be1e3d525a077f7ed}{my\+\_\+and\+\_\+then}}~\mbox{\hyperlink{doctest__fwd_8h_a98336975a3b162f382cad2ae2c058276}{DOCTEST\+\_\+\+AND\+\_\+\+THEN}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ab42ebfa0efce9ba37fd00d55f5120b02}{my\+\_\+warn\+\_\+eq}}~\mbox{\hyperlink{doctest__fwd_8h_a1db08e05a079662153c7702e10dcdbde}{DOCTEST\+\_\+\+WARN\+\_\+\+EQ}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ac17f17b7b16cae3003dea94452a90b12}{my\+\_\+check\+\_\+eq}}~\mbox{\hyperlink{doctest__fwd_8h_a2ac8b5624c3b8d9520c75a68634cb8c1}{DOCTEST\+\_\+\+CHECK\+\_\+\+EQ}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a4935fec72cc27516e113691a3b89f8ea}{my\+\_\+require\+\_\+eq}}~\mbox{\hyperlink{doctest__fwd_8h_a8820dcb94345362c2fd94aea26a3eabc}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+EQ}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a5cebba865ce23b57972ca1121388f778}{my\+\_\+warn\+\_\+ne}}~\mbox{\hyperlink{doctest__fwd_8h_aaa8ef6ed223cba8e86d0bc0676aeb50e}{DOCTEST\+\_\+\+WARN\+\_\+\+NE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a7eefe933e3527686a6942e3d7d8f835a}{my\+\_\+check\+\_\+ne}}~\mbox{\hyperlink{doctest__fwd_8h_afe1e20e7078d65704c6b2f4e55bbfc03}{DOCTEST\+\_\+\+CHECK\+\_\+\+NE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a9420830ecad58b2885e07b9e23df6460}{my\+\_\+require\+\_\+ne}}~\mbox{\hyperlink{doctest__fwd_8h_aa34e39b7d59335760ffa1b9fce45cc4b}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+NE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a96d8a235be875c59348dc1fcf953a22b}{my\+\_\+warn\+\_\+gt}}~\mbox{\hyperlink{doctest__fwd_8h_ad814c5db21e9ac7eca4b3e87aec0ef3b}{DOCTEST\+\_\+\+WARN\+\_\+\+GT}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_abde55bc6d95f02fef63f6942d5eee1a3}{my\+\_\+check\+\_\+gt}}~\mbox{\hyperlink{doctest__fwd_8h_a8d3a9781fd7a67021ec12e0aea024ed6}{DOCTEST\+\_\+\+CHECK\+\_\+\+GT}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a2fb943cb0550bf877bd578c5aade9ad7}{my\+\_\+require\+\_\+gt}}~\mbox{\hyperlink{doctest__fwd_8h_a87d30bb902d1bfca7427a9eb51d130eb}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+GT}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a87fb9c6676d1d7025817e4ed0a967e03}{my\+\_\+warn\+\_\+lt}}~\mbox{\hyperlink{doctest__fwd_8h_aa0e1bebf090f015583da8decb0ee3e5c}{DOCTEST\+\_\+\+WARN\+\_\+\+LT}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a1f7f6ba6f5aa12bd7e6e17358b63a1ea}{my\+\_\+check\+\_\+lt}}~\mbox{\hyperlink{doctest__fwd_8h_a4e1d83dffb779a2829552c4fefbb516a}{DOCTEST\+\_\+\+CHECK\+\_\+\+LT}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a700ea05a45943ef46d721f599fdfdca3}{my\+\_\+require\+\_\+lt}}~\mbox{\hyperlink{doctest__fwd_8h_ab88925759665843f59b14f097213351c}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+LT}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ab5af7119f5eb04d6150f4cfca6b03cc6}{my\+\_\+warn\+\_\+ge}}~\mbox{\hyperlink{doctest__fwd_8h_aae5060834af3dd90c806b087368d010c}{DOCTEST\+\_\+\+WARN\+\_\+\+GE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a835df7289c35272039b0caa1c6222477}{my\+\_\+check\+\_\+ge}}~\mbox{\hyperlink{doctest__fwd_8h_a296f8caf3497fbc9433d2e77691b0b3e}{DOCTEST\+\_\+\+CHECK\+\_\+\+GE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a343200a6dfb8ef22827b0abd0264a864}{my\+\_\+require\+\_\+ge}}~\mbox{\hyperlink{doctest__fwd_8h_ad75b722f83eb3f81662af7fccae74732}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+GE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_ac81d69a2fbb6cef46271f250520043e8}{my\+\_\+warn\+\_\+le}}~\mbox{\hyperlink{doctest__fwd_8h_aaed576a70b191ac93a4a4e4052b31f4f}{DOCTEST\+\_\+\+WARN\+\_\+\+LE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a856c1566ff36239e2fba1974fa480a92}{my\+\_\+check\+\_\+le}}~\mbox{\hyperlink{doctest__fwd_8h_a25823108f6fed8787303bbad7c619f35}{DOCTEST\+\_\+\+CHECK\+\_\+\+LE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a47ec713af78130d86f221da13aea464c}{my\+\_\+require\+\_\+le}}~\mbox{\hyperlink{doctest__fwd_8h_a9101f25bfe135de1e306e3ed342e248a}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+LE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_aa6b67ffea4eb3f5a2dce7aa774343045}{my\+\_\+warn\+\_\+unary}}~\mbox{\hyperlink{doctest__fwd_8h_a41e14871f960ec76113197ad929d18c8}{DOCTEST\+\_\+\+WARN\+\_\+\+UNARY}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_afb603b038f1da8a5fa0e9f6d0116cb19}{my\+\_\+check\+\_\+unary}}~\mbox{\hyperlink{doctest__fwd_8h_a660ce2901f42d4d2a82327204a6a3602}{DOCTEST\+\_\+\+CHECK\+\_\+\+UNARY}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a0055e083a2be6b80837ee8752075e312}{my\+\_\+require\+\_\+unary}}~\mbox{\hyperlink{doctest__fwd_8h_a77558db4dc0f1758c756da740b64413a}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+UNARY}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a03de6940f07aca8c844fa6882079adce}{my\+\_\+warn\+\_\+unary\+\_\+false}}~\mbox{\hyperlink{doctest__fwd_8h_a24e0cd6aa574d457374825c7d61f2038}{DOCTEST\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a947b23d2e1ed07e68ab0cfa370bf9647}{my\+\_\+check\+\_\+unary\+\_\+false}}~\mbox{\hyperlink{doctest__fwd_8h_a9ff04e98b0891f79528c180a4e7d6d36}{DOCTEST\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE}}
+\item 
+\#define \mbox{\hyperlink{doctest__proxy_8h_a817d0eb412ab479b0ee6b1f488ff1c98}{my\+\_\+require\+\_\+unary\+\_\+false}}~\mbox{\hyperlink{doctest__fwd_8h_a37703a3eac1f8332d970808340abf56e}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{doctest__proxy_8h_a80e18e251f97f02be1e3d525a077f7ed}\label{doctest__proxy_8h_a80e18e251f97f02be1e3d525a077f7ed}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_and\_then@{my\_and\_then}}
+\index{my\_and\_then@{my\_and\_then}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_and\_then}{my\_and\_then}}
+{\footnotesize\ttfamily \#define my\+\_\+and\+\_\+then~\mbox{\hyperlink{doctest__fwd_8h_a98336975a3b162f382cad2ae2c058276}{DOCTEST\+\_\+\+AND\+\_\+\+THEN}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ad953c58b671a2cc08a25bc2f1f97c2da}\label{doctest__proxy_8h_ad953c58b671a2cc08a25bc2f1f97c2da}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_and\_when@{my\_and\_when}}
+\index{my\_and\_when@{my\_and\_when}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_and\_when}{my\_and\_when}}
+{\footnotesize\ttfamily \#define my\+\_\+and\+\_\+when~\mbox{\hyperlink{doctest__fwd_8h_a9e696b9f04c18580c871e07653affcbf}{DOCTEST\+\_\+\+AND\+\_\+\+WHEN}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a85bcf981ca5ac9797c93218d9dc448c1}\label{doctest__proxy_8h_a85bcf981ca5ac9797c93218d9dc448c1}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check@{my\_check}}
+\index{my\_check@{my\_check}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check}{my\_check}}
+{\footnotesize\ttfamily \#define my\+\_\+check~\mbox{\hyperlink{doctest__fwd_8h_a8f40c4072e85f02a3e58c5f67a182297}{DOCTEST\+\_\+\+CHECK}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ac17f17b7b16cae3003dea94452a90b12}\label{doctest__proxy_8h_ac17f17b7b16cae3003dea94452a90b12}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_eq@{my\_check\_eq}}
+\index{my\_check\_eq@{my\_check\_eq}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_eq}{my\_check\_eq}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+eq~\mbox{\hyperlink{doctest__fwd_8h_a2ac8b5624c3b8d9520c75a68634cb8c1}{DOCTEST\+\_\+\+CHECK\+\_\+\+EQ}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_aa2aec96da4122beb85b8628ddbed6792}\label{doctest__proxy_8h_aa2aec96da4122beb85b8628ddbed6792}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_false@{my\_check\_false}}
+\index{my\_check\_false@{my\_check\_false}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_false}{my\_check\_false}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+false~\mbox{\hyperlink{doctest__fwd_8h_a7ecf2c25ffc2fad220a251af0ab37ff8}{DOCTEST\+\_\+\+CHECK\+\_\+\+FALSE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a835df7289c35272039b0caa1c6222477}\label{doctest__proxy_8h_a835df7289c35272039b0caa1c6222477}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_ge@{my\_check\_ge}}
+\index{my\_check\_ge@{my\_check\_ge}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_ge}{my\_check\_ge}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+ge~\mbox{\hyperlink{doctest__fwd_8h_a296f8caf3497fbc9433d2e77691b0b3e}{DOCTEST\+\_\+\+CHECK\+\_\+\+GE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_abde55bc6d95f02fef63f6942d5eee1a3}\label{doctest__proxy_8h_abde55bc6d95f02fef63f6942d5eee1a3}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_gt@{my\_check\_gt}}
+\index{my\_check\_gt@{my\_check\_gt}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_gt}{my\_check\_gt}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+gt~\mbox{\hyperlink{doctest__fwd_8h_a8d3a9781fd7a67021ec12e0aea024ed6}{DOCTEST\+\_\+\+CHECK\+\_\+\+GT}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a856c1566ff36239e2fba1974fa480a92}\label{doctest__proxy_8h_a856c1566ff36239e2fba1974fa480a92}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_le@{my\_check\_le}}
+\index{my\_check\_le@{my\_check\_le}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_le}{my\_check\_le}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+le~\mbox{\hyperlink{doctest__fwd_8h_a25823108f6fed8787303bbad7c619f35}{DOCTEST\+\_\+\+CHECK\+\_\+\+LE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a1f7f6ba6f5aa12bd7e6e17358b63a1ea}\label{doctest__proxy_8h_a1f7f6ba6f5aa12bd7e6e17358b63a1ea}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_lt@{my\_check\_lt}}
+\index{my\_check\_lt@{my\_check\_lt}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_lt}{my\_check\_lt}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+lt~\mbox{\hyperlink{doctest__fwd_8h_a4e1d83dffb779a2829552c4fefbb516a}{DOCTEST\+\_\+\+CHECK\+\_\+\+LT}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a7eefe933e3527686a6942e3d7d8f835a}\label{doctest__proxy_8h_a7eefe933e3527686a6942e3d7d8f835a}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_ne@{my\_check\_ne}}
+\index{my\_check\_ne@{my\_check\_ne}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_ne}{my\_check\_ne}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+ne~\mbox{\hyperlink{doctest__fwd_8h_afe1e20e7078d65704c6b2f4e55bbfc03}{DOCTEST\+\_\+\+CHECK\+\_\+\+NE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ab8f99b9c4bc4a28233f8ae1c0ac12616}\label{doctest__proxy_8h_ab8f99b9c4bc4a28233f8ae1c0ac12616}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_nothrow@{my\_check\_nothrow}}
+\index{my\_check\_nothrow@{my\_check\_nothrow}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_nothrow}{my\_check\_nothrow}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+nothrow~\mbox{\hyperlink{doctest__fwd_8h_aac7b7640f3d6611423a2c5a18d905069}{DOCTEST\+\_\+\+CHECK\+\_\+\+NOTHROW}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_aa0b1293c855fd05419a14637a4068809}\label{doctest__proxy_8h_aa0b1293c855fd05419a14637a4068809}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_throws@{my\_check\_throws}}
+\index{my\_check\_throws@{my\_check\_throws}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_throws}{my\_check\_throws}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+throws~\mbox{\hyperlink{doctest__fwd_8h_a4390850609b0f465bc8a4e7355f91177}{DOCTEST\+\_\+\+CHECK\+\_\+\+THROWS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_afea780537c3c5c0867f36dfe4f416af5}\label{doctest__proxy_8h_afea780537c3c5c0867f36dfe4f416af5}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_throws\_as@{my\_check\_throws\_as}}
+\index{my\_check\_throws\_as@{my\_check\_throws\_as}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_throws\_as}{my\_check\_throws\_as}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+throws\+\_\+as~\mbox{\hyperlink{doctest__fwd_8h_a84f4eb0aeb37b27b3cad5f3e44c08195}{DOCTEST\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+AS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ada366be31daee42ef8d517a0d7a423fa}\label{doctest__proxy_8h_ada366be31daee42ef8d517a0d7a423fa}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_throws\_with@{my\_check\_throws\_with}}
+\index{my\_check\_throws\_with@{my\_check\_throws\_with}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_throws\_with}{my\_check\_throws\_with}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+throws\+\_\+with~\mbox{\hyperlink{doctest__fwd_8h_a141ab91ff9697fa7d978989d56ce42d5}{DOCTEST\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a29de470274a9e71ab05a5be01117a33d}\label{doctest__proxy_8h_a29de470274a9e71ab05a5be01117a33d}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_throws\_with\_as@{my\_check\_throws\_with\_as}}
+\index{my\_check\_throws\_with\_as@{my\_check\_throws\_with\_as}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_throws\_with\_as}{my\_check\_throws\_with\_as}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+throws\+\_\+with\+\_\+as~\mbox{\hyperlink{doctest__fwd_8h_ac53fee45159d080520c2d16416e6468f}{DOCTEST\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_afb603b038f1da8a5fa0e9f6d0116cb19}\label{doctest__proxy_8h_afb603b038f1da8a5fa0e9f6d0116cb19}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_unary@{my\_check\_unary}}
+\index{my\_check\_unary@{my\_check\_unary}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_unary}{my\_check\_unary}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+unary~\mbox{\hyperlink{doctest__fwd_8h_a660ce2901f42d4d2a82327204a6a3602}{DOCTEST\+\_\+\+CHECK\+\_\+\+UNARY}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a947b23d2e1ed07e68ab0cfa370bf9647}\label{doctest__proxy_8h_a947b23d2e1ed07e68ab0cfa370bf9647}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_check\_unary\_false@{my\_check\_unary\_false}}
+\index{my\_check\_unary\_false@{my\_check\_unary\_false}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_check\_unary\_false}{my\_check\_unary\_false}}
+{\footnotesize\ttfamily \#define my\+\_\+check\+\_\+unary\+\_\+false~\mbox{\hyperlink{doctest__fwd_8h_a9ff04e98b0891f79528c180a4e7d6d36}{DOCTEST\+\_\+\+CHECK\+\_\+\+UNARY\+\_\+\+FALSE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a01f7b0c494246a87be0ca5d712210d9e}\label{doctest__proxy_8h_a01f7b0c494246a87be0ca5d712210d9e}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_given@{my\_given}}
+\index{my\_given@{my\_given}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_given}{my\_given}}
+{\footnotesize\ttfamily \#define my\+\_\+given~\mbox{\hyperlink{doctest__fwd_8h_a391063a35ec9bea4c600c15b0a27cb54}{DOCTEST\+\_\+\+GIVEN}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ae789b57d915c95718de6a3c1dd874f6e}\label{doctest__proxy_8h_ae789b57d915c95718de6a3c1dd874f6e}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!MY\_PROXY\_MACROS@{MY\_PROXY\_MACROS}}
+\index{MY\_PROXY\_MACROS@{MY\_PROXY\_MACROS}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{MY\_PROXY\_MACROS}{MY\_PROXY\_MACROS}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+PROXY\+\_\+\+MACROS}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a2e4d064c31f7fe96ef0ac8ab3583c53c}\label{doctest__proxy_8h_a2e4d064c31f7fe96ef0ac8ab3583c53c}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require@{my\_require}}
+\index{my\_require@{my\_require}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require}{my\_require}}
+{\footnotesize\ttfamily \#define my\+\_\+require~\mbox{\hyperlink{doctest__fwd_8h_a35b7bf4bf062cc1359ab36c4119d680a}{DOCTEST\+\_\+\+REQUIRE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a4935fec72cc27516e113691a3b89f8ea}\label{doctest__proxy_8h_a4935fec72cc27516e113691a3b89f8ea}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_eq@{my\_require\_eq}}
+\index{my\_require\_eq@{my\_require\_eq}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_eq}{my\_require\_eq}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+eq~\mbox{\hyperlink{doctest__fwd_8h_a8820dcb94345362c2fd94aea26a3eabc}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+EQ}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a27f2e249dad2d474c4caed5d03e40de7}\label{doctest__proxy_8h_a27f2e249dad2d474c4caed5d03e40de7}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_false@{my\_require\_false}}
+\index{my\_require\_false@{my\_require\_false}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_false}{my\_require\_false}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+false~\mbox{\hyperlink{doctest__fwd_8h_a0567e21b7ebdae9dbe84e4e46b230e12}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+FALSE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a343200a6dfb8ef22827b0abd0264a864}\label{doctest__proxy_8h_a343200a6dfb8ef22827b0abd0264a864}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_ge@{my\_require\_ge}}
+\index{my\_require\_ge@{my\_require\_ge}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_ge}{my\_require\_ge}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+ge~\mbox{\hyperlink{doctest__fwd_8h_ad75b722f83eb3f81662af7fccae74732}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+GE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a2fb943cb0550bf877bd578c5aade9ad7}\label{doctest__proxy_8h_a2fb943cb0550bf877bd578c5aade9ad7}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_gt@{my\_require\_gt}}
+\index{my\_require\_gt@{my\_require\_gt}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_gt}{my\_require\_gt}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+gt~\mbox{\hyperlink{doctest__fwd_8h_a87d30bb902d1bfca7427a9eb51d130eb}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+GT}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a47ec713af78130d86f221da13aea464c}\label{doctest__proxy_8h_a47ec713af78130d86f221da13aea464c}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_le@{my\_require\_le}}
+\index{my\_require\_le@{my\_require\_le}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_le}{my\_require\_le}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+le~\mbox{\hyperlink{doctest__fwd_8h_a9101f25bfe135de1e306e3ed342e248a}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+LE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a700ea05a45943ef46d721f599fdfdca3}\label{doctest__proxy_8h_a700ea05a45943ef46d721f599fdfdca3}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_lt@{my\_require\_lt}}
+\index{my\_require\_lt@{my\_require\_lt}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_lt}{my\_require\_lt}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+lt~\mbox{\hyperlink{doctest__fwd_8h_ab88925759665843f59b14f097213351c}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+LT}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a9420830ecad58b2885e07b9e23df6460}\label{doctest__proxy_8h_a9420830ecad58b2885e07b9e23df6460}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_ne@{my\_require\_ne}}
+\index{my\_require\_ne@{my\_require\_ne}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_ne}{my\_require\_ne}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+ne~\mbox{\hyperlink{doctest__fwd_8h_aa34e39b7d59335760ffa1b9fce45cc4b}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+NE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ada4cb6afc457da258789fecc307e7e52}\label{doctest__proxy_8h_ada4cb6afc457da258789fecc307e7e52}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_nothrow@{my\_require\_nothrow}}
+\index{my\_require\_nothrow@{my\_require\_nothrow}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_nothrow}{my\_require\_nothrow}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+nothrow~\mbox{\hyperlink{doctest__fwd_8h_af736ab1a8a0779fa8df23e8177a52abb}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+NOTHROW}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ae55a295d54cacba9bda84b6f3dc52e0d}\label{doctest__proxy_8h_ae55a295d54cacba9bda84b6f3dc52e0d}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_throws@{my\_require\_throws}}
+\index{my\_require\_throws@{my\_require\_throws}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_throws}{my\_require\_throws}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+throws~\mbox{\hyperlink{doctest__fwd_8h_a00ac74412c24337acdb25b2f0587f6a5}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+THROWS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a904d920e7c4f8f72c40894d03b270549}\label{doctest__proxy_8h_a904d920e7c4f8f72c40894d03b270549}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_throws\_as@{my\_require\_throws\_as}}
+\index{my\_require\_throws\_as@{my\_require\_throws\_as}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_throws\_as}{my\_require\_throws\_as}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+throws\+\_\+as~\mbox{\hyperlink{doctest__fwd_8h_a0a5e62cddee11560955d5213caac78a4}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+AS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a583af186e66fec0561d01cf5d2052728}\label{doctest__proxy_8h_a583af186e66fec0561d01cf5d2052728}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_throws\_with\_as@{my\_require\_throws\_with\_as}}
+\index{my\_require\_throws\_with\_as@{my\_require\_throws\_with\_as}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_throws\_with\_as}{my\_require\_throws\_with\_as}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+throws\+\_\+with\+\_\+as~\mbox{\hyperlink{doctest__fwd_8h_a9deaef85b8ec7fa5a63ad99a9eb5b469}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a0055e083a2be6b80837ee8752075e312}\label{doctest__proxy_8h_a0055e083a2be6b80837ee8752075e312}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_unary@{my\_require\_unary}}
+\index{my\_require\_unary@{my\_require\_unary}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_unary}{my\_require\_unary}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+unary~\mbox{\hyperlink{doctest__fwd_8h_a77558db4dc0f1758c756da740b64413a}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+UNARY}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a817d0eb412ab479b0ee6b1f488ff1c98}\label{doctest__proxy_8h_a817d0eb412ab479b0ee6b1f488ff1c98}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_require\_unary\_false@{my\_require\_unary\_false}}
+\index{my\_require\_unary\_false@{my\_require\_unary\_false}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_require\_unary\_false}{my\_require\_unary\_false}}
+{\footnotesize\ttfamily \#define my\+\_\+require\+\_\+unary\+\_\+false~\mbox{\hyperlink{doctest__fwd_8h_a37703a3eac1f8332d970808340abf56e}{DOCTEST\+\_\+\+REQUIRE\+\_\+\+UNARY\+\_\+\+FALSE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a47f261410affbe1af3ee081bb9f7cf1b}\label{doctest__proxy_8h_a47f261410affbe1af3ee081bb9f7cf1b}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_scenario@{my\_scenario}}
+\index{my\_scenario@{my\_scenario}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_scenario}{my\_scenario}}
+{\footnotesize\ttfamily \#define my\+\_\+scenario~\mbox{\hyperlink{doctest__fwd_8h_ab990e5952d346329356aeb62a261386a}{DOCTEST\+\_\+\+SCENARIO}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a02fc2e8ec55f6d3c6532a933e52707c6}\label{doctest__proxy_8h_a02fc2e8ec55f6d3c6532a933e52707c6}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_subcase@{my\_subcase}}
+\index{my\_subcase@{my\_subcase}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_subcase}{my\_subcase}}
+{\footnotesize\ttfamily \#define my\+\_\+subcase~\mbox{\hyperlink{doctest__fwd_8h_a5acad2b6cef499ee884b8027ef41fbf6}{DOCTEST\+\_\+\+SUBCASE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a772035fe973fe9418f31d53eb8c6aa66}\label{doctest__proxy_8h_a772035fe973fe9418f31d53eb8c6aa66}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_testcase@{my\_testcase}}
+\index{my\_testcase@{my\_testcase}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_testcase}{my\_testcase}}
+{\footnotesize\ttfamily \#define my\+\_\+testcase~\mbox{\hyperlink{doctest__fwd_8h_ac1216c5a9ba44f5af8b7115a3badaae2}{DOCTEST\+\_\+\+TEST\+\_\+\+CASE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a5e3994ee2a390162b1178e678beb238a}\label{doctest__proxy_8h_a5e3994ee2a390162b1178e678beb238a}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_testcase\_class@{my\_testcase\_class}}
+\index{my\_testcase\_class@{my\_testcase\_class}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_testcase\_class}{my\_testcase\_class}}
+{\footnotesize\ttfamily \#define my\+\_\+testcase\+\_\+class~\mbox{\hyperlink{doctest__fwd_8h_a41431265482f363020f93a13e4af4c6a}{DOCTEST\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+CLASS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ad9ee04c3835217961402587ae3970540}\label{doctest__proxy_8h_ad9ee04c3835217961402587ae3970540}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_testcase\_fixture@{my\_testcase\_fixture}}
+\index{my\_testcase\_fixture@{my\_testcase\_fixture}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_testcase\_fixture}{my\_testcase\_fixture}}
+{\footnotesize\ttfamily \#define my\+\_\+testcase\+\_\+fixture~\mbox{\hyperlink{doctest__fwd_8h_a22130c0eff96eac3ed682b7d8854e0f6}{DOCTEST\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+FIXTURE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a7fad6c55a9c35e997bc6befaa6277630}\label{doctest__proxy_8h_a7fad6c55a9c35e997bc6befaa6277630}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_testsuite@{my\_testsuite}}
+\index{my\_testsuite@{my\_testsuite}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_testsuite}{my\_testsuite}}
+{\footnotesize\ttfamily \#define my\+\_\+testsuite~\mbox{\hyperlink{doctest__fwd_8h_aa64ce392f41c8ba1d22cfb5b83847f55}{DOCTEST\+\_\+\+TEST\+\_\+\+SUITE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ae97e44adacae4dfbf220e04bf4da080e}\label{doctest__proxy_8h_ae97e44adacae4dfbf220e04bf4da080e}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_testsuite\_begin@{my\_testsuite\_begin}}
+\index{my\_testsuite\_begin@{my\_testsuite\_begin}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_testsuite\_begin}{my\_testsuite\_begin}}
+{\footnotesize\ttfamily \#define my\+\_\+testsuite\+\_\+begin~\mbox{\hyperlink{doctest__fwd_8h_a64f9649162581c1c24a78e65cf01492f}{DOCTEST\+\_\+\+TEST\+\_\+\+SUITE\+\_\+\+BEGIN}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a64816062909424d656483001c09a7361}\label{doctest__proxy_8h_a64816062909424d656483001c09a7361}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_testsuite\_end@{my\_testsuite\_end}}
+\index{my\_testsuite\_end@{my\_testsuite\_end}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_testsuite\_end}{my\_testsuite\_end}}
+{\footnotesize\ttfamily \#define my\+\_\+testsuite\+\_\+end~\mbox{\hyperlink{doctest__fwd_8h_ab39047b0a7b7ceca753fa85e47b2e48e}{DOCTEST\+\_\+\+TEST\+\_\+\+SUITE\+\_\+\+END}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a59ae4aa16b813e697cdd86f0d186cae4}\label{doctest__proxy_8h_a59ae4aa16b813e697cdd86f0d186cae4}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_then@{my\_then}}
+\index{my\_then@{my\_then}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_then}{my\_then}}
+{\footnotesize\ttfamily \#define my\+\_\+then~\mbox{\hyperlink{doctest__fwd_8h_aab2f195b2c866cd010123c1d5b70217f}{DOCTEST\+\_\+\+THEN}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a00dea10a79dcce02a09e09a0ca3ce514}\label{doctest__proxy_8h_a00dea10a79dcce02a09e09a0ca3ce514}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn@{my\_warn}}
+\index{my\_warn@{my\_warn}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn}{my\_warn}}
+{\footnotesize\ttfamily \#define my\+\_\+warn~\mbox{\hyperlink{doctest__fwd_8h_a5543bf17193d5cf77558fabbd9cfb02f}{DOCTEST\+\_\+\+WARN}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ab42ebfa0efce9ba37fd00d55f5120b02}\label{doctest__proxy_8h_ab42ebfa0efce9ba37fd00d55f5120b02}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_eq@{my\_warn\_eq}}
+\index{my\_warn\_eq@{my\_warn\_eq}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_eq}{my\_warn\_eq}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+eq~\mbox{\hyperlink{doctest__fwd_8h_a1db08e05a079662153c7702e10dcdbde}{DOCTEST\+\_\+\+WARN\+\_\+\+EQ}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a2bb0915f12c0acf29696e6a3616e67dd}\label{doctest__proxy_8h_a2bb0915f12c0acf29696e6a3616e67dd}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_false@{my\_warn\_false}}
+\index{my\_warn\_false@{my\_warn\_false}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_false}{my\_warn\_false}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+false~\mbox{\hyperlink{doctest__fwd_8h_a207c474577961221a4003351186b5378}{DOCTEST\+\_\+\+WARN\+\_\+\+FALSE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ab5af7119f5eb04d6150f4cfca6b03cc6}\label{doctest__proxy_8h_ab5af7119f5eb04d6150f4cfca6b03cc6}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_ge@{my\_warn\_ge}}
+\index{my\_warn\_ge@{my\_warn\_ge}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_ge}{my\_warn\_ge}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+ge~\mbox{\hyperlink{doctest__fwd_8h_aae5060834af3dd90c806b087368d010c}{DOCTEST\+\_\+\+WARN\+\_\+\+GE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a96d8a235be875c59348dc1fcf953a22b}\label{doctest__proxy_8h_a96d8a235be875c59348dc1fcf953a22b}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_gt@{my\_warn\_gt}}
+\index{my\_warn\_gt@{my\_warn\_gt}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_gt}{my\_warn\_gt}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+gt~\mbox{\hyperlink{doctest__fwd_8h_ad814c5db21e9ac7eca4b3e87aec0ef3b}{DOCTEST\+\_\+\+WARN\+\_\+\+GT}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_ac81d69a2fbb6cef46271f250520043e8}\label{doctest__proxy_8h_ac81d69a2fbb6cef46271f250520043e8}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_le@{my\_warn\_le}}
+\index{my\_warn\_le@{my\_warn\_le}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_le}{my\_warn\_le}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+le~\mbox{\hyperlink{doctest__fwd_8h_aaed576a70b191ac93a4a4e4052b31f4f}{DOCTEST\+\_\+\+WARN\+\_\+\+LE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a87fb9c6676d1d7025817e4ed0a967e03}\label{doctest__proxy_8h_a87fb9c6676d1d7025817e4ed0a967e03}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_lt@{my\_warn\_lt}}
+\index{my\_warn\_lt@{my\_warn\_lt}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_lt}{my\_warn\_lt}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+lt~\mbox{\hyperlink{doctest__fwd_8h_aa0e1bebf090f015583da8decb0ee3e5c}{DOCTEST\+\_\+\+WARN\+\_\+\+LT}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a5cebba865ce23b57972ca1121388f778}\label{doctest__proxy_8h_a5cebba865ce23b57972ca1121388f778}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_ne@{my\_warn\_ne}}
+\index{my\_warn\_ne@{my\_warn\_ne}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_ne}{my\_warn\_ne}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+ne~\mbox{\hyperlink{doctest__fwd_8h_aaa8ef6ed223cba8e86d0bc0676aeb50e}{DOCTEST\+\_\+\+WARN\+\_\+\+NE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a48e74884c69aa1e3f66cb973916b8e44}\label{doctest__proxy_8h_a48e74884c69aa1e3f66cb973916b8e44}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_nothrow@{my\_warn\_nothrow}}
+\index{my\_warn\_nothrow@{my\_warn\_nothrow}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_nothrow}{my\_warn\_nothrow}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+nothrow~\mbox{\hyperlink{doctest__fwd_8h_a2de5ec015a9fbf92197a289b11db462c}{DOCTEST\+\_\+\+WARN\+\_\+\+NOTHROW}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a178de040a578de22c302d4874ee09bb4}\label{doctest__proxy_8h_a178de040a578de22c302d4874ee09bb4}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_throws@{my\_warn\_throws}}
+\index{my\_warn\_throws@{my\_warn\_throws}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_throws}{my\_warn\_throws}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+throws~\mbox{\hyperlink{doctest__fwd_8h_ad969cd19e5751fd38d2429ce8049065e}{DOCTEST\+\_\+\+WARN\+\_\+\+THROWS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a04a191e9a9a274c5ba058430892b4034}\label{doctest__proxy_8h_a04a191e9a9a274c5ba058430892b4034}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_throws\_as@{my\_warn\_throws\_as}}
+\index{my\_warn\_throws\_as@{my\_warn\_throws\_as}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_throws\_as}{my\_warn\_throws\_as}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+throws\+\_\+as~\mbox{\hyperlink{doctest__fwd_8h_a0c61debdc225c16793ce21792448bdd2}{DOCTEST\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+AS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a81070d2d17723114bb09fe2cd7ef1b19}\label{doctest__proxy_8h_a81070d2d17723114bb09fe2cd7ef1b19}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_throws\_with@{my\_warn\_throws\_with}}
+\index{my\_warn\_throws\_with@{my\_warn\_throws\_with}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_throws\_with}{my\_warn\_throws\_with}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+throws\+\_\+with~\mbox{\hyperlink{doctest__fwd_8h_a0d30b4e4f2a0e5b7e845efe285bf270f}{DOCTEST\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a07ed3f2202bbee6da3d967cbf3b1e914}\label{doctest__proxy_8h_a07ed3f2202bbee6da3d967cbf3b1e914}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_throws\_with\_as@{my\_warn\_throws\_with\_as}}
+\index{my\_warn\_throws\_with\_as@{my\_warn\_throws\_with\_as}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_throws\_with\_as}{my\_warn\_throws\_with\_as}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+throws\+\_\+with\+\_\+as~\mbox{\hyperlink{doctest__fwd_8h_ab808e9a932cbd988fc3790137ed365a9}{DOCTEST\+\_\+\+WARN\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_aa6b67ffea4eb3f5a2dce7aa774343045}\label{doctest__proxy_8h_aa6b67ffea4eb3f5a2dce7aa774343045}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_unary@{my\_warn\_unary}}
+\index{my\_warn\_unary@{my\_warn\_unary}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_unary}{my\_warn\_unary}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+unary~\mbox{\hyperlink{doctest__fwd_8h_a41e14871f960ec76113197ad929d18c8}{DOCTEST\+\_\+\+WARN\+\_\+\+UNARY}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_a03de6940f07aca8c844fa6882079adce}\label{doctest__proxy_8h_a03de6940f07aca8c844fa6882079adce}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_warn\_unary\_false@{my\_warn\_unary\_false}}
+\index{my\_warn\_unary\_false@{my\_warn\_unary\_false}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_warn\_unary\_false}{my\_warn\_unary\_false}}
+{\footnotesize\ttfamily \#define my\+\_\+warn\+\_\+unary\+\_\+false~\mbox{\hyperlink{doctest__fwd_8h_a24e0cd6aa574d457374825c7d61f2038}{DOCTEST\+\_\+\+WARN\+\_\+\+UNARY\+\_\+\+FALSE}}}
+
+\mbox{\Hypertarget{doctest__proxy_8h_adada540159fcaf1022bba550c904be56}\label{doctest__proxy_8h_adada540159fcaf1022bba550c904be56}} 
+\index{doctest\_proxy.h@{doctest\_proxy.h}!my\_when@{my\_when}}
+\index{my\_when@{my\_when}!doctest\_proxy.h@{doctest\_proxy.h}}
+\doxysubsubsection{\texorpdfstring{my\_when}{my\_when}}
+{\footnotesize\ttfamily \#define my\+\_\+when~\mbox{\hyperlink{doctest__fwd_8h_a570ec2864c36b1b5c8ccfd94c6b8b629}{DOCTEST\+\_\+\+WHEN}}}
+

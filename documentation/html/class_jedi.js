@@ -1,7 +1,7 @@
 var class_jedi =
 [
     [ "Jedi", "class_jedi.html#a3da57811f8332a961022a13640497098", null ],
-    [ "Jedi", "class_jedi.html#ae36510f0d83452f015394f7c706d2eb6", null ],
+    [ "Jedi", "class_jedi.html#acfc23cab314ceb195531bc5e559b0f2f", null ],
     [ "Jedi", "class_jedi.html#a4034eeede584f1033b235258a2fa8406", null ],
     [ "clone", "class_jedi.html#affef88f963581fdccabdde53d371d71c", null ],
     [ "demote", "class_jedi.html#a3cac34949a7824bdb3432fec99af014d", null ],

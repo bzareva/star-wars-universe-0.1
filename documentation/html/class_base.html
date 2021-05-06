@@ -100,6 +100,9 @@ $(document).ready(function(){initNavTree('class_base.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract base class.  
+ <a href="class_base.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_base_8h_source.html">Base.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Base:</div>
@@ -107,8 +110,8 @@ Inheritance diagram for Base:</div>
  <div class="center">
   <img src="class_base.png" usemap="#Base_map" alt=""/>
   <map id="Base_map" name="Base_map">
-<area href="class_galaxy.html" alt="Galaxy" shape="rect" coords="0,56,51,80"/>
-<area href="class_planet.html" alt="Planet" shape="rect" coords="61,56,112,80"/>
+<area href="class_galaxy.html" title="Inherits of Base class." alt="Galaxy" shape="rect" coords="0,56,51,80"/>
+<area href="class_planet.html" title="Inherits of Base class." alt="Planet" shape="rect" coords="61,56,112,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -124,9 +127,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a306fb25541331080645a716286357ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">default destructor  <a href="class_base.html#a306fb25541331080645a716286357ef9">More...</a><br /></td></tr>
 <tr class="separator:a306fb25541331080645a716286357ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab99040cf7517193fb67b86ce0c29df6a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_base.html">Base</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#ab99040cf7517193fb67b86ce0c29df6a">clone</a> () const =0</td></tr>
+<tr class="memdesc:ab99040cf7517193fb67b86ce0c29df6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual clone method.  <a href="class_base.html#ab99040cf7517193fb67b86ce0c29df6a">More...</a><br /></td></tr>
 <tr class="separator:ab99040cf7517193fb67b86ce0c29df6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a920a3bc2ded309777ce0ae2af91e6d21"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a920a3bc2ded309777ce0ae2af91e6d21">write_to_file</a> (std::ofstream &amp;fout) const =0</td></tr>
-<tr class="memdesc:a920a3bc2ded309777ce0ae2af91e6d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>.  <a href="class_base.html#a920a3bc2ded309777ce0ae2af91e6d21">More...</a><br /></td></tr>
+<tr class="memdesc:a920a3bc2ded309777ce0ae2af91e6d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>.  <a href="class_base.html#a920a3bc2ded309777ce0ae2af91e6d21">More...</a><br /></td></tr>
 <tr class="separator:a920a3bc2ded309777ce0ae2af91e6d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa464997c0ff7060d1dd2568e1590b4b6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#aa464997c0ff7060d1dd2568e1590b4b6">read_from_file</a> (std::ifstream &amp;fin)=0</td></tr>
 <tr class="memdesc:aa464997c0ff7060d1dd2568e1590b4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method for reading information from <em>file</em>.  <a href="class_base.html#aa464997c0ff7060d1dd2568e1590b4b6">More...</a><br /></td></tr>
@@ -135,35 +139,38 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9e41ad5ad36312ea1af527f8154a5a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method which return name of type object.  <a href="class_base.html#a9e41ad5ad36312ea1af527f8154a5a51">More...</a><br /></td></tr>
 <tr class="separator:a9e41ad5ad36312ea1af527f8154a5a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac448cd0ae33113c3a0efbacd9d3f560"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#aac448cd0ae33113c3a0efbacd9d3f560">create_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name, const <a class="el" href="class_string.html">String</a> &amp;jedi_name, const <a class="el" href="_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank, const unsigned &amp;jedi_age, const <a class="el" href="class_string.html">String</a> &amp;saber_color, const double &amp;jedi_strength)=0</td></tr>
+<tr class="memdesc:aac448cd0ae33113c3a0efbacd9d3f560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual create method.  <a href="class_base.html#aac448cd0ae33113c3a0efbacd9d3f560">More...</a><br /></td></tr>
 <tr class="separator:aac448cd0ae33113c3a0efbacd9d3f560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afde26e7c513aa9d2cbc5b3dd6eedfa82"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#afde26e7c513aa9d2cbc5b3dd6eedfa82">remove_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;jedi_name, const <a class="el" href="class_string.html">String</a> &amp;planet_name)=0</td></tr>
-<tr class="memdesc:afde26e7c513aa9d2cbc5b3dd6eedfa82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a message whether the removal was successful or not (the <a class="el" href="class_jedi.html">Jedi</a> did not inhabits this planet).  <a href="class_base.html#afde26e7c513aa9d2cbc5b3dd6eedfa82">More...</a><br /></td></tr>
+<tr class="memdesc:afde26e7c513aa9d2cbc5b3dd6eedfa82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a message whether the removal was successful or not (the <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> did not inhabits this planet).  <a href="class_base.html#afde26e7c513aa9d2cbc5b3dd6eedfa82">More...</a><br /></td></tr>
 <tr class="separator:afde26e7c513aa9d2cbc5b3dd6eedfa82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27ac8e644c353fbe9690d4cc89ce083a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_jedi.html">Jedi</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a27ac8e644c353fbe9690d4cc89ce083a">get_strongest_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name) const =0</td></tr>
-<tr class="memdesc:a27ac8e644c353fbe9690d4cc89ce083a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays information about the strongest <a class="el" href="class_jedi.html">Jedi</a> of the submitted planet(with the greatest force). <br  />
+<tr class="memdesc:a27ac8e644c353fbe9690d4cc89ce083a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays information about the strongest <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> of the submitted planet(with the greatest force). <br  />
   <a href="class_base.html#a27ac8e644c353fbe9690d4cc89ce083a">More...</a><br /></td></tr>
 <tr class="separator:a27ac8e644c353fbe9690d4cc89ce083a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a6218ef6804c920c7ef56903d989ff2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_vector.html">Vector</a>&lt; <a class="el" href="class_jedi.html">Jedi</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a7a6218ef6804c920c7ef56903d989ff2">get_youngest_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name, const <a class="el" href="_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank) const =0</td></tr>
+<tr class="memdesc:a7a6218ef6804c920c7ef56903d989ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brings out the youngest <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> inhabiting the given planet and has the corresponding rank (if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message).  <a href="class_base.html#a7a6218ef6804c920c7ef56903d989ff2">More...</a><br /></td></tr>
 <tr class="separator:a7a6218ef6804c920c7ef56903d989ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10103d0c8414c13b1df927286071c1da"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a10103d0c8414c13b1df927286071c1da">get_most_used_saber_color</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name, const <a class="el" href="_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbed">Rank</a> &amp;jedi_rank) const =0</td></tr>
 <tr class="separator:a10103d0c8414c13b1df927286071c1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dcaec099589dfe62c7e623cb11e6145"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a0dcaec099589dfe62c7e623cb11e6145">get_most_used_saber_color</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name) const =0</td></tr>
 <tr class="separator:a0dcaec099589dfe62c7e623cb11e6145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a832b501b3c13afddcd30e547a79c45e1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a832b501b3c13afddcd30e547a79c45e1">print_planet</a> (const <a class="el" href="class_string.html">String</a> &amp;planet_name)=0</td></tr>
-<tr class="memdesc:a832b501b3c13afddcd30e547a79c45e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the information about heirs in of <a class="el" href="class_base.html">Base</a> class an appropriate way.  <a href="class_base.html#a832b501b3c13afddcd30e547a79c45e1">More...</a><br /></td></tr>
+<tr class="memdesc:a832b501b3c13afddcd30e547a79c45e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the information about heirs in of <a class="el" href="class_base.html" title="Abstract base class.">Base</a> class an appropriate way.  <a href="class_base.html#a832b501b3c13afddcd30e547a79c45e1">More...</a><br /></td></tr>
 <tr class="separator:a832b501b3c13afddcd30e547a79c45e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42afa1b981dcade0873b80854bb80175"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a42afa1b981dcade0873b80854bb80175">print_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;jedi_name) const =0</td></tr>
-<tr class="memdesc:a42afa1b981dcade0873b80854bb80175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the information for the <a class="el" href="class_jedi.html">Jedi</a>, as well as which planet it currently inhabits.  <a href="class_base.html#a42afa1b981dcade0873b80854bb80175">More...</a><br /></td></tr>
+<tr class="memdesc:a42afa1b981dcade0873b80854bb80175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the information for the <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a>, as well as which planet it currently inhabits.  <a href="class_base.html#a42afa1b981dcade0873b80854bb80175">More...</a><br /></td></tr>
 <tr class="separator:a42afa1b981dcade0873b80854bb80175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a524e71b2475b86cbace2a0b3a46ae4f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a524e71b2475b86cbace2a0b3a46ae4f5">promote_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;jedi_name, const double &amp;multiplier)=0</td></tr>
-<tr class="memdesc:a524e71b2475b86cbace2a0b3a46ae4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">increases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank up in ladder and increases its strength by a formula  <a href="class_base.html#a524e71b2475b86cbace2a0b3a46ae4f5">More...</a><br /></td></tr>
+<tr class="memdesc:a524e71b2475b86cbace2a0b3a46ae4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">increases the given <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> by one rank up in ladder and increases its strength by a formula  <a href="class_base.html#a524e71b2475b86cbace2a0b3a46ae4f5">More...</a><br /></td></tr>
 <tr class="separator:a524e71b2475b86cbace2a0b3a46ae4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22d56edcf21b294c6d0730b2ea7ef502"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base.html#a22d56edcf21b294c6d0730b2ea7ef502">demote_jedi</a> (const <a class="el" href="class_string.html">String</a> &amp;jedi_name, const double &amp;multiplier)=0</td></tr>
-<tr class="memdesc:a22d56edcf21b294c6d0730b2ea7ef502"><td class="mdescLeft">&#160;</td><td class="mdescRight">decreases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank down in ladder and lowers its strength by a formula  <a href="class_base.html#a22d56edcf21b294c6d0730b2ea7ef502">More...</a><br /></td></tr>
+<tr class="memdesc:a22d56edcf21b294c6d0730b2ea7ef502"><td class="mdescLeft">&#160;</td><td class="mdescRight">decreases the given <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> by one rank down in ladder and lowers its strength by a formula  <a href="class_base.html#a22d56edcf21b294c6d0730b2ea7ef502">More...</a><br /></td></tr>
 <tr class="separator:a22d56edcf21b294c6d0730b2ea7ef502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract base class. <a class="el" href="class_planet.html">Planet</a> and <a class="el" href="class_galaxy.html">Galaxy</a> herited this class and they implement all of the functions in own way. </p>
+<div class="textblock"><p>Abstract base class. </p>
+<p><a class="el" href="class_planet.html" title="Inherits of Base class.">Planet</a> and <a class="el" href="class_galaxy.html" title="Inherits of Base class.">Galaxy</a> herited this class and they implement all of the functions in own way. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a58887755525abd3f340963e2bbdcc972"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58887755525abd3f340963e2bbdcc972">&#9670;&nbsp;</a></span>Base()</h2>
@@ -242,7 +249,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Pure virtual clone method. Makes a copy of the <a class="el" href="class_base.html">Base</a> object. Access to the object of this class is realize with clone method. </p>
+
+<p>Pure virtual clone method. </p>
+<p>Makes a copy of the <a class="el" href="class_base.html" title="Abstract base class.">Base</a> object. Access to the object of this class is realize with clone method. </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#a0ae719d72f211ef4ec5976c5f9862a8f">Planet</a>, and <a class="el" href="class_galaxy.html#aa08a6b5ffebb121112cf75f400f66097">Galaxy</a>.</p>
 
@@ -305,7 +314,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Pure virtual create method. Display a message whether the addition was successful or not (there is a <a class="el" href="class_jedi.html">Jedi</a> with such a name on this or that planet, or not there is a planet with such a name). </p>
+
+<p>Pure virtual create method. </p>
+<p>Display a message whether the addition was successful or not (there is a <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> with such a name on this or that planet, or not there is a planet with such a name). </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#a2bf100341c1507fdcb06d46cfb9c5dd0">Planet</a>, and <a class="el" href="class_galaxy.html#aed4036d02bc8eb00266fb813f3800add">Galaxy</a>.</p>
 
@@ -345,7 +356,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>decreases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank down in ladder and lowers its strength by a formula </p>
+<p>decreases the given <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> by one rank down in ladder and lowers its strength by a formula </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#a11e8510fdeca4ce5c70073fbb3a39eb3">Planet</a>, and <a class="el" href="class_galaxy.html#a4aebd5362d002499791f8c0a48a3d04d">Galaxy</a>.</p>
 
@@ -443,7 +454,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Displays information about the strongest <a class="el" href="class_jedi.html">Jedi</a> of the submitted planet(with the greatest force). <br  />
+<p>Displays information about the strongest <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> of the submitted planet(with the greatest force). <br  />
  </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#a43cb166aaedab24ed834d560d701061c">Planet</a>, and <a class="el" href="class_galaxy.html#a13f694e8bdb1da810f506b44dc5f658b">Galaxy</a>.</p>
@@ -483,7 +494,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Brings out the youngest <a class="el" href="class_jedi.html">Jedi</a> inhabiting the given planet and has the corresponding rank (if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message). </p>
+
+<p>Brings out the youngest <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> inhabiting the given planet and has the corresponding rank (if they are more than one, to display the first on alphabetical order if none will be displayed appropriate message). </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#a88bc2701cd0af73c1bb2fac49b85b571">Planet</a>, and <a class="el" href="class_galaxy.html#a90490b6ab0c39f3011bfaa0e9c26cd23">Galaxy</a>.</p>
 
@@ -541,7 +553,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Outputs the information for the <a class="el" href="class_jedi.html">Jedi</a>, as well as which planet it currently inhabits. </p>
+<p>Outputs the information for the <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a>, as well as which planet it currently inhabits. </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#ad3ba062c0bf90aeccaaf120d4c1811fe">Planet</a>, and <a class="el" href="class_galaxy.html#a464947e031eef10a3e55d4341ee61218">Galaxy</a>.</p>
 
@@ -571,7 +583,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Displays the information about heirs in of <a class="el" href="class_base.html">Base</a> class an appropriate way. </p>
+<p>Displays the information about heirs in of <a class="el" href="class_base.html" title="Abstract base class.">Base</a> class an appropriate way. </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#a561151ce0816f814e4978711371713d1">Planet</a>, and <a class="el" href="class_galaxy.html#a83c70dee70cafb83f8862bc4268cd7f7">Galaxy</a>.</p>
 
@@ -611,7 +623,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>increases the given <a class="el" href="class_jedi.html">Jedi</a> by one rank up in ladder and increases its strength by a formula </p>
+<p>increases the given <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> by one rank up in ladder and increases its strength by a formula </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#af292e9548ea28507b74009171de1d4c5">Planet</a>, and <a class="el" href="class_galaxy.html#a5e34f7cfcdcbd543fbee4245a5b2a389">Galaxy</a>.</p>
 
@@ -681,7 +693,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Displays a message whether the removal was successful or not (the <a class="el" href="class_jedi.html">Jedi</a> did not inhabits this planet). </p>
+<p>Displays a message whether the removal was successful or not (the <a class="el" href="class_jedi.html" title="Describes a Jedi.">Jedi</a> did not inhabits this planet). </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#a09534a0c1ddff29b6d9e70333bc30f99">Planet</a>, and <a class="el" href="class_galaxy.html#ac818f46cb229372a1218fcd240ec5800">Galaxy</a>.</p>
 
@@ -740,15 +752,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual print method which allows each of <a class="el" href="class_base.html">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>. </p>
+<p>Pure virtual print method which allows each of <a class="el" href="class_base.html" title="Abstract base class.">Base</a> heirs(Jedi, Planet) to be displayed in its own way on <em>file</em>. </p>
 
 <p>Implemented in <a class="el" href="class_planet.html#a563c09b4640f2718358a50365c831785">Planet</a>, and <a class="el" href="class_galaxy.html#afbc8202c03f80f6b2ef399f3af87efca">Galaxy</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/USER/source/repos/bzareva/star-wars-universe-0.1/<a class="el" href="_base_8h_source.html">Base.h</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

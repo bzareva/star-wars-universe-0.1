@@ -1,7 +1,8 @@
 var class_vector =
 [
     [ "Vector", "class_vector.html#a39d6069675db4ecfc1ab81d440da759a", null ],
-    [ "Vector", "class_vector.html#a29140bb48f3502ee49ba34e637ffd5b3", null ],
+    [ "Vector", "class_vector.html#a635364232b5922b7dca5d5d852c4a415", null ],
+    [ "Vector", "class_vector.html#a037208e620fe4ec7e27460327220cab0", null ],
     [ "Vector", "class_vector.html#afb477942fef2f69c69e7e65c3cbed355", null ],
     [ "~Vector", "class_vector.html#afd524fac19e6d3d69db5198ffe2952b0", null ],
     [ "at", "class_vector.html#a8763f2734a80080e2020485a41011862", null ],

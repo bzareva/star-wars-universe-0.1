@@ -2,6 +2,11 @@
 \label{class_string}\index{String@{String}}
 
 
+Realization of basic functionalities from string library.  
+
+
+
+
 {\ttfamily \#include $<$String.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -44,15 +49,15 @@ bool \mbox{\hyperlink{class_string_a31727d03e794df91df61721be5987562}{insert\+\_
 bool \mbox{\hyperlink{class_string_aa7a90d9a9420a64036e5badab5220bc4}{remove\+\_\+at}} (unsigned index)
 \begin{DoxyCompactList}\small\item\em remove element in the given position of array \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_string_ad5390af90b4f8a870172cdcb33009fe2}{fill\+\_\+zeros}} (char $\ast$str)
-\item 
+\begin{DoxyCompactList}\small\item\em If capacity of array if bigger than size, then fills not used memory with \textquotesingle{}\textbackslash{}0\textquotesingle{}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_string_ae5643e76512f5ebfb6362650691b8558}{str\+\_\+cpy}} (char $\ast$dest, const char $\ast$src)
-\item 
+\begin{DoxyCompactList}\small\item\em Copies the string pointed by source into the array pointed by destination, including the terminating null character (and stopping at that point). \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{class_string_a4cf6f5f3279c6c7a4a4a99cef2499a47}{str\+\_\+len}} (const char $\ast$str)
 \item 
 int \mbox{\hyperlink{class_string_a802a7fde7fbbdf9260bc14b266b96d01}{str\+\_\+cmp}} (const char $\ast$str1, const char $\ast$str2)
-\item 
+\begin{DoxyCompactList}\small\item\em Compares the string str1 to the string str2. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_string_a6b13a8f67ef7b2cd2c948961dc71a6a7}{str\+\_\+cat}} (char $\ast$dest, const char $\ast$src)
-\item 
+\begin{DoxyCompactList}\small\item\em Appends the string pointed to by src to the end of the string pointed to by dest. \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{class_string_a6cac67ceea0039ff3fe121c13c488f8d}{convert\+\_\+to\+\_\+integer}} (const char $\ast$str)
 \begin{DoxyCompactList}\small\item\em convert string to integer \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_string_a0645aeb10c4b5ee9eb40a01582959fa1}{convert\+\_\+to\+\_\+double}} (const char $\ast$str)
@@ -78,14 +83,14 @@ const char $\ast$ \mbox{\hyperlink{class_string_aab1dad4bcf081c40e96cd14d68c8daf
 \item 
 std\+::istream \& \mbox{\hyperlink{class_string_a350c3ac3a1559d9f5ece5252e3bbd75f}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_string}{String}} \&str)
 \begin{DoxyCompactList}\small\item\em input from console for string \end{DoxyCompactList}\item 
-std\+::ostream \& \mbox{\hyperlink{class_string_a8d4fc4502dbe58e79a808af17f839c3f}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_string}{String}} \&str)
+\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \& \mbox{\hyperlink{class_string_a8d4fc4502dbe58e79a808af17f839c3f}{operator$<$$<$}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&out, const \mbox{\hyperlink{class_string}{String}} \&str)
 \begin{DoxyCompactList}\small\item\em output to console for string \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_string_a0ca7980da94bb8d8f70b8ef4b0b9edd7}{operator+}} (\mbox{\hyperlink{class_string}{String}} lhs, const \mbox{\hyperlink{class_string}{String}} \&rhs)
 \begin{DoxyCompactList}\small\item\em concatenates two strings \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Realization of basic functionalities from string library 
+Realization of basic functionalities from string library. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_string_abb3412dfeafff4d1e2603d4656c651b8}\label{class_string_abb3412dfeafff4d1e2603d4656c651b8}} 
@@ -207,7 +212,11 @@ convert string to rank
 \doxysubsubsection{\texorpdfstring{fill\_zeros()}{fill\_zeros()}}
 {\footnotesize\ttfamily void String\+::fill\+\_\+zeros (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
 
-If capacity of array if bigger than size, then fills not used memory with \textquotesingle{}\textbackslash{}0\textquotesingle{}. \mbox{\Hypertarget{class_string_a55710e08597df2a2f026ab208a7d15b5}\label{class_string_a55710e08597df2a2f026ab208a7d15b5}} 
+
+
+If capacity of array if bigger than size, then fills not used memory with \textquotesingle{}\textbackslash{}0\textquotesingle{}. 
+
+\mbox{\Hypertarget{class_string_a55710e08597df2a2f026ab208a7d15b5}\label{class_string_a55710e08597df2a2f026ab208a7d15b5}} 
 \index{String@{String}!get\_capacity@{get\_capacity}}
 \index{get\_capacity@{get\_capacity}!String@{String}}
 \doxysubsubsection{\texorpdfstring{get\_capacity()}{get\_capacity()}}
@@ -379,7 +388,11 @@ setter for string
 \doxysubsubsection{\texorpdfstring{str\_cat()}{str\_cat()}}
 {\footnotesize\ttfamily void String\+::str\+\_\+cat (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
 
+
+
 Appends the string pointed to by src to the end of the string pointed to by dest. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em dest} & This is pointer to the destination array, which should contain a string, and should be large enough to contain the concatenated resulting string. \\
 \hline
@@ -392,13 +405,21 @@ Appends the string pointed to by src to the end of the string pointed to by dest
 \doxysubsubsection{\texorpdfstring{str\_cmp()}{str\_cmp()}}
 {\footnotesize\ttfamily int String\+::str\+\_\+cmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2 }\end{DoxyParamCaption})}
 
-Compares the string str1 to the string str2. Return value $<$0 if the first character that does not match has a lower value in ptr1 than in ptr2. Return value 0 if the contents of both strings are equal. Return value $>$0 if the first character that does not match has a greater value in ptr1 than in ptr2. \mbox{\Hypertarget{class_string_ae5643e76512f5ebfb6362650691b8558}\label{class_string_ae5643e76512f5ebfb6362650691b8558}} 
+
+
+Compares the string str1 to the string str2. 
+
+Return value $<$0 if the first character that does not match has a lower value in ptr1 than in ptr2. Return value 0 if the contents of both strings are equal. Return value $>$0 if the first character that does not match has a greater value in ptr1 than in ptr2. \mbox{\Hypertarget{class_string_ae5643e76512f5ebfb6362650691b8558}\label{class_string_ae5643e76512f5ebfb6362650691b8558}} 
 \index{String@{String}!str\_cpy@{str\_cpy}}
 \index{str\_cpy@{str\_cpy}!String@{String}}
 \doxysubsubsection{\texorpdfstring{str\_cpy()}{str\_cpy()}}
 {\footnotesize\ttfamily void String\+::str\+\_\+cpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
 
-Copies the string pointed by source into the array pointed by destination, including the terminating null character (and stopping at that point). \mbox{\Hypertarget{class_string_a4cf6f5f3279c6c7a4a4a99cef2499a47}\label{class_string_a4cf6f5f3279c6c7a4a4a99cef2499a47}} 
+
+
+Copies the string pointed by source into the array pointed by destination, including the terminating null character (and stopping at that point). 
+
+\mbox{\Hypertarget{class_string_a4cf6f5f3279c6c7a4a4a99cef2499a47}\label{class_string_a4cf6f5f3279c6c7a4a4a99cef2499a47}} 
 \index{String@{String}!str\_len@{str\_len}}
 \index{str\_len@{str\_len}!String@{String}}
 \doxysubsubsection{\texorpdfstring{str\_len()}{str\_len()}}
@@ -425,7 +446,7 @@ concatenates two strings
 \index{String@{String}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!String@{String}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&}]{out,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -441,9 +462,3 @@ output to console for string
 
 input from console for string 
 
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_string_8h}{String.\+h}}\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_string_8cpp}{String.\+cpp}}\end{DoxyCompactItemize}

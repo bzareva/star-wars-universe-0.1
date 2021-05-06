@@ -1,0 +1,275 @@
+The benchmarks are done with \href{../../scripts/bench/bench.py}{\texttt{ {\bfseries{this}}}} script using CMake. There are 3 benchmarking scenarios\+:
+
+
+\begin{DoxyItemize}
+\item \href{\#cost-of-including-the-header}{\texttt{ the cost of including the header}}
+\item \href{\#cost-of-an-assertion-macro}{\texttt{ the cost of an assertion macro}}
+\item \href{\#runtime-benchmarks}{\texttt{ runtime speed of lots of asserts}}
+\end{DoxyItemize}
+
+Compilers used\+:
+
+
+\begin{DoxyItemize}
+\item WINDOWS\+: Microsoft Visual Studio Community 2017 -\/ Version 15.\+8.\+1+28010.\+2003
+\item WINDOWS\+: gcc 8.\+1.\+0 (x86\+\_\+64-\/posix-\/seh-\/rev0, Built by Min\+GW-\/\+W64 project)
+\item LINUX\+: gcc 6.\+3.\+0 20170406 (Ubuntu 6.\+3.\+0-\/12ubuntu2)
+\item LINUX\+: clang 4.\+0.\+0-\/1 (tags/\+RELEASE\+\_\+400/rc1) Target\+: x86\+\_\+64-\/pc-\/linux-\/gnu
+\end{DoxyItemize}
+
+Environment used (Intel i7 3770k, 16g RAM)\+:
+
+
+\begin{DoxyItemize}
+\item Windows 7 -\/ on an SSD
+\item Ubuntu 17.\+04 in a Virtual\+Box VM -\/ on a HDD
+\end{DoxyItemize}
+
+{\bfseries{doctest}} version\+: 2.\+2.\+0 (released on 2018.\+12.\+02)
+
+\href{https://github.com/catchorg/Catch2}{\texttt{ {\bfseries{Catch}}}} version\+: 2.\+3.\+0 (released on 2018.\+07.\+22)\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md58}{}\doxysection{Compile time benchmarks}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md58}
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md59}{}\doxysubsection{Cost of including the header}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md59}
+This is a benchmark that is relevant only to single header and header only frameworks -\/ like {\bfseries{doctest}} and \href{https://github.com/catchorg/Catch2}{\texttt{ {\bfseries{Catch}}}}.
+
+The script generates 201 source files and in 200 of them makes a function in the form of {\ttfamily int f135() \{ return 135; \}} and in {\ttfamily main.\+cpp} it forward declares all the 200 such dummy functions and accumulates their result to return from the {\ttfamily \mbox{\hyperlink{doctest_2examples_2all__features_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main()}}} function. This is done to ensure that all source files are built and that the linker doesn\textquotesingle{}t remove/optimize anything.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{baseline}} -\/ how much time the source files need for a single threaded build with {\ttfamily msbuild}/{\ttfamily make}
+\item {\bfseries{+ implement}} -\/ only in {\ttfamily main.\+cpp} the header is included with a {\ttfamily \#define} before it so the test runner gets implemented\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{\#define DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}
+\DoxyCodeLine{\#include "{}doctest.h"{}}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item {\bfseries{+ header everywhere}} -\/ the framework header is also included in all the other source files
+\item {\bfseries{+ disabled}} -\/ remove everything testing-\/related from the binary
+\end{DoxyItemize}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ doctest   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ baseline   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + implement   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + header everywhere   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + disabled    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ doctest   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ baseline   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + implement   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + header everywhere   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + disabled    }\\\cline{1-5}
+\endhead
+MSVC Debug   &4.\+89   &6.\+21   &8.\+33   &6.\+39    \\\cline{1-5}
+MSVC Release   &4.\+38   &6.\+39   &8.\+71   &6.\+02    \\\cline{1-5}
+Min\+GW GCC Debug   &8.\+12   &10.\+86   &14.\+73   &10.\+17    \\\cline{1-5}
+Min\+GW GCC Release   &8.\+21   &11.\+11   &15.\+03   &10.\+71    \\\cline{1-5}
+Linux GCC Debug   &4.\+20   &6.\+23   &9.\+81   &6.\+24    \\\cline{1-5}
+Linux GCC Release   &4.\+29   &6.\+93   &11.\+05   &6.\+76    \\\cline{1-5}
+Linux Clang Debug   &8.\+70   &10.\+02   &14.\+43   &11.\+13    \\\cline{1-5}
+Linux Clang Release   &9.\+30   &11.\+68   &16.\+20   &11.\+58   \\\cline{1-5}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Catch   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ baseline   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + implement   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + header everywhere   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + disabled    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Catch   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ baseline   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + implement   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + header everywhere   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + disabled    }\\\cline{1-5}
+\endhead
+MSVC Debug   &4.\+82   &7.\+83   &88.\+85   &88.\+72    \\\cline{1-5}
+MSVC Release   &4.\+38   &9.\+97   &87.\+17   &88.\+35    \\\cline{1-5}
+Min\+GW GCC Debug   &8.\+00   &57.\+28   &137.\+28   &132.\+73    \\\cline{1-5}
+Min\+GW GCC Release   &8.\+38   &22.\+94   &97.\+17   &97.\+22    \\\cline{1-5}
+Linux GCC Debug   &4.\+42   &15.\+57   &97.\+94   &97.\+18    \\\cline{1-5}
+Linux GCC Release   &4.\+50   &19.\+59   &99.\+48   &100.\+75    \\\cline{1-5}
+Linux Clang Debug   &8.\+76   &15.\+60   &107.\+99   &110.\+61    \\\cline{1-5}
+Linux Clang Release   &9.\+32   &25.\+75   &118.\+67   &117.\+11   \\\cline{1-5}
+\end{longtabu}
+
+
+ \hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md60}{}\doxysubsubsection{Conclusion}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md60}
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md61}{}\doxyparagraph{doctest}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md61}
+
+\begin{DoxyItemize}
+\item instantiating the test runner in one source file costs $\sim$1-\/3 seconds {\ttfamily implement -\/ baseline}
+\item the inclusion of {\ttfamily doctest.\+h} in one source file costs between 11ms -\/ 23ms {\ttfamily (header\+\_\+everywhere -\/ implement) / 200}
+\item including the library everywhere but everything disabled costs around 2 seconds {\ttfamily disabled -\/ baseline} for 200 files
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md62}{}\doxyparagraph{$<$a href=\char`\"{}https\+://github.\+com/catchorg/\+Catch2\char`\"{}$>$\+Catch$<$/a$>$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md62}
+
+\begin{DoxyItemize}
+\item instantiating the test runner in one source file costs $\sim$3-\/50 seconds {\ttfamily implement -\/ baseline}
+\item the inclusion of {\ttfamily catch.\+hpp} in one source file costs between 380ms -\/ 470ms {\ttfamily (header\+\_\+everywhere -\/ implement) / 200}
+\item using the config option to disable the library ($\ast$$\ast${\ttfamily CATCH\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$) has no effect on the header cost
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+So if {\ttfamily doctest.\+h} costs 11ms and {\ttfamily catch.\+hpp} costs 400ms on MSVC -\/ then the {\bfseries{doctest}} header is $>$$>$ {\bfseries{36}} $<$$<$ times lighter (for MSVC)!
+
+\DoxyHorRuler{0}
+
+
+The results are in seconds and are in {\bfseries{no way}} intended to bash \href{https://github.com/catchorg/Catch2}{\texttt{ {\bfseries{Catch}}}} -\/ the {\bfseries{doctest}} framework wouldn\textquotesingle{}t exist without it.
+
+The reason the {\bfseries{doctest}} header is so light on compile times is because it forward declares everything and doesn\textquotesingle{}t drag any headers in the source files (except for the source file where the test runner gets implemented). This was a key design decision.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md65}{}\doxysubsection{Cost of an assertion macro}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md65}
+The script generates 11 {\ttfamily .cpp} files and in 10 of them makes 50 test cases with 100 asserts in them (of the form {\ttfamily CHECK(a==b)} where {\ttfamily a} and {\ttfamily b} are always the same {\ttfamily int} variables) -\/ {\bfseries{50k}} asserts! The testing framework gets implemented in {\ttfamily main.\+cpp}.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{baseline}} -\/ how much time a single threaded build takes with the header included everywhere -\/ no test cases or asserts!
+\item {\ttfamily CHECK(a==b)} -\/ will add {\ttfamily \mbox{\hyperlink{doctest_2doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK()}}} asserts which decompose the expression with template machinery
+\end{DoxyItemize}
+
+{\bfseries{doctest}} specific\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{+fast 1}} -\/ will add \href{configuration.md\#doctest_config_super_fast_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+SUPER\+\_\+\+FAST\+\_\+\+ASSERTS}$\ast$$\ast$}} to speed up the compilation of the normal asserts {\ttfamily CHECK(a==b)}
+\item {\ttfamily \mbox{\hyperlink{doctest__fwd_8h_acab009b596160e614aec1ace5aa8560b}{CHECK\+\_\+\+EQ(a,b)}}} -\/ will use {\ttfamily \mbox{\hyperlink{doctest__fwd_8h_acab009b596160e614aec1ace5aa8560b}{CHECK\+\_\+\+EQ(a,b)}}} instead of the expression decomposing ones
+\item {\bfseries{+fast 2}} -\/ will add \href{configuration.md\#doctest_config_super_fast_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+SUPER\+\_\+\+FAST\+\_\+\+ASSERTS}$\ast$$\ast$}} to speed up the compilation of the binary asserts {\ttfamily \mbox{\hyperlink{doctest__fwd_8h_acab009b596160e614aec1ace5aa8560b}{CHECK\+\_\+\+EQ(a,b)}}}
+\item {\bfseries{+disabled}} -\/ all test case and assert macros will be disabled with \href{configuration.md\#doctest_config_disable}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$}}
+\end{DoxyItemize}
+
+\href{https://github.com/catchorg/Catch2}{\texttt{ {\bfseries{Catch}}}} specific\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{+fast}} -\/ will add \href{https://github.com/catchorg/Catch2/blob/master/docs/configuration.md\#catch_config_fast_compile}{\texttt{ $\ast$$\ast${\ttfamily CATCH\+\_\+\+CONFIG\+\_\+\+FAST\+\_\+\+COMPILE}$\ast$$\ast$}} which speeds up the compilation of the normal asserts {\ttfamily CHECK(a==b)}
+\item {\bfseries{+disabled}} -\/ all test case and assert macros will be disabled with $\ast$$\ast${\ttfamily CATCH\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$
+\end{DoxyItemize}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{7}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ doctest   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ baseline   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily CHECK(a==b)}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +fast 1   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily \mbox{\hyperlink{doctest__fwd_8h_acab009b596160e614aec1ace5aa8560b}{CHECK\+\_\+\+EQ(a,b)}}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +fast 2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +disabled    }\\\cline{1-7}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ doctest   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ baseline   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily CHECK(a==b)}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +fast 1   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily \mbox{\hyperlink{doctest__fwd_8h_acab009b596160e614aec1ace5aa8560b}{CHECK\+\_\+\+EQ(a,b)}}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +fast 2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +disabled    }\\\cline{1-7}
+\endhead
+MSVC Debug   &2.\+69   &27.\+37   &10.\+37   &17.\+17   &4.\+82   &1.\+91    \\\cline{1-7}
+MSVC Release   &3.\+15   &58.\+73   &20.\+73   &26.\+07   &6.\+43   &1.\+83    \\\cline{1-7}
+Min\+GW GCC Debug   &3.\+78   &97.\+29   &43.\+05   &59.\+86   &11.\+88   &1.\+67    \\\cline{1-7}
+Min\+GW GCC Release   &4.\+09   &286.\+70   &95.\+42   &156.\+73   &18.\+16   &2.\+03    \\\cline{1-7}
+Linux GCC Debug   &2.\+39   &91.\+36   &41.\+92   &52.\+26   &10.\+16   &1.\+32    \\\cline{1-7}
+Linux GCC Release   &3.\+29   &257.\+40   &97.\+46   &128.\+84   &19.\+38   &1.\+79    \\\cline{1-7}
+Linux Clang Debug   &2.\+40   &85.\+52   &43.\+53   &51.\+24   &8.\+32   &1.\+62    \\\cline{1-7}
+Linux Clang Release   &3.\+40   &160.\+65   &79.\+34   &81.\+52   &11.\+90   &1.\+82   \\\cline{1-7}
+\end{longtabu}
+
+
+And here is \href{https://github.com/catchorg/Catch2}{\texttt{ {\bfseries{Catch}}}} which only has normal {\ttfamily CHECK(a==b)} asserts\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Catch   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ baseline   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily CHECK(a==b)}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +fast   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +disabled    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Catch   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ baseline   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily CHECK(a==b)}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +fast   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ +disabled    }\\\cline{1-5}
+\endhead
+MSVC Debug   &8.\+20   &31.\+22   &25.\+54   &8.\+22    \\\cline{1-5}
+MSVC Release   &10.\+13   &448.\+68   &168.\+67   &10.\+20    \\\cline{1-5}
+Min\+GW GCC Debug   &53.\+54   &152.\+38   &131.\+85   &49.\+07    \\\cline{1-5}
+Min\+GW GCC Release   &19.\+26   &590.\+16   &466.\+69   &18.\+99    \\\cline{1-5}
+Linux GCC Debug   &15.\+05   &117.\+30   &95.\+33   &14.\+79    \\\cline{1-5}
+Linux GCC Release   &18.\+77   &608.\+94   &482.\+73   &18.\+96    \\\cline{1-5}
+Linux Clang Debug   &12.\+27   &94.\+39   &77.\+33   &12.\+11    \\\cline{1-5}
+Linux Clang Release   &20.\+75   &545.\+84   &506.\+02   &20.\+15   \\\cline{1-5}
+\end{longtabu}
+
+
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md66}{}\doxysubsubsection{Conclusion}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md66}
+{\bfseries{doctest}}\+:
+
+
+\begin{DoxyItemize}
+\item is between 0 and 8 times faster than \href{https://github.com/catchorg/Catch2}{\texttt{ {\bfseries{Catch}}}} when using normal expression decomposing {\ttfamily CHECK(a==b)} asserts
+\item asserts of the form {\ttfamily \mbox{\hyperlink{doctest__fwd_8h_acab009b596160e614aec1ace5aa8560b}{CHECK\+\_\+\+EQ(a,b)}}} with no expression decomposition -\/ around 31-\/63\% faster than {\ttfamily CHECK(a==b)}
+\item the \href{configuration.md\#doctest_config_super_fast_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+SUPER\+\_\+\+FAST\+\_\+\+ASSERTS}$\ast$$\ast$}} identifier makes the normal asserts faster by 57-\/68\%
+\item the \href{configuration.md\#doctest_config_super_fast_asserts}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+SUPER\+\_\+\+FAST\+\_\+\+ASSERTS}$\ast$$\ast$}} identifier makes the binary asserts even faster by another 84-\/91\%
+\item using the \href{configuration.md\#doctest_config_disable}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$}} identifier the asserts just disappear as if they were never written -\/ even lower than the baseline (because most of the implementation is also gone)
+\end{DoxyItemize}
+
+\href{https://github.com/catchorg/Catch2}{\texttt{ {\bfseries{Catch}}}}\+:
+
+
+\begin{DoxyItemize}
+\item using \href{https://github.com/catchorg/Catch2/blob/master/docs/configuration.md\#catch_config_fast_compile}{\texttt{ $\ast$$\ast${\ttfamily CATCH\+\_\+\+CONFIG\+\_\+\+FAST\+\_\+\+COMPILE}$\ast$$\ast$}} results in 10-\/30\% faster build times for asserts (and in one case 73\%).
+\item using the $\ast$$\ast${\ttfamily CATCH\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$ identifier provides the same great benefits for assert macros as the doctest version (\href{configuration.md\#doctest_config_disable}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$}}) -\/ but not for the header cost
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md67}{}\doxysubsection{Runtime benchmarks}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md67}
+The runtime benchmarks consist of a single test case with a loop of 10 million iterations performing the task -\/ a single normal assert (using expression decomposition) or the assert + the logging of the loop iterator {\ttfamily i}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{for(int i = 0; i < 10000000; ++i)}
+\DoxyCodeLine{    CHECK(i == i);}
+
+\end{DoxyCode}
+
+
+or
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{for(int i = 0; i < 10000000; ++i) \{}
+\DoxyCodeLine{    INFO(i);}
+\DoxyCodeLine{    CHECK(i == i);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Note that the assert always passes -\/ the goal should be to optimize for the common case -\/ lots of passing test cases and a few that maybe fail.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{7}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ doctest   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ assert   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + info   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Catch   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ assert   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + info    }\\\cline{1-7}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ doctest   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ assert   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + info   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Catch   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ assert   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ + info    }\\\cline{1-7}
+\endhead
+MSVC Debug   &4.\+00   &11.\+41   &&MSVC Debug   &5.\+60   &213.\+91    \\\cline{1-7}
+MSVC Release   &0.\+40   &1.\+47   &&MSVC Release   &0.\+76   &7.\+60    \\\cline{1-7}
+Min\+GW GCC Debug   &1.\+05   &2.\+93   &&Min\+GW GCC Debug   &1.\+17   &9.\+54    \\\cline{1-7}
+Min\+GW GCC Release   &0.\+34   &1.\+27   &&Min\+GW GCC Release   &0.\+36   &4.\+28    \\\cline{1-7}
+Linux GCC Debug   &1.\+24   &2.\+34   &&Linux GCC Debug   &1.\+44   &9.\+69    \\\cline{1-7}
+Linux GCC Release   &0.\+29   &0.\+52   &&Linux GCC Release   &0.\+29   &3.\+60    \\\cline{1-7}
+Linux Clang Debug   &1.\+15   &2.\+38   &&Linux Clang Debug   &1.\+21   &9.\+91    \\\cline{1-7}
+Linux Clang Release   &0.\+28   &0.\+50   &&Linux Clang Release   &0.\+32   &3.\+27   \\\cline{1-7}
+\end{longtabu}
+
+
+ \hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md68}{}\doxysubsubsection{Conclusion}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks_autotoc_md68}
+{\bfseries{doctest}} is around $\sim$20\% faster than catch for asserts but a few times faster when also logging variables and context (and in the case of one particular compiler over 18 times faster).
+
+\DoxyHorRuler{0}
+
+
+The bar charts were generated using \href{https://docs.google.com/spreadsheets/d/1p3MAURUfPzKT7gtJOVuJU2_yVKSqkoD1nbypA1K3618}{\texttt{ {\bfseries{this google spreadsheet}}}} by pasting the data from the tables.
+
+If you want a benchmark that is not synthetic -\/ check out \href{http://baptiste-wicht.com/posts/2016/09/blazing-fast-unit-test-compilation-with-doctest-11.html}{\texttt{ {\bfseries{this blog post}}}} of \href{https://github.com/wichtounet}{\texttt{ {\bfseries{Baptiste Wicht}}}} who tested the compile times of the asserts in the 1.\+1 release with his \href{https://github.com/wichtounet/etl}{\texttt{ {\bfseries{Expression Templates Library}}}}!
+
+While reading the post -\/ keep in mind that if a part of a process takes 50\% of the time and is made 10000 times faster -\/ the overall process would still be only roughly 50\% faster.
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+

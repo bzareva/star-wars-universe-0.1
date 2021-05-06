@@ -2,6 +2,11 @@
 \label{class_jedi}\index{Jedi@{Jedi}}
 
 
+Describes a \mbox{\hyperlink{class_jedi}{Jedi}}.  
+
+
+
+
 {\ttfamily \#include $<$Jedi.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -9,7 +14,7 @@
 \item 
 \mbox{\hyperlink{class_jedi_a3da57811f8332a961022a13640497098}{Jedi}} (std\+::ifstream \&fin)
 \begin{DoxyCompactList}\small\item\em constructor with parameter from type ifstream for load to text file \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_jedi_ae36510f0d83452f015394f7c706d2eb6}{Jedi}} (unsigned age=56, double force=34.\+43, \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} rank=\mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbeda0ba6b3e081e425348f232dac757a86a9}{Rank\+::\+YOUNGLING}}, \mbox{\hyperlink{class_string}{String}} name=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+jedi\char`\"{}), String color\+\_\+of\+\_\+lightsaber=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+lightsaber\char`\"{}))
+\mbox{\hyperlink{class_jedi_acfc23cab314ceb195531bc5e559b0f2f}{Jedi}} (const unsigned \&age=56, const double \&force=34.\+43, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&rank=\mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbeda0ba6b3e081e425348f232dac757a86a9}{Rank\+::\+YOUNGLING}}, const \mbox{\hyperlink{class_string}{String}} \&\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+jedi\char`\"{}), const \mbox{\hyperlink{class_string}{String}} \&color\+\_\+of\+\_\+lightsaber=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+lightsaber\char`\"{}))
 \begin{DoxyCompactList}\small\item\em constructor with parameters, each of them has default values \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jedi_a4034eeede584f1033b235258a2fa8406}{Jedi}} (const \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
 \begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
@@ -40,7 +45,7 @@ void \mbox{\hyperlink{class_jedi_a7d1295bb2962ef8f0dadf235e5655010}{set\+\_\+age
 \begin{DoxyCompactList}\small\item\em setter for age of jedi \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jedi_a04415393f703f155dd16845d74f0960f}{set\+\_\+force}} (const double \&force)
 \begin{DoxyCompactList}\small\item\em setter for force of jedi \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_jedi_a732a5c86e29a2e51c95a463f46e92c6f}{set\+\_\+name\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&name)
+void \mbox{\hyperlink{class_jedi_a732a5c86e29a2e51c95a463f46e92c6f}{set\+\_\+name\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}})
 \begin{DoxyCompactList}\small\item\em setter for name of jedi \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jedi_aeed546e79af702c9b6a112a22bd08753}{set\+\_\+color\+\_\+of\+\_\+lightsaber}} (const \mbox{\hyperlink{class_string}{String}} \&color\+\_\+of\+\_\+lightsaber)
 \begin{DoxyCompactList}\small\item\em setter for color of lightsaber of jedi \end{DoxyCompactList}\item 
@@ -66,12 +71,12 @@ static \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_jedi_a70ce
 \item 
 std\+::istream \& \mbox{\hyperlink{class_jedi_aa0531f1879157b772dd3e89b94fcd114}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
 \begin{DoxyCompactList}\small\item\em input from console for jedi \end{DoxyCompactList}\item 
-std\+::ostream \& \mbox{\hyperlink{class_jedi_a404582e070fe1e18095b681aee3f21e4}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
+\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \& \mbox{\hyperlink{class_jedi_a404582e070fe1e18095b681aee3f21e4}{operator$<$$<$}} (\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&out, const \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
 \begin{DoxyCompactList}\small\item\em formatted output for jedi on console \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Describes a \mbox{\hyperlink{class_jedi}{Jedi}} 
+Describes a \mbox{\hyperlink{class_jedi}{Jedi}}. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_jedi_a3da57811f8332a961022a13640497098}\label{class_jedi_a3da57811f8332a961022a13640497098}} 
@@ -84,11 +89,11 @@ Describes a \mbox{\hyperlink{class_jedi}{Jedi}}
 
 constructor with parameter from type ifstream for load to text file 
 
-\mbox{\Hypertarget{class_jedi_ae36510f0d83452f015394f7c706d2eb6}\label{class_jedi_ae36510f0d83452f015394f7c706d2eb6}} 
+\mbox{\Hypertarget{class_jedi_acfc23cab314ceb195531bc5e559b0f2f}\label{class_jedi_acfc23cab314ceb195531bc5e559b0f2f}} 
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{Jedi()}{Jedi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Jedi\+::\+Jedi (\begin{DoxyParamCaption}\item[{unsigned}]{age = {\ttfamily 56},  }\item[{double}]{force = {\ttfamily 34.43},  }\item[{\mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}}}]{rank = {\ttfamily \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbeda0ba6b3e081e425348f232dac757a86a9}{Rank\+::\+YOUNGLING}}},  }\item[{\mbox{\hyperlink{class_string}{String}}}]{name = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+jedi\char`\"{})},  }\item[{\mbox{\hyperlink{class_string}{String}}}]{color\+\_\+of\+\_\+lightsaber = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+lightsaber\char`\"{})} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Jedi\+::\+Jedi (\begin{DoxyParamCaption}\item[{const unsigned \&}]{age = {\ttfamily 56},  }\item[{const double \&}]{force = {\ttfamily 34.43},  }\item[{const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{rank = {\ttfamily \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbeda0ba6b3e081e425348f232dac757a86a9}{Rank\+::\+YOUNGLING}}},  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{name = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+jedi\char`\"{})},  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{color\+\_\+of\+\_\+lightsaber = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+lightsaber\char`\"{})} }\end{DoxyParamCaption})}
 
 
 
@@ -327,7 +332,7 @@ outputs formatted information for jedi on {\itshape file} ~\newline
 \index{Jedi@{Jedi}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_jedi}{Jedi}} \&}]{oth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{doctest__fwd_8h_a116af65cb5e924b33ad9d9ecd7a783f3}{std\+::ostream}} \&}]{out,  }\item[{const \mbox{\hyperlink{class_jedi}{Jedi}} \&}]{oth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -343,9 +348,3 @@ formatted output for jedi on console
 
 input from console for jedi 
 
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_jedi_8h}{Jedi.\+h}}\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_jedi_8cpp}{Jedi.\+cpp}}\end{DoxyCompactItemize}

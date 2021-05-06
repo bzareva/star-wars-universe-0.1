@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cstring_5fnamespace_104',['cstring_namespace',['../namespacecstring__namespace.html',1,'']]]
+  ['bar_1350',['Bar',['../namespace_bar.html',1,'']]],
+  ['bench_1351',['bench',['../namespacebench.html',1,'']]]
 ];

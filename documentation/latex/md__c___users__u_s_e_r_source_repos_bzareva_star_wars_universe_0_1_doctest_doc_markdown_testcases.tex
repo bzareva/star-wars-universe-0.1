@@ -1,0 +1,203 @@
+While {\bfseries{doctest}} fully supports the traditional, x\+Unit, style of class-\/based fixtures containing test case methods this is not the preferred style. Instead {\bfseries{doctest}} provides a powerful mechanism for nesting subcases within a test case. For a more detailed discussion and examples see the \href{tutorial.md\#test-cases-and-subcases}{\texttt{ {\bfseries{tutorial}}}}.
+
+Test cases and subcases are very easy to use in practice\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{TEST\+\_\+\+CASE($\ast$$\ast$ {\itshape test name} $\ast$$\ast$)}}
+\item {\bfseries{SUBCASE($\ast$$\ast$ {\itshape subcase name} $\ast$$\ast$)}}
+\end{DoxyItemize}
+
+{\itshape test name} and {\itshape subcase name} are free form, quoted, strings. Test names don\textquotesingle{}t have to be unique within the {\bfseries{doctest}} executable. They should also be string literals.
+
+It is possible to write test cases inside of class bodies in C++17 with the help of {\ttfamily \mbox{\hyperlink{doctest_2doctest_8h_afbb012c604e265d1e1e7b5279180d691}{TEST\+\_\+\+CASE\+\_\+\+CLASS()}}} -\/ used just like {\ttfamily \mbox{\hyperlink{doctest_2doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\+\_\+\+CASE()}}} -\/ making testing private parts of classes easier.
+
+Keep in mind that even though {\bfseries{doctest}} is \href{faq.md\#is-doctest-thread-aware}{\texttt{ {\bfseries{thread-\/safe}}}} -\/ using subcases has to be done only in the main test runner thread.
+
+Test cases can also be parameterized -\/ see the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_parameterized_tests}{$\ast$$\ast$documentation$\ast$$\ast$}}
+
+Test cases and subcases can be filtered through the use of the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$command line$\ast$$\ast$}}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases_autotoc_md168}{}\doxysection{BDD-\/style test cases}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases_autotoc_md168}
+In addition to {\bfseries{doctest}}\textquotesingle{}s take on the classic style of test cases, {\bfseries{doctest}} supports an alternative syntax that allow tests to be written as \char`\"{}executable specifications\char`\"{} (one of the early goals of \href{http://dannorth.net/introducing-bdd/}{\texttt{ Behaviour Driven Development}}). This set of macros map on to {\ttfamily TEST\+\_\+\+CASE}s and {\ttfamily SUBCASE}s, with a little internal support to make them smoother to work with.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SCENARIO($\ast$$\ast$ {\itshape scenario name} $\ast$$\ast$)}}
+\end{DoxyItemize}
+
+This macro maps onto {\ttfamily TEST\+\_\+\+CASE} and works in the same way, except that the test case name will be prefixed by \char`\"{}\+Scenario\+: \char`\"{}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SCENARIO\+\_\+\+TEMPLATE($\ast$$\ast$ {\itshape scenario name}, {\itshape type}, {\itshape list of types} $\ast$$\ast$)}}
+\end{DoxyItemize}
+
+This macro maps onto {\ttfamily TEST\+\_\+\+CASE\+\_\+\+TEMPLATE} and works in the same way, except that the test case name will be prefixed by \char`\"{}\+Scenario\+: \char`\"{}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SCENARIO\+\_\+\+TEMPLATE\+\_\+\+DEFINE($\ast$$\ast$ {\itshape scenario name}, {\itshape type}, {\itshape id} $\ast$$\ast$)}}
+\end{DoxyItemize}
+
+This macro maps onto {\ttfamily TEST\+\_\+\+CASE\+\_\+\+TEMPLATE\+\_\+\+DEFINE} and works in the same way, except that the test case name will be prefixed by \char`\"{}\+Scenario\+: \char`\"{}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GIVEN($\ast$$\ast$ {\itshape something} $\ast$$\ast$)}}
+\item {\bfseries{WHEN($\ast$$\ast$ {\itshape something} $\ast$$\ast$)}}
+\item {\bfseries{THEN($\ast$$\ast$ {\itshape something} $\ast$$\ast$)}}
+\end{DoxyItemize}
+
+These macros map onto {\ttfamily SUBCASE}s except that the subcase names are the \+\_\+something\+\_\+s prefixed by \char`\"{}given\+: \char`\"{}, \char`\"{}when\+: \char`\"{} or \char`\"{}then\+: \char`\"{} respectively.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{AND\+\_\+\+WHEN($\ast$$\ast$ {\itshape something} $\ast$$\ast$)}}
+\item {\bfseries{AND\+\_\+\+THEN($\ast$$\ast$ {\itshape something} $\ast$$\ast$)}}
+\end{DoxyItemize}
+
+Similar to {\ttfamily WHEN} and {\ttfamily THEN} except that the prefixes start with \char`\"{}and \char`\"{}. These are used to chain {\ttfamily WHEN}s and {\ttfamily THEN}s together.
+
+When any of these macros are used the console reporter recognises them and formats the test case header such that the Givens, Whens and Thens are aligned to aid readability.
+
+Other than the additional prefixes and the formatting in the console reporter these macros behave exactly as {\ttfamily TEST\+\_\+\+CASE}s and {\ttfamily SUBCASE}s. As such there is nothing enforcing the correct sequencing of these macros -\/ that\textquotesingle{}s up to the programmer!
+
+Note that when using the \href{https://github.com/onqtam/doctest/blob/master/doc/markdown/commandline.md}{\texttt{ {\ttfamily -\/-\/test-\/case=$<$filters$>$}}} command line option (or {\ttfamily -\/-\/subcase=$<$filters$>$}) you will have to pass the prefix {\ttfamily Scenario\+:} as well.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases_autotoc_md169}{}\doxysection{Test fixtures}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases_autotoc_md169}
+Although {\bfseries{doctest}} allows you to group tests together as subcases within a test case, it can still be convenient, sometimes, to group them using a more traditional test fixture. {\bfseries{doctest}} fully supports this too. You define the test fixture as a simple structure\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{class UniqueTestsFixture \{}
+\DoxyCodeLine{private:}
+\DoxyCodeLine{    static int uniqueID;}
+\DoxyCodeLine{protected:}
+\DoxyCodeLine{    DBConnection conn;}
+\DoxyCodeLine{public:}
+\DoxyCodeLine{    UniqueTestsFixture() : conn(DBConnection::createConnection("{}myDB"{})) \{\}}
+\DoxyCodeLine{protected:}
+\DoxyCodeLine{    int getID() \{}
+\DoxyCodeLine{        return ++uniqueID;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{int UniqueTestsFixture::uniqueID = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{TEST\_CASE\_FIXTURE(UniqueTestsFixture, "{}Create Employee/No Name"{}) \{}
+\DoxyCodeLine{    REQUIRE\_THROWS(conn.executeSQL("{}INSERT INTO employee (id, name) VALUES (?, ?)"{}, getID(), "{}"{}));}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{TEST\_CASE\_FIXTURE(UniqueTestsFixture, "{}Create Employee/Normal"{}) \{}
+\DoxyCodeLine{    REQUIRE(conn.executeSQL("{}INSERT INTO employee (id, name) VALUES (?, ?)"{}, getID(), "{}Joe Bloggs"{}));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The two test cases here will create uniquely-\/named derived classes of Unique\+Tests\+Fixture and thus can access the {\ttfamily get\+ID()} protected method and {\ttfamily conn} member variables. This ensures that both the test cases are able to create a DBConnection using the same method (DRY principle) and that any ID\textquotesingle{}s created are unique such that the order that tests are executed does not matter.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases_autotoc_md170}{}\doxysection{Test suites}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases_autotoc_md170}
+Test cases can be grouped into test suites. This is done with {\ttfamily \mbox{\hyperlink{doctest_2doctest_8h_af640e6ea35d0c6511986d40ce36e2afc}{TEST\+\_\+\+SUITE()}}} or {\ttfamily \mbox{\hyperlink{test__cases__and__suites_8cpp_a252d32cb70bc04b59629e3444f08da51}{TEST\+\_\+\+SUITE\+\_\+\+BEGIN()}}} / {\ttfamily \mbox{\hyperlink{test__cases__and__suites_8cpp_a823ac6ae08cbaca8576ca97727045140}{TEST\+\_\+\+SUITE\+\_\+\+END()}}}.
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{TEST\_CASE("{}"{}) \{\} // not part of any test suite}
+\DoxyCodeLine{}
+\DoxyCodeLine{TEST\_SUITE("{}math"{}) \{}
+\DoxyCodeLine{    TEST\_CASE("{}"{}) \{\} // part of the math test suite}
+\DoxyCodeLine{    TEST\_CASE("{}"{}) \{\} // part of the math test suite}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{TEST\_SUITE\_BEGIN("{}utils"{});}
+\DoxyCodeLine{}
+\DoxyCodeLine{TEST\_CASE("{}"{}) \{\} // part of the utils test suite}
+\DoxyCodeLine{}
+\DoxyCodeLine{TEST\_SUITE\_END();}
+\DoxyCodeLine{}
+\DoxyCodeLine{TEST\_CASE("{}"{}) \{\} // not part of any test suite}
+
+\end{DoxyCode}
+
+
+Then test cases from specific test suites can be executed with the help of filters -\/ check out the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$command line$\ast$$\ast$}}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases_autotoc_md171}{}\doxysection{Decorators}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases_autotoc_md171}
+Test cases can be {\itshape decorated} with additional attributes like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{TEST\_CASE("{}name"{}}
+\DoxyCodeLine{          * doctest::description("{}shouldn't take more than 500ms"{})}
+\DoxyCodeLine{          * doctest::timeout(0.5)) \{}
+\DoxyCodeLine{    // asserts}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Multiple decorators can be used at the same time. These are the currently supported decorators\+:
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast${\ttfamily skip(bool = true)}$\ast$$\ast$ -\/ marks the test case to be skipped from execution -\/ unless the {\ttfamily -\/-\/no-\/skip} option is used
+\item $\ast$$\ast${\ttfamily no\+\_\+breaks(bool = true)}$\ast$$\ast$ -\/ no breaking into the debugger for asserts in the test case -\/ useful in combination with {\ttfamily may\+\_\+fail}/{\ttfamily should\+\_\+fail}/{\ttfamily expected\+\_\+failures}
+\item $\ast$$\ast${\ttfamily no\+\_\+output(bool = true)}$\ast$$\ast$ -\/ no output from asserts in the test case -\/ useful in combination with {\ttfamily may\+\_\+fail}/{\ttfamily should\+\_\+fail}/{\ttfamily expected\+\_\+failures}
+\item $\ast$$\ast${\ttfamily may\+\_\+fail(bool = true)}$\ast$$\ast$ -\/ doesn\textquotesingle{}t fail the test if any given assertion fails (but still reports it) -\/ this can be useful to flag a work-\/in-\/progress, or a known issue that you don\textquotesingle{}t want to immediately fix but still want to track in the your tests
+\item $\ast$$\ast${\ttfamily should\+\_\+fail(bool = true)}$\ast$$\ast$ -\/ like $\ast$$\ast${\ttfamily may\+\_\+fail()}$\ast$$\ast$ but fails the test if it passes -\/ his can be useful if you want to be notified of accidental, or third-\/party, fixes
+\item $\ast$$\ast${\ttfamily expected\+\_\+failures(int)}$\ast$$\ast$ -\/ defines the number of assertions that are expected to fail within the test case -\/ reported as failure when the number of failed assertions is different than the declared expected number of failures
+\item $\ast$$\ast${\ttfamily timeout(double)}$\ast$$\ast$ -\/ fails the test case if its execution exceeds this limit (in seconds) -\/ but doesn\textquotesingle{}t terminate it -\/ that would require subprocess support
+\item $\ast$$\ast${\ttfamily test\+\_\+suite(\char`\"{}name\char`\"{})}$\ast$$\ast$ -\/ can be used on test cases to override (or just set) the test suite they are in
+\item $\ast$$\ast${\ttfamily description(\char`\"{}text\char`\"{})}$\ast$$\ast$ -\/ a description of the test case
+\end{DoxyItemize}
+
+The values that the decorators take are computed while registering the test cases (during global initialization) -\/ before entering {\ttfamily \mbox{\hyperlink{doctest_2examples_2all__features_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main()}}} and not just before running them.
+
+Decorators can also be applied to test suite blocks and all test cases in that block inherit them\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{TEST\_SUITE("{}some TS"{} * doctest::description("{}all tests will have this"{})) \{}
+\DoxyCodeLine{    TEST\_CASE("{}has a description from the surrounding test suite"{}) \{}
+\DoxyCodeLine{        // asserts}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{TEST\_SUITE("{}some TS"{}) \{}
+\DoxyCodeLine{    TEST\_CASE("{}no description even though in the same test suite as the one above"{}) \{}
+\DoxyCodeLine{        // asserts}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Test cases can override the decorators that they inherit from their surrounding test suite\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{TEST\_SUITE("{}not longer than 500ms"{} * doctest::timeout(0.5)) \{}
+\DoxyCodeLine{    TEST\_CASE("{}500ms limit"{}) \{}
+\DoxyCodeLine{        // asserts}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    TEST\_CASE("{}200ms limit"{} * doctest::timeout(0.2)) \{}
+\DoxyCodeLine{        // asserts}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+
+\begin{DoxyItemize}
+\item Check out the \href{../../examples/all_features/subcases.cpp}{\texttt{ {\bfseries{subcases and BDD example}}}}
+\item Check out the \href{../../examples/all_features/assertion_macros.cpp}{\texttt{ {\bfseries{assertion macros example}}}} to see how test suites are used
+\item Tests are registered from top to bottom of each processed cpp after the headers have been preprocessed and included but there is no ordering between cpp files.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+

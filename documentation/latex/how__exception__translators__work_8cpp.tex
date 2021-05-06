@@ -1,0 +1,126 @@
+\hypertarget{how__exception__translators__work_8cpp}{}\doxysection{C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/scripts/how\+\_\+stuff\+\_\+works/how\+\_\+exception\+\_\+translators\+\_\+work.cpp File Reference}
+\label{how__exception__translators__work_8cpp}\index{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/scripts/how\_stuff\_works/how\_exception\_translators\_work.cpp@{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/scripts/how\_stuff\_works/how\_exception\_translators\_work.cpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_i_translator}{ITranslator}}
+\item 
+struct \mbox{\hyperlink{struct_translator}{Translator$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{how__exception__translators__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}{CAT\+\_\+\+IMPL}}(s1,  s2)~s1\#\#s2
+\item 
+\#define \mbox{\hyperlink{how__exception__translators__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}{CAT}}(s1,  s2)~\mbox{\hyperlink{how__exception__translators__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}{CAT\+\_\+\+IMPL}}(s1, s2)
+\item 
+\#define \mbox{\hyperlink{how__exception__translators__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}{ANONYMOUS}}(x)~\mbox{\hyperlink{how__exception__translators__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}{CAT}}(x, \+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{how__exception__translators__work_8cpp_af0df964bf79d9cde39db10aff7119d95}{REG\+\_\+\+TRANSLATOR\+\_\+2}}(\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  \mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}})
+\item 
+\#define \mbox{\hyperlink{how__exception__translators__work_8cpp_a3742919af8533c8336f97a20cb0bf997}{REG\+\_\+\+TRANSLATOR}}(\mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}})~\mbox{\hyperlink{how__exception__translators__work_8cpp_af0df964bf79d9cde39db10aff7119d95}{REG\+\_\+\+TRANSLATOR\+\_\+2}}(\mbox{\hyperlink{how__exception__translators__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}{ANONYMOUS}}(TRANS\+\_\+), \mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{how__exception__translators__work_8cpp_aacdfef63a774b0113a25f0a79e9121e6}{reg\+Translator\+Impl}} (\mbox{\hyperlink{struct_i_translator}{ITranslator}} $\ast$t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{how__exception__translators__work_8cpp_a21b32381cc827d6ac8ceb62635776d86}{reg\+Translator}} (string($\ast$func)(T))
+\item 
+string \mbox{\hyperlink{how__exception__translators__work_8cpp_a08790d7e6b33c7c7e472f94ba7e619f8}{translate}} ()
+\item 
+\mbox{\hyperlink{how__exception__translators__work_8cpp_a5eb958c266d751cdf5212dbd72a88118}{REG\+\_\+\+TRANSLATOR}} (double \&e)
+\item 
+int \mbox{\hyperlink{how__exception__translators__work_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{struct_i_translator}{ITranslator}} $\ast$ $>$ \mbox{\hyperlink{how__exception__translators__work_8cpp_a1ac86072648749219c7f63aec0fb5537}{translators}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}\label{how__exception__translators__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!ANONYMOUS@{ANONYMOUS}}
+\index{ANONYMOUS@{ANONYMOUS}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{ANONYMOUS}{ANONYMOUS}}
+{\footnotesize\ttfamily \#define ANONYMOUS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{how__exception__translators__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}{CAT}}(x, \+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}\label{how__exception__translators__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!CAT@{CAT}}
+\index{CAT@{CAT}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{CAT}{CAT}}
+{\footnotesize\ttfamily \#define CAT(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~\mbox{\hyperlink{how__exception__translators__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}{CAT\+\_\+\+IMPL}}(s1, s2)}
+
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}\label{how__exception__translators__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!CAT\_IMPL@{CAT\_IMPL}}
+\index{CAT\_IMPL@{CAT\_IMPL}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{CAT\_IMPL}{CAT\_IMPL}}
+{\footnotesize\ttfamily \#define CAT\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~s1\#\#s2}
+
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_a3742919af8533c8336f97a20cb0bf997}\label{how__exception__translators__work_8cpp_a3742919af8533c8336f97a20cb0bf997}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!REG\_TRANSLATOR@{REG\_TRANSLATOR}}
+\index{REG\_TRANSLATOR@{REG\_TRANSLATOR}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_TRANSLATOR}{REG\_TRANSLATOR}}
+{\footnotesize\ttfamily \#define REG\+\_\+\+TRANSLATOR(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}} }\end{DoxyParamCaption})~\mbox{\hyperlink{how__exception__translators__work_8cpp_af0df964bf79d9cde39db10aff7119d95}{REG\+\_\+\+TRANSLATOR\+\_\+2}}(\mbox{\hyperlink{how__exception__translators__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}{ANONYMOUS}}(TRANS\+\_\+), \mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}})}
+
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_af0df964bf79d9cde39db10aff7119d95}\label{how__exception__translators__work_8cpp_af0df964bf79d9cde39db10aff7119d95}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!REG\_TRANSLATOR\_2@{REG\_TRANSLATOR\_2}}
+\index{REG\_TRANSLATOR\_2@{REG\_TRANSLATOR\_2}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_TRANSLATOR\_2}{REG\_TRANSLATOR\_2}}
+{\footnotesize\ttfamily \#define REG\+\_\+\+TRANSLATOR\+\_\+2(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  }\item[{}]{\mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}(\mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}});                            \(\backslash\)}
+\DoxyCodeLine{    static \textcolor{keywordtype}{int} \mbox{\hyperlink{how__exception__translators__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}{ANONYMOUS}}(TRANS\_) = \mbox{\hyperlink{how__exception__translators__work_8cpp_a21b32381cc827d6ac8ceb62635776d86}{regTranslator}}(\&\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}); \(\backslash\)}
+\DoxyCodeLine{    static \textcolor{keywordtype}{string} \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}(\mbox{\hyperlink{doctest_8cpp_a75b160f574a0be26114bae2c7686a5e1}{type}})}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{how__exception__translators__work_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!main@{main}}
+\index{main@{main}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_a5eb958c266d751cdf5212dbd72a88118}\label{how__exception__translators__work_8cpp_a5eb958c266d751cdf5212dbd72a88118}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!REG\_TRANSLATOR@{REG\_TRANSLATOR}}
+\index{REG\_TRANSLATOR@{REG\_TRANSLATOR}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_TRANSLATOR()}{REG\_TRANSLATOR()}}
+{\footnotesize\ttfamily REG\+\_\+\+TRANSLATOR (\begin{DoxyParamCaption}\item[{double \&}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_a21b32381cc827d6ac8ceb62635776d86}\label{how__exception__translators__work_8cpp_a21b32381cc827d6ac8ceb62635776d86}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!regTranslator@{regTranslator}}
+\index{regTranslator@{regTranslator}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{regTranslator()}{regTranslator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int reg\+Translator (\begin{DoxyParamCaption}\item[{string($\ast$)(T)}]{func }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_aacdfef63a774b0113a25f0a79e9121e6}\label{how__exception__translators__work_8cpp_aacdfef63a774b0113a25f0a79e9121e6}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!regTranslatorImpl@{regTranslatorImpl}}
+\index{regTranslatorImpl@{regTranslatorImpl}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{regTranslatorImpl()}{regTranslatorImpl()}}
+{\footnotesize\ttfamily void reg\+Translator\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i_translator}{ITranslator}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_a08790d7e6b33c7c7e472f94ba7e619f8}\label{how__exception__translators__work_8cpp_a08790d7e6b33c7c7e472f94ba7e619f8}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!translate@{translate}}
+\index{translate@{translate}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily string translate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{how__exception__translators__work_8cpp_a1ac86072648749219c7f63aec0fb5537}\label{how__exception__translators__work_8cpp_a1ac86072648749219c7f63aec0fb5537}} 
+\index{how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}!translators@{translators}}
+\index{translators@{translators}!how\_exception\_translators\_work.cpp@{how\_exception\_translators\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{translators}{translators}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{struct_i_translator}{ITranslator}}$\ast$$>$ translators}
+

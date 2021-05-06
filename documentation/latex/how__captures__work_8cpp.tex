@@ -1,0 +1,125 @@
+\hypertarget{how__captures__work_8cpp}{}\doxysection{C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/scripts/how\+\_\+stuff\+\_\+works/how\+\_\+captures\+\_\+work.cpp File Reference}
+\label{how__captures__work_8cpp}\index{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/scripts/how\_stuff\_works/how\_captures\_work.cpp@{C:/Users/USER/source/repos/bzareva/star-\/wars-\/universe-\/0.1/doctest/scripts/how\_stuff\_works/how\_captures\_work.cpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$new$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_i_capture}{ICapture}}
+\item 
+struct \mbox{\hyperlink{struct_info_builder}{Info\+Builder}}
+\item 
+struct \mbox{\hyperlink{struct_info_builder_1_1_capture}{Info\+Builder\+::\+Capture$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{struct_info_builder_1_1_chunk}{Info\+Builder\+::\+Chunk}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{how__captures__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}{CAT\+\_\+\+IMPL}}(s1,  s2)~s1\#\#s2
+\item 
+\#define \mbox{\hyperlink{how__captures__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}{CAT}}(s1,  s2)~\mbox{\hyperlink{how__exception__translators__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}{CAT\+\_\+\+IMPL}}(s1, s2)
+\item 
+\#define \mbox{\hyperlink{how__captures__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}{ANONYMOUS}}(x)~\mbox{\hyperlink{how__exception__translators__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}{CAT}}(x, \+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{how__captures__work_8cpp_a5b6826d539cb124c75de34dbd030fd86}{NUM\+\_\+\+CAPTURES\+\_\+\+ON\+\_\+\+STACK}}~5
+\item 
+\#define \mbox{\hyperlink{how__captures__work_8cpp_a7c92f7eb848dfb96558d44fadba135f0}{INFO\+\_\+\+IMPL}}(\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  x)~\mbox{\hyperlink{struct_info_builder}{Info\+Builder}} \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}; \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}} $<$$<$ x
+\item 
+\#define \mbox{\hyperlink{how__captures__work_8cpp_ab7e64333eba48090f444ec9f36fd23ef}{INFO}}(x)~\mbox{\hyperlink{how__captures__work_8cpp_a7c92f7eb848dfb96558d44fadba135f0}{INFO\+\_\+\+IMPL}}(\mbox{\hyperlink{how__exception__translators__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}{ANONYMOUS}}(\+\_\+\+CAPTURE\+\_\+), x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{how__captures__work_8cpp_a280605a78b3636a7847f3919b149f62e}{add\+To\+Captures}} (const \mbox{\hyperlink{struct_i_capture}{ICapture}} $\ast$ptr)
+\item 
+void \mbox{\hyperlink{how__captures__work_8cpp_a17e950352c54119ac03b7f3a22d38deb}{pop\+From\+Captures}} ()
+\item 
+void \mbox{\hyperlink{how__captures__work_8cpp_a5b98fee543c3363c8e194472ab565431}{print\+Captures}} ()
+\item 
+int \mbox{\hyperlink{how__captures__work_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ const \mbox{\hyperlink{struct_i_capture}{ICapture}} $\ast$ $>$ \mbox{\hyperlink{how__captures__work_8cpp_af2d131b952c08e4af27134facba0089f}{captures}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{how__captures__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}\label{how__captures__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!ANONYMOUS@{ANONYMOUS}}
+\index{ANONYMOUS@{ANONYMOUS}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{ANONYMOUS}{ANONYMOUS}}
+{\footnotesize\ttfamily \#define ANONYMOUS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{how__exception__translators__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}{CAT}}(x, \+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{how__captures__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}\label{how__captures__work_8cpp_ac7e4660d2c752d19bfe96c1bfe6f61f2}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!CAT@{CAT}}
+\index{CAT@{CAT}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{CAT}{CAT}}
+{\footnotesize\ttfamily \#define CAT(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~\mbox{\hyperlink{how__exception__translators__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}{CAT\+\_\+\+IMPL}}(s1, s2)}
+
+\mbox{\Hypertarget{how__captures__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}\label{how__captures__work_8cpp_a28c144632da97bca6f2e2b3e08ec6747}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!CAT\_IMPL@{CAT\_IMPL}}
+\index{CAT\_IMPL@{CAT\_IMPL}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{CAT\_IMPL}{CAT\_IMPL}}
+{\footnotesize\ttfamily \#define CAT\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~s1\#\#s2}
+
+\mbox{\Hypertarget{how__captures__work_8cpp_ab7e64333eba48090f444ec9f36fd23ef}\label{how__captures__work_8cpp_ab7e64333eba48090f444ec9f36fd23ef}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!INFO@{INFO}}
+\index{INFO@{INFO}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{INFO}{INFO}}
+{\footnotesize\ttfamily \#define INFO(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{how__captures__work_8cpp_a7c92f7eb848dfb96558d44fadba135f0}{INFO\+\_\+\+IMPL}}(\mbox{\hyperlink{how__exception__translators__work_8cpp_aa57eb21e46ddbab2ba3943ce35c38890}{ANONYMOUS}}(\+\_\+\+CAPTURE\+\_\+), x)}
+
+\mbox{\Hypertarget{how__captures__work_8cpp_a7c92f7eb848dfb96558d44fadba135f0}\label{how__captures__work_8cpp_a7c92f7eb848dfb96558d44fadba135f0}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!INFO\_IMPL@{INFO\_IMPL}}
+\index{INFO\_IMPL@{INFO\_IMPL}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{INFO\_IMPL}{INFO\_IMPL}}
+{\footnotesize\ttfamily \#define INFO\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},  }\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{struct_info_builder}{Info\+Builder}} \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}; \mbox{\hyperlink{doctest_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}} $<$$<$ x}
+
+\mbox{\Hypertarget{how__captures__work_8cpp_a5b6826d539cb124c75de34dbd030fd86}\label{how__captures__work_8cpp_a5b6826d539cb124c75de34dbd030fd86}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!NUM\_CAPTURES\_ON\_STACK@{NUM\_CAPTURES\_ON\_STACK}}
+\index{NUM\_CAPTURES\_ON\_STACK@{NUM\_CAPTURES\_ON\_STACK}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{NUM\_CAPTURES\_ON\_STACK}{NUM\_CAPTURES\_ON\_STACK}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+CAPTURES\+\_\+\+ON\+\_\+\+STACK~5}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{how__captures__work_8cpp_a280605a78b3636a7847f3919b149f62e}\label{how__captures__work_8cpp_a280605a78b3636a7847f3919b149f62e}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!addToCaptures@{addToCaptures}}
+\index{addToCaptures@{addToCaptures}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{addToCaptures()}{addToCaptures()}}
+{\footnotesize\ttfamily void add\+To\+Captures (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_i_capture}{ICapture}} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{how__captures__work_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{how__captures__work_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!main@{main}}
+\index{main@{main}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{how__captures__work_8cpp_a17e950352c54119ac03b7f3a22d38deb}\label{how__captures__work_8cpp_a17e950352c54119ac03b7f3a22d38deb}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!popFromCaptures@{popFromCaptures}}
+\index{popFromCaptures@{popFromCaptures}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{popFromCaptures()}{popFromCaptures()}}
+{\footnotesize\ttfamily void pop\+From\+Captures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{how__captures__work_8cpp_a5b98fee543c3363c8e194472ab565431}\label{how__captures__work_8cpp_a5b98fee543c3363c8e194472ab565431}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!printCaptures@{printCaptures}}
+\index{printCaptures@{printCaptures}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{printCaptures()}{printCaptures()}}
+{\footnotesize\ttfamily void print\+Captures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{how__captures__work_8cpp_af2d131b952c08e4af27134facba0089f}\label{how__captures__work_8cpp_af2d131b952c08e4af27134facba0089f}} 
+\index{how\_captures\_work.cpp@{how\_captures\_work.cpp}!captures@{captures}}
+\index{captures@{captures}!how\_captures\_work.cpp@{how\_captures\_work.cpp}}
+\doxysubsubsection{\texorpdfstring{captures}{captures}}
+{\footnotesize\ttfamily std\+::vector$<$const \mbox{\hyperlink{struct_i_capture}{ICapture}}$\ast$$>$ captures}
+

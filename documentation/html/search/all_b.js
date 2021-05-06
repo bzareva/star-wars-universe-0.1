@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['loadstring_86',['loadString',['../class_string.html#a39beaadb7a08883491249d3cd06aad3d',1,'String']]]
+  ['knight_660',['KNIGHT',['../_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbedaf7f210da15dbb4283299b2affd9bb238',1,'Rank.h']]],
+  ['knight_5faspirant_661',['KNIGHT_ASPIRANT',['../_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbeda41288f9a3d8bdc0438bf32918cb692ed',1,'Rank.h']]]
 ];

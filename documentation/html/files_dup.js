@@ -1,5 +1,6 @@
 var files_dup =
 [
+    [ "doctest", "dir_43da05b65ffbb65743beb36240116ac9.html", "dir_43da05b65ffbb65743beb36240116ac9" ],
     [ "AddPlanetCommand.h", "_add_planet_command_8h.html", [
       [ "AddPlanetCommand", "class_add_planet_command.html", "class_add_planet_command" ]
     ] ],
@@ -22,6 +23,8 @@ var files_dup =
     [ "DemoteJediCommand.h", "_demote_jedi_command_8h.html", [
       [ "DemoteJediCommand", "class_demote_jedi_command.html", "class_demote_jedi_command" ]
     ] ],
+    [ "Main.cpp", "main_8cpp.html", "main_8cpp" ],
+    [ "DTEST.h", "_d_t_e_s_t_8h.html", "_d_t_e_s_t_8h" ],
     [ "ExitCommand.h", "_exit_command_8h.html", [
       [ "ExitCommand", "class_exit_command.html", "class_exit_command" ]
     ] ],
@@ -54,7 +57,6 @@ var files_dup =
     [ "Jedi.h", "_jedi_8h.html", [
       [ "Jedi", "class_jedi.html", "class_jedi" ]
     ] ],
-    [ "Main.cpp", "_main_8cpp.html", "_main_8cpp" ],
     [ "OpenCommand.h", "_open_command_8h.html", [
       [ "OpenCommand", "class_open_command.html", "class_open_command" ]
     ] ],

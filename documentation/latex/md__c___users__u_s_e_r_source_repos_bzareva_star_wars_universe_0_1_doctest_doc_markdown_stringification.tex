@@ -1,0 +1,108 @@
+{\bfseries{doctest}} needs to be able to convert types you use in assertions and logging expressions into strings (for logging and reporting purposes). Most built-\/in types are supported out of the box but there are three ways that you can tell {\bfseries{doctest}} how to convert your own types (or other, third-\/party types) into strings.
+
+For stringifying enums checkout \href{https://github.com/onqtam/doctest/issues/121}{\texttt{ this issue}}.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification_autotoc_md161}{}\doxysection{$<$tt$>$operator$<$$<$$<$/tt$>$ overload for $<$tt$>$std\+::ostream$<$/tt$>$}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification_autotoc_md161}
+This is the standard way of providing string conversions in C++ -\/ and the chances are you may already provide this for your own purposes. If you\textquotesingle{}re not familiar with this idiom it involves writing a free function of the form\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{std::ostream\& operator<< (std::ostream\& os, const T\& value) \{}
+\DoxyCodeLine{    os << convertMyTypeToString(value);}
+\DoxyCodeLine{    return os;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+(where {\ttfamily T} is your type and {\ttfamily convert\+My\+Type\+To\+String} is where you\textquotesingle{}ll write whatever code is necessary to make your type printable -\/ it doesn\textquotesingle{}t have to be in another function).
+
+You should put this function in the same namespace as your type.
+
+Alternatively you may prefer to write it as a member function\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{std::ostream\& T::operator<<(std::ostream\& os) const \{}
+\DoxyCodeLine{    os << convertMyTypeToString(*this);}
+\DoxyCodeLine{    return os;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification_autotoc_md162}{}\doxysection{$<$tt$>$doctest\+::to\+String$<$/tt$>$ overload}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification_autotoc_md162}
+If you don\textquotesingle{}t want to provide an {\ttfamily operator$<$$<$} overload, or you want to convert your type differently for testing purposes, you can provide an overload for {\ttfamily \mbox{\hyperlink{namespacedoctest_a468ff6c2b0a692bcf88a7a97a5de0a53}{to\+String()}}} for your type which returns {\ttfamily \mbox{\hyperlink{classdoctest_1_1_string}{doctest\+::\+String}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{namespace user \{}
+\DoxyCodeLine{    struct udt \{\};}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    doctest::String toString(const udt\& value) \{}
+\DoxyCodeLine{        return convertMyTypeToString(value);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Note that the function must be in the same namespace as your type. If the type is not in any namespace -\/ then the overload should be in the global namespace as well. {\ttfamily convert\+My\+Type\+To\+String} is where you\textquotesingle{}ll write whatever code is necessary to make your type printable.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification_autotoc_md163}{}\doxysection{$<$tt$>$doctest\+::\+String\+Maker$<$\+T$>$$<$/tt$>$ specialisation}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification_autotoc_md163}
+There are some cases where overloading {\ttfamily to\+String} does not work as expected. Specialising {\ttfamily String\+Maker$<$T$>$} gives you more precise and reliable control -\/ but at the cost of slightly more code and complexity\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{namespace doctest \{}
+\DoxyCodeLine{    template<> struct StringMaker<T> \{}
+\DoxyCodeLine{        static String convert(const T\& value) \{}
+\DoxyCodeLine{            return convertMyTypeToString(value);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification_autotoc_md164}{}\doxysection{Translating exceptions}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification_autotoc_md164}
+By default all exceptions deriving from {\ttfamily std\+::exception} will be translated to strings by calling the {\ttfamily what()} method (also C strings). For exception types that do not derive from {\ttfamily std\+::exception} -\/ or if {\ttfamily what()} does not return a suitable string -\/ use {\ttfamily REGISTER\+\_\+\+EXCEPTION\+\_\+\+TRANSLATOR}. This defines a function that takes your exception type and returns a {\ttfamily \mbox{\hyperlink{classdoctest_1_1_string}{doctest\+::\+String}}}. It can appear anywhere in the code -\/ it doesn\textquotesingle{}t have to be in the same translation unit. For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{REGISTER\_EXCEPTION\_TRANSLATOR(MyType\& ex) \{}
+\DoxyCodeLine{    return doctest::String(ex.message());}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Note that the exception may be accepted without a reference but it is considered bad practice in C++.
+
+An alternative way to register an exception translator is to do the following in some function -\/ before executing any tests\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{c++\}}
+\DoxyCodeLine{   // adding a lambda -\/ the signature required is `doctest::String(exception\_type)`}
+\DoxyCodeLine{   doctest::registerExceptionTranslator<int>([](int in)\{ return doctest::toString(in); \});}
+
+\end{DoxyCode}
+
+
+The order of registering exception translators can be controlled -\/ simply call the explicit function in the required order or list the exception translators with the macro in a top-\/to-\/bottom fashion in a single translation unit -\/ everything that auto-\/registers in doctest works in a top-\/to-\/bottom way for a single translation unit (source file).
+
+You could also \href{https://github.com/catchorg/Catch2/issues/539\#issuecomment-454549904}{\texttt{ override the translation mechanism}} for exceptions deriving from {\ttfamily std\+::exception}.
+
+\DoxyHorRuler{0}
+
+
+
+\begin{DoxyItemize}
+\item Check out the \href{../../examples/all_features/stringification.cpp}{\texttt{ {\bfseries{example}}}} which shows how to stringify {\ttfamily std\+::vector$<$T$>$} and other types/exceptions.
+\item Note that the type {\ttfamily \mbox{\hyperlink{class_string}{String}}} is used when specializing {\ttfamily String\+Maker$<$T$>$} or overloading {\ttfamily \mbox{\hyperlink{namespacedoctest_a468ff6c2b0a692bcf88a7a97a5de0a53}{to\+String()}}} -\/ it is the string type {\bfseries{doctest}} works with. {\ttfamily std\+::string} is not an option because doctest would have to include the {\ttfamily $<$string$>$} header.
+\item To support the {\ttfamily operator$<$$<$(std\+::ostream\&...} stringification the library has to offer a forward declaration of {\ttfamily std\+::ostream} and that is what the library does -\/ but it is forbidden by the standard. It currently works everywhere -\/ on all tested compilers -\/ but if the user wishes to be 100\% standards compliant -\/ then the \href{configuration.md\#doctest_config_use_std_headers}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+USE\+\_\+\+STD\+\_\+\+HEADERS}$\ast$$\ast$}} identifier can be used to force the inclusion of {\ttfamily $<$iosfwd$>$}. The reason the header is not included by default is that on MSVC (for example) it drags a whole bunch of stuff with it -\/ and after the preprocessor is finished the translation unit has grown to 42k lines of C++ code -\/ while Clang and the libc++ are so well implemented that including {\ttfamily $<$iosfwd$>$} there results in 400 lines of code.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+

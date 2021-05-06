@@ -1,0 +1,775 @@
+\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md1}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+4.\+6\char`\"{}$>$2.\+4.\+6$<$/a$>$ (2021-\/03-\/22)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md1}
+\href{https://github.com/onqtam/doctest/compare/2.4.5...2.4.6}{\texttt{ Full Changelog}}
+
+{\bfseries{Fixed bugs\+:}}
+
+
+\begin{DoxyItemize}
+\item REQUIRE does not compile when operator== in different namespace \href{https://github.com/onqtam/doctest/issues/443}{\texttt{ \#443}}
+\item Using templated operator== inside TEST\+\_\+\+CASE changes deduced types of forwarding references \href{https://github.com/onqtam/doctest/issues/399}{\texttt{ \#399}}
+\end{DoxyItemize}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item CMake doesn\textquotesingle{}t link package \href{https://github.com/onqtam/doctest/issues/483}{\texttt{ \#483}}
+\item Assertions are slow when running on Windows with a debugger attached \href{https://github.com/onqtam/doctest/issues/481}{\texttt{ \#481}}
+\item Get list of registered test-\/case names \href{https://github.com/onqtam/doctest/issues/479}{\texttt{ \#479}}
+\item Can\textquotesingle{}t compile with glibc master (future 2.\+34)\+: SIGSTKSZ is no longer a constant \href{https://github.com/onqtam/doctest/issues/473}{\texttt{ \#473}}
+\item How to use Doctest with Github Actions \href{https://github.com/onqtam/doctest/issues/472}{\texttt{ \#472}}
+\item Link error (multiple definition...) in simple project \href{https://github.com/onqtam/doctest/issues/470}{\texttt{ \#470}}
+\item INFO does not compile when used like a function call \href{https://github.com/onqtam/doctest/issues/469}{\texttt{ \#469}}
+\item std\+::uncaught\+\_\+exceptions is only available if compiling for mac\+OS 10.\+12 or above \href{https://github.com/onqtam/doctest/issues/466}{\texttt{ \#466}}
+\item Compile failure with Win\+RT on 2.\+4.\+5 \href{https://github.com/onqtam/doctest/issues/465}{\texttt{ \#465}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Improve speed with attached debugger (Windows) \href{https://github.com/onqtam/doctest/pull/482}{\texttt{ \#482}} (\href{https://github.com/pgroke}{\texttt{ pgroke}})
+\item Convert to bool by casting, rather than double negation \href{https://github.com/onqtam/doctest/pull/480}{\texttt{ \#480}} (\href{https://github.com/kitegi}{\texttt{ kitegi}})
+\item Fix compile error when targeting mac\+OS version earlier and mac\+OS 10.\+12 \href{https://github.com/onqtam/doctest/pull/478}{\texttt{ \#478}} (\href{https://github.com/SamWindell}{\texttt{ Sam\+Windell}})
+\item Fix MSVC linter warning about uninitialized Test\+Suite variables \href{https://github.com/onqtam/doctest/pull/471}{\texttt{ \#471}} (\href{https://github.com/Reedbeta}{\texttt{ Reedbeta}})
+\item REQUIRE does not compile when operator== in different namespace \#443 . \href{https://github.com/onqtam/doctest/pull/468}{\texttt{ \#468}} (\href{https://github.com/navinp0304}{\texttt{ navinp0304}})
+\item Automatically add TEST\+\_\+\+SUITE labels to discovered tests \href{https://github.com/onqtam/doctest/pull/464}{\texttt{ \#464}} (\href{https://github.com/shivupa}{\texttt{ shivupa}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md2}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+4.\+5\char`\"{}$>$2.\+4.\+5$<$/a$>$ (2021-\/02-\/02)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md2}
+\href{https://github.com/onqtam/doctest/compare/2.4.4...2.4.5}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Stack buffer overflow in {\ttfamily \mbox{\hyperlink{class_string}{String}}} constructor \href{https://github.com/onqtam/doctest/issues/460}{\texttt{ \#460}}
+\item Surpress warnings from clang-\/tidy \href{https://github.com/onqtam/doctest/issues/459}{\texttt{ \#459}}
+\item compilation issue in MSVC when defining DOCTEST\+\_\+\+THREAD\+\_\+\+LOCAL to static \href{https://github.com/onqtam/doctest/issues/458}{\texttt{ \#458}}
+\item nvcc compiler warning; doctest.\+h(4138)\+: warning \+: expression has no effect \href{https://github.com/onqtam/doctest/issues/454}{\texttt{ \#454}}
+\item Use of std\+::atomic can slow down multithreaded tests \href{https://github.com/onqtam/doctest/issues/452}{\texttt{ \#452}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Fix compilation on case-\/sensitive filesystems \href{https://github.com/onqtam/doctest/pull/463}{\texttt{ \#463}} (\href{https://github.com/jhasse}{\texttt{ jhasse}})
+\item Use function-\/like macros for prefixless macro names \href{https://github.com/onqtam/doctest/pull/462}{\texttt{ \#462}} (\href{https://github.com/tbleher}{\texttt{ tbleher}})
+\item Implement a multi lane atomic for assertion counts \href{https://github.com/onqtam/doctest/pull/453}{\texttt{ \#453}} (\href{https://github.com/martinus}{\texttt{ martinus}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md3}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+4.\+4\char`\"{}$>$2.\+4.\+4$<$/a$>$ (2020-\/12-\/25)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md3}
+\href{https://github.com/onqtam/doctest/compare/2.4.3...2.4.4}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item 2.\+4.\+2\+: build fails \href{https://github.com/onqtam/doctest/issues/450}{\texttt{ \#450}}
+\item combine the same tests for different build configurations from multiple shared objects without having symbol clashes \href{https://github.com/onqtam/doctest/issues/436}{\texttt{ \#436}}
+\item Issue with Git\+Hub Security Scanning\+: gmtime \href{https://github.com/onqtam/doctest/issues/423}{\texttt{ \#423}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md4}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+4.\+3\char`\"{}$>$2.\+4.\+3$<$/a$>$ (2020-\/12-\/16)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md4}
+\href{https://github.com/onqtam/doctest/compare/2.4.2...2.4.3}{\texttt{ Full Changelog}}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md5}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+4.\+2\char`\"{}$>$2.\+4.\+2$<$/a$>$ (2020-\/12-\/15)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md5}
+\href{https://github.com/onqtam/doctest/compare/2.4.1...2.4.2}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item DOCTEST\+\_\+\+CHECK\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS fails to work with dependant exception type \href{https://github.com/onqtam/doctest/issues/447}{\texttt{ \#447}}
+\item MSVC warnings\+: narrowing conversion, signed/unsigned mismatch \href{https://github.com/onqtam/doctest/issues/446}{\texttt{ \#446}}
+\item log contexts for failures in JUnit reporter \href{https://github.com/onqtam/doctest/issues/441}{\texttt{ \#441}}
+\item Min\+GW \char`\"{}\textquotesingle{}mutex\textquotesingle{} in namespace \textquotesingle{}std\textquotesingle{} does not name a type\char`\"{} error. \href{https://github.com/onqtam/doctest/issues/438}{\texttt{ \#438}}
+\item Test runner thread initialization \href{https://github.com/onqtam/doctest/issues/435}{\texttt{ \#435}}
+\item PLATFORM is misdetected on Mac\+OSX Big Sur \href{https://github.com/onqtam/doctest/issues/415}{\texttt{ \#415}}
+\item CHECK\+\_\+\+EQ with enum values \href{https://github.com/onqtam/doctest/issues/276}{\texttt{ \#276}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Squash MSVC warnings when including ntstatus.\+h \href{https://github.com/onqtam/doctest/pull/449}{\texttt{ \#449}} (\href{https://github.com/nickhutchinson}{\texttt{ nickhutchinson}})
+\item Add MAIN\+\_\+\+PROJECT check for test option \href{https://github.com/onqtam/doctest/pull/445}{\texttt{ \#445}} (\href{https://github.com/globberwops}{\texttt{ globberwops}})
+\item Suppress clang-\/analyzer-\/cplusplus.\+New\+Delete\+Leaks \href{https://github.com/onqtam/doctest/pull/444}{\texttt{ \#444}} (\href{https://github.com/ncihnegn}{\texttt{ ncihnegn}})
+\item log contexts for failures in JUnit reporter \href{https://github.com/onqtam/doctest/pull/442}{\texttt{ \#442}} (\href{https://github.com/runave}{\texttt{ runave}})
+\item Fix 32bit support on mac\+OS \href{https://github.com/onqtam/doctest/pull/440}{\texttt{ \#440}} (\href{https://github.com/AlexanderLanin}{\texttt{ Alexander\+Lanin}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md6}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+4.\+1\char`\"{}$>$2.\+4.\+1$<$/a$>$ (2020-\/11-\/04)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md6}
+\href{https://github.com/onqtam/doctest/compare/2.4.0...2.4.1}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Avoid old C-\/style casts \href{https://github.com/onqtam/doctest/issues/424}{\texttt{ \#424}}
+\item Segfault in unwind \href{https://github.com/onqtam/doctest/issues/422}{\texttt{ \#422}}
+\item Inspect exception with gdb \href{https://github.com/onqtam/doctest/issues/421}{\texttt{ \#421}}
+\item use-\/of-\/uninitialized-\/value \href{https://github.com/onqtam/doctest/issues/414}{\texttt{ \#414}}
+\item Support unit tests with MPI \href{https://github.com/onqtam/doctest/issues/413}{\texttt{ \#413}}
+\item Break into debugger support is missing for Linux \href{https://github.com/onqtam/doctest/issues/411}{\texttt{ \#411}}
+\item What if built doctest as static library instead of header-\/only \href{https://github.com/onqtam/doctest/issues/408}{\texttt{ \#408}}
+\item \mbox{[}Question\mbox{]} How to get test case name \href{https://github.com/onqtam/doctest/issues/407}{\texttt{ \#407}}
+\item create extensions header for optional features requiring more std includes or newer C++ features \href{https://github.com/onqtam/doctest/issues/405}{\texttt{ \#405}}
+\item tests/asserts summary lines are misaligned when counts exceed 999999 \href{https://github.com/onqtam/doctest/issues/402}{\texttt{ \#402}}
+\item Call to \textquotesingle{}ne\textquotesingle{} is ambiguous -- with solution \href{https://github.com/onqtam/doctest/issues/395}{\texttt{ \#395}}
+\item Intermittent Segfaults \href{https://github.com/onqtam/doctest/issues/391}{\texttt{ \#391}}
+\item Junit classname \href{https://github.com/onqtam/doctest/issues/390}{\texttt{ \#390}}
+\item Add default printers for enums \href{https://github.com/onqtam/doctest/issues/121}{\texttt{ \#121}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Enum support (fix for Issue \#121) \href{https://github.com/onqtam/doctest/pull/429}{\texttt{ \#429}} (\href{https://github.com/jkriegshauser}{\texttt{ jkriegshauser}})
+\item Support Clang 3.\+4 \href{https://github.com/onqtam/doctest/pull/428}{\texttt{ \#428}} (\href{https://github.com/AlexanderLanin}{\texttt{ Alexander\+Lanin}})
+\item Silence remarks on old C-\/style casts \href{https://github.com/onqtam/doctest/pull/425}{\texttt{ \#425}} (\href{https://github.com/UnePierre}{\texttt{ Une\+Pierre}})
+\item Initial MPI unit tests implementation \href{https://github.com/onqtam/doctest/pull/418}{\texttt{ \#418}} (\href{https://github.com/BerengerBerthoul}{\texttt{ Berenger\+Berthoul}})
+\item Add JUNIT\+\_\+\+OUTPUT\+\_\+\+DIR option to doctest\+\_\+discover\+\_\+tests \href{https://github.com/onqtam/doctest/pull/417}{\texttt{ \#417}} (\href{https://github.com/Tradias}{\texttt{ Tradias}})
+\item Add option to build with std headers. \href{https://github.com/onqtam/doctest/pull/416}{\texttt{ \#416}} (\href{https://github.com/avostrik}{\texttt{ avostrik}})
+\item Port Catch2 break into debugger for Linux. closes \#411 \href{https://github.com/onqtam/doctest/pull/412}{\texttt{ \#412}} (\href{https://github.com/mikezackles}{\texttt{ mikezackles}})
+\item summary\+: align even large values \#402 \href{https://github.com/onqtam/doctest/pull/403}{\texttt{ \#403}} (\href{https://github.com/dankamongmen}{\texttt{ dankamongmen}})
+\item Add breakpoint inline assembly for the Apple Silicon mac\+OS. \href{https://github.com/onqtam/doctest/pull/400}{\texttt{ \#400}} (\href{https://github.com/bruvzg}{\texttt{ bruvzg}})
+\item fix google\textquotesingle{}s death test URI in roadmap \href{https://github.com/onqtam/doctest/pull/393}{\texttt{ \#393}} (\href{https://github.com/ashutosh108}{\texttt{ ashutosh108}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md7}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+4.\+0\char`\"{}$>$2.\+4.\+0$<$/a$>$ (2020-\/06-\/27)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md7}
+\href{https://github.com/onqtam/doctest/compare/2.3.8...2.4.0}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Count points based on the number of passed/failed cases? \href{https://github.com/onqtam/doctest/issues/386}{\texttt{ \#386}}
+\item How to understand \char`\"{}\textbackslash{}\#data\textbackslash{}\+\_\+array\char`\"{} in std\+::string? \href{https://github.com/onqtam/doctest/issues/383}{\texttt{ \#383}}
+\item crash\+: doctest with custom allocator \href{https://github.com/onqtam/doctest/issues/382}{\texttt{ \#382}}
+\item Feature Request\+: format PRIVATE/\+PUBLIC/\+INTERFACE entries with constant indentation \href{https://github.com/onqtam/doctest/issues/378}{\texttt{ \#378}}
+\item JUnit Reporter for Doctest \href{https://github.com/onqtam/doctest/issues/376}{\texttt{ \#376}}
+\item Avoiding Feature Bloat \href{https://github.com/onqtam/doctest/issues/374}{\texttt{ \#374}}
+\item String\+Maker$<$wchar\+\_\+t$>$ fail to compile with C++20 enabled (GCC) \href{https://github.com/onqtam/doctest/issues/357}{\texttt{ \#357}}
+\item doctest\+\_\+discover\+\_\+tests and Fetch\+Content\+\_\+\+Declare \href{https://github.com/onqtam/doctest/issues/351}{\texttt{ \#351}}
+\item Junit reporter \href{https://github.com/onqtam/doctest/issues/318}{\texttt{ \#318}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Add a note that doctest can be installed through Homebrew \href{https://github.com/onqtam/doctest/pull/388}{\texttt{ \#388}} (\href{https://github.com/cameronwhite}{\texttt{ cameronwhite}})
+\item provide alternative implementation of has\+\_\+insertion\+\_\+operator for C++20 \href{https://github.com/onqtam/doctest/pull/387}{\texttt{ \#387}} (\href{https://github.com/lukaszgemborowski}{\texttt{ lukaszgemborowski}})
+\item Fix issue template to mention doctest \href{https://github.com/onqtam/doctest/pull/380}{\texttt{ \#380}} (\href{https://github.com/nyanpasu64}{\texttt{ nyanpasu64}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md8}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+3.\+8\char`\"{}$>$2.\+3.\+8$<$/a$>$ (2020-\/05-\/17)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md8}
+\href{https://github.com/onqtam/doctest/compare/2.3.7...2.3.8}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Scenario name can not be passed to -\/tc to execute single scenario \href{https://github.com/onqtam/doctest/issues/373}{\texttt{ \#373}}
+\item Compile Error with CHECK\+\_\+\+NOTHROW when using 2 Template Arguments \href{https://github.com/onqtam/doctest/issues/372}{\texttt{ \#372}}
+\item dll example won\textquotesingle{}t compile \href{https://github.com/onqtam/doctest/issues/371}{\texttt{ \#371}}
+\item Build error with Min\+GW (Mingw-\/w64) due to missing Windows.\+h (with capital W) \href{https://github.com/onqtam/doctest/issues/370}{\texttt{ \#370}}
+\item How to override file\+\_\+line\+\_\+to\+\_\+stream? \href{https://github.com/onqtam/doctest/issues/369}{\texttt{ \#369}}
+\item Memory sanitizer fails. \href{https://github.com/onqtam/doctest/issues/365}{\texttt{ \#365}}
+\item Warning c6319 in Visual Studio \href{https://github.com/onqtam/doctest/issues/359}{\texttt{ \#359}}
+\item Any option to show each test case\textquotesingle{}s execute time? \href{https://github.com/onqtam/doctest/issues/358}{\texttt{ \#358}}
+\item doctest in embedded \href{https://github.com/onqtam/doctest/issues/355}{\texttt{ \#355}}
+\item Reloading a plugin with test cases leads to a segmentation fault \href{https://github.com/onqtam/doctest/issues/350}{\texttt{ \#350}}
+\item Compiling with DOCTEST\+\_\+\+CONFIG\+\_\+\+COLORS\+\_\+\+ANSI fails on Windows \href{https://github.com/onqtam/doctest/issues/348}{\texttt{ \#348}}
+\item Can I inherit Console\+Reporter? \href{https://github.com/onqtam/doctest/issues/344}{\texttt{ \#344}}
+\item Noreturn and noexcept defines for Visual Studio 2013 support \href{https://github.com/onqtam/doctest/issues/327}{\texttt{ \#327}}
+\item Data-\/driven testing -- print out the deepest DOCTEST\+\_\+\+SUBCASE \href{https://github.com/onqtam/doctest/issues/215}{\texttt{ \#215}}
+\item Print the SUBCASE path when an assert fails in the TEST\+\_\+\+CASE body \href{https://github.com/onqtam/doctest/issues/125}{\texttt{ \#125}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item fix\+: possible UB with nullptr increment \href{https://github.com/onqtam/doctest/pull/368}{\texttt{ \#368}} (\href{https://github.com/oktonion}{\texttt{ oktonion}})
+\item Use CMake\textquotesingle{}s CMP0077 policy if available \href{https://github.com/onqtam/doctest/pull/363}{\texttt{ \#363}} (\href{https://github.com/thelink2012}{\texttt{ thelink2012}})
+\item Fix warning c6319 in Visual Studio 16.\+5 \href{https://github.com/onqtam/doctest/pull/361}{\texttt{ \#361}} (\href{https://github.com/Cvelth}{\texttt{ Cvelth}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md9}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+3.\+7\char`\"{}$>$2.\+3.\+7$<$/a$>$ (2020-\/02-\/24)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md9}
+\href{https://github.com/onqtam/doctest/compare/2.3.6...2.3.7}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Some of the Git\+Hub CI builds are failing \href{https://github.com/onqtam/doctest/issues/334}{\texttt{ \#334}}
+\item C++20 removed std\+::uncaught\+\_\+exception \href{https://github.com/onqtam/doctest/issues/333}{\texttt{ \#333}}
+\item Doctest SEH handlers are called before \+\_\+\+\_\+except handlers \href{https://github.com/onqtam/doctest/issues/324}{\texttt{ \#324}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item using std namespace where necessary and timer ticks fix \href{https://github.com/onqtam/doctest/pull/341}{\texttt{ \#341}} (\href{https://github.com/oktonion}{\texttt{ oktonion}})
+\item fix std\+::uncaught\+\_\+exceptions \href{https://github.com/onqtam/doctest/pull/340}{\texttt{ \#340}} (\href{https://github.com/cyyever}{\texttt{ cyyever}})
+\item Fix Git\+Hub CI and add Git\+Hub build badges \href{https://github.com/onqtam/doctest/pull/336}{\texttt{ \#336}} (\href{https://github.com/claremacrae}{\texttt{ claremacrae}})
+\item http -\/$>$ https \href{https://github.com/onqtam/doctest/pull/331}{\texttt{ \#331}} (\href{https://github.com/Coeur}{\texttt{ Coeur}})
+\item Switch to catching unhandled exceptions on Windows Closes \#324 \href{https://github.com/onqtam/doctest/pull/325}{\texttt{ \#325}} (\href{https://github.com/jkriegshauser}{\texttt{ jkriegshauser}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md10}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+3.\+6\char`\"{}$>$2.\+3.\+6$<$/a$>$ (2019-\/12-\/16)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md10}
+\href{https://github.com/onqtam/doctest/compare/2.3.5...2.3.6}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Link problem w/ BUILD=Release if \mbox{\hyperlink{doctest_2doctest_8h_ad655b38a678a6c69f4555b7737d4b7d3}{MESSAGE()}} with std\+::string/ostream-\/operator is used \href{https://github.com/onqtam/doctest/issues/316}{\texttt{ \#316}}
+\item the FAQ about difference to Catch2 is missing tags \href{https://github.com/onqtam/doctest/issues/315}{\texttt{ \#315}}
+\item include Windows.\+h in small caps to silence clang warnings \href{https://github.com/onqtam/doctest/issues/312}{\texttt{ \#312}}
+\item Mistake in generator with lgtm error \href{https://github.com/onqtam/doctest/issues/311}{\texttt{ \#311}}
+\item CMake\+: cannot install target doctest\+\_\+with\+\_\+main \href{https://github.com/onqtam/doctest/issues/310}{\texttt{ \#310}}
+\item \mbox{[}bug\mbox{]} \mbox{\hyperlink{doctest_2doctest_8h_aedf01192151e10a6620567952711ff69}{INFO()}} and \mbox{\hyperlink{doctest_2doctest_8h_a0cd84d289552018d72489c085df0a9ca}{CAPTURE()}} cannot compile using MSVC when used with DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENTATION\+\_\+\+IN\+\_\+\+DLL \href{https://github.com/onqtam/doctest/issues/306}{\texttt{ \#306}}
+\item Skip subcase \href{https://github.com/onqtam/doctest/issues/304}{\texttt{ \#304}}
+\item Does some equivalent features from google test exist here? \href{https://github.com/onqtam/doctest/issues/300}{\texttt{ \#300}}
+\item How to use doctest in dll only(without main.\+cpp and .exe) \href{https://github.com/onqtam/doctest/issues/299}{\texttt{ \#299}}
+\item Warning\+: C26812\+: The enum type \textquotesingle{}\mbox{\hyperlink{namespacedoctest_1_1assert_type_ae1bb5bed722f34f1c38b83cb19d326d3}{doctest\+::assert\+Type\+::\+Enum}}\textquotesingle{} is unscoped. Prefer \textquotesingle{}enum class\textquotesingle{} over \textquotesingle{}enum\textquotesingle{} (Enum.\+3). \href{https://github.com/onqtam/doctest/issues/298}{\texttt{ \#298}}
+\item test executable\+\_\+dll\+\_\+and\+\_\+plugin fails on Linux, GCC 8.\+1.\+0, -\/fsanitize=address \href{https://github.com/onqtam/doctest/issues/201}{\texttt{ \#201}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Fixed missing ostream include for Mac\+OS when defining DOCTEST\+\_\+\+CONFIG\+\_\+… \href{https://github.com/onqtam/doctest/pull/314}{\texttt{ \#314}} (\href{https://github.com/NKTomHaygarth}{\texttt{ NKTom\+Haygarth}})
+\item include windows.\+h in cmall caps to silence clang nonportable warnings \href{https://github.com/onqtam/doctest/pull/313}{\texttt{ \#313}} (\href{https://github.com/suoniq}{\texttt{ suoniq}})
+\item Add .editorconfig file. \href{https://github.com/onqtam/doctest/pull/301}{\texttt{ \#301}} (\href{https://github.com/DaanDeMeyer}{\texttt{ Daan\+De\+Meyer}})
+\item Add Github Actions CI \href{https://github.com/onqtam/doctest/pull/285}{\texttt{ \#285}} (\href{https://github.com/DaanDeMeyer}{\texttt{ Daan\+De\+Meyer}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md11}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+3.\+5\char`\"{}$>$2.\+3.\+5$<$/a$>$ (2019-\/09-\/22)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md11}
+\href{https://github.com/onqtam/doctest/compare/2.3.4...2.3.5}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item \mbox{[}feature request\mbox{]} Assertion macros for throwing exception of a specific type with message -\/ $<$LEVEL$>$\+\_\+\+THROWS\+\_\+\+WITH\+\_\+\+AS(expr, string, ex\+\_\+type) \href{https://github.com/onqtam/doctest/issues/295}{\texttt{ \#295}}
+\item CHECK\+\_\+\+THROWS\+\_\+\+AS of non-\/default constructor wants to call default constructor \href{https://github.com/onqtam/doctest/issues/293}{\texttt{ \#293}}
+\item Typos and spelling errors in source, documentation and scripts \href{https://github.com/onqtam/doctest/issues/291}{\texttt{ \#291}}
+\item Customize test names / variable substitution \href{https://github.com/onqtam/doctest/issues/284}{\texttt{ \#284}}
+\item SUBCASE in function not behaving as expected \href{https://github.com/onqtam/doctest/issues/282}{\texttt{ \#282}}
+\item SUPER\+\_\+\+FAST\+\_\+\+ASSERTS fails to compile CHECK\+\_\+\+MESSAGE \href{https://github.com/onqtam/doctest/issues/281}{\texttt{ \#281}}
+\item CHECK\+\_\+\+MESSAGE no longer works with DOCTEST\+\_\+\+CONFIG\+\_\+\+SUPER\+\_\+\+FAST\+\_\+\+ASSERTS \href{https://github.com/onqtam/doctest/issues/280}{\texttt{ \#280}}
+\item CAPTURE of structured binding element no longer works \href{https://github.com/onqtam/doctest/issues/279}{\texttt{ \#279}}
+\item Reporter\+: {\ttfamily test\textbackslash{}\+\_\+case\textbackslash{}\+\_\+end} no longer fired after test case restart \href{https://github.com/onqtam/doctest/issues/278}{\texttt{ \#278}}
+\item Add debug break override support \href{https://github.com/onqtam/doctest/issues/277}{\texttt{ \#277}}
+\item Running tests from within Visual Studio in a static lib project \href{https://github.com/onqtam/doctest/issues/275}{\texttt{ \#275}}
+\item Compile-\/time error when using a raw string literal inside of REQUIRE (MSVC 2017) \href{https://github.com/onqtam/doctest/issues/274}{\texttt{ \#274}}
+\item Give example for having tests in production code \href{https://github.com/onqtam/doctest/issues/252}{\texttt{ \#252}}
+\item Memory leaks just by including doctest.\+h \href{https://github.com/onqtam/doctest/issues/205}{\texttt{ \#205}}
+\item Feature request\+: print subcase when an exception is thrown inside one \href{https://github.com/onqtam/doctest/issues/136}{\texttt{ \#136}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Fix typos and misspellings found by codespell. \href{https://github.com/onqtam/doctest/pull/292}{\texttt{ \#292}} (\href{https://github.com/warmsocks}{\texttt{ warmsocks}})
+\item Document order by issue correctly \href{https://github.com/onqtam/doctest/pull/290}{\texttt{ \#290}} (\href{https://github.com/DaanDeMeyer}{\texttt{ Daan\+De\+Meyer}})
+\item Document that -\/order-\/by=file is compiler-\/dependent \href{https://github.com/onqtam/doctest/pull/289}{\texttt{ \#289}} (\href{https://github.com/DaanDeMeyer}{\texttt{ Daan\+De\+Meyer}})
+\item Add -\/order-\/by=name to filter\+\_\+2 test \href{https://github.com/onqtam/doctest/pull/288}{\texttt{ \#288}} (\href{https://github.com/DaanDeMeyer}{\texttt{ Daan\+De\+Meyer}})
+\item Add support for compiling with clang-\/cl \href{https://github.com/onqtam/doctest/pull/286}{\texttt{ \#286}} (\href{https://github.com/DaanDeMeyer}{\texttt{ Daan\+De\+Meyer}})
+\item No minimum version limitation of Meson \href{https://github.com/onqtam/doctest/pull/283}{\texttt{ \#283}} (\href{https://github.com/ydm}{\texttt{ ydm}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md12}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+3.\+4\char`\"{}$>$2.\+3.\+4$<$/a$>$ (2019-\/08-\/12)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md12}
+\href{https://github.com/onqtam/doctest/compare/2.3.3...2.3.4}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Remove \mbox{\hyperlink{doctest_2doctest_8h_aedf01192151e10a6620567952711ff69}{INFO()}} limitation for using only lvalues and no rvalues \href{https://github.com/onqtam/doctest/issues/269}{\texttt{ \#269}}
+\item Compile error on MAC OS with Apple\+Clang 8.\+0.\+0.\+8000042 \href{https://github.com/onqtam/doctest/issues/266}{\texttt{ \#266}}
+\item Throwing exception in a mocked method \href{https://github.com/onqtam/doctest/issues/265}{\texttt{ \#265}}
+\item Illegal syntax for decorators compiles and runs without warning, but has no effect \href{https://github.com/onqtam/doctest/issues/264}{\texttt{ \#264}}
+\item Support conditional expressions in REQUIRE \href{https://github.com/onqtam/doctest/issues/262}{\texttt{ \#262}}
+\item Register a listener(reporter) that always listens \href{https://github.com/onqtam/doctest/issues/257}{\texttt{ \#257}}
+\item Memory sanitizer complaint \href{https://github.com/onqtam/doctest/issues/255}{\texttt{ \#255}}
+\item Windows Clang GNU command line warnings \href{https://github.com/onqtam/doctest/issues/253}{\texttt{ \#253}}
+\item The build writes into the source directory \href{https://github.com/onqtam/doctest/issues/249}{\texttt{ \#249}}
+\item How to enable tests inside another exe \href{https://github.com/onqtam/doctest/issues/246}{\texttt{ \#246}}
+\item Testing multiple headers. \href{https://github.com/onqtam/doctest/issues/244}{\texttt{ \#244}}
+\item CMake\+Lists.\+txt\+: Needs CMAKE\+\_\+\+CXX\+\_\+\+STANDARD=11 \href{https://github.com/onqtam/doctest/issues/243}{\texttt{ \#243}}
+\item \mbox{[}bug\mbox{]} Can\textquotesingle{}t compile the tests because of mutex, that is declared in the doctest \href{https://github.com/onqtam/doctest/issues/242}{\texttt{ \#242}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Improve Listener docs \href{https://github.com/onqtam/doctest/pull/273}{\texttt{ \#273}} (\href{https://github.com/claremacrae}{\texttt{ claremacrae}})
+\item Rework {\ttfamily INFO} lazy evaluation to use lambdas. \href{https://github.com/onqtam/doctest/pull/270}{\texttt{ \#270}} (\href{https://github.com/DaanDeMeyer}{\texttt{ Daan\+De\+Meyer}})
+\item Prevent compile errors with Apple\+Clang compiler \href{https://github.com/onqtam/doctest/pull/268}{\texttt{ \#268}} (\href{https://github.com/ClausKlein}{\texttt{ Claus\+Klein}})
+\item Revert \char`\"{}fix \+: includeing windows.\+h header caause error\char`\"{} \href{https://github.com/onqtam/doctest/pull/263}{\texttt{ \#263}} (\href{https://github.com/onqtam}{\texttt{ onqtam}})
+\item Fix static analyzer URLs \href{https://github.com/onqtam/doctest/pull/259}{\texttt{ \#259}} (\href{https://github.com/godbyk}{\texttt{ godbyk}})
+\item fix \+: includeing windows.\+h header caause error \href{https://github.com/onqtam/doctest/pull/258}{\texttt{ \#258}} (\href{https://github.com/rinechran}{\texttt{ rinechran}})
+\item only look for C++ compiler with CMake \href{https://github.com/onqtam/doctest/pull/256}{\texttt{ \#256}} (\href{https://github.com/zhihaoy}{\texttt{ zhihaoy}})
+\item Fix \#253 \href{https://github.com/onqtam/doctest/pull/254}{\texttt{ \#254}} (\href{https://github.com/DaanDeMeyer}{\texttt{ Daan\+De\+Meyer}})
+\item add alias target for doctest for use in build tree \href{https://github.com/onqtam/doctest/pull/247}{\texttt{ \#247}} (\href{https://github.com/trondhe}{\texttt{ trondhe}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md13}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+3.\+3\char`\"{}$>$2.\+3.\+3$<$/a$>$ (2019-\/06-\/02)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md13}
+\href{https://github.com/onqtam/doctest/compare/2.3.2...2.3.3}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Build fails with gcc9 because of -\/Wstrict-\/overflow=5 which is too high \href{https://github.com/onqtam/doctest/issues/241}{\texttt{ \#241}}
+\item doctest given defined with short macro name \href{https://github.com/onqtam/doctest/issues/239}{\texttt{ \#239}}
+\item Splitting templated test across different translation units \href{https://github.com/onqtam/doctest/issues/238}{\texttt{ \#238}}
+\item Compile errors with iosfwd.\+h and Visual Studio 2019 Preview \href{https://github.com/onqtam/doctest/issues/183}{\texttt{ \#183}}
+\item Add CMake test support as catch\+\_\+discover\+\_\+tests() in Catch2 \href{https://github.com/onqtam/doctest/issues/171}{\texttt{ \#171}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item fix \#239 -\/ use long macro name \href{https://github.com/onqtam/doctest/pull/240}{\texttt{ \#240}} (\href{https://github.com/m-bd}{\texttt{ m-\/bd}})
+\item Add doctest\+\_\+discover\+\_\+tests() \href{https://github.com/onqtam/doctest/pull/236}{\texttt{ \#236}} (\href{https://github.com/RedDwarf69}{\texttt{ Red\+Dwarf69}})
+\item Ignore redundant-\/decls warning on Min\+GW \href{https://github.com/onqtam/doctest/pull/235}{\texttt{ \#235}} (\href{https://github.com/AMS21}{\texttt{ AMS21}})
+\item Fixed meson build file dependency declaration \href{https://github.com/onqtam/doctest/pull/233}{\texttt{ \#233}} (\href{https://github.com/jormundgand}{\texttt{ jormundgand}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md14}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+3.\+2\char`\"{}$>$2.\+3.\+2$<$/a$>$ (2019-\/05-\/06)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md14}
+\href{https://github.com/onqtam/doctest/compare/2.3.1...2.3.2}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{run__all_8py}{scripts/bench/run\+\_\+all.\+py}} \+: module \textquotesingle{}urllib\textquotesingle{} has no attribute \textquotesingle{}urlretrieve\textquotesingle{} \href{https://github.com/onqtam/doctest/issues/230}{\texttt{ \#230}}
+\item wrong set of tests registered with TEST\+\_\+\+CASE\+\_\+\+TEMPLATE get executed \href{https://github.com/onqtam/doctest/issues/228}{\texttt{ \#228}}
+\item Logging not Working for me \href{https://github.com/onqtam/doctest/issues/227}{\texttt{ \#227}}
+\item Link test runner executable into dll? \href{https://github.com/onqtam/doctest/issues/226}{\texttt{ \#226}}
+\item Linking issue for executables after including doctest in library \href{https://github.com/onqtam/doctest/issues/224}{\texttt{ \#224}}
+\item Strange REQUIRE\+\_\+\+THROWS behaviour \href{https://github.com/onqtam/doctest/issues/223}{\texttt{ \#223}}
+\item Windows clang-\/cl Wunused-\/variable warning \href{https://github.com/onqtam/doctest/issues/221}{\texttt{ \#221}}
+\item Update doctest 2.\+3.\+1 in bincrafters \href{https://github.com/onqtam/doctest/issues/220}{\texttt{ \#220}}
+\item make install, on 64 bit, installs cmake files into lib instead of lib64 folder \href{https://github.com/onqtam/doctest/issues/218}{\texttt{ \#218}}
+\item TSAN\+: data race related to has\+Logged\+Current\+Test\+Start \href{https://github.com/onqtam/doctest/issues/217}{\texttt{ \#217}}
+\item REQUIRE\+\_\+\+THROWS\+\_\+\+AS does not support class constructors \href{https://github.com/onqtam/doctest/issues/216}{\texttt{ \#216}}
+\item Build failure on clang 7.\+0.\+1 on Fedora 29 \href{https://github.com/onqtam/doctest/issues/214}{\texttt{ \#214}}
+\item add example compatible with -\/$>$ \href{https://github.com/report-ci/}{\texttt{ https\+://github.\+com/report-\/ci/}} \href{https://github.com/onqtam/doctest/issues/212}{\texttt{ \#212}}
+\item No DOCTEST\+\_\+\+WITH\+\_\+\+TESTS? \href{https://github.com/onqtam/doctest/issues/211}{\texttt{ \#211}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Added meson file, to declare a dependency. \href{https://github.com/onqtam/doctest/pull/232}{\texttt{ \#232}} (\href{https://github.com/jormundgand}{\texttt{ jormundgand}})
+\item Explicitly specify the doctest\+\_\+with\+\_\+main C++ standard in CMake. \href{https://github.com/onqtam/doctest/pull/231}{\texttt{ \#231}} (\href{https://github.com/DaanDeMeyer}{\texttt{ Daan\+De\+Meyer}})
+\item Remove architecture check from CMake package \href{https://github.com/onqtam/doctest/pull/225}{\texttt{ \#225}} (\href{https://github.com/mmha}{\texttt{ mmha}})
+\item add default install prefix \href{https://github.com/onqtam/doctest/pull/219}{\texttt{ \#219}} (\href{https://github.com/a4z}{\texttt{ a4z}})
+\item \mbox{[}regression\mbox{]} Workaround MSVC preprocessor issue triggered by REQUIRE\+\_\+\+THROWS \href{https://github.com/onqtam/doctest/pull/213}{\texttt{ \#213}} (\href{https://github.com/zhihaoy}{\texttt{ zhihaoy}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md15}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+3.\+1\char`\"{}$>$2.\+3.\+1$<$/a$>$ (2019-\/03-\/24)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md15}
+\href{https://github.com/onqtam/doctest/compare/2.3.0...2.3.1}{\texttt{ Full Changelog}}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Add two very simple examples of using doctest with CMake \href{https://github.com/onqtam/doctest/pull/209}{\texttt{ \#209}} (\href{https://github.com/pr0g}{\texttt{ pr0g}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md16}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+3.\+0\char`\"{}$>$2.\+3.\+0$<$/a$>$ (2019-\/03-\/23)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md16}
+\href{https://github.com/onqtam/doctest/compare/2.2.3...2.3.0}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Compilation with emscripten fails by default because of signal handling \href{https://github.com/onqtam/doctest/issues/207}{\texttt{ \#207}}
+\item Compilation fails with cl.\+exe /\+Zc\+:wchar\+\_\+t-\/ \href{https://github.com/onqtam/doctest/issues/206}{\texttt{ \#206}}
+\item Parallel invocation of doctest\textquotesingle{}s own testsuite via CTest fails \href{https://github.com/onqtam/doctest/issues/202}{\texttt{ \#202}}
+\item Get the number of passed/failed tests in the code \href{https://github.com/onqtam/doctest/issues/200}{\texttt{ \#200}}
+\item Tests alongside code with multiple executables \href{https://github.com/onqtam/doctest/issues/199}{\texttt{ \#199}}
+\item Cppcheck 1.\+86 warnings \href{https://github.com/onqtam/doctest/issues/198}{\texttt{ \#198}}
+\item Compiling as Dll maybe is wrong \href{https://github.com/onqtam/doctest/issues/196}{\texttt{ \#196}}
+\item Forward-\/declaring identifiers in std\+:\+: is UB -\/ consider including some of the cheaper C/\+C++ stdlib headers \href{https://github.com/onqtam/doctest/issues/194}{\texttt{ \#194}}
+\item Qt\+Creator + clang warning about operator $<$$<$ precedence \href{https://github.com/onqtam/doctest/issues/191}{\texttt{ \#191}}
+\item run test fixture from cli \href{https://github.com/onqtam/doctest/issues/190}{\texttt{ \#190}}
+\item Installing doctest using cmake and make fails on Ubuntu 16.\+04 (C++11 is not used) \href{https://github.com/onqtam/doctest/issues/189}{\texttt{ \#189}}
+\item c++17 requirement for testing private members \href{https://github.com/onqtam/doctest/issues/188}{\texttt{ \#188}}
+\item \mbox{[}feature request\mbox{]} implement a user-\/extendable reporter system \href{https://github.com/onqtam/doctest/issues/138}{\texttt{ \#138}}
+\item Same test runs multiple times when written in a header and included with different unnormalized paths \href{https://github.com/onqtam/doctest/issues/45}{\texttt{ \#45}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Fix unmatched bracket in DOCTEST\+\_\+\+TEST\+\_\+\+CASE\+\_\+\+CLASS \href{https://github.com/onqtam/doctest/pull/204}{\texttt{ \#204}} (\href{https://github.com/patstew}{\texttt{ patstew}})
+\item Template apply \href{https://github.com/onqtam/doctest/pull/203}{\texttt{ \#203}} (\href{https://github.com/zhihaoy}{\texttt{ zhihaoy}})
+\item No undefined behavior per C++ standard in detecting endianness. \href{https://github.com/onqtam/doctest/pull/195}{\texttt{ \#195}} (\href{https://github.com/dimztimz}{\texttt{ dimztimz}})
+\item Fix propagating include directories of target doctest\+\_\+with\+\_\+main \href{https://github.com/onqtam/doctest/pull/193}{\texttt{ \#193}} (\href{https://github.com/dimztimz}{\texttt{ dimztimz}})
+\item Move single header to a separate folder \href{https://github.com/onqtam/doctest/pull/187}{\texttt{ \#187}} (\href{https://github.com/dimztimz}{\texttt{ dimztimz}})
+\item Fix Clang format to handle C++11 \href{https://github.com/onqtam/doctest/pull/186}{\texttt{ \#186}} (\href{https://github.com/dimztimz}{\texttt{ dimztimz}})
+\item Rename doctest\+\_\+impl.\+h to \mbox{\hyperlink{doctest_8cpp}{doctest.\+cpp}} for less confusion. \href{https://github.com/onqtam/doctest/pull/185}{\texttt{ \#185}} (\href{https://github.com/dimztimz}{\texttt{ dimztimz}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md17}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+2.\+3\char`\"{}$>$2.\+2.\+3$<$/a$>$ (2019-\/02-\/10)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md17}
+\href{https://github.com/onqtam/doctest/compare/2.2.2...2.2.3}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Calling convention needed on a few functions \href{https://github.com/onqtam/doctest/issues/182}{\texttt{ \#182}}
+\item Terminal color is not reset when a test fails with some signal \href{https://github.com/onqtam/doctest/issues/122}{\texttt{ \#122}}
+\item testing private members -\/ ability to write test cases in class bodies \href{https://github.com/onqtam/doctest/issues/76}{\texttt{ \#76}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md18}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+2.\+2\char`\"{}$>$2.\+2.\+2$<$/a$>$ (2019-\/01-\/28)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md18}
+\href{https://github.com/onqtam/doctest/compare/2.2.1...2.2.2}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Add way to override get\+Current\+Ticks() implementation \href{https://github.com/onqtam/doctest/issues/178}{\texttt{ \#178}}
+\item Wrap $<$csignal$>$ include with ifdef \href{https://github.com/onqtam/doctest/issues/177}{\texttt{ \#177}}
+\item How to stop doctest hijack unhandled exceptions? \href{https://github.com/onqtam/doctest/issues/176}{\texttt{ \#176}}
+\item Change the include path of the {\ttfamily doctest} CMake interface target so users need to specify the folder as well \href{https://github.com/onqtam/doctest/issues/175}{\texttt{ \#175}}
+\item Reduce scope of Debug\+Output\+Window\+Reporter instance \href{https://github.com/onqtam/doctest/issues/174}{\texttt{ \#174}}
+\item Can logging (INFO) be used in helper class outside of TEST\+\_\+\+CASE? \href{https://github.com/onqtam/doctest/issues/169}{\texttt{ \#169}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Change the include path in examples as \#175 \href{https://github.com/onqtam/doctest/pull/180}{\texttt{ \#180}} (\href{https://github.com/ncihnegn}{\texttt{ ncihnegn}})
+\item Fix CMake include path \#175 \href{https://github.com/onqtam/doctest/pull/179}{\texttt{ \#179}} (\href{https://github.com/ncihnegn}{\texttt{ ncihnegn}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md19}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+2.\+1\char`\"{}$>$2.\+2.\+1$<$/a$>$ (2019-\/01-\/15)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md19}
+\href{https://github.com/onqtam/doctest/compare/2.2.0...2.2.1}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item the {\ttfamily -\/-\/no-\/throw} option shouldn\textquotesingle{}t affect {\ttfamily \textbackslash{}$<$LEVEL\textbackslash{}$>$\textbackslash{}\+\_\+\+NOTHROW} asserts \href{https://github.com/onqtam/doctest/issues/173}{\texttt{ \#173}}
+\item Make doctest work with XCode 6 and 7 (no support for C++11 thread\+\_\+local) \href{https://github.com/onqtam/doctest/issues/172}{\texttt{ \#172}}
+\item Print vector content. \href{https://github.com/onqtam/doctest/issues/170}{\texttt{ \#170}}
+\item Conan package \href{https://github.com/onqtam/doctest/issues/103}{\texttt{ \#103}}
+\item \mbox{[}feature request\mbox{]} Thread-\/safety for asserts and logging facilities \href{https://github.com/onqtam/doctest/issues/4}{\texttt{ \#4}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md20}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+2.\+0\char`\"{}$>$2.\+2.\+0$<$/a$>$ (2018-\/12-\/05)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md20}
+\href{https://github.com/onqtam/doctest/compare/2.1.0...2.2.0}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item remove the FAST\+\_\+ versions of the binary asserts (not a breaking change!) \href{https://github.com/onqtam/doctest/issues/167}{\texttt{ \#167}}
+\item \mbox{[}compile times\mbox{]} make the DOCTEST\+\_\+\+CONFIG\+\_\+\+SUPER\+\_\+\+FAST\+\_\+\+ASSERTS identifier affect normal asserts too \href{https://github.com/onqtam/doctest/issues/166}{\texttt{ \#166}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md21}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+1.\+0\char`\"{}$>$2.\+1.\+0$<$/a$>$ (2018-\/11-\/30)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md21}
+\href{https://github.com/onqtam/doctest/compare/2.0.1...2.1.0}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classdoctest_1_1_string}{doctest\+::\+String}} ctor with non-\/zero terminated string \href{https://github.com/onqtam/doctest/issues/165}{\texttt{ \#165}}
+\item thread\+\_\+local is not supported on i\+OS 9.\+0 \href{https://github.com/onqtam/doctest/issues/164}{\texttt{ \#164}}
+\item Compiler error on Android NDK r18 \href{https://github.com/onqtam/doctest/issues/163}{\texttt{ \#163}}
+\item \mbox{[}question\mbox{]} One setup for multiple tests \href{https://github.com/onqtam/doctest/issues/160}{\texttt{ \#160}}
+\item clang unwanted warning in user code \href{https://github.com/onqtam/doctest/issues/156}{\texttt{ \#156}}
+\item Unsigned integer overflow in file\+Order\+Comparator \href{https://github.com/onqtam/doctest/issues/151}{\texttt{ \#151}}
+\item Thread\+Sanitizer\+: signal-\/unsafe call inside of a signal \href{https://github.com/onqtam/doctest/issues/147}{\texttt{ \#147}}
+\item Feature request\+: check for exception string (like Catch\textquotesingle{}s CHECK\+\_\+\+THROWS\+\_\+\+WITH) \href{https://github.com/onqtam/doctest/issues/97}{\texttt{ \#97}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Fixed build error under Android NDK \href{https://github.com/onqtam/doctest/pull/162}{\texttt{ \#162}} (\href{https://github.com/tals}{\texttt{ tals}})
+\item Added clang-\/7 to travis build \href{https://github.com/onqtam/doctest/pull/161}{\texttt{ \#161}} (\href{https://github.com/AMS21}{\texttt{ AMS21}})
+\item Remove clang-\/tidy warnings for static fields created by doctest \href{https://github.com/onqtam/doctest/pull/159}{\texttt{ \#159}} (\href{https://github.com/rantasub}{\texttt{ rantasub}})
+\item Make it possible to change the command line options prefix \href{https://github.com/onqtam/doctest/pull/158}{\texttt{ \#158}} (\href{https://github.com/tbleher}{\texttt{ tbleher}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md22}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+0.\+1\char`\"{}$>$2.\+0.\+1$<$/a$>$ (2018-\/10-\/24)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md22}
+\href{https://github.com/onqtam/doctest/compare/2.0.0...2.0.1}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item macro name collision with google log \href{https://github.com/onqtam/doctest/issues/157}{\texttt{ \#157}}
+\item Add \#define to not run tests by default \href{https://github.com/onqtam/doctest/issues/152}{\texttt{ \#152}}
+\item REQUIRE\+\_\+\+THROWS\+\_\+\+MESSAGE not checking message correctly \href{https://github.com/onqtam/doctest/issues/150}{\texttt{ \#150}}
+\item Test case passes even though subcase failed \href{https://github.com/onqtam/doctest/issues/149}{\texttt{ \#149}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Correctly document when a \mbox{\hyperlink{doctest_2examples_2all__features_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main()}} entry point will be created \href{https://github.com/onqtam/doctest/pull/155}{\texttt{ \#155}} (\href{https://github.com/tbleher}{\texttt{ tbleher}})
+\item Correct format string for unsigned char \href{https://github.com/onqtam/doctest/pull/154}{\texttt{ \#154}} (\href{https://github.com/tbleher}{\texttt{ tbleher}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md23}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/2.\+0.\+0\char`\"{}$>$2.\+0.\+0$<$/a$>$ (2018-\/08-\/23)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md23}
+\href{https://github.com/onqtam/doctest/compare/1.2.9...2.0.0}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item MSVC 2017 15.\+8.\+1, New Warnings as Errors \href{https://github.com/onqtam/doctest/issues/144}{\texttt{ \#144}}
+\item Windows clang-\/cl Wdeprecated-\/declarations warnings \href{https://github.com/onqtam/doctest/issues/143}{\texttt{ \#143}}
+\item Logo Proposal for Doctest \href{https://github.com/onqtam/doctest/issues/141}{\texttt{ \#141}}
+\item PCH Support \href{https://github.com/onqtam/doctest/issues/140}{\texttt{ \#140}}
+\item improve compile times even further \href{https://github.com/onqtam/doctest/issues/139}{\texttt{ \#139}}
+\item !!! BREAKING CHANGE !!! -\/ Move to C++11 for next version of the library \href{https://github.com/onqtam/doctest/issues/137}{\texttt{ \#137}}
+\item get\+Current\+Ticks producing warning on Min\+GW \href{https://github.com/onqtam/doctest/issues/133}{\texttt{ \#133}}
+\item \mbox{[}enhancement\mbox{]} Add support for \char`\"{}stand-\/alone assertions\char`\"{}. \href{https://github.com/onqtam/doctest/issues/114}{\texttt{ \#114}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Suppress compiler warning on Min\+GW \href{https://github.com/onqtam/doctest/pull/134}{\texttt{ \#134}} (\href{https://github.com/AMS21}{\texttt{ AMS21}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md24}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+9\char`\"{}$>$1.\+2.\+9$<$/a$>$ (2018-\/05-\/10)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md24}
+\href{https://github.com/onqtam/doctest/compare/1.2.8...1.2.9}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item GCC 8.\+0 std\+::uncaught\+\_\+exception() is deprecated \href{https://github.com/onqtam/doctest/issues/130}{\texttt{ \#130}}
+\item Signal stack size too small on Linux \href{https://github.com/onqtam/doctest/issues/129}{\texttt{ \#129}}
+\item Support Intel Compiler \href{https://github.com/onqtam/doctest/issues/128}{\texttt{ \#128}}
+\item Please add support for MSVC 2005 \href{https://github.com/onqtam/doctest/issues/127}{\texttt{ \#127}}
+\item scan-\/build report \char`\"{}\+Dereference of null pointer\char`\"{} for function wildcmp \href{https://github.com/onqtam/doctest/issues/124}{\texttt{ \#124}}
+\item !!! BREAKING CHANGE (console output only) !!! -\/ Emulate the error/warning format emitted by native compiler gcc/clang/msvc when printing test failures in the log \href{https://github.com/onqtam/doctest/issues/123}{\texttt{ \#123}}
+\item ARM builds\+: FTBFS on armhf -\/ error\+: cast from \textquotesingle{}const char$\ast$\textquotesingle{} to \textquotesingle{}const \href{https://github.com/onqtam/doctest/issues/118}{\texttt{ \#118}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Exclude Intel from GCC compiler check \href{https://github.com/onqtam/doctest/pull/132}{\texttt{ \#132}} (\href{https://github.com/smcallis}{\texttt{ smcallis}})
+\item Fix deprecated-\/declarations warning with GCC-\/8.\+0 \href{https://github.com/onqtam/doctest/pull/131}{\texttt{ \#131}} (\href{https://github.com/AMS21}{\texttt{ AMS21}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md25}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+8\char`\"{}$>$1.\+2.\+8$<$/a$>$ (2018-\/03-\/10)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md25}
+\href{https://github.com/onqtam/doctest/compare/1.2.7...1.2.8}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item ARM64 builds\+: \mbox{\hyperlink{templated__test__cases_8cpp}{templated\+\_\+test\+\_\+cases.\+cpp}} test fails \href{https://github.com/onqtam/doctest/issues/119}{\texttt{ \#119}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md26}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+7\char`\"{}$>$1.\+2.\+7$<$/a$>$ (2018-\/02-\/06)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md26}
+\href{https://github.com/onqtam/doctest/compare/1.2.6...1.2.7}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item MSan has runtime error\+: unsigned integer overflow \href{https://github.com/onqtam/doctest/issues/116}{\texttt{ \#116}}
+\item clang-\/tidy warning about cert-\/err58-\/cpp \href{https://github.com/onqtam/doctest/issues/115}{\texttt{ \#115}}
+\item Linking errors \href{https://github.com/onqtam/doctest/issues/113}{\texttt{ \#113}}
+\item inlining function defs \href{https://github.com/onqtam/doctest/issues/111}{\texttt{ \#111}}
+\item Nullptr issue. \href{https://github.com/onqtam/doctest/issues/110}{\texttt{ \#110}}
+\item Memory\+Sanitizer\+: use-\/of-\/uninitialized-\/value \href{https://github.com/onqtam/doctest/issues/109}{\texttt{ \#109}}
+\item Potential memory leak through scan-\/build \href{https://github.com/onqtam/doctest/issues/108}{\texttt{ \#108}}
+\item Warnings raised to error with latest MSVC version \href{https://github.com/onqtam/doctest/issues/107}{\texttt{ \#107}}
+\item New solution for tests in static libraries ! (MSVC) \href{https://github.com/onqtam/doctest/issues/106}{\texttt{ \#106}}
+\item \mbox{\hyperlink{class_command}{Command}} line flags do not work after code formatter/beautifier \href{https://github.com/onqtam/doctest/issues/104}{\texttt{ \#104}}
+\item Cppcheck 1.\+81 warnings \href{https://github.com/onqtam/doctest/issues/102}{\texttt{ \#102}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Fix macros WIN32\+\_\+\+LEAN\+\_\+\+AND\+\_\+\+MEAN typo \href{https://github.com/onqtam/doctest/pull/112}{\texttt{ \#112}} (\href{https://github.com/vladimirgamalyan}{\texttt{ vladimirgamalyan}})
+\item Correct DOCTEST\+\_\+\+NO\+\_\+\+INSTALL logic; do install unless it is set (\#99) \href{https://github.com/onqtam/doctest/pull/100}{\texttt{ \#100}} (\href{https://github.com/onqtam}{\texttt{ onqtam}})
+\item Correct DOCTEST\+\_\+\+NO\+\_\+\+INSTALL logic; do install unless it is set \href{https://github.com/onqtam/doctest/pull/99}{\texttt{ \#99}} (\href{https://github.com/OdyX}{\texttt{ OdyX}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md27}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+6\char`\"{}$>$1.\+2.\+6$<$/a$>$ (2017-\/10-\/29)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md27}
+\href{https://github.com/onqtam/doctest/compare/1.2.5...1.2.6}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item \mbox{[}bug\mbox{]} writing an exception translator in a header file results in it being registered multiple times which is suboptimal \href{https://github.com/onqtam/doctest/issues/98}{\texttt{ \#98}}
+\item Warnings when using something more than /\+W4 for Visual Studio \href{https://github.com/onqtam/doctest/issues/95}{\texttt{ \#95}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Added an option to not install Doctest in the CMake scripts \href{https://github.com/onqtam/doctest/pull/96}{\texttt{ \#96}} (\href{https://github.com/nm17}{\texttt{ nm17}})
+\item Adding a defensive check against a null pointer for the current test suite \href{https://github.com/onqtam/doctest/pull/94}{\texttt{ \#94}} (\href{https://github.com/Lectem}{\texttt{ Lectem}})
+\item Remove incomplete copy ctor \href{https://github.com/onqtam/doctest/pull/93}{\texttt{ \#93}} (\href{https://github.com/McMartin}{\texttt{ Mc\+Martin}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md28}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+5\char`\"{}$>$1.\+2.\+5$<$/a$>$ (2017-\/10-\/06)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md28}
+\href{https://github.com/onqtam/doctest/compare/1.2.4...1.2.5}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Xcode 9 / clang -\/ unknown warning group \href{https://github.com/onqtam/doctest/issues/92}{\texttt{ \#92}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md29}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+4\char`\"{}$>$1.\+2.\+4$<$/a$>$ (2017-\/09-\/20)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md29}
+\href{https://github.com/onqtam/doctest/compare/1.2.3...1.2.4}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item \mbox{[}bug\mbox{]} test cases can end up in the wrong test suite \href{https://github.com/onqtam/doctest/issues/91}{\texttt{ \#91}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md30}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+3\char`\"{}$>$1.\+2.\+3$<$/a$>$ (2017-\/09-\/11)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md30}
+\href{https://github.com/onqtam/doctest/compare/1.2.2...1.2.3}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item \mbox{[}bug\mbox{]} Defining a variable T inside a test with DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE defined does not compile \href{https://github.com/onqtam/doctest/issues/90}{\texttt{ \#90}}
+\item \mbox{[}support\mbox{]} Using {\ttfamily DOCTEST\textbackslash{}\+\_\+\+CONFIG\textbackslash{}\+\_\+\+NO\textbackslash{}\+\_\+\+SHORT\textbackslash{}\+\_\+\+MACRO\textbackslash{}\+\_\+\+NAMES} does not compile using g++ 6.\+3.\+0 \href{https://github.com/onqtam/doctest/issues/89}{\texttt{ \#89}}
+\item \mbox{[}question\mbox{]} Why are SUBCASEs executed only once when within a function called multiple times? \href{https://github.com/onqtam/doctest/issues/88}{\texttt{ \#88}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md31}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+2\char`\"{}$>$1.\+2.\+2$<$/a$>$ (2017-\/09-\/05)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md31}
+\href{https://github.com/onqtam/doctest/compare/1.2.1...1.2.2}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item \mbox{[}question\mbox{]} Differences between doctest and googletest (gtest) for uninitialised local variables in test cases \href{https://github.com/onqtam/doctest/issues/86}{\texttt{ \#86}}
+\item !!! BREAKING CHANGE !!! -\/ remove the custom implementation of std\+::is\+\_\+constructible and optionally use the $<$type\+\_\+traits$>$ header because of infinite template recursion issues with GCC \href{https://github.com/onqtam/doctest/issues/85}{\texttt{ \#85}}
+\item Static Analysis results of doctest \href{https://github.com/onqtam/doctest/issues/83}{\texttt{ \#83}}
+\item !!! BREAKING CHANGE !!! -\/ catch exceptions as const reference in $<$LEVEL$>$\+\_\+\+THROWS\+\_\+\+AS \href{https://github.com/onqtam/doctest/issues/81}{\texttt{ \#81}}
+\item doctest implementation as static library \href{https://github.com/onqtam/doctest/issues/77}{\texttt{ \#77}}
+\item Provide some easy way to compare structs containing float/doubles \href{https://github.com/onqtam/doctest/issues/73}{\texttt{ \#73}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Add support for templated scenarios \href{https://github.com/onqtam/doctest/pull/87}{\texttt{ \#87}} (\href{https://github.com/Lectem}{\texttt{ Lectem}})
+\item Prefer if(\+MSVC) in CMake\+Lists.\+txt. \href{https://github.com/onqtam/doctest/pull/84}{\texttt{ \#84}} (\href{https://github.com/martinmoene}{\texttt{ martinmoene}})
+\item catch throw\+\_\+as exception as const reference \href{https://github.com/onqtam/doctest/pull/82}{\texttt{ \#82}} (\href{https://github.com/a4z}{\texttt{ a4z}})
+\item Added doctest\+\_\+with\+\_\+main static lib \href{https://github.com/onqtam/doctest/pull/78}{\texttt{ \#78}} (\href{https://github.com/ymadzhunkov}{\texttt{ ymadzhunkov}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md32}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+1\char`\"{}$>$1.\+2.\+1$<$/a$>$ (2017-\/05-\/24)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md32}
+\href{https://github.com/onqtam/doctest/compare/1.2.0...1.2.1}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Compile error under MSVC 2015/2017 if $<$thread$>$ included in same file as \char`\"{}doctest.\+h\char`\"{} \href{https://github.com/onqtam/doctest/issues/72}{\texttt{ \#72}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item docs\+: TEST\+\_\+\+CASE\+\_\+\+METHOD -\/$>$ TEST\+\_\+\+CASE\+\_\+\+FIXTURE \href{https://github.com/onqtam/doctest/pull/71}{\texttt{ \#71}} (\href{https://github.com/akrzemi1}{\texttt{ akrzemi1}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md33}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+2.\+0\char`\"{}$>$1.\+2.\+0$<$/a$>$ (2017-\/05-\/15)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md33}
+\href{https://github.com/onqtam/doctest/compare/1.1.4...1.2.0}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Further improvements on compile time -\/ disable inlining of functions used in asserts \href{https://github.com/onqtam/doctest/issues/70}{\texttt{ \#70}}
+\item Improve runtime performance -\/ lazy stringification, more inlining, no statics on the hot path, move semantics for classes such as \mbox{\hyperlink{classdoctest_1_1_string}{doctest\+::\+String}} which are used by value, etc. \href{https://github.com/onqtam/doctest/issues/69}{\texttt{ \#69}}
+\item Add option to show duration of test case execution and add a timeout(seconds) decorator -\/ marking them as failed if they exceed it \href{https://github.com/onqtam/doctest/issues/68}{\texttt{ \#68}}
+\item Add support for test case decorators -\/ label, description, skip, may\+\_\+fail, should\+\_\+fail, expected\+\_\+failures, etc. \href{https://github.com/onqtam/doctest/issues/67}{\texttt{ \#67}}
+\item Integrate static analysis into the CI builds \href{https://github.com/onqtam/doctest/issues/66}{\texttt{ \#66}}
+\item Print the test suite name on test case failure \href{https://github.com/onqtam/doctest/issues/65}{\texttt{ \#65}}
+\item Add signal handlers to handle crashes (and use SEH under Windows) -\/ report which test case failed \href{https://github.com/onqtam/doctest/issues/63}{\texttt{ \#63}}
+\item Add support to Approx for strong typedefs of double \href{https://github.com/onqtam/doctest/issues/62}{\texttt{ \#62}}
+\item \mbox{[}question\mbox{]} Is there a way to always have 0 as the exit code regardless of test results? \href{https://github.com/onqtam/doctest/issues/59}{\texttt{ \#59}}
+\item Add support for un-\/parenthesized expressions containing commas in asserts \href{https://github.com/onqtam/doctest/issues/58}{\texttt{ \#58}}
+\item Add ability to filter subcases with filters \href{https://github.com/onqtam/doctest/issues/57}{\texttt{ \#57}}
+\item Add option to query if code is being ran inside of a test -\/ \mbox{\hyperlink{namespacedoctest_a0b03060093b3894c976b6ae84e55f3f2}{doctest\+::is\+\_\+running\+\_\+in\+\_\+test}} \href{https://github.com/onqtam/doctest/issues/56}{\texttt{ \#56}}
+\item Ability for a binary (executable / shared object) to use the test runner implementation of another binary -\/ with exported symbols -\/ so tests end up in a single registry \href{https://github.com/onqtam/doctest/issues/55}{\texttt{ \#55}}
+\item How to force the use of colors in the terminal? \href{https://github.com/onqtam/doctest/issues/54}{\texttt{ \#54}}
+\item How can I mix production code with the Unit Tests? \href{https://github.com/onqtam/doctest/issues/53}{\texttt{ \#53}}
+\item add $<$= and $>$= operators to Approx (and also maybe $<$ and $>$) \href{https://github.com/onqtam/doctest/issues/52}{\texttt{ \#52}}
+\item Add ability to capture variables from test scope \href{https://github.com/onqtam/doctest/issues/48}{\texttt{ \#48}}
+\item !!! BREAKING CHANGE !!! -\/ Make TEST\+\_\+\+SUITE work with blocks and add TEST\+\_\+\+SUITE\+\_\+\+BEGIN \href{https://github.com/onqtam/doctest/issues/41}{\texttt{ \#41}}
+\item Add option to print which test suites/cases are run \href{https://github.com/onqtam/doctest/issues/39}{\texttt{ \#39}}
+\item Add support for templated test cases -\/ parameterized by type \href{https://github.com/onqtam/doctest/issues/38}{\texttt{ \#38}}
+\item Add custom failure messages with lazy stringification \href{https://github.com/onqtam/doctest/issues/23}{\texttt{ \#23}}
+\item Add an exception translation mechanism + the ability for users to extend it with custom exception types \href{https://github.com/onqtam/doctest/issues/12}{\texttt{ \#12}}
+\item Add API for reporting failures \href{https://github.com/onqtam/doctest/issues/9}{\texttt{ \#9}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Update doctest to work with ARM DS5-\/compiler \href{https://github.com/onqtam/doctest/pull/64}{\texttt{ \#64}} (\href{https://github.com/tomasnilefrost}{\texttt{ tomasnilefrost}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md34}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+1.\+4\char`\"{}$>$1.\+1.\+4$<$/a$>$ (2017-\/02-\/18)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md34}
+\href{https://github.com/onqtam/doctest/compare/1.1.3...1.1.4}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Add option --force-\/colors -\/ for when a tty is not detected for stdout \href{https://github.com/onqtam/doctest/issues/51}{\texttt{ \#51}}
+\item Issue with using lambdas in tests in gcc \href{https://github.com/onqtam/doctest/issues/49}{\texttt{ \#49}}
+\item Add the include file to releases \href{https://github.com/onqtam/doctest/issues/47}{\texttt{ \#47}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Add translation of std\+::exception for exceptions that terminate a test case \href{https://github.com/onqtam/doctest/pull/46}{\texttt{ \#46}} (\href{https://github.com/eliaskosunen}{\texttt{ eliaskosunen}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md35}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+1.\+3\char`\"{}$>$1.\+1.\+3$<$/a$>$ (2016-\/11-\/15)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md35}
+\href{https://github.com/onqtam/doctest/compare/1.1.2...1.1.3}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item Exception handlers cause warnings when exceptions are disabled \href{https://github.com/onqtam/doctest/issues/44}{\texttt{ \#44}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md36}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+1.\+2\char`\"{}$>$1.\+1.\+2$<$/a$>$ (2016-\/10-\/10)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md36}
+\href{https://github.com/onqtam/doctest/compare/1.1.1...1.1.2}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item clang warnings when using C++11 or newer \href{https://github.com/onqtam/doctest/issues/42}{\texttt{ \#42}}
+\item \mbox{[}support\mbox{]} identical names for test suites? \href{https://github.com/onqtam/doctest/issues/40}{\texttt{ \#40}}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md37}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+1.\+1\char`\"{}$>$1.\+1.\+1$<$/a$>$ (2016-\/09-\/22)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md37}
+\href{https://github.com/onqtam/doctest/compare/1.1.0...1.1.1}{\texttt{ Full Changelog}}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md38}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+1.\+0\char`\"{}$>$1.\+1.\+0$<$/a$>$ (2016-\/09-\/21)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md38}
+\href{https://github.com/onqtam/doctest/compare/1.0.0...1.1.0}{\texttt{ Full Changelog}}
+
+{\bfseries{Closed issues\+:}}
+
+
+\begin{DoxyItemize}
+\item char$\ast$ comparison uses the contents, not the pointer \href{https://github.com/onqtam/doctest/issues/36}{\texttt{ \#36}}
+\item add configuration preprocessor identifier for passing by value in assertions instead of by reference \href{https://github.com/onqtam/doctest/issues/35}{\texttt{ \#35}}
+\item restrict expressions in assertion macros to binary comparisons at most with a static assert \href{https://github.com/onqtam/doctest/issues/34}{\texttt{ \#34}}
+\item Add clear\+Filters() to \mbox{\hyperlink{classdoctest_1_1_context}{doctest\+::\+Context}} \href{https://github.com/onqtam/doctest/issues/33}{\texttt{ \#33}}
+\item A way to refrain from polluting “\#define” space for users of tested code? \href{https://github.com/onqtam/doctest/issues/32}{\texttt{ \#32}}
+\item drop VC++6 support \href{https://github.com/onqtam/doctest/issues/31}{\texttt{ \#31}}
+\item False positive test \href{https://github.com/onqtam/doctest/issues/30}{\texttt{ \#30}}
+\item Turn off coloring after tests are finished? \href{https://github.com/onqtam/doctest/issues/28}{\texttt{ \#28}}
+\item C++11 nullptr \href{https://github.com/onqtam/doctest/issues/27}{\texttt{ \#27}}
+\item Only one SUBCASE per line is executed \href{https://github.com/onqtam/doctest/issues/25}{\texttt{ \#25}}
+\item creative formatting of chars \href{https://github.com/onqtam/doctest/issues/24}{\texttt{ \#24}}
+\item DOCTEST\+\_\+\+BREAK\+\_\+\+INTO\+\_\+\+DEBUGGER undefined under OSX \href{https://github.com/onqtam/doctest/issues/22}{\texttt{ \#22}}
+\item Tests inside a static library \href{https://github.com/onqtam/doctest/issues/21}{\texttt{ \#21}}
+\item Add example how to remove doctest options from the command line for the program after the tests run \href{https://github.com/onqtam/doctest/issues/20}{\texttt{ \#20}}
+\item Single-\/letter options active even without leading \textquotesingle{}-\/\textquotesingle{} (dash) \href{https://github.com/onqtam/doctest/issues/19}{\texttt{ \#19}}
+\item pointer stringification not working for compilers different from MSVC \href{https://github.com/onqtam/doctest/issues/18}{\texttt{ \#18}}
+\item Tests that accompany code run and produce output at default \href{https://github.com/onqtam/doctest/issues/17}{\texttt{ \#17}}
+\item GCC 5.\+3.\+1 Compiler warning\+: sign compare \href{https://github.com/onqtam/doctest/issues/16}{\texttt{ \#16}}
+\item Slower than Catch in realistic test cases \href{https://github.com/onqtam/doctest/issues/14}{\texttt{ \#14}}
+\item Rename \mbox{\hyperlink{structdoctest_1_1detail_1_1_result}{doctest\+::detail\+::\+Result}} res; in DOCTEST\+\_\+\+ASSERT\+\_\+\+IMPLEMENT \href{https://github.com/onqtam/doctest/issues/10}{\texttt{ \#10}}
+\item No red when all tests pass \href{https://github.com/onqtam/doctest/issues/7}{\texttt{ \#7}}
+\item UNIX line feedings on Git\+Hub please \href{https://github.com/onqtam/doctest/issues/6}{\texttt{ \#6}}
+\end{DoxyItemize}
+
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item don\textquotesingle{}t show green when tests fail \href{https://github.com/onqtam/doctest/pull/26}{\texttt{ \#26}} (\href{https://github.com/ferkulat}{\texttt{ ferkulat}})
+\item Include \char`\"{}program code\char`\"{} in example \href{https://github.com/onqtam/doctest/pull/15}{\texttt{ \#15}} (\href{https://github.com/martinmoene}{\texttt{ martinmoene}})
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md39}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/onqtam/doctest/tree/1.\+0.\+0\char`\"{}$>$1.\+0.\+0$<$/a$>$ (2016-\/05-\/22)}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g_autotoc_md39}
+{\bfseries{Merged pull requests\+:}}
+
+
+\begin{DoxyItemize}
+\item Reduce the header size for test users \href{https://github.com/onqtam/doctest/pull/3}{\texttt{ \#3}} (\href{https://github.com/zah}{\texttt{ zah}})
+\item Add a Gitter chat badge to README.\+md \href{https://github.com/onqtam/doctest/pull/1}{\texttt{ \#1}} (\href{https://github.com/gitter-badger}{\texttt{ gitter-\/badger}})
+\item {\itshape This Change Log was automatically generated by \href{https://github.com/skywinder/Github-Changelog-Generator}{\texttt{ github\+\_\+changelog\+\_\+generator}}} 
+\end{DoxyItemize}

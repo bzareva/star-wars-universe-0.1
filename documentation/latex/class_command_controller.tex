@@ -2,6 +2,11 @@
 \label{class_command_controller}\index{CommandController@{CommandController}}
 
 
+Container with commands.  
+
+
+
+
 {\ttfamily \#include $<$Command\+Controller.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -11,16 +16,16 @@
 \begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_command_controller_a7cac7064c8bf81cf9e1a026ea34ac2c2}{$\sim$\+Command\+Controller}} ()=default
 \begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_command_controller_ae311f6f191204fcea02d2a5c9aadadf0}{execute\+\_\+command}} (const \mbox{\hyperlink{class_string}{String}} \&file\+\_\+name, \mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} cosmos)
+void \mbox{\hyperlink{class_command_controller_a0a0f34ab3db9ba3765579b5a80a64226}{execute\+\_\+command}} (const \mbox{\hyperlink{class_string}{String}} \&file\+\_\+name, \mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&cosmos)
 \begin{DoxyCompactList}\small\item\em execute registered commands \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_command_controller_a779cbe8973e05623eeeb8cf0e8088397}{register\+\_\+command}} (\mbox{\hyperlink{class_command}{Command}} $\ast$register\+\_\+command)
 \begin{DoxyCompactList}\small\item\em registers commands \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_command_controller_a00c070926c672cf43dde17612afa6319}{init\+\_\+command}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} cosmos)
+void \mbox{\hyperlink{class_command_controller_af61b4ef9970454e02efe8c2f77019849}{init\+\_\+command}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&cosmos)
 \begin{DoxyCompactList}\small\item\em created commands are registered in container \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Container with commands 
+Container with commands. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_command_controller_a92c2a5f6f1e8aeaef945ac856cf97f47}\label{class_command_controller_a92c2a5f6f1e8aeaef945ac856cf97f47}} 
@@ -46,21 +51,21 @@ default destructor
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_command_controller_ae311f6f191204fcea02d2a5c9aadadf0}\label{class_command_controller_ae311f6f191204fcea02d2a5c9aadadf0}} 
+\mbox{\Hypertarget{class_command_controller_a0a0f34ab3db9ba3765579b5a80a64226}\label{class_command_controller_a0a0f34ab3db9ba3765579b5a80a64226}} 
 \index{CommandController@{CommandController}!execute\_command@{execute\_command}}
 \index{execute\_command@{execute\_command}!CommandController@{CommandController}}
 \doxysubsubsection{\texorpdfstring{execute\_command()}{execute\_command()}}
-{\footnotesize\ttfamily void Command\+Controller\+::execute\+\_\+command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}}}]{cosmos }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Command\+Controller\+::execute\+\_\+command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{cosmos }\end{DoxyParamCaption})}
 
 
 
 execute registered commands 
 
-\mbox{\Hypertarget{class_command_controller_a00c070926c672cf43dde17612afa6319}\label{class_command_controller_a00c070926c672cf43dde17612afa6319}} 
+\mbox{\Hypertarget{class_command_controller_af61b4ef9970454e02efe8c2f77019849}\label{class_command_controller_af61b4ef9970454e02efe8c2f77019849}} 
 \index{CommandController@{CommandController}!init\_command@{init\_command}}
 \index{init\_command@{init\_command}!CommandController@{CommandController}}
 \doxysubsubsection{\texorpdfstring{init\_command()}{init\_command()}}
-{\footnotesize\ttfamily void Command\+Controller\+::init\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}}}]{cosmos }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Command\+Controller\+::init\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{cosmos }\end{DoxyParamCaption})}
 
 
 
@@ -76,9 +81,3 @@ created commands are registered in container
 
 registers commands 
 
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_command_controller_8h}{Command\+Controller.\+h}}\item 
-C\+:/\+Users/\+USER/source/repos/bzareva/star-\/wars-\/universe-\/0.\+1/\mbox{\hyperlink{_command_controller_8cpp}{Command\+Controller.\+cpp}}\end{DoxyCompactItemize}

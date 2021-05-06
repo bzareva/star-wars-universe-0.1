@@ -2,9 +2,11 @@ var class_galaxy =
 [
     [ "Galaxy", "class_galaxy.html#aac431eec66d158f5f82cdbc3eec39586", null ],
     [ "Galaxy", "class_galaxy.html#a6d5a863cd384e409155568401e82ced1", null ],
-    [ "Galaxy", "class_galaxy.html#a65cc4c3ebf65ec75da01c11cc7a6e3aa", null ],
+    [ "Galaxy", "class_galaxy.html#a057500667a569b2a25d25265a2ca4209", null ],
+    [ "Galaxy", "class_galaxy.html#a6c025516526b1838c635a1fb765ca483", null ],
     [ "Galaxy", "class_galaxy.html#acc968b7671d47b6559c26d4e63b7bbb1", null ],
     [ "add_planet", "class_galaxy.html#aecfac4c178e05ca19dff485bf02910d4", null ],
+    [ "add_vec_jedi", "class_galaxy.html#aac59485045593b01ba1b46130d3e0700", null ],
     [ "at", "class_galaxy.html#aee3ef9b038084f88d6ef6edfde236f41", null ],
     [ "at", "class_galaxy.html#a27ad23f724f8beeef8c0465815d351eb", null ],
     [ "clone", "class_galaxy.html#aa08a6b5ffebb121112cf75f400f66097", null ],

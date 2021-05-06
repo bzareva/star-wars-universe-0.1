@@ -1,0 +1,85 @@
+{\bfseries{doctest}} has been designed from the start to be as {\bfseries{light}} and {\bfseries{unintrusive}} as possible. These key features should be kept.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_features_autotoc_md132}{}\doxysection{Unintrusive (transparent)\+:}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_features_autotoc_md132}
+
+\begin{DoxyItemize}
+\item everything testing-\/related can be removed from the binary executable by defining the \href{configuration.md\#doctest_config_disable}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$}} identifier
+\item very small and easy to integrate -\/ single header
+\item {\bfseries{Extremely}} low footprint on compile times -\/ \href{benchmarks.md\#cost-of-including-the-header}{\texttt{ {\bfseries{around 25ms}}}} of compile time overhead for including the header in a file
+\item The \href{benchmarks.md\#cost-of-an-assertion-macro}{\texttt{ {\bfseries{fastest possible}}}} assertion macros -\/ 50k asserts can compile for under 30 seconds (even under 10 sec)
+\item doesn\textquotesingle{}t drag any headers when included (except for in the translation unit where the library gets implemented)
+\item everything is in the {\ttfamily doctest} namespace (and the implementation details are in a nested {\ttfamily detail} namespace)
+\item all macros have prefixes -\/ some by default have unprefixed versions as well but that is optional -\/ see \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration}{$\ast$$\ast$configuration$\ast$$\ast$}}
+\item 0 warnings even with the most aggressive flags (on all tested compilers!!!)
+\begin{DoxyItemize}
+\item {\ttfamily -\/Weverything -\/pedantic} for {\bfseries{clang}}
+\item {\ttfamily -\/Wall -\/Wextra -\/pedantic} and $\ast$$\ast$$>$$>$ over 35 $<$$<$$\ast$$\ast$ other warnings {\bfseries{not}} covered by these flags for {\bfseries{GCC}}!!! -\/ see \href{../../scripts/cmake/common.cmake\#L84}{\texttt{ {\bfseries{here}}}}
+\item {\ttfamily /\+Wall} for {\bfseries{MSVC}} (except for\+: {\ttfamily C4514}, {\ttfamily C4571}, {\ttfamily C4710}, {\ttfamily C4711})
+\end{DoxyItemize}
+\item doesn\textquotesingle{}t error on unrecognized \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$command line$\ast$$\ast$}} options and supports prefixes for interop with client command line parsing
+\item can set options \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_main}{$\ast$$\ast$procedurally$\ast$$\ast$}} and not deal with passing {\ttfamily argc}/{\ttfamily argv} from the command line
+\item doesn\textquotesingle{}t leave warnings disabled after itself
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_features_autotoc_md133}{}\doxysection{Extremely portable\+:}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_features_autotoc_md133}
+
+\begin{DoxyItemize}
+\item Standards compliant {\bfseries{C++11}} code -\/ should work with any {\bfseries{C++11}} capable compiler (use tag \href{https://github.com/onqtam/doctest/tree/1.2.9}{\texttt{ {\bfseries{1.\+2.\+9}}}} for C++98 and older compilers)
+\item tested with {\bfseries{GCC}}\+: {\bfseries{4.\+8}}, {\bfseries{4.\+9}}, {\bfseries{5}}, {\bfseries{6}}, {\bfseries{7}}, {\bfseries{8}}, {\bfseries{9}}, {\bfseries{10}}
+\item tested with {\bfseries{Clang}}\+: {\bfseries{3.\+5}}, {\bfseries{3.\+6}}, {\bfseries{3.\+7}}, {\bfseries{3.\+8}}, {\bfseries{3.\+9}}, {\bfseries{4}}, {\bfseries{5}}, {\bfseries{6}}, {\bfseries{7}}, {\bfseries{8}}, {\bfseries{9}} (XCode 6+)
+\item tested with {\bfseries{MSVC}}\+: {\bfseries{2015}}, {\bfseries{2017}}, {\bfseries{2019}} (also in 32 bit mode)
+\item per-\/commit tested on \href{https://travis-ci.org/onqtam/doctest}{\texttt{ {\bfseries{travis}}}} and \href{https://ci.appveyor.com/project/onqtam/doctest}{\texttt{ {\bfseries{appveyor}}}} CI services
+\begin{DoxyItemize}
+\item warnings as errors even on the most aggressive warning levels -\/ see \href{../../scripts/cmake/common.cmake\#L84}{\texttt{ {\bfseries{here}}}}
+\item statically analyzed on the CI -\/ \href{http://cppcheck.sourceforge.net/}{\texttt{ {\bfseries{Cppcheck}}}} / \href{https://clang.llvm.org/extra/clang-tidy/}{\texttt{ {\bfseries{Clang-\/\+Tidy}}}} / \href{https://scan.coverity.com/}{\texttt{ {\bfseries{Coverity Scan}}}} / \href{http://oclint.org/}{\texttt{ {\bfseries{OCLint}}}} / \href{https://docs.microsoft.com/en-us/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis}{\texttt{ {\bfseries{Visual Studio Analyzer}}}}
+\item all tests have their output compared to reference output of a previous known good run
+\item all tests built and ran in {\bfseries{Debug}}/$\ast$$\ast$\+Release$\ast$$\ast$ modes
+\item all tests ran through {\bfseries{valgrind}} under {\bfseries{Linux}} (sadly \href{https://github.com/onqtam/doctest/issues/11}{\texttt{ not under OSX}})
+\item all tests ran through {\bfseries{address}}, {\bfseries{UB}} and {\bfseries{thread}} sanitizers under {\bfseries{Linux}}/$\ast$$\ast$\+OSX$\ast$$\ast$
+\item tests are ran in more than {\bfseries{150}} different configurations on UNIX (Linux + OSX) on {\bfseries{travis}} CI
+\item tests are ran in a total of {\bfseries{14}} different configurations on Windows on {\bfseries{appveyor}} CI
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_features_autotoc_md134}{}\doxysection{Other features\+:}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_features_autotoc_md134}
+
+\begin{DoxyItemize}
+\item really easy to get started -\/ it\textquotesingle{}s just 1 header file -\/ see the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_tutorial}{$\ast$$\ast$tutorial$\ast$$\ast$}}
+\item {\bfseries{very}} light, unintrusive and portable -\/ see the sections above -\/ and also the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks}{$\ast$$\ast$benchmarks$\ast$$\ast$}}
+\item offers a way to remove {\bfseries{everything}} testing-\/related from the binary with the \href{configuration.md\#doctest_config_disable}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$}} macro
+\item tests are registered automatically -\/ no need to add them to a collection manually
+\item \href{tutorial.md\#test-cases-and-subcases}{\texttt{ {\bfseries{Subcases}}}} -\/ an intuitive way to share common setup and teardown code for test cases (alternative to \href{testcases.md\#test-fixtures}{\texttt{ {\bfseries{test fixtures}}}} which are also supported)
+\item \href{parameterized-tests.md\#templated-test-cases---parameterized-by-type}{\texttt{ {\bfseries{templated test cases}}}} -\/ parameterized by type
+\item supports \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_logging}{$\ast$$\ast$logging macros$\ast$$\ast$}} for capturing local variables and strings -\/ as a message for when an assert fails -\/ with lazy stringification and no allocations when possible!
+\item crash handling support -\/ uses signals for UNIX and SEH for Windows
+\item \href{faq.md\#is-doctest-thread-aware}{\texttt{ {\bfseries{thread-\/safe}}}} -\/ asserts (and logging) can be used from multiple threads spawned from a single test case -\/ \href{../../examples/all_features/concurrency.cpp}{\texttt{ {\bfseries{example}}}}
+\item an extensible \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_reporters}{$\ast$$\ast$reporter system$\ast$$\ast$}} (can be also used for implementing event listeners)
+\item output from all compilers on all platforms is the same -\/ byte by byte
+\item binaries (exe/dll) can use the test runner of another binary -\/ so tests end up in a single registry -\/ \href{../../examples/executable_dll_and_plugin/}{\texttt{ {\bfseries{example}}}}
+\item supports \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases}{$\ast$$\ast$\+BDD style$\ast$$\ast$}} tests
+\item one core \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_assertions}{$\ast$$\ast$assertion macro$\ast$$\ast$}} for comparisons -\/ standard C++ operators are used for the comparison (less than, equal, greater than...) -\/ yet the full expression is decomposed and left and right values of the expression are logged
+\item asserts can be used \href{assertions.md\#using-asserts-out-of-a-testing-context}{\texttt{ {\bfseries{outside of a testing context}}}} -\/ \href{../../examples/all_features/asserts_used_outside_of_tests.cpp}{\texttt{ {\bfseries{example}}}}
+\item assertion macros for \href{assertions.md\#exceptions}{\texttt{ {\bfseries{exceptions}}}} -\/ if something should or shouldn\textquotesingle{}t throw
+\item floating point comparison support -\/ see the \href{assertions.md\#floating-point-comparisons}{\texttt{ $\ast$$\ast${\ttfamily Approx()}$\ast$$\ast$}} helper
+\item powerful mechanism for \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification}{$\ast$$\ast$stringification$\ast$$\ast$}} of user types -\/ including \href{stringification.md\#translating-exceptions}{\texttt{ {\bfseries{exceptions}}}}!
+\item tests can be grouped in \href{testcases.md\#test-suites}{\texttt{ {\bfseries{test suites}}}}
+\item test case \href{testcases.md\#decorators}{\texttt{ {\bfseries{decorators}}}} such as {\ttfamily description} / {\ttfamily skip} / {\ttfamily may\+\_\+fail} / {\ttfamily should\+\_\+fail} / {\ttfamily expected\+\_\+failures} / {\ttfamily timeout}
+\item can be used without exceptions and rtti -\/ checkout \href{configuration.md\#doctest_config_no_exceptions}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+EXCEPTIONS}$\ast$$\ast$}}
+\item powerful \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$command line$\ast$$\ast$}} with lots of options
+\item can report the duration of test cases
+\item tests can be \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$filtered$\ast$$\ast$}} based on their name/file/test suite using wildcards
+\item can \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$filter$\ast$$\ast$}} subcases using wildcards and by specifying the nesting levels for which those filters should work
+\item failures can (optionally) break into the debugger on Windows and Mac
+\item integration with the output window of Visual Studio for failing tests
+\item a {\ttfamily \mbox{\hyperlink{doctest_2examples_2all__features_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main()}}} can be provided when implementing the library with the \href{main.md\#doctest_config_implement_with_main}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\+\_\+\+WITH\+\_\+\+MAIN}$\ast$$\ast$}} identifier
+\item can write tests in headers -\/ they will still be registered only once in the executable/shared object
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{$\ast$$\ast$range-\/based$\ast$$\ast$}} execution of tests within a binary -\/ see the \href{../../examples/range_based_execution.py}{\texttt{ {\bfseries{example python script}}}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions}{$\ast$$\ast$extension headers$\ast$$\ast$}} for extra functionality which doesn\textquotesingle{}t need to go into the main {\ttfamily doctest.\+h} header
+\item colored output in the console
+\item controlling the order of test execution
+\item different {\ttfamily \mbox{\hyperlink{classdoctest_1_1_context}{doctest\+::\+Context}}}s can be created and ran many times within a single execution of the program
+\item ability to query if code is currently being ran in a test -\/ {\ttfamily \mbox{\hyperlink{namespacedoctest_a0b03060093b3894c976b6ae84e55f3f2}{doctest\+::is\+\_\+running\+\_\+in\+\_\+test}}}
+\item tests can be registered in CTest with the use of \href{../../scripts/cmake/doctest.cmake}{\texttt{ {\ttfamily doctest\+\_\+discover\+\_\+tests($<$target$>$)} from scripts/cmake/doctest.\+cmake}}
+\end{DoxyItemize}
+
+There is a list of planned features which are all important and big -\/ see the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap}{$\ast$$\ast$roadmap$\ast$$\ast$}}.
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+

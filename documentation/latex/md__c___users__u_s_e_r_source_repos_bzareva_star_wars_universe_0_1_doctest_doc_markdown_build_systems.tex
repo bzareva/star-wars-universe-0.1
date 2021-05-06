@@ -1,0 +1,103 @@
+The latest released version of doctest can be obtained from here\+: \href{https://raw.githubusercontent.com/onqtam/doctest/master/doctest/doctest.h}{\texttt{ https\+://raw.\+githubusercontent.\+com/onqtam/doctest/master/doctest/doctest.\+h}}
+
+You can substitute {\ttfamily master} with {\ttfamily dev} or a tag like {\ttfamily 1.\+2.\+9} for a specific version in the URL above.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_build_systems_autotoc_md72}{}\doxysubsection{CMake}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_build_systems_autotoc_md72}
+
+\begin{DoxyItemize}
+\item {\bfseries{doctest}} is easiest to use as a single file inside your own repository. Then the following minimal example will work\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\_minimum\_required(VERSION 3.0)}
+\DoxyCodeLine{project(cmake\_test VERSION 0.0.1 LANGUAGES CXX)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Prepare doctest for other targets to use}
+\DoxyCodeLine{find\_package(doctest REQUIRED)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Make test executable}
+\DoxyCodeLine{add\_executable(tests main.cpp)}
+\DoxyCodeLine{target\_compile\_features(test PRIVATE cxx\_std\_17)}
+\DoxyCodeLine{target\_link\_libraries(test PRIVATE doctest::doctest)}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item You can also use the following CMake snippet to automatically fetch the entire {\bfseries{doctest}} repository from github and configure it as an external project\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{include(ExternalProject)}
+\DoxyCodeLine{find\_package(Git REQUIRED)}
+\DoxyCodeLine{}
+\DoxyCodeLine{ExternalProject\_Add(}
+\DoxyCodeLine{    doctest}
+\DoxyCodeLine{    PREFIX \$\{CMAKE\_BINARY\_DIR\}/doctest}
+\DoxyCodeLine{    GIT\_REPOSITORY https://github.com/onqtam/doctest.git}
+\DoxyCodeLine{    TIMEOUT 10}
+\DoxyCodeLine{    UPDATE\_COMMAND \$\{GIT\_EXECUTABLE\} pull}
+\DoxyCodeLine{    CONFIGURE\_COMMAND "{}"{}}
+\DoxyCodeLine{    BUILD\_COMMAND "{}"{}}
+\DoxyCodeLine{    INSTALL\_COMMAND "{}"{}}
+\DoxyCodeLine{    LOG\_DOWNLOAD ON}
+\DoxyCodeLine{)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Expose required variable (DOCTEST\_INCLUDE\_DIR) to parent scope}
+\DoxyCodeLine{ExternalProject\_Get\_Property(doctest source\_dir)}
+\DoxyCodeLine{set(DOCTEST\_INCLUDE\_DIR \$\{source\_dir\}/doctest CACHE INTERNAL "{}Path to include folder for doctest"{})}
+
+\end{DoxyCode}
+
+
+And later you\textquotesingle{}ll be able to use the doctest include directory like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# add it globally}
+\DoxyCodeLine{include\_directories(\$\{DOCTEST\_INCLUDE\_DIR\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# or per target}
+\DoxyCodeLine{target\_include\_directories(my\_target PUBLIC \$\{DOCTEST\_INCLUDE\_DIR\})}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item If you have the entire doctest repository available (as a submodule or just as files) you could also include it in your CMake build by using {\ttfamily add\+\_\+subdirectory(path/to/doctest)} and then you could use it like this\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{add\_executable(my\_tests src\_1.cpp src\_2.cpp ...)}
+\DoxyCodeLine{target\_link\_libraries(my\_tests doctest)}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item The {\ttfamily CMake\+Lists.\+txt} file of the doctest repository has {\ttfamily install()} commands so you could also use doctest as a package.
+\item To discover tests from an executable and register them in ctest you could use \href{../../scripts/cmake/doctest.cmake}{\texttt{ {\ttfamily doctest\+\_\+discover\+\_\+tests($<$target$>$)} from scripts/cmake/doctest.\+cmake}} -\/ read the comments in the file on how to use it. It works just like \href{https://github.com/catchorg/Catch2/blob/master/docs/cmake-integration.md\#automatic-test-registration}{\texttt{ the same functionality in Catch}}.
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_build_systems_autotoc_md73}{}\doxysubsection{Package managers}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_build_systems_autotoc_md73}
+{\bfseries{doctest}} is available through the following package managers\+:
+
+
+\begin{DoxyItemize}
+\item vcpkg
+\item hunter
+\item conan
+\begin{DoxyItemize}
+\item \href{https://bintray.com/bincrafters/public-conan/doctest:bincrafters}{\texttt{ https\+://bintray.\+com/bincrafters/public-\/conan/doctest\+:bincrafters}}
+\item \href{https://bintray.com/mmha/conan/doctest\%3Ammha}{\texttt{ https\+://bintray.\+com/mmha/conan/doctest\%3\+Ammha}}
+\end{DoxyItemize}
+\item Homebrew ({\ttfamily brew install doctest})
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+\href{readme.md\#reference}{\texttt{ Home}}
+

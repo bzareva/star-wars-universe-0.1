@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['_7ebase_371',['~Base',['../class_base.html#a306fb25541331080645a716286357ef9',1,'Base']]],
-  ['_7ecommand_372',['~Command',['../class_command.html#aa545a53d35818f9efb936daf3fa16c61',1,'Command']]],
-  ['_7ecommandcontroller_373',['~CommandController',['../class_command_controller.html#a7cac7064c8bf81cf9e1a026ea34ac2c2',1,'CommandController']]],
-  ['_7estring_374',['~String',['../class_string.html#ac40b2a3fb58c2d8556f5e6ff73510036',1,'String']]],
-  ['_7evector_375',['~Vector',['../class_vector.html#afd524fac19e6d3d69db5198ffe2952b0',1,'Vector']]]
+  ['worker_1768',['worker',['../namespacerange__based__execution.html#a7b6f721c2c84ef9f00872ad1a3d001bf',1,'range_based_execution']]],
+  ['write_5fto_5ffile_1769',['write_to_file',['../class_base.html#a920a3bc2ded309777ce0ae2af91e6d21',1,'Base::write_to_file()'],['../class_galaxy.html#afbc8202c03f80f6b2ef399f3af87efca',1,'Galaxy::write_to_file()'],['../class_jedi.html#a8a8485ea67fe4374c0d8e459cd841ff2',1,'Jedi::write_to_file()'],['../class_planet.html#a563c09b4640f2718358a50365c831785',1,'Planet::write_to_file()']]]
 ];

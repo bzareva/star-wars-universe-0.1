@@ -1,0 +1,109 @@
+
+
+
+
+{\bfseries{ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+master branch  &Windows \href{https://ci.appveyor.com/project/onqtam/doctest/branch/master}{\texttt{ }}  &All \href{https://github.com/onqtam/doctest/actions?query=branch\%3Amaster}{\texttt{ }}  &\href{https://coveralls.io/github/onqtam/doctest?branch=master}{\texttt{ }} 
+
+\\\cline{1-4}
+dev branch  &Windows \href{https://ci.appveyor.com/project/onqtam/doctest/branch/dev}{\texttt{ }}  &All \href{https://github.com/onqtam/doctest/actions?query=branch\%3Adev}{\texttt{ }}  &\href{https://coveralls.io/github/onqtam/doctest?branch=dev}{\texttt{ }} 
+
+\\\cline{1-4}
+\end{longtabu}
+}}
+
+{\bfseries{doctest}} is a new C++ testing framework but is by far the fastest both in compile times (by \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks}{$\ast$$\ast$orders of magnitude$\ast$$\ast$}}) and runtime compared to other feature-\/rich alternatives. It brings the ability of compiled languages such as \href{https://dlang.org/spec/unittest.html}{\texttt{ {\bfseries{D}}}} / \href{https://doc.rust-lang.org/book/second-edition/ch11-00-testing.html}{\texttt{ {\bfseries{Rust}}}} / \href{https://nim-lang.org/docs/unittest.html}{\texttt{ {\bfseries{Nim}}}} to have tests written directly in the production code thanks to a fast, transparent and flexible test runner with a clean interface.
+
+\href{https://en.wikipedia.org/wiki/C\%2B\%2B\#Standardization}{\texttt{ }} \href{https://opensource.org/licenses/MIT}{\texttt{ }} \href{https://raw.githubusercontent.com/onqtam/doctest/master/doctest/doctest.h}{\texttt{ }} \href{https://bestpractices.coreinfrastructure.org/projects/503}{\texttt{ }} \href{https://lgtm.com/projects/g/onqtam/doctest/context:cpp}{\texttt{ }} \href{https://gitter.im/onqtam/doctest?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge}{\texttt{ }} \href{https://wandbox.org/permlink/nJIibfbivG7BG7r1}{\texttt{ }}
+
+\href{http://www.patreon.com/onqtam}{\texttt{ }}
+
+The framework is and will stay free but needs your support to sustain its development. There are lots of \href{doc/markdown/roadmap.md}{\texttt{ {\bfseries{new features}}}} and maintenance to do. If you work for a company using {\bfseries{doctest}} or have the means to do so, please consider financial support. Monthly donations via Patreon and one-\/offs via Pay\+Pal.
+
+\href{https://www.paypal.me/onqtam/10}{\texttt{ }}
+
+A complete example with a self-\/registering test that compiles to an executable looks like this\+:
+
+
+
+There are many C++ testing frameworks -\/ \href{https://github.com/catchorg/Catch2}{\texttt{ Catch}}, \href{http://www.boost.org/doc/libs/1_64_0/libs/test/doc/html/index.html}{\texttt{ Boost.\+Test}}, \href{https://github.com/unittest-cpp/unittest-cpp}{\texttt{ Unit\+Test++}}, \href{https://github.com/cpputest/cpputest}{\texttt{ cpputest}}, \href{https://github.com/google/googletest}{\texttt{ googletest}} and many \href{https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks\#C.2B.2B}{\texttt{ other}}.
+
+The {\bfseries{key}} differences between it and other testing frameworks are that it is light and unintrusive\+:
+\begin{DoxyItemize}
+\item Ultra light on compile times both in terms of \href{doc/markdown/benchmarks.md\#cost-of-including-the-header}{\texttt{ {\bfseries{including the header}}}} and writing \href{doc/markdown/benchmarks.md\#cost-of-an-assertion-macro}{\texttt{ {\bfseries{thousands of asserts}}}}
+\item Doesn\textquotesingle{}t produce any warnings even on the \href{scripts/cmake/common.cmake\#L84}{\texttt{ {\bfseries{most aggressive}}}} warning levels for {\bfseries{MSVC}}/$\ast$$\ast$\+GCC$\ast$$\ast$/$\ast$$\ast$\+Clang$\ast$$\ast$
+\item Offers a way to remove {\bfseries{everything}} testing-\/related from the binary with the \href{doc/markdown/configuration.md\#doctest_config_disable}{\texttt{ $\ast$$\ast${\ttfamily DOCTEST\+\_\+\+CONFIG\+\_\+\+DISABLE}$\ast$$\ast$}} identifier
+\item \href{doc/markdown/faq.md\#is-doctest-thread-aware}{\texttt{ {\bfseries{thread-\/safe}}}} -\/ asserts (and logging) can be used from multiple threads spawned from a single test case -\/ \href{examples/all_features/concurrency.cpp}{\texttt{ {\bfseries{example}}}}
+\item asserts can be used \href{doc/markdown/assertions.md\#using-asserts-out-of-a-testing-context}{\texttt{ {\bfseries{outside of a testing context}}}} -\/ as a general purpose assert library -\/ \href{examples/all_features/asserts_used_outside_of_tests.cpp}{\texttt{ {\bfseries{example}}}}
+\item Doesn\textquotesingle{}t pollute the global namespace (everything is in namespace {\ttfamily doctest}) and doesn\textquotesingle{}t drag {\bfseries{any}} headers with it
+\item Very \href{doc/markdown/features.md\#extremely-portable}{\texttt{ {\bfseries{portable}}}} C++11 (use tag \href{https://github.com/onqtam/doctest/tree/1.2.9}{\texttt{ {\bfseries{1.\+2.\+9}}}} for C++98) with over 180 different CI builds (static analysis, sanitizers...)
+\item binaries (exe/dll) can use the test runner of another binary -\/ so tests end up in a single registry -\/ \href{examples/executable_dll_and_plugin/}{\texttt{ {\bfseries{example}}}}
+\end{DoxyItemize}
+
+
+
+This allows the framework to be used in more ways than any other -\/ tests can be written directly in the production code!
+
+{\itshape Tests can be considered a form of documentation and should be able to reside near the production code which they test.}
+
+
+\begin{DoxyItemize}
+\item This makes the barrier for writing tests {\bfseries{much lower}} -\/ you don\textquotesingle{}t have to\+: {\bfseries{1)}} make a separate source file {\bfseries{2)}} include a bunch of stuff in it {\bfseries{3)}} add it to the build system and {\bfseries{4)}} add it to source control -\/ You can just write the tests for a class or a piece of functionality at the bottom of its source file -\/ or even header file!
+\item Tests in the production code can be thought of as documentation or up-\/to-\/date comments -\/ showing the use of APIs
+\item Testing internals that are not exposed through the public API and headers is no longer a mind-\/bending exercise
+\item \href{https://en.wikipedia.org/wiki/Test-driven_development}{\texttt{ {\bfseries{Test-\/driven development}}}} in C++ has never been easier!
+\end{DoxyItemize}
+
+The framework can be used like any other if you don\textquotesingle{}t want/need to mix production code and tests -\/ check out the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_features}{$\ast$$\ast$features$\ast$$\ast$}}.
+
+{\bfseries{doctest}} is modeled after \href{https://github.com/catchorg/Catch2}{\texttt{ {\bfseries{Catch}}}} and some parts of the code have been taken directly -\/ check out \href{doc/markdown/faq.md\#how-is-doctest-different-from-catch}{\texttt{ {\bfseries{the differences}}}}.
+
+\href{https://github.com/martinmoene/catch-lest-other-comparison}{\texttt{ This table}} compares {\bfseries{doctest}} / \href{https://github.com/catchorg/Catch2}{\texttt{ {\bfseries{Catch}}}} / \href{https://github.com/martinmoene/lest}{\texttt{ {\bfseries{lest}}}} which are all very similar.
+
+Checkout the \href{https://cppcon2017.sched.com/event/BgsI/mix-tests-and-production-code-with-doctest-implementing-and-using-the-fastest-modern-c-testing-framework}{\texttt{ {\bfseries{Cpp\+Con 2017 talk}}}} on \href{https://www.youtube.com/watch?v=eH1CxEC29l8}{\texttt{ {\bfseries{You\+Tube}}}} to get a better understanding of how the framework works and read about how to use it in \href{https://blog.jetbrains.com/rscpp/better-ways-testing-with-doctest/}{\texttt{ {\bfseries{the Jet\+Brains article}}}} -\/ highlighting the unique aspects of the framework! On a short description on how to use the framework along production code you could refer to \href{https://github.com/onqtam/doctest/issues/252}{\texttt{ {\bfseries{this Git\+Hub issue}}}}. There is also an \href{https://accu.org/var/uploads/journals/Overload137.pdf}{\texttt{ {\bfseries{older article}}}} in the february edition of ACCU Overload 2017.
+
+\href{https://www.youtube.com/watch?v=eH1CxEC29l8}{\texttt{ }}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__r_e_a_d_m_e_autotoc_md181}{}\doxysubsection{Documentation}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__r_e_a_d_m_e_autotoc_md181}
+Project\+:
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_features}{Features and design goals}} -\/ the complete list of features
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap}{Roadmap}} -\/ upcoming features
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_benchmarks}{Benchmarks}} -\/ compile-\/time and runtime supremacy
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_o_n_t_r_i_b_u_t_i_n_g}{Contributing}} -\/ how to make a proper pull request
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_h_a_n_g_e_l_o_g}{Changelog}} -\/ generated changelog based on closed issues/\+PRs
+\end{DoxyItemize}
+
+Usage\+:
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_tutorial}{Tutorial}} -\/ make sure you have read it before the other parts of the documentation
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_assertions}{Assertion macros}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_testcases}{Test cases, subcases and test fixtures}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_parameterized_tests}{Parameterized test cases}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_commandline}{Command line}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_logging}{Logging macros}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_main}{\`{}\`{}\`{}main()\`{}\`{}\`{} entry point}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_configuration}{Configuration}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_stringification}{String conversions}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_reporters}{Reporters}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_extensions}{Extensions}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_faq}{FAQ}}
+\item \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_build_systems}{Build systems}}
+\item \mbox{[}Examples\mbox{]}(examples)
+\end{DoxyItemize}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__r_e_a_d_m_e_autotoc_md182}{}\doxysubsection{Contributing}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__r_e_a_d_m_e_autotoc_md182}
+\href{http://www.patreon.com/onqtam}{\texttt{ }}
+
+Support the development of the project with donations! There is a list of planned features which are all important and big -\/ see the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest_doc_markdown_roadmap}{$\ast$$\ast$roadmap$\ast$$\ast$}}. I took a break from working in the industry to make open source software so every cent is a big deal.
+
+\href{https://www.paypal.me/onqtam/10}{\texttt{ }}
+
+If you work for a company using {\bfseries{doctest}} or have the means to do so, please consider financial support.
+
+Contributions in the form of issues and pull requests are welcome as well -\/ check out the \mbox{\hyperlink{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__c_o_n_t_r_i_b_u_t_i_n_g}{$\ast$$\ast$\+Contributing$\ast$$\ast$}} page.\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__r_e_a_d_m_e_autotoc_md183}{}\doxysubsection{Stargazers over time}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__r_e_a_d_m_e_autotoc_md183}
+\href{https://starcharts.herokuapp.com/onqtam/doctest}{\texttt{ }}\hypertarget{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__r_e_a_d_m_e_autotoc_md184}{}\doxysubsection{Logo}\label{md__c___users__u_s_e_r_source_repos_bzareva_star_wars_universe_0_1_doctest__r_e_a_d_m_e_autotoc_md184}
+The \href{scripts/data/logo}{\texttt{ logo}} is licensed under a Creative Commons Attribution 4.\+0 International License. Copyright \copyright{} 2019 \href{https://github.com/area55git}{\texttt{ area55git}} ~ \href{https://creativecommons.org/licenses/by/4.0/}{\texttt{ }}
+
