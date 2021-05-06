@@ -2,101 +2,104 @@
 #define __VECTOR_H__
 #include <exception>
 #include <iostream>
-/*!
- *  Realization of basic functionalities from vector library
- */
+///
+///  Realization of basic functionalities from vector library
+///
 template<class T> class Vector {
 
 public:
-	//! default constructor
+	/// default constructor
 	Vector();
 
-	//! constructor with parameters
-	Vector(T* data, unsigned size);
+	/// constructor with parameters
+	Vector(const T* data, unsigned size);
 
-	//! copy constructor
+	/// constructor who adds only one item
+	Vector(const T& item);
+
+	/// copy constructor
 	Vector(const Vector<T>& obj);
 
-	//! assign content
+	/// assign content
 	Vector<T>& operator=(const Vector<T>& obj);
 
-	//! destructor
+	/// destructor
 	~Vector();
 
-	//! access element(nonconstant)
+	/// access element(nonconstant)
 	T& operator[](unsigned index);
 
-	//! access element(constant)
+	/// access element(constant)
 	const T& operator[](unsigned index) const;
 
-	//! adds item at end of vector
+	/// adds item at end of vector
 	Vector<T>& operator+=(const T& item);
 
-	//! sum of two vectors
+	/// sum of two vectors
 	Vector<T>& operator+=(const Vector<T>& obj);
 
-	//! checks if empty vector
+	/// checks if empty vector
 	bool empy()const;
 
-	//! adds item at end of vector
+	/// adds item at end of vector
 	void push_back(const T& item);
 
-	//! delete last element 
+	/// delete last element 
 	void pop_back();
 
-	//! insert elements
+	/// insert elements
 	void insert(unsigned index, const T& item);
 
-	//! erase elements 
+	/// erase elements 
 	void erase(unsigned index);
 
-	//! request a change in capacity
+	/// request a change in capacity
 	void reserve(unsigned capacity);
 
-	//! swap content
+	/// swap content
 	void swap(Vector<T>& data);
 
-	//! help method for access element(nonconstant)
+	/// help method for access element(nonconstant)
 	T& at(unsigned index);
 
-	//! help method for access element(constant)
+	/// help method for access element(constant)
 	const T& at(unsigned index)const;
 
-	//! access first element(nonconstant)
+	/// access first element(nonconstant)
 	T& front();
 
-	//! access first element(constant)
+	/// access first element(constant)
 	const T& front()const;
 
-	//! access last element(nonconstant) 
+	/// access last element(nonconstant) 
 	T& back();
 
-	//! access last element(constant) 
+	/// access last element(constant) 
 	const T& back()const;
 
-	//! @returns Size
+	/// @returns Size
 	unsigned size()const;
 
-	//! @returns Size of allocated storage capacity
+	/// @returns Size of allocated storage capacity
 	unsigned capacity()const;
 
-	//! access data(nonconstant)
+	/// access data(nonconstant)
 	T* data();
 
-	//! access data(constant)
+	/// access data(constant)
 	const T* data()const;
 
-	//! output operator
+	/// output operator
 	template<class T> friend std::ostream& operator<<(std::ostream& out, const Vector<T>& obj);
 
-	//! input operator
+	/// input operator
 	template<class T> friend std::istream& operator>>(std::istream& in, Vector<T>& obj);
 
 private:
-	//! help method for assign content and copy ctor 
+	/// help method for assign content and copy ctor 
 	void copy(const Vector<T>& obj);
 
-	//! deletes all dynamic allocated memory in Vector, more precisely dector call it
+	/// deletes all dynamic allocated memory in Vector, more precisely dector call it
 	void free();
 
 private:
@@ -119,7 +122,7 @@ inline Vector<T>::Vector()
 }
 
 template<class T>
-inline Vector<T>::Vector(T* data, unsigned size) {
+inline Vector<T>::Vector(const T* data, unsigned size) {
 
 	if (size < 0) {
 		m_size = 0;
@@ -141,6 +144,14 @@ inline Vector<T>::Vector(T* data, unsigned size) {
 	if (m_size == 0) {
 		m_data = nullptr;
 	}
+}
+
+template<class T>
+inline Vector<T>::Vector(const T& item) 
+ :m_capacity(VECTOR_CAPACITY), m_size(1) {
+
+	m_data    = new T[m_capacity];
+	m_data[0] = item;
 }
 
 template<class T>

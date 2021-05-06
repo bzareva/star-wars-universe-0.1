@@ -1,10 +1,10 @@
 #ifndef __ADD_PLANET_COMMAND_H__
 #define __ADD_PLANET_COMMAND_H__
 #include "Command.h"
-/*!
- * Adding a planet to Galaxy 
- * All methods which implements are from abstract base class Command
- */
+///
+/// Adding a planet to Galaxy 
+/// All methods which implements are from abstract base class Command
+///
 class AddPlanetCommand : public Command {
 
 public:

@@ -1,10 +1,10 @@
 #ifndef __OPEN_COMMAND_H__
 #define __OPEN_COMMAND_H__
 #include "Command.h"
-/*!
- * Open file
- * All methods which implements are from abstract base class Command
- */
+///
+/// Open file
+/// All methods which implements are from abstract base class Command
+///
 class OpenCommand : public Command {
 
 public:

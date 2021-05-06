@@ -1,10 +1,10 @@
 #ifndef __CLOSE_COMMAND_H__
 #define __CLOSE_COMMAND_H__
 #include "Command.h"
-/*!
- * Closes file with which is works 
- * All methods which implements are from abstract base class Command
- */
+///
+/// Closes file with which is works 
+/// All methods which implements are from abstract base class Command
+///
 class CloseCommand : public Command {
 
 public:

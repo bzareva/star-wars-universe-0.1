@@ -1,9 +1,9 @@
 #ifndef __COMMAND_CONTROLLER_H__
 #define __COMMAND_CONTROLLER_H__
 #include "Command.h"
-/*!
- * Container with commands
- */
+///
+/// Container with commands
+///
 class CommandController {
 
 public:

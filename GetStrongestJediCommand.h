@@ -1,10 +1,10 @@
 #ifndef __GET_STRONGEST_JEDI_COMMAND_H__
 #define __GET_STRONGEST_JEDI_COMMAND_H__
 #include "Command.h"
-/*!
- * Get strongest jedi 
- * All methods which implements are from abstract base class Command
- */
+///
+/// Get strongest jedi 
+/// All methods which implements are from abstract base class Command
+///
 class GetStrongestJediCommand : public Command {
 
 public:

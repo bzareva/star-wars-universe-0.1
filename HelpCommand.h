@@ -1,10 +1,10 @@
 #ifndef __HELP_COMMAND_H__
 #define __HELP_COMMAND_H__
 #include "Command.h"
-/*!
- * Prints message about all supported commands
- * All methods which implements are from abstract base class Command
- */
+///
+/// Prints message about all supported commands
+/// All methods which implements are from abstract base class Command
+///
 class HelpCommand : public Command {
 
 public:

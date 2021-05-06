@@ -1,10 +1,10 @@
 #ifndef __GET_MOST_USED_SABER_COLOR_COMMAND_H__
 #define __GET_MOST_USED_SABER_COLOR_COMMAND_H__
 #include "Command.h"
-/*!
- * Get most used saber color of jedi  
- * All methods which implements are from abstract base class Command
- */
+///
+/// Get most used saber color of jedi  
+/// All methods which implements are from abstract base class Command
+///
 class GetMostUsedSaberColorCommand : public Command {
 
 public:

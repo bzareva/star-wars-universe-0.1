@@ -10,11 +10,21 @@ Galaxy::Galaxy(std::ifstream& fin) {
 	read_from_file(fin);
 }
 
-Galaxy::Galaxy(const Vector<Planet> planets) {
+Galaxy::Galaxy(const Vector<Planet>& planets) {
 
 	for (unsigned i = 0; i < planets.size(); ++i) {
-		m_planets.push_back(planets[i]);
+
+		for (unsigned j = 0; j < planets[i].get_count_jedi(); ++j) {
+			//add_planet(planets[i]);
+			//m_planets += planets[i];
+			m_planets.push_back(planets[i]);
+		}
 	}
+}
+
+Galaxy::Galaxy(const Planet& planet) {
+
+	m_planets.push_back(planet);
 }
 
 Galaxy::Galaxy(const Galaxy& obj) {
@@ -43,7 +53,7 @@ std::istream& operator>>(std::istream& in, Galaxy& obj) {
 		Planet curr;
 		in >> curr;
 		obj.m_planets.push_back(curr);
-//		in >> obj.m_planets[i];
+		//in >> obj.m_planets[i];
 	}
 
 	return in;
@@ -79,14 +89,16 @@ Galaxy operator-(Galaxy lhs, const Planet& rhs) {
 
 Galaxy& Galaxy::operator+=(const Planet& rhs) {
 
-	m_planets.push_back(rhs);
+	m_planets += rhs;
+	//m_planets.push_back(rhs);
 	return *this;
 }
 
 Galaxy& Galaxy::operator+=(const Galaxy& rhs) {
 
 	for (unsigned i = 0; i < rhs.m_planets.size(); ++i) {
-		m_planets.push_back(rhs.m_planets[i]);
+		m_planets += rhs.m_planets[i];
+		//m_planets.push_back(rhs.m_planets[i]);
 	}
 	return *this;
 }
@@ -94,6 +106,7 @@ Galaxy& Galaxy::operator+=(const Galaxy& rhs) {
 Galaxy& Galaxy::operator-=(const Planet& rhs) {
 
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
+
 		if (m_planets[i] == rhs) {
 			m_planets.erase(i);
 			return *this;
@@ -299,9 +312,9 @@ void Galaxy::demote_jedi(const String& jedi_name, const double& multiplier) {
 	}
 }
 
-void Galaxy::add_planet(const Planet& planet_name) {
+void Galaxy::add_planet(const Planet& planet) {
 
-	m_planets.push_back(planet_name);
+	m_planets.push_back(planet);
 }
 
 unsigned Galaxy::get_count_planet()const {
@@ -332,9 +345,21 @@ void Galaxy::operator_plus(const String& lhs_planet, const String& rhs_planet) {
 	}
 }
 
+void Galaxy::add_vec_jedi(const Vector<Jedi>& jedi, const String& planet_name) {
+
+	for (unsigned i = 0; i < m_planets.size(); ++i) {
+
+		if (planet_name == m_planets[i].get_planet_name()) {
+			m_planets[i] += jedi;
+			break;
+		}
+	}
+}
+
 void Galaxy::copy(const Galaxy& obj) {
 
 	for (unsigned i = 0; i < obj.m_planets.size(); ++i) {
-		m_planets[i] = obj.m_planets[i];
+		m_planets[i].set_planet_name(obj.m_planets[i].get_planet_name());
+		m_planets[i].set_jedi(obj.m_planets[i].get_jedi());
 	}
 }

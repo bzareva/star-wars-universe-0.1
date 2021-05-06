@@ -1,10 +1,10 @@
 #ifndef __GET_YOUNGEST_JEDI_COMMAND_H__
 #define __GET_YOUNGEST_JEDI_COMMAND_H__
 #include "Command.h"
-/*!
- * Get youngest jedi
- * All methods which implements are from abstract base class Command
- */
+///
+/// Get youngest jedi
+/// All methods which implements are from abstract base class Command
+///
 class GetYoungestJediCommand : public Command {
 
 public:

@@ -1,10 +1,10 @@
 #ifndef __PRINT_COMMAND_H_
 #define __PRINT_COMMAND_H_
 #include "Command.h"
-/*!
- * Print inoformation about Galaxy
- * All methods which implements are from abstract base class Command
- */
+///
+/// Print inoformation about Galaxy
+/// All methods which implements are from abstract base class Command
+///
 class PrintCommand : public Command {
 
 public:

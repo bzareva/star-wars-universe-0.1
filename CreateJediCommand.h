@@ -1,10 +1,10 @@
 #ifndef __CREATE_JEDI_COMMAND_H__
 #define __CREATE_JEDI_COMMAND_H__
 #include "Command.h"
-/*!
- * Create jedi
- * Only methods which implements are from abstract base class Command
- */
+///
+/// Create jedi
+/// Only methods which implements are from abstract base class Command
+///
 class CreateJediCommand : public Command {
 
 public:

@@ -1,10 +1,10 @@
 #ifndef __PROMOTE_JEDI_COMMAND_H__
 #define __PROMOTE_JEDI_COMMAND_H__
 #include "Command.h"
-/*!
- * Promote jedi
- * All methods which implements are from abstract base class Command
- */
+///
+/// Promote jedi
+/// All methods which implements are from abstract base class Command
+///
 class PromoteJediCommand : public Command {
 
 public:

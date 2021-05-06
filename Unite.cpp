@@ -1,5 +1,4 @@
-#include  "Unite.h"
-
+#include "Unite.h"
 
 void Unite::run() {
 	
@@ -14,6 +13,8 @@ void Unite::run() {
 	Vector<Jedi> vec_jedi_one(jedi_one, 7);
 	Planet planet1(vec_jedi_one, String("Earth"));
 
+	//std::cout << planet1;
+
 	Jedi jedi_two[7] = { {57, 321.5, Rank::INITIATE, String("Rick1"), String("blue2")},
 					     {35, 165.4, Rank::KNIGHT_ASPIRANT, String("Aleks"), String("pink2")},
 					     {93, 234, Rank::GRAND_MASTER, String("Pesho2"), String("white2")},
@@ -25,6 +26,8 @@ void Unite::run() {
 	Vector<Jedi> vec_jedi_two(jedi_two, 7);
 	Planet planet2(vec_jedi_two, String("Mars"));
 	
+	//std::cout << planet2;
+
 
 	Jedi jedi_three[7] = { {83, 34.5, Rank::KNIGHT, String("John3"), String("blue3")},
 					       {135, 43.5, Rank::KNIGHT_ASPIRANT, String("Rick3"), String("pink3")},
@@ -34,73 +37,74 @@ void Unite::run() {
 					       {76, 8.7, Rank::PADAWAN, String("Miky3"), String("green3")},
 					       {127, 10.5, Rank::GRAND_MASTER, String("Stefan3"), String("red3")} };
 
-
 	Vector<Jedi> vec_jedi_three(jedi_three, 7);
 	Planet planet3(vec_jedi_three, String("Jupiter"));
-	 
-//----------------------------------------------------------------------------------------------------------------
 
-	Vector<Planet> t;
-	t.push_back(planet1);
+	//std::cout << planet3;
 
-	std::cout << t;
-	//std::cout << t.size();
-	
+	Galaxy universe(planet1);
+	universe.add_planet(planet2);
+	universe.add_planet(planet3);
+
+	//std::cout << universe;
+
+	std::cout << ">Enter file name:";
+	String file;
+	std::cin >> file;
+
+	m_manager = GalaxyManager(file.get_string(), universe);
+	m_controller.init_command(m_manager);
 
 
-//-----------------------------------------------------------------------------------------------------------------
-	//Vector<Base*> vec;
-	//vec.push_back(planet1.clone());
-	//for (unsigned i = 0; i < planet1.get_count_jedi(); ++i) {
-	//	vec.push_back(planet1);
+//_______________________________tests for jedi methods and basic operation with files_______________________________
+	//std::cout << jedi_one[1].rank_num()<< std::endl;
+	//std::cout << jedi_one[1].get_force() << std::endl;
+	//jedi_one[1].demote(2);
+	//std::cout << jedi_one[1].get_force() << std::endl;
+	//std::cout << jedi_one[1].rank_num() << std::endl;
+
+	//jedi_one[1].promote(2);
+	//std::cout << jedi_one[1].get_force() << std::endl;
+	//std::cout << jedi_one[1].rank_num() << std::endl;
+
+	//std::ofstream fout("output.txt", std::ios::out);
+	//if (!fout) {
+	//	fout.close();
+	//	return;
 	//}
 
-	//vec += planet1;
-	//std::cout << planet1.get_jedi();
-	//vec.push_back(planet1);
-	//std::cout << vec;
+	//for (unsigned i = 0; i < 7; ++i) {
+	//	jedi_one[i].write_to_file(fout);
+	//}
 
-	//Galaxy test;
-	//test.add_planet(planet1);
-	//std::cout << test[0];
+	//fout.clear();
+	//fout.close();
 
-	//vec_planets.push_back(planet1);
-	//std::cout << planet1;
-	//std::cout << vec_planets;
-	//std::cout << vec_planets[0];
+	/*std::ifstream fin("input.txt");
+	if (!fin) {
+		fin.close();
+		return;
+	}*/
 
-	//vec_planets += planet1;
-	//std::cout << vec_planets << std::endl;
-	//std::cout << planet1.get_count_jedi
+	//Jedi test(fin);
+	//std::cout << test.rank_num() << std::endl;
+	//test.read_from_file(fin);
+	//std::cout << test << std::endl;
+	//std::cout << test.rank_num() << std::endl;
+	//fin.clear();
+	//fin.close();
 
-	//vec_planets.push_back(planet1);
-	//vec_planets.push_back(planet2);
-	//vec_planets.push_back(planet3);
-
-	//std::cout << planet1;
-	//std::cout << vec_planets[0] << std::endl;
-	//std::cout << vec_planets[0].get_count_jedi() << std::endl;
-
-	//Galaxy cosmos(vec_planets);
-	//std::cout << cosmos[0] << std::endl;
-
-	//std::cout << p1.get_youngest_jedi(String("Saturn"), Rank::INITIATE) << std::endl;
-	//std::cout << p1.get_strongest_jedi(String("Saturn"))<< std::endl;
-	//p1.remove_jedi(String("Rick1"), String("Saturn"));
-	//std::cout << p1.get_most_used_saber_color(String("Saturn"), Rank::INITIATE);
-	//std::cout << p1[2].get_force() << std::endl;
-	//p1.promote_jedi(String("Pesho"), 1);
-	//std::cout << p1[2].get_force() << std::endl;
+    //std::cout << planet3.get_youngest_jedi(String("Saaturn"), Rank::INITIATE);
 
     //vec_jedi_one += vec_jedi_two;
     //vec_jedi_one += vec_jedi_three;
 
-	//std::cout << ">Enter file name:";
-	//String file;
-	//std::cin >> file;
+	//Vector<Planet> vec_planets;
+	//vec_planets.push_back(planet1);
+	//vec_planets.push_back(planet2);
+	//vec_planets.push_back(planet3);
 
-	//m_manager = GalaxyManager(file.get_string(), cosmos);
-
-	//m_controller.init_command(m_manager);
-
+	//std::cout << vec_planets.size(); // [0] ;
+	//Galaxy cosmos(vec_planets);
+//__________________________________________________________________________________________
 }

@@ -1,10 +1,10 @@
 #ifndef __DEMOTE_JEDI_COMMAND_H__
 #define __DEMOTE_JEDI_COMMAND_H__
 #include "Command.h"
-/*!
- * Demote jedi 
- * All methods which implements are from abstract base class Command
- */
+///
+/// Demote jedi 
+/// All methods which implements are from abstract base class Command
+///
 class DemoteJediCommand : public Command {
 
 public:

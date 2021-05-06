@@ -1,17 +1,17 @@
 #include "Planet.h"
 
-Planet::Planet()  
- :m_planet_name(String("planet")) {
-
-	m_jedi.push_back(Jedi());
-}
+//Planet::Planet()  
+// :m_planet_name(String("def_planet_name")) {
+//
+//	m_jedi.push_back(Jedi());
+//}
 
 Planet::Planet(std::ifstream& fin) {
 
 	read_from_file(fin);
 }
 
-Planet::Planet(const Vector<Jedi> jedi, const String& planet_name)
+Planet::Planet(const Vector<Jedi>& jedi, const String& planet_name)
  :m_planet_name(planet_name) {
 
 	for (unsigned i = 0; i < jedi.size(); ++i) {
@@ -35,6 +35,7 @@ Planet& Planet::operator=(const Planet& rhs) {
 std::istream& operator>>(std::istream& in, Planet& oth) {
 
 	in >> oth.m_planet_name;
+
 	unsigned cnt;
 	in >> cnt;
 	while (cnt <= 0) {
@@ -110,8 +111,8 @@ Planet& Planet::operator+=(const Jedi& rhs) {
 Planet& Planet::operator+=(const Planet& rhs) {
 
 	for (unsigned i = 0; i < rhs.m_jedi.size(); ++i) { //rhs.m_jedi.size() == rhs.get_count_jedi()
-		//m_jedi += rhs.m_jedi[i];
-		m_jedi.push_back(rhs.m_jedi[i]);
+		m_jedi += rhs.m_jedi[i];
+		//m_jedi.push_back(rhs.m_jedi[i]);
 	}
 	return *this;
 }
@@ -171,6 +172,7 @@ void Planet::write_to_file(std::ofstream& fout)const {
 void Planet::read_from_file(std::ifstream& fin) {
 
 	fin >> m_planet_name;
+
 	unsigned cnt;
 	fin >> cnt;
 	while (cnt <= 0) {
@@ -188,13 +190,12 @@ String Planet::type_name()const {
 	return "planet";
 }
 
-
 void Planet::create_jedi(const String& planet_name, const String& jedi_name, const Rank& jedi_rank, const unsigned& jedi_age, const String& saber_color, const double& jedi_strength) {
 
-	//if (planet_name != m_planet_name) {
-	//	std::cout << "\nNot exist planet with this name!\n";
-	//	return;
-	//}
+	if (planet_name != m_planet_name) {
+		std::cout << "\nNot exist planet with this name!\n";
+		return;
+	}
 	 
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 	
@@ -205,9 +206,8 @@ void Planet::create_jedi(const String& planet_name, const String& jedi_name, con
 	}
 
 	Jedi curr(jedi_age, jedi_strength, jedi_rank, jedi_name, saber_color);
-//	curr.create_jedi(planet_name, jedi_name, jedi_rank, saber_color, jedi_strength);
-	m_jedi.push_back(curr);
-//	m_jedi += curr;
+	//m_jedi.push_back(curr);
+	m_jedi += curr;
 
 	std::cout << "\nSuccessful added jedi!\n";
 }
@@ -487,11 +487,24 @@ Jedi Planet::get_jedi(const unsigned& index)const {
 	return m_jedi[index];
 }
 
+void Planet::set_planet_name(const String& planet_name) {
+
+	m_planet_name = planet_name;
+}
+
+void Planet::set_jedi(const Vector<Jedi>& jedi) {
+
+	for (unsigned i = 0; i < jedi.size(); ++i) {
+		m_jedi.push_back(jedi[i]);
+	}
+}
+
 void Planet::copy(const Planet& obj) {
 
 	m_planet_name = obj.m_planet_name;
 
 	for (unsigned i = 0; i < obj.m_jedi.size(); ++i) {
-		m_jedi[i] = obj.m_jedi[i];
+		m_jedi += obj.m_jedi[i];
+		//m_jedi[i] = obj.m_jedi[i];
 	}
 }

@@ -1,10 +1,10 @@
 #ifndef __RANK_H__
 #define __RANK_H__
-/*!
- * Rank of jedi is enum class.
- * Contains the possible rank, that a jedi can have.
- * Ranks are arranged in ascending order- 1, 2,.., 8.
- */
+///
+/// Rank of jedi is enum class.
+/// Contains the possible rank, that a jedi can have.
+/// Ranks are arranged in ascending order- 1, 2,.., 8.
+///
 enum class Rank {
 	YOUNGLING = 1,
 	INITIATE  = 2,

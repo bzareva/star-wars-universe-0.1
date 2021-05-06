@@ -1,10 +1,10 @@
 #ifndef __OPERATOR_PLUS_COMMAND_H__
 #define __OPERATOR_PLUS_COMMAND_H__
 #include "Command.h"
-/*!
- * Console outputs is sorted form(lexicographic) information about the inhabitants two planets
- * All methods which implements are from abstract base class Command
- */
+///
+/// Console outputs is sorted form(lexicographic) information about the inhabitants two planets
+/// All methods which implements are from abstract base class Command
+///
 class OperatorPlusCommand : public Command {
 
 public:

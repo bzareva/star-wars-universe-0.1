@@ -1,16 +1,16 @@
 #ifndef __UNITE_H__
 #define __UNITE_H__
 #include "CommandController.h"
-/*!
- * Unites all in one
- */
+///
+/// Unites all in one
+///
 class Unite {
 
 public:
-	//! default constructor
+	/// default constructor
 	Unite() = default;
 
-	//! example for executing program
+	/// example for executing program
 	void run();
 
 private:

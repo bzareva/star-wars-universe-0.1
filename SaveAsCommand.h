@@ -1,10 +1,10 @@
 #ifndef __SAVE_AS_COMMAND_H__
 #define __SAVE_AS_COMMAND_H__
 #include "Command.h"
-/*!
- * Saves information in new file, which is given from user
- * All methods which implements are from abstract base class Command
- */
+///
+/// Saves information in new file, which is given from user
+/// All methods which implements are from abstract base class Command
+///
 class SaveAsCommand : public Command {
 
 public:

@@ -1,25 +1,25 @@
 #include "Unite.h"
-//#include "DOCTEST.cpp"
-/*!
- * - Star wars universe 0.1 is project from the Object-oriented programming course at FMI(2020-2021).
- * - data 06.04.21
- * - author Blagovesta Zareva
- * - brief The program can save the information that is entered
- *         from the console and also be able to reload it.
- *         That is, the program must store the information of 
- *         the planets and the Jedi inhabiting them in a file and 
- *         support the commands for working with files described in the 
- *         section Working with the command line. All commands 
- *         are in lowercase Latin letters, and the arguments are separated by a space. 
- */
+#include "DTEST.h"
+///
+/// - Star wars universe 0.1 is project from the Object-oriented programming course at FMI(2020-2021).
+/// - data 06.05.21
+/// - author Blagovesta Zareva
+/// - brief The program can save the information that is entered
+///         from the console and also be able to reload it.
+///         That is, the program must store the information of 
+///         the planets and the Jedi inhabiting them in a file and 
+///         support the commands for working with files described in the 
+///         section Working with the command line. All commands 
+///         are in lowercase Latin letters, and the arguments are separated by a space. 
+///
 int main() {
 
 	Unite runner;
 	runner.run();
 
-//	doctest::Context().run();
+	doctest::Context().run();
 
-//	std::cin.get();
-	system("pause");
+///	std::cin.get();
+//	system("pause");
 	return 0;
 }

@@ -1,10 +1,10 @@
 #ifndef __SAVE_COMMAND_H__
 #define __SAVE_COMMAND_H__
 #include "Command.h"
-/*!
- * Save information in current opened file
- * All methods which implements are from abstract base class Command
- */
+///
+/// Save information in current opened file
+/// All methods which implements are from abstract base class Command
+///
 class SaveCommand : public Command {
 
 public:

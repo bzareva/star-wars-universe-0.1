@@ -1,10 +1,10 @@
 #ifndef __REMOVE_COMMAND_H__
 #define __REMOVE_COMMAND_H__
 #include "Command.h"
-/*!
- * Remove jedi form given planet
- * All methods which implements are from abstract base class Command
- */
+///
+/// Remove jedi form given planet
+/// All methods which implements are from abstract base class Command
+///
 class RemoveCommand : public Command {
 
 public:

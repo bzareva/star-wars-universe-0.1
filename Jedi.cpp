@@ -5,8 +5,8 @@ Jedi::Jedi(std::ifstream& fin) {
 	read_from_file(fin);
 }
 
-Jedi::Jedi(unsigned age, double force, Rank rank, String name, String color_of_lightsaber)
- :m_rank(rank), m_name_jedi(name), m_color_of_lightsaber(color_of_lightsaber){
+Jedi::Jedi(const unsigned& age, const double& force, const Rank& rank, const String& name, const String& color_of_lightsaber)
+ : m_force(force), m_rank(rank), m_name_jedi(name), m_color_of_lightsaber(color_of_lightsaber) {
 
 	if (age <= 0) {
 		m_age = 1;
@@ -14,11 +14,11 @@ Jedi::Jedi(unsigned age, double force, Rank rank, String name, String color_of_l
 		m_age = age;
 	}
 
-	if (force < 0) {
-		m_force = 0.;
-	} else {
-		m_force = force;
-	}
+	//if (force < 0) {
+	//	m_force = 0.;
+	//} else {
+	//	m_force = force;
+	//}
 }
 
 Jedi::Jedi(const Jedi& oth) {
@@ -41,7 +41,7 @@ String Jedi::get_class_name() {
 
 bool Jedi::operator==(const Jedi& rhs)const {
 
-	if (m_age != rhs.m_age) {
+	if (m_age != rhs.m_age || m_force != rhs.m_force || m_rank != rhs.m_rank || m_name_jedi != rhs.m_name_jedi || m_color_of_lightsaber != rhs.m_color_of_lightsaber) {
 		return false;
 	}
 	return true;
@@ -65,10 +65,16 @@ std::istream& operator>>(std::istream& in, Jedi& oth) {
 	in >> oth.m_name_jedi;
 	in >> oth.m_color_of_lightsaber;
 
+	//m_rank = Rank::YOUNGLING;
 	String buff;
 	in >> buff;
 
 	in >> oth.m_age;
+	while (oth.m_age <= 0) {
+		std::cerr << "\nAge of jedi must to be possitive integer! Try again:";
+		in >> oth.m_age;
+	}
+
 	in >> oth.m_force;
 
 	if (buff == String("youngling") || buff == String("YOUNGLING")) {
@@ -179,7 +185,7 @@ void Jedi::write_to_file(std::ofstream& fout)const {
 	fout << "\nName of jedi: " << m_name_jedi;
 	fout << "\nAge of jedi: "  << m_age;
 	fout << "\nForce of jedi: " << m_force;
-	fout << "\n Color of lightsaber of jedi: " << m_color_of_lightsaber;
+	fout << "\nColor of lightsaber of jedi: " << m_color_of_lightsaber;
 	fout << "\nRank of jedi: ";
 	if (m_rank == Rank::GRAND_MASTER) {
 		fout << "GRAND MASTER\n";
@@ -205,6 +211,7 @@ void Jedi::read_from_file(std::ifstream& fin) {
 	m_name_jedi.loadString(fin);
 	m_color_of_lightsaber.loadString(fin);
 
+	///m_rank = Rank::YOUNGLING;
 	String buff;
 	buff.loadString(fin);
 
@@ -259,7 +266,7 @@ unsigned Jedi::rank_num()const {
 void Jedi::copy(const Jedi& rhs) {
 
 	set_age(rhs.m_age);
-	set_force(rhs.m_force);
+	m_force               = rhs.m_force;
 	m_rank                = rhs.m_rank;
 	m_name_jedi           = rhs.m_name_jedi;
 	m_color_of_lightsaber = rhs.m_color_of_lightsaber;
@@ -276,11 +283,13 @@ void Jedi::set_age(const unsigned& age) {
 
 void Jedi::set_force(const double& force) {
 
-	if (force < 0) {
-		m_force = 0.;
-	} else {
-		m_force = force;
-	}
+	m_force = force;
+
+	//if (force < 0) {
+	//	m_force = 0.;
+	//} else {
+	//	m_force = force;
+	//}
 }
 
 void Jedi::set_name_jedi(const String& name) {
