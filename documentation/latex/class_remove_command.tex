@@ -22,7 +22,7 @@ Inheritance diagram for Remove\+Command\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_remove_command_ac21ebc7ad773798060f94c8244897cef}{Remove\+Command}} (const \mbox{\hyperlink{class_string}{String}} \&cmd, const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ args)
 \item 
-void \mbox{\hyperlink{class_remove_command_addafbd09d9db1f46122fec3a4fa095aa}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager) override
+virtual void \mbox{\hyperlink{class_remove_command_a1acf8f1f04420a70226c59d97580fefd}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager) final
 \begin{DoxyCompactList}\small\item\em Each of heirs implementing it to a different way. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -46,11 +46,11 @@ Remove jedi form given planet All methods which implements are from abstract bas
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_remove_command_addafbd09d9db1f46122fec3a4fa095aa}\label{class_remove_command_addafbd09d9db1f46122fec3a4fa095aa}} 
+\mbox{\Hypertarget{class_remove_command_a1acf8f1f04420a70226c59d97580fefd}\label{class_remove_command_a1acf8f1f04420a70226c59d97580fefd}} 
 \index{RemoveCommand@{RemoveCommand}!execute@{execute}}
 \index{execute@{execute}!RemoveCommand@{RemoveCommand}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily void Remove\+Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void Remove\+Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
 
 
 
@@ -63,5 +63,5 @@ Each of heirs implementing it to a different way.
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{class_command_a5e4f37b66ceb0e4424c8011e7c598063}{Command}}.
+Implements \mbox{\hyperlink{class_command_ac2a0167822794e3f2e14846e62a92cbb}{Command}}.
 

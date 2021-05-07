@@ -26,7 +26,7 @@ virtual \mbox{\hyperlink{class_command_aa545a53d35818f9efb936daf3fa16c61}{$\sim$
 \item 
 \mbox{\hyperlink{class_command_aeaacf1d50fe58d94443ba72b51b68874}{Command}} (const \mbox{\hyperlink{class_string}{String}} \&command\+\_\+name, const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ \&parameters)
 \item 
-virtual void \mbox{\hyperlink{class_command_a5e4f37b66ceb0e4424c8011e7c598063}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager)
+virtual void \mbox{\hyperlink{class_command_ac2a0167822794e3f2e14846e62a92cbb}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager)=0
 \begin{DoxyCompactList}\small\item\em Each of heirs implementing it to a different way. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -68,11 +68,11 @@ Abstract base class for all commands classes which must to supports the program.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_command_a5e4f37b66ceb0e4424c8011e7c598063}\label{class_command_a5e4f37b66ceb0e4424c8011e7c598063}} 
+\mbox{\Hypertarget{class_command_ac2a0167822794e3f2e14846e62a92cbb}\label{class_command_ac2a0167822794e3f2e14846e62a92cbb}} 
 \index{Command@{Command}!execute@{execute}}
 \index{execute@{execute}!Command@{Command}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily virtual void Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -85,7 +85,7 @@ Each of heirs implementing it to a different way.
 \end{DoxyParams}
 
 
-Reimplemented in \mbox{\hyperlink{class_save_command_a7a27ff3e4ac41341148a06b2169dbe45}{Save\+Command}}, \mbox{\hyperlink{class_save_as_command_a8275020b79ccf723507bac2142d13f79}{Save\+As\+Command}}, \mbox{\hyperlink{class_remove_command_addafbd09d9db1f46122fec3a4fa095aa}{Remove\+Command}}, \mbox{\hyperlink{class_promote_jedi_command_a7c4755fb82089df85a5574f1186911d7}{Promote\+Jedi\+Command}}, \mbox{\hyperlink{class_print_command_a7dc03cc01ab59affbac0816d70f03f11}{Print\+Command}}, \mbox{\hyperlink{class_operator_plus_command_aafd2d6997cace28071cb3c18bf51c2da}{Operator\+Plus\+Command}}, \mbox{\hyperlink{class_open_command_abec1d2a82f26c119e9fdab8d916ea43d}{Open\+Command}}, \mbox{\hyperlink{class_help_command_ab206aa512bdf2b8925451b4034ea92d8}{Help\+Command}}, \mbox{\hyperlink{class_get_youngest_jedi_command_af692592764fe958f5b688aa3deb476a7}{Get\+Youngest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_strongest_jedi_command_abadfde309569a703d270e727f44b8142}{Get\+Strongest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_most_used_saber_color_command_a4d33fef97f33ead4d749371cf796d8e3}{Get\+Most\+Used\+Saber\+Color\+Command}}, \mbox{\hyperlink{class_exit_command_ab4e167dd63ad04b62defc7a11c0bb91a}{Exit\+Command}}, \mbox{\hyperlink{class_demote_jedi_command_a943af6b0b598fe154b13b67c34bad2d0}{Demote\+Jedi\+Command}}, \mbox{\hyperlink{class_create_jedi_command_aae010aaa5868ddfbce1e7934924e2953}{Create\+Jedi\+Command}}, \mbox{\hyperlink{class_close_command_ab20d19e27c056ddc31a1e7c1a727c881}{Close\+Command}}, and \mbox{\hyperlink{class_add_planet_command_a57a38dd00e8815e70e15b513cb5cf63e}{Add\+Planet\+Command}}.
+Implemented in \mbox{\hyperlink{class_save_command_a3dcb207343f883efdbcb2c1530aacedf}{Save\+Command}}, \mbox{\hyperlink{class_save_as_command_a084e805501ae606fc1c242702980da8c}{Save\+As\+Command}}, \mbox{\hyperlink{class_remove_command_a1acf8f1f04420a70226c59d97580fefd}{Remove\+Command}}, \mbox{\hyperlink{class_promote_jedi_command_a8dab4c3d2eb2426555d5196b42d6a514}{Promote\+Jedi\+Command}}, \mbox{\hyperlink{class_print_command_a394793c2511e6b81a8e53cd6c13b49ff}{Print\+Command}}, \mbox{\hyperlink{class_operator_plus_command_adc08c4da8c982d8b437cae85f810a57e}{Operator\+Plus\+Command}}, \mbox{\hyperlink{class_open_command_a7f4ce7acdc1909e1822e78d046031e3b}{Open\+Command}}, \mbox{\hyperlink{class_help_command_a2ff7c3b1c723525f2035248aa641ce65}{Help\+Command}}, \mbox{\hyperlink{class_get_youngest_jedi_command_a788a9c87af1902ad6d7d2ebf9bbb356f}{Get\+Youngest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_strongest_jedi_command_a8f7cf2afaf065992d8f86d21cfa28918}{Get\+Strongest\+Jedi\+Command}}, \mbox{\hyperlink{class_get_most_used_saber_color_command_a3f25a102288b96b7c7528da620847474}{Get\+Most\+Used\+Saber\+Color\+Command}}, \mbox{\hyperlink{class_exit_command_adb5446432f9e7fe71a1db6e608a58572}{Exit\+Command}}, \mbox{\hyperlink{class_demote_jedi_command_a24e9138ee61f3dc62474db52b513e103}{Demote\+Jedi\+Command}}, \mbox{\hyperlink{class_create_jedi_command_a2e16c54bec24a82b6583be929703a72f}{Create\+Jedi\+Command}}, \mbox{\hyperlink{class_close_command_a3ef4093ee00bb74918395b7184b3de99}{Close\+Command}}, and \mbox{\hyperlink{class_add_planet_command_a281fb706d25d4bf42ddc474ec8216091}{Add\+Planet\+Command}}.
 
 
 

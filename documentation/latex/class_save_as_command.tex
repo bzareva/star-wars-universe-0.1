@@ -22,7 +22,7 @@ Inheritance diagram for Save\+As\+Command\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_save_as_command_a6206d8f0e3e09610afe2c6fbc3c49801}{Save\+As\+Command}} (const \mbox{\hyperlink{class_string}{String}} \&cmd, const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ args)
 \item 
-void \mbox{\hyperlink{class_save_as_command_a8275020b79ccf723507bac2142d13f79}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager) override
+virtual void \mbox{\hyperlink{class_save_as_command_a084e805501ae606fc1c242702980da8c}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager) final
 \begin{DoxyCompactList}\small\item\em Each of heirs implementing it to a different way. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -46,11 +46,11 @@ Saves information in new file, which is given from user All methods which implem
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_save_as_command_a8275020b79ccf723507bac2142d13f79}\label{class_save_as_command_a8275020b79ccf723507bac2142d13f79}} 
+\mbox{\Hypertarget{class_save_as_command_a084e805501ae606fc1c242702980da8c}\label{class_save_as_command_a084e805501ae606fc1c242702980da8c}} 
 \index{SaveAsCommand@{SaveAsCommand}!execute@{execute}}
 \index{execute@{execute}!SaveAsCommand@{SaveAsCommand}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily void Save\+As\+Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void Save\+As\+Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
 
 
 
@@ -63,5 +63,5 @@ Each of heirs implementing it to a different way.
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{class_command_a5e4f37b66ceb0e4424c8011e7c598063}{Command}}.
+Implements \mbox{\hyperlink{class_command_ac2a0167822794e3f2e14846e62a92cbb}{Command}}.
 

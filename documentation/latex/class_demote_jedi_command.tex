@@ -22,7 +22,7 @@ Inheritance diagram for Demote\+Jedi\+Command\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_demote_jedi_command_abfee1fcd899cd31ce7e28469df4c39ed}{Demote\+Jedi\+Command}} (const \mbox{\hyperlink{class_string}{String}} \&cmd, const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_string}{String}} $>$ args)
 \item 
-void \mbox{\hyperlink{class_demote_jedi_command_a943af6b0b598fe154b13b67c34bad2d0}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager) override
+virtual void \mbox{\hyperlink{class_demote_jedi_command_a24e9138ee61f3dc62474db52b513e103}{execute}} (\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&manager) final
 \begin{DoxyCompactList}\small\item\em Each of heirs implementing it to a different way. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -46,11 +46,11 @@ Demote jedi All methods which implements are from abstract base class \mbox{\hyp
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_demote_jedi_command_a943af6b0b598fe154b13b67c34bad2d0}\label{class_demote_jedi_command_a943af6b0b598fe154b13b67c34bad2d0}} 
+\mbox{\Hypertarget{class_demote_jedi_command_a24e9138ee61f3dc62474db52b513e103}\label{class_demote_jedi_command_a24e9138ee61f3dc62474db52b513e103}} 
 \index{DemoteJediCommand@{DemoteJediCommand}!execute@{execute}}
 \index{execute@{execute}!DemoteJediCommand@{DemoteJediCommand}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily void Demote\+Jedi\+Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void Demote\+Jedi\+Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_galaxy_manager}{Galaxy\+Manager}} \&}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
 
 
 
@@ -63,5 +63,5 @@ Each of heirs implementing it to a different way.
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{class_command_a5e4f37b66ceb0e4424c8011e7c598063}{Command}}.
+Implements \mbox{\hyperlink{class_command_ac2a0167822794e3f2e14846e62a92cbb}{Command}}.
 

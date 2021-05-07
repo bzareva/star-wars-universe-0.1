@@ -120,9 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a21699dcd0c3da09ba3989401fa053f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb8f2cbb39c5f557e98a0f2f8e63da7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_print_command.html#adb8f2cbb39c5f557e98a0f2f8e63da7c">PrintCommand</a> (const <a class="el" href="class_string.html">String</a> &amp;cmd, const <a class="el" href="class_vector.html">Vector</a>&lt; <a class="el" href="class_string.html">String</a> &gt; args)</td></tr>
 <tr class="separator:adb8f2cbb39c5f557e98a0f2f8e63da7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dc03cc01ab59affbac0816d70f03f11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_print_command.html#a7dc03cc01ab59affbac0816d70f03f11">execute</a> (<a class="el" href="class_galaxy_manager.html">GalaxyManager</a> &amp;manager) override</td></tr>
-<tr class="memdesc:a7dc03cc01ab59affbac0816d70f03f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Each of heirs implementing it to a different way.  <a href="class_print_command.html#a7dc03cc01ab59affbac0816d70f03f11">More...</a><br /></td></tr>
-<tr class="separator:a7dc03cc01ab59affbac0816d70f03f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394793c2511e6b81a8e53cd6c13b49ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_print_command.html#a394793c2511e6b81a8e53cd6c13b49ff">execute</a> (<a class="el" href="class_galaxy_manager.html">GalaxyManager</a> &amp;manager) final</td></tr>
+<tr class="memdesc:a394793c2511e6b81a8e53cd6c13b49ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Each of heirs implementing it to a different way.  <a href="class_print_command.html#a394793c2511e6b81a8e53cd6c13b49ff">More...</a><br /></td></tr>
+<tr class="separator:a394793c2511e6b81a8e53cd6c13b49ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_command"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_command')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_command.html">Command</a></td></tr>
 <tr class="memitem:ac3717e409ad40cc49776e4b2f5d8d3db inherit pub_methods_class_command"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#ac3717e409ad40cc49776e4b2f5d8d3db">Command</a> ()=default</td></tr>
 <tr class="separator:ac3717e409ad40cc49776e4b2f5d8d3db inherit pub_methods_class_command"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,8 +206,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7dc03cc01ab59affbac0816d70f03f11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dc03cc01ab59affbac0816d70f03f11">&#9670;&nbsp;</a></span>execute()</h2>
+<a id="a394793c2511e6b81a8e53cd6c13b49ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394793c2511e6b81a8e53cd6c13b49ff">&#9670;&nbsp;</a></span>execute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +216,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PrintCommand::execute </td>
+          <td class="memname">virtual void PrintCommand::execute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_galaxy_manager.html">GalaxyManager</a> &amp;&#160;</td>
           <td class="paramname"><em>manager</em></td><td>)</td>
@@ -225,7 +225,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -238,7 +238,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="class_command.html#a5e4f37b66ceb0e4424c8011e7c598063">Command</a>.</p>
+<p>Implements <a class="el" href="class_command.html#ac2a0167822794e3f2e14846e62a92cbb">Command</a>.</p>
 
 </div>
 </div>
