@@ -22,7 +22,7 @@ public:
     /// Each of heirs implementing it to a different way
     /// @param manager Calls methods for successful execution of program through the given command
     ///
-    virtual void execute(GalaxyManager& manager) {};
+    virtual void execute(GalaxyManager& manager) = 0;
 
 private:
     ///

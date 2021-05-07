@@ -171,18 +171,23 @@ void Planet::write_to_file(std::ofstream& fout)const {
 
 void Planet::read_from_file(std::ifstream& fin) {
 
-	fin >> m_planet_name;
+	//fin >> m_planet_name;
+	m_planet_name.loadString(fin);
 
 	unsigned cnt;
 	fin >> cnt;
-	while (cnt <= 0) {
+	/*while (cnt <= 0) {
 		std::cout << "\nWrong input! Try again:";
 		fin >> cnt;
-	}
+	}*/
+	
 
-	for (unsigned i = 0; i < cnt; ++i) {
-		m_jedi[i].read_from_file(fin);
-	}
+	Jedi curr(fin);
+	m_jedi += curr;
+	/*for (unsigned i = 0; i < cnt; ++i) {
+		curr.read_from_file(fin);
+		m_jedi += curr;
+	}*/
 }
 
 String Planet::type_name()const {

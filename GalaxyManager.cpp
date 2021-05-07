@@ -20,8 +20,7 @@ void GalaxyManager::open_file(const String& file_name) {
 
         std::ofstream fout(file_name.get_string(), std::ios::out);
         if (!fout) {
-            std::cerr << "Run again the program!\n";
-            return;
+            throw std::runtime_error("Run again the program!\n");
         }
 
         fout.clear();
@@ -129,7 +128,7 @@ void GalaxyManager::save_as(const String& file_name) {
 
 void GalaxyManager::exit_command()const {
 
-    exit(0);
+    exit(0); //EXIT_FAILURE 
 }
 
 void GalaxyManager::add_planet(const String& planet_name) {

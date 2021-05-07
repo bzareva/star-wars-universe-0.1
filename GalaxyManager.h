@@ -1,8 +1,9 @@
 #ifndef __GALAXY_MANAGER_H__
 #define __GALAXY_MANAGER_H__
+#include <cstdlib> // exit, EXIT_FAILURE 
 #include "Galaxy.h"
 ///
-///  Stores all commands and also has a datas which are:
+/// Stores all commands and also has a datas which are:
 /// file name and a variable type of bool- tells whether the file we are working with is closed or open 
 /// and an object of type Galaxy- we need it for execution of all supported commands in program.
 ///

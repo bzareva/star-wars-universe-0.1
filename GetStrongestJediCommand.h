@@ -12,7 +12,7 @@ public:
 
 	GetStrongestJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
 
-	inline void execute(GalaxyManager& manager) override {
+	inline virtual void execute(GalaxyManager& manager)final {
 
 		if (!is_valid()) {
 			throw std::runtime_error("Obscure command!");
@@ -22,7 +22,7 @@ public:
 	}
 
 private:
-	inline bool is_valid()const override {
+	inline virtual bool is_valid()const final {
 
 		if (m_command_name != String("get_strongest_jedi")) {
 			std::cerr << "\nCommand name is not valid!\n";

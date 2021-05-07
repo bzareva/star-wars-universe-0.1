@@ -1,8 +1,8 @@
 #include "Unite.h"
-#include "DTEST.h"
+///#include "DTEST.h"
 ///
 /// - Star wars universe 0.1 is project from the Object-oriented programming course at FMI(2020-2021).
-/// - data 06.05.21
+/// - data 05.21
 /// - author Blagovesta Zareva
 /// - brief The program can save the information that is entered
 ///         from the console and also be able to reload it.
@@ -17,9 +17,9 @@ int main() {
 	Unite runner;
 	runner.run();
 
-	doctest::Context().run();
+///	doctest::Context().run();
 
 ///	std::cin.get();
 //	system("pause");
-	return 0;
+	return 0; 
 }

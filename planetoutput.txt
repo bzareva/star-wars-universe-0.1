@@ -1,4 +1,7 @@
 
+Name of planet: Earth
+**Iformation about jedi on this planet**
+
 Name of jedi: John1
 Age of jedi: 23
 Force of jedi: 334.5

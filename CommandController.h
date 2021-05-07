@@ -7,19 +7,19 @@
 class CommandController {
 
 public:
-	//! default constructor
+	/// default constructor
 	CommandController() = default;
 
-	//! default destructor
+	/// default destructor
 	~CommandController() = default;
 
-	//! execute registered commands
+	/// execute registered commands
 	void execute_command(const String& file_name, GalaxyManager& cosmos);
 
-	//! registers commands
+	/// registers commands
 	void register_command(Command* register_command);
 
-	//! created commands are registered in container
+	/// created commands are registered in container
 	void init_command(GalaxyManager& cosmos);
 
 private:
