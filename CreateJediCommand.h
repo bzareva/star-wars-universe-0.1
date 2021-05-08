@@ -48,6 +48,36 @@ private:
 			return false;
 		}
 
+		if (!m_parameters[0].is_only_alpha()) { //planet name
+			std::cerr << "\nName of planet contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
+		if (!m_parameters[1].is_only_alpha()) { //jedi name
+			std::cerr << "\nName of Jedi contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
+		if (!m_parameters[2].is_valid_rank()) { //jedi rank
+			std::cerr << "\nJedi rank contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
+		if (!m_parameters[3].is_only_digits()) { //jedi age
+			std::cerr << "\nJedi age contains invalid symbols! Must to contains only digits.!\n";
+			return false;
+		}
+		
+		if (!m_parameters[4].is_only_alpha()) { //saber color
+			std::cerr << "\nJedi age contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
+		if (!m_parameters[5].is_only_digits()) { //jedi force
+			std::cerr << "\nJedi force contains invalid symbols! Must to contains only digits.!\n";
+			return false;
+		}
+
 		return true;
 	}
 

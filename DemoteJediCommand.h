@@ -45,6 +45,16 @@ private:
 			return false;
 		}
 
+		if (!m_parameters[0].is_only_alpha()) { //jedi name
+			std::cerr << "\nName of jedi contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
+		if (!m_parameters[1].is_only_digits()) { //multiplier
+			std::cerr << "\nMultiplier contains invalid symbols! Must to contains only digits.!\n";
+			return false;
+		}
+
 		return true;
 	}
 

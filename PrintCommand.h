@@ -44,6 +44,16 @@ private:
 			return false;
 		}
 
+		if (!m_parameters[0].is_only_alpha()) { //type of object which we want to print
+			std::cerr << "\nType of object chich you want to print, contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
+		if (!m_parameters[1].is_only_alpha()) { //planet name
+			std::cerr << "\nEnter string contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
 		return true;
 	}
 

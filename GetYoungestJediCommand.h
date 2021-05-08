@@ -45,6 +45,16 @@ private:
 			return false;
 		}
 
+		if (!m_parameters[0].is_only_alpha()) { //planet name
+			std::cerr << "\nName of planet contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+	
+		if (!m_parameters[1].is_valid_rank()) { //jedi rank
+			std::cerr << "\nJedi rank contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+		
 		return true;
 	}
 

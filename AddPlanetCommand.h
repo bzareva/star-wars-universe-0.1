@@ -44,6 +44,11 @@ private:
 			return false;
 		}
 
+		if (!m_parameters[0].is_only_alpha()) { //planet name
+			std::cerr << "\nName of planet contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
 		return true;
 	}
 	 

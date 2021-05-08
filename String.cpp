@@ -472,6 +472,118 @@ unsigned String::cnt_digits(unsigned number) {
 	return cnt;
 }
 
+bool String::is_digit(const char& ch)const {
+
+	return (ch >= '0' && ch <= '9');
+}
+
+bool String::is_lower(const char& ch)const {
+
+	return(ch >= 'a' && ch <= 'z');
+}
+
+bool String::is_upper(const char& ch)const {
+
+	return (ch >= 'A' && ch <= 'Z');
+}
+
+bool String::is_alpha(const char& ch)const {
+
+	return (is_upper(ch) || is_lower(ch));
+}
+
+bool String::is_only_digits()const {
+
+	unsigned i         = 0;
+	unsigned one_point = 0;
+	while (m_string[i] != '\0') {
+
+		if (!is_digit(m_string[i]) && m_string[i] != '.') {
+			return false;
+		}
+		if (m_string[i] == '.') { //if it is float or double
+			++one_point;
+		}
+		++i;
+	}
+
+	if (one_point <= 1) {
+		return true;
+	}
+	return false;
+}
+
+bool String::is_only_alpha()const {
+
+	unsigned i = 0;
+	while (m_string[i] != '\0') {
+		if (!is_alpha(m_string[i])) {
+			return false;
+		}
+		++i;
+	}
+	return true;
+}
+
+bool String::is_whitespace_and_letters()const {
+
+	bool whitesp = false;
+	unsigned i   = 0;
+	while (m_string[i] != '\0') {
+
+		if (is_digit(m_string[i])) {
+			return false;
+		}
+		if (m_string[i] == ' ') {
+			whitesp = true;
+		}
+		++i;
+	}
+
+	if (whitesp) {
+		return true;
+	}
+
+	return false;
+}
+
+void String::to_lower(char& ch) {
+
+	if (is_upper(ch)) {
+		ch += 'a' - 'A';
+	}
+}
+
+void String::to_upper(char& ch) {
+
+	if (is_lower(ch)) {
+		ch -= 'a' - 'A';
+	}
+}
+
+bool String::is_valid_rank()const {
+
+	String curr(m_string);
+	if (curr == String("YOUNGLING") || curr == String("youngling")) {
+		return true;
+	} else if (curr == String("INITIATE") || curr == String("initiate")) {
+		return true;
+	} else if (curr == String("PADAWAN") || curr == String("padawan")) {
+		return true;
+	} else if (curr == String("KNIGHT_ASPIRANT") || curr == String("knight_aspirant")) {
+		return true;
+	} else if (curr == String("KNIGHT") || curr == String("knight")) {
+		return true;
+	} else if (curr == String("MASTER") || curr == String("master")) {
+		return true;
+	} else if (curr == String("BATTLE_MASTER") || curr == String("battle_master")) {
+		return true;
+	} else if (curr == String("GRAND_MASTER") || curr == String("grand_master")) {
+		return true;
+	}
+	return false;
+}
+
 void String::cpy(const String& obj) {
 
 	m_size     = obj.m_size;

@@ -115,6 +115,36 @@ public:
 	/// find digits to given number
 	unsigned cnt_digits(unsigned number);
 
+	/// @return True if given symbol is digit otherwise False
+	bool is_digit(const char& ch)const;
+
+	/// @return True if given symbol is lower alpha otherwise False
+	bool is_lower(const char& ch)const;
+
+	/// @return True if given symbol is upper alpha otherwise False
+	bool is_upper(const char& ch)const;
+
+	/// @return True if given symbol is alpha otherwise False
+	bool is_alpha(const char& ch)const;
+
+	/// @return True if string contains only digits otherwise False
+	bool is_only_digits()const;
+
+	/// @return True if string contains only letters otherwise False
+	bool is_only_alpha()const;
+
+	/// @return True if string contains letters and whitespace otherwise False
+	bool is_whitespace_and_letters()const;
+
+	/// convert alpha to lower alpha if is it upper
+	void to_lower(char& ch);
+
+	/// convert alpha to upper alpha if is it lower
+	void to_upper(char& ch);
+
+	/// @return True if given string is valid rank of jedi otherwise False
+	bool is_valid_rank()const;
+
 private:
 	/// help method for operator= and copy ctor 
 	void cpy(const String& obj);

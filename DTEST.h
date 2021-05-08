@@ -38,12 +38,12 @@ TEST_CASE("Jedi and Planet basic operations") {
 TEST_CASE("Adding in Galaxy planets and jedi") {
 
 	Jedi jedi[7] = { {23, 334.5, Rank::INITIATE, String("John1"), String("blue")},
-						 {25, 433.5, Rank::INITIATE, String("Rick1"), String("black")},
-						 {83, 334.5, Rank::PADAWAN, String("Pesho"), String("white")},
-						 {100, 353.5, Rank::INITIATE, String("Ivan"), String("black")},
-						 {95, 324.4, Rank::BATTLE_MASTER, String("Ivanka"), String("yellow")},
-						 {53, 87.7, Rank::MASTER, String("Miky"), String("green")},
-						 {67, 104.5, Rank::BATTLE_MASTER, String("Stefan"), String("red")} };
+				     {25, 433.5, Rank::INITIATE, String("Rick1"), String("black")},
+					 {83, 334.5, Rank::PADAWAN, String("Pesho"), String("white")},
+					 {100, 353.5, Rank::INITIATE, String("Ivan"), String("black")},
+					 {95, 324.4, Rank::BATTLE_MASTER, String("Ivanka"), String("yellow")},
+					 {53, 87.7, Rank::MASTER, String("Miky"), String("green")},
+					 {67, 104.5, Rank::BATTLE_MASTER, String("Stefan"), String("red")} };
 
 	Vector<Jedi> vec_jedi(jedi, 7);
 	Planet planet(vec_jedi, String("Earth"));

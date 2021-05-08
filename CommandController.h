@@ -14,7 +14,7 @@ public:
 	~CommandController() = default;
 
 	/// execute registered commands
-	void execute_command(const String& file_name, GalaxyManager& cosmos);
+	void execute_command(GalaxyManager& cosmos);
 
 	/// registers commands
 	void register_command(Command* register_command);

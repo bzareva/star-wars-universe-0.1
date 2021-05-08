@@ -44,8 +44,19 @@ private:
 			return false;
 		}
 
+		if (!m_parameters[0].is_only_alpha()) { //planet name
+			std::cerr << "\nName of first planet contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
+		if (!m_parameters[1].is_only_alpha()) { //planet name
+			std::cerr << "\nName of second planet contains invalid symbols! Must to contains only letters.!\n";
+			return false;
+		}
+
 		return true;
 	}
 
 };
+
 #endif //__OPERATOR_PLUS_COMMAND_H__

@@ -48,12 +48,12 @@ void Unite::run() {
 
 	//std::cout << universe;
 
-	//std::cout << ">Enter file name:";
-	//String file;
-	//std::cin >> file;
+	std::cout << ">Enter file name:";
+	String file;
+	std::cin >> file;
 
-	//m_manager = GalaxyManager(file.get_string(), universe);
-	//m_controller.init_command(m_manager);
+	m_manager = GalaxyManager(file.get_string(), universe);
+	m_controller.init_command(m_manager);
 
 	//std::ofstream foutP("planetoutput.txt", std::ios::out);
 	//if (!foutP) {
