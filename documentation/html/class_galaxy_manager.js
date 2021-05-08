@@ -1,7 +1,7 @@
 var class_galaxy_manager =
 [
     [ "GalaxyManager", "class_galaxy_manager.html#ab60c2e00badd75cca471836b348bc3d8", null ],
-    [ "GalaxyManager", "class_galaxy_manager.html#a1d0ade9d9c2e9c96442e265df4917c3a", null ],
+    [ "GalaxyManager", "class_galaxy_manager.html#ab5a9adc248010292983e22912c48d4a1", null ],
     [ "add_planet", "class_galaxy_manager.html#a8c443aa69463abdb8525caeb1191e062", null ],
     [ "close_file", "class_galaxy_manager.html#aa984fcffd2f560912ba1efaa0f490e62", null ],
     [ "create_jedi", "class_galaxy_manager.html#a48fcbbd22e3009212163d80924b18129", null ],

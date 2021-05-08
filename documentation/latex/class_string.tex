@@ -32,21 +32,21 @@ bool \mbox{\hyperlink{class_string_a999069e016da76a92f42a1b5f9b557eb}{operator==
 \begin{DoxyCompactList}\small\item\em checks if two strings are equal \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_string_ad3575334e380ed524d72bf52baf1b24d}{operator!=}} (const \mbox{\hyperlink{class_string}{String}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em checks if two strings are not equal \end{DoxyCompactList}\item 
-char \& \mbox{\hyperlink{class_string_a5d3b77a51619a8580a373d2cd1092a54}{operator\mbox{[}$\,$\mbox{]}}} (unsigned index)
+char \& \mbox{\hyperlink{class_string_ad5a9e49cf1fd17ad49e3bb4650336ca8}{operator\mbox{[}$\,$\mbox{]}}} (const unsigned \&index)
 \item 
-const char \& \mbox{\hyperlink{class_string_a3c1e60c05ba1e37c27d17ce0ab45b32e}{operator\mbox{[}$\,$\mbox{]}}} (unsigned index) const
+const char \& \mbox{\hyperlink{class_string_a12b8435c36ebb2019162220cfe1a32ab}{operator\mbox{[}$\,$\mbox{]}}} (const unsigned \&index) const
 \begin{DoxyCompactList}\small\item\em @reurns Constant element of given position \end{DoxyCompactList}\item 
-char \& \mbox{\hyperlink{class_string_af44cb56d492eea64121bad221774051e}{at}} (unsigned index)
+char \& \mbox{\hyperlink{class_string_a5af83e1193a977bf5f981d0b3702b2bc}{at}} (const unsigned \&index)
 \begin{DoxyCompactList}\small\item\em help method for not constant operator\mbox{[}\mbox{]} \end{DoxyCompactList}\item 
-const char \& \mbox{\hyperlink{class_string_a3b3e701be1dc0a2a3bafd89809f748bc}{at}} (unsigned index) const
+const char \& \mbox{\hyperlink{class_string_ab64630880da65709566a688a0ea553db}{at}} (const unsigned \&index) const
 \begin{DoxyCompactList}\small\item\em help method for constant operator\mbox{[}\mbox{]} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_string_a795463fbd3b0900db0252db6c133b2eb}{reserve}} (unsigned new\+\_\+cap)
+void \mbox{\hyperlink{class_string_a41d8da7568c2f97ba394dfb4c7763d1a}{reserve}} (const unsigned \&new\+\_\+cap)
 \begin{DoxyCompactList}\small\item\em sets aside memory \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_string_a5988dfe85f1f6eeea89b340f6b5381e0}{add}} (char ch)
+void \mbox{\hyperlink{class_string_ac1dbab7f918597724b60f043f9a84eda}{add}} (const char \&ch)
 \begin{DoxyCompactList}\small\item\em adds element in end of array \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_string_a31727d03e794df91df61721be5987562}{insert\+\_\+at}} (char ch, unsigned index)
+bool \mbox{\hyperlink{class_string_a290f88df79b839b8de63b98c1d6aadb8}{insert\+\_\+at}} (const char \&ch, const unsigned \&index)
 \begin{DoxyCompactList}\small\item\em adds element in the given position of array \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_string_aa7a90d9a9420a64036e5badab5220bc4}{remove\+\_\+at}} (unsigned index)
+bool \mbox{\hyperlink{class_string_abf0fd3d803f0ad6b3ff8db740b1b25ca}{remove\+\_\+at}} (const unsigned \&index)
 \begin{DoxyCompactList}\small\item\em remove element in the given position of array \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_string_ad5390af90b4f8a870172cdcb33009fe2}{fill\+\_\+zeros}} (char $\ast$str)
 \begin{DoxyCompactList}\small\item\em If capacity of array if bigger than size, then fills not used memory with \textquotesingle{}\textbackslash{}0\textquotesingle{}. \end{DoxyCompactList}\item 
@@ -66,11 +66,31 @@ double \mbox{\hyperlink{class_string_a0645aeb10c4b5ee9eb40a01582959fa1}{convert\
 \begin{DoxyCompactList}\small\item\em convert string to rank \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{class_string_a0af938a8fea2813f13b1d09fd1dcd70e}{cnt\+\_\+digits}} (unsigned number)
 \begin{DoxyCompactList}\small\item\em find digits to given number \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_string_ab9841b0b014fc15c1477b4ec895026fd}{is\+\_\+digit}} (const char \&ch) const
+\item 
+bool \mbox{\hyperlink{class_string_a239ba4242017d79daabc72961ad971bb}{is\+\_\+lower}} (const char \&ch) const
+\item 
+bool \mbox{\hyperlink{class_string_aa56c24b7705bd6779ad804b09216aa0e}{is\+\_\+upper}} (const char \&ch) const
+\item 
+bool \mbox{\hyperlink{class_string_a1782a4f35dec11f6c37a82ab023535e1}{is\+\_\+alpha}} (const char \&ch) const
+\item 
+bool \mbox{\hyperlink{class_string_aea3c4d473f865ff0acecd61a532f137e}{is\+\_\+only\+\_\+digits}} () const
+\item 
+bool \mbox{\hyperlink{class_string_a3a3a679d7d8751d0881e7adb0ce6c2f9}{is\+\_\+only\+\_\+alpha}} () const
+\item 
+bool \mbox{\hyperlink{class_string_adcc536ffad730073b05ce87fbe9f6429}{is\+\_\+whitespace\+\_\+and\+\_\+letters}} () const
+\item 
+void \mbox{\hyperlink{class_string_ad84a166ff470e465046196c270e58d88}{to\+\_\+lower}} (char \&ch)
+\begin{DoxyCompactList}\small\item\em convert alpha to lower alpha if is it upper \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_string_a10d5a46ad26a5ea4180838072319746f}{to\+\_\+upper}} (char \&ch)
+\begin{DoxyCompactList}\small\item\em convert alpha to upper alpha if is it lower \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_string_a35408c82df37f0236904f6127b3be902}{is\+\_\+valid\+\_\+rank}} () const
+\item 
 void \mbox{\hyperlink{class_string_a0800960ddf89b509058c8398137e7d29}{set\+\_\+string}} (const char $\ast$str)
 \begin{DoxyCompactList}\small\item\em setter for string \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_string_a21f3a4365e7066fc28ab28a22dd351c9}{set\+\_\+size}} (unsigned size)
+void \mbox{\hyperlink{class_string_ac3bedfc6d1ff65f0266916e1a368ca8b}{set\+\_\+size}} (const unsigned \&size)
 \begin{DoxyCompactList}\small\item\em setter for size of string \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_string_a45a11a3646eaaa99de3e872a0458b5c0}{set\+\_\+cap}} (unsigned cap)
+void \mbox{\hyperlink{class_string_a64e4af3fa586c854014e9e50ad2e3d25}{set\+\_\+cap}} (const unsigned \&cap)
 \begin{DoxyCompactList}\small\item\em setter for capacity of string \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{class_string_a55710e08597df2a2f026ab208a7d15b5}{get\+\_\+capacity}} () const
 \item 
@@ -136,31 +156,31 @@ destructor
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_string_a5988dfe85f1f6eeea89b340f6b5381e0}\label{class_string_a5988dfe85f1f6eeea89b340f6b5381e0}} 
+\mbox{\Hypertarget{class_string_ac1dbab7f918597724b60f043f9a84eda}\label{class_string_ac1dbab7f918597724b60f043f9a84eda}} 
 \index{String@{String}!add@{add}}
 \index{add@{add}!String@{String}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}}
-{\footnotesize\ttfamily void String\+::add (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void String\+::add (\begin{DoxyParamCaption}\item[{const char \&}]{ch }\end{DoxyParamCaption})}
 
 
 
 adds element in end of array 
 
-\mbox{\Hypertarget{class_string_af44cb56d492eea64121bad221774051e}\label{class_string_af44cb56d492eea64121bad221774051e}} 
+\mbox{\Hypertarget{class_string_a5af83e1193a977bf5f981d0b3702b2bc}\label{class_string_a5af83e1193a977bf5f981d0b3702b2bc}} 
 \index{String@{String}!at@{at}}
 \index{at@{at}!String@{String}}
 \doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily char \& String\+::at (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily char \& String\+::at (\begin{DoxyParamCaption}\item[{const unsigned \&}]{index }\end{DoxyParamCaption})}
 
 
 
 help method for not constant operator\mbox{[}\mbox{]} 
 
-\mbox{\Hypertarget{class_string_a3b3e701be1dc0a2a3bafd89809f748bc}\label{class_string_a3b3e701be1dc0a2a3bafd89809f748bc}} 
+\mbox{\Hypertarget{class_string_ab64630880da65709566a688a0ea553db}\label{class_string_ab64630880da65709566a688a0ea553db}} 
 \index{String@{String}!at@{at}}
 \index{at@{at}!String@{String}}
 \doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily const char \& String\+::at (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const char \& String\+::at (\begin{DoxyParamCaption}\item[{const unsigned \&}]{index }\end{DoxyParamCaption}) const}
 
 
 
@@ -243,16 +263,88 @@ Size of string
 \begin{DoxyReturn}{Returns}
 The string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_string_a31727d03e794df91df61721be5987562}\label{class_string_a31727d03e794df91df61721be5987562}} 
+\mbox{\Hypertarget{class_string_a290f88df79b839b8de63b98c1d6aadb8}\label{class_string_a290f88df79b839b8de63b98c1d6aadb8}} 
 \index{String@{String}!insert\_at@{insert\_at}}
 \index{insert\_at@{insert\_at}!String@{String}}
 \doxysubsubsection{\texorpdfstring{insert\_at()}{insert\_at()}}
-{\footnotesize\ttfamily bool String\+::insert\+\_\+at (\begin{DoxyParamCaption}\item[{char}]{ch,  }\item[{unsigned}]{index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool String\+::insert\+\_\+at (\begin{DoxyParamCaption}\item[{const char \&}]{ch,  }\item[{const unsigned \&}]{index }\end{DoxyParamCaption})}
 
 
 
 adds element in the given position of array 
 
+\mbox{\Hypertarget{class_string_a1782a4f35dec11f6c37a82ab023535e1}\label{class_string_a1782a4f35dec11f6c37a82ab023535e1}} 
+\index{String@{String}!is\_alpha@{is\_alpha}}
+\index{is\_alpha@{is\_alpha}!String@{String}}
+\doxysubsubsection{\texorpdfstring{is\_alpha()}{is\_alpha()}}
+{\footnotesize\ttfamily bool String\+::is\+\_\+alpha (\begin{DoxyParamCaption}\item[{const char \&}]{ch }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if given symbol is alpha otherwise False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_string_ab9841b0b014fc15c1477b4ec895026fd}\label{class_string_ab9841b0b014fc15c1477b4ec895026fd}} 
+\index{String@{String}!is\_digit@{is\_digit}}
+\index{is\_digit@{is\_digit}!String@{String}}
+\doxysubsubsection{\texorpdfstring{is\_digit()}{is\_digit()}}
+{\footnotesize\ttfamily bool String\+::is\+\_\+digit (\begin{DoxyParamCaption}\item[{const char \&}]{ch }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if given symbol is digit otherwise False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_string_a239ba4242017d79daabc72961ad971bb}\label{class_string_a239ba4242017d79daabc72961ad971bb}} 
+\index{String@{String}!is\_lower@{is\_lower}}
+\index{is\_lower@{is\_lower}!String@{String}}
+\doxysubsubsection{\texorpdfstring{is\_lower()}{is\_lower()}}
+{\footnotesize\ttfamily bool String\+::is\+\_\+lower (\begin{DoxyParamCaption}\item[{const char \&}]{ch }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if given symbol is lower alpha otherwise False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_string_a3a3a679d7d8751d0881e7adb0ce6c2f9}\label{class_string_a3a3a679d7d8751d0881e7adb0ce6c2f9}} 
+\index{String@{String}!is\_only\_alpha@{is\_only\_alpha}}
+\index{is\_only\_alpha@{is\_only\_alpha}!String@{String}}
+\doxysubsubsection{\texorpdfstring{is\_only\_alpha()}{is\_only\_alpha()}}
+{\footnotesize\ttfamily bool String\+::is\+\_\+only\+\_\+alpha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if string contains only letters otherwise False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_string_aea3c4d473f865ff0acecd61a532f137e}\label{class_string_aea3c4d473f865ff0acecd61a532f137e}} 
+\index{String@{String}!is\_only\_digits@{is\_only\_digits}}
+\index{is\_only\_digits@{is\_only\_digits}!String@{String}}
+\doxysubsubsection{\texorpdfstring{is\_only\_digits()}{is\_only\_digits()}}
+{\footnotesize\ttfamily bool String\+::is\+\_\+only\+\_\+digits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if string contains only digits otherwise False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_string_aa56c24b7705bd6779ad804b09216aa0e}\label{class_string_aa56c24b7705bd6779ad804b09216aa0e}} 
+\index{String@{String}!is\_upper@{is\_upper}}
+\index{is\_upper@{is\_upper}!String@{String}}
+\doxysubsubsection{\texorpdfstring{is\_upper()}{is\_upper()}}
+{\footnotesize\ttfamily bool String\+::is\+\_\+upper (\begin{DoxyParamCaption}\item[{const char \&}]{ch }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if given symbol is upper alpha otherwise False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_string_a35408c82df37f0236904f6127b3be902}\label{class_string_a35408c82df37f0236904f6127b3be902}} 
+\index{String@{String}!is\_valid\_rank@{is\_valid\_rank}}
+\index{is\_valid\_rank@{is\_valid\_rank}!String@{String}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_rank()}{is\_valid\_rank()}}
+{\footnotesize\ttfamily bool String\+::is\+\_\+valid\+\_\+rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if given string is valid rank of jedi otherwise False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_string_adcc536ffad730073b05ce87fbe9f6429}\label{class_string_adcc536ffad730073b05ce87fbe9f6429}} 
+\index{String@{String}!is\_whitespace\_and\_letters@{is\_whitespace\_and\_letters}}
+\index{is\_whitespace\_and\_letters@{is\_whitespace\_and\_letters}!String@{String}}
+\doxysubsubsection{\texorpdfstring{is\_whitespace\_and\_letters()}{is\_whitespace\_and\_letters()}}
+{\footnotesize\ttfamily bool String\+::is\+\_\+whitespace\+\_\+and\+\_\+letters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if string contains letters and whitespace otherwise False 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_string_a39beaadb7a08883491249d3cd06aad3d}\label{class_string_a39beaadb7a08883491249d3cd06aad3d}} 
 \index{String@{String}!loadString@{loadString}}
 \index{loadString@{loadString}!String@{String}}
@@ -303,40 +395,40 @@ operator=
 
 checks if two strings are equal 
 
-\mbox{\Hypertarget{class_string_a5d3b77a51619a8580a373d2cd1092a54}\label{class_string_a5d3b77a51619a8580a373d2cd1092a54}} 
+\mbox{\Hypertarget{class_string_ad5a9e49cf1fd17ad49e3bb4650336ca8}\label{class_string_ad5a9e49cf1fd17ad49e3bb4650336ca8}} 
 \index{String@{String}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!String@{String}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily char \& String\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily char \& String\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const unsigned \&}]{index }\end{DoxyParamCaption})}
 
 \begin{DoxyReturn}{Returns}
 Not constant element of given position 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_string_a3c1e60c05ba1e37c27d17ce0ab45b32e}\label{class_string_a3c1e60c05ba1e37c27d17ce0ab45b32e}} 
+\mbox{\Hypertarget{class_string_a12b8435c36ebb2019162220cfe1a32ab}\label{class_string_a12b8435c36ebb2019162220cfe1a32ab}} 
 \index{String@{String}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!String@{String}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily const char \& String\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const char \& String\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const unsigned \&}]{index }\end{DoxyParamCaption}) const}
 
 
 
 @reurns Constant element of given position 
 
-\mbox{\Hypertarget{class_string_aa7a90d9a9420a64036e5badab5220bc4}\label{class_string_aa7a90d9a9420a64036e5badab5220bc4}} 
+\mbox{\Hypertarget{class_string_abf0fd3d803f0ad6b3ff8db740b1b25ca}\label{class_string_abf0fd3d803f0ad6b3ff8db740b1b25ca}} 
 \index{String@{String}!remove\_at@{remove\_at}}
 \index{remove\_at@{remove\_at}!String@{String}}
 \doxysubsubsection{\texorpdfstring{remove\_at()}{remove\_at()}}
-{\footnotesize\ttfamily bool String\+::remove\+\_\+at (\begin{DoxyParamCaption}\item[{unsigned}]{index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool String\+::remove\+\_\+at (\begin{DoxyParamCaption}\item[{const unsigned \&}]{index }\end{DoxyParamCaption})}
 
 
 
 remove element in the given position of array 
 
-\mbox{\Hypertarget{class_string_a795463fbd3b0900db0252db6c133b2eb}\label{class_string_a795463fbd3b0900db0252db6c133b2eb}} 
+\mbox{\Hypertarget{class_string_a41d8da7568c2f97ba394dfb4c7763d1a}\label{class_string_a41d8da7568c2f97ba394dfb4c7763d1a}} 
 \index{String@{String}!reserve@{reserve}}
 \index{reserve@{reserve}!String@{String}}
 \doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
-{\footnotesize\ttfamily void String\+::reserve (\begin{DoxyParamCaption}\item[{unsigned}]{new\+\_\+cap }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void String\+::reserve (\begin{DoxyParamCaption}\item[{const unsigned \&}]{new\+\_\+cap }\end{DoxyParamCaption})}
 
 
 
@@ -352,21 +444,21 @@ sets aside memory
 
 saves string to file 
 
-\mbox{\Hypertarget{class_string_a45a11a3646eaaa99de3e872a0458b5c0}\label{class_string_a45a11a3646eaaa99de3e872a0458b5c0}} 
+\mbox{\Hypertarget{class_string_a64e4af3fa586c854014e9e50ad2e3d25}\label{class_string_a64e4af3fa586c854014e9e50ad2e3d25}} 
 \index{String@{String}!set\_cap@{set\_cap}}
 \index{set\_cap@{set\_cap}!String@{String}}
 \doxysubsubsection{\texorpdfstring{set\_cap()}{set\_cap()}}
-{\footnotesize\ttfamily void String\+::set\+\_\+cap (\begin{DoxyParamCaption}\item[{unsigned}]{cap }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void String\+::set\+\_\+cap (\begin{DoxyParamCaption}\item[{const unsigned \&}]{cap }\end{DoxyParamCaption})}
 
 
 
 setter for capacity of string 
 
-\mbox{\Hypertarget{class_string_a21f3a4365e7066fc28ab28a22dd351c9}\label{class_string_a21f3a4365e7066fc28ab28a22dd351c9}} 
+\mbox{\Hypertarget{class_string_ac3bedfc6d1ff65f0266916e1a368ca8b}\label{class_string_ac3bedfc6d1ff65f0266916e1a368ca8b}} 
 \index{String@{String}!set\_size@{set\_size}}
 \index{set\_size@{set\_size}!String@{String}}
 \doxysubsubsection{\texorpdfstring{set\_size()}{set\_size()}}
-{\footnotesize\ttfamily void String\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{unsigned}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void String\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{const unsigned \&}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -429,6 +521,26 @@ Copies the string pointed by source into the array pointed by destination, inclu
 The length of string ~\newline
  
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_string_ad84a166ff470e465046196c270e58d88}\label{class_string_ad84a166ff470e465046196c270e58d88}} 
+\index{String@{String}!to\_lower@{to\_lower}}
+\index{to\_lower@{to\_lower}!String@{String}}
+\doxysubsubsection{\texorpdfstring{to\_lower()}{to\_lower()}}
+{\footnotesize\ttfamily void String\+::to\+\_\+lower (\begin{DoxyParamCaption}\item[{char \&}]{ch }\end{DoxyParamCaption})}
+
+
+
+convert alpha to lower alpha if is it upper 
+
+\mbox{\Hypertarget{class_string_a10d5a46ad26a5ea4180838072319746f}\label{class_string_a10d5a46ad26a5ea4180838072319746f}} 
+\index{String@{String}!to\_upper@{to\_upper}}
+\index{to\_upper@{to\_upper}!String@{String}}
+\doxysubsubsection{\texorpdfstring{to\_upper()}{to\_upper()}}
+{\footnotesize\ttfamily void String\+::to\+\_\+upper (\begin{DoxyParamCaption}\item[{char \&}]{ch }\end{DoxyParamCaption})}
+
+
+
+convert alpha to upper alpha if is it lower 
+
 
 
 \doxysubsection{Friends And Related Function Documentation}

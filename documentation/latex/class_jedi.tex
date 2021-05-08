@@ -26,9 +26,9 @@ bool \mbox{\hyperlink{class_jedi_a3df185c50750d5fb9f805df5c2b9fc47}{operator!=}}
 \begin{DoxyCompactList}\small\item\em compares two jedi by their ages are not equal \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jedi_a8f274e7c5b392732384dd46d5ff58949}{operator$<$}} (const \mbox{\hyperlink{class_jedi}{Jedi}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em compares two jedi and if left side jedi is younger return true, otherwise false \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_jedi_a1f80821fa1d237f18ab723219908b7a5}{promote}} (double multiplier)
+void \mbox{\hyperlink{class_jedi_a5b0db91ba6b5fec0662a7415542cd156}{promote}} (const double \&multiplier)
 \begin{DoxyCompactList}\small\item\em increases the given jedi by one rank up in ladder and increases its strength by a formula \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_jedi_a3cac34949a7824bdb3432fec99af014d}{demote}} (double multiplier)
+void \mbox{\hyperlink{class_jedi_ac530bbcf61aba79f0fd8b36ea0173551}{demote}} (const double \&multiplier)
 \begin{DoxyCompactList}\small\item\em decreases the given jedi by one rank down in ladder and lowers its strength by a formula \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jedi}{Jedi}} $\ast$ \mbox{\hyperlink{class_jedi_affef88f963581fdccabdde53d371d71c}{clone}} () const
 \item 
@@ -60,11 +60,6 @@ double \mbox{\hyperlink{class_jedi_a10aec06d310dea5884c33783332edbf9}{get\+\_\+f
 \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_jedi_aba055e1fdcda58d7ade665893b93fddd}{get\+\_\+color\+\_\+of\+\_\+lightsaber}} () const
 \item 
 \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \mbox{\hyperlink{class_jedi_a82a10fc519263612d2558e98577d3483}{get\+\_\+rank}} () const
-\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_jedi_a70ce99c37e5733e75073947b7673a1bc}{get\+\_\+class\+\_\+name}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -121,11 +116,11 @@ copy constructor
 \begin{DoxyReturn}{Returns}
 A pointer to a dynamically allocated jedi 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_jedi_a3cac34949a7824bdb3432fec99af014d}\label{class_jedi_a3cac34949a7824bdb3432fec99af014d}} 
+\mbox{\Hypertarget{class_jedi_ac530bbcf61aba79f0fd8b36ea0173551}\label{class_jedi_ac530bbcf61aba79f0fd8b36ea0173551}} 
 \index{Jedi@{Jedi}!demote@{demote}}
 \index{demote@{demote}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{demote()}{demote()}}
-{\footnotesize\ttfamily void Jedi\+::demote (\begin{DoxyParamCaption}\item[{double}]{multiplier }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Jedi\+::demote (\begin{DoxyParamCaption}\item[{const double \&}]{multiplier }\end{DoxyParamCaption})}
 
 
 
@@ -139,15 +134,6 @@ decreases the given jedi by one rank down in ladder and lowers its strength by a
 
 \begin{DoxyReturn}{Returns}
 Age of jedi 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_jedi_a70ce99c37e5733e75073947b7673a1bc}\label{class_jedi_a70ce99c37e5733e75073947b7673a1bc}} 
-\index{Jedi@{Jedi}!get\_class\_name@{get\_class\_name}}
-\index{get\_class\_name@{get\_class\_name}!Jedi@{Jedi}}
-\doxysubsubsection{\texorpdfstring{get\_class\_name()}{get\_class\_name()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} Jedi\+::get\+\_\+class\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-\begin{DoxyReturn}{Returns}
-Name of class 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_jedi_aba055e1fdcda58d7ade665893b93fddd}\label{class_jedi_aba055e1fdcda58d7ade665893b93fddd}} 
 \index{Jedi@{Jedi}!get\_color\_of\_lightsaber@{get\_color\_of\_lightsaber}}
@@ -235,11 +221,11 @@ compares two jedi by their ages are equal
 
 print information about jedi 
 
-\mbox{\Hypertarget{class_jedi_a1f80821fa1d237f18ab723219908b7a5}\label{class_jedi_a1f80821fa1d237f18ab723219908b7a5}} 
+\mbox{\Hypertarget{class_jedi_a5b0db91ba6b5fec0662a7415542cd156}\label{class_jedi_a5b0db91ba6b5fec0662a7415542cd156}} 
 \index{Jedi@{Jedi}!promote@{promote}}
 \index{promote@{promote}!Jedi@{Jedi}}
 \doxysubsubsection{\texorpdfstring{promote()}{promote()}}
-{\footnotesize\ttfamily void Jedi\+::promote (\begin{DoxyParamCaption}\item[{double}]{multiplier }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Jedi\+::promote (\begin{DoxyParamCaption}\item[{const double \&}]{multiplier }\end{DoxyParamCaption})}
 
 
 

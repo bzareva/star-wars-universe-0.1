@@ -4,7 +4,7 @@ var searchData=
   ['abort_5fafter_2',['abort_after',['../structdoctest_1_1_context_options.html#a8ba5bfec2229bc2da9ab917f4bdee5e7',1,'doctest::ContextOptions']]],
   ['accum_3',['accum',['../namespacerun__all.html#a4d47158e94ef9b44a21af401836249b1',1,'run_all']]],
   ['action_4',['action',['../namespacebench.html#ae2deebb589c32069d49dd046c3a5d800',1,'bench']]],
-  ['add_5',['add',['../class_string.html#a5988dfe85f1f6eeea89b340f6b5381e0',1,'String']]],
+  ['add_5',['add',['../class_string.html#ac1dbab7f918597724b60f043f9a84eda',1,'String']]],
   ['add_5ffail_5fat_6',['ADD_FAIL_AT',['../doctest__fwd_8h.html#a1937649cc9503739c20b3c81b97b5e5d',1,'ADD_FAIL_AT():&#160;doctest_fwd.h'],['../doctest_2doctest_8h.html#a1937649cc9503739c20b3c81b97b5e5d',1,'ADD_FAIL_AT():&#160;doctest.h']]],
   ['add_5ffail_5fcheck_5fat_7',['ADD_FAIL_CHECK_AT',['../doctest_2doctest_8h.html#a4608a06d7117332c14b21b93f9655653',1,'ADD_FAIL_CHECK_AT():&#160;doctest.h'],['../doctest__fwd_8h.html#a4608a06d7117332c14b21b93f9655653',1,'ADD_FAIL_CHECK_AT():&#160;doctest_fwd.h']]],
   ['add_5fmessage_5fat_8',['ADD_MESSAGE_AT',['../doctest__fwd_8h.html#adb66a4c291609d4a1c554ad0a23f0662',1,'ADD_MESSAGE_AT():&#160;doctest_fwd.h'],['../doctest_2doctest_8h.html#adb66a4c291609d4a1c554ad0a23f0662',1,'ADD_MESSAGE_AT():&#160;doctest.h']]],
@@ -31,7 +31,7 @@ var searchData=
   ['assertions_2emd_29',['assertions.md',['../assertions_8md.html',1,'']]],
   ['asserts_5fused_5foutside_5fof_5ftests_2ecpp_30',['asserts_used_outside_of_tests.cpp',['../asserts__used__outside__of__tests_8cpp.html',1,'']]],
   ['assertstring_31',['assertString',['../namespacedoctest.html#a44bf1260a82383247d446170810493cf',1,'doctest']]],
-  ['at_32',['at',['../class_galaxy.html#aee3ef9b038084f88d6ef6edfde236f41',1,'Galaxy::at()'],['../class_vector.html#a8763f2734a80080e2020485a41011862',1,'Vector::at(unsigned index)'],['../class_vector.html#a7f0ca5cbd883e703d705eb696c3836b6',1,'Vector::at(unsigned index) const'],['../class_string.html#af44cb56d492eea64121bad221774051e',1,'String::at()'],['../class_planet.html#aa99505cb916fb6a91899b13843a1aef7',1,'Planet::at(unsigned index) const'],['../class_planet.html#a88fbd61d63909ea6d3d952b8786fd32b',1,'Planet::at(unsigned index)'],['../class_string.html#a3b3e701be1dc0a2a3bafd89809f748bc',1,'String::at()'],['../class_galaxy.html#a27ad23f724f8beeef8c0465815d351eb',1,'Galaxy::at()']]],
+  ['at_32',['at',['../class_galaxy.html#a1fedcfc0ba3abcce6fbb40ae238d1fab',1,'Galaxy::at()'],['../class_vector.html#a8ead913f38fa057b362f5e7d7b8eaa8c',1,'Vector::at(const unsigned &amp;index)'],['../class_vector.html#a553b44a7f2afd1325c7c939318d3b892',1,'Vector::at(const unsigned &amp;index) const'],['../class_string.html#a5af83e1193a977bf5f981d0b3702b2bc',1,'String::at()'],['../class_planet.html#a0fcd5a4fadf483ad718fb29478e98357',1,'Planet::at(const unsigned &amp;index) const'],['../class_planet.html#a599c69a0cde874039d86e03ce76f5bad',1,'Planet::at(const unsigned &amp;index)'],['../class_string.html#ab64630880da65709566a688a0ea553db',1,'String::at()'],['../class_galaxy.html#a8b729f913504ac789b87f9f24e33d7fe',1,'Galaxy::at()']]],
   ['average_33',['average',['../namespacerun__all.html#a40554d7da2ba3ec9ccd6cb1b1dc1a73c',1,'run_all']]],
   ['average_5fnum_5ftimes_34',['average_num_times',['../namespacerun__all.html#a209b2ed58fdea49e560b8ddb6769f763',1,'run_all']]]
 ];

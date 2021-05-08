@@ -138,11 +138,21 @@ $(document).ready(function(){initNavTree('_print_command_8h_source.html',''); in
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//__PRINT_COMMAND_H_</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="class_command.html#af287eb4cbf1d423110fe389cc8b6747a">m_parameters</a>[0].is_only_alpha()) { <span class="comment">//type of object which we want to print</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;\nType of object chich you want to print, contains invalid symbols! Must to contains only letters.!\n&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="class_command.html#af287eb4cbf1d423110fe389cc8b6747a">m_parameters</a>[1].is_only_alpha()) { <span class="comment">//planet name</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;\nEnter string contains invalid symbols! Must to contains only letters.!\n&quot;</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//__PRINT_COMMAND_H_</span></div>
 <div class="ttc" id="a_command_8h_html"><div class="ttname"><a href="_command_8h.html">Command.h</a></div></div>
 <div class="ttc" id="aclass_command_html"><div class="ttname"><a href="class_command.html">Command</a></div><div class="ttdoc">Abstract base class for all commands classes which must to supports the program.</div><div class="ttdef"><b>Definition:</b> Command.h:7</div></div>
 <div class="ttc" id="aclass_command_html_a1e790581bbeee3387c8c221577544556"><div class="ttname"><a href="class_command.html#a1e790581bbeee3387c8c221577544556">Command::m_command_name</a></div><div class="ttdeci">String m_command_name</div><div class="ttdef"><b>Definition:</b> Command.h:36</div></div>

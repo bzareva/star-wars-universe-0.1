@@ -1,5 +1,15 @@
 var NAVTREEINDEX5 =
 {
+"doctest_2examples_2exe__with__static__libs_2main_8cpp.html#afffae7387e74be624b8899566ad4aeff":[26,0,0,2,2,3,1],
+"doctest_2examples_2executable__dll__and__plugin_2main_8cpp.html":[26,0,0,2,3,3],
+"doctest_2examples_2executable__dll__and__plugin_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627":[26,0,0,2,3,3,3],
+"doctest_2examples_2executable__dll__and__plugin_2main_8cpp.html#a556bea068ab4f7f0ac208fe5ab937384":[26,0,0,2,3,3,4],
+"doctest_2examples_2executable__dll__and__plugin_2main_8cpp.html#a8d4bcda90b381d9ce4b1a87c7f353414":[26,0,0,2,3,3,5],
+"doctest_2examples_2executable__dll__and__plugin_2main_8cpp.html#ab17c427949b008ed77726d347525fb71":[26,0,0,2,3,3,1],
+"doctest_2examples_2executable__dll__and__plugin_2main_8cpp.html#ac7c3b557a9e89c6eddc3c75389309a62":[26,0,0,2,3,3,0],
+"doctest_2examples_2executable__dll__and__plugin_2main_8cpp.html#af03d0e870b24e4cf1ae54194cae2415e":[26,0,0,2,3,3,2],
+"doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html":[26,0,0,2,4,0,3],
+"doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627":[26,0,0,2,4,0,3,1],
 "doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#ac17c6907bbf4fd3dcd1846977a1f49b8":[26,0,0,2,4,0,3,3],
 "doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#ac7c3b557a9e89c6eddc3c75389309a62":[26,0,0,2,4,0,3,0],
 "doctest_2examples_2installed__doctest__cmake_2dll_2main_8cpp.html#afedfd31dbf864c397aec0565616dac51":[26,0,0,2,4,0,3,2],
@@ -162,8 +172,8 @@ var NAVTREEINDEX5 =
 "doctest__fwd_8h.html#a2117cafa5b007d26f2e0988f3a081569a7f152bed97655feae5e0809dc1326178":[26,0,0,1,1,1,383,8],
 "doctest__fwd_8h.html#a2117cafa5b007d26f2e0988f3a081569adfe472e1b57c155a09bdf52d57050fb6":[26,0,0,1,1,1,383,3],
 "doctest__fwd_8h.html#a2117cafa5b007d26f2e0988f3a081569adfe472e1b57c155a09bdf52d57050fb6":[26,0,0,1,1,1,383,9],
-"doctest__fwd_8h.html#a2117cafa5b007d26f2e0988f3a081569af2671a9794fd1a9c5550b3290489a927":[26,0,0,1,1,1,383,4],
 "doctest__fwd_8h.html#a2117cafa5b007d26f2e0988f3a081569af2671a9794fd1a9c5550b3290489a927":[26,0,0,1,1,1,383,10],
+"doctest__fwd_8h.html#a2117cafa5b007d26f2e0988f3a081569af2671a9794fd1a9c5550b3290489a927":[26,0,0,1,1,1,383,4],
 "doctest__fwd_8h.html#a2199aafb8016ab6daca23c2cc6170428":[26,0,0,1,1,1,189],
 "doctest__fwd_8h.html#a219d4642ee4e9c1bfc047a3a785db450":[26,0,0,1,1,1,170],
 "doctest__fwd_8h.html#a22130c0eff96eac3ed682b7d8854e0f6":[26,0,0,1,1,1,234],
@@ -239,15 +249,5 @@ var NAVTREEINDEX5 =
 "doctest__fwd_8h.html#a3b41014a9f6a32210a8eecbe8fea3c76":[26,0,0,1,1,1,353],
 "doctest__fwd_8h.html#a3b966d87ac1e25498fae773355c43d90":[26,0,0,1,1,1,402],
 "doctest__fwd_8h.html#a3c0e9e0c03a62a810aae8e282b807938":[26,0,0,1,1,1,160],
-"doctest__fwd_8h.html#a3c2341a3238242fdc02d33a1968bd1d2":[26,0,0,1,1,1,284],
-"doctest__fwd_8h.html#a3e1308af156afd15b2abde1ebe778421":[26,0,0,1,1,1,99],
-"doctest__fwd_8h.html#a3e4fea4166b5decb632d30f6160baef3":[26,0,0,1,1,1,297],
-"doctest__fwd_8h.html#a3fcfa9f7f479ad1b46d142e210c8ca75":[26,0,0,1,1,1,406],
-"doctest__fwd_8h.html#a4013e1a0072df7e0451eea33cabd543b":[26,0,0,1,1,1,197],
-"doctest__fwd_8h.html#a4027cb5407ce2ff132645e89bba97010":[26,0,0,1,1,1,416],
-"doctest__fwd_8h.html#a41431265482f363020f93a13e4af4c6a":[26,0,0,1,1,1,233],
-"doctest__fwd_8h.html#a4147381e5cb6f68c1a315a852c63bf70":[26,0,0,1,1,1,342],
-"doctest__fwd_8h.html#a41e14871f960ec76113197ad929d18c8":[26,0,0,1,1,1,279],
-"doctest__fwd_8h.html#a4390850609b0f465bc8a4e7355f91177":[26,0,0,1,1,1,112],
-"doctest__fwd_8h.html#a43b51978c9505f682cbff9462a02f8af":[26,0,0,1,1,1,460]
+"doctest__fwd_8h.html#a3c2341a3238242fdc02d33a1968bd1d2":[26,0,0,1,1,1,284]
 };
