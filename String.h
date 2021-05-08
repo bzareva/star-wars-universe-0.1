@@ -50,28 +50,28 @@ public:
 	bool operator!=(const String& rhs)const;
 
 	/// @returns Not constant element of given position
-	char& operator[](unsigned index);
+	char& operator[](const unsigned& index);
 
 	/// @reurns Constant element of given position
-	const char& operator[](unsigned index)const;
+	const char& operator[](const unsigned& index)const;
 
 	/// help method for not constant operator[]
-	char& at(unsigned index);
+	char& at(const unsigned& index);
 
 	/// help method for constant operator[]
-	const char& at(unsigned index)const;
+	const char& at(const unsigned& index)const;
 
 	/// sets aside memory
-	void reserve(unsigned new_cap);
+	void reserve(const unsigned& new_cap);
 
 	/// adds element in end of array
-	void add(char ch);
+	void add(const char& ch);
 
 	/// adds element in the given position of array
-	bool insert_at(char ch, unsigned index);
+	bool insert_at(const char& ch, const unsigned& index);
 
 	/// remove element in the given position of array 
-	bool remove_at(unsigned index);
+	bool remove_at(const unsigned& index);
 
 	//// 
 	/// If capacity of array if bigger than size,
@@ -157,10 +157,10 @@ public:
 	void set_string(const char* str);
 
 	/// setter for size of string
-	void set_size(unsigned size);
+	void set_size(const unsigned& size);
 
 	/// setter for capacity of string
-	void set_cap(unsigned cap);
+	void set_cap(const unsigned& cap);
 
 	/// @returns Capacity of string
 	unsigned get_capacity()const;

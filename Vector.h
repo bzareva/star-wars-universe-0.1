@@ -12,7 +12,7 @@ public:
 	Vector();
 
 	/// constructor with parameters
-	Vector(const T* data, unsigned size);
+	Vector(const T* data, const unsigned& size);
 
 	/// constructor who adds only one item
 	Vector(const T& item);
@@ -27,10 +27,10 @@ public:
 	~Vector();
 
 	/// access element(nonconstant)
-	T& operator[](unsigned index);
+	T& operator[](const unsigned& index);
 
 	/// access element(constant)
-	const T& operator[](unsigned index) const;
+	const T& operator[](const unsigned& index)const;
 
 	/// adds item at end of vector
 	Vector<T>& operator+=(const T& item);
@@ -48,22 +48,22 @@ public:
 	void pop_back();
 
 	/// insert elements
-	void insert(unsigned index, const T& item);
+	void insert(const unsigned& index, const T& item);
 
 	/// erase elements 
-	void erase(unsigned index);
+	void erase(const unsigned& index);
 
 	/// request a change in capacity
-	void reserve(unsigned capacity);
+	void reserve(const unsigned& capacity);
 
 	/// swap content
 	void swap(Vector<T>& data);
 
 	/// help method for access element(nonconstant)
-	T& at(unsigned index);
+	T& at(const unsigned& index);
 
 	/// help method for access element(constant)
-	const T& at(unsigned index)const;
+	const T& at(const unsigned& index)const;
 
 	/// access first element(nonconstant)
 	T& front();
@@ -122,7 +122,7 @@ inline Vector<T>::Vector()
 }
 
 template<class T>
-inline Vector<T>::Vector(const T* data, unsigned size) {
+inline Vector<T>::Vector(const T* data, const unsigned& size) {
 
 	if (size < 0) {
 		m_size = 0;
@@ -177,13 +177,13 @@ inline Vector<T>::~Vector() {
 }
 
 template<class T>
-inline T& Vector<T>::operator[](unsigned index) {
+inline T& Vector<T>::operator[](const unsigned& index) {
 	
 	return at(index);
 }
 
 template<class T>
-inline const T& Vector<T>::operator[](unsigned index) const {
+inline const T& Vector<T>::operator[](const unsigned& index) const {
 
 	return at(index);
 }
@@ -232,7 +232,7 @@ inline void Vector<T>::pop_back() {
 }
 
 template<class T>
-inline void Vector<T>::insert(unsigned index, const T& item) {
+inline void Vector<T>::insert(const unsigned& index, const T& item) {
 
 	if (index < 0 || index >= m_size) {
 		std::cout << "\nInvalid index!\n";
@@ -248,7 +248,7 @@ inline void Vector<T>::insert(unsigned index, const T& item) {
 }
 
 template<class T>
-inline void Vector<T>::erase(unsigned index) {
+inline void Vector<T>::erase(const unsigned& index) {
 
 	if (index < 0 || index >= m_size) {
 		std::cout << "\nInvalid index!\n";
@@ -264,7 +264,7 @@ inline void Vector<T>::erase(unsigned index) {
 }
 
 template<class T>
-inline void Vector<T>::reserve(unsigned capacity) {
+inline void Vector<T>::reserve(const unsigned& capacity) {
 
 	if (capacity <= 0 || capacity >= m_capacity) {
 		std::cout << "\nInvalid capacity!\n";
@@ -294,7 +294,7 @@ inline void Vector<T>::swap(Vector<T>& data) {
 }
 
 template<class T>
-inline T& Vector<T>::at(unsigned index) {
+inline T& Vector<T>::at(const unsigned& index) {
 
 	try {
 		return m_data[index];
@@ -308,7 +308,7 @@ inline T& Vector<T>::at(unsigned index) {
 }
 
 template<class T>
-inline const T& Vector<T>::at(unsigned index)const {
+inline const T& Vector<T>::at(const unsigned& index)const {
 
 	try {
 		return m_data[index];

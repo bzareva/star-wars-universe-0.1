@@ -34,11 +34,6 @@ Jedi& Jedi::operator=(const Jedi& rhs) {
 	return *this;
 }
 
-String Jedi::get_class_name() {
-
-	return "jedi";
-}
-
 bool Jedi::operator==(const Jedi& rhs)const {
 
 	if (m_age != rhs.m_age || m_force != rhs.m_force || m_rank != rhs.m_rank || m_name_jedi != rhs.m_name_jedi || m_color_of_lightsaber != rhs.m_color_of_lightsaber) {
@@ -125,7 +120,7 @@ std::ostream& operator<<(std::ostream& out, const Jedi& oth) {
 	return out;
 }
 
-void Jedi::promote(double multiplier) {
+void Jedi::promote(const double& multiplier) {
 
 	if (multiplier > 0) {
 		m_force += (multiplier * m_force);
@@ -150,7 +145,7 @@ void Jedi::promote(double multiplier) {
 	}
 }
 
-void Jedi::demote(double multiplier) {
+void Jedi::demote(const double& multiplier) {
 
 	if (multiplier > 0) {
 		m_force -= (multiplier * m_force);

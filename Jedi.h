@@ -19,9 +19,6 @@ public:
 	/// assign content
 	Jedi& operator=(const Jedi& rhs);
 
-	/// @returns Name of class 
-	static String get_class_name();
-
 	/// compares two jedi by their ages are equal
 	bool operator==(const Jedi& rhs)const;	
 
@@ -38,10 +35,10 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, const Jedi& oth);
 
 	/// increases the given jedi by one rank up in ladder and increases its strength by a formula
-	void promote(double multiplier);
+	void promote(const double& multiplier);
 
 	/// decreases the given jedi by one rank down in ladder and lowers its strength by a formula
-	void demote(double multiplier);
+	void demote(const double& multiplier);
 
 	/// @returns A pointer to a dynamically allocated jedi 
 	Jedi* clone()const;

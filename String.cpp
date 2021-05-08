@@ -127,17 +127,17 @@ bool String::operator!=(const String& rhs)const {
 	return !(*this == rhs);
 }
 
-char& String::operator[](unsigned index) {
+char& String::operator[](const unsigned& index) {
 
 	return at(index);
 }
 
-const char& String::operator[](unsigned index)const {
+const char& String::operator[](const unsigned& index)const {
 
 	return at(index);
 }
 
-char& String::at(unsigned index) {
+char& String::at(const unsigned& index) {
 
 	if (index < 0 || index > m_size) {
 		throw std::out_of_range("Invalid index!");
@@ -145,7 +145,7 @@ char& String::at(unsigned index) {
 	return m_string[index];
 }
 
-const char& String::at(unsigned index)const {
+const char& String::at(const unsigned& index)const {
 
 	if (index < 0 || index > m_size) {
 		throw std::out_of_range("Invalid index!");
@@ -153,7 +153,7 @@ const char& String::at(unsigned index)const {
 	return m_string[index];
 }
 
-void String::reserve(unsigned new_cap) {
+void String::reserve(const unsigned& new_cap) {
 
 	if (new_cap <= 0 || new_cap == m_capacity) {
 		return;
@@ -174,7 +174,7 @@ void String::reserve(unsigned new_cap) {
 	}
 }
 
-void String::add(char ch) {
+void String::add(const char& ch) {
 
 	if (m_size + 1 >= m_capacity) {
 		reserve(RESIZE * m_size);
@@ -185,7 +185,7 @@ void String::add(char ch) {
 	m_string[m_size] = '\0';
 }
 
-bool String::insert_at(char ch, unsigned index) {
+bool String::insert_at(const char& ch, const unsigned& index) {
 
 	if (index < 0 || index > m_size) {
 		return false;
@@ -205,7 +205,7 @@ bool String::insert_at(char ch, unsigned index) {
 	return true;
 }
 
-bool String::remove_at(unsigned index) {
+bool String::remove_at(const unsigned& index) {
 
 	if (index < 0 || index > m_size) {
 		return false;
@@ -613,7 +613,7 @@ void String::set_string(const char* str) {
 	fill_zeros(m_string);
 }
 
-void String::set_size(unsigned size) {
+void String::set_size(const unsigned& size) {
 
 	if (size < 0) {
 		m_size = 0;
@@ -625,7 +625,7 @@ void String::set_size(unsigned size) {
 	}
 }
 
-void String::set_cap(unsigned cap) {
+void String::set_cap(const unsigned& cap) {
 
 	if (cap < 0) {
 		m_capacity = DEFAULT_CAPACITY;

@@ -14,7 +14,7 @@ public:
     GalaxyManager();
 
     /// constructor with parameters for datas in class
-    GalaxyManager(const String& file_name, Galaxy universe = Galaxy());
+    GalaxyManager(const String& file_name, const Galaxy& universe = Galaxy());
 
     /// open file by wanted name
     void open_file(const String& file_name);

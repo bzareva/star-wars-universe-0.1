@@ -115,17 +115,17 @@ Galaxy& Galaxy::operator-=(const Planet& rhs) {
 	return *this;
 }
 
-Planet& Galaxy::operator[](unsigned index) {
+Planet& Galaxy::operator[](const unsigned& index) {
 
 	return at(index);
 }
 
-const Planet& Galaxy::operator[](unsigned index)const {
+const Planet& Galaxy::operator[](const unsigned& index)const {
 
 	return at(index);
 }
 
-Planet& Galaxy::at(unsigned index) {
+Planet& Galaxy::at(const unsigned& index) {
 
 	if (index < 0 || index > m_planets.size()) {
 		throw std::out_of_range("Invalid index!");
@@ -133,7 +133,7 @@ Planet& Galaxy::at(unsigned index) {
 	return m_planets[index];
 }
 
-const Planet& Galaxy::at(unsigned index)const {
+const Planet& Galaxy::at(const unsigned& index)const {
 
 	if (index < 0 || index > m_planets.size()) {
 		throw std::out_of_range("Invalid index!");
@@ -322,7 +322,7 @@ unsigned Galaxy::get_count_planet()const {
 	return m_planets.size();
 }
 
-String Galaxy::get_planet_name(unsigned index)const {
+String Galaxy::get_planet_name(const unsigned& index)const {
 
 	if (index < 0 || index > m_planets.size()) {
 		throw std::out_of_range("Invalid index!");

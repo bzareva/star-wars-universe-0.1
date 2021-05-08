@@ -53,61 +53,61 @@ public:
 	Planet& operator-=(const Jedi& rhs);
 
 	/// access element(nonconstant)
-	Jedi& operator[](unsigned index);
+	Jedi& operator[](const unsigned& index);
 
 	/// access element(constant) 
-	const Jedi& operator[](unsigned index)const;
+	const Jedi& operator[](const unsigned& index)const;
 
 	/// help method for access element(nonconstant)
-	Jedi& at(unsigned index);
+	Jedi& at(const unsigned& index);
 
 	/// help method for access element(constant)
-	const Jedi& at(unsigned index)const;
+	const Jedi& at(const unsigned& index)const;
 
     /// @returns A pointer to a dynamically allocated polymorphic Planet
-	virtual Base* clone()const override;
+	virtual Base* clone()const final;
 
     /// outputs formatted information for given planet on *file* 
-	virtual void write_to_file(std::ofstream& fout)const override;
+	virtual void write_to_file(std::ofstream& fout)const final;
 
 	/// reading information for planet from *file*
-	virtual void read_from_file(std::ifstream& fin)override;
+	virtual void read_from_file(std::ifstream& fin)final;
 
 	///
 	/// @return type of object from this class, which is "planet" in this case 
 	/// @note help further to create object from this class 
 	///
-	virtual String type_name()const override;
+	virtual String type_name()const final;
 
     /// add jedi on this planet
-	virtual void create_jedi(const String& planet_name, const String& jedi_name, const Rank& jedi_rank, const unsigned& jedi_age, const String& saber_color, const double& jedi_strength)override;
+	virtual void create_jedi(const String& planet_name, const String& jedi_name, const Rank& jedi_rank, const unsigned& jedi_age, const String& saber_color, const double& jedi_strength)final;
 
 	/// remove jedi from this planet
-	virtual void remove_jedi(const String& jedi_name, const String& planet_name)override;
+	virtual void remove_jedi(const String& jedi_name, const String& planet_name)final;
 
 	/// @returns Strongest jedi on this planet
-	virtual Jedi get_strongest_jedi(const String& planet_name)const override;
+	virtual Jedi get_strongest_jedi(const String& planet_name)const final;
 
 	/// @returns Youngest jedi on this planet
-	virtual Vector<Jedi> get_youngest_jedi(const String& planet_name, const Rank& jedi_rank)const override;
+	virtual Vector<Jedi> get_youngest_jedi(const String& planet_name, const Rank& jedi_rank)const final;
 
 	/// @returns Most used saber color on this planet by given planet name and rank of jedi
-	virtual String get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const override;
+	virtual String get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const final;
 
 	/// @returns Most used saber color on this planet by given planet name
-	virtual String get_most_used_saber_color(const String& planet_name)const override;
+	virtual String get_most_used_saber_color(const String& planet_name)const final;
 
 	/// print information about this planet
-	virtual void print_planet(const String& planet_name)override;
+	virtual void print_planet(const String& planet_name)final;
 
 	/// print information about jedi
-	virtual void print_jedi(const String& jedi_name)const override;
+	virtual void print_jedi(const String& jedi_name)const final;
 
 	/// increases the given Jedi by one rank up in ladder and increases its strength by a formula
-	virtual void promote_jedi(const String& jedi_name, const double& multiplier)override;
+	virtual void promote_jedi(const String& jedi_name, const double& multiplier)final;
 
 	/// decreases the given Jedi by one rank down in ladder and lowers its strength by a formula
-	virtual void demote_jedi(const String& jedi_name, const double& multiplier)override;
+	virtual void demote_jedi(const String& jedi_name, const double& multiplier)final;
 
 	/// sorts jedi on this planet
 	void sort();

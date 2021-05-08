@@ -3,7 +3,7 @@
 GalaxyManager::GalaxyManager() 
  :m_is_open(false) {}
 
-GalaxyManager::GalaxyManager(const String& file_name, Galaxy universe)
+GalaxyManager::GalaxyManager(const String& file_name, const Galaxy& universe)
  :m_is_open(false), m_file_name(file_name), m_universe(universe) {}
 
 void GalaxyManager::open_file(const String& file_name) {
