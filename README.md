@@ -1,4 +1,6 @@
 # Star Wars Universe 0.1
+[Doxygen documentation](file:///C:/Users/USER/source/repos/bzareva/star-wars-universe-0.1/documentation/html/index.html)
+
 ## *Brief information*
 
 Vankata is a big fan of Star Wars, so he decided to make a small project on OOP on this topic.
