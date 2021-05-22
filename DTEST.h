@@ -2,7 +2,7 @@
 #define __DTEST_H__
 #define DOCTEST_CONFIG_IMPLEMENT
 ///#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include <doctest.h>
+#include "doctest.h"
 #include "GalaxyManager.h"
 ///
 /// Doctests for parts of the program

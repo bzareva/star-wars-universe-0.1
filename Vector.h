@@ -239,6 +239,10 @@ inline void Vector<T>::insert(const unsigned& index, const T& item) {
 		return;
 	}
 
+	if (m_size >= m_capacity) {
+		reserve(2 * m_size);
+	}
+
 	for (unsigned i = m_size; i > index; --i) {
 		m_data[i] = m_data[i - 1];
 	}
