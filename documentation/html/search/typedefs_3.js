@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['has_5finsertion_5foperator_1993',['has_insertion_operator',['../namespacedoctest_1_1detail.html#ae01cabd4651c7f2b08620ac01cc5a7fb',1,'doctest::detail']]]
+  ['ostream_1309',['ostream',['../doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3',1,'doctest.h']]]
 ];

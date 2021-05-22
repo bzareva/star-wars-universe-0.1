@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['a_1989',['A',['../struct_type_pair.html#ac2628f2902a3392087506baf154aa3d3',1,'TypePair']]],
-  ['assert_5fhandler_1990',['assert_handler',['../namespacedoctest_1_1detail.html#a8d2841093b4bbdb7efd276e1a35a784a',1,'doctest::detail']]]
+  ['assert_5fhandler_1306',['assert_handler',['../namespacedoctest_1_1detail.html#a5b5db6997f20389de5735e3ee3439b95',1,'doctest::detail']]]
 ];

@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['faq_2emd_1422',['faq.md',['../faq_8md.html',1,'']]],
-  ['features_2emd_1423',['features.md',['../features_8md.html',1,'']]],
-  ['filefactory_2eh_1424',['FileFactory.h',['../_file_factory_8h.html',1,'']]],
-  ['foo_2eh_1425',['foo.h',['../foo_8h.html',1,'']]]
+  ['galaxy_2ecpp_954',['Galaxy.cpp',['../_galaxy_8cpp.html',1,'']]],
+  ['galaxy_2eh_955',['Galaxy.h',['../_galaxy_8h.html',1,'']]],
+  ['galaxymanager_2ecpp_956',['GalaxyManager.cpp',['../_galaxy_manager_8cpp.html',1,'']]],
+  ['galaxymanager_2eh_957',['GalaxyManager.h',['../_galaxy_manager_8h.html',1,'']]],
+  ['getmostusedsabercolor_2eh_958',['GetMostUsedSaberColor.h',['../_get_most_used_saber_color_8h.html',1,'']]],
+  ['getstrongestjedicommand_2eh_959',['GetStrongestJediCommand.h',['../_get_strongest_jedi_command_8h.html',1,'']]],
+  ['getyoungestjedicommand_2eh_960',['GetYoungestJediCommand.h',['../_get_youngest_jedi_command_8h.html',1,'']]]
 ];

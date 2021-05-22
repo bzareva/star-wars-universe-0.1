@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['functype_1992',['funcType',['../namespacedoctest_1_1detail.html#a18864cbacb31064865de0c5bc24b08c0',1,'doctest::detail']]]
+  ['has_5finsertion_5foperator_1308',['has_insertion_operator',['../namespacedoctest_1_1detail.html#ae01cabd4651c7f2b08620ac01cc5a7fb',1,'doctest::detail']]]
 ];

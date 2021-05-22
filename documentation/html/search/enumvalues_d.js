@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['padawan_2098',['PADAWAN',['../_rank_8h.html#adf74d53cd68bbef55ba510b266ecbbedab2f75d9b6413afa6584bcc4241ff8f7c',1,'Rank.h']]]
+  ['red_1406',['Red',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a67beb0a8d937993ad8b8cf6a238271f9',1,'doctest::Color']]]
 ];

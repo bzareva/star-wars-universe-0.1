@@ -157,7 +157,7 @@ $(document).ready(function(){initNavTree('_vector_8h_source.html',''); initResiz
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_vector.html#adf2019fbfec16aeea3150a48e0c773ee">   90</a></span>&#160;    <span class="keyword">const</span> T* <a class="code" href="class_vector.html#adf2019fbfec16aeea3150a48e0c773ee">data</a>()<span class="keyword">const</span>;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_vector.html#a55c0fbc949abd9ab472a47a1d8dd04cf">   93</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">friend</span> <a class="code" href="doctest_2doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a>&amp; <a class="code" href="class_vector.html#a55c0fbc949abd9ab472a47a1d8dd04cf">operator&lt;&lt;</a>(<a class="code" href="doctest_2doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a>&amp; out, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; obj);</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_vector.html#a55c0fbc949abd9ab472a47a1d8dd04cf">   93</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">friend</span> <a class="code" href="doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a>&amp; <a class="code" href="class_vector.html#a55c0fbc949abd9ab472a47a1d8dd04cf">operator&lt;&lt;</a>(<a class="code" href="doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a>&amp; out, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; obj);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_vector.html#a29e1da90e49800c0514e66e395438c91">   96</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">friend</span> std::istream&amp; <a class="code" href="class_vector.html#a29e1da90e49800c0514e66e395438c91">operator&gt;&gt;</a>(std::istream&amp; in, <a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; obj);</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
@@ -186,7 +186,7 @@ $(document).ready(function(){initNavTree('_vector_8h_source.html',''); initResiz
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_vector.html#a092fe37373e84ece9f2de54b24db4834">  125</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_vector.html#a39d6069675db4ecfc1ab81d440da759a">Vector&lt;T&gt;::Vector</a>(<span class="keyword">const</span> T* <a class="code" href="namespacerange__based__execution.html#a42d7b70280336dbbf7cfa8e17ca63dd3">data</a>, <span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; size) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_vector.html#a092fe37373e84ece9f2de54b24db4834">  125</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_vector.html#a39d6069675db4ecfc1ab81d440da759a">Vector&lt;T&gt;::Vector</a>(<span class="keyword">const</span> T* data, <span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; size) {</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span> (size &lt; 0) {</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        m_size = 0;</div>
@@ -202,7 +202,7 @@ $(document).ready(function(){initNavTree('_vector_8h_source.html',''); initResiz
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    m_data = <span class="keyword">new</span> T[m_capacity];</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; m_size; ++i) {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        m_data[i] = <a class="code" href="namespacerange__based__execution.html#a42d7b70280336dbbf7cfa8e17ca63dd3">data</a>[i];</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        m_data[i] = data[i];</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span> (m_size == 0) {</div>
@@ -303,223 +303,226 @@ $(document).ready(function(){initNavTree('_vector_8h_source.html',''); initResiz
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = m_size; i &gt; index; --i) {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        m_data[i] = m_data[i - 1];</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (m_size &gt;= m_capacity) {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        reserve(2 * m_size);</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    m_data[index] = item;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    ++m_size;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = m_size; i &gt; index; --i) {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        m_data[i] = m_data[i - 1];</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="class_vector.html#a72a8ec7f1165cdce7c5618cf7d19cf22">  251</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html#a72a8ec7f1165cdce7c5618cf7d19cf22">Vector&lt;T&gt;::erase</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; index) {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">if</span> (index &lt; 0 || index &gt;= m_size) {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;\nInvalid index!\n&quot;</span>;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = index; i &lt; m_size - 1; ++i) {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        m_data[i] = m_data[i + 1];</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    m_data[index] = item;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    ++m_size;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="class_vector.html#a72a8ec7f1165cdce7c5618cf7d19cf22">  255</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html#a72a8ec7f1165cdce7c5618cf7d19cf22">Vector&lt;T&gt;::erase</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; index) {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">if</span> (index &lt; 0 || index &gt;= m_size) {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;\nInvalid index!\n&quot;</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">//  m_data[m_size] = nullptr;</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    --m_size;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = index; i &lt; m_size - 1; ++i) {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        m_data[i] = m_data[i + 1];</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="class_vector.html#a47ccd4e19db08d52d6131a71708d1f4c">  267</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html#a47ccd4e19db08d52d6131a71708d1f4c">Vector&lt;T&gt;::reserve</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; capacity) {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">if</span> (capacity &lt;= 0 || capacity &gt;= m_capacity) {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;\nInvalid capacity!\n&quot;</span>;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    m_capacity = capacity;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">//if (m_capacity &lt; m_size) {</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">//  m_size = m_capacity;</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="comment">//}</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    T* <a class="code" href="namespacerange__based__execution.html#a42d7b70280336dbbf7cfa8e17ca63dd3">data</a> = <span class="keyword">new</span> T[m_capacity];</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; m_size &amp;&amp; i &lt; m_capacity; ++i) {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <a class="code" href="namespacerange__based__execution.html#a42d7b70280336dbbf7cfa8e17ca63dd3">data</a>[i] = m_data[i];</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keyword">delete</span>[] m_data;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    m_data = <a class="code" href="namespacerange__based__execution.html#a42d7b70280336dbbf7cfa8e17ca63dd3">data</a>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">//  m_data[m_size] = nullptr;</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    --m_size;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="class_vector.html#a47ccd4e19db08d52d6131a71708d1f4c">  271</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html#a47ccd4e19db08d52d6131a71708d1f4c">Vector&lt;T&gt;::reserve</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; capacity) {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">if</span> (capacity &lt;= 0 || capacity &gt;= m_capacity) {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;\nInvalid capacity!\n&quot;</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    m_capacity = capacity;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">//if (m_capacity &lt; m_size) {</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="comment">//  m_size = m_capacity;</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="comment">//}</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    T* data = <span class="keyword">new</span> T[m_capacity];</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; m_size &amp;&amp; i &lt; m_capacity; ++i) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        data[i] = m_data[i];</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="class_vector.html#acf248dc46fa5536b07d94df1fb6fdfb0">  289</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html#acf248dc46fa5536b07d94df1fb6fdfb0">Vector&lt;T&gt;::swap</a>(<a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; <a class="code" href="namespacerange__based__execution.html#a42d7b70280336dbbf7cfa8e17ca63dd3">data</a>) {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;T&gt;</a> temp(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    *<span class="keyword">this</span> = <a class="code" href="namespacerange__based__execution.html#a42d7b70280336dbbf7cfa8e17ca63dd3">data</a>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <a class="code" href="namespacerange__based__execution.html#a42d7b70280336dbbf7cfa8e17ca63dd3">data</a>  = temp;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="class_vector.html#a8ead913f38fa057b362f5e7d7b8eaa8c">  297</a></span>&#160;<span class="keyword">inline</span> T&amp; <a class="code" href="class_vector.html#a8ead913f38fa057b362f5e7d7b8eaa8c">Vector&lt;T&gt;::at</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; index) {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">return</span> m_data[index];</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">catch</span> (std::out_of_range&amp; e) {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        std::cerr &lt;&lt; e.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="comment">/*if (index &lt; 0 || index &gt; m_size) {</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">            throw std::out_of_range(&quot;Invalid index!&quot;);</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">        }*/</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="class_vector.html#a553b44a7f2afd1325c7c939318d3b892">  311</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> T&amp; <a class="code" href="class_vector.html#a8ead913f38fa057b362f5e7d7b8eaa8c">Vector&lt;T&gt;::at</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; index)<span class="keyword">const </span>{</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">return</span> m_data[index];</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">catch</span> (std::out_of_range&amp; e) {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        std::cerr &lt;&lt; e.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="comment">/*if (index &lt; 0 || index &gt; m_size) {</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">            throw std::out_of_range(&quot;Invalid index!&quot;);</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">        }*/</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="class_vector.html#a0061cc9127a9cbf541439121998a1fdd">  325</a></span>&#160;<span class="keyword">inline</span> T&amp; <a class="code" href="class_vector.html#a0061cc9127a9cbf541439121998a1fdd">Vector&lt;T&gt;::front</a>() {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">return</span> at(0);</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="class_vector.html#ae891494a5654af2db2a00d162c50985a">  331</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> T&amp; <a class="code" href="class_vector.html#a0061cc9127a9cbf541439121998a1fdd">Vector&lt;T&gt;::front</a>()<span class="keyword">const </span>{</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">return</span> at(0);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00337"></a><span class="lineno"><a class="line" href="class_vector.html#a6decf0bdeb6849bfcc151b2c514f639f">  337</a></span>&#160;<span class="keyword">inline</span> T&amp; <a class="code" href="class_vector.html#a6decf0bdeb6849bfcc151b2c514f639f">Vector&lt;T&gt;::back</a>() {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">return</span> at(m_size - 1);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="class_vector.html#ae2094e298cbe0394557b9213942a31d1">  343</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> T&amp; <a class="code" href="class_vector.html#a6decf0bdeb6849bfcc151b2c514f639f">Vector&lt;T&gt;::back</a>()<span class="keyword">const </span>{</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">return</span> at(m_size - 1);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;}</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00349"></a><span class="lineno"><a class="line" href="class_vector.html#a7eef7a769093f4486f3b2083436bf270">  349</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <a class="code" href="class_vector.html#a7eef7a769093f4486f3b2083436bf270">Vector&lt;T&gt;::size</a>()<span class="keyword">const </span>{</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">return</span> m_size;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="class_vector.html#a30435b1635ae160705f53755d25a407b">  355</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <a class="code" href="class_vector.html#a30435b1635ae160705f53755d25a407b">Vector&lt;T&gt;::capacity</a>()<span class="keyword">const </span>{</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">return</span> m_capacity;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;}</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00361"></a><span class="lineno"><a class="line" href="class_vector.html#a641a765cb13d9e9ff8f9bc4e5a375c9b">  361</a></span>&#160;<span class="keyword">inline</span> T* <a class="code" href="class_vector.html#a641a765cb13d9e9ff8f9bc4e5a375c9b">Vector&lt;T&gt;::data</a>() {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">return</span> m_data;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="class_vector.html#adf2019fbfec16aeea3150a48e0c773ee">  367</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> T* <a class="code" href="class_vector.html#a641a765cb13d9e9ff8f9bc4e5a375c9b">Vector&lt;T&gt;::data</a>()<span class="keyword">const </span>{</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">return</span> m_data;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;}</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00373"></a><span class="lineno"><a class="line" href="class_vector.html#a55c0fbc949abd9ab472a47a1d8dd04cf">  373</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="doctest_2doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a>&amp; <a class="code" href="_vector_8h.html#a55c0fbc949abd9ab472a47a1d8dd04cf">operator&lt;&lt;</a>(<a class="code" href="doctest_2doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a>&amp; out, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; obj) {</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; obj.m_size; ++i) {</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        out &lt;&lt; obj.m_data[i] &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    }</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;}</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00382"></a><span class="lineno"><a class="line" href="class_vector.html#a29e1da90e49800c0514e66e395438c91">  382</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="_vector_8h.html#a29e1da90e49800c0514e66e395438c91">operator&gt;&gt;</a>(std::istream&amp; in, <a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; obj) {</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordtype">unsigned</span> size;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    in &gt;&gt; size;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordflow">if</span> (size &lt; 0) {</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        obj.m_size = 0;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        obj.m_size = size;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    obj.m_capacity = 2 * obj.m_size;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">if</span> (obj.m_capacity == 0) {</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        obj.m_capacity = VECTOR_CAPACITY; </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    }</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    obj.m_data = <span class="keyword">new</span> T[obj.m_capacity];</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; obj.m_size; ++i) {</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        in &gt;&gt; obj.m_data;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">return</span> in;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;}</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;::copy</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; obj) {</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    m_capacity = obj.m_capacity;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    m_size     = obj.m_size;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    m_data = <span class="keyword">new</span> T[m_capacity];</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; obj.m_size &amp;&amp; i &lt; m_capacity; ++i) {</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        m_data[i] = obj.m_data[i];</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    }</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;}</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;::free</a>() {</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keyword">delete</span>[] m_data;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    m_data = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;}</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">delete</span>[] m_data;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    m_data = data;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;}</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="class_vector.html#acf248dc46fa5536b07d94df1fb6fdfb0">  293</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html#acf248dc46fa5536b07d94df1fb6fdfb0">Vector&lt;T&gt;::swap</a>(<a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; data) {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;T&gt;</a> temp(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    *<span class="keyword">this</span> = data;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    data  = temp;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="class_vector.html#a8ead913f38fa057b362f5e7d7b8eaa8c">  301</a></span>&#160;<span class="keyword">inline</span> T&amp; <a class="code" href="class_vector.html#a8ead913f38fa057b362f5e7d7b8eaa8c">Vector&lt;T&gt;::at</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; index) {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">return</span> m_data[index];</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">catch</span> (std::out_of_range&amp; e) {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        std::cerr &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="comment">/*if (index &lt; 0 || index &gt; m_size) {</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment">            throw std::out_of_range(&quot;Invalid index!&quot;);</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment">        }*/</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="class_vector.html#a553b44a7f2afd1325c7c939318d3b892">  315</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> T&amp; <a class="code" href="class_vector.html#a8ead913f38fa057b362f5e7d7b8eaa8c">Vector&lt;T&gt;::at</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; index)<span class="keyword">const </span>{</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">return</span> m_data[index];</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordflow">catch</span> (std::out_of_range&amp; e) {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        std::cerr &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="comment">/*if (index &lt; 0 || index &gt; m_size) {</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">            throw std::out_of_range(&quot;Invalid index!&quot;);</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">        }*/</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="class_vector.html#a0061cc9127a9cbf541439121998a1fdd">  329</a></span>&#160;<span class="keyword">inline</span> T&amp; <a class="code" href="class_vector.html#a0061cc9127a9cbf541439121998a1fdd">Vector&lt;T&gt;::front</a>() {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">return</span> at(0);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;}</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="class_vector.html#ae891494a5654af2db2a00d162c50985a">  335</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> T&amp; <a class="code" href="class_vector.html#a0061cc9127a9cbf541439121998a1fdd">Vector&lt;T&gt;::front</a>()<span class="keyword">const </span>{</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">return</span> at(0);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="class_vector.html#a6decf0bdeb6849bfcc151b2c514f639f">  341</a></span>&#160;<span class="keyword">inline</span> T&amp; <a class="code" href="class_vector.html#a6decf0bdeb6849bfcc151b2c514f639f">Vector&lt;T&gt;::back</a>() {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">return</span> at(m_size - 1);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00347"></a><span class="lineno"><a class="line" href="class_vector.html#ae2094e298cbe0394557b9213942a31d1">  347</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> T&amp; <a class="code" href="class_vector.html#a6decf0bdeb6849bfcc151b2c514f639f">Vector&lt;T&gt;::back</a>()<span class="keyword">const </span>{</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">return</span> at(m_size - 1);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00353"></a><span class="lineno"><a class="line" href="class_vector.html#a7eef7a769093f4486f3b2083436bf270">  353</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <a class="code" href="class_vector.html#a7eef7a769093f4486f3b2083436bf270">Vector&lt;T&gt;::size</a>()<span class="keyword">const </span>{</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordflow">return</span> m_size;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;}</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="class_vector.html#a30435b1635ae160705f53755d25a407b">  359</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <a class="code" href="class_vector.html#a30435b1635ae160705f53755d25a407b">Vector&lt;T&gt;::capacity</a>()<span class="keyword">const </span>{</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">return</span> m_capacity;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00365"></a><span class="lineno"><a class="line" href="class_vector.html#a641a765cb13d9e9ff8f9bc4e5a375c9b">  365</a></span>&#160;<span class="keyword">inline</span> T* <a class="code" href="class_vector.html#a641a765cb13d9e9ff8f9bc4e5a375c9b">Vector&lt;T&gt;::data</a>() {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">return</span> m_data;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00371"></a><span class="lineno"><a class="line" href="class_vector.html#adf2019fbfec16aeea3150a48e0c773ee">  371</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> T* <a class="code" href="class_vector.html#a641a765cb13d9e9ff8f9bc4e5a375c9b">Vector&lt;T&gt;::data</a>()<span class="keyword">const </span>{</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">return</span> m_data;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;}</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="class_vector.html#a55c0fbc949abd9ab472a47a1d8dd04cf">  377</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a>&amp; <a class="code" href="_vector_8h.html#a55c0fbc949abd9ab472a47a1d8dd04cf">operator&lt;&lt;</a>(<a class="code" href="doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">std::ostream</a>&amp; out, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; obj) {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; obj.m_size; ++i) {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        out &lt;&lt; obj.m_data[i] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;}</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00386"></a><span class="lineno"><a class="line" href="class_vector.html#a29e1da90e49800c0514e66e395438c91">  386</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="_vector_8h.html#a29e1da90e49800c0514e66e395438c91">operator&gt;&gt;</a>(std::istream&amp; in, <a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; obj) {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">unsigned</span> size;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    in &gt;&gt; size;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">if</span> (size &lt; 0) {</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        obj.m_size = 0;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        obj.m_size = size;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    obj.m_capacity = 2 * obj.m_size;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">if</span> (obj.m_capacity == 0) {</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        obj.m_capacity = VECTOR_CAPACITY; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    }</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    obj.m_data = <span class="keyword">new</span> T[obj.m_capacity];</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; obj.m_size; ++i) {</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        in &gt;&gt; obj.m_data;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    }</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">return</span> in;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;}</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;::copy</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;</a>&amp; obj) {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    m_capacity = obj.m_capacity;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    m_size     = obj.m_size;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    m_data = <span class="keyword">new</span> T[m_capacity];</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; obj.m_size &amp;&amp; i &lt; m_capacity; ++i) {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        m_data[i] = obj.m_data[i];</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;}</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_vector.html">Vector&lt;T&gt;::free</a>() {</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//__VECTOR_H__</span></div>
-<div class="ttc" id="a_vector_8h_html_a29e1da90e49800c0514e66e395438c91"><div class="ttname"><a href="_vector_8h.html#a29e1da90e49800c0514e66e395438c91">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, Vector&lt; T &gt; &amp;obj)</div><div class="ttdef"><b>Definition:</b> Vector.h:382</div></div>
-<div class="ttc" id="a_vector_8h_html_a55c0fbc949abd9ab472a47a1d8dd04cf"><div class="ttname"><a href="_vector_8h.html#a55c0fbc949abd9ab472a47a1d8dd04cf">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const Vector&lt; T &gt; &amp;obj)</div><div class="ttdef"><b>Definition:</b> Vector.h:373</div></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keyword">delete</span>[] m_data;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    m_data = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;}</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//__VECTOR_H__</span></div>
+<div class="ttc" id="a_vector_8h_html_a29e1da90e49800c0514e66e395438c91"><div class="ttname"><a href="_vector_8h.html#a29e1da90e49800c0514e66e395438c91">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, Vector&lt; T &gt; &amp;obj)</div><div class="ttdef"><b>Definition:</b> Vector.h:386</div></div>
+<div class="ttc" id="a_vector_8h_html_a55c0fbc949abd9ab472a47a1d8dd04cf"><div class="ttname"><a href="_vector_8h.html#a55c0fbc949abd9ab472a47a1d8dd04cf">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const Vector&lt; T &gt; &amp;obj)</div><div class="ttdef"><b>Definition:</b> Vector.h:377</div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">Realization of basic functionalities from vector library.</div><div class="ttdef"><b>Definition:</b> Vector.h:8</div></div>
-<div class="ttc" id="aclass_vector_html_a0061cc9127a9cbf541439121998a1fdd"><div class="ttname"><a href="class_vector.html#a0061cc9127a9cbf541439121998a1fdd">Vector::front</a></div><div class="ttdeci">T &amp; front()</div><div class="ttdoc">access first element(nonconstant)</div><div class="ttdef"><b>Definition:</b> Vector.h:325</div></div>
+<div class="ttc" id="aclass_vector_html_a0061cc9127a9cbf541439121998a1fdd"><div class="ttname"><a href="class_vector.html#a0061cc9127a9cbf541439121998a1fdd">Vector::front</a></div><div class="ttdeci">T &amp; front()</div><div class="ttdoc">access first element(nonconstant)</div><div class="ttdef"><b>Definition:</b> Vector.h:329</div></div>
 <div class="ttc" id="aclass_vector_html_a037208e620fe4ec7e27460327220cab0"><div class="ttname"><a href="class_vector.html#a037208e620fe4ec7e27460327220cab0">Vector::Vector</a></div><div class="ttdeci">Vector(const T &amp;item)</div><div class="ttdoc">constructor who adds only one item</div><div class="ttdef"><b>Definition:</b> Vector.h:150</div></div>
 <div class="ttc" id="aclass_vector_html_a092fe37373e84ece9f2de54b24db4834"><div class="ttname"><a href="class_vector.html#a092fe37373e84ece9f2de54b24db4834">Vector::Vector</a></div><div class="ttdeci">Vector(const T *data, const unsigned &amp;size)</div><div class="ttdoc">constructor with parameters</div><div class="ttdef"><b>Definition:</b> Vector.h:125</div></div>
-<div class="ttc" id="aclass_vector_html_a29e1da90e49800c0514e66e395438c91"><div class="ttname"><a href="class_vector.html#a29e1da90e49800c0514e66e395438c91">Vector::operator&gt;&gt;</a></div><div class="ttdeci">friend std::istream &amp; operator&gt;&gt;(std::istream &amp;in, Vector&lt; T &gt; &amp;obj)</div><div class="ttdoc">input operator</div><div class="ttdef"><b>Definition:</b> Vector.h:382</div></div>
-<div class="ttc" id="aclass_vector_html_a30435b1635ae160705f53755d25a407b"><div class="ttname"><a href="class_vector.html#a30435b1635ae160705f53755d25a407b">Vector::capacity</a></div><div class="ttdeci">unsigned capacity() const</div><div class="ttdef"><b>Definition:</b> Vector.h:355</div></div>
+<div class="ttc" id="aclass_vector_html_a29e1da90e49800c0514e66e395438c91"><div class="ttname"><a href="class_vector.html#a29e1da90e49800c0514e66e395438c91">Vector::operator&gt;&gt;</a></div><div class="ttdeci">friend std::istream &amp; operator&gt;&gt;(std::istream &amp;in, Vector&lt; T &gt; &amp;obj)</div><div class="ttdoc">input operator</div><div class="ttdef"><b>Definition:</b> Vector.h:386</div></div>
+<div class="ttc" id="aclass_vector_html_a30435b1635ae160705f53755d25a407b"><div class="ttname"><a href="class_vector.html#a30435b1635ae160705f53755d25a407b">Vector::capacity</a></div><div class="ttdeci">unsigned capacity() const</div><div class="ttdef"><b>Definition:</b> Vector.h:359</div></div>
 <div class="ttc" id="aclass_vector_html_a321e3b497990589ca2e84d1f0af39f1e"><div class="ttname"><a href="class_vector.html#a321e3b497990589ca2e84d1f0af39f1e">Vector::operator+=</a></div><div class="ttdeci">Vector&lt; T &gt; &amp; operator+=(const Vector&lt; T &gt; &amp;obj)</div><div class="ttdoc">sum of two vectors</div><div class="ttdef"><b>Definition:</b> Vector.h:199</div></div>
 <div class="ttc" id="aclass_vector_html_a39d6069675db4ecfc1ab81d440da759a"><div class="ttname"><a href="class_vector.html#a39d6069675db4ecfc1ab81d440da759a">Vector::Vector</a></div><div class="ttdeci">Vector()</div><div class="ttdoc">default constructor</div><div class="ttdef"><b>Definition:</b> Vector.h:118</div></div>
-<div class="ttc" id="aclass_vector_html_a47ccd4e19db08d52d6131a71708d1f4c"><div class="ttname"><a href="class_vector.html#a47ccd4e19db08d52d6131a71708d1f4c">Vector::reserve</a></div><div class="ttdeci">void reserve(const unsigned &amp;capacity)</div><div class="ttdoc">request a change in capacity</div><div class="ttdef"><b>Definition:</b> Vector.h:267</div></div>
-<div class="ttc" id="aclass_vector_html_a553b44a7f2afd1325c7c939318d3b892"><div class="ttname"><a href="class_vector.html#a553b44a7f2afd1325c7c939318d3b892">Vector::at</a></div><div class="ttdeci">const T &amp; at(const unsigned &amp;index) const</div><div class="ttdoc">help method for access element(constant)</div><div class="ttdef"><b>Definition:</b> Vector.h:311</div></div>
-<div class="ttc" id="aclass_vector_html_a55c0fbc949abd9ab472a47a1d8dd04cf"><div class="ttname"><a href="class_vector.html#a55c0fbc949abd9ab472a47a1d8dd04cf">Vector::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const Vector&lt; T &gt; &amp;obj)</div><div class="ttdoc">output operator</div><div class="ttdef"><b>Definition:</b> Vector.h:373</div></div>
-<div class="ttc" id="aclass_vector_html_a641a765cb13d9e9ff8f9bc4e5a375c9b"><div class="ttname"><a href="class_vector.html#a641a765cb13d9e9ff8f9bc4e5a375c9b">Vector::data</a></div><div class="ttdeci">T * data()</div><div class="ttdoc">access data(nonconstant)</div><div class="ttdef"><b>Definition:</b> Vector.h:361</div></div>
-<div class="ttc" id="aclass_vector_html_a6decf0bdeb6849bfcc151b2c514f639f"><div class="ttname"><a href="class_vector.html#a6decf0bdeb6849bfcc151b2c514f639f">Vector::back</a></div><div class="ttdeci">T &amp; back()</div><div class="ttdoc">access last element(nonconstant)</div><div class="ttdef"><b>Definition:</b> Vector.h:337</div></div>
-<div class="ttc" id="aclass_vector_html_a72a8ec7f1165cdce7c5618cf7d19cf22"><div class="ttname"><a href="class_vector.html#a72a8ec7f1165cdce7c5618cf7d19cf22">Vector::erase</a></div><div class="ttdeci">void erase(const unsigned &amp;index)</div><div class="ttdoc">erase elements</div><div class="ttdef"><b>Definition:</b> Vector.h:251</div></div>
-<div class="ttc" id="aclass_vector_html_a7eef7a769093f4486f3b2083436bf270"><div class="ttname"><a href="class_vector.html#a7eef7a769093f4486f3b2083436bf270">Vector::size</a></div><div class="ttdeci">unsigned size() const</div><div class="ttdef"><b>Definition:</b> Vector.h:349</div></div>
-<div class="ttc" id="aclass_vector_html_a8ead913f38fa057b362f5e7d7b8eaa8c"><div class="ttname"><a href="class_vector.html#a8ead913f38fa057b362f5e7d7b8eaa8c">Vector::at</a></div><div class="ttdeci">T &amp; at(const unsigned &amp;index)</div><div class="ttdoc">help method for access element(nonconstant)</div><div class="ttdef"><b>Definition:</b> Vector.h:297</div></div>
+<div class="ttc" id="aclass_vector_html_a47ccd4e19db08d52d6131a71708d1f4c"><div class="ttname"><a href="class_vector.html#a47ccd4e19db08d52d6131a71708d1f4c">Vector::reserve</a></div><div class="ttdeci">void reserve(const unsigned &amp;capacity)</div><div class="ttdoc">request a change in capacity</div><div class="ttdef"><b>Definition:</b> Vector.h:271</div></div>
+<div class="ttc" id="aclass_vector_html_a553b44a7f2afd1325c7c939318d3b892"><div class="ttname"><a href="class_vector.html#a553b44a7f2afd1325c7c939318d3b892">Vector::at</a></div><div class="ttdeci">const T &amp; at(const unsigned &amp;index) const</div><div class="ttdoc">help method for access element(constant)</div><div class="ttdef"><b>Definition:</b> Vector.h:315</div></div>
+<div class="ttc" id="aclass_vector_html_a55c0fbc949abd9ab472a47a1d8dd04cf"><div class="ttname"><a href="class_vector.html#a55c0fbc949abd9ab472a47a1d8dd04cf">Vector::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const Vector&lt; T &gt; &amp;obj)</div><div class="ttdoc">output operator</div><div class="ttdef"><b>Definition:</b> Vector.h:377</div></div>
+<div class="ttc" id="aclass_vector_html_a641a765cb13d9e9ff8f9bc4e5a375c9b"><div class="ttname"><a href="class_vector.html#a641a765cb13d9e9ff8f9bc4e5a375c9b">Vector::data</a></div><div class="ttdeci">T * data()</div><div class="ttdoc">access data(nonconstant)</div><div class="ttdef"><b>Definition:</b> Vector.h:365</div></div>
+<div class="ttc" id="aclass_vector_html_a6decf0bdeb6849bfcc151b2c514f639f"><div class="ttname"><a href="class_vector.html#a6decf0bdeb6849bfcc151b2c514f639f">Vector::back</a></div><div class="ttdeci">T &amp; back()</div><div class="ttdoc">access last element(nonconstant)</div><div class="ttdef"><b>Definition:</b> Vector.h:341</div></div>
+<div class="ttc" id="aclass_vector_html_a72a8ec7f1165cdce7c5618cf7d19cf22"><div class="ttname"><a href="class_vector.html#a72a8ec7f1165cdce7c5618cf7d19cf22">Vector::erase</a></div><div class="ttdeci">void erase(const unsigned &amp;index)</div><div class="ttdoc">erase elements</div><div class="ttdef"><b>Definition:</b> Vector.h:255</div></div>
+<div class="ttc" id="aclass_vector_html_a7eef7a769093f4486f3b2083436bf270"><div class="ttname"><a href="class_vector.html#a7eef7a769093f4486f3b2083436bf270">Vector::size</a></div><div class="ttdeci">unsigned size() const</div><div class="ttdef"><b>Definition:</b> Vector.h:353</div></div>
+<div class="ttc" id="aclass_vector_html_a8ead913f38fa057b362f5e7d7b8eaa8c"><div class="ttname"><a href="class_vector.html#a8ead913f38fa057b362f5e7d7b8eaa8c">Vector::at</a></div><div class="ttdeci">T &amp; at(const unsigned &amp;index)</div><div class="ttdoc">help method for access element(nonconstant)</div><div class="ttdef"><b>Definition:</b> Vector.h:301</div></div>
 <div class="ttc" id="aclass_vector_html_ab7f03e6590767248b614a07d352766d3"><div class="ttname"><a href="class_vector.html#ab7f03e6590767248b614a07d352766d3">Vector::push_back</a></div><div class="ttdeci">void push_back(const T &amp;item)</div><div class="ttdoc">adds item at end of vector</div><div class="ttdef"><b>Definition:</b> Vector.h:218</div></div>
-<div class="ttc" id="aclass_vector_html_acf248dc46fa5536b07d94df1fb6fdfb0"><div class="ttname"><a href="class_vector.html#acf248dc46fa5536b07d94df1fb6fdfb0">Vector::swap</a></div><div class="ttdeci">void swap(Vector&lt; T &gt; &amp;data)</div><div class="ttdoc">swap content</div><div class="ttdef"><b>Definition:</b> Vector.h:289</div></div>
+<div class="ttc" id="aclass_vector_html_acf248dc46fa5536b07d94df1fb6fdfb0"><div class="ttname"><a href="class_vector.html#acf248dc46fa5536b07d94df1fb6fdfb0">Vector::swap</a></div><div class="ttdeci">void swap(Vector&lt; T &gt; &amp;data)</div><div class="ttdoc">swap content</div><div class="ttdef"><b>Definition:</b> Vector.h:293</div></div>
 <div class="ttc" id="aclass_vector_html_acfc7ebf555b8a57545905d8616dbffb4"><div class="ttname"><a href="class_vector.html#acfc7ebf555b8a57545905d8616dbffb4">Vector::operator+=</a></div><div class="ttdeci">Vector&lt; T &gt; &amp; operator+=(const T &amp;item)</div><div class="ttdoc">adds item at end of vector</div><div class="ttdef"><b>Definition:</b> Vector.h:192</div></div>
 <div class="ttc" id="aclass_vector_html_ad934770d8a846766f9a5120596704d4c"><div class="ttname"><a href="class_vector.html#ad934770d8a846766f9a5120596704d4c">Vector::insert</a></div><div class="ttdeci">void insert(const unsigned &amp;index, const T &amp;item)</div><div class="ttdoc">insert elements</div><div class="ttdef"><b>Definition:</b> Vector.h:235</div></div>
 <div class="ttc" id="aclass_vector_html_adcba035109febbe55cba2a25f8483ba6"><div class="ttname"><a href="class_vector.html#adcba035109febbe55cba2a25f8483ba6">Vector::pop_back</a></div><div class="ttdeci">void pop_back()</div><div class="ttdoc">delete last element</div><div class="ttdef"><b>Definition:</b> Vector.h:229</div></div>
-<div class="ttc" id="aclass_vector_html_adf2019fbfec16aeea3150a48e0c773ee"><div class="ttname"><a href="class_vector.html#adf2019fbfec16aeea3150a48e0c773ee">Vector::data</a></div><div class="ttdeci">const T * data() const</div><div class="ttdoc">access data(constant)</div><div class="ttdef"><b>Definition:</b> Vector.h:367</div></div>
-<div class="ttc" id="aclass_vector_html_ae2094e298cbe0394557b9213942a31d1"><div class="ttname"><a href="class_vector.html#ae2094e298cbe0394557b9213942a31d1">Vector::back</a></div><div class="ttdeci">const T &amp; back() const</div><div class="ttdoc">access last element(constant)</div><div class="ttdef"><b>Definition:</b> Vector.h:343</div></div>
+<div class="ttc" id="aclass_vector_html_adf2019fbfec16aeea3150a48e0c773ee"><div class="ttname"><a href="class_vector.html#adf2019fbfec16aeea3150a48e0c773ee">Vector::data</a></div><div class="ttdeci">const T * data() const</div><div class="ttdoc">access data(constant)</div><div class="ttdef"><b>Definition:</b> Vector.h:371</div></div>
+<div class="ttc" id="aclass_vector_html_ae2094e298cbe0394557b9213942a31d1"><div class="ttname"><a href="class_vector.html#ae2094e298cbe0394557b9213942a31d1">Vector::back</a></div><div class="ttdeci">const T &amp; back() const</div><div class="ttdoc">access last element(constant)</div><div class="ttdef"><b>Definition:</b> Vector.h:347</div></div>
 <div class="ttc" id="aclass_vector_html_ae833c32400ab9a51ac9dc8b9f701ca96"><div class="ttname"><a href="class_vector.html#ae833c32400ab9a51ac9dc8b9f701ca96">Vector::operator[]</a></div><div class="ttdeci">T &amp; operator[](const unsigned &amp;index)</div><div class="ttdoc">access element(nonconstant)</div><div class="ttdef"><b>Definition:</b> Vector.h:180</div></div>
-<div class="ttc" id="aclass_vector_html_ae891494a5654af2db2a00d162c50985a"><div class="ttname"><a href="class_vector.html#ae891494a5654af2db2a00d162c50985a">Vector::front</a></div><div class="ttdeci">const T &amp; front() const</div><div class="ttdoc">access first element(constant)</div><div class="ttdef"><b>Definition:</b> Vector.h:331</div></div>
+<div class="ttc" id="aclass_vector_html_ae891494a5654af2db2a00d162c50985a"><div class="ttname"><a href="class_vector.html#ae891494a5654af2db2a00d162c50985a">Vector::front</a></div><div class="ttdeci">const T &amp; front() const</div><div class="ttdoc">access first element(constant)</div><div class="ttdef"><b>Definition:</b> Vector.h:335</div></div>
 <div class="ttc" id="aclass_vector_html_aede204cfec16a6294d3c42de619fd675"><div class="ttname"><a href="class_vector.html#aede204cfec16a6294d3c42de619fd675">Vector::operator=</a></div><div class="ttdeci">Vector&lt; T &gt; &amp; operator=(const Vector&lt; T &gt; &amp;obj)</div><div class="ttdoc">assign content</div><div class="ttdef"><b>Definition:</b> Vector.h:164</div></div>
 <div class="ttc" id="aclass_vector_html_af3652521441b1a6ef00d81d90c6eb1a3"><div class="ttname"><a href="class_vector.html#af3652521441b1a6ef00d81d90c6eb1a3">Vector::operator[]</a></div><div class="ttdeci">const T &amp; operator[](const unsigned &amp;index) const</div><div class="ttdoc">access element(constant)</div><div class="ttdef"><b>Definition:</b> Vector.h:186</div></div>
 <div class="ttc" id="aclass_vector_html_afb137b7c7f773ceeac4decdd931b164c"><div class="ttname"><a href="class_vector.html#afb137b7c7f773ceeac4decdd931b164c">Vector::empy</a></div><div class="ttdeci">bool empy() const</div><div class="ttdoc">checks if empty vector</div><div class="ttdef"><b>Definition:</b> Vector.h:212</div></div>
 <div class="ttc" id="aclass_vector_html_afb477942fef2f69c69e7e65c3cbed355"><div class="ttname"><a href="class_vector.html#afb477942fef2f69c69e7e65c3cbed355">Vector::Vector</a></div><div class="ttdeci">Vector(const Vector&lt; T &gt; &amp;obj)</div><div class="ttdoc">copy constructor</div><div class="ttdef"><b>Definition:</b> Vector.h:158</div></div>
 <div class="ttc" id="aclass_vector_html_afd524fac19e6d3d69db5198ffe2952b0"><div class="ttname"><a href="class_vector.html#afd524fac19e6d3d69db5198ffe2952b0">Vector::~Vector</a></div><div class="ttdeci">~Vector()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition:</b> Vector.h:174</div></div>
-<div class="ttc" id="adoctest_2doctest_8h_html_a116af65cb5e924b33ad9d9ecd7a783f3"><div class="ttname"><a href="doctest_2doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">ostream</a></div><div class="ttdeci">basic_ostream&lt; char, char_traits&lt; char &gt; &gt; ostream</div><div class="ttdef"><b>Definition:</b> doctest.h:425</div></div>
-<div class="ttc" id="anamespacerange__based__execution_html_a42d7b70280336dbbf7cfa8e17ca63dd3"><div class="ttname"><a href="namespacerange__based__execution.html#a42d7b70280336dbbf7cfa8e17ca63dd3">range_based_execution.data</a></div><div class="ttdeci">list data</div><div class="ttdef"><b>Definition:</b> range_based_execution.py:29</div></div>
+<div class="ttc" id="adoctest_8h_html_a116af65cb5e924b33ad9d9ecd7a783f3"><div class="ttname"><a href="doctest_8h.html#a116af65cb5e924b33ad9d9ecd7a783f3">ostream</a></div><div class="ttdeci">basic_ostream&lt; char, char_traits&lt; char &gt; &gt; ostream</div><div class="ttdef"><b>Definition:</b> doctest.h:425</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
