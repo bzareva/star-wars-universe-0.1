@@ -42,16 +42,21 @@ void Unite::run() {
 
 ///*****************************************************************8
 
-	std::ifstream fin("input.txt");
+	//std::ifstream fin("input.txt");
+	std::ifstream fin("planetinput.txt");
 	if (!fin || !fin.is_open()) {
 		fin.close();
 		return;
 	}
 
 	Planet filePlanet; // (fin);
-
 	filePlanet.read_from_file(fin);
-	std::cout << filePlanet << std::endl;
+    std::cout << filePlanet << std::endl;
+
+
+	//Jedi test;
+	//test.read_from_file(fin);
+	//std::cout << test << std::endl;
 
 	/*std::ofstream fout("output.txt", std::ios::out);
 	if (!fout) {

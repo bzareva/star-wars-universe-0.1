@@ -1,7 +1,12 @@
-Saturn
-1
-Richard
-Lightpink
-padawan
-67
-345.55
+Planet name: Saturn
+Counts of inhabitants jedi: 2
+Name of jedi: Rick
+Age: 23
+Force: 34.4
+Color of lightsaber: red
+Rank: padawan
+Name of jedi: Ivan
+Age: 56
+Force: 221.0
+Color of lightsaber: black
+Rank: master

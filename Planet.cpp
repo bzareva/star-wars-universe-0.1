@@ -162,7 +162,7 @@ Base* Planet::clone()const {
 
 void Planet::write_to_file(std::ofstream& fout)const {
 
-	fout << "\nName of planet: " << m_planet_name;
+	fout << "\nName of planet:" << m_planet_name;
 	fout << "\n**Iformation about jedi on this planet**\n";
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 		m_jedi[i].write_to_file(fout);
@@ -170,29 +170,59 @@ void Planet::write_to_file(std::ofstream& fout)const {
 }
 
 void Planet::read_from_file(std::ifstream& fin) {
+	
+	unsigned cnt = 0;
+	String input;
+	while (cnt < 2) {
+	
+		fin >> input;
 
-	m_planet_name.loadString(fin);
+		if (input == String("Planet")) {
 
-	unsigned cnt_object;
-	fin >> cnt_object;
+			String buff;
+			do {
+				fin >> buff;
+			} while (buff != String("name:"));
 
-	std::streampos beg, end;
+			do {
+				fin >> buff; // get planet name
+			} while (!buff.is_only_alpha());
 
-	while (cnt_object > 0 && !fin.eof()) {
+			m_planet_name = buff;
 
-		// beg = fin.tellg();
+			++cnt;
 
-		Jedi curr(fin);
+		} else if(input == String("Counts")){
+		
+			String buff;
+			do {
+				fin >> buff;
+			} while (buff != String("of"));
 
-		end = fin.tellg();
+			do {
+				fin >> buff;
+			} while (buff != String("inhabitants"));
 
-		fin.seekg(0, end);
+			do {
+				fin >> buff;
+			} while (buff != String("jedi:"));
 
-		m_jedi += curr;
+			
+			//do {
+				fin >> buff; // counts of jedi on this planet
+			//} while (!buff.is_only_digits());
 
-		--cnt_object;
+			unsigned br = buff.convert_to_integer(buff.get_string());
+
+			/*for (unsigned i = 0; i < br; ++br) {
+				m_jedi[i].read_from_file(fin);
+			}*/
+
+			++cnt;
+
+		}
+
 	}
-
 }
 
 String Planet::type_name()const {

@@ -12,7 +12,7 @@ String::String(const char* str)
 
 String::String(std::ifstream& fin) {
 
-	loadString(fin);
+	load_string(fin);
 }
 
 String::String(const String& obj) {
@@ -34,12 +34,12 @@ String::~String() {
 	free();
 }
 
-void String::saveString(std::ofstream& fout) {
+void String::save_string(std::ofstream& fout) {
 
 	fout << m_string;
 }
 
-void String::loadString(std::ifstream& fin) {
+void String::load_string(std::ifstream& fin) {
 
 	char ch;
 	short int cnt   = 0;
@@ -61,22 +61,40 @@ void String::loadString(std::ifstream& fin) {
 
 std::istream& operator>>(std::istream& in, String& str) {
 
+	char ch;
+	short int cnt   = 0;
 	char buff[1024] = { '\0' };
-	in.getline(buff, 1024, '\n');
 
-	str.m_size = str.str_len(buff);
-	if (str.m_size == 0) {
-		str.m_capacity = String::DEFAULT_CAPACITY;
-	} else {
-		str.m_capacity = str.m_size + 1;
+	while (in.get(ch) && !in.eof() && ch != '\n' && ch != ' ' && cnt < 1024) {
+		buff[cnt] = ch;
+		++cnt;
 	}
 
-	if (str.m_string != nullptr) {
-		delete[] str.m_string;
-	}
+	buff[cnt] = '\0';
 
-	str.m_string = new char[str.m_capacity];
+	str.m_size     = str.str_len(buff);
+	str.m_capacity = str.m_size + 1;
+	str.m_string   = new char[str.m_capacity];
 	str.str_cpy(str.m_string, buff);
+
+	// second way
+	//char buff[1024] = { '\0' };
+	//in.getline(buff, 1024, '\n');
+
+	//str.m_size = str.str_len(buff);
+	//if (str.m_size == 0) {
+	//	str.m_capacity = String::DEFAULT_CAPACITY;
+	//} else {
+	//	str.m_capacity = str.m_size + 1;
+	//}
+
+	//if (str.m_string != nullptr) {
+	//	delete[] str.m_string;
+	//}
+
+	//str.m_string = new char[str.m_capacity];
+	//str.str_cpy(str.m_string, buff);
+
 	str.fill_zeros(str.m_string);
 
 	return in;

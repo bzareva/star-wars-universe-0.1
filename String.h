@@ -26,10 +26,10 @@ public:
 	~String();
 
 	/// saves string to file
-	void saveString(std::ofstream& fout);
+	void save_string(std::ofstream& fout);
 
 	/// loads string from file
-	void loadString(std::ifstream& fin);
+	void load_string(std::ifstream& fin);
 
 	/// input from console for string
 	friend std::istream& operator>>(std::istream& in, String& str);
