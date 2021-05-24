@@ -6,6 +6,7 @@
 /// Ranks are arranged in ascending order- 1, 2,.., 8.
 ///
 enum class Rank {
+
 	YOUNGLING = 1,
 	INITIATE  = 2,
 	PADAWAN   = 3,

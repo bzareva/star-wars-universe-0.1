@@ -43,16 +43,19 @@ void Unite::run() {
 ///*****************************************************************8
 
 	//std::ifstream fin("input.txt");
-	std::ifstream fin("planetinput.txt");
-	if (!fin || !fin.is_open()) {
-		fin.close();
-		return;
-	}
+	//std::ifstream fin("galaxyinput.txt");
+	//if (!fin || !fin.is_open()) {
+	//	fin.close();
+	//	return;
+	//}
 
-	Planet filePlanet; // (fin);
-	filePlanet.read_from_file(fin);
-    std::cout << filePlanet << std::endl;
+	//Galaxy gtest;
+	//gtest.read_from_file(fin);
+	//std::cout << gtest;
 
+	//Planet filePlanet;
+	//filePlanet.read_from_file(fin);
+	//std::cout << filePlanet;
 
 	//Jedi test;
 	//test.read_from_file(fin);
@@ -68,8 +71,8 @@ void Unite::run() {
 
 	fout.clear();
 	fout.close();*/
-	fin.clear();
-	fin.close();
+	/*fin.clear();
+	fin.close()*/;
 
 ///*****************************************************************8
 

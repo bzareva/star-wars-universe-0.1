@@ -1,9 +1,6 @@
 #include "Galaxy.h"
 
-Galaxy::Galaxy() {
-
-	m_planets.push_back(Planet());
-}
+Galaxy::Galaxy() {}
 
 Galaxy::Galaxy(std::ifstream& fin) {
 
@@ -61,11 +58,11 @@ std::istream& operator>>(std::istream& in, Galaxy& obj) {
 
 std::ostream& operator<<(std::ostream& out, const Galaxy& obj) {
 
-	out << "\n**Information about the galaxy**\n";
+	out << "Information about galaxy\n";
+	out << "Counts of planets in galaxy:" << obj.m_planets.size() << std::endl;
 	for (unsigned i = 0; i < obj.m_planets.size(); ++i) {
-		out << obj.m_planets[i] << std::endl;
+		out << obj.m_planets[i];
 	}
-
 	return out;
 }
 
@@ -148,23 +145,69 @@ Base* Galaxy::clone()const {
 
 void Galaxy::write_to_file(std::ofstream& fout)const {
 
-	fout << "\nInformation about galaxy**\n";
+	fout << "Information about galaxy\n";
+	fout << "Counts of planets in galaxy:" << m_planets.size() << std::endl;
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
 		m_planets[i].write_to_file(fout);
-		fout << '\n';
 	}
 }
 
 void Galaxy::read_from_file(std::ifstream& fin) {
 
-	unsigned cnt;
-	fin >> cnt;
-	while (cnt <= 0) {
-		fin >> cnt;
+	String input;
+	fin >> input;
+
+	while (input != String("Information")) {
+		fin >> input;
 	}
 
+	if (input == String("Information")) {
+
+		String buff;
+		do {
+			fin >> buff;
+		} while (buff != String("about"));
+
+		do {
+			fin >> buff;
+		} while (buff != String("galaxy"));
+	}
+
+	do {
+		fin >> input;
+	} while (input != String("Counts"));
+
+
+	if (input == String("Counts")) {
+
+		String buff;
+		do {
+			fin >> buff;
+		} while (buff != String("of"));
+
+		do {
+			fin >> buff;
+		} while (buff != String("planets"));
+
+		do {
+			fin >> buff;
+		} while (buff != String("in"));
+
+		do {
+			fin >> buff;
+		} while (buff != String("galaxy:"));
+	}
+
+	do {
+		fin >> input;
+	} while (!input.is_only_digits());
+
+	unsigned cnt = input.convert_to_integer(input.get_string());
+
 	for (unsigned i = 0; i < cnt; ++i) {
-		m_planets[i].read_from_file(fin);
+
+		Planet p_read(fin);
+		m_planets.push_back(p_read);
 	}
 }
 

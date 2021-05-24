@@ -1,0 +1,26 @@
+Information about galaxy
+Counts of planets in galaxy: 2
+Planet name: Saturn
+Counts of inhabitants jedi: 2
+Name of jedi: Rick
+Age: 23
+Force: 34.4
+Color of lightsaber: red
+Rank: padawan
+Name of jedi: Ivan
+Age: 56
+Force: 221.0
+Color of lightsaber: black
+Rank: master
+Planet name: Mars
+Counts of inhabitants jedi: 2
+Name of jedi: John
+Age: 11
+Force: 4.4
+Color of lightsaber: yellow
+Rank: knight
+Name of jedi: Asen
+Age: 299
+Force: 700.1
+Color of lightsaber: white
+Rank: initiate

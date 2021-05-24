@@ -52,13 +52,11 @@ std::istream& operator>>(std::istream& in, Planet& oth) {
 
 std::ostream& operator<<(std::ostream& out, const Planet& oth) {
 
-	out << "\nName of planet: " << oth.m_planet_name;
-	out << "\nCount of living jedi on this planet: " << oth.m_jedi.size() << std::endl;
-
+	out << "Planet name:" << oth.m_planet_name;
+	out << "\nCounts of inhabitants jedi:" << oth.m_jedi.size() << std::endl;
 	for (unsigned i = 0; i < oth.m_jedi.size(); ++i) { 
 		out << oth.m_jedi[i];
 	}
-
 	return out;
 }
 
@@ -162,8 +160,8 @@ Base* Planet::clone()const {
 
 void Planet::write_to_file(std::ofstream& fout)const {
 
-	fout << "\nName of planet:" << m_planet_name;
-	fout << "\n**Iformation about jedi on this planet**\n";
+	fout << "Name of planet:" << m_planet_name;
+	fout << "\nCounts of inhabitants jedi:" << m_jedi.size() << std::endl;
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 		m_jedi[i].write_to_file(fout);
 	}
@@ -207,21 +205,21 @@ void Planet::read_from_file(std::ifstream& fin) {
 				fin >> buff;
 			} while (buff != String("jedi:"));
 
-			
-			//do {
+		
+			do {
 				fin >> buff; // counts of jedi on this planet
-			//} while (!buff.is_only_digits());
+			} while (!buff.is_only_digits());
 
 			unsigned br = buff.convert_to_integer(buff.get_string());
 
-			/*for (unsigned i = 0; i < br; ++br) {
-				m_jedi[i].read_from_file(fin);
-			}*/
+			for (unsigned i = 0; i < br; ++i) {
+
+				Jedi j_read(fin);
+				m_jedi += j_read;
+			}
 
 			++cnt;
-
 		}
-
 	}
 }
 

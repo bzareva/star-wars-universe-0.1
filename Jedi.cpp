@@ -120,27 +120,27 @@ std::istream& operator>>(std::istream& in, Jedi& oth) {
 
 std::ostream& operator<<(std::ostream& out, const Jedi& oth) {
 
-	out << "\nName of jedi: "        << oth.m_name_jedi;
-	out << "\nAge: "                 << oth.m_age;
-	out << "\nForce: "               << oth.m_force;
-	out << "\nColor of lightsaber: " << oth.m_color_of_lightsaber;
+	out << "Name of jedi:"          << oth.m_name_jedi;
+	out << "\nAge:"                 << oth.m_age;
+	out << "\nForce:"               << oth.m_force;
+	out << "\nColor of lightsaber:" << oth.m_color_of_lightsaber;
 
 	if (oth.m_rank == Rank::YOUNGLING) {
-		out << "\nRank: YOUNGLING\n";
+		out << "\nRank:YOUNGLING\n";
 	} else if (oth.m_rank == Rank::INITIATE) {
-		out << "\nRank: INITIATE\n";
+		out << "\nRank:INITIATE\n";
 	} else if (oth.m_rank == Rank::PADAWAN) {
-		out << "\nRank: PADAWAN\n";
+		out << "\nRank:PADAWAN\n";
 	} else if (oth.m_rank == Rank::KNIGHT_ASPIRANT) {
-		out << "\nRank: KNIGHT ASPIRANT\n";
+		out << "\nRank:KNIGHT ASPIRANT\n";
 	} else if (oth.m_rank == Rank::KNIGHT) {
-		out << "\nRank: KNIGHT\n";
+		out << "\nRank:KNIGHT\n";
 	} else if (oth.m_rank == Rank::MASTER) {
-		out << "\nRank: MASTER\n";
+		out << "\nRank:MASTER\n";
 	} else if (oth.m_rank == Rank::BATTLE_MASTER) {
-		out << "\nRank: BATTLE MASTER\n";
+		out << "\nRank:BATTLE MASTER\n";
 	} else if (oth.m_rank == Rank::GRAND_MASTER) {
-		out << "\nRank: GRAND MASTER\n";
+		out << "\nRank:GRAND MASTER\n";
 	}
 
 	return out;
