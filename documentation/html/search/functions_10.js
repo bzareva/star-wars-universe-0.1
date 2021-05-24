@@ -2,9 +2,9 @@ var searchData=
 [
   ['save_1146',['save',['../class_galaxy_manager.html#af1b7f4f590f554cca4b4473b2705e419',1,'GalaxyManager']]],
   ['save_5fas_1147',['save_as',['../class_galaxy_manager.html#a22caaf720e81e5d19248b86dfcd64d51',1,'GalaxyManager']]],
-  ['saveascommand_1148',['SaveAsCommand',['../class_save_as_command.html#af95f30e29d2002af95defd39c4c76102',1,'SaveAsCommand::SaveAsCommand()'],['../class_save_as_command.html#a6206d8f0e3e09610afe2c6fbc3c49801',1,'SaveAsCommand::SaveAsCommand(const String &amp;cmd, const Vector&lt; String &gt; args)']]],
-  ['savecommand_1149',['SaveCommand',['../class_save_command.html#a388548ec95a485e72dd8799dd60b475c',1,'SaveCommand']]],
-  ['savestring_1150',['saveString',['../class_string.html#a7c9f91dcd45f89a64b4c555a21c52d20',1,'String']]],
+  ['save_5fstring_1148',['save_string',['../class_string.html#a0e26f3e7236330efe21b22b067c5a428',1,'String']]],
+  ['saveascommand_1149',['SaveAsCommand',['../class_save_as_command.html#af95f30e29d2002af95defd39c4c76102',1,'SaveAsCommand::SaveAsCommand()'],['../class_save_as_command.html#a6206d8f0e3e09610afe2c6fbc3c49801',1,'SaveAsCommand::SaveAsCommand(const String &amp;cmd, const Vector&lt; String &gt; args)']]],
+  ['savecommand_1150',['SaveCommand',['../class_save_command.html#a388548ec95a485e72dd8799dd60b475c',1,'SaveCommand']]],
   ['scale_1151',['scale',['../classdoctest_1_1_approx.html#a62185fd4c09a63dab61bd893574d8473',1,'doctest::Approx']]],
   ['set_5fage_1152',['set_age',['../class_jedi.html#a7d1295bb2962ef8f0dadf235e5655010',1,'Jedi']]],
   ['set_5fcap_1153',['set_cap',['../class_string.html#a64e4af3fa586c854014e9e50ad2e3d25',1,'String']]],
