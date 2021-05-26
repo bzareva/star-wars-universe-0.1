@@ -24,10 +24,14 @@ Inheritance diagram for Planet\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em constructor with parameter from type ifstream for load to text file \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_planet_a1cf90851c9d28e06dc44a35f463e8671}{Planet}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&jedi, const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+planet\char`\"{}))
 \begin{DoxyCompactList}\small\item\em constructor with parameters \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_planet_a02cff1d1b9c46249f924f903419a7542}{Planet}} (const \mbox{\hyperlink{class_planet}{Planet}} \&obj)
+\mbox{\hyperlink{class_planet_a26f472c4f9a9eb8c8348a7cf736c201a}{Planet}} (const \mbox{\hyperlink{class_planet}{Planet}} \&rhs)
 \begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_planet}{Planet}} \& \mbox{\hyperlink{class_planet_a235f05b9c7848b1b2b3a0f6f5e4cd3fe}{operator=}} (const \mbox{\hyperlink{class_planet}{Planet}} \&rhs)
 \begin{DoxyCompactList}\small\item\em assign content \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_planet_a63c918d7d30298e8f270477909a3c769}{Planet}} (\mbox{\hyperlink{class_planet}{Planet}} \&\&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em move copy constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_planet}{Planet}} \& \mbox{\hyperlink{class_planet_a4345772d6ceabc5a8f6c8dde5cc415a3}{operator=}} (\mbox{\hyperlink{class_planet}{Planet}} \&\&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em move assign content \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_planet_a8dc8b267cb8e5ff1642b365075f869a9}{operator==}} (const \mbox{\hyperlink{class_planet}{Planet}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em checks if two planets are equal \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_planet_ab4e43adc0e030963f15d4c2b9981d1a7}{operator!=}} (const \mbox{\hyperlink{class_planet}{Planet}} \&rhs) const
@@ -91,7 +95,9 @@ unsigned \mbox{\hyperlink{class_planet_a502915ab7511f8880874e64fd0232057}{get\+\
 void \mbox{\hyperlink{class_planet_ace66459c821229b8a6537db309c49ced}{set\+\_\+planet\+\_\+name}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)
 \begin{DoxyCompactList}\small\item\em setter for planet name \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_planet_a26120483d456af523c5a0b149b3bf791}{set\+\_\+jedi}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&jedi)
-\begin{DoxyCompactList}\small\item\em setter for inhabits jedi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em setter for inhabits jedi \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_planet_ae77d24155402f3d71e6751af0c3ba97a}{to\+\_\+zero}} ()
+\begin{DoxyCompactList}\small\item\em make data with null value \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -114,7 +120,7 @@ Inherits of \mbox{\hyperlink{class_base}{Base}} class.
 \mbox{\Hypertarget{class_planet_a7ebe23c5ea656216f7ac638d60e33d79}\label{class_planet_a7ebe23c5ea656216f7ac638d60e33d79}} 
 \index{Planet@{Planet}!Planet@{Planet}}
 \index{Planet@{Planet}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+\doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
 {\footnotesize\ttfamily Planet\+::\+Planet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
@@ -124,7 +130,7 @@ default constructor
 \mbox{\Hypertarget{class_planet_ac00facbec0b9c5b7080ea253c8ab0637}\label{class_planet_ac00facbec0b9c5b7080ea253c8ab0637}} 
 \index{Planet@{Planet}!Planet@{Planet}}
 \index{Planet@{Planet}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+\doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily Planet\+::\+Planet (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{fin }\end{DoxyParamCaption})}
 
 
@@ -134,22 +140,32 @@ constructor with parameter from type ifstream for load to text file
 \mbox{\Hypertarget{class_planet_a1cf90851c9d28e06dc44a35f463e8671}\label{class_planet_a1cf90851c9d28e06dc44a35f463e8671}} 
 \index{Planet@{Planet}!Planet@{Planet}}
 \index{Planet@{Planet}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+\doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
 {\footnotesize\ttfamily Planet\+::\+Planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_jedi}{Jedi}} $>$ \&}]{jedi,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+planet\char`\"{})} }\end{DoxyParamCaption})}
 
 
 
 constructor with parameters 
 
-\mbox{\Hypertarget{class_planet_a02cff1d1b9c46249f924f903419a7542}\label{class_planet_a02cff1d1b9c46249f924f903419a7542}} 
+\mbox{\Hypertarget{class_planet_a26f472c4f9a9eb8c8348a7cf736c201a}\label{class_planet_a26f472c4f9a9eb8c8348a7cf736c201a}} 
 \index{Planet@{Planet}!Planet@{Planet}}
 \index{Planet@{Planet}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily Planet\+::\+Planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{obj }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Planet\+::\+Planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{rhs }\end{DoxyParamCaption})}
 
 
 
 copy constructor 
+
+\mbox{\Hypertarget{class_planet_a63c918d7d30298e8f270477909a3c769}\label{class_planet_a63c918d7d30298e8f270477909a3c769}} 
+\index{Planet@{Planet}!Planet@{Planet}}
+\index{Planet@{Planet}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{Planet()}{Planet()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Planet\+::\+Planet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_planet}{Planet}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+move copy constructor 
 
 
 
@@ -346,12 +362,22 @@ remove jedi from this planet
 \mbox{\Hypertarget{class_planet_a235f05b9c7848b1b2b3a0f6f5e4cd3fe}\label{class_planet_a235f05b9c7848b1b2b3a0f6f5e4cd3fe}} 
 \index{Planet@{Planet}!operator=@{operator=}}
 \index{operator=@{operator=}!Planet@{Planet}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_planet}{Planet}} \& Planet\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_planet}{Planet}} \&}]{rhs }\end{DoxyParamCaption})}
 
 
 
 assign content 
+
+\mbox{\Hypertarget{class_planet_a4345772d6ceabc5a8f6c8dde5cc415a3}\label{class_planet_a4345772d6ceabc5a8f6c8dde5cc415a3}} 
+\index{Planet@{Planet}!operator=@{operator=}}
+\index{operator=@{operator=}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_planet}{Planet}} \& Planet\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_planet}{Planet}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+move assign content 
 
 \mbox{\Hypertarget{class_planet_a8dc8b267cb8e5ff1642b365075f869a9}\label{class_planet_a8dc8b267cb8e5ff1642b365075f869a9}} 
 \index{Planet@{Planet}!operator==@{operator==}}
@@ -502,6 +528,16 @@ sort jedi name\textquotesingle{}s
 
 
 sorts jedi rank\textquotesingle{}s 
+
+\mbox{\Hypertarget{class_planet_ae77d24155402f3d71e6751af0c3ba97a}\label{class_planet_ae77d24155402f3d71e6751af0c3ba97a}} 
+\index{Planet@{Planet}!to\_zero@{to\_zero}}
+\index{to\_zero@{to\_zero}!Planet@{Planet}}
+\doxysubsubsection{\texorpdfstring{to\_zero()}{to\_zero()}}
+{\footnotesize\ttfamily void Planet\+::to\+\_\+zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+make data with null value 
 
 \mbox{\Hypertarget{class_planet_aa676ab71dd45cd4b280fd0abaf4ad8ce}\label{class_planet_aa676ab71dd45cd4b280fd0abaf4ad8ce}} 
 \index{Planet@{Planet}!type\_name@{type\_name}}

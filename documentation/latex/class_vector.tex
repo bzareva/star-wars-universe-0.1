@@ -18,10 +18,14 @@ Realization of basic functionalities from vector library.
 \begin{DoxyCompactList}\small\item\em constructor with parameters \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector_a037208e620fe4ec7e27460327220cab0}{Vector}} (const T \&item)
 \begin{DoxyCompactList}\small\item\em constructor who adds only one item \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector_afb477942fef2f69c69e7e65c3cbed355}{Vector}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&obj)
+\mbox{\hyperlink{class_vector_a4a3b6fdfe68b94e4d1f60aa6f6dbeb21}{Vector}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&rhs)
 \begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector_aede204cfec16a6294d3c42de619fd675}{operator=}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&obj)
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector_aa44e8e04a723f2c0bd9382a3bfa46e7c}{operator=}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&rhs)
 \begin{DoxyCompactList}\small\item\em assign content \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector_a8db08cdd6668f6688c0658fd43a5e654}{Vector}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&\&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em move copy constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector_ae18ef7b943a8cd3875a4553a1c8a98c5}{operator=}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&\&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em move assign content \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector_afd524fac19e6d3d69db5198ffe2952b0}{$\sim$\+Vector}} ()
 \begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
 T \& \mbox{\hyperlink{class_vector_ae833c32400ab9a51ac9dc8b9f701ca96}{operator\mbox{[}$\,$\mbox{]}}} (const unsigned \&index)
@@ -30,7 +34,7 @@ const T \& \mbox{\hyperlink{class_vector_af3652521441b1a6ef00d81d90c6eb1a3}{oper
 \begin{DoxyCompactList}\small\item\em access element(constant) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector_acfc7ebf555b8a57545905d8616dbffb4}{operator+=}} (const T \&item)
 \begin{DoxyCompactList}\small\item\em adds item at end of vector \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector_a321e3b497990589ca2e84d1f0af39f1e}{operator+=}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&obj)
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector_a0cdad8a65e9dd1ef60afaf32aa547f9e}{operator+=}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&rhs)
 \begin{DoxyCompactList}\small\item\em sum of two vectors \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_vector_afb137b7c7f773ceeac4decdd931b164c}{empy}} () const
 \begin{DoxyCompactList}\small\item\em checks if empty vector \end{DoxyCompactList}\item 
@@ -65,7 +69,9 @@ unsigned \mbox{\hyperlink{class_vector_a30435b1635ae160705f53755d25a407b}{capaci
 T $\ast$ \mbox{\hyperlink{class_vector_a641a765cb13d9e9ff8f9bc4e5a375c9b}{data}} ()
 \begin{DoxyCompactList}\small\item\em access data(nonconstant) \end{DoxyCompactList}\item 
 const T $\ast$ \mbox{\hyperlink{class_vector_adf2019fbfec16aeea3150a48e0c773ee}{data}} () const
-\begin{DoxyCompactList}\small\item\em access data(constant) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em access data(constant) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vector_a2e94d255a88ffc5caa51022de67501ca}{to\+\_\+zero}} ()
+\begin{DoxyCompactList}\small\item\em make data with null values \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -85,7 +91,7 @@ Realization of basic functionalities from vector library.
 \mbox{\Hypertarget{class_vector_a39d6069675db4ecfc1ab81d440da759a}\label{class_vector_a39d6069675db4ecfc1ab81d440da759a}} 
 \index{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}}
 \index{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_vector}{Vector}}\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -96,7 +102,7 @@ default constructor
 \mbox{\Hypertarget{class_vector_a092fe37373e84ece9f2de54b24db4834}\label{class_vector_a092fe37373e84ece9f2de54b24db4834}} 
 \index{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}}
 \index{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}\item[{const T $\ast$}]{data,  }\item[{const unsigned \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -107,7 +113,7 @@ constructor with parameters
 \mbox{\Hypertarget{class_vector_a037208e620fe4ec7e27460327220cab0}\label{class_vector_a037208e620fe4ec7e27460327220cab0}} 
 \index{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}}
 \index{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}\item[{const T \&}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -115,16 +121,27 @@ constructor with parameters
 
 constructor who adds only one item 
 
-\mbox{\Hypertarget{class_vector_afb477942fef2f69c69e7e65c3cbed355}\label{class_vector_afb477942fef2f69c69e7e65c3cbed355}} 
+\mbox{\Hypertarget{class_vector_a4a3b6fdfe68b94e4d1f60aa6f6dbeb21}\label{class_vector_a4a3b6fdfe68b94e4d1f60aa6f6dbeb21}} 
 \index{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}}
 \index{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 copy constructor 
+
+\mbox{\Hypertarget{class_vector_a8db08cdd6668f6688c0658fd43a5e654}\label{class_vector_a8db08cdd6668f6688c0658fd43a5e654}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+move copy constructor 
 
 \mbox{\Hypertarget{class_vector_afd524fac19e6d3d69db5198ffe2952b0}\label{class_vector_afd524fac19e6d3d69db5198ffe2952b0}} 
 \index{Vector$<$ T $>$@{Vector$<$ T $>$}!````~Vector@{$\sim$Vector}}
@@ -282,27 +299,38 @@ insert elements
 
 adds item at end of vector 
 
-\mbox{\Hypertarget{class_vector_a321e3b497990589ca2e84d1f0af39f1e}\label{class_vector_a321e3b497990589ca2e84d1f0af39f1e}} 
+\mbox{\Hypertarget{class_vector_a0cdad8a65e9dd1ef60afaf32aa547f9e}\label{class_vector_a0cdad8a65e9dd1ef60afaf32aa547f9e}} 
 \index{Vector$<$ T $>$@{Vector$<$ T $>$}!operator+=@{operator+=}}
 \index{operator+=@{operator+=}!Vector$<$ T $>$@{Vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 sum of two vectors 
 
-\mbox{\Hypertarget{class_vector_aede204cfec16a6294d3c42de619fd675}\label{class_vector_aede204cfec16a6294d3c42de619fd675}} 
+\mbox{\Hypertarget{class_vector_aa44e8e04a723f2c0bd9382a3bfa46e7c}\label{class_vector_aa44e8e04a723f2c0bd9382a3bfa46e7c}} 
 \index{Vector$<$ T $>$@{Vector$<$ T $>$}!operator=@{operator=}}
 \index{operator=@{operator=}!Vector$<$ T $>$@{Vector$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 assign content 
+
+\mbox{\Hypertarget{class_vector_ae18ef7b943a8cd3875a4553a1c8a98c5}\label{class_vector_ae18ef7b943a8cd3875a4553a1c8a98c5}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+move assign content 
 
 \mbox{\Hypertarget{class_vector_ae833c32400ab9a51ac9dc8b9f701ca96}\label{class_vector_ae833c32400ab9a51ac9dc8b9f701ca96}} 
 \index{Vector$<$ T $>$@{Vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
@@ -379,6 +407,17 @@ void \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::swap (\begin{DoxyParamC
 
 
 swap content 
+
+\mbox{\Hypertarget{class_vector_a2e94d255a88ffc5caa51022de67501ca}\label{class_vector_a2e94d255a88ffc5caa51022de67501ca}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!to\_zero@{to\_zero}}
+\index{to\_zero@{to\_zero}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{to\_zero()}{to\_zero()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::to\+\_\+zero\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+make data with null values 
 
 
 

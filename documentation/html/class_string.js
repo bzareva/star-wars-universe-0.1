@@ -2,7 +2,8 @@ var class_string =
 [
     [ "String", "class_string.html#abb3412dfeafff4d1e2603d4656c651b8", null ],
     [ "String", "class_string.html#a88f5ea57427920fa9f8647bbd3f00d25", null ],
-    [ "String", "class_string.html#a72970192b236badd9aaad90d976d704b", null ],
+    [ "String", "class_string.html#a117f8a4ef8cd2c6b3632324b0146d7ae", null ],
+    [ "String", "class_string.html#aa42679e58b3aa6075e89bc20d458bfa2", null ],
     [ "~String", "class_string.html#ac40b2a3fb58c2d8556f5e6ff73510036", null ],
     [ "add", "class_string.html#ac1dbab7f918597724b60f043f9a84eda", null ],
     [ "at", "class_string.html#a5af83e1193a977bf5f981d0b3702b2bc", null ],
@@ -27,7 +28,8 @@ var class_string =
     [ "load_string", "class_string.html#ab7c1607de553d980e986c470451678ad", null ],
     [ "operator!=", "class_string.html#ad3575334e380ed524d72bf52baf1b24d", null ],
     [ "operator+=", "class_string.html#a07d6a22e524a3c13b6d21c2125bad49f", null ],
-    [ "operator=", "class_string.html#a362858512bb96676dbb646fae10e3ab0", null ],
+    [ "operator=", "class_string.html#a70b3aba8ac7a57e3bb48a52a5d64a88b", null ],
+    [ "operator=", "class_string.html#a30785fdac33e28196405bd9f6f206034", null ],
     [ "operator==", "class_string.html#a999069e016da76a92f42a1b5f9b557eb", null ],
     [ "operator[]", "class_string.html#ad5a9e49cf1fd17ad49e3bb4650336ca8", null ],
     [ "operator[]", "class_string.html#a12b8435c36ebb2019162220cfe1a32ab", null ],
@@ -43,6 +45,7 @@ var class_string =
     [ "str_len", "class_string.html#a4cf6f5f3279c6c7a4a4a99cef2499a47", null ],
     [ "to_lower", "class_string.html#ad84a166ff470e465046196c270e58d88", null ],
     [ "to_upper", "class_string.html#a10d5a46ad26a5ea4180838072319746f", null ],
+    [ "to_zero", "class_string.html#ac7071e819b58d8c668994bfecb1fae6f", null ],
     [ "operator+", "class_string.html#a0ca7980da94bb8d8f70b8ef4b0b9edd7", null ],
     [ "operator<<", "class_string.html#a8d4fc4502dbe58e79a808af17f839c3f", null ],
     [ "operator>>", "class_string.html#a350c3ac3a1559d9f5ece5252e3bbd75f", null ]

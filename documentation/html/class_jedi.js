@@ -2,7 +2,8 @@ var class_jedi =
 [
     [ "Jedi", "class_jedi.html#a3da57811f8332a961022a13640497098", null ],
     [ "Jedi", "class_jedi.html#acfc23cab314ceb195531bc5e559b0f2f", null ],
-    [ "Jedi", "class_jedi.html#a4034eeede584f1033b235258a2fa8406", null ],
+    [ "Jedi", "class_jedi.html#a41a19ef80dc1489c13e477c46a7f3f02", null ],
+    [ "Jedi", "class_jedi.html#ad2da4ec5ea67365352010e1fa5d7f739", null ],
     [ "clone", "class_jedi.html#affef88f963581fdccabdde53d371d71c", null ],
     [ "demote", "class_jedi.html#ac530bbcf61aba79f0fd8b36ea0173551", null ],
     [ "get_age", "class_jedi.html#ab50999889f6f88e073f6ea2ae8d0435c", null ],
@@ -13,6 +14,7 @@ var class_jedi =
     [ "operator!=", "class_jedi.html#a3df185c50750d5fb9f805df5c2b9fc47", null ],
     [ "operator<", "class_jedi.html#a8f274e7c5b392732384dd46d5ff58949", null ],
     [ "operator=", "class_jedi.html#ae1ba1604a8aad070bf745793ac2baf54", null ],
+    [ "operator=", "class_jedi.html#a083b5cb50a953484fe9a936e5d922e83", null ],
     [ "operator==", "class_jedi.html#a8669a01749ce58fb4062da32457c3524", null ],
     [ "print", "class_jedi.html#af902218312192add530915e1ccdaaaff", null ],
     [ "promote", "class_jedi.html#a5b0db91ba6b5fec0662a7415542cd156", null ],
@@ -23,6 +25,7 @@ var class_jedi =
     [ "set_force", "class_jedi.html#a04415393f703f155dd16845d74f0960f", null ],
     [ "set_name_jedi", "class_jedi.html#a732a5c86e29a2e51c95a463f46e92c6f", null ],
     [ "set_rank", "class_jedi.html#a17ff0dd411c7ca94ff1bc7bb6bede64e", null ],
+    [ "to_zero", "class_jedi.html#afd3313b8c5b7657f6c7e95b003bf2022", null ],
     [ "write_to_file", "class_jedi.html#a8a8485ea67fe4374c0d8e459cd841ff2", null ],
     [ "operator<<", "class_jedi.html#a404582e070fe1e18095b681aee3f21e4", null ],
     [ "operator>>", "class_jedi.html#aa0531f1879157b772dd3e89b94fcd114", null ]

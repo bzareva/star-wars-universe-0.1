@@ -16,12 +16,18 @@ Realization of basic functionalities from string library.
 \begin{DoxyCompactList}\small\item\em constructor with parameter, who has default value \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_string_a88f5ea57427920fa9f8647bbd3f00d25}{String}} (std\+::ifstream \&fin)
 \begin{DoxyCompactList}\small\item\em constructor with parameter from type ifstream \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_string_a72970192b236badd9aaad90d976d704b}{String}} (const \mbox{\hyperlink{class_string}{String}} \&obj)
+\mbox{\hyperlink{class_string_a117f8a4ef8cd2c6b3632324b0146d7ae}{String}} (const \mbox{\hyperlink{class_string}{String}} \&rhs)
 \begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_string}{String}} \& \mbox{\hyperlink{class_string_a362858512bb96676dbb646fae10e3ab0}{operator=}} (const \mbox{\hyperlink{class_string}{String}} \&obj)
+\mbox{\hyperlink{class_string}{String}} \& \mbox{\hyperlink{class_string_a70b3aba8ac7a57e3bb48a52a5d64a88b}{operator=}} (const \mbox{\hyperlink{class_string}{String}} \&rhs)
 \begin{DoxyCompactList}\small\item\em operator= \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_string_aa42679e58b3aa6075e89bc20d458bfa2}{String}} (\mbox{\hyperlink{class_string}{String}} \&\&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em move copy constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_string}{String}} \& \mbox{\hyperlink{class_string_a30785fdac33e28196405bd9f6f206034}{operator=}} (\mbox{\hyperlink{class_string}{String}} \&\&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em move operator= \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_string_ac40b2a3fb58c2d8556f5e6ff73510036}{$\sim$\+String}} ()
 \begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_string_ac7071e819b58d8c668994bfecb1fae6f}{to\+\_\+zero}} ()
+\begin{DoxyCompactList}\small\item\em make null value of data \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_string_a0e26f3e7236330efe21b22b067c5a428}{save\+\_\+string}} (std\+::ofstream \&fout)
 \begin{DoxyCompactList}\small\item\em saves string to file \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_string_ab7c1607de553d980e986c470451678ad}{load\+\_\+string}} (std\+::ifstream \&fin)
@@ -116,7 +122,7 @@ Realization of basic functionalities from string library.
 \mbox{\Hypertarget{class_string_abb3412dfeafff4d1e2603d4656c651b8}\label{class_string_abb3412dfeafff4d1e2603d4656c651b8}} 
 \index{String@{String}!String@{String}}
 \index{String@{String}!String@{String}}
-\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily String\+::\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str = {\ttfamily \char`\"{}default\+\_\+string\char`\"{}} }\end{DoxyParamCaption})}
 
 
@@ -126,22 +132,32 @@ constructor with parameter, who has default value
 \mbox{\Hypertarget{class_string_a88f5ea57427920fa9f8647bbd3f00d25}\label{class_string_a88f5ea57427920fa9f8647bbd3f00d25}} 
 \index{String@{String}!String@{String}}
 \index{String@{String}!String@{String}}
-\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily String\+::\+String (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{fin }\end{DoxyParamCaption})}
 
 
 
 constructor with parameter from type ifstream 
 
-\mbox{\Hypertarget{class_string_a72970192b236badd9aaad90d976d704b}\label{class_string_a72970192b236badd9aaad90d976d704b}} 
+\mbox{\Hypertarget{class_string_a117f8a4ef8cd2c6b3632324b0146d7ae}\label{class_string_a117f8a4ef8cd2c6b3632324b0146d7ae}} 
 \index{String@{String}!String@{String}}
 \index{String@{String}!String@{String}}
-\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily String\+::\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{obj }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily String\+::\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{rhs }\end{DoxyParamCaption})}
 
 
 
 copy constructor 
+
+\mbox{\Hypertarget{class_string_aa42679e58b3aa6075e89bc20d458bfa2}\label{class_string_aa42679e58b3aa6075e89bc20d458bfa2}} 
+\index{String@{String}!String@{String}}
+\index{String@{String}!String@{String}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily String\+::\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_string}{String}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+move copy constructor 
 
 \mbox{\Hypertarget{class_string_ac40b2a3fb58c2d8556f5e6ff73510036}\label{class_string_ac40b2a3fb58c2d8556f5e6ff73510036}} 
 \index{String@{String}!````~String@{$\sim$String}}
@@ -375,15 +391,25 @@ checks if two strings are not equal
 
 second string is added to the first string 
 
-\mbox{\Hypertarget{class_string_a362858512bb96676dbb646fae10e3ab0}\label{class_string_a362858512bb96676dbb646fae10e3ab0}} 
+\mbox{\Hypertarget{class_string_a70b3aba8ac7a57e3bb48a52a5d64a88b}\label{class_string_a70b3aba8ac7a57e3bb48a52a5d64a88b}} 
 \index{String@{String}!operator=@{operator=}}
 \index{operator=@{operator=}!String@{String}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} \& String\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{obj }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} \& String\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{rhs }\end{DoxyParamCaption})}
 
 
 
 operator= 
+
+\mbox{\Hypertarget{class_string_a30785fdac33e28196405bd9f6f206034}\label{class_string_a30785fdac33e28196405bd9f6f206034}} 
+\index{String@{String}!operator=@{operator=}}
+\index{operator=@{operator=}!String@{String}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} \& String\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_string}{String}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+move operator= 
 
 \mbox{\Hypertarget{class_string_a999069e016da76a92f42a1b5f9b557eb}\label{class_string_a999069e016da76a92f42a1b5f9b557eb}} 
 \index{String@{String}!operator==@{operator==}}
@@ -540,6 +566,16 @@ convert alpha to lower alpha if is it upper
 
 
 convert alpha to upper alpha if is it lower 
+
+\mbox{\Hypertarget{class_string_ac7071e819b58d8c668994bfecb1fae6f}\label{class_string_ac7071e819b58d8c668994bfecb1fae6f}} 
+\index{String@{String}!to\_zero@{to\_zero}}
+\index{to\_zero@{to\_zero}!String@{String}}
+\doxysubsubsection{\texorpdfstring{to\_zero()}{to\_zero()}}
+{\footnotesize\ttfamily void String\+::to\+\_\+zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+make null value of data 
 
 
 

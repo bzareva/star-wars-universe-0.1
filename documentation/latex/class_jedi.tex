@@ -16,10 +16,14 @@ Describes a \mbox{\hyperlink{class_jedi}{Jedi}}.
 \begin{DoxyCompactList}\small\item\em constructor with parameter from type ifstream for load to text file \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jedi_acfc23cab314ceb195531bc5e559b0f2f}{Jedi}} (const unsigned \&age=56, const double \&force=34.\+43, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&rank=\mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbeda0ba6b3e081e425348f232dac757a86a9}{Rank\+::\+YOUNGLING}}, const \mbox{\hyperlink{class_string}{String}} \&name=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+jedi\char`\"{}), const \mbox{\hyperlink{class_string}{String}} \&color\+\_\+of\+\_\+lightsaber=\mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+lightsaber\char`\"{}))
 \begin{DoxyCompactList}\small\item\em constructor with parameters, each of them has default values \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_jedi_a4034eeede584f1033b235258a2fa8406}{Jedi}} (const \mbox{\hyperlink{class_jedi}{Jedi}} \&oth)
+\mbox{\hyperlink{class_jedi_a41a19ef80dc1489c13e477c46a7f3f02}{Jedi}} (const \mbox{\hyperlink{class_jedi}{Jedi}} \&rhs)
 \begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jedi}{Jedi}} \& \mbox{\hyperlink{class_jedi_ae1ba1604a8aad070bf745793ac2baf54}{operator=}} (const \mbox{\hyperlink{class_jedi}{Jedi}} \&rhs)
 \begin{DoxyCompactList}\small\item\em assign content \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jedi_ad2da4ec5ea67365352010e1fa5d7f739}{Jedi}} (\mbox{\hyperlink{class_jedi}{Jedi}} \&\&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em move copy constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jedi}{Jedi}} \& \mbox{\hyperlink{class_jedi_a083b5cb50a953484fe9a936e5d922e83}{operator=}} (\mbox{\hyperlink{class_jedi}{Jedi}} \&\&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em move assign content \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jedi_a8669a01749ce58fb4062da32457c3524}{operator==}} (const \mbox{\hyperlink{class_jedi}{Jedi}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em compares two jedi by their ages are equal \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jedi_a3df185c50750d5fb9f805df5c2b9fc47}{operator!=}} (const \mbox{\hyperlink{class_jedi}{Jedi}} \&rhs) const
@@ -41,6 +45,8 @@ void \mbox{\hyperlink{class_jedi_af902218312192add530915e1ccdaaaff}{print}} () c
 \begin{DoxyCompactList}\small\item\em print information about jedi \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{class_jedi_aef7061d8e2cd07840b983318213f243a}{rank\+\_\+num}} () const
 \item 
+void \mbox{\hyperlink{class_jedi_afd3313b8c5b7657f6c7e95b003bf2022}{to\+\_\+zero}} ()
+\begin{DoxyCompactList}\small\item\em make data with null value \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jedi_a7d1295bb2962ef8f0dadf235e5655010}{set\+\_\+age}} (const unsigned \&age)
 \begin{DoxyCompactList}\small\item\em setter for age of jedi \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jedi_a04415393f703f155dd16845d74f0960f}{set\+\_\+force}} (const double \&force)
@@ -77,7 +83,7 @@ Describes a \mbox{\hyperlink{class_jedi}{Jedi}}.
 \mbox{\Hypertarget{class_jedi_a3da57811f8332a961022a13640497098}\label{class_jedi_a3da57811f8332a961022a13640497098}} 
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
-\doxysubsubsection{\texorpdfstring{Jedi()}{Jedi()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{Jedi()}{Jedi()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily Jedi\+::\+Jedi (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{fin }\end{DoxyParamCaption})}
 
 
@@ -87,22 +93,32 @@ constructor with parameter from type ifstream for load to text file
 \mbox{\Hypertarget{class_jedi_acfc23cab314ceb195531bc5e559b0f2f}\label{class_jedi_acfc23cab314ceb195531bc5e559b0f2f}} 
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
-\doxysubsubsection{\texorpdfstring{Jedi()}{Jedi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{Jedi()}{Jedi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily Jedi\+::\+Jedi (\begin{DoxyParamCaption}\item[{const unsigned \&}]{age = {\ttfamily 56},  }\item[{const double \&}]{force = {\ttfamily 34.43},  }\item[{const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{rank = {\ttfamily \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbeda0ba6b3e081e425348f232dac757a86a9}{Rank\+::\+YOUNGLING}}},  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{name = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+jedi\char`\"{})},  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{color\+\_\+of\+\_\+lightsaber = {\ttfamily \mbox{\hyperlink{class_string}{String}}(\char`\"{}def\+\_\+lightsaber\char`\"{})} }\end{DoxyParamCaption})}
 
 
 
 constructor with parameters, each of them has default values 
 
-\mbox{\Hypertarget{class_jedi_a4034eeede584f1033b235258a2fa8406}\label{class_jedi_a4034eeede584f1033b235258a2fa8406}} 
+\mbox{\Hypertarget{class_jedi_a41a19ef80dc1489c13e477c46a7f3f02}\label{class_jedi_a41a19ef80dc1489c13e477c46a7f3f02}} 
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
 \index{Jedi@{Jedi}!Jedi@{Jedi}}
-\doxysubsubsection{\texorpdfstring{Jedi()}{Jedi()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Jedi\+::\+Jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jedi}{Jedi}} \&}]{oth }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Jedi()}{Jedi()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Jedi\+::\+Jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jedi}{Jedi}} \&}]{rhs }\end{DoxyParamCaption})}
 
 
 
 copy constructor 
+
+\mbox{\Hypertarget{class_jedi_ad2da4ec5ea67365352010e1fa5d7f739}\label{class_jedi_ad2da4ec5ea67365352010e1fa5d7f739}} 
+\index{Jedi@{Jedi}!Jedi@{Jedi}}
+\index{Jedi@{Jedi}!Jedi@{Jedi}}
+\doxysubsubsection{\texorpdfstring{Jedi()}{Jedi()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Jedi\+::\+Jedi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jedi}{Jedi}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+move copy constructor 
 
 
 
@@ -194,12 +210,22 @@ compares two jedi and if left side jedi is younger return true, otherwise false
 \mbox{\Hypertarget{class_jedi_ae1ba1604a8aad070bf745793ac2baf54}\label{class_jedi_ae1ba1604a8aad070bf745793ac2baf54}} 
 \index{Jedi@{Jedi}!operator=@{operator=}}
 \index{operator=@{operator=}!Jedi@{Jedi}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_jedi}{Jedi}} \& Jedi\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jedi}{Jedi}} \&}]{rhs }\end{DoxyParamCaption})}
 
 
 
 assign content 
+
+\mbox{\Hypertarget{class_jedi_a083b5cb50a953484fe9a936e5d922e83}\label{class_jedi_a083b5cb50a953484fe9a936e5d922e83}} 
+\index{Jedi@{Jedi}!operator=@{operator=}}
+\index{operator=@{operator=}!Jedi@{Jedi}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_jedi}{Jedi}} \& Jedi\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jedi}{Jedi}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+move assign content 
 
 \mbox{\Hypertarget{class_jedi_a8669a01749ce58fb4062da32457c3524}\label{class_jedi_a8669a01749ce58fb4062da32457c3524}} 
 \index{Jedi@{Jedi}!operator==@{operator==}}
@@ -299,6 +325,16 @@ setter for name of jedi
 
 
 setter for rank of jedi 
+
+\mbox{\Hypertarget{class_jedi_afd3313b8c5b7657f6c7e95b003bf2022}\label{class_jedi_afd3313b8c5b7657f6c7e95b003bf2022}} 
+\index{Jedi@{Jedi}!to\_zero@{to\_zero}}
+\index{to\_zero@{to\_zero}!Jedi@{Jedi}}
+\doxysubsubsection{\texorpdfstring{to\_zero()}{to\_zero()}}
+{\footnotesize\ttfamily void Jedi\+::to\+\_\+zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+make data with null value 
 
 \mbox{\Hypertarget{class_jedi_a8a8485ea67fe4374c0d8e459cd841ff2}\label{class_jedi_a8a8485ea67fe4374c0d8e459cd841ff2}} 
 \index{Jedi@{Jedi}!write\_to\_file@{write\_to\_file}}

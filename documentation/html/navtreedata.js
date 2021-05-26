@@ -67,11 +67,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_add_planet_command_8h.html",
-"class_open_command.html#a1a141351f61ccdb71a2532393410ddba",
-"doctest_8h.html#a12c93237e40de2faacf5ac7b468382f8",
-"doctest_8h.html#a9a0787ef037d0d3b59ef15db7558105e",
-"functions_func.html",
-"namespacedoctest_1_1detail.html#acec9ff072dd86af95225a8beb9c57298"
+"class_jedi.html#aeed546e79af702c9b6a112a22bd08753",
+"doctest_8h.html#a0a5e62cddee11560955d5213caac78a4",
+"doctest_8h.html#a8f75b971030a39ef811d3526a62b36b8",
+"doctest_8h.html#afe1e20e7078d65704c6b2f4e55bbfc03",
+"namespacedoctest_1_1detail.html#a72d0259a5b3c0f0f3a88ea8d732223f8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
