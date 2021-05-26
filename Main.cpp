@@ -19,6 +19,5 @@ int main() {
 
 ///	doctest::Context().run();
 
-///	std::cin.get();
 	return 0; 
 }

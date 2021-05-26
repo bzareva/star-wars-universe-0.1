@@ -15,23 +15,52 @@ String::String(std::ifstream& fin) {
 	load_string(fin);
 }
 
-String::String(const String& obj) {
+String::String(const String& rhs) {
 
-	cpy(obj);
+	cpy(rhs);
 }
 
-String& String::operator=(const String& oth) {
+String& String::operator=(const String& rhs) {
 
-	if (this != &oth) {
+	if (this != &rhs) {
 		free();
-		cpy(oth);
+		cpy(rhs);
 	}
+	return *this;
+}
+ 
+String::String(String&& rhs)noexcept
+ :m_string(rhs.m_string), m_size(rhs.m_size), m_capacity(rhs.m_capacity) {
+
+	rhs.to_zero();
+}
+
+String& String::operator=(String&& rhs)noexcept {
+
+	if (this != &rhs) {
+
+		free();
+
+		m_string   = rhs.m_string;
+		m_capacity = rhs.m_capacity;
+		m_size     = rhs.m_size;
+
+		rhs.to_zero();
+	}
+
 	return *this;
 }
 
 String::~String() {
 
 	free();
+}
+
+void String::to_zero() {
+
+	m_string   = nullptr;
+	m_size     = 0;
+	m_capacity = 0;
 }
 
 void String::save_string(std::ofstream& fout) {
@@ -345,15 +374,15 @@ unsigned String::convert_to_integer(const char* str) {
 
 double String::convert_to_double(const char* str) {
 
-
 	if (str == nullptr) {
 		return 0;
 	}
 
+	bool point    = false;
+	int i         = 0;
 	double before = 0.;
-	double after = 0.;
-	int i = 0;
-	bool point = false;
+	double after  = 0.;
+
 	while (str[i] != '\0') {
 
 		switch (str[i]) {
@@ -487,6 +516,7 @@ unsigned String::cnt_digits(unsigned number) {
 		++cnt;
 		number /= 10;
 	}
+
 	return cnt;
 }
 
@@ -519,15 +549,18 @@ bool String::is_only_digits()const {
 		if (!is_digit(m_string[i]) && m_string[i] != '.') {
 			return false;
 		}
+
 		if (m_string[i] == '.') { //if it is float or double
 			++one_point;
 		}
+
 		++i;
 	}
 
 	if (one_point <= 1) {
 		return true;
 	}
+
 	return false;
 }
 
@@ -535,11 +568,14 @@ bool String::is_only_alpha()const {
 
 	unsigned i = 0;
 	while (m_string[i] != '\0') {
+
 		if (!is_alpha(m_string[i])) {
 			return false;
 		}
+
 		++i;
 	}
+
 	return true;
 }
 
@@ -552,9 +588,11 @@ bool String::is_whitespace_and_letters()const {
 		if (is_digit(m_string[i])) {
 			return false;
 		}
+
 		if (m_string[i] == ' ') {
 			whitesp = true;
 		}
+
 		++i;
 	}
 
@@ -635,9 +673,11 @@ void String::set_size(const unsigned& size) {
 
 	if (size < 0) {
 		m_size = 0;
+
 	} else if (size > m_capacity) {
 		reserve(RESIZE * size);
 		m_size = size;
+
 	} else if (size > 0 && size < m_capacity) {
 		m_size = size;
 	}
@@ -649,6 +689,7 @@ void String::set_cap(const unsigned& cap) {
 		m_capacity = DEFAULT_CAPACITY;
 		return;
 	}
+
 	if (cap > m_capacity) {
 		m_capacity = cap;
 	}

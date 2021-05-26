@@ -21,15 +21,35 @@ Jedi::Jedi(const unsigned& age, const double& force, const Rank& rank, const Str
 	//}
 }
 
-Jedi::Jedi(const Jedi& oth) {
+Jedi::Jedi(const Jedi& rhs) {
 
-	copy(oth);
+	copy(rhs);
 }
 
 Jedi& Jedi::operator=(const Jedi& rhs) {
 
 	if (this != &rhs) {
 		copy(rhs);
+	}
+	return *this;
+}
+
+Jedi::Jedi(Jedi&& rhs)noexcept 
+ :m_age(rhs.m_age), m_rank(rhs.m_rank), m_force(rhs.m_force), m_name_jedi(rhs.m_name_jedi), m_color_of_lightsaber(rhs.m_color_of_lightsaber) {
+
+	rhs.to_zero();
+}
+
+Jedi& Jedi::operator=(Jedi&& rhs)noexcept {
+
+	if (this != &rhs) {
+		m_age                 = rhs.m_age;
+		m_rank                = rhs.m_rank;
+		m_force               = rhs.m_force;
+		m_name_jedi           = rhs.m_name_jedi;
+		m_color_of_lightsaber = rhs.m_color_of_lightsaber;
+
+		rhs.to_zero();
 	}
 	return *this;
 }
@@ -101,16 +121,22 @@ std::istream& operator>>(std::istream& in, Jedi& oth) {
 		oth.m_rank = Rank::YOUNGLING;
 	} else*/ if (buff == String("initiate") || buff == String("INITIATE")) {
 		oth.m_rank = Rank::INITIATE;
+
 	} else if (buff == String("padawan") || buff == String("PADAWAN")) {
 		oth.m_rank = Rank::PADAWAN;
+
 	} else if (buff == String("knight aspirant") || buff == String("KNIGHT ASPIRANT")) {
 		oth.m_rank = Rank::KNIGHT_ASPIRANT;
+
 	} else if (buff == String("knight") || buff == String("KNIGHT")) {
 		oth.m_rank = Rank::KNIGHT;
+
 	} else if (buff == String("master") || buff == String("MASTER")) {
 		oth.m_rank = Rank::MASTER;
+
 	} else if (buff == String("battle master") || buff == String("BATTLE MASTER")) {
 		oth.m_rank = Rank::BATTLE_MASTER;
+
 	} else if (buff == String("grand master") || buff == String("GRAND MASTER")) {
 		oth.m_rank = Rank::GRAND_MASTER;
 	} 
@@ -127,18 +153,25 @@ std::ostream& operator<<(std::ostream& out, const Jedi& oth) {
 
 	if (oth.m_rank == Rank::YOUNGLING) {
 		out << "\nRank:YOUNGLING\n";
+
 	} else if (oth.m_rank == Rank::INITIATE) {
 		out << "\nRank:INITIATE\n";
+
 	} else if (oth.m_rank == Rank::PADAWAN) {
 		out << "\nRank:PADAWAN\n";
+
 	} else if (oth.m_rank == Rank::KNIGHT_ASPIRANT) {
 		out << "\nRank:KNIGHT ASPIRANT\n";
+
 	} else if (oth.m_rank == Rank::KNIGHT) {
 		out << "\nRank:KNIGHT\n";
+
 	} else if (oth.m_rank == Rank::MASTER) {
 		out << "\nRank:MASTER\n";
+
 	} else if (oth.m_rank == Rank::BATTLE_MASTER) {
 		out << "\nRank:BATTLE MASTER\n";
+
 	} else if (oth.m_rank == Rank::GRAND_MASTER) {
 		out << "\nRank:GRAND MASTER\n";
 	}
@@ -156,16 +189,22 @@ void Jedi::promote(const double& multiplier) {
 	
 	if (m_rank == Rank::YOUNGLING) {
 		m_rank = Rank::INITIATE;
+
 	} else if (m_rank == Rank::INITIATE) {
 		m_rank = Rank::PADAWAN;
+
 	} else if (m_rank == Rank::PADAWAN) {
 		m_rank = Rank::KNIGHT_ASPIRANT;
+
 	} else if (m_rank == Rank::KNIGHT_ASPIRANT) {
 		m_rank = Rank::KNIGHT;
+
 	} else if (m_rank == Rank::KNIGHT) {
 		m_rank = Rank::MASTER;
+
 	} else if (m_rank == Rank::MASTER) {
 		m_rank = Rank::BATTLE_MASTER;
+
 	} else if (m_rank == Rank::BATTLE_MASTER) {
 		m_rank = Rank::GRAND_MASTER;
 	}
@@ -181,16 +220,22 @@ void Jedi::demote(const double& multiplier) {
 	
 	if (m_rank == Rank::GRAND_MASTER) {
 		m_rank = Rank::BATTLE_MASTER;
+
 	} else if (m_rank == Rank::INITIATE) {
 		m_rank = Rank::YOUNGLING;
+
 	} else if (m_rank == Rank::PADAWAN) {
 		m_rank = Rank::INITIATE;
+
 	} else if (m_rank == Rank::KNIGHT_ASPIRANT) {
 		m_rank = Rank::PADAWAN;
+
 	} else if (m_rank == Rank::KNIGHT) {
 		m_rank = Rank::KNIGHT_ASPIRANT;
+
 	} else if (m_rank == Rank::MASTER) {
 		m_rank = Rank::KNIGHT;
+
 	} else if (m_rank == Rank::BATTLE_MASTER) {
 		m_rank = Rank::MASTER;
 	}
@@ -367,6 +412,15 @@ unsigned Jedi::rank_num()const {
 		num = 8; 
 	}
    return num;
+}
+
+void Jedi::to_zero() {
+
+	m_age                 = 0;
+	m_rank                = Rank::YOUNGLING;
+	m_force               = 0.0;
+	m_name_jedi           = nullptr;
+	m_color_of_lightsaber = nullptr;
 }
 
 void Jedi::copy(const Jedi& rhs) {

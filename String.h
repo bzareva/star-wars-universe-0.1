@@ -17,13 +17,22 @@ public:
 	String(std::ifstream& fin);
 
 	/// copy constructor
-	String(const String& obj);
+	String(const String& rhs);
 
 	/// operator=
-	String& operator=(const String& obj);
+	String& operator=(const String& rhs);
+
+	/// move copy constructor
+	String(String&& rhs)noexcept;
+
+	/// move operator=
+	String& operator=(String&& rhs)noexcept;
 
 	/// destructor
 	~String();
+
+	/// make null value of data
+	void to_zero();
 
 	/// saves string to file
 	void save_string(std::ofstream& fout);

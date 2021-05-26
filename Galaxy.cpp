@@ -1,6 +1,6 @@
 #include "Galaxy.h"
 
-Galaxy::Galaxy() {}
+//Galaxy::Galaxy() {}
 
 Galaxy::Galaxy(std::ifstream& fin) {
 
@@ -24,15 +24,36 @@ Galaxy::Galaxy(const Planet& planet) {
 	m_planets.push_back(planet);
 }
 
-Galaxy::Galaxy(const Galaxy& obj) {
+Galaxy::Galaxy(const Galaxy& rhs) {
 
-	copy(obj);
+	copy(rhs);
 }
 
 Galaxy& Galaxy::operator=(const Galaxy& rhs) {
 
 	if (this != &rhs) {
 		copy(rhs);			
+	}
+	return *this;
+}
+
+Galaxy::Galaxy(Galaxy&& rhs)noexcept {
+
+	for (unsigned i = 0; i < rhs.get_count_planet(); ++i) {
+		m_planets[i] = rhs.m_planets[i];
+	}
+
+	rhs.to_zero();
+}
+
+Galaxy& Galaxy::operator=(Galaxy&& rhs)noexcept {
+
+	if (this != &rhs) {
+		for (unsigned i = 0; i < rhs.get_count_planet(); ++i) {
+			m_planets[i] = rhs.m_planets[i];
+		}
+
+		rhs.to_zero();
 	}
 	return *this;
 }
@@ -396,6 +417,13 @@ void Galaxy::add_vec_jedi(const Vector<Jedi>& jedi, const String& planet_name) {
 			m_planets[i] += jedi;
 			break;
 		}
+	}
+}
+
+void Galaxy::to_zero() {
+
+	for (unsigned i = 0; i < m_planets.size(); ++i) {
+		m_planets[i] = Planet();
 	}
 }
 

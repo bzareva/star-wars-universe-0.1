@@ -14,7 +14,8 @@ void GalaxyManager::open_file(const String& file_name) {
     }
 
     std::ifstream fin(file_name.get_string(), std::ios::in);
-    if (!fin) {
+
+    if (!fin || !fin.is_open()) {
 
         std::cout << "Creating empty file with name " << file_name << std::endl;
 
@@ -27,9 +28,16 @@ void GalaxyManager::open_file(const String& file_name) {
         fout.close();
     }
 
+    m_universe.read_from_file(fin);
+
     m_is_open   = true;
     m_file_name = file_name;
     std::cout << "Successfully opened " << m_file_name << std::endl;
+
+    m_universe.read_from_file(fin);
+    std::cout << m_universe;
+
+    std::cout << "Successfully read information from file  " << m_file_name << std::endl;
 }
 
 void GalaxyManager::print(const String& type_object, const String& name) {
@@ -40,13 +48,17 @@ void GalaxyManager::print(const String& type_object, const String& name) {
             m_universe.print_planet(name);
             std::cout << "Successfully printed information about planet in file " << m_file_name << std::endl;
             return;
-        }
 
-        if (type_object == String("jedi") || type_object == String("JEDI")) {
+        } else if (type_object == String("jedi") || type_object == String("JEDI")) {
             m_universe.print_jedi(name);
             std::cout << "Successfully printed information about jedi in file " << m_file_name << std::endl;
             return;
-        }
+
+        } /*else if (type_object == String("galaxy") || type_object == String("GALAXY")) {
+            std::cout << m_universe;
+            std::cout << "Successfully printed information about galaxy in file " << m_file_name << std::endl;
+            return;
+        }*/
     }
     std::cout << "\nCommand print cannot be executed because file is not open!\n";
 }

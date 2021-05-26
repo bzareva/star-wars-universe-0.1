@@ -14,10 +14,16 @@ public:
 	Jedi(const unsigned& age = 56, const double& force = 34.43, const Rank& rank = Rank::YOUNGLING, const String& name = String("def_jedi"), const String& color_of_lightsaber = String("def_lightsaber"));
 
 	/// copy constructor
-	Jedi(const Jedi& oth);
+	Jedi(const Jedi& rhs);
 
 	/// assign content
 	Jedi& operator=(const Jedi& rhs);
+
+	/// move copy constructor
+	Jedi(Jedi&& rhs)noexcept;
+
+	/// move assign content
+	Jedi& operator=(Jedi&& rhs)noexcept;
 
 	/// compares two jedi by their ages are equal
 	bool operator==(const Jedi& rhs)const;	
@@ -55,9 +61,12 @@ public:
 	/// @returns Num of rank
 	unsigned rank_num()const;
 
+	/// make data with null value
+	void to_zero();
+
 private:
 	/// help method for operator= and copy ctor
-	void copy(const Jedi& oth);
+	void copy(const Jedi& rhs);
 
 public: 
 	/// setter for age of jedi

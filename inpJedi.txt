@@ -1,5 +1,0 @@
-Name of jedi: Rick
-Age: 23
-Force: 34.4
-Color of lightsaber: red
-Rank: padawan

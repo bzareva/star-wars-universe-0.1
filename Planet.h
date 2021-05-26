@@ -17,10 +17,16 @@ public:
 	Planet(const Vector<Jedi>& jedi, const String& planet_name = String("def_planet"));
 
 	/// copy constructor
-	Planet(const Planet& obj);
+	Planet(const Planet& rhs);
 
 	/// assign content
 	Planet& operator=(const Planet& rhs);
+
+	/// move copy constructor
+	Planet(Planet&& rhs)noexcept;
+
+	/// move assign content
+	Planet& operator=(Planet&& rhs)noexcept;
 	
 	/// input from console for Planet
 	friend std::istream& operator>>(std::istream& in, Planet& obj);
@@ -135,6 +141,9 @@ public:
 
 	/// setter for inhabits jedi
 	void set_jedi(const Vector<Jedi>& jedi);
+
+	/// make data with null value
+	void to_zero();
 
 private:
 	/// help method for operator= and copy ctor

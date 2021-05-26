@@ -19,15 +19,40 @@ Planet::Planet(const Vector<Jedi>& jedi, const String& planet_name)
 	}
 }
 
-Planet::Planet(const Planet& obj) {
+Planet::Planet(const Planet& rhs) {
 
-	copy(obj);
+	copy(rhs);
 }
 
 Planet& Planet::operator=(const Planet& rhs) {
 
 	if (this != &rhs) {
 		copy(rhs);
+	}
+	return *this;
+}
+
+Planet::Planet(Planet&& rhs)noexcept
+ :m_planet_name(rhs.m_planet_name) {
+
+	for (unsigned i = 0; i < rhs.get_count_jedi(); ++i) {
+		m_jedi[i] = rhs.m_jedi[i];
+	}
+
+	rhs.to_zero();
+}
+
+Planet& Planet::operator=(Planet&& rhs)noexcept {
+
+	if (this != &rhs) {
+		m_planet_name = rhs.m_planet_name;
+
+		//m_jedi = rhs.m_jedi;
+		for (unsigned i = 0; i < rhs.get_count_jedi(); ++i) {
+			m_jedi[i] = rhs.m_jedi[i];
+		}
+
+		rhs.to_zero();
 	}
 	return *this;
 }
@@ -534,6 +559,14 @@ void Planet::set_jedi(const Vector<Jedi>& jedi) {
 
 	for (unsigned i = 0; i < jedi.size(); ++i) {
 		m_jedi.push_back(jedi[i]);
+	}
+}
+
+void Planet::to_zero() {
+
+	m_planet_name = nullptr;
+	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+		m_jedi[i] = Jedi();
 	}
 }
 

@@ -9,7 +9,7 @@ class Galaxy : public Base {
 
 public:
 	/// default constructor
-	Galaxy();
+	Galaxy() = default;
 
 	/// constructor with parameter from type ifstream for load to text file
 	Galaxy(std::ifstream& fin);
@@ -21,10 +21,16 @@ public:
 	Galaxy(const Planet& planet);
 
 	/// copy constructor
-	Galaxy(const Galaxy& obj);
+	Galaxy(const Galaxy& rhs);
 
 	/// assign content
 	Galaxy& operator=(const Galaxy& rhs);
+
+	/// move copy constructor
+	Galaxy(Galaxy&& rhs)noexcept;
+
+	/// move assign content
+	Galaxy& operator=(Galaxy&& rhs)noexcept;
 
 	/// input from console for Galaxy
 	friend std::istream& operator>>(std::istream& in, Galaxy& obj);
@@ -122,9 +128,12 @@ public:
 	/// adds vector of jedi in given planet 
 	void add_vec_jedi(const Vector<Jedi>& jedi, const String& planet_name);
 
+	/// make data with null value
+	void to_zero();
+
 private:
 	/// help method for operator= and copy ctor
-	void copy(const Galaxy& obj);
+	void copy(const Galaxy& rhs);
 
 private:
 	Vector<Planet> m_planets;

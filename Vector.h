@@ -18,10 +18,16 @@ public:
 	Vector(const T& item);
 
 	/// copy constructor
-	Vector(const Vector<T>& obj);
+	Vector(const Vector<T>& rhs);
 
 	/// assign content
-	Vector<T>& operator=(const Vector<T>& obj);
+	Vector<T>& operator=(const Vector<T>& rhs);
+
+	/// move copy constructor
+	Vector(Vector<T>&& rhs)noexcept;
+
+	/// move assign content
+	Vector<T>& operator=(Vector<T>&& rhs)noexcept;
 
 	/// destructor
 	~Vector();
@@ -36,7 +42,7 @@ public:
 	Vector<T>& operator+=(const T& item);
 
 	/// sum of two vectors
-	Vector<T>& operator+=(const Vector<T>& obj);
+	Vector<T>& operator+=(const Vector<T>& rhs);
 
 	/// checks if empty vector
 	bool empy()const;
@@ -89,6 +95,9 @@ public:
 	/// access data(constant)
 	const T* data()const;
 
+	/// make data with null values
+	void to_zero();
+
 	/// output operator
 	template<class T> friend std::ostream& operator<<(std::ostream& out, const Vector<T>& obj);
 
@@ -97,7 +106,7 @@ public:
 
 private:
 	/// help method for assign content and copy ctor 
-	void copy(const Vector<T>& obj);
+	void copy(const Vector<T>& rhs);
 
 	/// deletes all dynamic allocated memory in Vector, more precisely dector call it
 	void free();
@@ -155,17 +164,39 @@ inline Vector<T>::Vector(const T& item)
 }
 
 template<class T>
-inline Vector<T>::Vector(const Vector<T>& obj) {
+inline Vector<T>::Vector(const Vector<T>& rhs) {
 
-	copy(obj);
+	copy(rhs);
 }
 
 template<class T>
-inline Vector<T>& Vector<T>::operator=(const Vector<T>& obj) {
+inline Vector<T>& Vector<T>::operator=(const Vector<T>& rhs) {
 
-	if (this != &obj) {
+	if (this != &rhs) {
 		free();
-		copy(obj);
+		copy(rhs);
+	}
+	return *this;
+}
+
+template<class T>
+inline Vector<T>::Vector(Vector<T>&& rhs)noexcept
+ :m_data(rhs.m_data), m_size(rhs.m_size), m_capacity(rhs.m_capacity) {
+
+	rhs.to_zero();
+}
+
+template<class T>
+inline Vector<T>& Vector<T>::operator=(Vector<T>&& rhs)noexcept {
+
+	if (this != &rhs) {
+		free();
+			
+		m_data     = rhs.m_data;
+		m_size     = rhs.m_size;
+		m_capacity = rhs.m_capacity;
+
+		rhs.to_zero()
 	}
 	return *this;
 }
@@ -196,14 +227,14 @@ inline Vector<T>& Vector<T>::operator+=(const T& item) {
 }
 
 template<class T>
-inline Vector<T>& Vector<T>::operator+=(const Vector<T>& obj) {
+inline Vector<T>& Vector<T>::operator+=(const Vector<T>& rhs) {
 
-	if (m_size + obj.m_size > m_capacity) {
-		reserve(2 * (m_size + obj.m_size));
+	if (m_size + rhs.m_size > m_capacity) {
+		reserve(2 * (m_size + rhs.m_size));
 	}
 
-	for (unsigned i = 0; i < obj.m_size; i++) {
-		*this += obj[i];
+	for (unsigned i = 0; i < rhs.m_size; i++) {
+		*this += rhs[i];
 	}
 	return *this;
 }
@@ -374,6 +405,14 @@ inline const T* Vector<T>::data()const {
 }
 
 template<class T>
+inline void Vector<T>::to_zero() {
+
+	m_data     = nullptr;
+	m_size     = 0;
+	m_capacity = 0;
+}
+
+template<class T>
 inline std::ostream& operator<<(std::ostream& out, const Vector<T>& obj) {
 
 	for (unsigned i = 0; i < obj.m_size; ++i) {
@@ -407,14 +446,14 @@ inline std::istream& operator>>(std::istream& in, Vector<T>& obj) {
 }
 
 template<class T>
-inline void Vector<T>::copy(const Vector<T>& obj) {
+inline void Vector<T>::copy(const Vector<T>& rhs) {
 
-	m_capacity = obj.m_capacity;
-	m_size     = obj.m_size;
+	m_capacity = rhs.m_capacity;
+	m_size     = rhs.m_size;
 
 	m_data = new T[m_capacity];
-	for (unsigned i = 0; i < obj.m_size && i < m_capacity; ++i) {
-		m_data[i] = obj.m_data[i];
+	for (unsigned i = 0; i < rhs.m_size && i < m_capacity; ++i) {
+		m_data[i] = rhs.m_data[i];
 	}
 }
 

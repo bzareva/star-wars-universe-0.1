@@ -1,6 +1,0 @@
-
-Name of jedi: Will
-Age of jedi: 23
-Force of jedi: 344.4
-Color of lightsaber of jedi: yellow
-Rank of jedi: PADAWAN
