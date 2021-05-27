@@ -31,9 +31,6 @@ public:
 	/// destructor
 	~String();
 
-	/// make null value of data
-	void to_zero();
-
 	/// saves string to file
 	void save_string(std::ofstream& fout);
 
@@ -155,6 +152,9 @@ public:
 	bool is_valid_rank()const;
 
 private:
+	/// make null value of data
+	void to_zero();
+
 	/// help method for operator= and copy ctor 
 	void cpy(const String& obj);
 

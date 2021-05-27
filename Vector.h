@@ -95,9 +95,6 @@ public:
 	/// access data(constant)
 	const T* data()const;
 
-	/// make data with null values
-	void to_zero();
-
 	/// output operator
 	template<class T> friend std::ostream& operator<<(std::ostream& out, const Vector<T>& obj);
 
@@ -105,6 +102,9 @@ public:
 	template<class T> friend std::istream& operator>>(std::istream& in, Vector<T>& obj);
 
 private:
+	/// make data with null values
+	void to_zero();
+
 	/// help method for assign content and copy ctor 
 	void copy(const Vector<T>& rhs);
 
@@ -135,12 +135,14 @@ inline Vector<T>::Vector(const T* data, const unsigned& size) {
 
 	if (size < 0) {
 		m_size = 0;
+
 	} else {
 		m_size = size;
 	}
 
 	if (VECTOR_CAPACITY < m_size) {
-		m_capacity = m_size;
+		m_capacity = m_size + 1;
+
 	} else {
 		m_capacity = VECTOR_CAPACITY;
 	}
@@ -230,12 +232,19 @@ template<class T>
 inline Vector<T>& Vector<T>::operator+=(const Vector<T>& rhs) {
 
 	if (m_size + rhs.m_size > m_capacity) {
-		reserve(2 * (m_size + rhs.m_size));
+
+		try {
+			reserve(2 * (m_size + rhs.m_size));
+
+		} catch (std::logic_error& e) {
+			std::cout << e.what() << std::endl;
+		}
 	}
 
 	for (unsigned i = 0; i < rhs.m_size; i++) {
 		*this += rhs[i];
 	}
+
 	return *this;
 }
 
@@ -249,7 +258,13 @@ template<class T>
 inline void Vector<T>::push_back(const T& item) {
 
 	if (m_size + 1 >= m_capacity) {
-		reserve(2 * m_size);
+
+		try {
+			reserve(2 * m_size);
+
+		} catch (std::logic_error& e) {
+			std::cout << e.what() << std::endl;
+		}
 	}
 
 	m_data[m_size] = item;
@@ -266,12 +281,18 @@ template<class T>
 inline void Vector<T>::insert(const unsigned& index, const T& item) {
 
 	if (index < 0 || index >= m_size) {
-		std::cout << "\nInvalid index!\n";
+		throw std::out_of_range("\nInvalid index!\n");
 		return;
 	}
 
 	if (m_size >= m_capacity) {
-		reserve(2 * m_size);
+
+		try {
+			reserve(2 * m_size);
+
+		} catch (std::logic_error& e) {
+			std::cout << e.what() << std::endl;
+		}
 	}
 
 	for (unsigned i = m_size; i > index; --i) {
@@ -286,7 +307,7 @@ template<class T>
 inline void Vector<T>::erase(const unsigned& index) {
 
 	if (index < 0 || index >= m_size) {
-		std::cout << "\nInvalid index!\n";
+		throw std::out_of_range("\nInvalid index!\n");
 		return;
 	}
 
@@ -301,9 +322,8 @@ inline void Vector<T>::erase(const unsigned& index) {
 template<class T>
 inline void Vector<T>::reserve(const unsigned& capacity) {
 
-	if (capacity <= 0 || capacity >= m_capacity) {
-		std::cout << "\nInvalid capacity!\n";
-		return;
+	if (capacity <= 0 || capacity <= m_capacity || capacity <= m_size) {
+		throw std::logic_error("\nInvalid capacity!\n");
 	}
 
 	m_capacity = capacity;
@@ -333,8 +353,8 @@ inline T& Vector<T>::at(const unsigned& index) {
 
 	try {
 		return m_data[index];
-	}
-	catch (std::out_of_range& e) {
+
+	} catch (std::out_of_range& e) {
 		std::cerr << e.what() << std::endl;
 		/*if (index < 0 || index > m_size) {
 			throw std::out_of_range("Invalid index!");
@@ -347,8 +367,8 @@ inline const T& Vector<T>::at(const unsigned& index)const {
 
 	try {
 		return m_data[index];
-	}
-	catch (std::out_of_range& e) {
+
+	} catch (std::out_of_range& e) {
 		std::cerr << e.what() << std::endl;
 		/*if (index < 0 || index > m_size) {
 			throw std::out_of_range("Invalid index!");
@@ -405,14 +425,6 @@ inline const T* Vector<T>::data()const {
 }
 
 template<class T>
-inline void Vector<T>::to_zero() {
-
-	m_data     = nullptr;
-	m_size     = 0;
-	m_capacity = 0;
-}
-
-template<class T>
 inline std::ostream& operator<<(std::ostream& out, const Vector<T>& obj) {
 
 	for (unsigned i = 0; i < obj.m_size; ++i) {
@@ -426,8 +438,10 @@ inline std::istream& operator>>(std::istream& in, Vector<T>& obj) {
 
 	unsigned size;
 	in >> size;
+
 	if (size < 0) {
 		obj.m_size = 0;
+
 	} else {
 		obj.m_size = size;
 	}
@@ -443,6 +457,14 @@ inline std::istream& operator>>(std::istream& in, Vector<T>& obj) {
 	}
 
 	return in;
+}
+
+template<class T>
+inline void Vector<T>::to_zero() {
+
+	m_data     = nullptr;
+	m_size     = 0;
+	m_capacity = 0;
 }
 
 template<class T>

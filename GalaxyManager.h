@@ -17,7 +17,7 @@ public:
     GalaxyManager(const String& file_name, const Galaxy& universe = Galaxy());
 
     /// open file by wanted name
-    void open_file(const String& file_name);
+    void open_file();
 
     /// print information about given object(Jedi or Planet) by wanted name
     void print(const String& type_object, const String& name);
@@ -76,8 +76,14 @@ public:
     /// @returns Name of file with which is current opened
     String get_file_name()const;
 
+    /// get file name
+    void set_file_name(const String& file_name);
+
+    /// set universe
+    void set_universe(const Galaxy& rhs);
+
 private:
-    bool   m_is_open;
+    bool   m_is_open; // {false};
     String m_file_name;
     Galaxy m_universe;
      

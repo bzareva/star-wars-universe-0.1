@@ -46,9 +46,6 @@ public:
 	/// decreases the given jedi by one rank down in ladder and lowers its strength by a formula
 	void demote(const double& multiplier);
 
-	/// @returns A pointer to a dynamically allocated jedi 
-	Jedi* clone()const;
-
 	/// outputs formatted information for jedi on *file*  
 	void write_to_file(std::ofstream& fout)const;
 
@@ -61,10 +58,10 @@ public:
 	/// @returns Num of rank
 	unsigned rank_num()const;
 
+private:
 	/// make data with null value
 	void to_zero();
 
-private:
 	/// help method for operator= and copy ctor
 	void copy(const Jedi& rhs);
 

@@ -6,38 +6,36 @@ GalaxyManager::GalaxyManager()
 GalaxyManager::GalaxyManager(const String& file_name, const Galaxy& universe)
  :m_is_open(false), m_file_name(file_name), m_universe(universe) {}
 
-void GalaxyManager::open_file(const String& file_name) {
+void GalaxyManager::open_file() {
 
     if (m_is_open) {
         std::cout << "\nFile is already opened!\n";
         return;
     }
 
-    std::ifstream fin(file_name.get_string(), std::ios::in);
+    std::ifstream fin(m_file_name.get_string(), std::ios::in);
 
     if (!fin || !fin.is_open()) {
 
-        std::cout << "Creating empty file with name " << file_name << std::endl;
+        std::cout << "Creating empty file with name " << m_file_name << std::endl;
 
-        std::ofstream fout(file_name.get_string(), std::ios::out);
-        if (!fout) {
+        std::ofstream fout(m_file_name.get_string(), std::ios::out);
+        if (!fout || !fout.is_open()) {
             throw std::runtime_error("Run again the program!\n");
         }
 
+        m_is_open  = true;
+        m_universe = Galaxy();
+
         fout.clear();
         fout.close();
+
+        return;
     }
 
     m_universe.read_from_file(fin);
-
-    m_is_open   = true;
-    m_file_name = file_name;
-    std::cout << "Successfully opened " << m_file_name << std::endl;
-
-    m_universe.read_from_file(fin);
-    std::cout << m_universe;
-
-    std::cout << "Successfully read information from file  " << m_file_name << std::endl;
+    m_is_open = true;
+    std::cout << "Successfully opened " << m_file_name << " !\n";
 }
 
 void GalaxyManager::print(const String& type_object, const String& name) {
@@ -101,7 +99,7 @@ void GalaxyManager::close_file() {
     fout.clear();
     fout.close();
     m_is_open = false;
-    std::cout << "Successfully close file " << m_file_name << std::endl;
+    std::cout << "Successfully close file " << m_file_name << "!\n";
 }
 
 void GalaxyManager::save() {
@@ -117,13 +115,17 @@ void GalaxyManager::save() {
     }
 
     m_universe.write_to_file(fout);
+
     fout.clear();
     fout.close();
+
     m_is_open = false;
     std::cout << "\nSuccessfully saved "<< m_file_name << std::endl;
 }
 
 void GalaxyManager::save_as(const String& file_name) {
+
+   // m_file_name = file_name;
 
     std::ofstream fout(file_name.get_string(), std::ios::out | std::ios::trunc);
     if (!fout) {
@@ -132,10 +134,12 @@ void GalaxyManager::save_as(const String& file_name) {
     }
 
     m_universe.write_to_file(fout);
+
     fout.clear();
     fout.close();
+
     m_is_open = false;    
-    std::cout << "\nSuccessfully saved another" << file_name << std::endl;
+    std::cout << "\nSuccessfully saved another" << file_name << "!\n";
 }
 
 void GalaxyManager::exit_command()const {
@@ -211,4 +215,14 @@ void GalaxyManager::print_jedi(const String& jedi_name)const {
 String GalaxyManager::get_file_name()const {
 
     return m_file_name;
+}
+
+void GalaxyManager::set_file_name(const String& file_name) {
+
+    m_file_name = file_name;
+}
+
+void GalaxyManager::set_universe(const Galaxy& rhs) {
+
+    m_universe = rhs;
 }

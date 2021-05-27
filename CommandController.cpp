@@ -20,7 +20,13 @@
 void CommandController::execute_command(GalaxyManager& cosmos) {
 
 	for (unsigned i = 0; i < m_commands.size(); ++i) {
-		m_commands[i]->execute(cosmos);
+
+		try {
+			m_commands[i]->execute(cosmos);
+
+		} catch (...) {
+			std::cout << "\nError during the execution of commands!\n";
+		}
 	}
 }
 
@@ -31,7 +37,12 @@ void CommandController::register_command(Command* register_command) {
 
 void CommandController::init_command(GalaxyManager& cosmos) {
 
-	String file(cosmos.get_file_name());
+	std::cout << ">Enter file name:";
+	String file;
+	std::cin >> file;
+
+	cosmos.set_file_name(file);
+
 	String input;
 	do {
 		std::cout << ">command:";
@@ -42,8 +53,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 			try {
 				Command* c_open = new OpenCommand();
 				register_command(c_open);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -52,8 +63,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 			try {
 				Command* c_close = new CloseCommand();
 				register_command(c_close);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -62,8 +73,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 			try {
 				Command* c_save = new SaveCommand();
 				register_command(c_save);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -75,10 +86,12 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				file = file_name[0];
 
+				//cosmos.set_file_name(file_name[0]);
+
 				Command* c_saveas = new SaveAsCommand(input, file_name);
 				register_command(c_saveas);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -88,8 +101,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 			try {
 				Command* c_help = new HelpCommand();
 				register_command(c_help);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -98,8 +111,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 			try {
 				Command* c_exit = new ExitCommand();
 				register_command(c_exit);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -111,8 +124,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_add = new AddPlanetCommand(input, args);
 				register_command(c_add);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -128,8 +141,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_create = new CreateJediCommand(input, args);
 				register_command(c_create);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -145,8 +158,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_remove = new RemoveCommand(input, args);
 				register_command(c_remove);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -162,8 +175,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_promote = new PromoteJediCommand(input, args);
 				register_command(c_promote);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -179,8 +192,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_demote = new DemoteJediCommand(input, args);
 				register_command(c_demote);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -192,8 +205,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_strong = new GetStrongestJediCommand(input, args);
 				register_command(c_strong);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -209,8 +222,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_young = new GetYoungestJediCommand(input, args);
 				register_command(c_young);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -236,8 +249,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_saber = new GetMostUsedSaberColorCommand(input, args);
 				register_command(c_saber);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -254,8 +267,8 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_print = new PrintCommand(input, args);
 				register_command(c_print);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
 
@@ -271,11 +284,10 @@ void CommandController::init_command(GalaxyManager& cosmos) {
 
 				Command* c_plus = new OperatorPlusCommand(input, args);
 				register_command(c_plus);
-			}
-			catch (std::runtime_error& e) {
+
+			} catch (std::runtime_error& e) {
 				std::cerr << e.what();
 			}
-
 		} 
 
 	} while (input !=  String("exit"));

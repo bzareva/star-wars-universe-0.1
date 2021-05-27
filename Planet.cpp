@@ -1,11 +1,5 @@
 #include "Planet.h"
 
-//Planet::Planet()  
-// :m_planet_name(String("def_planet_name")) {
-//
-//	m_jedi.push_back(Jedi());
-//}
-
 Planet::Planet(std::ifstream& fin) {
 
 	read_from_file(fin);
@@ -89,7 +83,6 @@ Planet operator+(Planet lhs, const Planet& rhs) {
 
 	lhs += rhs;
 	lhs.sort();
-//	std::cout << lhs;
 	return lhs;
 }
 
@@ -112,11 +105,11 @@ bool Planet::operator==(const Planet& rhs)const {
 	}
 
 	for (unsigned i = 0, j = 0; i < m_jedi.size() && j < rhs.m_jedi.size(); ++i, ++j) {
+
 		if (m_jedi[i] != rhs[j]) {
 			return false;
 		}
 	}
-
 	return true;
 }
 
@@ -133,9 +126,8 @@ Planet& Planet::operator+=(const Jedi& rhs) {
 
 Planet& Planet::operator+=(const Planet& rhs) {
 
-	for (unsigned i = 0; i < rhs.m_jedi.size(); ++i) { //rhs.m_jedi.size() == rhs.get_count_jedi()
-		m_jedi += rhs.m_jedi[i];
-		//m_jedi.push_back(rhs.m_jedi[i]);
+	for (unsigned i = 0; i < rhs.m_jedi.size(); ++i) { // rhs.m_jedi.size() == rhs.get_count_jedi()
+		m_jedi += rhs.m_jedi[i];                       // m_jedi.push_back(rhs.m_jedi[i].clone());
 	}
 	return *this;
 }
@@ -269,7 +261,6 @@ void Planet::create_jedi(const String& planet_name, const String& jedi_name, con
 	}
 
 	Jedi curr(jedi_age, jedi_strength, jedi_rank, jedi_name, saber_color);
-	//m_jedi.push_back(curr);
 	m_jedi += curr;
 
 	std::cout << "\nSuccessful added jedi!\n";
@@ -320,7 +311,7 @@ Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& je
 	}
 
 	if (!flag) {
-		throw "\nHave not founded jedi with this description!\n";
+		throw std::logic_error("\nHave not founded jedi with this description!\n");
 	}
 
 	for (unsigned i = 0; i < temp.size() - 1; ++i) {
@@ -328,11 +319,13 @@ Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& je
 		unsigned curr = temp[i].get_age();
 		unsigned ind  = i;
 		for (unsigned j = i + 1; j < temp.size(); ++j) {
+
 			if (curr > temp[j].get_age()) {
 				ind = j;
 				curr = temp[j].get_age();
 			}
 		}
+
 		if (ind != i) {
 			Jedi sw   = temp[i];
 			temp[i]   = temp[ind];
@@ -342,8 +335,8 @@ Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& je
 
 	unsigned first = m_jedi[0].get_age();
 	for (unsigned i = 1; i < temp.size() - 1; ++i) {
-		if (temp[i].get_age() != first) {
 
+		if (temp[i].get_age() != first) {
 			temp.erase(i);
 			temp.erase(i + 1);
 		}
@@ -361,6 +354,7 @@ String Planet::get_most_used_saber_color(const String& planet_name, const Rank& 
 
 	Vector<String> colors;
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
+
 		if (m_jedi[i].get_rank() == jedi_rank) {
 			colors.push_back(m_jedi[i].get_color_of_lightsaber());
 		}
@@ -370,6 +364,7 @@ String Planet::get_most_used_saber_color(const String& planet_name, const Rank& 
 	for (unsigned i = 0; i < erase_repeates.size() - 1; ++i) {
 
 		for (unsigned j = i + 1; j < erase_repeates.size(); ++j) {
+
 			if (erase_repeates[i] == erase_repeates[j]) {
 				erase_repeates.erase(j);
 			}
@@ -392,6 +387,7 @@ String Planet::get_most_used_saber_color(const String& planet_name, const Rank& 
 
 	unsigned ind = 0;
 	for (unsigned i = 1; i < cnt_colors.size(); ++i) {
+
 		if (cnt_colors[i] > cnt_colors[ind]) {
 			ind = i;
 		}
@@ -429,11 +425,12 @@ void Planet::promote_jedi(const String& jedi_name, const double& multiplier) {
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 
 		if (jedi_name == m_jedi[i].get_name_jedi()) {
+
 			try {
 				m_jedi[i].promote(multiplier);
 				flag = true;
-			}
-			catch (std::logic_error& e){
+
+			} catch (std::logic_error& e){
 				std::cerr << e.what() << std::endl;
 			}
 		}
@@ -451,13 +448,13 @@ void Planet::demote_jedi(const String& jedi_name, const double& multiplier) {
 
 	bool flag = false;
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
-
 		if (jedi_name == m_jedi[i].get_name_jedi()) {
+
 			try {
 				m_jedi[i].demote(multiplier);
 				flag = true;
-			}
-			catch (std::logic_error& e) {
+
+			} catch (std::logic_error& e) {
 				std::cerr << e.what() << std::endl;
 			}
 		}
@@ -565,8 +562,9 @@ void Planet::set_jedi(const Vector<Jedi>& jedi) {
 void Planet::to_zero() {
 
 	m_planet_name = nullptr;
+
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
-		m_jedi[i] = Jedi();
+		m_jedi[i] = Jedi().clone();
 	}
 }
 
@@ -575,7 +573,6 @@ void Planet::copy(const Planet& obj) {
 	m_planet_name = obj.m_planet_name;
 
 	for (unsigned i = 0; i < obj.m_jedi.size(); ++i) {
-		m_jedi += obj.m_jedi[i];
-		//m_jedi[i] = obj.m_jedi[i];
+		m_jedi += obj.m_jedi[i].clone();
 	}
 }

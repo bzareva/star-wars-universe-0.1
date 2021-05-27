@@ -8,7 +8,7 @@
 class SaveCommand : public Command {
 
 public:
-	SaveCommand() :Command(String("save")) {};
+	SaveCommand(const String& cmd = String("save")) :Command(cmd) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 

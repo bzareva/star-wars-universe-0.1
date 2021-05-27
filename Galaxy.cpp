@@ -1,7 +1,5 @@
 #include "Galaxy.h"
 
-//Galaxy::Galaxy() {}
-
 Galaxy::Galaxy(std::ifstream& fin) {
 
 	read_from_file(fin);
@@ -12,8 +10,6 @@ Galaxy::Galaxy(const Vector<Planet>& planets) {
 	for (unsigned i = 0; i < planets.size(); ++i) {
 
 		for (unsigned j = 0; j < planets[i].get_count_jedi(); ++j) {
-			//add_planet(planets[i]);
-			//m_planets += planets[i];
 			m_planets.push_back(planets[i]);
 		}
 	}
@@ -49,6 +45,7 @@ Galaxy::Galaxy(Galaxy&& rhs)noexcept {
 Galaxy& Galaxy::operator=(Galaxy&& rhs)noexcept {
 
 	if (this != &rhs) {
+
 		for (unsigned i = 0; i < rhs.get_count_planet(); ++i) {
 			m_planets[i] = rhs.m_planets[i];
 		}
@@ -71,7 +68,6 @@ std::istream& operator>>(std::istream& in, Galaxy& obj) {
 		Planet curr;
 		in >> curr;
 		obj.m_planets.push_back(curr);
-		//in >> obj.m_planets[i];
 	}
 
 	return in;
@@ -107,16 +103,14 @@ Galaxy operator-(Galaxy lhs, const Planet& rhs) {
 
 Galaxy& Galaxy::operator+=(const Planet& rhs) {
 
-	m_planets += rhs;
-	//m_planets.push_back(rhs);
+	m_planets += rhs;	
 	return *this;
 }
 
 Galaxy& Galaxy::operator+=(const Galaxy& rhs) {
 
 	for (unsigned i = 0; i < rhs.m_planets.size(); ++i) {
-		m_planets += rhs.m_planets[i];
-		//m_planets.push_back(rhs.m_planets[i]);
+		m_planets += rhs.m_planets[i]; 
 	}
 	return *this;
 }
@@ -127,6 +121,7 @@ Galaxy& Galaxy::operator-=(const Planet& rhs) {
 
 		if (m_planets[i] == rhs) {
 			m_planets.erase(i);
+
 			return *this;
 		}
 	}
@@ -240,11 +235,11 @@ String Galaxy::type_name()const {
 void Galaxy::create_jedi(const String& planet_name, const String& jedi_name, const Rank& jedi_rank, const unsigned& jedi_age, const String& saber_color, const double& jedi_strength) {
 
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
-
 		if (m_planets[i].get_planet_name() == planet_name) {
-			for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
 
+			for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
 				if (m_planets[i].get_jedi(j).get_name_jedi() == jedi_name) {
+
 					std::cout << "\nAlready exist Jedi with this name on the given planet.\n";
 					return;
 				}
@@ -268,11 +263,11 @@ void Galaxy::create_jedi(const String& planet_name, const String& jedi_name, con
 void Galaxy::remove_jedi(const String& jedi_name, const String& planet_name) {
 
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
-
 		if (m_planets[i].get_planet_name() == planet_name) {
-			for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
 
+			for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
 				if (jedi_name == m_planets[i].get_jedi(j).get_name_jedi()) {
+
 					m_planets[i].remove_jedi(jedi_name, planet_name);
 					std::cout << "\nSuccessfully removed jedi.\n";
 					return;
@@ -293,7 +288,7 @@ Jedi Galaxy::get_strongest_jedi(const String& planet_name)const {
 		}
 	}
 
-	throw "Not founded information about jedi in the given planet.";
+	throw std::exception("\nNot founded information about jedi in the given planet.\n");
 }
 
 Vector<Jedi> Galaxy::get_youngest_jedi(const String& planet_name, const Rank& jedi_rank)const {
@@ -305,7 +300,7 @@ Vector<Jedi> Galaxy::get_youngest_jedi(const String& planet_name, const Rank& je
 		}
 	}
 
-	throw "Not founded jedi with the given rank on the given planet.";
+	throw std::exception("\nNot founded jedi with the given rank on the given planet.\n");
 }
 
 String Galaxy::get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const {
@@ -317,7 +312,7 @@ String Galaxy::get_most_used_saber_color(const String& planet_name, const Rank& 
 		}
 	}
 
-	throw "Not founded jedi with the given rank on the given planet.";
+	throw std::exception("\nNot founded jedi with the given rank on the given planet.\n");
 }
 
 String Galaxy::get_most_used_saber_color(const String& planet_name)const {
@@ -329,7 +324,7 @@ String Galaxy::get_most_used_saber_color(const String& planet_name)const {
 		}
 	}
 
-	throw "Not founded information about this planet.";
+	throw std::exception("\nNot founded information about this planet.\n");
 }
 
 void Galaxy::print_planet(const String& planet_name) {
@@ -353,10 +348,9 @@ void Galaxy::print_jedi(const String& jedi_name)const {
 void Galaxy::promote_jedi(const String& jedi_name, const double& multiplier) {
 
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
-
 		for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
-			if (at(i).get_jedi().at(j).get_name_jedi() == jedi_name) {
 
+			if (at(i).get_jedi().at(j).get_name_jedi() == jedi_name) {
 				m_planets[i].promote_jedi(jedi_name, multiplier);
 			}
 		}	
@@ -366,10 +360,9 @@ void Galaxy::promote_jedi(const String& jedi_name, const double& multiplier) {
 void Galaxy::demote_jedi(const String& jedi_name, const double& multiplier) {
 
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
-
 		for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
-			if (at(i).get_jedi().at(j).get_name_jedi() == jedi_name) {
 
+			if (at(i).get_jedi().at(j).get_name_jedi() == jedi_name) {
 				m_planets[i].demote_jedi(jedi_name, multiplier);
 			}
 		}
@@ -397,12 +390,23 @@ String Galaxy::get_planet_name(const unsigned& index)const {
 void Galaxy::operator_plus(const String& lhs_planet, const String& rhs_planet) {
 
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
+		if (lhs_planet == m_planets[i].get_planet_name()) { 
 
-		if (lhs_planet == m_planets[i].get_planet_name()) {
 			for (unsigned j = 0; j < m_planets.size(); ++j) {
-
 				if (rhs_planet == m_planets[j].get_planet_name()) {
-					std::cout << (m_planets[i] + m_planets[j]) << std::endl;
+
+					Planet sub_planet;
+					sub_planet += m_planets[i];
+					sub_planet += m_planets[j];
+					sub_planet.sort();
+					std::cout << sub_planet << std::endl;
+
+					///second way when modify object data
+					//m_planets[i] += m_planets[j];
+					//m_planets[i].sort();
+					//std::cout << m_planets[i] << std::endl;
+
+					break;
 				}
 			}
 		}

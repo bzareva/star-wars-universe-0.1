@@ -6,19 +6,21 @@ Jedi::Jedi(std::ifstream& fin) {
 }
 
 Jedi::Jedi(const unsigned& age, const double& force, const Rank& rank, const String& name, const String& color_of_lightsaber)
- : m_force(force), m_rank(rank), m_name_jedi(name), m_color_of_lightsaber(color_of_lightsaber) {
+ :m_rank(rank), m_name_jedi(name), m_color_of_lightsaber(color_of_lightsaber) {
 
 	if (age <= 0) {
 		m_age = 1;
+
 	} else {
 		m_age = age;
 	}
 
-	//if (force < 0) {
-	//	m_force = 0.;
-	//} else {
-	//	m_force = force;
-	//}
+	if (force <= 0) {
+		m_force = 10.;
+
+	} else {
+		m_force = force;
+	}
 }
 
 Jedi::Jedi(const Jedi& rhs) {
@@ -112,7 +114,7 @@ std::istream& operator>>(std::istream& in, Jedi& oth) {
 	oth.m_color_of_lightsaber = buff; // set saber color
 
 
-	oth.m_rank = Rank::YOUNGLING; /// if input is not valid, default rank will be youngling 
+	oth.m_rank = Rank::YOUNGLING; // if input is not valid, default rank will be youngling 
 	do {
 		in >> buff; // get rank
 	} while (!buff.is_only_alpha());
@@ -125,7 +127,7 @@ std::istream& operator>>(std::istream& in, Jedi& oth) {
 	} else if (buff == String("padawan") || buff == String("PADAWAN")) {
 		oth.m_rank = Rank::PADAWAN;
 
-	} else if (buff == String("knight aspirant") || buff == String("KNIGHT ASPIRANT")) {
+	} else if (buff == String("knight_aspirant") || buff == String("KNIGHT_ASPIRANT")) {
 		oth.m_rank = Rank::KNIGHT_ASPIRANT;
 
 	} else if (buff == String("knight") || buff == String("KNIGHT")) {
@@ -134,10 +136,10 @@ std::istream& operator>>(std::istream& in, Jedi& oth) {
 	} else if (buff == String("master") || buff == String("MASTER")) {
 		oth.m_rank = Rank::MASTER;
 
-	} else if (buff == String("battle master") || buff == String("BATTLE MASTER")) {
+	} else if (buff == String("battle_master") || buff == String("BATTLE_MASTER")) {
 		oth.m_rank = Rank::BATTLE_MASTER;
 
-	} else if (buff == String("grand master") || buff == String("GRAND MASTER")) {
+	} else if (buff == String("grand_master") || buff == String("GRAND_MASTER")) {
 		oth.m_rank = Rank::GRAND_MASTER;
 	} 
 
@@ -161,7 +163,7 @@ std::ostream& operator<<(std::ostream& out, const Jedi& oth) {
 		out << "\nRank:PADAWAN\n";
 
 	} else if (oth.m_rank == Rank::KNIGHT_ASPIRANT) {
-		out << "\nRank:KNIGHT ASPIRANT\n";
+		out << "\nRank:KNIGHT_ASPIRANT\n";
 
 	} else if (oth.m_rank == Rank::KNIGHT) {
 		out << "\nRank:KNIGHT\n";
@@ -170,10 +172,10 @@ std::ostream& operator<<(std::ostream& out, const Jedi& oth) {
 		out << "\nRank:MASTER\n";
 
 	} else if (oth.m_rank == Rank::BATTLE_MASTER) {
-		out << "\nRank:BATTLE MASTER\n";
+		out << "\nRank:BATTLE_MASTER\n";
 
 	} else if (oth.m_rank == Rank::GRAND_MASTER) {
-		out << "\nRank:GRAND MASTER\n";
+		out << "\nRank:GRAND_MASTER\n";
 	}
 
 	return out;
@@ -183,6 +185,7 @@ void Jedi::promote(const double& multiplier) {
 
 	if (multiplier > 0) {
 		m_force += (multiplier * m_force);
+
 	} else {
 		throw std::logic_error("Multiplier must be positive number!");
 	}
@@ -214,6 +217,7 @@ void Jedi::demote(const double& multiplier) {
 
 	if (multiplier > 0) {
 		m_force -= (multiplier * m_force);
+
 	} else {
 		throw std::logic_error("Multiplier must be positive number!");
 	}
@@ -241,34 +245,36 @@ void Jedi::demote(const double& multiplier) {
 	}
 }
 
-Jedi* Jedi::clone()const {
-
-	return new Jedi(*this);
-}
-
 void Jedi::write_to_file(std::ofstream& fout)const {
 
 	fout << "\nName of jedi:" << m_name_jedi;
 	fout << "\nAge:"  << m_age;
 	fout << "\nForce:" << m_force;
 	fout << "\nColor of lightsaber:" << m_color_of_lightsaber;
-	fout << "\nRank:";
+
 	if (m_rank == Rank::GRAND_MASTER) {
-		fout << "GRAND MASTER\n";
+		fout << "\nRank:GRAND_MASTER\n";
+
 	} else if (m_rank == Rank::INITIATE) {
-		fout << "INITIATE\n";
+		fout << "\nRank:INITIATE\n";
+
 	} else if (m_rank == Rank::PADAWAN) {
-		fout << "PADAWAN\n";
+		fout << "\nRank:PADAWAN\n";
+
 	} else if (m_rank == Rank::KNIGHT_ASPIRANT) {
-		fout << "KNIGHT_ASPIRANT\n";
+		fout << "\nRank:KNIGHT_ASPIRANT\n";
+
 	} else if (m_rank == Rank::KNIGHT) {
-		fout << "KNIGHT\n";
+		fout << "\nRank:KNIGHT\n";
+
 	} else if (m_rank == Rank::MASTER) {
-		fout << "MASTER\n";
+		fout << "\nRank:MASTER\n";
+
 	} else if (m_rank == Rank::BATTLE_MASTER) {
-		fout << "BATTLE MASTER\n";
+		fout << "\nRank:BATTLE MASTER\n";
+
 	} else if (m_rank == Rank::YOUNGLING) {
-		fout << "YOUNGLING\n";
+		fout << "\nRank:YOUNGLING\n";
 	}
 }
 
@@ -359,7 +365,7 @@ void Jedi::read_from_file(std::ifstream& fin) {
 					m_rank = Rank::PADAWAN;
 					flag = true;
 
-				} else if (buff == String("knight aspirant") || buff == String("KNIGHT ASPIRANT")) {
+				} else if (buff == String("knight_aspirant") || buff == String("KNIGHT_ASPIRANT")) {
 					m_rank = Rank::KNIGHT_ASPIRANT;
 					flag = true;
 
@@ -371,11 +377,11 @@ void Jedi::read_from_file(std::ifstream& fin) {
 					m_rank = Rank::MASTER;
 					flag = true;
 
-				} else if (buff == String("battle master") || buff == String("BATTLE MASTER")) {
+				} else if (buff == String("battle_master") || buff == String("BATTLE_MASTER")) {
 					m_rank = Rank::BATTLE_MASTER;
 					flag = true;
 
-				} else if (buff == String("grand master") || buff == String("GRAND MASTER")) {
+				} else if (buff == String("grand_master") || buff == String("GRAND_MASTER")) {
 					m_rank = Rank::GRAND_MASTER;
 					flag = true;
 				}
@@ -398,16 +404,22 @@ unsigned Jedi::rank_num()const {
 	unsigned num = 1;
     if (m_rank == Rank::INITIATE) {
 	   num = 2;
+
 	} else if (m_rank == Rank::PADAWAN) {
 	   num = 3;
+
 	} else if (m_rank == Rank::KNIGHT_ASPIRANT) {
 	   num = 4;
+
 	} else if (m_rank == Rank::KNIGHT) {
 		num = 5;
+
 	} else if (m_rank == Rank::MASTER) {
 		num = 6;
+
 	} else if (m_rank == Rank::BATTLE_MASTER) {
 		num = 7;
+
 	} else if (m_rank == Rank::GRAND_MASTER) {
 		num = 8; 
 	}
@@ -436,6 +448,7 @@ void Jedi::set_age(const unsigned& age) {
 
 	if (age <= 0) {
 		m_age = 1;
+
 	} else {
 		m_age = age;
 	}
@@ -443,13 +456,12 @@ void Jedi::set_age(const unsigned& age) {
 
 void Jedi::set_force(const double& force) {
 
-	m_force = force;
+	if (force <= 0) {
+		m_force = 10.;
 
-	//if (force < 0) {
-	//	m_force = 0.;
-	//} else {
-	//	m_force = force;
-	//}
+	} else {
+		m_force = force;
+	}
 }
 
 void Jedi::set_name_jedi(const String& name) {

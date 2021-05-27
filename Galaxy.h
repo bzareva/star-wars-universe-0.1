@@ -128,10 +128,10 @@ public:
 	/// adds vector of jedi in given planet 
 	void add_vec_jedi(const Vector<Jedi>& jedi, const String& planet_name);
 
+private:
 	/// make data with null value
 	void to_zero();
 
-private:
 	/// help method for operator= and copy ctor
 	void copy(const Galaxy& rhs);
 
@@ -140,4 +140,4 @@ private:
 
 };
 
-#endif ///__GALAXY_H__
+#endif //__GALAXY_H__

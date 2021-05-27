@@ -7,13 +7,32 @@
 ///
 /// Doctests for parts of the program
 /// 
+
+TEST_CASE("Testing GalaxyManager command") {
+
+	std::ifstream fin("galaxy_information.txt", std::ios::in);
+	if (!fin || !fin.is_open()) {
+		std::cerr << "\nProblem with opening file!\n";
+	}
+
+	Galaxy cosmos;
+	cosmos.read_from_file(fin);
+	
+	
+
+
+
+	fin.clear();
+	fin.close();
+}
+
 TEST_CASE("Jedi and Planet basic operations") {
 
 	Jedi jedi[7] = { {23, 334.5, Rank::INITIATE, String("John1"), String("blue")},
 					 {135, 433.5, Rank::GRAND_MASTER, String("Rick1"), String("pink")},
 					 {83, 334.5, Rank::PADAWAN, String("Pesho"), String("white")},
 					 {100, 353.5, Rank::KNIGHT, String("Ivan"), String("black")},
-					 {95, 324.4, Rank::BATTLE_MASTER, String("Ivanka"), String("yellow")},
+					 {95, 324.4, Rank::BATTLE_MASTER, String("Ivo"), String("yellow")},
 					 {53, 87.7, Rank::MASTER, String("Miky"), String("green")},
 					 {67, 104.5, Rank::BATTLE_MASTER, String("Stefan"), String("red")} };
 

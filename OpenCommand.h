@@ -8,7 +8,7 @@
 class OpenCommand : public Command {
 
 public:
-	OpenCommand() :Command(String("open")) {};
+	OpenCommand(const String& cmd = String("open")) :Command(cmd) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 
@@ -16,7 +16,7 @@ public:
 			throw std::runtime_error("Obscure command!");
 		}
 
-		manager.open_file(m_parameters[0]);
+		manager.open_file();
 	}
 
 private:
@@ -27,18 +27,8 @@ private:
 			return false;
 		}
 
-		if (m_parameters.empy()) {
-			std::cerr << "List of arguments is empty!\n";
-			return false;
-		}
-
-		if (m_parameters.size() < 1) {
-			std::cerr << "\nThere are some missing arguments for execution to this command!\n";
-			return false;
-		}
-
-		if (m_parameters.size() > 1) {
-			std::cerr << "\nToo much arguments for execution to this command!\n";
+		if (!m_parameters.empy()) {
+			std::cerr << "List of arguments is not empty!\n";
 			return false;
 		}
 

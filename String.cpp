@@ -38,7 +38,6 @@ String::String(String&& rhs)noexcept
 String& String::operator=(String&& rhs)noexcept {
 
 	if (this != &rhs) {
-
 		free();
 
 		m_string   = rhs.m_string;
@@ -54,13 +53,6 @@ String& String::operator=(String&& rhs)noexcept {
 String::~String() {
 
 	free();
-}
-
-void String::to_zero() {
-
-	m_string   = nullptr;
-	m_size     = 0;
-	m_capacity = 0;
 }
 
 void String::save_string(std::ofstream& fout) {
@@ -85,7 +77,6 @@ void String::load_string(std::ifstream& fin) {
 	m_capacity = m_size + 1;
 	m_string   = new char[m_capacity];
 	str_cpy(m_string, buff);
-//	fill_zeros(m_string);
 }
 
 std::istream& operator>>(std::istream& in, String& str) {
@@ -105,25 +96,6 @@ std::istream& operator>>(std::istream& in, String& str) {
 	str.m_capacity = str.m_size + 1;
 	str.m_string   = new char[str.m_capacity];
 	str.str_cpy(str.m_string, buff);
-
-	// second way
-	//char buff[1024] = { '\0' };
-	//in.getline(buff, 1024, '\n');
-
-	//str.m_size = str.str_len(buff);
-	//if (str.m_size == 0) {
-	//	str.m_capacity = String::DEFAULT_CAPACITY;
-	//} else {
-	//	str.m_capacity = str.m_size + 1;
-	//}
-
-	//if (str.m_string != nullptr) {
-	//	delete[] str.m_string;
-	//}
-
-	//str.m_string = new char[str.m_capacity];
-	//str.str_cpy(str.m_string, buff);
-
 	str.fill_zeros(str.m_string);
 
 	return in;
@@ -145,7 +117,13 @@ String& String::operator+=(const String& rhs) {
 
 	m_size += rhs.m_size;
 	if (m_size >= m_capacity) {
-		reserve(RESIZE * m_size);
+
+		try {
+			reserve(RESIZE * m_size);
+
+		} catch (std::logic_error& e) {
+			std::cout << e.what() << std::endl;
+		}
 	}
 
 	str_cat(m_string, rhs.m_string);
@@ -203,7 +181,7 @@ const char& String::at(const unsigned& index)const {
 void String::reserve(const unsigned& new_cap) {
 
 	if (new_cap <= 0 || new_cap == m_capacity) {
-		return;
+		throw std::logic_error("\nInvalid index!\n");
 	}
 
 	if (new_cap > m_capacity) {
@@ -224,7 +202,12 @@ void String::reserve(const unsigned& new_cap) {
 void String::add(const char& ch) {
 
 	if (m_size + 1 >= m_capacity) {
-		reserve(RESIZE * m_size);
+		try {
+			reserve(RESIZE * m_size);
+
+		} catch (std::logic_error& e) {
+			std::cout << e.what() << std::endl;
+		}
 	}
 
 	m_string[m_size] = ch;
@@ -239,7 +222,13 @@ bool String::insert_at(const char& ch, const unsigned& index) {
 	}
 
 	if (m_size + 1 >= m_capacity) {
-		reserve(RESIZE * m_size);
+
+		try {
+			reserve(RESIZE * m_size);
+
+		} catch (std::logic_error& e) {
+			std::cout << e.what() << std::endl;
+		}
 	}
 
 	for (unsigned i = m_size; i > index; --i) {
@@ -490,23 +479,30 @@ Rank String::convert_to_rank(const char* str) {
 	String curr(str);
 	if (curr == String("YOUNGLING") || curr == String("youngling")) {
 		return Rank::YOUNGLING;
+
 	} else if (curr == String("INITIATE") || curr == String("initiate")) {
 		return Rank::INITIATE;
+
 	} else if (curr == String("PADAWAN") || curr == String("padawan")) {
 		return Rank::PADAWAN;
+
 	} else if (curr == String("KNIGHT_ASPIRANT") || curr == String("knight_aspirant")) {
 		return Rank::KNIGHT_ASPIRANT;
+
 	} else if (curr == String("KNIGHT") || curr == String("knight")) {
 		return Rank::KNIGHT;
+
 	} else if (curr == String("MASTER") || curr == String("master")) {
 		return Rank::MASTER;
+
 	} else if (curr == String("BATTLE_MASTER") || curr == String("battle_master")) {
 		return Rank::BATTLE_MASTER;
+
 	} else if (curr == String("GRAND_MASTER") || curr == String("grand_master")) {
 		return Rank::GRAND_MASTER;
 	}
 
-	throw "\nInvalid rank!\n";
+	throw std::logic_error("\nInvalid rank!\n");
 }
 
 unsigned String::cnt_digits(unsigned number) {
@@ -622,22 +618,36 @@ bool String::is_valid_rank()const {
 	String curr(m_string);
 	if (curr == String("YOUNGLING") || curr == String("youngling")) {
 		return true;
+
 	} else if (curr == String("INITIATE") || curr == String("initiate")) {
 		return true;
+
 	} else if (curr == String("PADAWAN") || curr == String("padawan")) {
 		return true;
+
 	} else if (curr == String("KNIGHT_ASPIRANT") || curr == String("knight_aspirant")) {
 		return true;
+
 	} else if (curr == String("KNIGHT") || curr == String("knight")) {
 		return true;
+
 	} else if (curr == String("MASTER") || curr == String("master")) {
 		return true;
+
 	} else if (curr == String("BATTLE_MASTER") || curr == String("battle_master")) {
 		return true;
+
 	} else if (curr == String("GRAND_MASTER") || curr == String("grand_master")) {
 		return true;
 	}
 	return false;
+}
+
+void String::to_zero() {
+
+	m_string   = nullptr;
+	m_size     = 0;
+	m_capacity = 0;
 }
 
 void String::cpy(const String& obj) {
@@ -675,8 +685,14 @@ void String::set_size(const unsigned& size) {
 		m_size = 0;
 
 	} else if (size > m_capacity) {
-		reserve(RESIZE * size);
-		m_size = size;
+
+		try {
+			reserve(RESIZE * size);
+			m_size = size;
+
+		} catch (std::logic_error& e) {
+			std::cout << e.what();
+		}
 
 	} else if (size > 0 && size < m_capacity) {
 		m_size = size;

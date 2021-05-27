@@ -142,10 +142,10 @@ public:
 	/// setter for inhabits jedi
 	void set_jedi(const Vector<Jedi>& jedi);
 
+private:
 	/// make data with null value
 	void to_zero();
 
-private:
 	/// help method for operator= and copy ctor
 	void copy(const Planet& obj);
 
