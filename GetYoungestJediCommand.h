@@ -10,7 +10,7 @@ class GetYoungestJediCommand : public Command {
 public:
 	GetYoungestJediCommand() :Command(String("get_youngest_jedi")) {};
 
-	GetYoungestJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	GetYoungestJediCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 

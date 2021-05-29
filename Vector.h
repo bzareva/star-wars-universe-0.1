@@ -236,8 +236,8 @@ inline Vector<T>& Vector<T>::operator+=(const Vector<T>& rhs) {
 		try {
 			reserve(2 * (m_size + rhs.m_size));
 
-		} catch (std::logic_error& e) {
-			std::cout << e.what() << std::endl;
+		} catch (std::out_of_range& e) {
+			std::cerr << e.what() << std::endl;
 		}
 	}
 
@@ -262,8 +262,8 @@ inline void Vector<T>::push_back(const T& item) {
 		try {
 			reserve(2 * m_size);
 
-		} catch (std::logic_error& e) {
-			std::cout << e.what() << std::endl;
+		} catch (std::out_of_range& e) {
+			std::cerr << e.what() << std::endl;
 		}
 	}
 
@@ -281,7 +281,7 @@ template<class T>
 inline void Vector<T>::insert(const unsigned& index, const T& item) {
 
 	if (index < 0 || index >= m_size) {
-		throw std::out_of_range("\nInvalid index!\n");
+		throw std::out_of_range("Invalid index!\n");
 		return;
 	}
 
@@ -290,8 +290,8 @@ inline void Vector<T>::insert(const unsigned& index, const T& item) {
 		try {
 			reserve(2 * m_size);
 
-		} catch (std::logic_error& e) {
-			std::cout << e.what() << std::endl;
+		} catch (std::out_of_range& e) {
+			std::cerr << e.what() << std::endl;
 		}
 	}
 
@@ -307,8 +307,7 @@ template<class T>
 inline void Vector<T>::erase(const unsigned& index) {
 
 	if (index < 0 || index >= m_size) {
-		throw std::out_of_range("\nInvalid index!\n");
-		return;
+		throw std::out_of_range("Invalid index!\n");
 	}
 
 	for (unsigned i = index; i < m_size - 1; ++i) {
@@ -323,13 +322,10 @@ template<class T>
 inline void Vector<T>::reserve(const unsigned& capacity) {
 
 	if (capacity <= 0 || capacity <= m_capacity || capacity <= m_size) {
-		throw std::logic_error("\nInvalid capacity!\n");
+		throw std::out_of_range("Invalid capacity!\n");
 	}
 
 	m_capacity = capacity;
-	//if (m_capacity < m_size) {
-	//	m_size = m_capacity;
-	//}
 
 	T* data = new T[m_capacity];
 	for (unsigned i = 0; i < m_size && i < m_capacity; ++i) {
@@ -356,7 +352,7 @@ inline T& Vector<T>::at(const unsigned& index) {
 
 	} catch (std::out_of_range& e) {
 		std::cerr << e.what() << std::endl;
-		/*if (index < 0 || index > m_size) {
+		/*if (index < 0 || index >= m_size) {
 			throw std::out_of_range("Invalid index!");
 		}*/
 	}
@@ -370,7 +366,7 @@ inline const T& Vector<T>::at(const unsigned& index)const {
 
 	} catch (std::out_of_range& e) {
 		std::cerr << e.what() << std::endl;
-		/*if (index < 0 || index > m_size) {
+		/*if (index < 0 || index >= m_size) {
 			throw std::out_of_range("Invalid index!");
 		}*/
 	}

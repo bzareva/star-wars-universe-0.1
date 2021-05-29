@@ -1,53 +1,85 @@
 Information about galaxy
-Counts of planets in galaxy: 3
+Counts of planets in galaxy: 4
 Planet name: Saturn
-Counts of inhabitants jedi: 3
-Name of jedi: RyoDurame
-Age: 74
-Force: 134.4
-Color of lightsaber: red
-Rank: padawan
-Name of jedi: CeroJuall
-Age: 74
-Force: 621.0
-Color of lightsaber: green
+Counts of inhabitants jedi: 5
+Name of jedi: RafiLasena
+Age: 76
+Force: 55.32
+Color of lightsaber: ligthPirple
 Rank: master
-Name of jedi: ThaloElatar
-Age: 56
-Force: 221.0
-Color of lightsaber: darkBlue
-Rank: initiate
-Planet name: Mars
-Counts of inhabitants jedi: 2
-Name of jedi: NolaBinette
-Age: 90
-Force: 564.4
-Color of lightsaber: yellowGreen
-Rank: knight
-Name of jedi: SkyronZerga
-Age: 49
-Force: 340.9
-Color of lightsaber: lightYellow
-Rank: knight_aspirant
-Planet name: Moon
-Counts of inhabitants jedi: 4
-Name of jedi: RenatoTillisk
-Age: 49
-Force: 330.1
-Color of lightsaber: green
-Rank: knight_aspirant
-Name of jedi: SynaKellarov
-Age: 90
-Force: 700.1
-Color of lightsaber: lightPurple
-Rank: initiate
-Name of jedi: GleckaCohmre
-Age: 72
-Force: 556.8
+Name of jedi: MaxcyTalonspyre
+Age: 45
+Force: 67.76
+Color of lightsaber: yellow
+Rank: grand_master
+Name of jedi: JourenSamlon
+Age: 77
+Force: 455.5
 Color of lightsaber: purple
 Rank: grand_master
-Name of jedi: ArathilionSudime
-Age: 80
-Force: 1110.4
+Name of jedi: WurthLashiec
+Age: 56
+Force: 74.4
 Color of lightsaber: blue
+Rank: grand_master
+Name of jedi: PoojaTalonspyre
+Age: 56
+Force: 232.4
+Color of lightsaber: blue
+Rank: knight
+Planet name: Jupiter
+Counts of inhabitants jedi: 3
+Name of jedi: BekaWain
+Age: 45
+Force: 45.56
+Color of lightsaber: green
+Rank: padawan
+Name of jedi: GalufVerasx
+Age: 78
+Force: 167.7
+Color of lightsaber: green
+Rank: youngling
+Name of jedi: MynKhan
+Age: 90
+Force: 703.3
+Color of lightsaber: pink
+Rank: youngling
+Planet name: Venus
+Counts of inhabitants jedi: 3
+Name of jedi: MikalDominia
+Age: 78
+Force: 304.9
+Color of lightsaber: white
+Rank: knight_aspirant
+Name of jedi: MatthewLevedru
+Age: 60
+Force: 178.9
+Color of lightsaber: white
+Rank: knight_aspirant
+Name of jedi: MovanBrahnx
+Age: 65
+Force: 234.9
+Color of lightsaber: read
+Rank: initiate
+Planet name: Neptun
+Counts of inhabitants jedi: 4
+Name of jedi: FamaCrow
+Age: 77
+Force: 455.5
+Color of lightsaber: orange
 Rank: battle_master
+Name of jedi: TettselBombassa
+Age: 98
+Force: 500.0
+Color of lightsaber: orange
+Rank: battle_master
+Name of jedi: BruenorTendoora
+Age: 100
+Force: 263.3
+Color of lightsaber: yellow
+Rank: grand_master
+Name of jedi: FitzKovani
+Age: 98
+Force: 301.4
+Color of lightsaber: blue
+Rank: youngling

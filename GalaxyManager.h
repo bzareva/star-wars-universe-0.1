@@ -11,7 +11,7 @@ class GalaxyManager {
 
 public:
     /// default constructor
-    GalaxyManager();
+    GalaxyManager() = default;
 
     /// constructor with parameters for datas in class
     GalaxyManager(const String& file_name, const Galaxy& universe = Galaxy());
@@ -20,7 +20,7 @@ public:
     void open_file();
 
     /// print information about given object(Jedi or Planet) by wanted name
-    void print(const String& type_object, const String& name);
+    void print(const String& name);
 
     /// gives information about all commands which supported the program for successfully works
     void help()const;
@@ -59,19 +59,13 @@ public:
     void get_youngest_jedi(const String& planet_name, const Rank& jedi_rank)const;
 
     /// get most used saber color of jedi on given planet with wanted rank
-    String get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const;
+    void get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const;
 
     /// get most used saber color of jedi on given planet
-    String get_most_used_saber_color(const String& planet_name)const;
+    void get_most_used_saber_color(const String& planet_name)const;
 
     /// console outputs is sorted form(lexicographic) information about the inhabitants two planets
     void operator_plus(const String& lhs_planet_name, const String& rhs_planet_name);
-
-    /// print information about the given planet
-    void print_planet(const String& planet_name);
-
-    /// print information about the given jedi
-    void print_jedi(const String& jedi_name)const;
 
     /// @returns Name of file with which is current opened
     String get_file_name()const;
@@ -79,11 +73,8 @@ public:
     /// get file name
     void set_file_name(const String& file_name);
 
-    /// set universe
-    void set_universe(const Galaxy& rhs);
-
 private:
-    bool   m_is_open; // {false};
+    bool   m_is_open{ false };
     String m_file_name;
     Galaxy m_universe;
      

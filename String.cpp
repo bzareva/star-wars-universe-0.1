@@ -121,8 +121,8 @@ String& String::operator+=(const String& rhs) {
 		try {
 			reserve(RESIZE * m_size);
 
-		} catch (std::logic_error& e) {
-			std::cout << e.what() << std::endl;
+		} catch (std::out_of_range& e) {
+			std::cerr << e.what() << std::endl;
 		}
 	}
 
@@ -181,7 +181,7 @@ const char& String::at(const unsigned& index)const {
 void String::reserve(const unsigned& new_cap) {
 
 	if (new_cap <= 0 || new_cap == m_capacity) {
-		throw std::logic_error("\nInvalid index!\n");
+		throw std::out_of_range("\nInvalid index!\n");
 	}
 
 	if (new_cap > m_capacity) {
@@ -205,8 +205,8 @@ void String::add(const char& ch) {
 		try {
 			reserve(RESIZE * m_size);
 
-		} catch (std::logic_error& e) {
-			std::cout << e.what() << std::endl;
+		} catch (std::out_of_range& e) {
+			std::cerr << e.what() << std::endl;
 		}
 	}
 
@@ -226,8 +226,8 @@ bool String::insert_at(const char& ch, const unsigned& index) {
 		try {
 			reserve(RESIZE * m_size);
 
-		} catch (std::logic_error& e) {
-			std::cout << e.what() << std::endl;
+		} catch (std::out_of_range& e) {
+			std::cerr << e.what() << std::endl;
 		}
 	}
 
@@ -691,7 +691,7 @@ void String::set_size(const unsigned& size) {
 			m_size = size;
 
 		} catch (std::logic_error& e) {
-			std::cout << e.what();
+			std::cerr << e.what();
 		}
 
 	} else if (size > 0 && size < m_capacity) {

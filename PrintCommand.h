@@ -10,7 +10,7 @@ class PrintCommand : public Command {
 public:
 	PrintCommand() :Command(String("print")) {};
 
-	PrintCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	PrintCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 
@@ -18,7 +18,7 @@ public:
 			throw std::runtime_error("Obscure command!");
 		}
 
-		manager.print(m_parameters[0], m_parameters[1]);
+		manager.print(m_parameters[0]);
 	}
 
 private:
@@ -34,23 +34,13 @@ private:
 			return false;
 		}
 
-		if (m_parameters.size() < 2) {
-			std::cerr << "\nThere are some missing arguments for execution to this command!\n";
+		if (m_parameters.size() != 1) {
+			std::cerr << "\nInvalid parameters!\n";
 			return false;
 		}
 
-		if (m_parameters.size() > 2) {
-			std::cerr << "\nToo much arguments for execution to this command!\n";
-			return false;
-		}
-
-		if (!m_parameters[0].is_only_alpha()) { //type of object which we want to print
-			std::cerr << "\nType of object chich you want to print, contains invalid symbols! Must to contains only letters.!\n";
-			return false;
-		}
-
-		if (!m_parameters[1].is_only_alpha()) { //planet name
-			std::cerr << "\nEnter string contains invalid symbols! Must to contains only letters.!\n";
+		if (!m_parameters[0].is_only_alpha()) { //name of object
+			std::cerr << "\nEnter string contains invalid symbols! Must to contains only letters!\n";
 			return false;
 		}
 

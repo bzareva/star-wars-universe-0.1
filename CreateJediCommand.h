@@ -10,7 +10,7 @@ class CreateJediCommand : public Command {
 public:
 	CreateJediCommand() :Command(String("create_jedi")) {};
 
-	CreateJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	CreateJediCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 

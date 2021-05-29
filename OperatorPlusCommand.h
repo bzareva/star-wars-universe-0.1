@@ -10,7 +10,7 @@ class OperatorPlusCommand : public Command {
 public:
 	OperatorPlusCommand() :Command(String("+")) {};
 
-	OperatorPlusCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	OperatorPlusCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 

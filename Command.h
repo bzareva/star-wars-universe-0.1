@@ -15,7 +15,9 @@ public:
 
     Command(const String& command_name, const Vector<String>& parameters) : m_command_name(command_name) {
 
-        m_parameters = parameters;
+        for (unsigned i = 0; i < parameters.size(); ++i) {
+            m_parameters.push_back(parameters[i]);
+        }
     };
 
     ///

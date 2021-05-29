@@ -10,7 +10,7 @@ class SaveAsCommand : public Command {
 public:
 	SaveAsCommand() :Command(String("saveas")) {};
 
-	SaveAsCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	SaveAsCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 
@@ -18,7 +18,12 @@ public:
 			throw std::runtime_error("Obscure command!");
 		}
 
-		manager.save_as(m_parameters[0]);
+		try {
+			manager.save_as(m_parameters[0]);
+
+		} catch (std::runtime_error& e) {
+			std::cerr << e.what() << std::endl;
+		}
 	}
 
 private:

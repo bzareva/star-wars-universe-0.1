@@ -10,7 +10,7 @@ class DemoteJediCommand : public Command {
 public:
 	DemoteJediCommand() :Command(String("demote_jedi")) {};
 
-	DemoteJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	DemoteJediCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 

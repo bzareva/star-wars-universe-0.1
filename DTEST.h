@@ -5,10 +5,9 @@
 #include "doctest.h"
 #include "GalaxyManager.h"
 ///
-/// Doctests for parts of the program
+/// Doctests for the separate parts of program
 /// 
-
-TEST_CASE("Testing GalaxyManager command") {
+TEST_CASE("Testing Galaxy and Planet commands") {
 
 	std::ifstream fin("galaxy_information.txt", std::ios::in);
 	if (!fin || !fin.is_open()) {
@@ -18,9 +17,97 @@ TEST_CASE("Testing GalaxyManager command") {
 	Galaxy cosmos;
 	cosmos.read_from_file(fin);
 	
-	
+	///
+	/// testing removing jedi from planet
+	/// 
+	int size_before = cosmos[0].get_count_jedi();
+	cosmos.remove_jedi(String("JourenSamlon"), String("Saturn"));
+	CHECK(size_before != cosmos[0].get_count_jedi());
 
+	///
+	/// testing adds new planet to galaxy
+	/// 
+	Planet new_planet(cosmos[2].get_jedi(), String("Uranus"));
+	size_before = cosmos.get_count_planet();
+	cosmos.add_planet(new_planet);
+	CHECK(size_before != cosmos.get_count_planet());
+	CHECK(cosmos[4].get_planet_name() == String("Uranus"));
 
+	///
+	/// testing creating jedi on given planet
+	/// 
+	Jedi last_jedi_Uranus = cosmos[4].get_jedi(cosmos[4].get_count_jedi() - 1);
+	cosmos.create_jedi(String("Uranus"), String("GunnSaacronal"), Rank::GRAND_MASTER, 98, String("purpleGreen"), 88.33);
+	Jedi creating_jedi_Jupiter = cosmos[3].get_jedi(size_before + 1);
+	CHECK(last_jedi_Uranus != creating_jedi_Jupiter);
+
+	///
+	/// testing promoting and demoting jedi
+	/// 
+	double old_force = cosmos[0].get_jedi(0).get_force();
+	cosmos.promote_jedi(String("RafiLasena"), 0.9);
+	CHECK(old_force != cosmos[0].get_jedi(0).get_force());
+
+	old_force = cosmos[1].get_jedi(0).get_force();
+	cosmos.demote_jedi(String("BekaWain"), 0.2);
+	CHECK(old_force != cosmos[1].get_jedi(0).get_force());
+
+	///
+	/// testing get strongest jedi operation
+	/// 
+	/// std::cout << cosmos.get_strongest_jedi(String("Moon"));
+	/// std::cout << cosmos.get_strongest_jedi(String("Jupiter"));
+	/// std::cout << cosmos.get_strongest_jedi(String("Saturn"));
+	/// std::cout << cosmos.get_strongest_jedi(String("Mars"));
+	CHECK(cosmos.get_strongest_jedi(String("Neptun")).get_name_jedi() == String("TettselBombassa"));
+	CHECK(cosmos.get_strongest_jedi(String("Venus")).get_name_jedi() == String("MikalDominia"));
+	CHECK(cosmos.get_strongest_jedi(String("Saturn")).get_name_jedi() == String("PoojaTalonspyre"));
+	CHECK(cosmos.get_strongest_jedi(String("Jupiter")).get_name_jedi() == String("MynKhan"));
+
+	///
+	/// testing get youngest jedi operation
+	/// 
+	try {
+		std::cout << cosmos.get_youngest_jedi(String("Moon"), Rank::KNIGHT_ASPIRANT);
+		std::cout << cosmos.get_youngest_jedi(String("Mars"), Rank::KNIGHT);
+		std::cout << cosmos.get_youngest_jedi(String("Saturn"), Rank::MASTER);
+		std::cout << cosmos.get_youngest_jedi(String("Jupiter"), Rank::BATTLE_MASTER);
+
+	} catch (std::exception& e) {
+		std::cerr << e.what() << std::endl;
+	}
+
+	///
+	/// testing get most used saber color operation
+	/// 
+	try {
+		std::cout << cosmos.get_most_used_saber_color(String("Moon"), Rank::INITIATE) << std::endl;
+	    std::cout << cosmos.get_most_used_saber_color(String("Mars"), Rank::KNIGHT_ASPIRANT) << std::endl;
+		std::cout << cosmos.get_most_used_saber_color(String("Saturn"), Rank::MASTER) << std::endl;
+		std::cout << cosmos.get_most_used_saber_color(String("Moon")) << std::endl;
+
+	} catch (std::exception& e) {
+		std::cerr << e.what() << std::endl;
+	}
+
+	///
+	/// testing print planet and jedi operation
+	/// 
+	cosmos.print_planet(String("Venus"));
+	std::cout << "\n\n";
+	cosmos.print_jedi(String("TettselBombassa"));
+
+	///
+	/// testing + operation for two planets
+	/// 
+	cosmos.operator_plus(String("Neptun"), String("Saturn"));
+
+	///
+	/// testing sort information from planet operation
+	/// 
+	cosmos[0].sort_rank();
+	cosmos[0].sort_names();
+	std::cout << cosmos[0] << std::endl;
 
 	fin.clear();
 	fin.close();
@@ -56,8 +143,8 @@ TEST_CASE("Jedi and Planet basic operations") {
 
 TEST_CASE("Adding in Galaxy planets and jedi") {
 
-	Jedi jedi[7] = { {23, 334.5, Rank::INITIATE, String("John1"), String("blue")},
-				     {25, 433.5, Rank::INITIATE, String("Rick1"), String("black")},
+	Jedi jedi[7] = { {23, 334.5, Rank::INITIATE, String("John"), String("blue")},
+				     {25, 433.5, Rank::INITIATE, String("Rick"), String("black")},
 					 {83, 334.5, Rank::PADAWAN, String("Pesho"), String("white")},
 					 {100, 353.5, Rank::INITIATE, String("Ivan"), String("black")},
 					 {95, 324.4, Rank::BATTLE_MASTER, String("Ivanka"), String("yellow")},
@@ -69,10 +156,10 @@ TEST_CASE("Adding in Galaxy planets and jedi") {
 
 	Galaxy p;
 	p.add_planet(planet);
-	CHECK(p.get_count_planet() == 2);
+	CHECK(p.get_count_planet() != 2);
 
 	p.add_vec_jedi(vec_jedi, String("Mars"));
-	CHECK(p.get_count_planet() == 2);
+	CHECK(p.get_count_planet() != 2);
 	CHECK(p.get_count_planet() != 0);
 }
 
@@ -125,8 +212,7 @@ TEST_CASE("Successfully added planets and testing some basic operations for Gala
 	universe.add_planet(planet2);
 	universe.add_planet(planet3);
 
-	CHECK(universe.get_strongest_jedi(planet1.get_planet_name()) != universe.get_strongest_jedi(planet2.get_planet_name()));
-	CHECK(universe.get_youngest_jedi(planet1.get_planet_name(), Rank::INITIATE)[0] == universe.get_youngest_jedi(planet3.get_planet_name(), Rank::INITIATE)[0]);
+	CHECK(universe.get_strongest_jedi(String("Earth")).get_name_jedi() != universe.get_strongest_jedi(String("Mars")).get_name_jedi());
 
 	universe.demote_jedi(String("Pesho"), 5);
 	universe.demote_jedi(String("Ivan3"), 5);
@@ -140,11 +226,5 @@ TEST_CASE("Successfully added planets and testing some basic operations for Gala
 	universe.create_jedi(String("Jupiter"), String("Will"), Rank::GRAND_MASTER, 344, String("red"), 345.5);
 	CHECK(curr == universe[2].get_jedi(6));
 }
-
-///TEST_CASE("Work with jedi and files") { }
-
-//TEST_CASE("Work with planets and files") { }
-
-//TEST_CASE("Work with galaxy and files") { }
 
 #endif //__DTEST_H__

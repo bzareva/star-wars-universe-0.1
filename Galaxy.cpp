@@ -45,7 +45,6 @@ Galaxy::Galaxy(Galaxy&& rhs)noexcept {
 Galaxy& Galaxy::operator=(Galaxy&& rhs)noexcept {
 
 	if (this != &rhs) {
-
 		for (unsigned i = 0; i < rhs.get_count_planet(); ++i) {
 			m_planets[i] = rhs.m_planets[i];
 		}
@@ -76,7 +75,7 @@ std::istream& operator>>(std::istream& in, Galaxy& obj) {
 std::ostream& operator<<(std::ostream& out, const Galaxy& obj) {
 
 	out << "Information about galaxy\n";
-	out << "Counts of planets in galaxy:" << obj.m_planets.size() << std::endl;
+	out << "Counts of planets in galaxy: " << obj.m_planets.size() << std::endl;
 	for (unsigned i = 0; i < obj.m_planets.size(); ++i) {
 		out << obj.m_planets[i];
 	}
@@ -140,7 +139,7 @@ const Planet& Galaxy::operator[](const unsigned& index)const {
 
 Planet& Galaxy::at(const unsigned& index) {
 
-	if (index < 0 || index > m_planets.size()) {
+	if (index < 0 || index >= m_planets.size()) {
 		throw std::out_of_range("Invalid index!");
 	}
 	return m_planets[index];
@@ -148,7 +147,7 @@ Planet& Galaxy::at(const unsigned& index) {
 
 const Planet& Galaxy::at(const unsigned& index)const {
 
-	if (index < 0 || index > m_planets.size()) {
+	if (index < 0 || index >= m_planets.size()) {
 		throw std::out_of_range("Invalid index!");
 	}
 	return m_planets[index];
@@ -162,7 +161,7 @@ Base* Galaxy::clone()const {
 void Galaxy::write_to_file(std::ofstream& fout)const {
 
 	fout << "Information about galaxy\n";
-	fout << "Counts of planets in galaxy:" << m_planets.size() << std::endl;
+	fout << "Counts of planets in galaxy: " << m_planets.size() << std::endl;
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
 		m_planets[i].write_to_file(fout);
 	}
@@ -235,26 +234,17 @@ String Galaxy::type_name()const {
 void Galaxy::create_jedi(const String& planet_name, const String& jedi_name, const Rank& jedi_rank, const unsigned& jedi_age, const String& saber_color, const double& jedi_strength) {
 
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
+
 		if (m_planets[i].get_planet_name() == planet_name) {
 
-			for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
-				if (m_planets[i].get_jedi(j).get_name_jedi() == jedi_name) {
-
-					std::cout << "\nAlready exist Jedi with this name on the given planet.\n";
-					return;
-				}
-			}
-
 			m_planets[i].create_jedi(planet_name, jedi_name, jedi_rank, jedi_age, saber_color, jedi_strength);
-			std::cout << "\nSuccessfully added jedi on planet " << planet_name << std::endl;
 			return;
 		}
 
 		for (unsigned j = 0; j < m_planets[i].get_count_jedi(); ++j) {
 
 			if (m_planets[i].get_jedi(j).get_name_jedi() == jedi_name) {
-				std::cout << "\nAlready exist Jedi with this name on another planet.\n";
-				return;
+				std::cout << "\nAlready exist Jedi with this name on planet " << m_planets[i].get_planet_name() << "!\n";
 			}
 		}
 	}
@@ -269,14 +259,11 @@ void Galaxy::remove_jedi(const String& jedi_name, const String& planet_name) {
 				if (jedi_name == m_planets[i].get_jedi(j).get_name_jedi()) {
 
 					m_planets[i].remove_jedi(jedi_name, planet_name);
-					std::cout << "\nSuccessfully removed jedi.\n";
 					return;
 				}
 			}
 		}
 	}
-
-	std::cout << "\nNot successfully removed jedi.\n";
 }
 
 Jedi Galaxy::get_strongest_jedi(const String& planet_name)const {
@@ -296,7 +283,13 @@ Vector<Jedi> Galaxy::get_youngest_jedi(const String& planet_name, const Rank& je
 	for (unsigned i = 0; i < m_planets.size(); ++i) {
 
 		if (m_planets[i].get_planet_name() == planet_name) {
-			return m_planets[i].get_youngest_jedi(planet_name, jedi_rank);
+
+			try {
+				return m_planets[i].get_youngest_jedi(planet_name, jedi_rank);
+
+			} catch (std::exception& e) {
+				std::cerr << e.what() << std::endl;
+			}
 		}
 	}
 
@@ -372,6 +365,7 @@ void Galaxy::demote_jedi(const String& jedi_name, const double& multiplier) {
 void Galaxy::add_planet(const Planet& planet) {
 
 	m_planets.push_back(planet);
+	std::cout << "\nSuccessfully added planet!\n";
 }
 
 unsigned Galaxy::get_count_planet()const {
@@ -381,7 +375,7 @@ unsigned Galaxy::get_count_planet()const {
 
 String Galaxy::get_planet_name(const unsigned& index)const {
 
-	if (index < 0 || index > m_planets.size()) {
+	if (index < 0 || index >= m_planets.size()) {
 		throw std::out_of_range("Invalid index!");
 	}
 	return m_planets[index].get_planet_name();

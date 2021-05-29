@@ -10,7 +10,7 @@ class PromoteJediCommand : public Command {
 public:
 	PromoteJediCommand() :Command(String("promoote_jedi")) {};
 
-	PromoteJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	PromoteJediCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 

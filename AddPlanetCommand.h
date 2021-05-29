@@ -10,7 +10,7 @@ class AddPlanetCommand : public Command {
 public:
 	AddPlanetCommand() :Command(String("add_planet")) {};
 
-	AddPlanetCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	AddPlanetCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 
@@ -44,14 +44,14 @@ private:
 			return false;
 		}
 
-		if (!m_parameters[0].is_only_alpha()) { //planet name
+		if (!m_parameters[0].is_only_alpha()) { // planet name
 			std::cerr << "\nName of planet contains invalid symbols! Must to contains only letters.!\n";
 			return false;
 		}
 
 		return true;
-	}
-	 
+	}	 
+
 };
 
 #endif //__ADD_PLANET_COMMAND_H__

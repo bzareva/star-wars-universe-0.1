@@ -41,7 +41,6 @@ Planet& Planet::operator=(Planet&& rhs)noexcept {
 	if (this != &rhs) {
 		m_planet_name = rhs.m_planet_name;
 
-		//m_jedi = rhs.m_jedi;
 		for (unsigned i = 0; i < rhs.get_count_jedi(); ++i) {
 			m_jedi[i] = rhs.m_jedi[i];
 		}
@@ -71,8 +70,8 @@ std::istream& operator>>(std::istream& in, Planet& oth) {
 
 std::ostream& operator<<(std::ostream& out, const Planet& oth) {
 
-	out << "Planet name:" << oth.m_planet_name;
-	out << "\nCounts of inhabitants jedi:" << oth.m_jedi.size() << std::endl;
+	out << "Planet name: " << oth.m_planet_name;
+	out << "\nCounts of inhabitants jedi: " << oth.m_jedi.size() << std::endl;
 	for (unsigned i = 0; i < oth.m_jedi.size(); ++i) { 
 		out << oth.m_jedi[i];
 	}
@@ -126,8 +125,8 @@ Planet& Planet::operator+=(const Jedi& rhs) {
 
 Planet& Planet::operator+=(const Planet& rhs) {
 
-	for (unsigned i = 0; i < rhs.m_jedi.size(); ++i) { // rhs.m_jedi.size() == rhs.get_count_jedi()
-		m_jedi += rhs.m_jedi[i];                       // m_jedi.push_back(rhs.m_jedi[i].clone());
+	for (unsigned i = 0; i < rhs.m_jedi.size(); ++i) { // rhs.m_jedi.size() <==> rhs.get_count_jedi()
+		m_jedi += rhs.m_jedi[i];                       
 	}
 	return *this;
 }
@@ -177,8 +176,8 @@ Base* Planet::clone()const {
 
 void Planet::write_to_file(std::ofstream& fout)const {
 
-	fout << "Name of planet:" << m_planet_name;
-	fout << "\nCounts of inhabitants jedi:" << m_jedi.size() << std::endl;
+	fout << "Name of planet: " << m_planet_name;
+	fout << "\nCounts of inhabitants jedi: " << m_jedi.size() << std::endl;
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 		m_jedi[i].write_to_file(fout);
 	}
@@ -263,7 +262,7 @@ void Planet::create_jedi(const String& planet_name, const String& jedi_name, con
 	Jedi curr(jedi_age, jedi_strength, jedi_rank, jedi_name, saber_color);
 	m_jedi += curr;
 
-	std::cout << "\nSuccessful added jedi!\n";
+	std::cout << "\nSuccessfully added jedi on planet " << planet_name << "!\n";
 }
 
 void Planet::remove_jedi(const String& jedi_name, const String& planet_name) {
@@ -271,13 +270,19 @@ void Planet::remove_jedi(const String& jedi_name, const String& planet_name) {
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
 
 		if (jedi_name == m_jedi[i].get_name_jedi()) {
-			m_jedi.erase(i);
-			std::cout << "\nSuccessfully deleted jedi.\n";
-			return;
+
+			try {
+				m_jedi.erase(i);
+				std::cout << "\nSuccessfully removed jedi!\n";
+				return;
+
+			} catch (std::out_of_range& e) {
+				std::cerr << e.what() << std::endl;
+			}
 		}
 	}
 
-	std::cout << "\nNot successfully deleted jedi.\n";
+	std::cout << "\nNot successfully deleted jedi!\n";
 }
 
 Jedi Planet::get_strongest_jedi(const String& planet_name)const {
@@ -293,7 +298,6 @@ Jedi Planet::get_strongest_jedi(const String& planet_name)const {
 		}
 	}
 
-//	std::cout << "\nStrongest jedi is: " << m_jedi[ind] << std::endl;
 	return m_jedi[ind];
 }
 
@@ -311,7 +315,7 @@ Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& je
 	}
 
 	if (!flag) {
-		throw std::logic_error("\nHave not founded jedi with this description!\n");
+		throw std::exception("\nHave not founded jedi with this description!\n");
 	}
 
 	for (unsigned i = 0; i < temp.size() - 1; ++i) {
@@ -343,11 +347,6 @@ Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& je
 	}
 
 	return temp;
-	//for (unsigned i = 0; i < temp.size() - 1; ++i) {
-	//	if (temp[i].get_age() <= temp[i + 1].get_age()) {
-	//		std::cout << temp[i] << std::endl;
-	//	}
-	//}
 }
 
 String Planet::get_most_used_saber_color(const String& planet_name, const Rank& jedi_rank)const {
@@ -437,11 +436,11 @@ void Planet::promote_jedi(const String& jedi_name, const double& multiplier) {
 	}
 
 	if (flag) {
-		std::cout << "\nSuccessful promote " << jedi_name << " on planet " << m_planet_name << std::endl;
+		std::cout << "\nSuccessful promote " << jedi_name << " on planet " << m_planet_name << "!\n";
 		return;
 	}
 
-	std::cout << "\nNot successful promote " << jedi_name << " on planet " << m_planet_name << std::endl;
+	std::cout << "\nNot successful promote " << jedi_name << " on planet " << m_planet_name << "!\n";
 }
 
 void Planet::demote_jedi(const String& jedi_name, const double& multiplier) {
@@ -461,11 +460,11 @@ void Planet::demote_jedi(const String& jedi_name, const double& multiplier) {
 	}
 
 	if (flag) {
-		std::cout << "\nSuccessful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
+		std::cout << "\nSuccessful demote " << jedi_name << " on planet " << m_planet_name << "!\n";
 		return;
 	}
 
-	std::cout << "\nNot successful demote " << jedi_name << " on planet " << m_planet_name << std::endl;
+	std::cout << "\nNot successful demote " << jedi_name << " on planet " << m_planet_name << "!\n";
 }
 
 void Planet::sort() {
@@ -564,7 +563,7 @@ void Planet::to_zero() {
 	m_planet_name = nullptr;
 
 	for (unsigned i = 0; i < m_jedi.size(); ++i) {
-		m_jedi[i] = Jedi().clone();
+		m_jedi[i] = Jedi();
 	}
 }
 
@@ -573,6 +572,6 @@ void Planet::copy(const Planet& obj) {
 	m_planet_name = obj.m_planet_name;
 
 	for (unsigned i = 0; i < obj.m_jedi.size(); ++i) {
-		m_jedi += obj.m_jedi[i].clone();
+		m_jedi += obj.m_jedi[i];
 	}
 }

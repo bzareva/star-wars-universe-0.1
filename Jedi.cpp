@@ -148,34 +148,34 @@ std::istream& operator>>(std::istream& in, Jedi& oth) {
 
 std::ostream& operator<<(std::ostream& out, const Jedi& oth) {
 
-	out << "Name of jedi:"          << oth.m_name_jedi;
-	out << "\nAge:"                 << oth.m_age;
-	out << "\nForce:"               << oth.m_force;
-	out << "\nColor of lightsaber:" << oth.m_color_of_lightsaber;
+	out << "Name of jedi: "          << oth.m_name_jedi;
+	out << "\nAge: "                 << oth.m_age;
+	out << "\nForce: "               << oth.m_force;
+	out << "\nColor of lightsaber: " << oth.m_color_of_lightsaber;
 
 	if (oth.m_rank == Rank::YOUNGLING) {
-		out << "\nRank:YOUNGLING\n";
+		out << "\nRank: YOUNGLING\n";
 
 	} else if (oth.m_rank == Rank::INITIATE) {
-		out << "\nRank:INITIATE\n";
+		out << "\nRank: INITIATE\n";
 
 	} else if (oth.m_rank == Rank::PADAWAN) {
-		out << "\nRank:PADAWAN\n";
+		out << "\nRank: PADAWAN\n";
 
 	} else if (oth.m_rank == Rank::KNIGHT_ASPIRANT) {
-		out << "\nRank:KNIGHT_ASPIRANT\n";
+		out << "\nRank: KNIGHT_ASPIRANT\n";
 
 	} else if (oth.m_rank == Rank::KNIGHT) {
-		out << "\nRank:KNIGHT\n";
+		out << "\nRank: KNIGHT\n";
 
 	} else if (oth.m_rank == Rank::MASTER) {
-		out << "\nRank:MASTER\n";
+		out << "\nRank: MASTER\n";
 
 	} else if (oth.m_rank == Rank::BATTLE_MASTER) {
-		out << "\nRank:BATTLE_MASTER\n";
+		out << "\nRank: BATTLE_MASTER\n";
 
 	} else if (oth.m_rank == Rank::GRAND_MASTER) {
-		out << "\nRank:GRAND_MASTER\n";
+		out << "\nRank: GRAND_MASTER\n";
 	}
 
 	return out;
@@ -187,7 +187,7 @@ void Jedi::promote(const double& multiplier) {
 		m_force += (multiplier * m_force);
 
 	} else {
-		throw std::logic_error("Multiplier must be positive number!");
+		throw std::logic_error("\nMultiplier must be positive number!\n");
 	}
 	
 	if (m_rank == Rank::YOUNGLING) {
@@ -219,7 +219,7 @@ void Jedi::demote(const double& multiplier) {
 		m_force -= (multiplier * m_force);
 
 	} else {
-		throw std::logic_error("Multiplier must be positive number!");
+		throw std::logic_error("\nMultiplier must be positive number!\n");
 	}
 	
 	if (m_rank == Rank::GRAND_MASTER) {
@@ -247,34 +247,34 @@ void Jedi::demote(const double& multiplier) {
 
 void Jedi::write_to_file(std::ofstream& fout)const {
 
-	fout << "\nName of jedi:" << m_name_jedi;
-	fout << "\nAge:"  << m_age;
-	fout << "\nForce:" << m_force;
-	fout << "\nColor of lightsaber:" << m_color_of_lightsaber;
+	fout << "Name of jedi: " << m_name_jedi;
+	fout << "\nAge: "  << m_age;
+	fout << "\nForce: " << m_force; 
+	fout << "\nColor of lightsaber: " << m_color_of_lightsaber;
 
 	if (m_rank == Rank::GRAND_MASTER) {
-		fout << "\nRank:GRAND_MASTER\n";
+		fout << "\nRank: GRAND_MASTER\n";
 
 	} else if (m_rank == Rank::INITIATE) {
-		fout << "\nRank:INITIATE\n";
+		fout << "\nRank: INITIATE\n";
 
 	} else if (m_rank == Rank::PADAWAN) {
-		fout << "\nRank:PADAWAN\n";
+		fout << "\nRank: PADAWAN\n";
 
 	} else if (m_rank == Rank::KNIGHT_ASPIRANT) {
-		fout << "\nRank:KNIGHT_ASPIRANT\n";
+		fout << "\nRank: KNIGHT_ASPIRANT\n";
 
 	} else if (m_rank == Rank::KNIGHT) {
-		fout << "\nRank:KNIGHT\n";
+		fout << "\nRank: KNIGHT\n";
 
 	} else if (m_rank == Rank::MASTER) {
-		fout << "\nRank:MASTER\n";
+		fout << "\nRank: MASTER\n";
 
 	} else if (m_rank == Rank::BATTLE_MASTER) {
-		fout << "\nRank:BATTLE MASTER\n";
+		fout << "\nRank: BATTLE MASTER\n";
 
 	} else if (m_rank == Rank::YOUNGLING) {
-		fout << "\nRank:YOUNGLING\n";
+		fout << "\nRank: YOUNGLING\n";
 	}
 }
 

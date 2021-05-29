@@ -10,7 +10,7 @@ class GetStrongestJediCommand : public Command {
 public:
 	GetStrongestJediCommand() :Command(String("get_strongest_jedi")) {};
 
-	GetStrongestJediCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	GetStrongestJediCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 

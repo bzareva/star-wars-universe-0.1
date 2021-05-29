@@ -10,7 +10,7 @@ class GetMostUsedSaberColorCommand : public Command {
 public:
 	GetMostUsedSaberColorCommand() :Command(String("get_most_used_saber_color")) {};
 
-	GetMostUsedSaberColorCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	GetMostUsedSaberColorCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 

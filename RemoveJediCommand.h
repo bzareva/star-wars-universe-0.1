@@ -10,7 +10,7 @@ class RemoveCommand : public Command {
 public:
 	RemoveCommand() :Command(String("remove_jedi")) {};
 
-	RemoveCommand(const String& cmd, const Vector<String> args) :Command(cmd, args) {};
+	RemoveCommand(const String& cmd, const Vector<String>& args) :Command(cmd, args) {};
 
 	inline virtual void execute(GalaxyManager& manager)final {
 
