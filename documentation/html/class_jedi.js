@@ -4,7 +4,6 @@ var class_jedi =
     [ "Jedi", "class_jedi.html#acfc23cab314ceb195531bc5e559b0f2f", null ],
     [ "Jedi", "class_jedi.html#a41a19ef80dc1489c13e477c46a7f3f02", null ],
     [ "Jedi", "class_jedi.html#ad2da4ec5ea67365352010e1fa5d7f739", null ],
-    [ "clone", "class_jedi.html#affef88f963581fdccabdde53d371d71c", null ],
     [ "demote", "class_jedi.html#ac530bbcf61aba79f0fd8b36ea0173551", null ],
     [ "get_age", "class_jedi.html#ab50999889f6f88e073f6ea2ae8d0435c", null ],
     [ "get_color_of_lightsaber", "class_jedi.html#aba055e1fdcda58d7ade665893b93fddd", null ],
@@ -25,7 +24,6 @@ var class_jedi =
     [ "set_force", "class_jedi.html#a04415393f703f155dd16845d74f0960f", null ],
     [ "set_name_jedi", "class_jedi.html#a732a5c86e29a2e51c95a463f46e92c6f", null ],
     [ "set_rank", "class_jedi.html#a17ff0dd411c7ca94ff1bc7bb6bede64e", null ],
-    [ "to_zero", "class_jedi.html#afd3313b8c5b7657f6c7e95b003bf2022", null ],
     [ "write_to_file", "class_jedi.html#a8a8485ea67fe4374c0d8e459cd841ff2", null ],
     [ "operator<<", "class_jedi.html#a404582e070fe1e18095b681aee3f21e4", null ],
     [ "operator>>", "class_jedi.html#aa0531f1879157b772dd3e89b94fcd114", null ]

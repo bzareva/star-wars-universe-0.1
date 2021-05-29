@@ -37,7 +37,6 @@ var class_planet =
     [ "sort", "class_planet.html#a231e388976436f5204a88f960b094dd4", null ],
     [ "sort_names", "class_planet.html#a9eec775fd22342271c516f7f0e3e5244", null ],
     [ "sort_rank", "class_planet.html#a43b0d8405e81b287e5f889575ba4c44d", null ],
-    [ "to_zero", "class_planet.html#ae77d24155402f3d71e6751af0c3ba97a", null ],
     [ "type_name", "class_planet.html#aa676ab71dd45cd4b280fd0abaf4ad8ce", null ],
     [ "write_to_file", "class_planet.html#acef36836b560bed01ec4dc6d37f265e8", null ],
     [ "operator+", "class_planet.html#a1b17c9cc7d71611ae62d81004b946c78", null ],

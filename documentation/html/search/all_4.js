@@ -11,7 +11,7 @@ var searchData=
   ['deferred_5ffalse_102',['deferred_false',['../structdoctest_1_1detail_1_1deferred__false.html',1,'doctest::detail']]],
   ['demote_103',['demote',['../class_jedi.html#ac530bbcf61aba79f0fd8b36ea0173551',1,'Jedi']]],
   ['demote_5fjedi_104',['demote_jedi',['../class_base.html#a22d56edcf21b294c6d0730b2ea7ef502',1,'Base::demote_jedi()'],['../class_galaxy.html#a158a2fe8d808b93bb152e33d20dfbb39',1,'Galaxy::demote_jedi()'],['../class_galaxy_manager.html#a5ca5c594c0b5c5831805f36fe673bbb4',1,'GalaxyManager::demote_jedi()'],['../class_planet.html#a0f3e31125af266855901e2008e77ea8c',1,'Planet::demote_jedi()']]],
-  ['demotejedicommand_105',['DemoteJediCommand',['../class_demote_jedi_command.html',1,'DemoteJediCommand'],['../class_demote_jedi_command.html#a30e7eba9685a7806abe92357b4760292',1,'DemoteJediCommand::DemoteJediCommand()'],['../class_demote_jedi_command.html#abfee1fcd899cd31ce7e28469df4c39ed',1,'DemoteJediCommand::DemoteJediCommand(const String &amp;cmd, const Vector&lt; String &gt; args)']]],
+  ['demotejedicommand_105',['DemoteJediCommand',['../class_demote_jedi_command.html',1,'DemoteJediCommand'],['../class_demote_jedi_command.html#a30e7eba9685a7806abe92357b4760292',1,'DemoteJediCommand::DemoteJediCommand()'],['../class_demote_jedi_command.html#a2b60331f3c3ab951b161622e12aa760d',1,'DemoteJediCommand::DemoteJediCommand(const String &amp;cmd, const Vector&lt; String &gt; &amp;args)']]],
   ['demotejedicommand_2eh_106',['DemoteJediCommand.h',['../_demote_jedi_command_8h.html',1,'']]],
   ['destroy_107',['destroy',['../classdoctest_1_1detail_1_1_context_scope_base.html#a6f223de9a972b08bf1b9e9d2d99ab4c6',1,'doctest::detail::ContextScopeBase']]],
   ['detail_108',['detail',['../namespacedoctest_1_1detail.html',1,'doctest']]],

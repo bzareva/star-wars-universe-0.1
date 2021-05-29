@@ -32,7 +32,6 @@ var class_galaxy =
     [ "promote_jedi", "class_galaxy.html#aee2176fa089bf3454574a40903004a81", null ],
     [ "read_from_file", "class_galaxy.html#ab5e51ccf184123978204ddbc5fc9ab50", null ],
     [ "remove_jedi", "class_galaxy.html#a760b51062aa0177d2edbd2712606688d", null ],
-    [ "to_zero", "class_galaxy.html#af1e7b2df2084deb9fd62e84836631c6c", null ],
     [ "type_name", "class_galaxy.html#aa4d9c431a08deccd92744f3c9d67cbfc", null ],
     [ "write_to_file", "class_galaxy.html#ab4c6886939fd5438e6870d95b1a0e1fa", null ],
     [ "operator+", "class_galaxy.html#a890dbcd1c994591cb3a2d2be9399c500", null ],

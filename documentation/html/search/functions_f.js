@@ -12,7 +12,7 @@ var searchData=
   ['regtest_1137',['regTest',['../namespacedoctest_1_1detail.html#a00f99edefb8490a8e2602d58c96431f4',1,'doctest::detail']]],
   ['remove_5fat_1138',['remove_at',['../class_string.html#abf0fd3d803f0ad6b3ff8db740b1b25ca',1,'String']]],
   ['remove_5fjedi_1139',['remove_jedi',['../class_base.html#afde26e7c513aa9d2cbc5b3dd6eedfa82',1,'Base::remove_jedi()'],['../class_galaxy.html#a760b51062aa0177d2edbd2712606688d',1,'Galaxy::remove_jedi()'],['../class_galaxy_manager.html#a786fb0ab297ff2ab98337d3cbd2a3f35',1,'GalaxyManager::remove_jedi()'],['../class_planet.html#a7f394f0521b2848a9b4b223719bcd9ed',1,'Planet::remove_jedi()']]],
-  ['removecommand_1140',['RemoveCommand',['../class_remove_command.html#abb9dcf7a73cee9907fed9540cffe61ae',1,'RemoveCommand::RemoveCommand()'],['../class_remove_command.html#ac21ebc7ad773798060f94c8244897cef',1,'RemoveCommand::RemoveCommand(const String &amp;cmd, const Vector&lt; String &gt; args)']]],
+  ['removecommand_1140',['RemoveCommand',['../class_remove_command.html#abb9dcf7a73cee9907fed9540cffe61ae',1,'RemoveCommand::RemoveCommand()'],['../class_remove_command.html#aa6155d92979c56b7112eed6ec6e9093e',1,'RemoveCommand::RemoveCommand(const String &amp;cmd, const Vector&lt; String &gt; &amp;args)']]],
   ['report_5fquery_1141',['report_query',['../structdoctest_1_1_i_reporter.html#ae7e30d1c2cd332094c66d39bf3a85e52',1,'doctest::IReporter']]],
   ['reportercreator_1142',['reporterCreator',['../namespacedoctest_1_1detail.html#a575cd92f018bfe3c702432a2144ebaca',1,'doctest::detail']]],
   ['reserve_1143',['reserve',['../class_string.html#a41d8da7568c2f97ba394dfb4c7763d1a',1,'String::reserve()'],['../class_vector.html#a47ccd4e19db08d52d6131a71708d1f4c',1,'Vector::reserve()']]],

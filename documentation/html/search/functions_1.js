@@ -4,7 +4,7 @@ var searchData=
   ['add_5fplanet_984',['add_planet',['../class_galaxy.html#a066b18edb85a2510e1a1001b329572ad',1,'Galaxy::add_planet()'],['../class_galaxy_manager.html#a8c443aa69463abdb8525caeb1191e062',1,'GalaxyManager::add_planet()']]],
   ['add_5fvec_5fjedi_985',['add_vec_jedi',['../class_galaxy.html#a85ca37ae77f1ad9c09b0647dc363c5f7',1,'Galaxy']]],
   ['addfilter_986',['addFilter',['../classdoctest_1_1_context.html#a60ad57a46c19db2b142468c3acac448a',1,'doctest::Context']]],
-  ['addplanetcommand_987',['AddPlanetCommand',['../class_add_planet_command.html#a39576e80e539a7c8c9dce8df5f3a9c92',1,'AddPlanetCommand::AddPlanetCommand()'],['../class_add_planet_command.html#ae4183e145bc0494c0ef9694d527879d5',1,'AddPlanetCommand::AddPlanetCommand(const String &amp;cmd, const Vector&lt; String &gt; args)']]],
+  ['addplanetcommand_987',['AddPlanetCommand',['../class_add_planet_command.html#a39576e80e539a7c8c9dce8df5f3a9c92',1,'AddPlanetCommand::AddPlanetCommand()'],['../class_add_planet_command.html#aa7354805f32a1564c5c591493a30fb97',1,'AddPlanetCommand::AddPlanetCommand(const String &amp;cmd, const Vector&lt; String &gt; &amp;args)']]],
   ['applycommandline_988',['applyCommandLine',['../classdoctest_1_1_context.html#ad55229220bf9ca74e6e0c6323bf672e1',1,'doctest::Context']]],
   ['approx_989',['Approx',['../classdoctest_1_1_approx.html#a86f0d1b44c1cf095697f23ccdab00802',1,'doctest::Approx']]],
   ['assertstring_990',['assertString',['../namespacedoctest.html#aa51be8558a5ec9675a77d2ecbc08e663',1,'doctest']]],

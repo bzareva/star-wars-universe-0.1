@@ -26,7 +26,7 @@ var searchData=
   ['remove_5freference_658',['remove_reference',['../structdoctest_1_1detail_1_1remove__reference.html',1,'doctest::detail']]],
   ['remove_5freference_3c_20t_20_26_20_3e_659',['remove_reference&lt; T &amp; &gt;',['../structdoctest_1_1detail_1_1remove__reference_3_01_t_01_6_01_4.html',1,'doctest::detail']]],
   ['remove_5freference_3c_20t_20_26_26_20_3e_660',['remove_reference&lt; T &amp;&amp; &gt;',['../structdoctest_1_1detail_1_1remove__reference_3_01_t_01_6_6_01_4.html',1,'doctest::detail']]],
-  ['removecommand_661',['RemoveCommand',['../class_remove_command.html',1,'RemoveCommand'],['../class_remove_command.html#abb9dcf7a73cee9907fed9540cffe61ae',1,'RemoveCommand::RemoveCommand()'],['../class_remove_command.html#ac21ebc7ad773798060f94c8244897cef',1,'RemoveCommand::RemoveCommand(const String &amp;cmd, const Vector&lt; String &gt; args)']]],
+  ['removecommand_661',['RemoveCommand',['../class_remove_command.html',1,'RemoveCommand'],['../class_remove_command.html#abb9dcf7a73cee9907fed9540cffe61ae',1,'RemoveCommand::RemoveCommand()'],['../class_remove_command.html#aa6155d92979c56b7112eed6ec6e9093e',1,'RemoveCommand::RemoveCommand(const String &amp;cmd, const Vector&lt; String &gt; &amp;args)']]],
   ['removejedicommand_2eh_662',['RemoveJediCommand.h',['../_remove_jedi_command_8h.html',1,'']]],
   ['report_5fquery_663',['report_query',['../structdoctest_1_1_i_reporter.html#ae7e30d1c2cd332094c66d39bf3a85e52',1,'doctest::IReporter']]],
   ['reportercreator_664',['reporterCreator',['../namespacedoctest_1_1detail.html#a575cd92f018bfe3c702432a2144ebaca',1,'doctest::detail']]],

@@ -12,13 +12,13 @@ Stores all commands and also has a datas which are\+: file name and a variable t
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_galaxy_manager_ab60c2e00badd75cca471836b348bc3d8}{Galaxy\+Manager}} ()
+\mbox{\hyperlink{class_galaxy_manager_ae5ba98cd0ab650e4bc24a14fa0acda9d}{Galaxy\+Manager}} ()=default
 \begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_galaxy_manager_ab5a9adc248010292983e22912c48d4a1}{Galaxy\+Manager}} (const \mbox{\hyperlink{class_string}{String}} \&file\+\_\+name, const \mbox{\hyperlink{class_galaxy}{Galaxy}} \&universe=\mbox{\hyperlink{class_galaxy}{Galaxy}}())
 \begin{DoxyCompactList}\small\item\em constructor with parameters for datas in class \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_galaxy_manager_a862f1e8d088abc7dbe2c2a01146bb45b}{open\+\_\+file}} (const \mbox{\hyperlink{class_string}{String}} \&file\+\_\+name)
+void \mbox{\hyperlink{class_galaxy_manager_a4074fb1252e1d316136ba060ad70e7f4}{open\+\_\+file}} ()
 \begin{DoxyCompactList}\small\item\em open file by wanted name \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_galaxy_manager_a6083620a9a02a2acf98e093bde9a25aa}{print}} (const \mbox{\hyperlink{class_string}{String}} \&type\+\_\+object, const \mbox{\hyperlink{class_string}{String}} \&name)
+void \mbox{\hyperlink{class_galaxy_manager_a3c17ae8f9ce6d9fe8337af5dd9a3223c}{print}} (const \mbox{\hyperlink{class_string}{String}} \&name)
 \begin{DoxyCompactList}\small\item\em print information about given object(\+Jedi or Planet) by wanted name \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_galaxy_manager_a801e19e64a401bbf0ed5c5f4dd58dca5}{help}} () const
 \begin{DoxyCompactList}\small\item\em gives information about all commands which supported the program for successfully works \end{DoxyCompactList}\item 
@@ -44,29 +44,27 @@ void \mbox{\hyperlink{class_galaxy_manager_aba5a5021226d9c5852ec13b01caa5ccf}{ge
 \begin{DoxyCompactList}\small\item\em get strongest jedi on given planet \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_galaxy_manager_adbba59a6c149da706bbd53fa66cdc171}{get\+\_\+youngest\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank) const
 \begin{DoxyCompactList}\small\item\em get youngest jedi on the given planet and rank \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_galaxy_manager_a738651559d54bdcec8d197d99d69f5d2}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank) const
+void \mbox{\hyperlink{class_galaxy_manager_a7422cb93e2eba2ee63e28bef2cf6e5e4}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name, const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&jedi\+\_\+rank) const
 \begin{DoxyCompactList}\small\item\em get most used saber color of jedi on given planet with wanted rank \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_galaxy_manager_ad9fa43deda041256c6e247f884493006}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) const
+void \mbox{\hyperlink{class_galaxy_manager_a3322b87c2abda5eabb4d6149763378d1}{get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name) const
 \begin{DoxyCompactList}\small\item\em get most used saber color of jedi on given planet \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_galaxy_manager_a08eccc025a039aaca959038aa09062b7}{operator\+\_\+plus}} (const \mbox{\hyperlink{class_string}{String}} \&lhs\+\_\+planet\+\_\+name, const \mbox{\hyperlink{class_string}{String}} \&rhs\+\_\+planet\+\_\+name)
 \begin{DoxyCompactList}\small\item\em console outputs is sorted form(lexicographic) information about the inhabitants two planets \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_galaxy_manager_a231e9a218ef4ab7d425113f6134e54f3}{print\+\_\+planet}} (const \mbox{\hyperlink{class_string}{String}} \&planet\+\_\+name)
-\begin{DoxyCompactList}\small\item\em print information about the given planet \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}{print\+\_\+jedi}} (const \mbox{\hyperlink{class_string}{String}} \&jedi\+\_\+name) const
-\begin{DoxyCompactList}\small\item\em print information about the given jedi \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_galaxy_manager_ac2c9c6a15148699e150025dc08365c3b}{get\+\_\+file\+\_\+name}} () const
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_galaxy_manager_a3d581a6bddff28b164df5134a6a1940f}{set\+\_\+file\+\_\+name}} (const \mbox{\hyperlink{class_string}{String}} \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em get file name \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Stores all commands and also has a datas which are\+: file name and a variable type of bool-\/ tells whether the file we are working with is closed or open and an object of type Galaxy-\/ we need it for execution of all supported commands in program. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_galaxy_manager_ab60c2e00badd75cca471836b348bc3d8}\label{class_galaxy_manager_ab60c2e00badd75cca471836b348bc3d8}} 
+\mbox{\Hypertarget{class_galaxy_manager_ae5ba98cd0ab650e4bc24a14fa0acda9d}\label{class_galaxy_manager_ae5ba98cd0ab650e4bc24a14fa0acda9d}} 
 \index{GalaxyManager@{GalaxyManager}!GalaxyManager@{GalaxyManager}}
 \index{GalaxyManager@{GalaxyManager}!GalaxyManager@{GalaxyManager}}
 \doxysubsubsection{\texorpdfstring{GalaxyManager()}{GalaxyManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Galaxy\+Manager\+::\+Galaxy\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Galaxy\+Manager\+::\+Galaxy\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -144,21 +142,21 @@ exit program
 \begin{DoxyReturn}{Returns}
 Name of file with which is current opened 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_galaxy_manager_ad9fa43deda041256c6e247f884493006}\label{class_galaxy_manager_ad9fa43deda041256c6e247f884493006}} 
+\mbox{\Hypertarget{class_galaxy_manager_a3322b87c2abda5eabb4d6149763378d1}\label{class_galaxy_manager_a3322b87c2abda5eabb4d6149763378d1}} 
 \index{GalaxyManager@{GalaxyManager}!get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}}
 \index{get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}!GalaxyManager@{GalaxyManager}}
 \doxysubsubsection{\texorpdfstring{get\_most\_used\_saber\_color()}{get\_most\_used\_saber\_color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} Galaxy\+Manager\+::get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily void Galaxy\+Manager\+::get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption}) const}
 
 
 
 get most used saber color of jedi on given planet 
 
-\mbox{\Hypertarget{class_galaxy_manager_a738651559d54bdcec8d197d99d69f5d2}\label{class_galaxy_manager_a738651559d54bdcec8d197d99d69f5d2}} 
+\mbox{\Hypertarget{class_galaxy_manager_a7422cb93e2eba2ee63e28bef2cf6e5e4}\label{class_galaxy_manager_a7422cb93e2eba2ee63e28bef2cf6e5e4}} 
 \index{GalaxyManager@{GalaxyManager}!get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}}
 \index{get\_most\_used\_saber\_color@{get\_most\_used\_saber\_color}!GalaxyManager@{GalaxyManager}}
 \doxysubsubsection{\texorpdfstring{get\_most\_used\_saber\_color()}{get\_most\_used\_saber\_color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} Galaxy\+Manager\+::get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name,  }\item[{const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily void Galaxy\+Manager\+::get\+\_\+most\+\_\+used\+\_\+saber\+\_\+color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name,  }\item[{const \mbox{\hyperlink{_rank_8h_adf74d53cd68bbef55ba510b266ecbbed}{Rank}} \&}]{jedi\+\_\+rank }\end{DoxyParamCaption}) const}
 
 
 
@@ -194,11 +192,11 @@ get youngest jedi on the given planet and rank
 
 gives information about all commands which supported the program for successfully works 
 
-\mbox{\Hypertarget{class_galaxy_manager_a862f1e8d088abc7dbe2c2a01146bb45b}\label{class_galaxy_manager_a862f1e8d088abc7dbe2c2a01146bb45b}} 
+\mbox{\Hypertarget{class_galaxy_manager_a4074fb1252e1d316136ba060ad70e7f4}\label{class_galaxy_manager_a4074fb1252e1d316136ba060ad70e7f4}} 
 \index{GalaxyManager@{GalaxyManager}!open\_file@{open\_file}}
 \index{open\_file@{open\_file}!GalaxyManager@{GalaxyManager}}
 \doxysubsubsection{\texorpdfstring{open\_file()}{open\_file()}}
-{\footnotesize\ttfamily void Galaxy\+Manager\+::open\+\_\+file (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{file\+\_\+name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Galaxy\+Manager\+::open\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -214,35 +212,15 @@ open file by wanted name
 
 console outputs is sorted form(lexicographic) information about the inhabitants two planets 
 
-\mbox{\Hypertarget{class_galaxy_manager_a6083620a9a02a2acf98e093bde9a25aa}\label{class_galaxy_manager_a6083620a9a02a2acf98e093bde9a25aa}} 
+\mbox{\Hypertarget{class_galaxy_manager_a3c17ae8f9ce6d9fe8337af5dd9a3223c}\label{class_galaxy_manager_a3c17ae8f9ce6d9fe8337af5dd9a3223c}} 
 \index{GalaxyManager@{GalaxyManager}!print@{print}}
 \index{print@{print}!GalaxyManager@{GalaxyManager}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily void Galaxy\+Manager\+::print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{type\+\_\+object,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Galaxy\+Manager\+::print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{name }\end{DoxyParamCaption})}
 
 
 
 print information about given object(\+Jedi or Planet) by wanted name 
-
-\mbox{\Hypertarget{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}\label{class_galaxy_manager_a3e02965337e0ae6f90af509fd924c414}} 
-\index{GalaxyManager@{GalaxyManager}!print\_jedi@{print\_jedi}}
-\index{print\_jedi@{print\_jedi}!GalaxyManager@{GalaxyManager}}
-\doxysubsubsection{\texorpdfstring{print\_jedi()}{print\_jedi()}}
-{\footnotesize\ttfamily void Galaxy\+Manager\+::print\+\_\+jedi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{jedi\+\_\+name }\end{DoxyParamCaption}) const}
-
-
-
-print information about the given jedi 
-
-\mbox{\Hypertarget{class_galaxy_manager_a231e9a218ef4ab7d425113f6134e54f3}\label{class_galaxy_manager_a231e9a218ef4ab7d425113f6134e54f3}} 
-\index{GalaxyManager@{GalaxyManager}!print\_planet@{print\_planet}}
-\index{print\_planet@{print\_planet}!GalaxyManager@{GalaxyManager}}
-\doxysubsubsection{\texorpdfstring{print\_planet()}{print\_planet()}}
-{\footnotesize\ttfamily void Galaxy\+Manager\+::print\+\_\+planet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{planet\+\_\+name }\end{DoxyParamCaption})}
-
-
-
-print information about the given planet 
 
 \mbox{\Hypertarget{class_galaxy_manager_ad54259d779a437e533762ecf4ff2e84e}\label{class_galaxy_manager_ad54259d779a437e533762ecf4ff2e84e}} 
 \index{GalaxyManager@{GalaxyManager}!promote\_jedi@{promote\_jedi}}
@@ -283,4 +261,14 @@ saves current information in file with which we works from starting the program
 
 
 saves current information in another file 
+
+\mbox{\Hypertarget{class_galaxy_manager_a3d581a6bddff28b164df5134a6a1940f}\label{class_galaxy_manager_a3d581a6bddff28b164df5134a6a1940f}} 
+\index{GalaxyManager@{GalaxyManager}!set\_file\_name@{set\_file\_name}}
+\index{set\_file\_name@{set\_file\_name}!GalaxyManager@{GalaxyManager}}
+\doxysubsubsection{\texorpdfstring{set\_file\_name()}{set\_file\_name()}}
+{\footnotesize\ttfamily void Galaxy\+Manager\+::set\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+get file name 
 

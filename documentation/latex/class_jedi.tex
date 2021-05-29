@@ -34,8 +34,6 @@ void \mbox{\hyperlink{class_jedi_a5b0db91ba6b5fec0662a7415542cd156}{promote}} (c
 \begin{DoxyCompactList}\small\item\em increases the given jedi by one rank up in ladder and increases its strength by a formula \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jedi_ac530bbcf61aba79f0fd8b36ea0173551}{demote}} (const double \&multiplier)
 \begin{DoxyCompactList}\small\item\em decreases the given jedi by one rank down in ladder and lowers its strength by a formula \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_jedi}{Jedi}} $\ast$ \mbox{\hyperlink{class_jedi_affef88f963581fdccabdde53d371d71c}{clone}} () const
-\item 
 void \mbox{\hyperlink{class_jedi_a8a8485ea67fe4374c0d8e459cd841ff2}{write\+\_\+to\+\_\+file}} (std\+::ofstream \&fout) const
 \begin{DoxyCompactList}\small\item\em outputs formatted information for jedi on {\itshape file} ~\newline
  \end{DoxyCompactList}\item 
@@ -45,8 +43,6 @@ void \mbox{\hyperlink{class_jedi_af902218312192add530915e1ccdaaaff}{print}} () c
 \begin{DoxyCompactList}\small\item\em print information about jedi \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{class_jedi_aef7061d8e2cd07840b983318213f243a}{rank\+\_\+num}} () const
 \item 
-void \mbox{\hyperlink{class_jedi_afd3313b8c5b7657f6c7e95b003bf2022}{to\+\_\+zero}} ()
-\begin{DoxyCompactList}\small\item\em make data with null value \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jedi_a7d1295bb2962ef8f0dadf235e5655010}{set\+\_\+age}} (const unsigned \&age)
 \begin{DoxyCompactList}\small\item\em setter for age of jedi \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jedi_a04415393f703f155dd16845d74f0960f}{set\+\_\+force}} (const double \&force)
@@ -123,15 +119,6 @@ move copy constructor
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_jedi_affef88f963581fdccabdde53d371d71c}\label{class_jedi_affef88f963581fdccabdde53d371d71c}} 
-\index{Jedi@{Jedi}!clone@{clone}}
-\index{clone@{clone}!Jedi@{Jedi}}
-\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_jedi}{Jedi}} $\ast$ Jedi\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-\begin{DoxyReturn}{Returns}
-A pointer to a dynamically allocated jedi 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_jedi_ac530bbcf61aba79f0fd8b36ea0173551}\label{class_jedi_ac530bbcf61aba79f0fd8b36ea0173551}} 
 \index{Jedi@{Jedi}!demote@{demote}}
 \index{demote@{demote}!Jedi@{Jedi}}
@@ -326,16 +313,6 @@ setter for name of jedi
 
 setter for rank of jedi 
 
-\mbox{\Hypertarget{class_jedi_afd3313b8c5b7657f6c7e95b003bf2022}\label{class_jedi_afd3313b8c5b7657f6c7e95b003bf2022}} 
-\index{Jedi@{Jedi}!to\_zero@{to\_zero}}
-\index{to\_zero@{to\_zero}!Jedi@{Jedi}}
-\doxysubsubsection{\texorpdfstring{to\_zero()}{to\_zero()}}
-{\footnotesize\ttfamily void Jedi\+::to\+\_\+zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-make data with null value 
-
 \mbox{\Hypertarget{class_jedi_a8a8485ea67fe4374c0d8e459cd841ff2}\label{class_jedi_a8a8485ea67fe4374c0d8e459cd841ff2}} 
 \index{Jedi@{Jedi}!write\_to\_file@{write\_to\_file}}
 \index{write\_to\_file@{write\_to\_file}!Jedi@{Jedi}}
@@ -370,4 +347,3 @@ formatted output for jedi on console
 
 input from console for jedi 
 
-if input is not valid, default rank will be youngling

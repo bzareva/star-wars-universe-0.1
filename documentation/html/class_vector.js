@@ -29,7 +29,6 @@ var class_vector =
     [ "reserve", "class_vector.html#a47ccd4e19db08d52d6131a71708d1f4c", null ],
     [ "size", "class_vector.html#a7eef7a769093f4486f3b2083436bf270", null ],
     [ "swap", "class_vector.html#acf248dc46fa5536b07d94df1fb6fdfb0", null ],
-    [ "to_zero", "class_vector.html#a2e94d255a88ffc5caa51022de67501ca", null ],
     [ "operator<<", "class_vector.html#a55c0fbc949abd9ab472a47a1d8dd04cf", null ],
     [ "operator>>", "class_vector.html#a29e1da90e49800c0514e66e395438c91", null ]
 ];

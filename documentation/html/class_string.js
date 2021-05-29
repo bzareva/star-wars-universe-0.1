@@ -45,7 +45,6 @@ var class_string =
     [ "str_len", "class_string.html#a4cf6f5f3279c6c7a4a4a99cef2499a47", null ],
     [ "to_lower", "class_string.html#ad84a166ff470e465046196c270e58d88", null ],
     [ "to_upper", "class_string.html#a10d5a46ad26a5ea4180838072319746f", null ],
-    [ "to_zero", "class_string.html#ac7071e819b58d8c668994bfecb1fae6f", null ],
     [ "operator+", "class_string.html#a0ca7980da94bb8d8f70b8ef4b0b9edd7", null ],
     [ "operator<<", "class_string.html#a8d4fc4502dbe58e79a808af17f839c3f", null ],
     [ "operator>>", "class_string.html#a350c3ac3a1559d9f5ece5252e3bbd75f", null ]
