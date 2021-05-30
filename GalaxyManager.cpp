@@ -13,7 +13,7 @@ void GalaxyManager::open_file() {
     std::ifstream fin(m_file_name.get_string(), std::ios::in);
     if (!fin || !fin.is_open()) {
 
-        std::cout << "Creating empty file with name " << m_file_name << " !\n";
+        std::cout << "Creating empty file with name " << m_file_name << "!\n";
 
         std::ofstream fout(m_file_name.get_string(), std::ios::out);
         if (!fout || !fout.is_open()) {
@@ -31,7 +31,7 @@ void GalaxyManager::open_file() {
 
     m_universe.read_from_file(fin);
     m_is_open = true;
-    std::cout << "Successfully opened " << m_file_name << " !\n";
+    std::cout << "Successfully opened " << m_file_name << "!\n";
 }
 
 void GalaxyManager::print(const String& name) {
@@ -39,9 +39,9 @@ void GalaxyManager::print(const String& name) {
     if (m_is_open) {
         m_universe.print_planet(name);
         m_universe.print_jedi(name);
-        std::cout << "\nSuccessfully printed information of " << name << " !\n"; 
         return;
     }
+
     std::cout << "\nCommand print can not be executed because file is not open!\n";
 }
 
@@ -120,7 +120,7 @@ void GalaxyManager::save_as(const String& new_file_name) {
     fout.close();
 
     m_is_open = false;    
-    std::cout << "\nSuccessfully saved another" << new_file_name << "!\n";
+    std::cout << "\nSuccessfully saved another " << new_file_name << "!\n";
 }
 
 void GalaxyManager::exit_command()const {

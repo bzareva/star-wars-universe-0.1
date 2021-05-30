@@ -153,29 +153,29 @@ std::ostream& operator<<(std::ostream& out, const Jedi& oth) {
 	out << "\nForce: "               << oth.m_force;
 	out << "\nColor of lightsaber: " << oth.m_color_of_lightsaber;
 
-	if (oth.m_rank == Rank::YOUNGLING) {
-		out << "\nRank: YOUNGLING\n";
+	if (oth.m_rank == Rank::YOUNGLING) { // 
+		out << "\nRank: youngling\n";
 
 	} else if (oth.m_rank == Rank::INITIATE) {
-		out << "\nRank: INITIATE\n";
+		out << "\nRank: initiate\n";
 
 	} else if (oth.m_rank == Rank::PADAWAN) {
-		out << "\nRank: PADAWAN\n";
+		out << "\nRank: padawan\n";
 
 	} else if (oth.m_rank == Rank::KNIGHT_ASPIRANT) {
-		out << "\nRank: KNIGHT_ASPIRANT\n";
+		out << "\nRank: knight_aspirant\n";
 
 	} else if (oth.m_rank == Rank::KNIGHT) {
-		out << "\nRank: KNIGHT\n";
+		out << "\nRank: knight\n";
 
 	} else if (oth.m_rank == Rank::MASTER) {
-		out << "\nRank: MASTER\n";
+		out << "\nRank: master\n";
 
 	} else if (oth.m_rank == Rank::BATTLE_MASTER) {
-		out << "\nRank: BATTLE_MASTER\n";
+		out << "\nRank: battle_master\n";
 
 	} else if (oth.m_rank == Rank::GRAND_MASTER) {
-		out << "\nRank: GRAND_MASTER\n";
+		out << "\nRank: grand_master\n";
 	}
 
 	return out;
@@ -253,28 +253,28 @@ void Jedi::write_to_file(std::ofstream& fout)const {
 	fout << "\nColor of lightsaber: " << m_color_of_lightsaber;
 
 	if (m_rank == Rank::GRAND_MASTER) {
-		fout << "\nRank: GRAND_MASTER\n";
+		fout << "\nRank: grand_master\n";
 
 	} else if (m_rank == Rank::INITIATE) {
-		fout << "\nRank: INITIATE\n";
+		fout << "\nRank: initiate\n";
 
 	} else if (m_rank == Rank::PADAWAN) {
-		fout << "\nRank: PADAWAN\n";
+		fout << "\nRank: padawan\n";
 
 	} else if (m_rank == Rank::KNIGHT_ASPIRANT) {
-		fout << "\nRank: KNIGHT_ASPIRANT\n";
+		fout << "\nRank: knight_aspirant\n";
 
 	} else if (m_rank == Rank::KNIGHT) {
-		fout << "\nRank: KNIGHT\n";
+		fout << "\nRank: knight\n";
 
 	} else if (m_rank == Rank::MASTER) {
-		fout << "\nRank: MASTER\n";
+		fout << "\nRank: master\n";
 
 	} else if (m_rank == Rank::BATTLE_MASTER) {
-		fout << "\nRank: BATTLE MASTER\n";
+		fout << "\nRank: battle_master\n";
 
 	} else if (m_rank == Rank::YOUNGLING) {
-		fout << "\nRank: YOUNGLING\n";
+		fout << "\nRank: youngling\n";
 	}
 }
 

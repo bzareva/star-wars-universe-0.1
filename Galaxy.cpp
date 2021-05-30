@@ -326,7 +326,7 @@ void Galaxy::print_planet(const String& planet_name) {
 
 		if (m_planets[i].get_planet_name() == planet_name) {
 			m_planets[i].print_planet(planet_name);
-			break;
+			return;
 		}
 	}
 }

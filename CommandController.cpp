@@ -81,6 +81,7 @@ void CommandController::init_command(GalaxyManager& manager) {
 
 			try {
 				String buff;
+				std::cout << ">Enter file name:";
 				std::cin >> buff;
 				Vector<String> file_name;
 				file_name.push_back(buff);
@@ -117,6 +118,7 @@ void CommandController::init_command(GalaxyManager& manager) {
 
 			try {
 				String buff;
+				std::cout << ">Enter name of planet:";
 				std::cin >> buff;
 				Vector<String> args;
 				args.push_back(buff);
@@ -131,14 +133,31 @@ void CommandController::init_command(GalaxyManager& manager) {
 		} else if (input == String("create_jedi")) {
 
 			try {
-				unsigned i = 0;
 				String buff;
 				Vector<String> args;
-				do {
-					std::cin >> buff;
-					args.push_back(buff);
-					++i;
-				} while (i < 6);
+				std::cout << ">Enter name of planet:";
+				std::cin >> buff;
+				args.push_back(buff);
+				
+				std::cout << ">Enter jedi name:";
+				std::cin >> buff;
+				args.push_back(buff);
+
+				std::cout << ">Enter jedi rank:";
+				std::cin >> buff;
+				args.push_back(buff);
+
+				std::cout << ">Enter jedi age:";
+				std::cin >> buff;
+				args.push_back(buff);
+
+				std::cout << ">Enter saber color:";
+				std::cin >> buff;
+				args.push_back(buff);
+
+				std::cout << ">Enter jedi force:";
+				std::cin >> buff;
+				args.push_back(buff);
 
 				Command* c_create = new CreateJediCommand(input, args);
 				register_command(c_create);
@@ -150,14 +169,15 @@ void CommandController::init_command(GalaxyManager& manager) {
 		} else if (input == String("remove_jedi")) {
 
 			try {
-				unsigned i = 0;
 				String buff;			
 				Vector<String> args;
-				do {
-					std::cin >> buff;
-					args.push_back(buff);
-					++i;
-				} while (i < 2);
+				std::cout << ">Enter jedi name:";
+				std::cin >> buff;
+				args.push_back(buff);
+
+				std::cout << ">Enter name of the planet which jedi inhabit:";
+				std::cin >> buff;
+				args.push_back(buff);
 
 				Command* c_remove = new RemoveCommand(input, args);
 				register_command(c_remove);
@@ -169,14 +189,15 @@ void CommandController::init_command(GalaxyManager& manager) {
 		} else if (input == String("promote_jedi")) {
 
 			try {
-				unsigned i = 0;
 				String buff;
 				Vector<String> args;
-				do {
-					std::cin >> buff;
-					args.push_back(buff);
-					++i;
-				} while (i < 2);
+				std::cout << ">Enter jedi name:";
+				std::cin >> buff;
+				args.push_back(buff);
+
+				std::cout << ">Enter multiplier:";
+				std::cin >> buff;
+				args.push_back(buff);
 
 				Command* c_promote = new PromoteJediCommand(input, args);
 				register_command(c_promote);
@@ -188,15 +209,16 @@ void CommandController::init_command(GalaxyManager& manager) {
 		} else if (input == String("demote_jedi")) {
 
 			try {
-				unsigned i = 0;
 				String buff;
 				Vector<String> args;
-				do {
-					std::cin >> buff;
-					args.push_back(buff);
-					++i;
-				} while (i < 2);
+				std::cout << ">Enter jedi name:";
+				std::cin >> buff;
+				args.push_back(buff);
 
+				std::cout << ">Enter multiplier:";
+				std::cin >> buff;
+				args.push_back(buff);
+			
 				Command* c_demote = new DemoteJediCommand(input, args);
 				register_command(c_demote);
 
@@ -209,6 +231,7 @@ void CommandController::init_command(GalaxyManager& manager) {
 			try {
 				String buff;
 				Vector<String> args;
+				std::cout << ">Enter name of the planet which jedi inhabit:";
 				std::cin >> buff;
 				args.push_back(buff);
 
@@ -222,14 +245,15 @@ void CommandController::init_command(GalaxyManager& manager) {
 		} else if (input == String("get_youngest_jedi")) {
 
 			try {
-				unsigned i = 0;
 				String buff;
 				Vector<String> args;
-				do {
-					std::cin >> buff;
-					args.push_back(buff);
-					++i;
-				} while (i < 2);
+				std::cout << ">Enter name of the planet which jedi inhabit:";
+				std::cin >> buff;
+				args.push_back(buff);
+			
+				std::cout << ">Enter jedi rank:";
+				std::cin >> buff;
+				args.push_back(buff);
 
 				Command* c_young = new GetYoungestJediCommand(input, args);
 				register_command(c_young);
@@ -241,25 +265,23 @@ void CommandController::init_command(GalaxyManager& manager) {
 		} else if (input == String("get_most_used_saber_color")) {
 
 			try {
-				unsigned i = 0;
 				String buff;
 				Vector<String> args;
-				std::cout << "\n>Enter y(yes) if you want to enter rank of jedi and n(no) only for GRAND_MASTER rank:";
+				std::cout << ">Enter name of the planet which jedi inhabit:";
+				std::cin >> buff;
+				args.push_back(buff);
+
+				std::cout << ">Enter y(yes) if you want to enter rank of jedi and n(no) only for GRAND_MASTER rank:";
 				char ch;
 				std::cin.get(ch);
 				std::cin.ignore();
 
-				do {
-					if (ch == 'n') {
-						std::cin >> buff;
-						args.push_back(buff);
-						break;
-					}
-
+				if (ch == 'y') {
+					std::cout << ">Enter jedi rank:";
 					std::cin >> buff;
 					args.push_back(buff);
-					++i;
-				} while (i < 2);
+
+				}
 
 				Command* c_saber = new GetMostUsedSaberColorCommand(input, args);
 				register_command(c_saber);
@@ -271,7 +293,7 @@ void CommandController::init_command(GalaxyManager& manager) {
 		} else if (input == String("print")) {
 
 			try {
-				std::cout << ">Enter name of planet ot jedi that you want to print:";
+				std::cout << ">Enter name of planet or jedi that you want to print:";
 				String curr;
 				std::cin >> curr;
 
@@ -288,14 +310,15 @@ void CommandController::init_command(GalaxyManager& manager) {
 		} else if (input == String("+")) {
 
 			try {
-				unsigned i = 0;
 				String buff;
 				Vector<String> args;
-				do {
-					std::cin >> buff;
-					args.push_back(buff);
-					++i;
-				} while (i < 2);
+				std::cout << ">Enter name of first planet:";
+				std::cin >> buff;
+				args.push_back(buff);
+			
+				std::cout << ">Enter name of second planet:";
+				std::cin >> buff;
+				args.push_back(buff);
 
 				Command* c_plus = new OperatorPlusCommand(input, args);
 				register_command(c_plus);
@@ -305,7 +328,7 @@ void CommandController::init_command(GalaxyManager& manager) {
 			}
 		} 
 
-	} while (input !=  String("exit"));
+	} while (input != String("exit"));
 
 	execute_command(manager);
 }

@@ -342,7 +342,7 @@ Vector<Jedi> Planet::get_youngest_jedi(const String& planet_name, const Rank& je
 
 		if (temp[i].get_age() != first) {
 			temp.erase(i);
-			temp.erase(i + 1);
+			//temp.erase(i + 1);
 		}
 	}
 
@@ -402,9 +402,13 @@ String Planet::get_most_used_saber_color(const String& planet_name)const {
 
 void Planet::print_planet(const String& name) {
 
+	if (m_planet_name != name) {
+		return;
+	}
+
 	sort();
 	std::cout << *this;
-   //write_to_file();
+	std::cout << "\n\nSuccessfully printed information of " << name << "!\n";
 }
 
 void Planet::print_jedi(const String& jedi_name)const {
@@ -413,7 +417,8 @@ void Planet::print_jedi(const String& jedi_name)const {
 
 		if (m_jedi[i].get_name_jedi() == jedi_name) {
 			std::cout << m_jedi[i] << std::endl;
-			//m_jedi[i].write_to_file();
+			std::cout << "\n\nSuccessfully printed information of " << jedi_name << "!\n";
+			return;
 		}
 	}
 }

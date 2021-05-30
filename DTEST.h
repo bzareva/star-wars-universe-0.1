@@ -131,9 +131,7 @@ TEST_CASE("Jedi and Planet basic operations") {
 	}
 
 	CHECK(vec_jedi.size() == 7);
-	//CHECK(vec_jedi.size() != 7);
 	CHECK(!vec_jedi.empy());
-
 
 	Planet planet(vec_jedi, String("Earth"));
 	CHECK(planet.get_count_jedi() == 7);

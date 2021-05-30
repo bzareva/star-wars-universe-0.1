@@ -14,7 +14,7 @@ Color of lightsaber: yellow
 Rank: grand_master
 Name of jedi: JourenSamlon
 Age: 77
-Force: 455.5
+Force: 125.5
 Color of lightsaber: purple
 Rank: grand_master
 Name of jedi: WurthLashiec
