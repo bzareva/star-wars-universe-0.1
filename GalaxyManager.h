@@ -1,6 +1,6 @@
 #ifndef __GALAXY_MANAGER_H__
 #define __GALAXY_MANAGER_H__
-#include <cstdlib> // exit, EXIT_FAILURE 
+#include <cstdlib> /// use for exit
 #include "Galaxy.h"
 ///
 /// Stores all commands and also has a datas which are:

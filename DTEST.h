@@ -9,7 +9,7 @@
 /// 
 TEST_CASE("Testing Galaxy and Planet commands") {
 
-	std::ifstream fin("galaxy_information.txt", std::ios::in);
+	std::ifstream fin("doctest_data.txt", std::ios::in);
 	if (!fin || !fin.is_open()) {
 		std::cerr << "\nProblem with opening file!\n";
 	}
