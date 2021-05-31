@@ -220,7 +220,6 @@ void Galaxy::read_from_file(std::ifstream& fin) {
 	unsigned cnt = input.convert_to_integer(input.get_string());
 
 	for (unsigned i = 0; i < cnt; ++i) {
-
 		Planet p_read(fin);
 		m_planets.push_back(p_read);
 	}
@@ -378,6 +377,7 @@ String Galaxy::get_planet_name(const unsigned& index)const {
 	if (index < 0 || index >= m_planets.size()) {
 		throw std::out_of_range("Invalid index!");
 	}
+
 	return m_planets[index].get_planet_name();
 }
 
@@ -390,15 +390,16 @@ void Galaxy::operator_plus(const String& lhs_planet, const String& rhs_planet) {
 				if (rhs_planet == m_planets[j].get_planet_name()) {
 
 					Planet sub_planet;
+					sub_planet.set_planet_name(rhs_planet);
 					sub_planet += m_planets[i];
 					sub_planet += m_planets[j];
 					sub_planet.sort();
 					std::cout << sub_planet << std::endl;
 
 					///second way when modify object data
-					//m_planets[i] += m_planets[j];
-					//m_planets[i].sort();
-					//std::cout << m_planets[i] << std::endl;
+					///m_planets[i] += m_planets[j];
+					///m_planets[i].sort();
+					///std::cout << m_planets[i] << std::endl;
 
 					break;
 				}

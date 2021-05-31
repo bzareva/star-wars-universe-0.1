@@ -109,6 +109,7 @@ bool Planet::operator==(const Planet& rhs)const {
 			return false;
 		}
 	}
+
 	return true;
 }
 
@@ -140,6 +141,7 @@ Planet& Planet::operator-=(const Jedi& rhs) {
 			return *this;
 		}
 	}
+
 	return *this;
 }
 
@@ -158,6 +160,7 @@ Jedi& Planet::at(const unsigned& index) {
 	if (index < 0 || index > m_jedi.size()) {
 		throw std::out_of_range("This index is not correct!");
 	}
+
 	return m_jedi[index];
 }
 
@@ -166,6 +169,7 @@ const Jedi& Planet::at(const unsigned& index)const {
 	if (index < 0 || index > m_jedi.size()) {
 		throw std::out_of_range("This index is not correct!");
 	}
+
 	return m_jedi[index];
 }
 

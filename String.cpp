@@ -167,6 +167,7 @@ char& String::at(const unsigned& index) {
 	if (index < 0 || index > m_size) {
 		throw std::out_of_range("Invalid index!");
 	}
+
 	return m_string[index];
 }
 
@@ -175,6 +176,7 @@ const char& String::at(const unsigned& index)const {
 	if (index < 0 || index > m_size) {
 		throw std::out_of_range("Invalid index!");
 	}
+
 	return m_string[index];
 }
 
@@ -185,7 +187,6 @@ void String::reserve(const unsigned& new_cap) {
 	}
 
 	if (new_cap > m_capacity) {
-
 		m_capacity = new_cap;
 		char* curr = new char[m_capacity];
 		str_cpy(curr, m_string);
@@ -202,6 +203,7 @@ void String::reserve(const unsigned& new_cap) {
 void String::add(const char& ch) {
 
 	if (m_size + 1 >= m_capacity) {
+
 		try {
 			reserve(RESIZE * m_size);
 
@@ -640,6 +642,7 @@ bool String::is_valid_rank()const {
 	} else if (curr == String("GRAND_MASTER") || curr == String("grand_master")) {
 		return true;
 	}
+
 	return false;
 }
 

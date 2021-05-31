@@ -423,6 +423,7 @@ unsigned Jedi::rank_num()const {
 	} else if (m_rank == Rank::GRAND_MASTER) {
 		num = 8; 
 	}
+
    return num;
 }
 
