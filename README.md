@@ -1,6 +1,4 @@
 # Star Wars Universe 0.1
-[Doxygen documentation]
-<file:///C:/Users/USER/source/repos/bzareva/star-wars-universe-0.1/documentation/html/index.html>
 
 ## *Brief information*
 
