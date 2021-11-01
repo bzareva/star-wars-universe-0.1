@@ -10,7 +10,7 @@ class Base {
 
 public:
 	/// default constructor
-	Base() = default;
+	Base() = default;vdvdfvdvd
 
 	/// default assign content
 	Base& operator=(const Base& rhs) = default;
