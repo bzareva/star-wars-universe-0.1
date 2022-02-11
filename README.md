@@ -103,7 +103,8 @@ Example:<br/>
 *Successfully saved another file.xml*<br/><br/>
 
 - **_help:_**<br/>
-Outputs brief information about the commands supported by the program.<br/>
+Outputs brief information about the commands supported by the program.<br/><br/>
+Example:<br/>
 **cmd:** help
 *The following commands are supported:<br/>
 open [file] opens [file]<br/>
