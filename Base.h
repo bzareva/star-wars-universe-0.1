@@ -36,7 +36,7 @@ public:
 	/// 
 	/// Pure virtual create method.
 	/// Display a message whether the addition was successful or not (there is a Jedi with
-    /// such a name on this or that planet, or not there is a planet with such a name). 
+        /// such a name on this or that planet, or not there is a planet with such a name). 
 	/// 
 	virtual void create_jedi(const String& planet_name, const String& jedi_name, const Rank& jedi_rank, const unsigned& jedi_age, const String& saber_color, const double& jedi_strength) = 0;
 
@@ -48,8 +48,8 @@ public:
 
 	///
 	/// Brings out the youngest Jedi inhabiting the given planet and has
-    /// the corresponding rank (if they are  more than one, to display the first on
-    /// alphabetical order if none will be displayed appropriate message). 
+        /// the corresponding rank (if they are  more than one, to display the first on
+        /// alphabetical order if none will be displayed appropriate message). 
 	///
 	virtual Vector<Jedi> get_youngest_jedi(const String& planet_name, const Rank& jedi_rank)const = 0;
 
